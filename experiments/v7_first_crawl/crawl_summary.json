@@ -1,0 +1,24 @@
+{
+  "attempts": 904,
+  "failed": 2,
+  "valid_pages": 895,
+  "hosts": {
+    "www.kali.org": 430,
+    "nmap.org": 150,
+    "docs.metasploit.com": 92,
+    "www.wireshark.org": 80,
+    "docs.mitmproxy.org": 3,
+    "frida.re": 40,
+    "gtfobins.org": 100
+  },
+  "avg_text_chars": 8923.1,
+  "skipped_and_failed": {
+    "valid": 895,
+    "skipped_nonhtml": 1,
+    "skipped_thin": 4,
+    "failed_status": 2,
+    "skipped_duplicate_url": 2,
+    "skipped_host_cap": 1529
+  },
+  "frontier_left": 0
+}

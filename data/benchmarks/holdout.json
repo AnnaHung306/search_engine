@@ -1,0 +1,150 @@
+{
+  "name": "holdout",
+  "role": "new frozen candidate test; group validation and human judgments pending",
+  "queries": [
+    {
+      "id": "holdout-01",
+      "query": "capture packets to pcap file",
+      "information_need": "Save captured traffic as a pcap file.",
+      "relevance_rule": "Explains packet capture with file output or saving captured packets."
+    },
+    {
+      "id": "holdout-02",
+      "query": "decrypt tls sessions with key log",
+      "information_need": "Analyze encrypted TLS traffic using session keys.",
+      "relevance_rule": "Explains TLS key logging/decryption in a packet analysis workflow."
+    },
+    {
+      "id": "holdout-03",
+      "query": "filter packets by ip address",
+      "information_need": "Show captured packets for a chosen IP address.",
+      "relevance_rule": "Provides relevant packet filtering guidance."
+    },
+    {
+      "id": "holdout-04",
+      "query": "mitmproxy modify http response",
+      "information_need": "Modify an intercepted HTTP response.",
+      "relevance_rule": "Explains response editing or a response hook in mitmproxy."
+    },
+    {
+      "id": "holdout-05",
+      "query": "install proxy certificate android",
+      "information_need": "Trust an interception proxy CA on Android.",
+      "relevance_rule": "Explains Android certificate installation/trust for proxy inspection."
+    },
+    {
+      "id": "holdout-06",
+      "query": "replay captured http requests",
+      "information_need": "Send captured HTTP requests again.",
+      "relevance_rule": "Explains request/client replay in an HTTP analysis tool."
+    },
+    {
+      "id": "holdout-07",
+      "query": "frida attach running process",
+      "information_need": "Instrument an already running process with Frida.",
+      "relevance_rule": "Explains attaching, process selection or attach workflows."
+    },
+    {
+      "id": "holdout-08",
+      "query": "hook java method android",
+      "information_need": "Observe or modify Java method behavior in a running Android app.",
+      "relevance_rule": "Explains Android Java method instrumentation/hooks."
+    },
+    {
+      "id": "holdout-09",
+      "query": "list loaded native libraries",
+      "information_need": "Inspect native modules loaded into a process.",
+      "relevance_rule": "Explains enumeration or inspection of native modules/libraries."
+    },
+    {
+      "id": "holdout-10",
+      "query": "extract source code from dex",
+      "information_need": "Read reconstructed code from Android DEX files.",
+      "relevance_rule": "Documents decompilation or conversion leading to readable code; runtime hooking alone is insufficient."
+    },
+    {
+      "id": "holdout-11",
+      "query": "inspect apk resources",
+      "information_need": "Inspect resources packaged in an Android APK.",
+      "relevance_rule": "Documents resource extraction, decoding or inspection."
+    },
+    {
+      "id": "holdout-12",
+      "query": "convert dex to jar",
+      "information_need": "Convert DEX content to Java class/JAR form.",
+      "relevance_rule": "Documents a DEX-to-JAR converter or workflow."
+    },
+    {
+      "id": "holdout-13",
+      "query": "nmap service version detection",
+      "information_need": "Determine versions of services on open ports.",
+      "relevance_rule": "Explains Nmap service/version detection."
+    },
+    {
+      "id": "holdout-14",
+      "query": "nmap operating system detection",
+      "information_need": "Determine a hosts operating system with Nmap.",
+      "relevance_rule": "Explains OS fingerprinting/detection."
+    },
+    {
+      "id": "holdout-15",
+      "query": "nmap udp scan",
+      "information_need": "Understand scanning UDP ports.",
+      "relevance_rule": "Explains UDP scan behavior, usage or interpretation."
+    },
+    {
+      "id": "holdout-16",
+      "query": "nmap host discovery without port scan",
+      "information_need": "Find active hosts without performing a port scan.",
+      "relevance_rule": "Explains host-discovery-only workflows; a general port-scan listing is insufficient."
+    },
+    {
+      "id": "holdout-17",
+      "query": "discover hidden web paths",
+      "information_need": "Discover web paths not linked from the homepage.",
+      "relevance_rule": "Documents web content/path enumeration tools or techniques."
+    },
+    {
+      "id": "holdout-18",
+      "query": "recursive web directory discovery",
+      "information_need": "Discover nested directories on a web server.",
+      "relevance_rule": "Explains recursive web directory/content discovery."
+    },
+    {
+      "id": "holdout-19",
+      "query": "detect sql injection automatically",
+      "information_need": "Find a tool for automated SQL injection detection.",
+      "relevance_rule": "Documents an automated SQLi detection/exploitation tool, not a generic library mention."
+    },
+    {
+      "id": "holdout-20",
+      "query": "audit wireless wpa handshake",
+      "information_need": "Find tools for capturing or analyzing WPA authentication handshakes.",
+      "relevance_rule": "Documents Wi-Fi/WPA handshake capture or processing."
+    },
+    {
+      "id": "holdout-21",
+      "query": "identify password hash format",
+      "information_need": "Determine what kind of password hash a value uses.",
+      "relevance_rule": "Documents hash identification, not only password cracking."
+    },
+    {
+      "id": "holdout-22",
+      "query": "generate metasploit payload",
+      "information_need": "Create a payload using Metasploit tooling.",
+      "relevance_rule": "Explains payload generation rather than an unrelated API definition."
+    },
+    {
+      "id": "holdout-23",
+      "query": "use metasploit exploit module",
+      "information_need": "Learn how to select/configure/run a Metasploit exploit module.",
+      "relevance_rule": "Explains an end-user module workflow; module development alone is insufficient."
+    },
+    {
+      "id": "holdout-24",
+      "query": "find gtfobins sudo binary techniques",
+      "information_need": "Locate documented sudo behavior for Unix binaries.",
+      "relevance_rule": "A GTFOBins entry with a sudo function or overview of that feature."
+    }
+  ]
+}

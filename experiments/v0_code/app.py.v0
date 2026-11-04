@@ -1,0 +1,80 @@
+"""app.py — minimal Flask search interface.
+
+Run locally:
+    python app.py
+then open http://127.0.0.1:5000/
+"""
+from flask import Flask, request, render_template_string
+
+import search as se
+
+app = Flask(__name__)
+
+PAGE = """
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pentest Tool Search</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 16px; }
+    h1 { font-size: 1.4rem; }
+    input[type=text] { width: 75%; padding: 10px; font-size: 1rem; }
+    button { padding: 10px 16px; font-size: 1rem; cursor: pointer; }
+    .meta { color: #666; font-size: .85rem; margin: 8px 0 20px; }
+    .hit { margin-bottom: 20px; }
+    .hit a { font-size: 1.05rem; color: #1a0dab; text-decoration: none; }
+    .hit a:hover { text-decoration: underline; }
+    .url { color: #0a7d2c; font-size: .8rem; word-break: break-all; }
+    .score { color: #999; font-size: .78rem; }
+    .snippet { color: #333; font-size: .92rem; margin-top: 2px; }
+    .note { background: #fff6e0; padding: 12px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h1>🛡️ Pentest Tool Search</h1>
+  <form method="get" action="/">
+    <input type="text" name="q" value="{{ q|e }}" autofocus
+           placeholder="e.g. wifi password cracking">
+    <button type="submit">Search</button>
+  </form>
+  <div class="meta">Indexed pages: {{ num_indexed }}{% if terms %} · query terms: {{ terms }}{% endif %}</div>
+
+  {% if status == 'empty' %}
+    <p class="note">Type something to search.</p>
+  {% elif status == 'oov' %}
+    <p class="note">None of your words are in the index. Try English tool/technique keywords
+      such as <i>port scan</i>, <i>sql injection</i>, or <i>password cracking</i>.</p>
+  {% elif status == 'no_match' %}
+    <p class="note">No matching pages found.</p>
+  {% elif status == 'ok' %}
+    <p class="meta">Showing {{ results|length }} result(s) with positive similarity.</p>
+    {% for h in results %}
+      <div class="hit">
+        <a href="{{ h.url }}" target="_blank" rel="noopener">{{ h.title or h.url }}</a>
+        <div class="url">{{ h.url }}</div>
+        <div class="score">score {{ '%.4f'|format(h.score) }} · rank {{ loop.index }}</div>
+        <div class="snippet">{{ h.snippet }}</div>
+      </div>
+    {% endfor %}
+  {% endif %}
+</body>
+</html>
+"""
+
+
+@app.route("/")
+def home():
+    q = request.args.get("q", "").strip()
+    if not q:
+        idx = se.load_index()
+        return render_template_string(PAGE, q="", status="empty",
+                                      num_indexed=idx["N"], results=[], terms=None)
+    r = se.search(q, top_k=10)
+    return render_template_string(PAGE, q=q, status=r["status"],
+                                  num_indexed=r["num_indexed"],
+                                  results=r["results"], terms=r.get("terms"))
+
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5000)

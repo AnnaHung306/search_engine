@@ -1,0 +1,66 @@
+{
+  "name": "course",
+  "role": "legacy regression; previously used for development",
+  "queries": [
+    {
+      "id": "course-01",
+      "query": "wifi password cracking",
+      "information_need": "User wants a tool to recover/crack Wi-Fi (WEP/WPA) passwords.",
+      "relevance_rule": "Relevant if the page is about a tool that cracks or captures Wi-Fi keys/handshakes."
+    },
+    {
+      "id": "course-02",
+      "query": "sql injection tool",
+      "information_need": "User wants a tool to find/exploit SQL injection.",
+      "relevance_rule": "Relevant if the page documents a tool that detects or exploits SQLi."
+    },
+    {
+      "id": "course-03",
+      "query": "port scanning techniques",
+      "information_need": "User wants to learn how to scan ports / a port scanner.",
+      "relevance_rule": "Relevant if the page explains port scanning or documents a port scanner."
+    },
+    {
+      "id": "course-04",
+      "query": "intercept https traffic",
+      "information_need": "User wants to intercept / inspect encrypted HTTPS traffic (man-in-the-middle proxy).",
+      "relevance_rule": "Relevant if the page documents a tool or method that intercepts or decrypts HTTPS/TLS traffic (e.g. mitmproxy, burpsuite, Wireshark TLS decryption)."
+    },
+    {
+      "id": "course-05",
+      "query": "web application vulnerability scanner",
+      "information_need": "User wants a scanner for web app vulnerabilities.",
+      "relevance_rule": "Relevant if the page documents a web vulnerability scanner."
+    },
+    {
+      "id": "course-06",
+      "query": "network packet sniffer",
+      "information_need": "User wants to capture/analyze network traffic.",
+      "relevance_rule": "Relevant if the page is about packet capture/sniffing."
+    },
+    {
+      "id": "course-07",
+      "query": "exploit metasploit module",
+      "information_need": "User wants to use/run a Metasploit exploit module.",
+      "relevance_rule": "Relevant if the page explains Metasploit modules/exploitation."
+    },
+    {
+      "id": "course-08",
+      "query": "decompile android apk",
+      "information_need": "User wants to unpack / decompile an Android app (APK) to read its code.",
+      "relevance_rule": "Relevant if the page documents a tool or method to unpack, decompile or reverse an APK / Android app (e.g. apktool, jadx, dex2jar, Frida on Android)."
+    },
+    {
+      "id": "course-09",
+      "query": "directory enumeration web server",
+      "information_need": "User wants to enumerate directories/files on a web server.",
+      "relevance_rule": "Relevant if the page is about web content/directory discovery."
+    },
+    {
+      "id": "course-10",
+      "query": "reverse shell payload",
+      "information_need": "User wants to get a reverse shell on a target.",
+      "relevance_rule": "Relevant if the page explains how to create or catch a reverse shell (e.g. msfvenom payloads, GTFOBins reverse-shell entries, netcat)."
+    }
+  ]
+}

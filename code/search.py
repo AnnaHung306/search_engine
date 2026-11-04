@@ -1,0 +1,335 @@
+"""search.py — load the index and rank documents.
+
+DEFAULT = the required system: pure TF-IDF cosine, no title boost, no synonyms.
+
+Rankers (model=):
+  - "tfidf"  cosine similarity between log-tf.idf vectors   (REQUIRED core, default)
+  - "bm25"   Okapi BM25 (k1=1.5, b=0.75)                     (bonus comparison)
+
+Optional enhancements (off by default, switch on per call / in the UI):
+  - title_boost: score *= (1 + title_boost * #query terms in the title)
+  - synonyms:    query expansion from synonyms.py (weight 0.5) + Chinese keyword map
+  - pivot:       (v6, tfidf only) pivoted length normalization (Singhal et al., 1996):
+                 divide by (1-s)*avg_norm + s*|d| instead of |d|. s=0 is plain cosine.
+                 Fixes cosine's bias toward very short pages.
+  - fuzzy:       (v7) typo / IME tolerance. A query word not in the vocabulary is
+                 corrected to the nearest term by edit distance (English typos) or
+                 by pinyin (wrong Chinese character), added at weight 0.7, and the
+                 correction is reported ("injetcion -> injection").
+  - coverage:    (v7.1) coordination-level ranking: pages containing more of the
+                 distinct query words come first; the TF-IDF cosine score orders
+                 pages within each group (the score itself is unchanged).
+Hub pages (menus / full listings, clean.is_hub) are never returned (SKIP_HUBS).
+Every result also reports which query words it MATCHED and which are MISSING
+(like Google's "Missing: ..."), so the ranking is explainable.
+Always on:
+  - phrase search: "exact phrase" -> verified contiguous word match
+  - Boolean:       +term (must contain) and -term (must not contain)
+  - timing:        elapsed_ms = from receiving the query string to the finished
+                   ranked list with snippets (index loading NOT included)
+
+The same collection IDF is reused (never refit). CLI:
+    python search.py "wifi password cracking"            (TF-IDF cosine)
+    python search.py --bm25 "sql injection tool"
+    python search.py --pivot "port scanning techniques"   (TF-IDF + pivoted normalization)
+    python search.py --bm25 --boost --syn "wifi password cracking"   (best variant)
+"""
+import json
+import os
+import re
+import sys
+import time
+
+from preprocess import tokenize
+from collections import Counter
+from weighting import log_tf, vector, norm
+import positions
+import ranking
+from snippets import snippet
+import synonyms
+import fuzzy
+
+SKIP_HUBS = True     # v7.1: see clean.is_hub(); set False to reproduce v7 numbers
+
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+INDEX_PATH = os.path.join(DATA_DIR, "index-v8.json")
+
+K1 = 1.5
+B = 0.75
+TITLE_BOOST = 0.5          # value used when title boost is switched on
+PIVOT_SLOPE = 0.2          # v6: slope used when pivoted normalization is switched on
+                           # (chosen up front as a common literature value, NOT tuned)
+
+_INDEX = None
+
+
+def load_index():
+    global _INDEX
+    if _INDEX is None:
+        with open(INDEX_PATH, encoding="utf-8") as f:
+            _INDEX = json.load(f)
+        if _INDEX.get("schema_version") != 3:
+            _INDEX = None
+            raise ValueError("Index schema mismatch; run python code/indexer.py")
+    return _INDEX
+
+
+def parse_query(raw):
+    """Pull out "phrases", +must, -mustnot, leave the rest as free terms."""
+    phrases = re.findall(r'"([^"]+)"', raw)
+    rest = re.sub(r'"[^"]+"', " ", raw)
+    must, mustnot, free = [], [], []
+    for tok in rest.split():
+        if tok.startswith("+") and len(tok) > 1:
+            must.extend(tokenize(tok[1:]))
+        elif tok.startswith("-") and len(tok) > 1:
+            mustnot.extend(tokenize(tok[1:]))
+        else:
+            free.extend(tokenize(tok))
+    phrase_terms = [t for ph in phrases for t in tokenize(ph)]
+    return {"phrases": phrases, "must": must, "mustnot": mustnot,
+            "free": free, "all_terms": free + must + phrase_terms}
+
+
+def _title_hits(idx, doc_id, terms):
+    tp = idx["title_postings"]
+    return sum(1 for t in terms if t in tp and str(doc_id) in tp[t])
+
+
+def phrase_regex(ph):
+    """Contiguous-word match: 'port scan' matches 'port scan' / 'Port-scan',
+    but NOT 'port scanning' or 'export scan' (word boundaries on both ends)."""
+    words = re.findall(r"[a-z0-9+#.]+", ph.lower())
+    if not words:
+        return None
+    body = r"[\s\-_/]+".join(re.escape(w) for w in words)
+    return re.compile(r"(?<![a-z0-9])" + body + r"(?![a-z0-9])")
+
+
+def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
+           pivot=0.0, use_fuzzy=False, coverage=False,
+           proximity_weight=0.0, field_weight=0.0, explain=False):
+    """title_boost=0.0, use_synonyms=False, pivot=0.0, use_fuzzy=False give the
+    required pure TF-IDF cosine."""
+    use_syn = use_synonyms
+    boost = title_boost
+    idx = load_index()            # loaded once; not counted in query time
+    t0 = time.perf_counter()
+    zh_fixes = {}
+    if use_fuzzy:
+        query, zh_fixes = _fix_chinese(query)   # v7: wrong character -> right one (same pinyin)
+    if use_syn or use_fuzzy:
+        query = synonyms.translate_zh(query)   # 中文關鍵字 -> English
+    parsed = parse_query(query)
+    # remember the words the user typed, to label each result matched / missing
+    shown_words = []
+    for w in parsed["free"] + parsed["must"] + [x for ph in parsed["phrases"] for x in tokenize(ph)]:
+        if w not in shown_words:
+            shown_words.append(w)
+    terms = parsed["all_terms"]
+
+    if not query.strip():
+        return _wrap("empty", idx, [], None, t0, model)
+    if not terms:                      # e.g. untranslatable Chinese / only symbols
+        return _wrap("oov", idx, [], [query.strip()], t0, model)
+
+    idf = idx["idf"]
+    postings = idx["postings"]
+
+    # v7: typo / IME correction for query words not in the vocabulary
+    corrections = {}
+    if use_fuzzy:
+        vocab = idf
+        for t in parsed["free"] + parsed["must"]:
+            if t not in vocab and t not in corrections:
+                c = fuzzy.correct(t, vocab, idx["df"], list(synonyms.ZH))
+                if c:
+                    c_tok = tokenize(c)
+                    corrections[t] = c_tok[0] if c_tok else c
+        for src, fixed in corrections.items():
+            if fixed in idf and fixed not in parsed["free"]:
+                parsed["free"].append(fixed)
+    parsed["must"] = [corrections.get(t, t) for t in parsed["must"]]
+    corrections.update(zh_fixes)
+
+    scoring_terms = [t for t in (parsed["free"] + parsed["must"]) if t in idf]
+    # phrase terms also contribute to ranking if in vocab
+    for ph in parsed["phrases"]:
+        scoring_terms += [t for t in tokenize(ph) if t in idf]
+    # query expansion: originals weight 1.0, synonyms 0.5 (also rescues an OOV original
+    # word whose synonym IS in the vocabulary)
+    if use_syn:
+        orig = parsed["free"] + parsed["must"] + [t for ph in parsed["phrases"] for t in tokenize(ph)]
+        weights = synonyms.expand(orig)
+    else:
+        weights = {t: 1.0 for t in scoring_terms}
+    for fixed in corrections.values():         # v7: corrected terms weigh less
+        if fixed in weights:
+            weights[fixed] = min(weights[fixed], fuzzy.FUZZY_WEIGHT)
+    weights = {t: w for t, w in weights.items() if t in idf}
+    if not weights:
+        return _wrap("oov", idx, [], terms, t0, model)
+    scoring_terms = list(weights)
+
+    # candidate docs = union of postings of scoring terms
+    cand = set()
+    for t in scoring_terms:
+        cand.update(int(d) for d in postings[t])
+
+    # v7.1: navigation hub pages (menus / full listings) are never results
+    docs_all = idx["docs"]
+    if SKIP_HUBS:
+        cand = {d for d in cand if not docs_all[d].get("hub")}
+
+    # Boolean filters
+    must_sets = []
+    for t in parsed["must"]:
+        must_sets.append({int(d) for d in postings.get(t, {})})
+    for s in must_sets:
+        cand &= s
+    for t in parsed["mustnot"]:
+        cand -= {int(d) for d in postings.get(t, {})}
+
+    # Literal phrase positions keep stopwords and never cross title/body.
+    for phrase in parsed["phrases"]:
+        cand.intersection_update(positions.phrase_documents(idx, phrase))
+
+    if not cand:
+        return _wrap("no_match", idx, [], terms, t0, model)
+
+    counted_terms = [corrections.get(term, term) for term in parsed["all_terms"]]
+    query_counts = Counter(counted_terms)
+    query_vector = vector([term for term in counted_terms if term in weights], idf, weights)
+    # Expansion/correction terms absent from the literal query get one weighted occurrence.
+    for term, multiplier in weights.items():
+        if term not in query_vector:
+            query_vector[term] = multiplier * idf[term]
+    rank_query = ({term: log_tf(max(1, query_counts[term])) * multiplier
+                   for term, multiplier in weights.items()} if model == "bm25" else query_vector)
+    scores = ranking.score(idx, rank_query, cand, model=model, pivot=pivot, field_weight=field_weight)
+    base_scores = dict(scores)
+    proximity_evidence = {}
+    if proximity_weight:
+        if proximity_weight < 0:
+            raise ValueError("Proximity weight must be nonnegative")
+        for doc_id in scores:
+            evidence = positions.proximity(idx, doc_id, scoring_terms)
+            proximity_evidence[doc_id] = evidence
+            scores[doc_id] *= 1 + proximity_weight * evidence["closeness"]
+
+    # title boost (both models): a query term in the TITLE multiplies the score,
+    # so it works regardless of the ranker's score scale (cosine ~0-1 vs BM25 ~10-20)
+    if boost:
+        uniq = {t for t, w in weights.items() if w >= 1.0}
+        for d in scores:
+            th = _title_hits(idx, d, uniq)
+            if th:
+                scores[d] *= (1 + boost * th)
+
+    if coverage:
+        # v7.1 coordination-level ranking: pages containing MORE of the distinct
+        # query words come first (like a search engine's default AND), and the
+        # unchanged TF-IDF cosine score orders pages inside each group.
+        orig = [t for t in scoring_terms if weights[t] >= 1.0] or scoring_terms
+        cov = {d: sum(1 for t in orig if str(d) in postings[t] or d in postings[t]) for d in scores}
+        ranked = sorted(((cov[d], s, d) for d, s in scores.items() if s > 0), reverse=True)
+        ranked = [(s, d) for _, s, d in ranked]
+    else:
+        ranked = sorted(((s, d) for d, s in scores.items() if s > 0), reverse=True)
+    surface_forms = {}
+    for term in scoring_terms:
+        for form in idx["position_aliases"].get(term, []):
+            surface_forms.setdefault(form, set()).add(term)
+    out = []
+    for s, d in ranked:
+        if len(out) >= top_k:
+            break
+        doc = idx["docs"][d]
+        if not doc["url"].lower().startswith(("http://", "https://")):
+            continue                     # only HTTP/HTTPS result links
+        matched, missing = [], []
+        for w in shown_words:
+            key = corrections.get(w, w)              # a typo counts by its correction
+            if str(d) in postings.get(key, {}) or str(d) in postings.get(w, {}):
+                matched.append(key)
+            else:
+                missing.append(w)
+        out.append({"doc_id": d, "url": doc["url"], "title": doc["title"],
+                    "score": s,
+                    "snippet": snippet(doc["text"], surface_forms),
+                    "matched": matched, "missing": missing})
+    if explain:
+        for hit in out:
+            doc_id = hit["doc_id"]
+            hit["explanation"] = {"model": model, "pivot": pivot, "field_weight": field_weight,
+                "query_norm": norm(query_vector), "document_norm": idx["norms"][doc_id],
+                "title_norm": idx["title_norms"][doc_id],
+                "document_length": idx["doc_len"][doc_id], "average_document_length": idx["avg_dl"],
+                "body_norm": idx["body_norms"][doc_id],
+                "description_norm": idx["description_norms"][doc_id],
+                "average_document_norm": idx["avg_norm"],
+                "effective_document_norm": ((1 - pivot) * idx["avg_norm"] + pivot * idx["norms"][doc_id]
+                                             if pivot else idx["norms"][doc_id]),
+                "query_term_counts": {term: max(1, query_counts[term]) for term in rank_query},
+                "query_multipliers": weights,
+                "base_score": base_scores[doc_id], "final_score": hit["score"],
+                "title_boost": boost, "coverage_first": coverage,
+                "title_multiplier": 1 + boost * _title_hits(idx, doc_id,
+                    {term for term, weight in weights.items() if weight >= 1.0}),
+                "proximity_weight": proximity_weight, "proximity": proximity_evidence.get(doc_id),
+                "terms": ranking.term_scores(idx, rank_query, doc_id, model=model,
+                                             pivot=pivot, field_weight=field_weight)}
+    status = "ok" if out else "no_match"
+    r = _wrap(status, idx, out, terms, t0, model)
+    r["expanded"] = sorted(t for t, w in weights.items()
+                           if w < 1.0 and t not in corrections.values())
+    r["corrections"] = corrections
+    return r
+
+
+def _fix_chinese(query):
+    """Replace a Chinese substring whose pinyin equals a known keyword's pinyin
+    but whose characters differ (選字錯誤, e.g. 掃瞄 -> 掃描, 無缐 -> 無線)."""
+    if not fuzzy._HAVE_PINYIN or not any('\u4e00' <= c <= '\u9fff' for c in query):
+        return query, {}
+    fixes = {}
+    keys = sorted(synonyms.ZH, key=len, reverse=True)
+    pin = {k: fuzzy._pinyin(k) for k in keys}
+    for k in keys:
+        L = len(k)
+        i = 0
+        while i + L <= len(query):
+            sub = query[i:i + L]
+            if sub != k and all('\u4e00' <= c <= '\u9fff' for c in sub) \
+                    and sub not in synonyms.ZH and fuzzy._pinyin(sub) == pin[k]:
+                fixes[sub] = k
+                query = query[:i] + k + query[i + L:]
+            i += 1
+    return query, fixes
+
+
+def _wrap(status, idx, results, terms, t0, model="tfidf"):
+    return {"status": status, "num_indexed": idx["N"], "results": results,
+            "terms": terms, "model": model,
+            "elapsed_ms": round((time.perf_counter() - t0) * 1000, 2)}
+
+
+if __name__ == "__main__":
+    args = [a for a in sys.argv[1:]]
+    model = "bm25" if "--bm25" in args else "tfidf"
+    boost = TITLE_BOOST if "--boost" in args else 0.0
+    syn = "--syn" in args
+    pv = PIVOT_SLOPE if "--pivot" in args else 0.0
+    fz = "--fuzzy" in args
+    cv = "--cov" in args
+    args = [a for a in args if a not in ("--bm25", "--tfidf", "--boost", "--syn", "--pivot", "--fuzzy", "--cov")]
+    q = " ".join(args)
+    r = search(q, model=model, title_boost=boost, use_synonyms=syn, pivot=pv, use_fuzzy=fz, coverage=cv)
+    if r.get("corrections"):
+        print("did you mean:", r["corrections"])
+    print(f"[{r['status']}] model={r['model']} indexed={r['num_indexed']} "
+          f"terms={r.get('terms')} {r['elapsed_ms']}ms")
+    for i, h in enumerate(r["results"], 1):
+        print(f"{i:2}. {h['score']:.4f}  {h['title']}")
+        print(f"     {h['url']}")
+        print(f"     matched={h['matched']} missing={h['missing']}")

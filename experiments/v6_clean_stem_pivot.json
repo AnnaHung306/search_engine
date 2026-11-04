@@ -1,0 +1,23 @@
+{
+ "version": "v6",
+ "date": "2026-10-21",
+ "changes": [
+  "second-pass labels (3 flips)",
+  "+35 newly pooled pairs labelled",
+  "clean.py boilerplate strip",
+  "light stemmer",
+  "tfidf_pivot system (slope 0.2)"
+ ],
+ "mean_p5": {
+  "tfidf": 0.54,
+  "tfidf_pivot": 0.68,
+  "bm25": 0.76,
+  "bm25_boost_syn": 0.7
+ },
+ "timing_ms_mean": {
+  "tfidf": 0.936,
+  "tfidf_pivot": 2.516,
+  "bm25": 2.006,
+  "bm25_boost_syn": 2.732
+ }
+}

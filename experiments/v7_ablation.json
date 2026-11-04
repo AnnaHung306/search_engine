@@ -1,0 +1,15 @@
+{
+  "note": "v7 (2026-10-21). Collection deepened to 7 hosts / 980 pages, 3 frozen queries swapped (see evaluate.py header). Frozen-query P@5, same final judgments.",
+  "dataset": {"pages": 980, "hosts": {"www.kali.org": 430, "nmap.org": 150, "docs.metasploit.com": 150, "www.wireshark.org": 80, "docs.mitmproxy.org": 30, "frida.re": 40, "gtfobins.org": 100}, "attempts": 1016, "failed": 0},
+  "P@5": {"tfidf": 0.46, "tfidf_pivot": 0.78, "bm25": 0.74, "bm25_boost_syn": 0.74},
+  "timing_ms_mean": {"tfidf": 0.95, "tfidf_pivot": 2.17, "bm25": 2.04, "bm25_boost_syn": 2.50},
+  "fuzzy_examples": {
+    "sql injetcion tool": "injetcion->injection",
+    "intercept htps trafic": "htps->http, trafic->traffic",
+    "vulnerabilty scaner": "vulnerabilty->vulnerability, scaner->scanner",
+    "wiresahrk": "wiresahrk->wireshark",
+    "decompile andriod apk": "andriod->android",
+    "\u7121\u7f10 \u7834\u89e3": "\u7121\u7f10->\u7121\u7dda (pinyin)",
+    "\u6383\u7791 \u57e0": "\u6383\u7791->\u6383\u63cf (pinyin)"
+  }
+}

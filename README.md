@@ -1,0 +1,77 @@
+# Pentest Tool Search — 課程整合更新 v8
+
+本機資安文件搜尋引擎。從 v7.1 的固定 980 頁公開資料出發，保留自寫倒排索引、TF-IDF 與 cosine，新增位置索引、欄位／鄰近度實驗及逐筆計分解釋。
+
+作業最新截止：2026-11-12 23:59（教學平台）。本輪程式尚待使用者驗收；新模型品質尚待組員人工盲評。
+
+## 安裝與正常入口
+
+Python 3.10+。
+
+```sh
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -B code/indexer.py
+python -B code/app.py
+```
+
+開啟 http://127.0.0.1:5000/ 。預設為必做 TF-IDF cosine，無錯字修正、同義詞、pivot、覆蓋優先或欄位重排。若要比較加強功能，選 Compare enhancements，再選模型／開關並搜尋。點 Why this result 可查看 TF、DF、IDF、norm 與各詞分數貢獻。
+
+依賴鎖在 requirements.txt：requests 2.34.2、beautifulsoup4 4.15.0、Flask 3.1.3、pypinyin 0.55.0、Protego 0.7.0。缺少依賴會直接報錯，不靜默停用功能。
+
+## 資料與來源
+
+- 上游 main 基底：`9c7c3a107b9712b5fc2f31d8d432a025be39f27a`，<https://github.com/AnnaHung306/search_engine>。
+- 原始 search-engine.zip、REPORT_DRAFT.docx、data/pages.json、data/index.json 與舊評估都保留。
+- 新索引：data/index-v8.json，schema 3，附 collection SHA-256。正常搜尋只讀新索引；不會在缺少新索引時偷偷改讀舊版。
+- 舊 Word 與 report/REPORT_DRAFT.md 是 **v7.1 歷史草稿**；本輪以 report/REPORT_V8.md 及 docs/changes/ 為準。
+- 講義頁碼／作業條文與延伸來源見 [引用資料](docs/references.md)；每批改動見 [更新紀錄](docs/changes/README.md)。
+
+## 爬蟲
+
+8 seeds 與 7 hosts 詳見 code/config.py：Kali、Nmap、Metasploit、Wireshark、mitmproxy、Frida、GTFOBins。保留原有路徑限制、每站額度與 1,000 頁總上限。
+
+新爬蟲不覆蓋固定評估資料：
+
+```sh
+python -B code/crawler.py --output data/crawls/new-crawl
+python -B code/crawler.py --output data/crawls/new-crawl --resume
+python -B code/indexer.py --pages data/crawls/new-crawl/pages.json --output data/index-new-crawl.json
+```
+
+最後一行產生另一份索引；正式固定快照仍為 index-v8.json，切換研究資料必須另外凍結評估。本輪沒有重爬七站或把少量驗證頁替換成正式資料集。
+
+每一個實際 HTTP 請求（含 robots、轉址各跳、失敗）共用 attempt budget、host 限速與紀錄。內容轉址送出前先檢查白名單／路徑／robots；robots metadata 可在白名單 host 上取得，不受內容路徑前綴限制。至少 2 秒，並遵守更長的 Crawl-delay／Request-rate 間距。500、429、timeout 等不會被當成允許爬取；受影響 host 在該次 crawl／resume 中暫停，需要新的 crawl 才重新嘗試。
+
+URL 保留 query string、去 fragment，僅移除 scheme 對應的預設埠。正常正文抽取、去重、checkpoint／resume 仍在；無法辨識編碼時記錄跳過，不猜測成有效內容。
+
+## 前處理與排序
+
+- 文件／查詢共用 code/preprocess.py：小寫、英文 stopwords、輕量 stemming、保留 C++／802.11／複合詞及其部分。完整政策沿用 v7.1，見程式與報告。
+- 文件及查詢：`tf = 1 + log10(count)`；`idf = log10(N/df)`；共用 collection IDF；必做分數是完整 L2 cosine。重複查詢詞現在確實計入 TF。
+- BM25：k1=1.5、b=0.75，IDF=`ln(1+(N-df+0.5)/(df+0.5))`，query multiplier 為 log TF × 擴展權重。
+- 片語使用 literal positions，保留 stopwords；標題／正文分開，不跨欄位拼接。空白、連字號、斜線、底線可銜接；其他標點造成位置間隔。`+must`、`-mustnot` 仍支援。
+- pivot slope 0.2、coverage-first、title boost 0.5、synonyms 0.5、typo correction 0.7 為明示實驗；pivot／coverage 不宣稱為純 cosine。
+- 新 field cosine：`(body_cosine + description_cosine + 2*title_cosine)/4`，各欄位共用 collection IDF、各自 L2 norm。
+- 新 proximity：以同欄位內包含查詢詞的最短位置窗，計算 coverage × closeness；乘數 `1+0.3*closeness`。這兩個新公式是本專題延伸設計，不是教授原公式，也未宣稱品質提升。
+
+## 評估與展示
+
+```sh
+python -B code/evaluate.py --legacy-score
+python -B code/evaluate.py --dump --suite course
+python -B code/evaluate.py --dump --suite development
+python -B code/evaluate.py --dump --suite holdout
+python -B code/evaluate.py --timing --suite course
+```
+
+匯出不覆蓋既有結果；重新實驗用 `--output <新的資料夾>`。兩位組員各自完成 reviewer CSV、解決分歧後，才能 `--score`；完整步驟見 [評估流程](docs/evaluation.md)。
+
+原六組固定查詢排名重現不變：0.46／0.72／0.84／0.80／0.80／0.74，僅為舊助手標註參考。新的 12 題開發集與 24 題 holdout 候選題已先凍結；需組員確認題目與獨立人工標註。不得為新方法的未知結果自動填 0 或填入好看的分數。
+
+正常導覽的 Evaluation & review 提供全文盲評包及 CSV。3–5 分鐘展示參考 report/DEMO_SCRIPT_V8.md。組別、真實分工與各人心得仍需組員補充。
+
+### description 資料限制
+
+固定 v7.1 頁面只有 title/text，沒有獨立 meta description。v8 具備真實 description 的抽取、postings、norms 及位置／offset 儲存，但這 980 頁的 description 均空白，不以正文開頭或生成文字冒充。後續新資料集才能量測 description 的效果，需另凍結；目前欄位比較的 description 分量為零。

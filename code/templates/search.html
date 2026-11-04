@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pentest Tool Search</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>🛡️ Pentest Tool Search</h1>
+  <div class="tag">A mini search engine over Kali / Nmap / Metasploit / Wireshark / mitmproxy / Frida / GTFOBins docs — type a security problem in English (basic Chinese keywords work too).</div>
+  <nav><a href="/">Search</a><a href="/evaluation">Evaluation &amp; review</a></nav>
+  <p class="mode"><strong>{{ 'Required baseline' if mode=='baseline' else 'Experiment' }}</strong> · {{ mode_description }}</p>
+  {% if error %}<p class="note error">{{ error }}</p>{% endif %}
+  <form method="get" action="/">
+    <div class="mode"><label>Search mode <select name="mode">
+      <option value="baseline" {{ 'selected' if mode=='baseline' }}>Required TF-IDF cosine</option>
+      <option value="experiment" {{ 'selected' if mode=='experiment' }}>Compare enhancements</option>
+    </select></label></div>
+    <input type="text" name="q" value="{{ q|e }}" autofocus placeholder="e.g. wifi password cracking / 破解 wifi 密碼">
+    <button type="submit">Search</button>
+    <div class="models">
+      Ranking:
+      <label><input type="radio" name="model" value="tfidf" {{ 'checked' if model=='tfidf' }}> TF-IDF cosine (required)</label>
+      <label><input type="radio" name="model" value="bm25" {{ 'checked' if model=='bm25' }}> BM25 (bonus)</label>
+      &nbsp;·&nbsp;<label><input type="checkbox" name="boost" value="1" {{ 'checked' if boost }}> title boost</label>
+      <label><input type="checkbox" name="syn" value="1" {{ 'checked' if syn }}> synonym expansion</label>
+      <label><input type="checkbox" name="pivot" value="1" {{ 'checked' if pivot }}> pivoted length norm (TF-IDF)</label>
+      <label><input type="checkbox" name="cov" value="1" {{ 'checked' if cov }}> more query words first</label>
+      <label><input type="checkbox" name="fuzzy" value="1" {{ 'checked' if fuzzy }}> typo tolerance</label>
+      <label><input type="checkbox" name="proximity" value="1" {{ 'checked' if proximity }}> proximity (0.3)</label>
+      <label><input type="checkbox" name="fields" value="1" {{ 'checked' if fields }}> field cosine (title 2 : description 1 : body 1)</label>
+    </div>
+  </form>
+  <div class="ex">Try:
+    <a href="/?q=sql+injection+tool">sql injection tool</a>
+    <a href="/?q=network+packet+sniffer">network packet sniffer</a>
+    <a href='/?q="port+scan"+-metasploit'>"port scan" -metasploit</a>
+    <a href="/?mode=experiment&amp;fuzzy=1&amp;q=intercept+https+trafic">intercept https trafic</a>
+    <a href="/?mode=experiment&amp;fuzzy=1&amp;q=無缐+破解">無缐 破解</a>
+  </div>
+  <div class="meta">Indexed pages: {{ num_indexed }}{% if elapsed is not none %} · search time {{ '%.1f'|format(elapsed) }} ms (excl. index load){% endif %}{% if terms %} · terms: {{ terms }}{% endif %}{% if expanded %} · + synonyms: {{ expanded }}{% endif %}</div>
+
+  {% if corrections %}
+    <p class="dym">Showing results for:
+      {% for src, fixed in corrections.items() %}<span>{{ src }} → <b>{{ fixed }}</b></span>{% if not loop.last %}, {% endif %}{% endfor %}
+    </p>
+  {% endif %}
+  {% if status == 'empty' %}
+    <p class="note">Type something to search.</p>
+  {% elif status == 'oov' %}
+    <p class="note">None of your words are in the index. Try English tool/technique keywords
+      such as <i>port scan</i>, <i>sql injection</i>, or <i>password cracking</i>.</p>
+  {% elif status == 'no_match' %}
+    <p class="note">No matching pages found.</p>
+  {% elif status == 'ok' %}
+    <p class="meta">Showing {{ results|length }} result(s) with positive score.</p>
+    {% for h in results %}
+      <div class="hit">
+        {% if h.url.lower().startswith('http://') or h.url.lower().startswith('https://') %}<a href="{{ h.url }}" target="_blank" rel="noopener noreferrer">{{ h.title or h.url }}</a>{% else %}{{ h.title }}{% endif %}
+        <div class="url">{{ h.url }}</div>
+        <div class="score">score {{ '%.4f'|format(h.score) }} · rank {{ loop.index }}</div>
+        <div class="snippet">{{ h.snippet_html }}</div>
+        <div class="kw">
+          {% for w in h.matched %}<span class="ok">✓ {{ w }}</span>{% endfor %}
+          {% if h.missing %}Missing: {% for w in h.missing %}<span class="miss">{{ w }}</span>{% endfor %}{% endif %}
+        </div>
+        <a class="score" href="{{ url_for('document', doc_id=h.doc_id) }}">View indexed full text</a>
+        {% if h.explanation %}{% set e=h.explanation %}
+        <details class="explanation"><summary>Why this result? · score {{ '%.6f'|format(h.score) }}</summary>
+          <p>Base score {{ '%.6f'|format(e.base_score) }} → final {{ '%.6f'|format(e.final_score) }}.</p>
+          {% if e.model=='tfidf' %}<p>Query L2 norm {{ '%.6f'|format(e.query_norm) }}.
+          {% if e.field_weight %}Field L2 norms: body {{ '%.6f'|format(e.body_norm) }}, title {{ '%.6f'|format(e.title_norm) }}, description {{ '%.6f'|format(e.description_norm) }}. Field cosine: (body + description + {{ e.field_weight }} × title) / {{ 2+e.field_weight }}. An empty field contributes zero.
+          {% else %}Document L2 norm {{ '%.6f'|format(e.document_norm) }}.{% if e.pivot %} Pivot slope {{ e.pivot }}; collection average norm {{ '%.6f'|format(e.average_document_norm) }}; effective document norm {{ '%.6f'|format(e.effective_document_norm) }}.{% endif %}{% endif %}</p>{% else %}<p>BM25 k1=1.5, b=0.75; document length {{ e.document_length }}, collection average length {{ '%.6f'|format(e.average_document_length) }}. Table IDF = ln(1 + (N − DF + 0.5)/(DF + 0.5)), N={{ num_indexed }}. Query weights are log TF times optional expansion weights.</p>{% endif %}
+          {% if e.title_boost %}<p>Title multiplier {{ '%.6f'|format(e.title_multiplier) }} uses {{ e.title_boost }} per original query-term hit.</p>{% endif %}
+          {% if e.proximity %}<p>Proximity multiplier: 1 + {{ e.proximity_weight }} × {{ '%.4f'|format(e.proximity.closeness) }} · field {{ e.proximity.field or 'none' }} · position span {{ e.proximity.window }} · character span {{ e.proximity.character_span }}.</p>{% endif %}
+          {% if e.coverage_first %}<p>Coverage-first ordering is active: scores sort results within each coverage group.</p>{% endif %}
+          <table><thead><tr><th>Term</th><th>Document TF</th><th>Title TF</th><th>Description TF</th><th>DF</th><th>IDF</th><th>Query TF</th><th>Query multiplier</th><th>Query weight</th><th>Score contribution</th></tr></thead><tbody>
+          {% for term in e.terms %}<tr><td>{{ term.term }}</td><td>{{ term.tf }}</td><td>{{ term.title_tf }}</td><td>{{ term.description_tf }}</td><td>{{ term.df }}</td><td>{{ '%.5f'|format(term.idf) }}</td><td>{{ e.query_term_counts[term.term] }}</td><td>{{ e.query_multipliers[term.term] }}</td><td>{{ '%.5f'|format(term.query_weight) }}</td><td>{{ '%.6f'|format(term.contribution) }}</td></tr>{% endfor %}
+          </tbody></table><p>Contributions sum to the base score. Optional title/proximity multipliers are applied after it.</p>
+        </details>{% endif %}
+      </div>
+    {% endfor %}
+  {% endif %}
+</body>
+</html>

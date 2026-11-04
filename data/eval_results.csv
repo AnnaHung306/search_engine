@@ -1,0 +1,301 @@
+system,query,rank,doc_id,url,relevant,reason
+tfidf,wifi password cracking,1,763,https://www.kali.org/tools/fern-wifi-cracker/,1,Automated Wi-Fi (WEP/WPA) cracker
+tfidf,wifi password cracking,2,766,https://www.kali.org/tools/wifi-honey/,1,Wi-Fi honeypot used to capture WPA handshakes
+tfidf,wifi password cracking,3,753,https://www.kali.org/tools/sipcrack/,0,"SIP login cracker, not Wi-Fi"
+tfidf,wifi password cracking,4,749,https://www.kali.org/tools/johnny/,0,"GUI for John the Ripper; general password cracking, not Wi-Fi specific"
+tfidf,wifi password cracking,5,754,https://www.kali.org/tools/sucrack/,0,"Local su password brute-forcer, not Wi-Fi"
+tfidf,sql injection tool,1,845,https://www.kali.org/tools/siparmyknife/,1,SIP fuzzer that also searches for SQL injection
+tfidf,sql injection tool,2,646,https://www.kali.org/tools/laudanum/,0,Web shells used after SQLi is found; does not detect/exploit SQLi itself
+tfidf,sql injection tool,3,742,https://www.kali.org/tools/sqldict/,0,"Dictionary attack on SQL Server logins, not SQL injection"
+tfidf,sql injection tool,4,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,0,"Developer library for writing SQLi modules, not a tool for users (consistent with MSSQL_SQLI=0)"
+tfidf,sql injection tool,5,721,https://docs.metasploit.com/docs/development/google-summer-of-code/gsoc-2020-project-ideas.html,0,GSoC project ideas page
+tfidf,port scanning techniques,1,294,https://nmap.org/book/scan-methods-maimon-scan.html,1,explains the TCP Maimon port scan technique
+tfidf,port scanning techniques,2,166,https://nmap.org/book/host-discovery.html,0,"Host discovery chapter, not port scanning"
+tfidf,port scanning techniques,3,45,https://nmap.org/book/organization.html,0,Book audience/organization overview
+tfidf,port scanning techniques,4,510,https://nmap.org/book/defenses.html,0,"About defending against Nmap scans, not how to port scan"
+tfidf,port scanning techniques,5,966,https://www.kali.org/tools/portspoof/,0,Defensive tool that fakes open ports; not a scanner
+tfidf,intercept https traffic,1,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,1,mitmproxy tutorial: intercept requests
+tfidf,intercept https traffic,2,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,1,Modify intercepted requests
+tfidf,intercept https traffic,3,4,https://docs.mitmproxy.org/stable/,1,mitmproxy intro: SSL/TLS-capable intercepting proxy
+tfidf,intercept https traffic,4,588,https://www.kali.org/tools/javasnoop/,0,"Intercepts Java method calls locally, not HTTPS traffic"
+tfidf,intercept https traffic,5,60,https://docs.mitmproxy.org/stable/mitmproxytutorial-userinterface/,0,"mitmproxy UI tour; about viewing flows, not how to intercept"
+tfidf,web application vulnerability scanner,1,405,https://www.kali.org/tools/webscarab/,1,"web application review/testing proxy, same rule as paros"
+tfidf,web application vulnerability scanner,2,302,https://www.kali.org/tools/wpprobe/,1,WordPress plugin scanner mapping to known vulnerabilities
+tfidf,web application vulnerability scanner,3,327,https://www.kali.org/tools/burpsuite/,1,web app security testing platform with a scanner
+tfidf,web application vulnerability scanner,4,366,https://www.kali.org/tools/paros/,1,Web application testing proxy with spider/scanner
+tfidf,web application vulnerability scanner,5,200,https://www.kali.org/tools/dirb/,0,"Web content (directory) scanner, not a vulnerability scanner"
+tfidf,network packet sniffer,1,789,https://www.kali.org/tools/above/,1,Network security sniffer
+tfidf,network packet sniffer,2,797,https://www.kali.org/tools/scapy/,1,scapy: packet generator and sniffer
+tfidf,network packet sniffer,3,769,https://www.kali.org/tools/xspy/,0,"X server keystroke sniffer, not network packets"
+tfidf,network packet sniffer,4,791,https://www.kali.org/tools/darkstat/,1,Packet sniffer / traffic analyzer
+tfidf,network packet sniffer,5,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,1,Wireshark guide: saving captured packets
+tfidf,exploit metasploit module,1,598,https://docs.metasploit.com/docs/development/developing-modules/external-modules/writing-external-golang-modules.html,1,Explains writing Metasploit modules in Go
+tfidf,exploit metasploit module,2,485,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-the-favorite-command.html,0,Index page
+tfidf,exploit metasploit module,3,2,https://docs.metasploit.com/,0,Docs landing page; general intro only
+tfidf,exploit metasploit module,4,504,https://docs.metasploit.com/docs/using-metasploit/other/why-cve-is-not-available.html,0,"Explains missing CVE labels, not how to use exploit modules"
+tfidf,exploit metasploit module,5,693,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-do-reporting-or-store-data-in-module-development.html,0,"Module-development API for storing loot/credentials, not using an exploit module"
+tfidf,decompile android apk,1,585,https://www.kali.org/tools/jadx/,1,Dex/APK to Java decompiler
+tfidf,decompile android apk,2,579,https://www.kali.org/tools/apktool/,1,apktool decodes APKs
+tfidf,decompile android apk,3,582,https://www.kali.org/tools/bytecode-viewer/,1,Android APK reverse engineering suite
+tfidf,decompile android apk,4,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0,"mitmproxy certificates (mentions Android), not APK reversing"
+tfidf,decompile android apk,5,109,https://frida.re/docs/examples/android/,1,Frida on an Android CTF APK
+tfidf,directory enumeration web server,1,245,https://www.kali.org/tools/gobuster/,1,gobuster: directory/file brute forcing
+tfidf,directory enumeration web server,2,967,https://www.kali.org/tools/arsenal-ng/,0,"Cheat-sheet launcher, not a discovery tool"
+tfidf,directory enumeration web server,3,235,https://www.kali.org/tools/finalrecon/,1,all-in-one web recon with a --dir directory search option
+tfidf,directory enumeration web server,4,592,https://nmap.org/book/output-formats-cpe.html,0,CPE naming in Nmap output; 'enumeration' is a different meaning
+tfidf,directory enumeration web server,5,839,https://www.kali.org/tools/ldeep/,0,"LDAP enumeration, not web"
+tfidf,reverse shell payload,1,34,https://docs.metasploit.com/docs/pentesting/metasploit-guide-upgrading-shells-to-meterpreter.html,0,"Upgrading an existing shell session, not creating one"
+tfidf,reverse shell payload,2,519,https://gtfobins.org/gtfobins/cpan/,0,Inherits from perl; no reverse-shell command on page
+tfidf,reverse shell payload,3,511,https://gtfobins.org/gtfobins/cowthink/,0,"Same as cowsay, inherited functions only"
+tfidf,reverse shell payload,4,508,https://gtfobins.org/gtfobins/cowsay/,0,Only inherits functions from perl; no reverse-shell command shown
+tfidf,reverse shell payload,5,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,1,Direct guide to reverse shells
+tfidf_cov,wifi password cracking,1,652,https://www.kali.org/tools/seclists/,0,"wordlist collection, not a Wi-Fi tool"
+tfidf_cov,wifi password cracking,2,748,https://www.kali.org/tools/john/,1,Page documents wpapcap2john: converts 802.11 WPA handshake captures for John to crack
+tfidf_cov,wifi password cracking,3,457,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-wishlist.html,0,"Meterpreter feature wishlist, not Wi-Fi"
+tfidf_cov,wifi password cracking,4,758,https://www.kali.org/tools/aircrack-ng/,1,aircrack-ng cracks WEP/WPA keys from captured handshakes
+tfidf_cov,wifi password cracking,5,763,https://www.kali.org/tools/fern-wifi-cracker/,1,Automated Wi-Fi (WEP/WPA) cracker
+tfidf_cov,sql injection tool,1,845,https://www.kali.org/tools/siparmyknife/,1,SIP fuzzer that also searches for SQL injection
+tfidf_cov,sql injection tool,2,646,https://www.kali.org/tools/laudanum/,0,Web shells used after SQLi is found; does not detect/exploit SQLi itself
+tfidf_cov,sql injection tool,3,613,https://www.kali.org/tools/sqlmap/,1,sqlmap: automatic SQL injection detection and exploitation
+tfidf_cov,sql injection tool,4,621,https://www.kali.org/tools/jsql/,1,jSQL Injection: finds and exploits SQL injection
+tfidf_cov,sql injection tool,5,618,https://www.kali.org/tools/sqlsus/,1,sqlsus: MySQL injection exploitation tool
+tfidf_cov,port scanning techniques,1,294,https://nmap.org/book/scan-methods-maimon-scan.html,1,explains the TCP Maimon port scan technique
+tfidf_cov,port scanning techniques,2,166,https://nmap.org/book/host-discovery.html,0,"Host discovery chapter, not port scanning"
+tfidf_cov,port scanning techniques,3,45,https://nmap.org/book/organization.html,0,Book audience/organization overview
+tfidf_cov,port scanning techniques,4,510,https://nmap.org/book/defenses.html,0,"About defending against Nmap scans, not how to port scan"
+tfidf_cov,port scanning techniques,5,252,https://nmap.org/book/scan-methods.html,1,Chapter on port scanning techniques and algorithms
+tfidf_cov,intercept https traffic,1,4,https://docs.mitmproxy.org/stable/,1,mitmproxy intro: SSL/TLS-capable intercepting proxy
+tfidf_cov,intercept https traffic,2,102,https://docs.mitmproxy.org/stable/concepts/modes/,1,mitmproxy proxy modes for capturing traffic
+tfidf_cov,intercept https traffic,3,190,https://docs.mitmproxy.org/stable/howto/transparent/,1,Transparent proxying to intercept traffic
+tfidf_cov,intercept https traffic,4,790,https://www.kali.org/tools/dsniff/,1,dsniff includes webmitm/sshmitm MITM tools
+tfidf_cov,intercept https traffic,5,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,1,Explains how mitmproxy intercepts HTTP/HTTPS (TLS interception mechanism)
+tfidf_cov,web application vulnerability scanner,1,327,https://www.kali.org/tools/burpsuite/,1,web app security testing platform with a scanner
+tfidf_cov,web application vulnerability scanner,2,200,https://www.kali.org/tools/dirb/,0,"Web content (directory) scanner, not a vulnerability scanner"
+tfidf_cov,web application vulnerability scanner,3,400,https://www.kali.org/tools/web-cache-vulnerability-scanner/,1,Scanner for web cache poisoning vulnerabilities
+tfidf_cov,web application vulnerability scanner,4,391,https://www.kali.org/tools/wapiti/,1,wapiti: web application vulnerability scanner
+tfidf_cov,web application vulnerability scanner,5,833,https://www.kali.org/tools/cisco-torch/,0,"Cisco device/network scanner, not a web application vulnerability scanner"
+tfidf_cov,network packet sniffer,1,789,https://www.kali.org/tools/above/,1,Network security sniffer
+tfidf_cov,network packet sniffer,2,797,https://www.kali.org/tools/scapy/,1,scapy: packet generator and sniffer
+tfidf_cov,network packet sniffer,3,791,https://www.kali.org/tools/darkstat/,1,Packet sniffer / traffic analyzer
+tfidf_cov,network packet sniffer,4,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,1,Wireshark guide: saving captured packets
+tfidf_cov,network packet sniffer,5,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,1,Wireshark guide: opening capture files (packet analysis)
+tfidf_cov,exploit metasploit module,1,598,https://docs.metasploit.com/docs/development/developing-modules/external-modules/writing-external-golang-modules.html,1,Explains writing Metasploit modules in Go
+tfidf_cov,exploit metasploit module,2,485,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-the-favorite-command.html,0,Index page
+tfidf_cov,exploit metasploit module,3,2,https://docs.metasploit.com/,0,Docs landing page; general intro only
+tfidf_cov,exploit metasploit module,4,693,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-do-reporting-or-store-data-in-module-development.html,0,"Module-development API for storing loot/credentials, not using an exploit module"
+tfidf_cov,exploit metasploit module,5,651,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-the-fileformat-mixin-to-create-a-file-format-exploit.html,1,Guide to writing a file-format exploit module
+tfidf_cov,decompile android apk,1,585,https://www.kali.org/tools/jadx/,1,Dex/APK to Java decompiler
+tfidf_cov,decompile android apk,2,579,https://www.kali.org/tools/apktool/,1,apktool decodes APKs
+tfidf_cov,decompile android apk,3,582,https://www.kali.org/tools/bytecode-viewer/,1,Android APK reverse engineering suite
+tfidf_cov,decompile android apk,4,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0,"mitmproxy certificates (mentions Android), not APK reversing"
+tfidf_cov,decompile android apk,5,109,https://frida.re/docs/examples/android/,1,Frida on an Android CTF APK
+tfidf_cov,directory enumeration web server,1,245,https://www.kali.org/tools/gobuster/,1,gobuster: directory/file brute forcing
+tfidf_cov,directory enumeration web server,2,235,https://www.kali.org/tools/finalrecon/,1,all-in-one web recon with a --dir directory search option
+tfidf_cov,directory enumeration web server,3,696,https://www.kali.org/tools/smbmap/,0,"SMB share enumeration, not web"
+tfidf_cov,directory enumeration web server,4,221,https://www.kali.org/tools/feroxbuster/,1,feroxbuster: recursive content discovery
+tfidf_cov,directory enumeration web server,5,105,https://www.kali.org/tools/autorecon/,1,Recon tool that runs feroxbuster/gobuster for web directory enumeration
+tfidf_cov,reverse shell payload,1,34,https://docs.metasploit.com/docs/pentesting/metasploit-guide-upgrading-shells-to-meterpreter.html,0,"Upgrading an existing shell session, not creating one"
+tfidf_cov,reverse shell payload,2,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,1,Direct guide to reverse shells
+tfidf_cov,reverse shell payload,3,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,1,Explains payload types incl. reverse connections
+tfidf_cov,reverse shell payload,4,868,https://www.kali.org/tools/penelope/,1,Shell handler for catching reverse shells
+tfidf_cov,reverse shell payload,5,892,https://www.kali.org/tools/hoaxshell/,1,Windows reverse shell payload generator
+tfidf_pivot,wifi password cracking,1,766,https://www.kali.org/tools/wifi-honey/,1,Wi-Fi honeypot used to capture WPA handshakes
+tfidf_pivot,wifi password cracking,2,763,https://www.kali.org/tools/fern-wifi-cracker/,1,Automated Wi-Fi (WEP/WPA) cracker
+tfidf_pivot,wifi password cracking,3,475,https://www.kali.org/tools/reaver/,1,reaver/wash attack WPS to recover the WPA passphrase
+tfidf_pivot,wifi password cracking,4,467,https://www.kali.org/tools/kismet/,1,Page lists Kismet plugins autowep (WEP key) and ptw (Aircrack-NG PTW attack on captured data)
+tfidf_pivot,wifi password cracking,5,748,https://www.kali.org/tools/john/,1,Page documents wpapcap2john: converts 802.11 WPA handshake captures for John to crack
+tfidf_pivot,sql injection tool,1,613,https://www.kali.org/tools/sqlmap/,1,sqlmap: automatic SQL injection detection and exploitation
+tfidf_pivot,sql injection tool,2,621,https://www.kali.org/tools/jsql/,1,jSQL Injection: finds and exploits SQL injection
+tfidf_pivot,sql injection tool,3,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,0,"Developer library for writing SQLi modules, not a tool for users (consistent with MSSQL_SQLI=0)"
+tfidf_pivot,sql injection tool,4,721,https://docs.metasploit.com/docs/development/google-summer-of-code/gsoc-2020-project-ideas.html,0,GSoC project ideas page
+tfidf_pivot,sql injection tool,5,616,https://www.kali.org/tools/sqlninja/,1,sqlninja: exploits SQL injection on MS SQL Server
+tfidf_pivot,port scanning techniques,1,950,https://www.kali.org/tools/unhide/,0,forensic tool for hidden processes/ports on the local host
+tfidf_pivot,port scanning techniques,2,639,https://nmap.org/book/man-port-scanning-techniques.html,1,"Reference of Nmap port scan techniques (-sS, -sT, -sU...)"
+tfidf_pivot,port scanning techniques,3,252,https://nmap.org/book/scan-methods.html,1,Chapter on port scanning techniques and algorithms
+tfidf_pivot,port scanning techniques,4,313,https://nmap.org/book/port-scanning-algorithms.html,1,how Nmap's port scanning engine works
+tfidf_pivot,port scanning techniques,5,499,https://nmap.org/book/firewall-subversion.html,1,Nmap scan techniques for bypassing firewalls
+tfidf_pivot,intercept https traffic,1,102,https://docs.mitmproxy.org/stable/concepts/modes/,1,mitmproxy proxy modes for capturing traffic
+tfidf_pivot,intercept https traffic,2,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,1,mitmproxy tutorial: intercept requests
+tfidf_pivot,intercept https traffic,3,4,https://docs.mitmproxy.org/stable/,1,mitmproxy intro: SSL/TLS-capable intercepting proxy
+tfidf_pivot,intercept https traffic,4,857,https://www.kali.org/tools/mitmproxy/,1,SSL-capable MITM HTTP proxy
+tfidf_pivot,intercept https traffic,5,190,https://docs.mitmproxy.org/stable/howto/transparent/,1,Transparent proxying to intercept traffic
+tfidf_pivot,web application vulnerability scanner,1,400,https://www.kali.org/tools/web-cache-vulnerability-scanner/,1,Scanner for web cache poisoning vulnerabilities
+tfidf_pivot,web application vulnerability scanner,2,200,https://www.kali.org/tools/dirb/,0,"Web content (directory) scanner, not a vulnerability scanner"
+tfidf_pivot,web application vulnerability scanner,3,391,https://www.kali.org/tools/wapiti/,1,wapiti: web application vulnerability scanner
+tfidf_pivot,web application vulnerability scanner,4,312,https://www.kali.org/tools/gvm/,1,"Greenbone/OpenVAS vulnerability scanner (network, includes web checks)"
+tfidf_pivot,web application vulnerability scanner,5,327,https://www.kali.org/tools/burpsuite/,1,web app security testing platform with a scanner
+tfidf_pivot,network packet sniffer,1,467,https://www.kali.org/tools/kismet/,1,kismet: wireless sniffer
+tfidf_pivot,network packet sniffer,2,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,1,Wireshark guide: saving captured packets
+tfidf_pivot,network packet sniffer,3,789,https://www.kali.org/tools/above/,1,Network security sniffer
+tfidf_pivot,network packet sniffer,4,796,https://www.kali.org/tools/wireshark/,1,wireshark/tshark: packet capture and analysis
+tfidf_pivot,network packet sniffer,5,797,https://www.kali.org/tools/scapy/,1,scapy: packet generator and sniffer
+tfidf_pivot,exploit metasploit module,1,2,https://docs.metasploit.com/,0,Docs landing page; general intro only
+tfidf_pivot,exploit metasploit module,2,339,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,1,How to load and run private modules
+tfidf_pivot,exploit metasploit module,3,268,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html,1,How to use a Metasploit module appropriately
+tfidf_pivot,exploit metasploit module,4,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,1,"Using msfconsole: search, use, set, run modules"
+tfidf_pivot,exploit metasploit module,5,590,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,1,Guide to writing a Metasploit exploit module
+tfidf_pivot,decompile android apk,1,585,https://www.kali.org/tools/jadx/,1,Dex/APK to Java decompiler
+tfidf_pivot,decompile android apk,2,579,https://www.kali.org/tools/apktool/,1,apktool decodes APKs
+tfidf_pivot,decompile android apk,3,593,https://www.kali.org/tools/dex2jar/,1,dex to jar conversion for decompiling
+tfidf_pivot,decompile android apk,4,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0,"mitmproxy certificates (mentions Android), not APK reversing"
+tfidf_pivot,decompile android apk,5,582,https://www.kali.org/tools/bytecode-viewer/,1,Android APK reverse engineering suite
+tfidf_pivot,directory enumeration web server,1,967,https://www.kali.org/tools/arsenal-ng/,0,"Cheat-sheet launcher, not a discovery tool"
+tfidf_pivot,directory enumeration web server,2,245,https://www.kali.org/tools/gobuster/,1,gobuster: directory/file brute forcing
+tfidf_pivot,directory enumeration web server,3,151,https://www.kali.org/tools/dnsrecon/,0,"DNS enumeration, not web directories"
+tfidf_pivot,directory enumeration web server,4,235,https://www.kali.org/tools/finalrecon/,1,all-in-one web recon with a --dir directory search option
+tfidf_pivot,directory enumeration web server,5,105,https://www.kali.org/tools/autorecon/,1,Recon tool that runs feroxbuster/gobuster for web directory enumeration
+tfidf_pivot,reverse shell payload,1,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,1,Direct guide to reverse shells
+tfidf_pivot,reverse shell payload,2,569,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-use-fetch-payloads.html,1,Fetch payloads deliver reverse_tcp payloads via curl/wget
+tfidf_pivot,reverse shell payload,3,432,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-stageless-mode.html,1,Explains staged vs stageless reverse_tcp/reverse_https Meterpreter payloads and how to generate them
+tfidf_pivot,reverse shell payload,4,481,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-with-ngrok.html,1,Catching reverse shells via ngrok
+tfidf_pivot,reverse shell payload,5,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,1,Explains payload types incl. reverse connections
+tfidf_pivot_cov,wifi password cracking,1,748,https://www.kali.org/tools/john/,1,Page documents wpapcap2john: converts 802.11 WPA handshake captures for John to crack
+tfidf_pivot_cov,wifi password cracking,2,758,https://www.kali.org/tools/aircrack-ng/,1,aircrack-ng cracks WEP/WPA keys from captured handshakes
+tfidf_pivot_cov,wifi password cracking,3,652,https://www.kali.org/tools/seclists/,0,"wordlist collection, not a Wi-Fi tool"
+tfidf_pivot_cov,wifi password cracking,4,457,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-wishlist.html,0,"Meterpreter feature wishlist, not Wi-Fi"
+tfidf_pivot_cov,wifi password cracking,5,766,https://www.kali.org/tools/wifi-honey/,1,Wi-Fi honeypot used to capture WPA handshakes
+tfidf_pivot_cov,sql injection tool,1,613,https://www.kali.org/tools/sqlmap/,1,sqlmap: automatic SQL injection detection and exploitation
+tfidf_pivot_cov,sql injection tool,2,621,https://www.kali.org/tools/jsql/,1,jSQL Injection: finds and exploits SQL injection
+tfidf_pivot_cov,sql injection tool,3,616,https://www.kali.org/tools/sqlninja/,1,sqlninja: exploits SQL injection on MS SQL Server
+tfidf_pivot_cov,sql injection tool,4,356,https://www.kali.org/tools/nikto/,0,general web server scanner; not described as a SQLi tool
+tfidf_pivot_cov,sql injection tool,5,845,https://www.kali.org/tools/siparmyknife/,1,SIP fuzzer that also searches for SQL injection
+tfidf_pivot_cov,port scanning techniques,1,950,https://www.kali.org/tools/unhide/,0,forensic tool for hidden processes/ports on the local host
+tfidf_pivot_cov,port scanning techniques,2,639,https://nmap.org/book/man-port-scanning-techniques.html,1,"Reference of Nmap port scan techniques (-sS, -sT, -sU...)"
+tfidf_pivot_cov,port scanning techniques,3,252,https://nmap.org/book/scan-methods.html,1,Chapter on port scanning techniques and algorithms
+tfidf_pivot_cov,port scanning techniques,4,313,https://nmap.org/book/port-scanning-algorithms.html,1,how Nmap's port scanning engine works
+tfidf_pivot_cov,port scanning techniques,5,499,https://nmap.org/book/firewall-subversion.html,1,Nmap scan techniques for bypassing firewalls
+tfidf_pivot_cov,intercept https traffic,1,102,https://docs.mitmproxy.org/stable/concepts/modes/,1,mitmproxy proxy modes for capturing traffic
+tfidf_pivot_cov,intercept https traffic,2,4,https://docs.mitmproxy.org/stable/,1,mitmproxy intro: SSL/TLS-capable intercepting proxy
+tfidf_pivot_cov,intercept https traffic,3,857,https://www.kali.org/tools/mitmproxy/,1,SSL-capable MITM HTTP proxy
+tfidf_pivot_cov,intercept https traffic,4,190,https://docs.mitmproxy.org/stable/howto/transparent/,1,Transparent proxying to intercept traffic
+tfidf_pivot_cov,intercept https traffic,5,121,https://docs.mitmproxy.org/stable/concepts/options/,0,"Config option reference, not how to intercept"
+tfidf_pivot_cov,web application vulnerability scanner,1,400,https://www.kali.org/tools/web-cache-vulnerability-scanner/,1,Scanner for web cache poisoning vulnerabilities
+tfidf_pivot_cov,web application vulnerability scanner,2,200,https://www.kali.org/tools/dirb/,0,"Web content (directory) scanner, not a vulnerability scanner"
+tfidf_pivot_cov,web application vulnerability scanner,3,391,https://www.kali.org/tools/wapiti/,1,wapiti: web application vulnerability scanner
+tfidf_pivot_cov,web application vulnerability scanner,4,327,https://www.kali.org/tools/burpsuite/,1,web app security testing platform with a scanner
+tfidf_pivot_cov,web application vulnerability scanner,5,718,https://docs.metasploit.com/docs/development/google-summer-of-code/gsoc-2018-project-ideas.html,0,GSoC project ideas page
+tfidf_pivot_cov,network packet sniffer,1,467,https://www.kali.org/tools/kismet/,1,kismet: wireless sniffer
+tfidf_pivot_cov,network packet sniffer,2,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,1,Wireshark guide: saving captured packets
+tfidf_pivot_cov,network packet sniffer,3,789,https://www.kali.org/tools/above/,1,Network security sniffer
+tfidf_pivot_cov,network packet sniffer,4,796,https://www.kali.org/tools/wireshark/,1,wireshark/tshark: packet capture and analysis
+tfidf_pivot_cov,network packet sniffer,5,797,https://www.kali.org/tools/scapy/,1,scapy: packet generator and sniffer
+tfidf_pivot_cov,exploit metasploit module,1,2,https://docs.metasploit.com/,0,Docs landing page; general intro only
+tfidf_pivot_cov,exploit metasploit module,2,339,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,1,How to load and run private modules
+tfidf_pivot_cov,exploit metasploit module,3,268,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html,1,How to use a Metasploit module appropriately
+tfidf_pivot_cov,exploit metasploit module,4,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,1,"Using msfconsole: search, use, set, run modules"
+tfidf_pivot_cov,exploit metasploit module,5,590,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,1,Guide to writing a Metasploit exploit module
+tfidf_pivot_cov,decompile android apk,1,585,https://www.kali.org/tools/jadx/,1,Dex/APK to Java decompiler
+tfidf_pivot_cov,decompile android apk,2,579,https://www.kali.org/tools/apktool/,1,apktool decodes APKs
+tfidf_pivot_cov,decompile android apk,3,593,https://www.kali.org/tools/dex2jar/,1,dex to jar conversion for decompiling
+tfidf_pivot_cov,decompile android apk,4,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0,"mitmproxy certificates (mentions Android), not APK reversing"
+tfidf_pivot_cov,decompile android apk,5,582,https://www.kali.org/tools/bytecode-viewer/,1,Android APK reverse engineering suite
+tfidf_pivot_cov,directory enumeration web server,1,245,https://www.kali.org/tools/gobuster/,1,gobuster: directory/file brute forcing
+tfidf_pivot_cov,directory enumeration web server,2,235,https://www.kali.org/tools/finalrecon/,1,all-in-one web recon with a --dir directory search option
+tfidf_pivot_cov,directory enumeration web server,3,105,https://www.kali.org/tools/autorecon/,1,Recon tool that runs feroxbuster/gobuster for web directory enumeration
+tfidf_pivot_cov,directory enumeration web server,4,221,https://www.kali.org/tools/feroxbuster/,1,feroxbuster: recursive content discovery
+tfidf_pivot_cov,directory enumeration web server,5,415,https://www.kali.org/tools/wpscan/,0,"WordPress plugin enumeration, not directory discovery"
+tfidf_pivot_cov,reverse shell payload,1,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,1,Direct guide to reverse shells
+tfidf_pivot_cov,reverse shell payload,2,569,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-use-fetch-payloads.html,1,Fetch payloads deliver reverse_tcp payloads via curl/wget
+tfidf_pivot_cov,reverse shell payload,3,432,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-stageless-mode.html,1,Explains staged vs stageless reverse_tcp/reverse_https Meterpreter payloads and how to generate them
+tfidf_pivot_cov,reverse shell payload,4,481,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-with-ngrok.html,1,Catching reverse shells via ngrok
+tfidf_pivot_cov,reverse shell payload,5,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,1,Explains payload types incl. reverse connections
+bm25,wifi password cracking,1,763,https://www.kali.org/tools/fern-wifi-cracker/,1,Automated Wi-Fi (WEP/WPA) cracker
+bm25,wifi password cracking,2,652,https://www.kali.org/tools/seclists/,0,"wordlist collection, not a Wi-Fi tool"
+bm25,wifi password cracking,3,766,https://www.kali.org/tools/wifi-honey/,1,Wi-Fi honeypot used to capture WPA handshakes
+bm25,wifi password cracking,4,475,https://www.kali.org/tools/reaver/,1,reaver/wash attack WPS to recover the WPA passphrase
+bm25,wifi password cracking,5,748,https://www.kali.org/tools/john/,1,Page documents wpapcap2john: converts 802.11 WPA handshake captures for John to crack
+bm25,sql injection tool,1,613,https://www.kali.org/tools/sqlmap/,1,sqlmap: automatic SQL injection detection and exploitation
+bm25,sql injection tool,2,621,https://www.kali.org/tools/jsql/,1,jSQL Injection: finds and exploits SQL injection
+bm25,sql injection tool,3,616,https://www.kali.org/tools/sqlninja/,1,sqlninja: exploits SQL injection on MS SQL Server
+bm25,sql injection tool,4,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,0,"Developer library for writing SQLi modules, not a tool for users (consistent with MSSQL_SQLI=0)"
+bm25,sql injection tool,5,721,https://docs.metasploit.com/docs/development/google-summer-of-code/gsoc-2020-project-ideas.html,0,GSoC project ideas page
+bm25,port scanning techniques,1,252,https://nmap.org/book/scan-methods.html,1,Chapter on port scanning techniques and algorithms
+bm25,port scanning techniques,2,166,https://nmap.org/book/host-discovery.html,0,"Host discovery chapter, not port scanning"
+bm25,port scanning techniques,3,294,https://nmap.org/book/scan-methods-maimon-scan.html,1,explains the TCP Maimon port scan technique
+bm25,port scanning techniques,4,525,https://nmap.org/book/nmap-defenses-trickery.html,0,defensive trickery against scanners
+bm25,port scanning techniques,5,639,https://nmap.org/book/man-port-scanning-techniques.html,1,"Reference of Nmap port scan techniques (-sS, -sT, -sU...)"
+bm25,intercept https traffic,1,102,https://docs.mitmproxy.org/stable/concepts/modes/,1,mitmproxy proxy modes for capturing traffic
+bm25,intercept https traffic,2,4,https://docs.mitmproxy.org/stable/,1,mitmproxy intro: SSL/TLS-capable intercepting proxy
+bm25,intercept https traffic,3,190,https://docs.mitmproxy.org/stable/howto/transparent/,1,Transparent proxying to intercept traffic
+bm25,intercept https traffic,4,857,https://www.kali.org/tools/mitmproxy/,1,SSL-capable MITM HTTP proxy
+bm25,intercept https traffic,5,790,https://www.kali.org/tools/dsniff/,1,dsniff includes webmitm/sshmitm MITM tools
+bm25,web application vulnerability scanner,1,400,https://www.kali.org/tools/web-cache-vulnerability-scanner/,1,Scanner for web cache poisoning vulnerabilities
+bm25,web application vulnerability scanner,2,200,https://www.kali.org/tools/dirb/,0,"Web content (directory) scanner, not a vulnerability scanner"
+bm25,web application vulnerability scanner,3,391,https://www.kali.org/tools/wapiti/,1,wapiti: web application vulnerability scanner
+bm25,web application vulnerability scanner,4,327,https://www.kali.org/tools/burpsuite/,1,web app security testing platform with a scanner
+bm25,web application vulnerability scanner,5,718,https://docs.metasploit.com/docs/development/google-summer-of-code/gsoc-2018-project-ideas.html,0,GSoC project ideas page
+bm25,network packet sniffer,1,797,https://www.kali.org/tools/scapy/,1,scapy: packet generator and sniffer
+bm25,network packet sniffer,2,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,1,Wireshark guide: saving captured packets
+bm25,network packet sniffer,3,789,https://www.kali.org/tools/above/,1,Network security sniffer
+bm25,network packet sniffer,4,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,1,Wireshark guide: opening capture files (packet analysis)
+bm25,network packet sniffer,5,467,https://www.kali.org/tools/kismet/,1,kismet: wireless sniffer
+bm25,exploit metasploit module,1,339,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,1,How to load and run private modules
+bm25,exploit metasploit module,2,2,https://docs.metasploit.com/,0,Docs landing page; general intro only
+bm25,exploit metasploit module,3,268,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html,1,How to use a Metasploit module appropriately
+bm25,exploit metasploit module,4,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,1,"Using msfconsole: search, use, set, run modules"
+bm25,exploit metasploit module,5,590,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,1,Guide to writing a Metasploit exploit module
+bm25,decompile android apk,1,585,https://www.kali.org/tools/jadx/,1,Dex/APK to Java decompiler
+bm25,decompile android apk,2,579,https://www.kali.org/tools/apktool/,1,apktool decodes APKs
+bm25,decompile android apk,3,582,https://www.kali.org/tools/bytecode-viewer/,1,Android APK reverse engineering suite
+bm25,decompile android apk,4,593,https://www.kali.org/tools/dex2jar/,1,dex to jar conversion for decompiling
+bm25,decompile android apk,5,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0,"mitmproxy certificates (mentions Android), not APK reversing"
+bm25,directory enumeration web server,1,245,https://www.kali.org/tools/gobuster/,1,gobuster: directory/file brute forcing
+bm25,directory enumeration web server,2,967,https://www.kali.org/tools/arsenal-ng/,0,"Cheat-sheet launcher, not a discovery tool"
+bm25,directory enumeration web server,3,235,https://www.kali.org/tools/finalrecon/,1,all-in-one web recon with a --dir directory search option
+bm25,directory enumeration web server,4,221,https://www.kali.org/tools/feroxbuster/,1,feroxbuster: recursive content discovery
+bm25,directory enumeration web server,5,105,https://www.kali.org/tools/autorecon/,1,Recon tool that runs feroxbuster/gobuster for web directory enumeration
+bm25,reverse shell payload,1,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,1,Direct guide to reverse shells
+bm25,reverse shell payload,2,569,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-use-fetch-payloads.html,1,Fetch payloads deliver reverse_tcp payloads via curl/wget
+bm25,reverse shell payload,3,432,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-stageless-mode.html,1,Explains staged vs stageless reverse_tcp/reverse_https Meterpreter payloads and how to generate them
+bm25,reverse shell payload,4,892,https://www.kali.org/tools/hoaxshell/,1,Windows reverse shell payload generator
+bm25,reverse shell payload,5,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,1,Explains payload types incl. reverse connections
+bm25_boost_syn,wifi password cracking,1,763,https://www.kali.org/tools/fern-wifi-cracker/,1,Automated Wi-Fi (WEP/WPA) cracker
+bm25_boost_syn,wifi password cracking,2,475,https://www.kali.org/tools/reaver/,1,reaver/wash attack WPS to recover the WPA passphrase
+bm25_boost_syn,wifi password cracking,3,758,https://www.kali.org/tools/aircrack-ng/,1,aircrack-ng cracks WEP/WPA keys from captured handshakes
+bm25_boost_syn,wifi password cracking,4,319,https://docs.metasploit.com/docs/using-metasploit/intermediate/hashes-and-password-cracking.html,0,"Metasploit hash-cracking library article, not Wi-Fi"
+bm25_boost_syn,wifi password cracking,5,766,https://www.kali.org/tools/wifi-honey/,1,Wi-Fi honeypot used to capture WPA handshakes
+bm25_boost_syn,sql injection tool,1,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,0,"Developer library for writing SQLi modules, not a tool for users (consistent with MSSQL_SQLI=0)"
+bm25_boost_syn,sql injection tool,2,621,https://www.kali.org/tools/jsql/,1,jSQL Injection: finds and exploits SQL injection
+bm25_boost_syn,sql injection tool,3,616,https://www.kali.org/tools/sqlninja/,1,sqlninja: exploits SQL injection on MS SQL Server
+bm25_boost_syn,sql injection tool,4,613,https://www.kali.org/tools/sqlmap/,1,sqlmap: automatic SQL injection detection and exploitation
+bm25_boost_syn,sql injection tool,5,618,https://www.kali.org/tools/sqlsus/,1,sqlsus: MySQL injection exploitation tool
+bm25_boost_syn,port scanning techniques,1,252,https://nmap.org/book/scan-methods.html,1,Chapter on port scanning techniques and algorithms
+bm25_boost_syn,port scanning techniques,2,639,https://nmap.org/book/man-port-scanning-techniques.html,1,"Reference of Nmap port scan techniques (-sS, -sT, -sU...)"
+bm25_boost_syn,port scanning techniques,3,513,https://nmap.org/book/nmap-defenses-proactive-scanning.html,0,"defense advice (scan your own network), same rule as Chapter 11 Defenses"
+bm25_boost_syn,port scanning techniques,4,222,https://nmap.org/book/port-scanning.html,1,Port scanning overview chapter with tutorial
+bm25_boost_syn,port scanning techniques,5,318,https://nmap.org/book/reduce-scantime.html,1,Techniques to speed up port scans
+bm25_boost_syn,intercept https traffic,1,102,https://docs.mitmproxy.org/stable/concepts/modes/,1,mitmproxy proxy modes for capturing traffic
+bm25_boost_syn,intercept https traffic,2,4,https://docs.mitmproxy.org/stable/,1,mitmproxy intro: SSL/TLS-capable intercepting proxy
+bm25_boost_syn,intercept https traffic,3,663,https://docs.metasploit.com/docs/development/developing-modules/libraries/http/how-to-send-an-http-request-using-httpclient.html,0,"Metasploit HttpClient developer API, sends requests, no interception"
+bm25_boost_syn,intercept https traffic,4,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,1,mitmproxy tutorial: intercept requests
+bm25_boost_syn,intercept https traffic,5,190,https://docs.mitmproxy.org/stable/howto/transparent/,1,Transparent proxying to intercept traffic
+bm25_boost_syn,web application vulnerability scanner,1,400,https://www.kali.org/tools/web-cache-vulnerability-scanner/,1,Scanner for web cache poisoning vulnerabilities
+bm25_boost_syn,web application vulnerability scanner,2,347,https://nmap.org/book/vscan.html,0,"Nmap service/version detection, not a web vulnerability scanner"
+bm25_boost_syn,web application vulnerability scanner,3,391,https://www.kali.org/tools/wapiti/,1,wapiti: web application vulnerability scanner
+bm25_boost_syn,web application vulnerability scanner,4,200,https://www.kali.org/tools/dirb/,0,"Web content (directory) scanner, not a vulnerability scanner"
+bm25_boost_syn,web application vulnerability scanner,5,513,https://nmap.org/book/nmap-defenses-proactive-scanning.html,0,"Nmap defense chapter, not a web scanner"
+bm25_boost_syn,network packet sniffer,1,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,1,Wireshark guide: saving captured packets
+bm25_boost_syn,network packet sniffer,2,790,https://www.kali.org/tools/dsniff/,1,tools to sniff network traffic
+bm25_boost_syn,network packet sniffer,3,853,https://www.kali.org/tools/ettercap/,1,ettercap: LAN sniffer/interceptor
+bm25_boost_syn,network packet sniffer,4,460,https://www.kali.org/tools/ubertooth/,0,"Bluetooth hardware platform, not network packet capture"
+bm25_boost_syn,network packet sniffer,5,794,https://www.kali.org/tools/hexinject/,1,hexinject: packet sniffing and injection
+bm25_boost_syn,exploit metasploit module,1,672,https://docs.metasploit.com/docs/development/developing-modules/libraries/http/how-to-write-a-module-using-httpserver-and-httpclient.html,1,Guide to writing a module using HttpServer/HttpClient
+bm25_boost_syn,exploit metasploit module,2,578,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-write-a-cmd-injection-module.html,0,Index page listing guides
+bm25_boost_syn,exploit metasploit module,3,339,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,1,How to load and run private modules
+bm25_boost_syn,exploit metasploit module,4,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,1,"Using msfconsole: search, use, set, run modules"
+bm25_boost_syn,exploit metasploit module,5,590,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,1,Guide to writing a Metasploit exploit module
+bm25_boost_syn,decompile android apk,1,585,https://www.kali.org/tools/jadx/,1,Dex/APK to Java decompiler
+bm25_boost_syn,decompile android apk,2,109,https://frida.re/docs/examples/android/,1,Frida on an Android CTF APK
+bm25_boost_syn,decompile android apk,3,579,https://www.kali.org/tools/apktool/,1,apktool decodes APKs
+bm25_boost_syn,decompile android apk,4,582,https://www.kali.org/tools/bytecode-viewer/,1,Android APK reverse engineering suite
+bm25_boost_syn,decompile android apk,5,593,https://www.kali.org/tools/dex2jar/,1,dex to jar conversion for decompiling
+bm25_boost_syn,directory enumeration web server,1,245,https://www.kali.org/tools/gobuster/,1,gobuster: directory/file brute forcing
+bm25_boost_syn,directory enumeration web server,2,105,https://www.kali.org/tools/autorecon/,1,Recon tool that runs feroxbuster/gobuster for web directory enumeration
+bm25_boost_syn,directory enumeration web server,3,221,https://www.kali.org/tools/feroxbuster/,1,feroxbuster: recursive content discovery
+bm25_boost_syn,directory enumeration web server,4,415,https://www.kali.org/tools/wpscan/,0,"WordPress plugin enumeration, not directory discovery"
+bm25_boost_syn,directory enumeration web server,5,696,https://www.kali.org/tools/smbmap/,0,"SMB share enumeration, not web"
+bm25_boost_syn,reverse shell payload,1,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,1,Direct guide to reverse shells
+bm25_boost_syn,reverse shell payload,2,569,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-use-fetch-payloads.html,1,Fetch payloads deliver reverse_tcp payloads via curl/wget
+bm25_boost_syn,reverse shell payload,3,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,1,Explains payload types incl. reverse connections
+bm25_boost_syn,reverse shell payload,4,34,https://docs.metasploit.com/docs/pentesting/metasploit-guide-upgrading-shells-to-meterpreter.html,0,"Upgrading an existing shell session, not creating one"
+bm25_boost_syn,reverse shell payload,5,329,https://docs.metasploit.com/docs/using-metasploit/intermediate/payload-uuid.html,0,"Payload UUID tracking internals, not creating/catching a reverse shell"

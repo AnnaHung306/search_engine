@@ -1,0 +1,33 @@
+{
+  "purpose": "two-request public read smoke check; not a new assignment dataset",
+  "url": "https://nmap.org/book/toc.html",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "title": "Nmap Network Scanning",
+  "text_chars": 24365,
+  "description_available": true,
+  "body_sha256": "0a1e549fa88aa0bbc4b7d218f23290b671044c8f247575334ecf0337635bf5e9",
+  "requests": [
+    {
+      "status": "http_request",
+      "kind": "robots",
+      "url": "https://nmap.org/robots.txt",
+      "started_at": 1793813462.708649,
+      "finished_at": 1793813464.286392,
+      "code": 200
+    },
+    {
+      "status": "http_request",
+      "kind": "content",
+      "url": "https://nmap.org/book/toc.html",
+      "started_at": 1793813466.2913878,
+      "finished_at": 1793813466.8783202,
+      "code": 200
+    }
+  ],
+  "request_counts": {
+    "total": 2,
+    "robots": 1,
+    "content": 1
+  }
+}

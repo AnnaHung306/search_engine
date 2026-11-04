@@ -1,0 +1,7 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>{{ doc.title }}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav><a href="/">Search</a><a href="/evaluation">Evaluation &amp; review</a></nav>
+<h1>{{ doc.title }}</h1><p>{% if doc.url.lower().startswith('http://') or doc.url.lower().startswith('https://') %}<a href="{{ doc.url }}" rel="noopener noreferrer">{{ doc.url }}</a>{% else %}{{ doc.url }}{% endif %}</p>
+<p>Document {{ doc_id }} · fetched {{ doc.fetch_time }} · full indexed main text. The captured original main text is preserved in pages.json.</p>
+{% if doc.description %}<p><strong>Source description:</strong> {{ doc.description }}</p>{% else %}<p>No description was captured for this legacy document.</p>{% endif %}
+<pre>{{ doc.text }}</pre></html>

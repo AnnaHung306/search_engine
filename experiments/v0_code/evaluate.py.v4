@@ -1,0 +1,101 @@
+"""evaluate.py — Precision@5 over 10 frozen queries.
+
+Runs each frozen query against the index, writes the top-5 for human relevance
+labeling to data/eval_results.csv, and (once labels are filled in
+data/eval_labels.csv) computes P@5 per query and the mean.
+
+Workflow:
+  1. python evaluate.py --dump     -> writes eval_results.csv (rank,url,...) with
+                                       a blank 'relevant' column + auto-suggested
+                                       label by keyword rule, for a human to review.
+  2. a group member edits relevant (1/0) and fills 'reason'.
+  3. python evaluate.py --score    -> reads the labeled file, prints P@5 table.
+
+Denominator is ALWAYS 5 (missing positions count as nonrelevant).
+"""
+import csv
+import os
+import sys
+
+import search as se
+
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+RESULTS = os.path.join(DATA_DIR, "eval_results.csv")
+
+# 10 frozen queries, each with an information need + a relevance rule.
+QUERIES = [
+    ("wifi password cracking",
+     "User wants a tool to recover/crack Wi-Fi (WEP/WPA) passwords.",
+     "Relevant if the page is about a tool that cracks or captures Wi-Fi keys/handshakes."),
+    ("sql injection tool",
+     "User wants a tool to find/exploit SQL injection.",
+     "Relevant if the page documents a tool that detects or exploits SQLi."),
+    ("port scanning techniques",
+     "User wants to learn how to scan ports / a port scanner.",
+     "Relevant if the page explains port scanning or documents a port scanner."),
+    ("password hash cracking",
+     "User wants to crack password hashes.",
+     "Relevant if the page is about cracking hashed passwords (e.g. john, hashcat)."),
+    ("web application vulnerability scanner",
+     "User wants a scanner for web app vulnerabilities.",
+     "Relevant if the page documents a web vulnerability scanner."),
+    ("network packet sniffer",
+     "User wants to capture/analyze network traffic.",
+     "Relevant if the page is about packet capture/sniffing."),
+    ("exploit metasploit module",
+     "User wants to use/run a Metasploit exploit module.",
+     "Relevant if the page explains Metasploit modules/exploitation."),
+    ("brute force login",
+     "User wants to brute-force a login service.",
+     "Relevant if the page documents an online brute-force/login attack tool."),
+    ("directory enumeration web server",
+     "User wants to enumerate directories/files on a web server.",
+     "Relevant if the page is about web content/directory discovery."),
+    ("wireless deauthentication attack",
+     "User wants to perform a wireless deauth attack.",
+     "Relevant if the page covers deauth / wireless attacks."),
+]
+
+
+def dump():
+    rows = []
+    for q, need, rule in QUERIES:
+        r = se.search(q, top_k=5)
+        hits = r["results"]
+        for rank in range(5):
+            if rank < len(hits):
+                h = hits[rank]
+                rows.append([q, rank + 1, h["doc_id"], h["url"],
+                             h["title"], h["score"], "", "", need, rule])
+            else:
+                rows.append([q, rank + 1, "", "", "(no result)", "", 0,
+                             "fewer than 5 results", need, rule])
+    with open(RESULTS, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["query", "rank", "doc_id", "url", "title", "score",
+                    "relevant", "reason", "information_need", "relevance_rule"])
+        w.writerows(rows)
+    print(f"Wrote {RESULTS}. Fill 'relevant' (1/0) and 'reason', then run --score.")
+
+
+def score():
+    by_q = {}
+    with open(RESULTS, encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            by_q.setdefault(row["query"], []).append(row)
+    total = 0.0
+    print(f"{'query':40} P@5")
+    for q, rows in by_q.items():
+        rel = sum(1 for r in rows[:5] if str(r["relevant"]).strip() == "1")
+        p = rel / 5  # denominator always 5
+        total += p
+        print(f"{q:40} {p:.2f}")
+    print("-" * 46)
+    print(f"{'MEAN P@5':40} {total / len(by_q):.3f}")
+
+
+if __name__ == "__main__":
+    if "--score" in sys.argv:
+        score()
+    else:
+        dump()

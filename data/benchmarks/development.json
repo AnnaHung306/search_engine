@@ -1,0 +1,78 @@
+{
+  "name": "development",
+  "role": "development; human judgments pending",
+  "queries": [
+    {
+      "id": "development-01",
+      "query": "tls certificate proxy setup",
+      "information_need": "Configure a trusted certificate for a TLS inspection proxy.",
+      "relevance_rule": "Explains proxy CA installation or client TLS trust configuration."
+    },
+    {
+      "id": "development-02",
+      "query": "android dynamic instrumentation",
+      "information_need": "Inspect a running Android app with instrumentation.",
+      "relevance_rule": "Documents Frida Android instrumentation, attachment or hooks."
+    },
+    {
+      "id": "development-03",
+      "query": "tcp syn scan",
+      "information_need": "Understand TCP SYN port scanning.",
+      "relevance_rule": "Explains SYN scan behavior or its Nmap usage."
+    },
+    {
+      "id": "development-04",
+      "query": "dns reconnaissance",
+      "information_need": "Find DNS reconnaissance tools.",
+      "relevance_rule": "Documents DNS records, subdomain discovery or DNS enumeration tools."
+    },
+    {
+      "id": "development-05",
+      "query": "offline password hash recovery",
+      "information_need": "Recover passwords from offline hashes.",
+      "relevance_rule": "Documents a hash cracking tool or relevant workflow, not remote login guessing."
+    },
+    {
+      "id": "development-06",
+      "query": "http request interception",
+      "information_need": "Pause and inspect an HTTP request in a proxy.",
+      "relevance_rule": "Explains an interception proxy or request interception workflow."
+    },
+    {
+      "id": "development-07",
+      "query": "apk resource decoding",
+      "information_need": "Decode Android application resources.",
+      "relevance_rule": "Explains APK resource extraction/decoding, not only runtime hooks."
+    },
+    {
+      "id": "development-08",
+      "query": "network traffic display filter",
+      "information_need": "Filter already captured network traffic.",
+      "relevance_rule": "Explains Wireshark display filters or equivalent analysis."
+    },
+    {
+      "id": "development-09",
+      "query": "service banner detection",
+      "information_need": "Identify a service from network responses.",
+      "relevance_rule": "Explains service/version detection or banner inspection."
+    },
+    {
+      "id": "development-10",
+      "query": "web content discovery",
+      "information_need": "Locate unlinked content on a web server.",
+      "relevance_rule": "Documents web directory/file/content discovery."
+    },
+    {
+      "id": "development-11",
+      "query": "metasploit session management",
+      "information_need": "Manage an existing Metasploit session.",
+      "relevance_rule": "Explains listing, interacting with or managing sessions."
+    },
+    {
+      "id": "development-12",
+      "query": "sudo binary capabilities",
+      "information_need": "Understand documented security behavior of binaries under sudo.",
+      "relevance_rule": "A GTFOBins entry or explanation with a sudo-specific function."
+    }
+  ]
+}
