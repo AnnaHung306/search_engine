@@ -70,9 +70,7 @@ def build_index(pages, collection_hash):
         "position_offset_encoding": offset_codec.ENCODING}
 
 
-def build(pages_path=PAGES_PATH, output=INDEX_PATH):
-    raw = Path(pages_path).read_bytes()
-    index = build_index(json.loads(raw), hashlib.sha256(raw).hexdigest())
+def write_index(index, output):
     output = Path(output)
     output.parent.mkdir(parents=True, exist_ok=True)
     temporary = output.with_suffix(".tmp")
@@ -84,6 +82,13 @@ def build(pages_path=PAGES_PATH, output=INDEX_PATH):
         else:
             raw.write(json.dumps(index, ensure_ascii=False, separators=(",", ":")).encode("utf-8"))
     temporary.replace(output)
+
+
+def build(pages_path=PAGES_PATH, output=INDEX_PATH):
+    raw = Path(pages_path).read_bytes()
+    index = build_index(json.loads(raw), hashlib.sha256(raw).hexdigest())
+    output = Path(output)
+    write_index(index, output)
     print(f"Indexed {index['N']} docs, {len(index['postings'])} terms; {output.stat().st_size:,} bytes -> {output}")
     return index
 

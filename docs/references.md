@@ -21,6 +21,8 @@
 | GTFO | [GTFOBins 官方網站](https://gtfobins.org/) | 確認集合名稱、執行檔與 sudo／SUID context 的關係；評分以凍結網頁正文為準 |
 | GTFO-SCHEMA | [GTFOBins Contributing：File format、Functions、Contexts、Aliases](https://gtfobins.org/contributing/)；[固定官方原始碼](https://github.com/GTFOBins/GTFOBins.github.io/tree/acd524623f9c406acedd2754ebd9c2431f3675ad) | 每個例子各自有 context；情境可覆寫同一例子的程式片段，正式 alias 與可能繼承有不同意義 |
 | GTFO-EFFECT | [c89 的 File write](https://gtfobins.org/gtfobins/c89/#file-write)、[Bash 的 Reverse shell](https://gtfobins.org/gtfobins/bash/#reverse-shell) | 明示刪檔不等於寫入內容；直接範例的情境以同一功能區塊為準。僅以文件評估，沒有執行命令 |
+| GTFO-APPEND | [hashcat](https://gtfobins.org/gtfobins/hashcat/#file-write)、[screen](https://gtfobins.org/gtfobins/screen/#file-write)、[tee](https://gtfobins.org/gtfobins/tee/#file-write) | 逐例區分實際附加、需選項的附加及 sudo／SUID |
+| BASH-REDIR | [GNU Bash 手冊 §3.6.2–3](https://www.gnu.org/s/bash/manual/html_node/Redirections.html) | 截斷與附加重導向的文件語義 |
 | FRIDA | [Frida 官方 JavaScript API：Process](https://frida.re/docs/javascript-api/#process)、[Installation](https://frida.re/docs/installation/) | 已載入模組的 API 名稱與實際列舉範例；評分以凍結網頁正文為準 |
 
 課堂講義沒有直接規定本專題的新欄位混分公式或 proximity multiplier；這些是由 U1 的位置資訊、U4 的向量／欄位概念延伸的**本專題實驗設計**，不得描述成教授原公式，必須與必做 cosine 分開量測。

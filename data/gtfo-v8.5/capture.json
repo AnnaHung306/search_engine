@@ -1,0 +1,47 @@
+{
+  "events": [
+    {
+      "status": "http_request",
+      "kind": "robots",
+      "url": "https://gtfobins.org/robots.txt",
+      "started_at": 1793858691.54405,
+      "finished_at": 1793858691.721537,
+      "code": 404
+    },
+    {
+      "status": "robots_absent",
+      "url": "https://gtfobins.org/robots.txt",
+      "code": 404
+    },
+    {
+      "status": "http_request",
+      "kind": "content",
+      "url": "https://gtfobins.org/gtfobins/hashcat/",
+      "started_at": 1793858693.721708,
+      "finished_at": 1793858694.06839,
+      "code": 200
+    },
+    {
+      "status": "http_request",
+      "kind": "content",
+      "url": "https://gtfobins.org/gtfobins/screen/",
+      "started_at": 1793858696.0695329,
+      "finished_at": 1793858696.390613,
+      "code": 200
+    },
+    {
+      "status": "http_request",
+      "kind": "content",
+      "url": "https://gtfobins.org/gtfobins/tee/",
+      "started_at": 1793858698.395645,
+      "finished_at": 1793858698.692825,
+      "code": 200
+    }
+  ],
+  "html_sha256": {
+    "https://gtfobins.org/gtfobins/hashcat/": "e5eb9dafdd4d69634bb8cdf0c91e3fb994f8c33c1310dba9fc866da299828e55",
+    "https://gtfobins.org/gtfobins/screen/": "beb9d68073936c95327dc2fb75e6a06a65213bf44ce0269c3e080397f96c288d",
+    "https://gtfobins.org/gtfobins/tee/": "4cb47b3befe73800849bf22fed461d100d07361305d8d0fb443b6de18c9eeaa3"
+  },
+  "base_pages_sha256": "f455264f04f5512863299f84b73e76f33004449ffc2f87c36512a4ff38020094"
+}

@@ -18,3 +18,5 @@
 v8.3 使用者要求處理 GTFOBins sudo 與 native libraries 兩題失敗並重新評估。**Intent experiment** 是既有排名的獨立選項：來源層使用 URL host，原生模組以有語境的精確 API 證據補足用詞差異；不改必做基準或既有產品流程。兩題已知案例屬回歸，另凍結 16 題新比較，資料及模型標註另存於 data/evaluation/v8.3-intent/。仍不做 PPT、不 push。
 
 v8.4 使用者要求改善 GTFOBins 同站反向 shell、sudo 寫檔與 SUID 配對。**Function/context evidence**：固定官方資料的同一功能例子，必須能對照原索引正文的功能、情境與例子。官方 alias 保留正式條目來源，可能繼承不算直接；明示刪檔不算寫入內容。以獨立索引附加檔和 opt-in 排序驗證，原索引及網站不變。
+
+v8.5 在另建的 983 頁實驗快照中補收 hashcat、screen、tee。**Append evidence** 對應同一功能及情境的明示附加效果或選項。實驗用同語料比較 v8.4 與附加順位，原 980 頁的失敗另作收錄診斷。

@@ -15,5 +15,6 @@
 | [009 模型判定與評分](009-model-assessment.md) | TP §6、U3 p.9／29–38、LLM | 654 組配對模型判定、六筆複核、九模型成績、改善與退步；不冒稱人工 |
 | [010 來源與原生模組查詢](010-query-intent.md) | TP §6、U3／U4、ZONE／QE、GTFO／FRIDA | 兩道已知失敗改善；16 新題 +7.5 個百分點；保留低分、複核下修與計時 |
 | [011 GTFOBins 功能與情境](011-gtfo-function-context.md) | TP §6、U3／U4、GTFO-SCHEMA／GTFO-EFFECT | 341 組可查證證據；16 新題 +26.25 個百分點；同站失敗與副作用分開量測 |
+| [012 GTFOBins 附加寫入](012-gtfo-append.md) | TP §6、U3、GTFO-APPEND／BASH-REDIR | 分開測量補收與排序，12 題 P@5 +8.33 個百分點 |
 
 來源的可查證連結見 [references.md](../references.md)。效能原始量測保留於 [evidence/latency-comparison.json](evidence/latency-comparison.json)。最終驗證、審查與待辦寫入 evidence/verification-summary.json；後續更新新增一批，不覆蓋前批結果。

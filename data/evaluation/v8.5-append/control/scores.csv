@@ -1,0 +1,9 @@
+system,query_id,query,precision_at_5
+expanded_v84,app-09,GTFOBins write data to a local path through sudo,1.0
+expanded_v84,app-10,GTFOBins alternatives for appending text to a file with sudo,0.0
+expanded_v84,app-11,GTFOBins sudo overwrite a local file,0.2
+expanded_v84,app-12,GTFOBins setuid read contents from a local file,1.0
+append,app-09,GTFOBins write data to a local path through sudo,1.0
+append,app-10,GTFOBins alternatives for appending text to a file with sudo,0.0
+append,app-11,GTFOBins sudo overwrite a local file,0.2
+append,app-12,GTFOBins setuid read contents from a local file,1.0

@@ -1,0 +1,11 @@
+{
+  "origin": "llm",
+  "rules_fixed_before_labels": true,
+  "comparison": "Same expanded collection, v8.4 rules against append evidence. One known regression reported separately; twelve predeclared new questions. Original 980-page failure is diagnosed separately.",
+  "global_rule": "Require actual append semantics and the requested context in one example. A documented append option attached to the same example qualifies.",
+  "references": [
+    "TP p.3 §6",
+    "U3 p.9,29–38",
+    "https://gtfobins.org/contributing/"
+  ]
+}

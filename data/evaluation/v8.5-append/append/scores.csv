@@ -1,0 +1,9 @@
+system,query_id,query,precision_at_5
+expanded_v84,app-01,GTFOBins sudo append to an existing file,0.6
+expanded_v84,app-02,GTFOBins add text to the end of a local file via sudo,0.2
+expanded_v84,app-03,GTFOBins write to a file keeping existing contents with sudo,0.4
+expanded_v84,app-04,GTFOBins sudo append lines to a log,0.6
+append,app-01,GTFOBins sudo append to an existing file,0.6
+append,app-02,GTFOBins add text to the end of a local file via sudo,0.6
+append,app-03,GTFOBins write to a file keeping existing contents with sudo,0.6
+append,app-04,GTFOBins sudo append lines to a log,0.6

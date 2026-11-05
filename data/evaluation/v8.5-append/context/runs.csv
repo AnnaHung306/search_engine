@@ -1,0 +1,41 @@
+system,query_id,query,rank,doc_id,url,score
+expanded_v84,app-05,GTFOBins file append under SUID,1,982,https://gtfobins.org/gtfobins/tee/,15.037131263775656
+expanded_v84,app-05,GTFOBins file append under SUID,2,501,https://gtfobins.org/gtfobins/comm/,14.963820878359464
+expanded_v84,app-05,GTFOBins file append under SUID,3,355,https://gtfobins.org/gtfobins/bzip2/,14.115919530906938
+expanded_v84,app-05,GTFOBins file append under SUID,4,449,https://gtfobins.org/gtfobins/chmod/,10.954406439833626
+expanded_v84,app-05,GTFOBins file append under SUID,5,244,https://gtfobins.org/gtfobins/awk/,10.831352840102804
+expanded_v84,app-06,GTFOBins append file contents as an unprivileged user,1,981,https://gtfobins.org/gtfobins/screen/,18.892047196205453
+expanded_v84,app-06,GTFOBins append file contents as an unprivileged user,2,501,https://gtfobins.org/gtfobins/comm/,17.48806600067913
+expanded_v84,app-06,GTFOBins append file contents as an unprivileged user,3,982,https://gtfobins.org/gtfobins/tee/,14.974166909375203
+expanded_v84,app-06,GTFOBins append file contents as an unprivileged user,4,980,https://gtfobins.org/gtfobins/hashcat/,14.520730035776422
+expanded_v84,app-06,GTFOBins append file contents as an unprivileged user,5,394,https://gtfobins.org/gtfobins/cc/,13.823895046782614
+expanded_v84,app-07,GTFOBins add new data to the end of an existing file,1,20,https://gtfobins.org/contributing/,11.897155067355529
+expanded_v84,app-07,GTFOBins add new data to the end of an existing file,2,980,https://gtfobins.org/gtfobins/hashcat/,11.810392122226855
+expanded_v84,app-07,GTFOBins add new data to the end of an existing file,3,394,https://gtfobins.org/gtfobins/cc/,8.611071982904301
+expanded_v84,app-07,GTFOBins add new data to the end of an existing file,4,365,https://gtfobins.org/gtfobins/c99/,8.611071982904301
+expanded_v84,app-07,GTFOBins add new data to the end of an existing file,5,360,https://gtfobins.org/gtfobins/c89/,8.611071982904301
+expanded_v84,app-08,GTFOBins setuid append a line to an existing log,1,980,https://gtfobins.org/gtfobins/hashcat/,10.918216954908786
+expanded_v84,app-08,GTFOBins setuid append a line to an existing log,2,281,https://gtfobins.org/gtfobins/bash/,10.762760985118712
+expanded_v84,app-08,GTFOBins setuid append a line to an existing log,3,981,https://gtfobins.org/gtfobins/screen/,8.799292601514994
+expanded_v84,app-08,GTFOBins setuid append a line to an existing log,4,982,https://gtfobins.org/gtfobins/tee/,8.447628334068984
+expanded_v84,app-08,GTFOBins setuid append a line to an existing log,5,501,https://gtfobins.org/gtfobins/comm/,8.396086066388433
+append,app-05,GTFOBins file append under SUID,1,982,https://gtfobins.org/gtfobins/tee/,15.037131263775656
+append,app-05,GTFOBins file append under SUID,2,501,https://gtfobins.org/gtfobins/comm/,14.963820878359464
+append,app-05,GTFOBins file append under SUID,3,355,https://gtfobins.org/gtfobins/bzip2/,14.115919530906938
+append,app-05,GTFOBins file append under SUID,4,449,https://gtfobins.org/gtfobins/chmod/,10.954406439833626
+append,app-05,GTFOBins file append under SUID,5,244,https://gtfobins.org/gtfobins/awk/,10.831352840102804
+append,app-06,GTFOBins append file contents as an unprivileged user,1,981,https://gtfobins.org/gtfobins/screen/,18.892047196205453
+append,app-06,GTFOBins append file contents as an unprivileged user,2,982,https://gtfobins.org/gtfobins/tee/,14.974166909375203
+append,app-06,GTFOBins append file contents as an unprivileged user,3,980,https://gtfobins.org/gtfobins/hashcat/,14.520730035776422
+append,app-06,GTFOBins append file contents as an unprivileged user,4,501,https://gtfobins.org/gtfobins/comm/,17.48806600067913
+append,app-06,GTFOBins append file contents as an unprivileged user,5,394,https://gtfobins.org/gtfobins/cc/,13.823895046782614
+append,app-07,GTFOBins add new data to the end of an existing file,1,980,https://gtfobins.org/gtfobins/hashcat/,11.810392122226855
+append,app-07,GTFOBins add new data to the end of an existing file,2,982,https://gtfobins.org/gtfobins/tee/,6.596323957061502
+append,app-07,GTFOBins add new data to the end of an existing file,3,981,https://gtfobins.org/gtfobins/screen/,6.372946215150176
+append,app-07,GTFOBins add new data to the end of an existing file,4,20,https://gtfobins.org/contributing/,11.897155067355529
+append,app-07,GTFOBins add new data to the end of an existing file,5,394,https://gtfobins.org/gtfobins/cc/,8.611071982904301
+append,app-08,GTFOBins setuid append a line to an existing log,1,982,https://gtfobins.org/gtfobins/tee/,8.447628334068984
+append,app-08,GTFOBins setuid append a line to an existing log,2,980,https://gtfobins.org/gtfobins/hashcat/,10.918216954908786
+append,app-08,GTFOBins setuid append a line to an existing log,3,281,https://gtfobins.org/gtfobins/bash/,10.762760985118712
+append,app-08,GTFOBins setuid append a line to an existing log,4,981,https://gtfobins.org/gtfobins/screen/,8.799292601514994
+append,app-08,GTFOBins setuid append a line to an existing log,5,501,https://gtfobins.org/gtfobins/comm/,8.396086066388433

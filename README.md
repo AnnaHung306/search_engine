@@ -1,4 +1,4 @@
-# Pentest Tool Search — 課程整合更新 v8.4
+# Pentest Tool Search — 課程整合更新 v8.5
 
 本機資安文件搜尋引擎。從 v7.1 的固定 980 頁公開資料出發，保留自寫倒排索引、TF-IDF 與 cosine，新增位置索引、欄位／鄰近度實驗及逐筆計分解釋。
 
@@ -111,6 +111,18 @@ uv run --with-requirements requirements-gtfo-build.txt python -B code/build_gtfo
 ```
 
 第二行是選擇性重建，只下載固定官方原始碼並對照本機索引，不執行網頁命令、不覆寫原檔。已有 venv 時也可用 `python -m pip install -r requirements-gtfo-build.txt` 後直接執行建置器。PyYAML 是重建依賴，搜尋執行時不需要。結果、配對限制與負面數據見 [v8.4 報告](report/GTFO_FUNCTIONS_V8_4.md)。
+
+### v8.5 GTFOBins 附加寫入
+
+原 980 頁索引未收錄三個有附加證據的 GTFOBins 條目。補充快照有 983 頁，包含 9 筆附加情境證據。以下在同一索引比較 v8.4 與附加排序。
+
+```sh
+IR_INDEX_PATH=data/gtfo-v8.5/index.json.gz python -B code/search.py --bm25 --gtfo-functions 'GTFOBins append data to a file with sudo'
+IR_INDEX_PATH=data/gtfo-v8.5/index.json.gz python -B code/search.py --bm25 --gtfo-append 'GTFOBins append data to a file with sudo'
+IR_INDEX_PATH=data/gtfo-v8.5/index.json.gz python -B code/append_evaluation.py score --adjudications data/evaluation/v8.5-append/review.json
+```
+
+選擇性重建可用 `uv run --with-requirements requirements-gtfo-build.txt python -B code/build_gtfo_append.py --output data/gtfo-v8.5-rebuilt`，目的地須為新目錄。舊題的 P@5 增益來自收錄，同語料的新題排序使 P@5 再增加 8.33 個百分點。詳見 [v8.5 報告](report/GTFO_APPEND_V8_5.md)。
 
 ### description 資料限制
 

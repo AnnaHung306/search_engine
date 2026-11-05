@@ -46,6 +46,7 @@ from collections import Counter
 from weighting import log_tf, vector, norm
 import positions
 import query_intent
+import gtfo_append
 import gtfo_functions
 import ranking
 from snippets import snippet
@@ -128,10 +129,15 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
     if use_syn or use_fuzzy:
         query = synonyms.translate_zh(query)   # 中文關鍵字 -> English
     parsed = parse_query(query)
-    signals = query_intent.detect(parsed["free_text"], intent) if intent is not None else None
+    free_text = parsed["free_text"]
+    if gtfo_mode == "append":
+        free_text = gtfo_append.intent_text(free_text)
+    signals = query_intent.detect(free_text, intent) if intent is not None else None
     if gtfo_mode is not None and (gtfo_mode not in gtfo_functions.MODES or intent not in ("source", "both")):
         raise ValueError("GTFOBins mode requires a known function mode and source intent")
-    requested_function = (gtfo_functions.request(parsed["free_text"], signals.source_host)
+    if gtfo_mode == "append" and idx["collection_sha256"] != gtfo_functions.APPEND_COLLECTION:
+        raise ValueError("GTFOBins append mode requires IR_INDEX_PATH=data/gtfo-v8.5/index.json.gz")
+    requested_function = (gtfo_functions.request(free_text, signals.source_host, gtfo_mode)
                           if gtfo_mode is not None else None)
     # remember the words the user typed, to label each result matched / missing
     shown_words = []
@@ -358,10 +364,10 @@ if __name__ == "__main__":
     pv = PIVOT_SLOPE if "--pivot" in args else 0.0
     fz = "--fuzzy" in args
     cv = "--cov" in args
-    gtfo_mode = "verified" if "--gtfo-functions" in args else None
+    gtfo_mode = "append" if "--gtfo-append" in args else "verified" if "--gtfo-functions" in args else None
     intent = "both" if "--intent" in args or gtfo_mode else None
     args = [a for a in args if a not in ("--bm25", "--tfidf", "--boost", "--syn", "--pivot", "--fuzzy",
-                                         "--cov", "--intent", "--gtfo-functions")]
+                                         "--cov", "--intent", "--gtfo-functions", "--gtfo-append")]
     q = " ".join(args)
     r = search(q, model=model, title_boost=boost, use_synonyms=syn, pivot=pv, use_fuzzy=fz, coverage=cv,
                intent=intent, gtfo_mode=gtfo_mode)

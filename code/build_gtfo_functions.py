@@ -11,6 +11,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 import search
+from gtfo_append import note_evidence
 import yaml
 
 REVISION = "acd524623f9c406acedd2754ebd9c2431f3675ad"
@@ -70,7 +71,7 @@ def resolve_alias(entries, name):
     raise ValueError("Missing or cyclic official alias: " + name)
 
 
-def derive(index):
+def derive(index, *, include_append=False):
     entries, functions, contexts = source_records()
     documents, missing, counts = {}, [], Counter()
     for doc in index["docs"]:
@@ -110,6 +111,18 @@ def derive(index):
                            "example_start": start + offset + pos, "example_length": len(code)}
                     if delete_only:
                         row["warning_start"] = start + section.index(DELETE_NOTE)
+                    if include_append and function == "file-write" and not delete_only:
+                        for note in (override.get("comment", ""), example.get("comment", "")):
+                            append_note = note_evidence(normalize(note))
+                            if append_note:
+                                kind, rendered = append_note
+                                note_at = section.rfind(rendered, 0, offset + pos)
+                                if note_at < 0:
+                                    raise ValueError("Append note could not be grounded: " + doc["url"])
+                                row["append"] = {"kind": kind, "note_start": start + note_at,
+                                                 "note_length": len(rendered)}
+                                counts["append_relations"] += 1
+                                break
                     relations.append(row)
                     counts["grounded_relations"] += 1
                     counts["delete_only_relations"] += delete_only

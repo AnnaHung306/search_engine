@@ -1,0 +1,21 @@
+{
+  "experiment": "append-v8.5",
+  "new_queries_sha256": "16099ed4fef6aaf654fd481de9b75c41740b9615cc95d45c5f2cd6c1274f6c16",
+  "index_sha256": "2d8c6c36568f476738e58c5eb42e2d276a17f76b23a3108b3a880467e1b72a22",
+  "relations_sha256": "5ea2c15eef1df3689fa380648735bc75fd8622d9ec09d44ebae1be41ec26d55a",
+  "baseline": "expanded_v84",
+  "candidate": "append",
+  "systems": {
+    "expanded_v84": {
+      "model": "bm25",
+      "intent": "both",
+      "gtfo_mode": "verified"
+    },
+    "append": {
+      "model": "bm25",
+      "intent": "both",
+      "gtfo_mode": "append"
+    }
+  },
+  "comparison": "Same expanded collection, v8.4 rules against append evidence. One known regression reported separately; twelve predeclared new questions. Original 980-page failure is diagnosed separately."
+}

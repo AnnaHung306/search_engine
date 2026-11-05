@@ -1,0 +1,9 @@
+system,query_id,query,precision_at_5
+expanded_v84,app-05,GTFOBins file append under SUID,0.2
+expanded_v84,app-06,GTFOBins append file contents as an unprivileged user,0.6
+expanded_v84,app-07,GTFOBins add new data to the end of an existing file,0.2
+expanded_v84,app-08,GTFOBins setuid append a line to an existing log,0.2
+append,app-05,GTFOBins file append under SUID,0.2
+append,app-06,GTFOBins append file contents as an unprivileged user,0.6
+append,app-07,GTFOBins add new data to the end of an existing file,0.6
+append,app-08,GTFOBins setuid append a line to an existing log,0.2
