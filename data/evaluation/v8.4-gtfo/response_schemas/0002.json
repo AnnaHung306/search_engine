@@ -1,0 +1,106 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decisions"
+  ],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "decision_id",
+          "relevant",
+          "confidence",
+          "reason",
+          "evidence"
+        ],
+        "properties": {
+          "decision_id": {
+            "type": "string",
+            "enum": [
+              "0558e2b02d1211682474-0",
+              "0c24e963a832d97ddf48-0",
+              "15675cd4ec598cd23fd9-0",
+              "16317e6070057f946cda-0",
+              "16357ce599cbd4e927e5-0",
+              "1b4b11b2b7cc1dc58778-0",
+              "28c0871ed6ac50f397b8-0",
+              "2a175604a3a8c4dbb964-0",
+              "2af10ade8fdf7d795d6b-0",
+              "328a47c0d7ec72804001-0",
+              "32ac068a405bb6c58ccf-0",
+              "34727dfdc0b3f6e9a02b-0",
+              "380d8a15a5ee6ae770bb-0",
+              "421e84bd68ab8a900632-0",
+              "43646b80395d323b1804-0",
+              "43c84730905414e18cfc-0",
+              "45d5650933653ddd8d6b-0",
+              "4f21148be0002bf00918-0",
+              "545334be2c2122ece1e0-0",
+              "5564733db5ab64d28b07-0",
+              "5663ded00f7456dd75d0-0",
+              "594bd9724feaeb252c74-0",
+              "5f3ddb9f686e5eda95d9-0",
+              "65bd35c1cfe2096194c5-0",
+              "68432b7b610560eb525a-0",
+              "7393ee8123834f8f24a1-0",
+              "78d285c55557dc93bf5d-0",
+              "80d7b5e24e1f02e13810-0",
+              "82b60c41a455c1f75241-0",
+              "84668c18f4b924633b12-0",
+              "87e5d95914fee79b78db-0",
+              "885f19524b7cf26e97e2-0",
+              "889f39e3c75d4cde628e-0",
+              "8a3d31913ba8c05ca3f6-0",
+              "8c321c9a1cbbb579220e-0",
+              "8d2c9bafb8dc40ea1bc9-0",
+              "8d5f493531ed0ac8035c-0",
+              "908ba748b904a95aa86b-0",
+              "914c5b60ee3194f8e4df-0",
+              "96c218e7733faddd869e-0",
+              "9bb3c12a790f709298e4-0",
+              "9f22ef5417d8369d6f5b-0",
+              "a285e1b15946d9e0d09e-0",
+              "a2ccb69c3557ed9c4ad5-0",
+              "a6d38d03bd125fb8299e-0",
+              "a897df5453e87595e98e-0",
+              "d0a89dae4e669c03125c-0",
+              "d4ea6c243c0294fb4842-0",
+              "ef39d8c069b8ba48a658-0",
+              "f29a619d22e17b65cb93-0",
+              "f40d9b4a507c802e7c36-0",
+              "f6307525d4bb4fd0702d-0",
+              "f8663c74ee5e7cd38c57-0",
+              "f927e0dd26a39682a81c-0",
+              "ff45b30ec63b7fd7c395-0"
+            ]
+          },
+          "relevant": {
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

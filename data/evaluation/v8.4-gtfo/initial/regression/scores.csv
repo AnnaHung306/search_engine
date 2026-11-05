@@ -1,0 +1,9 @@
+system,query_id,query,precision_at_5
+v83,intent-03,reverse shell examples from GTFOBins,0.0
+v83,intent-04,GTFOBins sudo arbitrary file write,0.2
+function,intent-03,reverse shell examples from GTFOBins,0.6
+function,intent-04,GTFOBins sudo arbitrary file write,0.4
+paired,intent-03,reverse shell examples from GTFOBins,0.6
+paired,intent-04,GTFOBins sudo arbitrary file write,0.4
+verified,intent-03,reverse shell examples from GTFOBins,0.6
+verified,intent-04,GTFOBins sudo arbitrary file write,1.0

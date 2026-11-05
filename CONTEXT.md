@@ -16,3 +16,5 @@
 使用者再明確指示由 LM／助手代為決定規則、判定相關性並計分，不再等待組員逐筆標註。**Model judgment**：來源標為 llm 的內容判定，保留規則、全文分段、引文、信心與模型原回應；與 Human judgment 分開，不冒稱真人、獨立雙人評估或教授已接受。本輪以 data/evaluation/v8.2-llm/ 保存，新舊人工表格不覆寫；仍不做 PPT、不 push。
 
 v8.3 使用者要求處理 GTFOBins sudo 與 native libraries 兩題失敗並重新評估。**Intent experiment** 是既有排名的獨立選項：來源層使用 URL host，原生模組以有語境的精確 API 證據補足用詞差異；不改必做基準或既有產品流程。兩題已知案例屬回歸，另凍結 16 題新比較，資料及模型標註另存於 data/evaluation/v8.3-intent/。仍不做 PPT、不 push。
+
+v8.4 使用者要求改善 GTFOBins 同站反向 shell、sudo 寫檔與 SUID 配對。**Function/context evidence**：固定官方資料的同一功能例子，必須能對照原索引正文的功能、情境與例子。官方 alias 保留正式條目來源，可能繼承不算直接；明示刪檔不算寫入內容。以獨立索引附加檔和 opt-in 排序驗證，原索引及網站不變。

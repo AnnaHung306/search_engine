@@ -1,0 +1,83 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decisions"
+  ],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "decision_id",
+          "relevant",
+          "confidence",
+          "reason",
+          "evidence"
+        ],
+        "properties": {
+          "decision_id": {
+            "type": "string",
+            "enum": [
+              "0389a37e319b4cf355a1-0",
+              "0392afa3d07d94dc8fe9-0",
+              "052133b94aa3efb9556c-0",
+              "05c97b9366e607bfb881-0",
+              "0c6beaae64bcb71d991d-0",
+              "166207f3015c31b249a2-0",
+              "2736240f18c92b83a918-0",
+              "2df47cc2e698bb6fbd64-0",
+              "31d746fc5feabcfa7647-0",
+              "356bbe0155d9c9b89120-0",
+              "3f0e3967ce7aa1e839a5-0",
+              "4109abf334212d6c2630-0",
+              "53c4db07910653e4d6e7-0",
+              "572eb30db93f0f96059f-0",
+              "5ee82b1f143a00dba48b-0",
+              "64d25070b5ed036a406a-0",
+              "6b4b70abd336df1ef172-0",
+              "6b8f93c20b2e8b08d972-0",
+              "6be903a9bec8370a4697-0",
+              "7c890044372cbb4bda3c-0",
+              "7d7c5ea81949789eed6b-0",
+              "80847c165a6ceeb73198-0",
+              "8409ed7250a69509eeaf-0",
+              "aaa9d637c54240cb8b7d-0",
+              "aff3bec929b4ac8e101f-0",
+              "b40c182027d23d2066ed-0",
+              "caa1c3e0a284d5892dd2-0",
+              "ceb61fcfd930694d687a-0",
+              "d554fd4a8bd433a95c44-0",
+              "d69f32c7d00499c3c875-0",
+              "e2c33a53c962c5e706f1-0",
+              "ea8b7b340b6da539da05-0"
+            ]
+          },
+          "relevant": {
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

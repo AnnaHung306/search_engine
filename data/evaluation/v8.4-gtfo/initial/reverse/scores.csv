@@ -1,0 +1,17 @@
+system,query_id,query,precision_at_5
+v83,gtfo-01,GTFOBins outbound shell examples,0.0
+v83,gtfo-02,GTFOBins reverse shell through sudo,0.0
+v83,gtfo-03,GTFOBins SUID reverse shell examples,0.2
+v83,gtfo-04,GTFOBins unprivileged connect back shell,0.6
+function,gtfo-01,GTFOBins outbound shell examples,0.6
+function,gtfo-02,GTFOBins reverse shell through sudo,0.6
+function,gtfo-03,GTFOBins SUID reverse shell examples,0.2
+function,gtfo-04,GTFOBins unprivileged connect back shell,0.6
+paired,gtfo-01,GTFOBins outbound shell examples,0.6
+paired,gtfo-02,GTFOBins reverse shell through sudo,0.6
+paired,gtfo-03,GTFOBins SUID reverse shell examples,0.2
+paired,gtfo-04,GTFOBins unprivileged connect back shell,0.6
+verified,gtfo-01,GTFOBins outbound shell examples,0.6
+verified,gtfo-02,GTFOBins reverse shell through sudo,0.6
+verified,gtfo-03,GTFOBins SUID reverse shell examples,0.2
+verified,gtfo-04,GTFOBins unprivileged connect back shell,0.6

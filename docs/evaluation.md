@@ -25,6 +25,16 @@ python -B code/intent_evaluation.py score --adjudications data/evaluation/v8.3-i
 
 新一次比較才以 `intent_evaluation.py prepare --output <新目錄>` 匯出，並以 `llm_grader.py --output <新目錄>` 推論。此輪已保留 54 份有效回覆、兩次拒收紀錄與四筆複核，重算終判不需重新呼叫模型。兩版計分入口各自核對資料夾與已凍結計畫，指錯或漏傳既有複核會在寫入前拒絕。數據與限制見 [v8.3 報告](../report/QUERY_INTENT_V8_3.md)。
 
+## v8.4 GTFOBins 功能／情境比較
+
+在同一索引上比較原 v8.3、只認功能、同例情境配對、再排除不符效果。兩道已知失敗屬回歸，另外 16 道新題在排名前凍結。使用 121 組獨立存放的 LM 判定；來源附加資料只提供排序證據，模型判定只看原正文、資訊需求及規則。
+
+```sh
+python -B code/gtfo_evaluation.py score --adjudications data/evaluation/v8.4-gtfo/review.json
+```
+
+新實驗才用 `gtfo_evaluation.py prepare --output <新目錄>`，再用共用 `llm_grader.py --output <新目錄>`。既有實驗重算不呼叫模型。零修正複核也有明示檔案與 hash，不能以普通重跑覆寫。結果與配對例子見 [v8.4 報告](../report/GTFO_FUNCTIONS_V8_4.md)。
+
 ## 保留的獨立人工流程
 
 v8.1 已準備純 cosine 的必做十題／50 筆精簡包：data/evaluation/v8.1/course-required/。先依 [集中人工待辦](HUMAN_HANDOFF.md) 確認規則再標註，原九模型材料保持原狀。新增 `--dump --systems tfidf --output <新目錄>` 可明確限制新包的模型；預設仍為九模型。這個精簡包不能替代全部模型的比較標註。

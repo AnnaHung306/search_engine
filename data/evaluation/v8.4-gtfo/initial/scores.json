@@ -1,0 +1,125 @@
+{
+  "origin": "llm",
+  "collection_sha256": "f455264f04f5512863299f84b73e76f33004449ffc2f87c36512a4ff38020094",
+  "denominator": 5,
+  "pair_count": 121,
+  "document_count": 58,
+  "self_review_corrections": 0,
+  "mean_precision_at_5": {
+    "regression": {
+      "v83": 0.1,
+      "function": 0.5,
+      "paired": 0.5,
+      "verified": 0.8
+    },
+    "reverse": {
+      "v83": 0.2,
+      "function": 0.5,
+      "paired": 0.5,
+      "verified": 0.5
+    },
+    "write": {
+      "v83": 0.45,
+      "function": 0.45,
+      "paired": 0.45,
+      "verified": 0.75
+    },
+    "binding": {
+      "v83": 0.55,
+      "function": 0.8,
+      "paired": 1.0,
+      "verified": 1.0
+    },
+    "control": {
+      "v83": 0.15,
+      "function": 0.15,
+      "paired": 0.15,
+      "verified": 0.15
+    }
+  },
+  "candidate_vs_baseline": {
+    "regression": {
+      "wins": 2,
+      "ties": 0,
+      "losses": 0
+    },
+    "reverse": {
+      "wins": 2,
+      "ties": 2,
+      "losses": 0
+    },
+    "write": {
+      "wins": 2,
+      "ties": 2,
+      "losses": 0
+    },
+    "binding": {
+      "wins": 4,
+      "ties": 0,
+      "losses": 0
+    },
+    "control": {
+      "wins": 0,
+      "ties": 4,
+      "losses": 0
+    }
+  },
+  "new_query_count": 16,
+  "new_mean_precision_at_5": {
+    "v83": 0.3375,
+    "function": 0.475,
+    "paired": 0.525,
+    "verified": 0.6
+  },
+  "comparison": "Fixed v8.3 versus function, pair and effect-aware tiers. Separate known failures from new reverse/write/binding/control cases. No tuning or selection on these scores.",
+  "evidence_sha256": {
+    "responses/0000.json": "dcf0e337a5bc660a11cb20ef5fc3cf793d2c93bdd199775f9af8d01e0db0a7f2",
+    "raw/0000.jsonl": "fe25f5631e4c569a0f2d143493c31a4c8b6aa39ccc8769d6c2b376b0bac529d5",
+    "response_schemas/0000.json": "a75262f34a39fd8923413b1c3d6af2b44932eb21cfaf7c42fdf2cac20a190c97",
+    "responses/0001.json": "c1fd69b68e23c268ede8c447506eb4f2ac1aa278746598adc12896f9ce9d6128",
+    "raw/0001.jsonl": "ad79b8e2e74d85135284ac18ca5802bb3fdaf7e93a3ca3dc18cef6f7853f4373",
+    "response_schemas/0001.json": "bb43e5e32d2b066671bb96d54a2b5be48ae64f495b86a2614e314d984a871d5d",
+    "responses/0002.json": "726fcf5677e5c70752f614c0dd4f84bace484c158454bff16b82dd329a504adf",
+    "raw/0002.jsonl": "fe80639074596483d890f0c27c07134c351e9338752a20c5d2276567bed8ef01",
+    "response_schemas/0002.json": "0e793365693654f87d33de318eb3a49c6fa33e7af354970feda5891ee1ad4982",
+    "responses/0003.json": "c3e13294204d5a9db7bc566d9f1a3c500c80940a8362c614d2857ed5efff6159",
+    "raw/0003.jsonl": "ffeeb19efabc0c1d5b771e2cac34744709f897d7aca96d45843a44be85603b3c",
+    "response_schemas/0003.json": "4ced3d87ab1f4f3ab519c4f387093c81d645fef43daf4f1133fa8b8a096ffd83",
+    "responses/0004.json": "732afe1ecf65197dc6a70e756d0c556c45186542ed03080680ac960fed08c596",
+    "raw/0004.jsonl": "7490c0ce8f141a3de2f004f1701cc065f87db231cccf7fdf1ee8e9a4fb614696",
+    "response_schemas/0004.json": "d03d718130c9d52a6db77ddc714c065fc22a41c111fa9aea280f36994f33591f",
+    "responses/0005.json": "a4b0c0d55721a36004a73f8ab4028ffcaf03257b5b7663a0e9205720cf3996cf",
+    "raw/0005.jsonl": "842b3339535fd9e471429f97964d394bae8b611a0980821fced82b722b9c63da",
+    "response_schemas/0005.json": "b3107317cb29e144b798a35188620fd7ab96c22f35dd28c33d3268b11e50b7de",
+    "responses/0006.json": "9242bf519e66b7306177d612698dbf978d497addbbcfc4b1b6a7da6c69c6256b",
+    "raw/0006.jsonl": "c12e312be6161773973f5f600b8cba623ff821418b1177469730bd10796d9172",
+    "response_schemas/0006.json": "50f58fd981c5a4ea995e6805c542fc483419d86002c9722da3387a552a39aea3",
+    "regression/scores.csv": "29bc67bf193cc2a2fcd142bdbdb1d0deb7953d53649d76d3bd943a6358b31e5b",
+    "reverse/scores.csv": "5054c2fed0c7409caf5a488f3ee2f524d162bc60f3e82f7ad8009e5f8091fcea",
+    "write/scores.csv": "ce2e5bf5e82ec7b1ff99178deab3a73694f6320356e889ffc59eed52eb7598bf",
+    "binding/scores.csv": "2a3cc8de0ff830d2134c55e36b324f86cf597128035256c8437637b008b4c6c2",
+    "control/scores.csv": "31a0d254ad042219f74b9c07cffce4120893cebfd9b931d77dbea5baedccbc73",
+    "binding/runs.csv": "9aabdfb7dcd11616729fd659b0a8e8234d5600c41c709f556b6ab89067edf9e1",
+    "control/runs.csv": "c5f055b4c4138b48f5f2861478ea1112153623107898b4c02a59ba9fd1a4e5bf",
+    "implementation.json": "56a78e64e6b9f17e19ff755651406968b0390743227454c77d05a913bc97f0db",
+    "inputs/0000.json": "14c0dfb0d5c7dae97d9ae9558b37a1b116d0c8c70c5d183fbfa4a18ea3e7a9dd",
+    "inputs/0001.json": "89f9344645bf4aee373f4378c55cee1a1542f6be41d8a08143750a5e20868f85",
+    "inputs/0002.json": "5e7c675b685026c48ba323f5902d604c0b020a35c8ad85a23b66026a7a29b54b",
+    "inputs/0003.json": "3bf149272cd19fc3fdf31f9e1178fbe2869ad2fcaf85c6e113037c880f749714",
+    "inputs/0004.json": "319dbc5de0b128a07862a5aaabcda5e033b2e424d1ae1a28db4618702aecb7de",
+    "inputs/0005.json": "4ae1098c0b6e07b831fb9bdcd2d37b959dd7b8683b068a914993b747a8d0022d",
+    "inputs/0006.json": "33caa72d96f6522233ba2a90c473eea954aa1d6d49a635937c21609a7d0504b7",
+    "pairs.json": "65a577331169c839c4eb21042f9836b12516c85d4dde6fb452d5d6deec247e77",
+    "plan.json": "d9b703d8a369b1a8b77308479c36a2d6bd87220ab11b3bfc2ca83f774f19d908",
+    "policy.json": "ef1afe2ee46ed7f370b0a7722b72626a5eef6748e2ed77facf77eb705ee7314e",
+    "prompt.txt": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+    "queries.json": "68eac4eec76a28c2090b8fab07ac315fb4fc95900f7e9c7423a595fc84aa35b5",
+    "regression/runs.csv": "1704bd7c352471949ef2d8fe8da97c40e43d5d1bd38998759d50ee6180234b7d",
+    "reverse/runs.csv": "2b9371a0830535cfcc40424279b2397a27cb0fcd5d7fd26a59b4d3e825258741",
+    "schema.json": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+    "write/runs.csv": "840a2b01e351e16a42b1ddd461c959884e06ee01d8c77708ab6a4db22cd9ad6a",
+    "manifest.json": "4e15ae71de4ebc17ec9f435c06d150a6905bf12d6c820998b3fe080ab86c1492",
+    "raw_llm_judgments.csv": "354324c096eac2203d333a4ae48340e79ee30c3c621d661e6b55c8bfb23196d1",
+    "llm_judgments.csv": "354324c096eac2203d333a4ae48340e79ee30c3c621d661e6b55c8bfb23196d1"
+  }
+}

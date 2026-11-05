@@ -1,0 +1,56 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "319dbc5de0b128a07862a5aaabcda5e033b2e424d1ae1a28db4618702aecb7de",
+  "policy_sha256": "ef1afe2ee46ed7f370b0a7722b72626a5eef6748e2ed77facf77eb705ee7314e",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "bound_schema_sha256": "d03d718130c9d52a6db77ddc714c065fc22a41c111fa9aea280f36994f33591f",
+  "raw_events_sha256": "7490c0ce8f141a3de2f004f1701cc065f87db231cccf7fdf1ee8e9a4fb614696",
+  "started_at": 1793858024.167249,
+  "finished_at": 1793858035.5355551,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.4-gtfo/response_schemas/0004.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "9ff80bad55f69f3ac974-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "文件說明可對指定的已載入模組呼叫 enumerateExports()，列出匯出的函式與變數。",
+        "evidence": "enumerateExports() : enumerates exports of module, returning an array of objects containing the following properties: type : string specifying either function or variable"
+      }
+    ]
+  }
+}

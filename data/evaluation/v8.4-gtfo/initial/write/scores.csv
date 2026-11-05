@@ -1,0 +1,17 @@
+system,query_id,query,precision_at_5
+v83,gtfo-05,GTFOBins write contents to a local file with sudo,0.4
+v83,gtfo-06,GTFOBins SUID write data to a file,1.0
+v83,gtfo-07,GTFOBins unprivileged local file writing,0.4
+v83,gtfo-08,GTFOBins append data to a file with sudo,0.0
+function,gtfo-05,GTFOBins write contents to a local file with sudo,0.4
+function,gtfo-06,GTFOBins SUID write data to a file,1.0
+function,gtfo-07,GTFOBins unprivileged local file writing,0.4
+function,gtfo-08,GTFOBins append data to a file with sudo,0.0
+paired,gtfo-05,GTFOBins write contents to a local file with sudo,0.4
+paired,gtfo-06,GTFOBins SUID write data to a file,1.0
+paired,gtfo-07,GTFOBins unprivileged local file writing,0.4
+paired,gtfo-08,GTFOBins append data to a file with sudo,0.0
+verified,gtfo-05,GTFOBins write contents to a local file with sudo,1.0
+verified,gtfo-06,GTFOBins SUID write data to a file,1.0
+verified,gtfo-07,GTFOBins unprivileged local file writing,1.0
+verified,gtfo-08,GTFOBins append data to a file with sudo,0.0

@@ -36,40 +36,51 @@ def prepare(output):
             len({q["id"] for q in all_queries}) != len(all_queries) or
             len({q["query"] for q in all_queries}) != len(all_queries)):
         raise ValueError("Query groups must cover distinct frozen questions")
+    policy = {"origin": "llm", "rules_fixed_before_labels": True,
+        "comparison": plan["comparison"], "model_settings_frozen_in": "plan.json",
+        "aggregation": "Any positive segment establishes relevance; all segments required; missing labels fail.",
+        "global_rule": "Judge the stated information need using substantive text, not mere term co-occurrence.",
+        "references": ["TP p.3 §6", "Unit 3 p.9,29–38", "https://arxiv.org/abs/2309.10621"]}
+    return freeze_comparison(output, PLAN, plan, suites, policy,
+        {"v8.2_queries_sha256": ev.digest(judge.OUTPUT / "queries.json"),
+         "new_queries_sha256": ev.digest(NEW_QUERIES), "plan_sha256": ev.digest(PLAN)})
+
+
+def freeze_comparison(output, plan_path, plan, suites, policy, source_artifacts):
+    """Write a new comparison's rankings and blinded model inputs."""
     output.mkdir(parents=True, exist_ok=True)
-    (output / "plan.json").write_bytes(PLAN.read_bytes())
+    with (output / "plan.json").open("xb") as stream:
+        stream.write(plan_path.read_bytes())
     judge.write_json(output / "implementation.json", {
         p.name: ev.digest(p) for p in sorted((ev.ROOT / "code").glob("*.py"))})
     for name, suite in suites.items():
         (output / name).mkdir()
         rows = ev.retrieval_runs(suite["queries"], plan["systems"])
         ev.write_csv(output / name / "runs.csv", rows, list(rows[0]))
-    policy = {"origin": "llm", "rules_fixed_before_labels": True,
-        "comparison": plan["comparison"], "model_settings_frozen_in": "plan.json",
-        "aggregation": "Any positive segment establishes relevance; all segments required; missing labels fail.",
-        "global_rule": "Judge the stated information need using substantive text, not mere term co-occurrence.",
-        "references": ["TP p.3 §6", "Unit 3 p.9,29–38", "https://arxiv.org/abs/2309.10621"]}
-    return judge.freeze_inputs(output, suites, plan["systems"], policy,
-        {"v8.2_queries_sha256": ev.digest(judge.OUTPUT / "queries.json"),
-         "new_queries_sha256": ev.digest(NEW_QUERIES), "plan_sha256": ev.digest(PLAN)})
+    return judge.freeze_inputs(output, suites, plan["systems"], policy, source_artifacts)
 
 
-def score(output, adjudications=None):
+def score(output, adjudications=None, *, experiment="intent-v8.3",
+          groups=("regression", "source", "native", "control")):
     output = Path(output)
     frozen = judge.verify(output)
     if not {"plan.json", "implementation.json"} <= set(frozen["frozen_artifacts"]):
         raise ValueError("Score requires a frozen intent experiment; no files were written")
     suites = json.loads((output / "queries.json").read_text())
     plan = json.loads((output / "plan.json").read_text())
-    if (set(suites) != {"regression", "source", "native", "control"} or
+    if (plan.get("experiment", "intent-v8.3") != experiment or set(suites) != set(groups) or
             any(not isinstance(plan.get(k), str) or plan[k] not in frozen["systems"]
                 for k in ("baseline", "candidate")) or
             plan["baseline"] == plan["candidate"]):
         raise ValueError("Intent plan, systems or suite groups do not match")
-    if adjudications is None and (output / "adjudications.json").is_file():
-        raise ValueError("Pass --adjudications explicitly to preserve the reviewed result")
+    if adjudications is None:
+        prior_path = output / "scores.json"
+        prior = json.loads(prior_path.read_text()) if prior_path.is_file() else {}
+        reviewed = prior.get("adjudications_file") or prior.get("self_review_corrections", 0) > 0
+        if reviewed or (output / "adjudications.json").is_file():
+            raise ValueError("Pass --adjudications explicitly to preserve the reviewed result")
     manifest, raw, evidence = judge.collect(output)
-    final, corrections = raw, 0
+    final, corrections, review_file = raw, 0, None
     if adjudications:
         path = Path(adjudications).resolve()
         if not path.is_relative_to(output.resolve()):
@@ -78,7 +89,8 @@ def score(output, adjudications=None):
         if ev.read_csv(output / "raw_llm_judgments.csv") != [{k: str(v) for k, v in row.items()} for row in raw]:
             raise ValueError("Saved raw judgments do not match the original model responses")
         final, corrections = judge._adjudicate(output, raw, path)
-        evidence[str(path.relative_to(output.resolve()))] = ev.digest(path)
+        review_file = str(path.relative_to(output.resolve()))
+        evidence[review_file] = ev.digest(path)
     labels = {(row["query_id"], row["url"]): row["relevant"] for row in final}
     means, outcomes, tables, new_rows = {}, {}, {}, []
     for name, suite in suites.items():
@@ -104,6 +116,7 @@ def score(output, adjudications=None):
     new_count = sum(len(s["queries"]) for k, s in suites.items() if k != "regression")
     summary = {"origin": "llm", "collection_sha256": manifest["collection_sha256"], "denominator": 5,
         "pair_count": len(final), "document_count": manifest["document_count"], "self_review_corrections": corrections,
+        "adjudications_file": review_file,
         "mean_precision_at_5": means, "candidate_vs_baseline": outcomes,
         "new_query_count": new_count,
         "new_mean_precision_at_5": {s: sum(round(r["precision_at_5"] * 5) for r in new_rows if r["system"] == s)

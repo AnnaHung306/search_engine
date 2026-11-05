@@ -46,6 +46,7 @@ from collections import Counter
 from weighting import log_tf, vector, norm
 import positions
 import query_intent
+import gtfo_functions
 import ranking
 from snippets import snippet
 import synonyms
@@ -114,7 +115,7 @@ def phrase_regex(ph):
 
 def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
            pivot=0.0, use_fuzzy=False, coverage=False,
-           proximity_weight=0.0, field_weight=0.0, explain=False, intent=None):
+           proximity_weight=0.0, field_weight=0.0, explain=False, intent=None, gtfo_mode=None):
     """title_boost=0.0, use_synonyms=False, pivot=0.0, use_fuzzy=False give the
     required pure TF-IDF cosine."""
     use_syn = use_synonyms
@@ -128,6 +129,10 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
         query = synonyms.translate_zh(query)   # 中文關鍵字 -> English
     parsed = parse_query(query)
     signals = query_intent.detect(parsed["free_text"], intent) if intent is not None else None
+    if gtfo_mode is not None and (gtfo_mode not in gtfo_functions.MODES or intent not in ("source", "both")):
+        raise ValueError("GTFOBins mode requires a known function mode and source intent")
+    requested_function = (gtfo_functions.request(parsed["free_text"], signals.source_host)
+                          if gtfo_mode is not None else None)
     # remember the words the user typed, to label each result matched / missing
     shown_words = []
     for w in parsed["free"] + parsed["must"] + [x for ph in parsed["phrases"] for x in tokenize(ph)]:
@@ -251,6 +256,10 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
         # Stable ordering: evidence first, existing ranking inside each tier.
         ranked.sort(key=lambda pair: signals.precedence(docs_all[pair[1]]["url"], str(pair[1]), api_postings),
                     reverse=True)
+    function_evidence = {}
+    if requested_function:
+        function_evidence = gtfo_functions.evidence(idx, ranked, requested_function, gtfo_mode)
+        ranked.sort(key=lambda pair: pair[1] in function_evidence, reverse=True)
     surface_forms = {}
     for term in scoring_terms:
         for form in idx["position_aliases"].get(term, []):
@@ -299,6 +308,8 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
             if signals and (signals.source_host or api_term in postings):
                 hit["explanation"]["intent_evidence"] = signals.precedence(
                     hit["url"], str(doc_id), postings.get(api_term, {}))
+            if requested_function:
+                hit["explanation"]["gtfo_evidence"] = function_evidence.get(doc_id)
     status = "ok" if out else "no_match"
     r = _wrap(status, idx, out, terms, t0, model)
     r["expanded"] = sorted(t for t, w in weights.items()
@@ -306,6 +317,9 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
     r["corrections"] = corrections
     if signals and (signals.source_host or api_term in postings):
         r["intent"] = {"source_host": signals.source_host, "expanded_api": api_term if api_term in postings else None}
+    if requested_function:
+        r["gtfo"] = {"function": requested_function[0], "context": requested_function[1],
+                     "mode": gtfo_mode, "matched_documents": len(function_evidence)}
     return r
 
 
@@ -344,14 +358,19 @@ if __name__ == "__main__":
     pv = PIVOT_SLOPE if "--pivot" in args else 0.0
     fz = "--fuzzy" in args
     cv = "--cov" in args
-    intent = "both" if "--intent" in args else None
-    args = [a for a in args if a not in ("--bm25", "--tfidf", "--boost", "--syn", "--pivot", "--fuzzy", "--cov", "--intent")]
+    gtfo_mode = "verified" if "--gtfo-functions" in args else None
+    intent = "both" if "--intent" in args or gtfo_mode else None
+    args = [a for a in args if a not in ("--bm25", "--tfidf", "--boost", "--syn", "--pivot", "--fuzzy",
+                                         "--cov", "--intent", "--gtfo-functions")]
     q = " ".join(args)
-    r = search(q, model=model, title_boost=boost, use_synonyms=syn, pivot=pv, use_fuzzy=fz, coverage=cv, intent=intent)
+    r = search(q, model=model, title_boost=boost, use_synonyms=syn, pivot=pv, use_fuzzy=fz, coverage=cv,
+               intent=intent, gtfo_mode=gtfo_mode)
     if r.get("corrections"):
         print("did you mean:", r["corrections"])
     if r.get("intent"):
         print("intent evidence:", r["intent"])
+    if r.get("gtfo"):
+        print("GTFOBins function evidence:", r["gtfo"])
     print(f"[{r['status']}] model={r['model']} indexed={r['num_indexed']} "
           f"terms={r.get('terms')} {r['elapsed_ms']}ms")
     for i, h in enumerate(r["results"], 1):

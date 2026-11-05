@@ -1,0 +1,91 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "3bf149272cd19fc3fdf31f9e1178fbe2869ad2fcaf85c6e113037c880f749714",
+  "policy_sha256": "ef1afe2ee46ed7f370b0a7722b72626a5eef6748e2ed77facf77eb705ee7314e",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "bound_schema_sha256": "4ced3d87ab1f4f3ab519c4f387093c81d645fef43daf4f1133fa8b8a096ffd83",
+  "raw_events_sha256": "ffeeb19efabc0c1d5b771e2cac34744709f897d7aca96d45843a44be85603b3c",
+  "started_at": 1793858001.464094,
+  "finished_at": 1793858024.165934,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.4-gtfo/response_schemas/0003.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "27744644383295be1c0d-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段示範按名稱查找單一匯出函式，未提供列舉指定模組匯出項目的方法。",
+        "evidence": "the Module.getGlobalExportByName() API can be used to find any exported function by name in our target."
+      },
+      {
+        "decision_id": "c33e12c847f44d234aa2-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "來源本身是 GTFOBins 條目，不符合尋找替代來源的要求。",
+        "evidence": "csh | GTFOBins"
+      },
+      {
+        "decision_id": "e2cf7840519cee6db4cd-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "sudo 檔案寫入範例使用 `>` 覆寫目標檔案，未示範保留原內容的附加寫入。",
+        "evidence": "csh -c 'echo DATA >/path/to/output-file' SUID"
+      },
+      {
+        "decision_id": "ecffca93b24604500e91-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "檔案寫入段落在 SUID 條件下示範以 `csh -b` 將實際內容寫入指定本機路徑。",
+        "evidence": "if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. csh -c 'echo DATA >/path/to/output-file' -b"
+      },
+      {
+        "decision_id": "efb0962013880ceceac5-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "範例明確適用於一般使用者，可將自選內容寫入指定本機檔案。",
+        "evidence": "Unprivileged This function can be performed by any unprivileged user. csh -c 'echo DATA >/path/to/output-file'"
+      },
+      {
+        "decision_id": "fdedb72bf65224e26aa1-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "檔案寫入功能的 sudo 小節提供將內容寫入指定本機路徑的指令，並說明執行時會保留取得的權限。",
+        "evidence": "if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . csh -c 'echo DATA >/path/to/output-file' SUID"
+      }
+    ]
+  }
+}

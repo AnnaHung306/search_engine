@@ -1,0 +1,9 @@
+{
+  "review_origin": "llm",
+  "reviewer": "Codex assistant, second-pass consistency review",
+  "independence": "Same workflow after first-pass metrics; not independent or human validation.",
+  "scope": "Compared both known regression pools to v8.3 rules; checked all reviewed reverse SUID/append/binding cases. Read VS Code outbound tunnel and terminal, archive extraction, cpio local target, check_log destination, csh actual write, c89 deletion warning in the original bodies; checked SUID-only vs other context and direct vs possible inheritance. Kept all original labels.",
+  "policy_sha256": "ef1afe2ee46ed7f370b0a7722b72626a5eef6748e2ed77facf77eb705ee7314e",
+  "initial_judgments_sha256": "354324c096eac2203d333a4ae48340e79ee30c3c621d661e6b55c8bfb23196d1",
+  "decisions": []
+}

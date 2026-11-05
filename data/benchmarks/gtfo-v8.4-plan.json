@@ -1,0 +1,33 @@
+{
+  "experiment": "gtfo-v8.4",
+  "new_queries_sha256": "8696a6938a559003f1954faf8fed915875e2d907a334f5569e1b5ecc97b341be",
+  "relations_sha256": "fbd9c89699c105dc082f9e4548fafa4de34eb48a0944b451e1bf521b635eeb2d",
+  "regression_ids": [
+    "intent-03",
+    "intent-04"
+  ],
+  "baseline": "v83",
+  "candidate": "verified",
+  "systems": {
+    "v83": {
+      "model": "bm25",
+      "intent": "both"
+    },
+    "function": {
+      "model": "bm25",
+      "intent": "both",
+      "gtfo_mode": "function"
+    },
+    "paired": {
+      "model": "bm25",
+      "intent": "both",
+      "gtfo_mode": "paired"
+    },
+    "verified": {
+      "model": "bm25",
+      "intent": "both",
+      "gtfo_mode": "verified"
+    }
+  },
+  "comparison": "Fixed v8.3 versus function, pair and effect-aware tiers. Separate known failures from new reverse/write/binding/control cases. No tuning or selection on these scores."
+}

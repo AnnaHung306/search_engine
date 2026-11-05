@@ -1,4 +1,4 @@
-# Pentest Tool Search — 課程整合更新 v8.3
+# Pentest Tool Search — 課程整合更新 v8.4
 
 本機資安文件搜尋引擎。從 v7.1 的固定 980 頁公開資料出發，保留自寫倒排索引、TF-IDF 與 cosine，新增位置索引、欄位／鄰近度實驗及逐筆計分解釋。
 
@@ -100,6 +100,17 @@ python -B code/search.py --bm25 --intent 'list loaded native libraries'
 ```
 
 兩題已知失敗作回歸；16 題新題固定於 data/benchmarks/intent-v8.3.json，並分來源、原生模組與控制組。LM 終判的新題 P@5 由 0.350 到 0.425；四種設定、判定與逐題成績見 [v8.3 報告](report/QUERY_INTENT_V8_3.md)。使用既存模型輸出重算，無需再呼叫模型：`python -B code/intent_evaluation.py score --adjudications data/evaluation/v8.3-intent/adjudications.json`。新實驗用 `--output <新目錄>`，舊 v8.2 結果保留。
+
+### v8.4 GTFOBins 功能與情境
+
+明示的 GTFOBins 查詢可用 `--bm25 --gtfo-functions` 比較。同一索引加載 97 頁、341 組從固定官方資料重建並逐例核對正文的功能／情境證據。保留官方別名的正式來源；可能繼承不視為直接證據，明示刪檔不視為寫入內容。原網站與預設排序不變。
+
+```sh
+python -B code/search.py --bm25 --gtfo-functions 'GTFOBins SUID reverse shell examples'
+uv run --with-requirements requirements-gtfo-build.txt python -B code/build_gtfo_functions.py --output data/gtfo-v8.4/rebuilt.json
+```
+
+第二行是選擇性重建，只下載固定官方原始碼並對照本機索引，不執行網頁命令、不覆寫原檔。已有 venv 時也可用 `python -m pip install -r requirements-gtfo-build.txt` 後直接執行建置器。PyYAML 是重建依賴，搜尋執行時不需要。結果、配對限制與負面數據見 [v8.4 報告](report/GTFO_FUNCTIONS_V8_4.md)。
 
 ### description 資料限制
 

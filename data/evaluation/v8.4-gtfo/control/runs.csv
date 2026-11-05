@@ -1,0 +1,81 @@
+system,query_id,query,rank,doc_id,url,score
+v83,gtfo-13,compare GTFOBins and Kali sudo tool documentation,1,949,https://www.kali.org/tools/ssdeep/,11.058546125632436
+v83,gtfo-13,compare GTFOBins and Kali sudo tool documentation,2,933,https://www.kali.org/tools/afflib/,10.365429470244074
+v83,gtfo-13,compare GTFOBins and Kali sudo tool documentation,3,257,https://www.kali.org/tools/lbd/,10.117256928978914
+v83,gtfo-13,compare GTFOBins and Kali sudo tool documentation,4,950,https://www.kali.org/tools/unhide/,9.989980601123069
+v83,gtfo-13,compare GTFOBins and Kali sudo tool documentation,5,573,https://www.kali.org/tools/rizin/,9.97722776746187
+v83,gtfo-14,GTFOBins contribution schema and examples,1,20,https://gtfobins.org/contributing/,11.208838557021023
+v83,gtfo-14,GTFOBins contribution schema and examples,2,13,https://gtfobins.org/scope/,4.966689024928729
+v83,gtfo-14,GTFOBins contribution schema and examples,3,69,https://gtfobins.org/gtfobins/alpine/,4.896900492512003
+v83,gtfo-14,GTFOBins contribution schema and examples,4,90,https://gtfobins.org/gtfobins/aoss/,4.000599950693295
+v83,gtfo-14,GTFOBins contribution schema and examples,5,399,https://gtfobins.org/gtfobins/cdist/,3.9950115768277406
+v83,gtfo-15,GTFOBins alternatives for Linux privileged file write,1,538,https://gtfobins.org/gtfobins/csh/,12.129907359639574
+v83,gtfo-15,GTFOBins alternatives for Linux privileged file write,2,192,https://gtfobins.org/gtfobins/ash/,12.129907359639574
+v83,gtfo-15,GTFOBins alternatives for Linux privileged file write,3,530,https://gtfobins.org/gtfobins/crash/,11.965772205853773
+v83,gtfo-15,GTFOBins alternatives for Linux privileged file write,4,244,https://gtfobins.org/gtfobins/awk/,11.936159633026364
+v83,gtfo-15,GTFOBins alternatives for Linux privileged file write,5,250,https://gtfobins.org/gtfobins/aws/,11.868963596420096
+v83,gtfo-16,Frida inspect exported functions from a module,1,54,https://frida.re/docs/functions/,18.218040758741907
+v83,gtfo-16,Frida inspect exported functions from a module,2,136,https://frida.re/docs/frida-trace/,15.936188393505889
+v83,gtfo-16,Frida inspect exported functions from a module,3,170,https://frida.re/docs/javascript-api/,15.638074909775456
+v83,gtfo-16,Frida inspect exported functions from a module,4,12,https://frida.re/docs/quickstart/,15.325957041492224
+v83,gtfo-16,Frida inspect exported functions from a module,5,177,https://frida.re/docs/c-api/,13.546675705937382
+function,gtfo-13,compare GTFOBins and Kali sudo tool documentation,1,949,https://www.kali.org/tools/ssdeep/,11.058546125632436
+function,gtfo-13,compare GTFOBins and Kali sudo tool documentation,2,933,https://www.kali.org/tools/afflib/,10.365429470244074
+function,gtfo-13,compare GTFOBins and Kali sudo tool documentation,3,257,https://www.kali.org/tools/lbd/,10.117256928978914
+function,gtfo-13,compare GTFOBins and Kali sudo tool documentation,4,950,https://www.kali.org/tools/unhide/,9.989980601123069
+function,gtfo-13,compare GTFOBins and Kali sudo tool documentation,5,573,https://www.kali.org/tools/rizin/,9.97722776746187
+function,gtfo-14,GTFOBins contribution schema and examples,1,20,https://gtfobins.org/contributing/,11.208838557021023
+function,gtfo-14,GTFOBins contribution schema and examples,2,13,https://gtfobins.org/scope/,4.966689024928729
+function,gtfo-14,GTFOBins contribution schema and examples,3,69,https://gtfobins.org/gtfobins/alpine/,4.896900492512003
+function,gtfo-14,GTFOBins contribution schema and examples,4,90,https://gtfobins.org/gtfobins/aoss/,4.000599950693295
+function,gtfo-14,GTFOBins contribution schema and examples,5,399,https://gtfobins.org/gtfobins/cdist/,3.9950115768277406
+function,gtfo-15,GTFOBins alternatives for Linux privileged file write,1,538,https://gtfobins.org/gtfobins/csh/,12.129907359639574
+function,gtfo-15,GTFOBins alternatives for Linux privileged file write,2,192,https://gtfobins.org/gtfobins/ash/,12.129907359639574
+function,gtfo-15,GTFOBins alternatives for Linux privileged file write,3,530,https://gtfobins.org/gtfobins/crash/,11.965772205853773
+function,gtfo-15,GTFOBins alternatives for Linux privileged file write,4,244,https://gtfobins.org/gtfobins/awk/,11.936159633026364
+function,gtfo-15,GTFOBins alternatives for Linux privileged file write,5,250,https://gtfobins.org/gtfobins/aws/,11.868963596420096
+function,gtfo-16,Frida inspect exported functions from a module,1,54,https://frida.re/docs/functions/,18.218040758741907
+function,gtfo-16,Frida inspect exported functions from a module,2,136,https://frida.re/docs/frida-trace/,15.936188393505889
+function,gtfo-16,Frida inspect exported functions from a module,3,170,https://frida.re/docs/javascript-api/,15.638074909775456
+function,gtfo-16,Frida inspect exported functions from a module,4,12,https://frida.re/docs/quickstart/,15.325957041492224
+function,gtfo-16,Frida inspect exported functions from a module,5,177,https://frida.re/docs/c-api/,13.546675705937382
+paired,gtfo-13,compare GTFOBins and Kali sudo tool documentation,1,949,https://www.kali.org/tools/ssdeep/,11.058546125632436
+paired,gtfo-13,compare GTFOBins and Kali sudo tool documentation,2,933,https://www.kali.org/tools/afflib/,10.365429470244074
+paired,gtfo-13,compare GTFOBins and Kali sudo tool documentation,3,257,https://www.kali.org/tools/lbd/,10.117256928978914
+paired,gtfo-13,compare GTFOBins and Kali sudo tool documentation,4,950,https://www.kali.org/tools/unhide/,9.989980601123069
+paired,gtfo-13,compare GTFOBins and Kali sudo tool documentation,5,573,https://www.kali.org/tools/rizin/,9.97722776746187
+paired,gtfo-14,GTFOBins contribution schema and examples,1,20,https://gtfobins.org/contributing/,11.208838557021023
+paired,gtfo-14,GTFOBins contribution schema and examples,2,13,https://gtfobins.org/scope/,4.966689024928729
+paired,gtfo-14,GTFOBins contribution schema and examples,3,69,https://gtfobins.org/gtfobins/alpine/,4.896900492512003
+paired,gtfo-14,GTFOBins contribution schema and examples,4,90,https://gtfobins.org/gtfobins/aoss/,4.000599950693295
+paired,gtfo-14,GTFOBins contribution schema and examples,5,399,https://gtfobins.org/gtfobins/cdist/,3.9950115768277406
+paired,gtfo-15,GTFOBins alternatives for Linux privileged file write,1,538,https://gtfobins.org/gtfobins/csh/,12.129907359639574
+paired,gtfo-15,GTFOBins alternatives for Linux privileged file write,2,192,https://gtfobins.org/gtfobins/ash/,12.129907359639574
+paired,gtfo-15,GTFOBins alternatives for Linux privileged file write,3,530,https://gtfobins.org/gtfobins/crash/,11.965772205853773
+paired,gtfo-15,GTFOBins alternatives for Linux privileged file write,4,244,https://gtfobins.org/gtfobins/awk/,11.936159633026364
+paired,gtfo-15,GTFOBins alternatives for Linux privileged file write,5,250,https://gtfobins.org/gtfobins/aws/,11.868963596420096
+paired,gtfo-16,Frida inspect exported functions from a module,1,54,https://frida.re/docs/functions/,18.218040758741907
+paired,gtfo-16,Frida inspect exported functions from a module,2,136,https://frida.re/docs/frida-trace/,15.936188393505889
+paired,gtfo-16,Frida inspect exported functions from a module,3,170,https://frida.re/docs/javascript-api/,15.638074909775456
+paired,gtfo-16,Frida inspect exported functions from a module,4,12,https://frida.re/docs/quickstart/,15.325957041492224
+paired,gtfo-16,Frida inspect exported functions from a module,5,177,https://frida.re/docs/c-api/,13.546675705937382
+verified,gtfo-13,compare GTFOBins and Kali sudo tool documentation,1,949,https://www.kali.org/tools/ssdeep/,11.058546125632436
+verified,gtfo-13,compare GTFOBins and Kali sudo tool documentation,2,933,https://www.kali.org/tools/afflib/,10.365429470244074
+verified,gtfo-13,compare GTFOBins and Kali sudo tool documentation,3,257,https://www.kali.org/tools/lbd/,10.117256928978914
+verified,gtfo-13,compare GTFOBins and Kali sudo tool documentation,4,950,https://www.kali.org/tools/unhide/,9.989980601123069
+verified,gtfo-13,compare GTFOBins and Kali sudo tool documentation,5,573,https://www.kali.org/tools/rizin/,9.97722776746187
+verified,gtfo-14,GTFOBins contribution schema and examples,1,20,https://gtfobins.org/contributing/,11.208838557021023
+verified,gtfo-14,GTFOBins contribution schema and examples,2,13,https://gtfobins.org/scope/,4.966689024928729
+verified,gtfo-14,GTFOBins contribution schema and examples,3,69,https://gtfobins.org/gtfobins/alpine/,4.896900492512003
+verified,gtfo-14,GTFOBins contribution schema and examples,4,90,https://gtfobins.org/gtfobins/aoss/,4.000599950693295
+verified,gtfo-14,GTFOBins contribution schema and examples,5,399,https://gtfobins.org/gtfobins/cdist/,3.9950115768277406
+verified,gtfo-15,GTFOBins alternatives for Linux privileged file write,1,538,https://gtfobins.org/gtfobins/csh/,12.129907359639574
+verified,gtfo-15,GTFOBins alternatives for Linux privileged file write,2,192,https://gtfobins.org/gtfobins/ash/,12.129907359639574
+verified,gtfo-15,GTFOBins alternatives for Linux privileged file write,3,530,https://gtfobins.org/gtfobins/crash/,11.965772205853773
+verified,gtfo-15,GTFOBins alternatives for Linux privileged file write,4,244,https://gtfobins.org/gtfobins/awk/,11.936159633026364
+verified,gtfo-15,GTFOBins alternatives for Linux privileged file write,5,250,https://gtfobins.org/gtfobins/aws/,11.868963596420096
+verified,gtfo-16,Frida inspect exported functions from a module,1,54,https://frida.re/docs/functions/,18.218040758741907
+verified,gtfo-16,Frida inspect exported functions from a module,2,136,https://frida.re/docs/frida-trace/,15.936188393505889
+verified,gtfo-16,Frida inspect exported functions from a module,3,170,https://frida.re/docs/javascript-api/,15.638074909775456
+verified,gtfo-16,Frida inspect exported functions from a module,4,12,https://frida.re/docs/quickstart/,15.325957041492224
+verified,gtfo-16,Frida inspect exported functions from a module,5,177,https://frida.re/docs/c-api/,13.546675705937382
