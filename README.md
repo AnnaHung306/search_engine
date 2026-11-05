@@ -1,4 +1,4 @@
-# Pentest Tool Search — 課程整合更新 v8.5
+# Pentest Tool Search — 課程整合更新 v8.6
 
 本機資安文件搜尋引擎。從 v7.1 的固定 980 頁公開資料出發，保留自寫倒排索引、TF-IDF 與 cosine，新增位置索引、欄位／鄰近度實驗及逐筆計分解釋。
 
@@ -27,7 +27,7 @@ python -B code/app.py
 - 上游 main 基底：`9c7c3a107b9712b5fc2f31d8d432a025be39f27a`，<https://github.com/AnnaHung306/search_engine>。
 - 原始 search-engine.zip、REPORT_DRAFT.docx、data/pages.json、data/index.json 與舊評估都保留。
 - 目前索引：data/index-v8.1.json.gz，schema 4；literal offsets 採 gap/length varint，按需解碼，外層固定標頭 gzip。原 schema-3 index-v8.json 仍保留。缺少新索引或格式錯誤會直接報錯，不改讀舊檔。
-- 舊 Word 與 report/REPORT_DRAFT.md 是 **v7.1 歷史草稿**；v8 與 v8.1 報告保留。最新結果見 report/MODEL_EVALUATION_V8_2.md；docs/HUMAN_HANDOFF.md 保留歷史人工材料與真實交付欄位。
+- 舊 Word 與 report/REPORT_DRAFT.md 是 **v7.1 歷史草稿**，各輪報告仍按版本保存。最新寫入效果評估見 [v8.6 報告](report/GTFO_WRITE_EFFECTS_V8_6.md)。docs/HUMAN_HANDOFF.md 保留歷史人工材料與交付欄位。
 - 講義頁碼／作業條文與延伸來源見 [引用資料](docs/references.md)；每批改動見 [更新紀錄](docs/changes/README.md)。
 
 ## 爬蟲
@@ -123,6 +123,19 @@ IR_INDEX_PATH=data/gtfo-v8.5/index.json.gz python -B code/append_evaluation.py s
 ```
 
 選擇性重建可用 `uv run --with-requirements requirements-gtfo-build.txt python -B code/build_gtfo_append.py --output data/gtfo-v8.5-rebuilt`，目的地須為新目錄。舊題的 P@5 增益來自收錄，同語料的新題排序使 P@5 再增加 8.33 個百分點。詳見 [v8.5 報告](report/GTFO_APPEND_V8_5.md)。
+
+### v8.6 檔案效果與站外附加
+
+另建 986 頁快照，使用明確來源篩選與同一範例的操作、權限證據。兩版在相同快照上的 12 道新題 P@5 從 0.1833 提升至 0.6333。 [v8.6 報告](report/GTFO_WRITE_EFFECTS_V8_6.md)
+
+```sh
+IR_INDEX_PATH=data/gtfo-v8.6/index.json.gz python -B code/search.py --bm25 --write-effects 'GTFOBins sudo overwrite a local file'
+IR_INDEX_PATH=data/gtfo-v8.6/index.json.gz python -B code/search.py --bm25 --write-effects 'outside GTFOBins append to a local file with sudo'
+IR_INDEX_PATH=data/gtfo-v8.6/index.json.gz python -B code/write_effects_evaluation.py score --adjudications data/evaluation/v8.6-effects/review.json
+uv run --with-requirements requirements-gtfo-build.txt python -B code/build_write_effects.py --output data/gtfo-v8.6-rebuilt
+```
+
+重建使用已凍結的本機採集檔，目的地須為新目錄。已在 Python 3.11、3.12、3.13 重建並核對成品雜湊。
 
 ### description 資料限制
 

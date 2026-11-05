@@ -1,0 +1,98 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "bde5aa11e9857b578bf852a97a3dc6c164cb184beb56c0954c5720f306063942",
+  "policy_sha256": "f711380ae5fb95e5e89404b687b3a1288413d642936ea3601db285b487d26c3c",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "bound_schema_sha256": "ceec0407dd3c438ab279fbdfb382ac5900f027248ed2bea356f0128aa35f4da8",
+  "raw_events_sha256": "a37679fbf1ef500e49fa02100f56a33c8c1ba60c5a6a9d789d6e3fd01dba9b4f",
+  "started_at": 1793861001.494786,
+  "finished_at": 1793861024.36037,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.6-effects/response_schemas/0004.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "b8637dbb4255ad748403-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "透明代理設定中的追加命令使用 `>>`，但實際開啟檔案寫入的 shell 未透過 sudo 提權。",
+        "evidence": "echo \" $TABLE_ID mitmproxy\" >> /etc/iproute2/rt_tables"
+      },
+      {
+        "decision_id": "4aa8b796b56d6b15bd47-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "Gemini CLI 的追加選項處理標準輸入與提示詞，未示範在 SUID 情境下追加本機檔案。",
+        "evidence": "Run in non-interactive (headless) mode with the given prompt. Appended to input on stdin (if any)."
+      },
+      {
+        "decision_id": "5517dfb203fe7db462f2-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段說明如何實作 Metasploit 漏洞檢查，未提供以 sudo 追加文字的範例。",
+        "evidence": "Once you have determined the vulnerable state, you should return a check code."
+      },
+      {
+        "decision_id": "39af14ac30b6c0bac7ef-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "Nmap 的選項會保留舊內容並追加掃描結果，未示範用 sudo 讓寫入程式追加指定文字。",
+        "evidence": "If you prefer to keep the existing content of the file and append the new results, specify the --append-output option."
+      },
+      {
+        "decision_id": "471f74891e26dacddc07-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "sudo 範例用於建立 TUN 虛擬網路介面，未示範追加本機檔案。",
+        "evidence": "sudo mitmdump --mode tun In TUN mode, mitmproxy creates a virtual network interface on the system."
+      },
+      {
+        "decision_id": "b9449a6375921d0b6b86-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "範例將 Nikto 掃描報告輸出到檔案，未示範以 sudo 將指定文字追加到檔尾並保留舊內容。",
+        "evidence": "nikto -Display 1234EP -o report.html -Format htm -Tuning 123bde -host 192.168.0.102"
+      },
+      {
+        "decision_id": "b2438be7d360d07fa749-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "文件描述 apache2 在 SUID 情境下讀取本機檔案，未示範以指定內容覆寫既有檔案。",
+        "evidence": "File read This executable can read data from local files."
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+system,query_id,query,rank,doc_id,url,score
+expanded_v85,effect-01,GTFOBins replace existing local file contents via sudo,1,394,https://gtfobins.org/gtfobins/cc/,17.061370849732707
+expanded_v85,effect-01,GTFOBins replace existing local file contents via sudo,2,365,https://gtfobins.org/gtfobins/c99/,17.061370849732707
+expanded_v85,effect-01,GTFOBins replace existing local file contents via sudo,3,360,https://gtfobins.org/gtfobins/c89/,17.061370849732707
+expanded_v85,effect-01,GTFOBins replace existing local file contents via sudo,4,281,https://gtfobins.org/gtfobins/bash/,15.119942369380258
+expanded_v85,effect-01,GTFOBins replace existing local file contents via sudo,5,419,https://gtfobins.org/gtfobins/check_cups/,14.121083027129416
+expanded_v85,effect-02,GTFOBins sudo overwrite a protected file with new text,1,150,https://gtfobins.org/gtfobins/aria2c/,11.89002854375133
+expanded_v85,effect-02,GTFOBins sudo overwrite a protected file with new text,2,20,https://gtfobins.org/contributing/,6.718500014519999
+expanded_v85,effect-02,GTFOBins sudo overwrite a protected file with new text,3,260,https://gtfobins.org/gtfobins/base58/,6.183547515459344
+expanded_v85,effect-02,GTFOBins sudo overwrite a protected file with new text,4,185,https://gtfobins.org/gtfobins/ascii85/,6.183547515459344
+expanded_v85,effect-02,GTFOBins sudo overwrite a protected file with new text,5,31,https://gtfobins.org/gtfobins/7z/,6.164306096152926
+expanded_v85,effect-03,GTFOBins overwrite contents of a file with SUID,1,150,https://gtfobins.org/gtfobins/aria2c/,18.925491120007905
+expanded_v85,effect-03,GTFOBins overwrite contents of a file with SUID,2,199,https://gtfobins.org/gtfobins/aspell/,13.655352049009078
+expanded_v85,effect-03,GTFOBins overwrite contents of a file with SUID,3,97,https://gtfobins.org/gtfobins/apache2/,13.601024311146906
+expanded_v85,effect-03,GTFOBins overwrite contents of a file with SUID,4,523,https://gtfobins.org/gtfobins/cpio/,13.202607032459312
+expanded_v85,effect-03,GTFOBins overwrite contents of a file with SUID,5,470,https://gtfobins.org/gtfobins/clamscan/,13.191756594652091
+expanded_v85,effect-04,GTFOBins unprivileged overwrite an existing file,1,150,https://gtfobins.org/gtfobins/aria2c/,15.304062526445406
+expanded_v85,effect-04,GTFOBins unprivileged overwrite an existing file,2,394,https://gtfobins.org/gtfobins/cc/,11.85059279738259
+expanded_v85,effect-04,GTFOBins unprivileged overwrite an existing file,3,365,https://gtfobins.org/gtfobins/c99/,11.85059279738259
+expanded_v85,effect-04,GTFOBins unprivileged overwrite an existing file,4,360,https://gtfobins.org/gtfobins/c89/,11.85059279738259
+expanded_v85,effect-04,GTFOBins unprivileged overwrite an existing file,5,980,https://gtfobins.org/gtfobins/hashcat/,11.628963205891385
+effects,effect-01,GTFOBins replace existing local file contents via sudo,1,281,https://gtfobins.org/gtfobins/bash/,15.119942369380258
+effects,effect-01,GTFOBins replace existing local file contents via sudo,2,150,https://gtfobins.org/gtfobins/aria2c/,12.247521970646213
+effects,effect-01,GTFOBins replace existing local file contents via sudo,3,538,https://gtfobins.org/gtfobins/csh/,11.186060142039045
+effects,effect-01,GTFOBins replace existing local file contents via sudo,4,192,https://gtfobins.org/gtfobins/ash/,11.186060142039045
+effects,effect-01,GTFOBins replace existing local file contents via sudo,5,515,https://gtfobins.org/gtfobins/cp/,11.147076681609724
+effects,effect-02,GTFOBins sudo overwrite a protected file with new text,1,150,https://gtfobins.org/gtfobins/aria2c/,11.89002854375133
+effects,effect-02,GTFOBins sudo overwrite a protected file with new text,2,982,https://gtfobins.org/gtfobins/tee/,6.104303892217765
+effects,effect-02,GTFOBins sudo overwrite a protected file with new text,3,538,https://gtfobins.org/gtfobins/csh/,6.024394499411338
+effects,effect-02,GTFOBins sudo overwrite a protected file with new text,4,192,https://gtfobins.org/gtfobins/ash/,6.024394499411338
+effects,effect-02,GTFOBins sudo overwrite a protected file with new text,5,515,https://gtfobins.org/gtfobins/cp/,5.645744003005889
+effects,effect-03,GTFOBins overwrite contents of a file with SUID,1,150,https://gtfobins.org/gtfobins/aria2c/,18.925491120007905
+effects,effect-03,GTFOBins overwrite contents of a file with SUID,2,281,https://gtfobins.org/gtfobins/bash/,12.681558107075372
+effects,effect-03,GTFOBins overwrite contents of a file with SUID,3,538,https://gtfobins.org/gtfobins/csh/,10.822143801220353
+effects,effect-03,GTFOBins overwrite contents of a file with SUID,4,192,https://gtfobins.org/gtfobins/ash/,10.822143801220353
+effects,effect-03,GTFOBins overwrite contents of a file with SUID,5,515,https://gtfobins.org/gtfobins/cp/,10.784764913210125
+effects,effect-04,GTFOBins unprivileged overwrite an existing file,1,150,https://gtfobins.org/gtfobins/aria2c/,15.304062526445406
+effects,effect-04,GTFOBins unprivileged overwrite an existing file,2,281,https://gtfobins.org/gtfobins/bash/,10.31551863412338
+effects,effect-04,GTFOBins unprivileged overwrite an existing file,3,538,https://gtfobins.org/gtfobins/csh/,9.372303042940743
+effects,effect-04,GTFOBins unprivileged overwrite an existing file,4,192,https://gtfobins.org/gtfobins/ash/,9.372303042940743
+effects,effect-04,GTFOBins unprivileged overwrite an existing file,5,982,https://gtfobins.org/gtfobins/tee/,9.11820450170432

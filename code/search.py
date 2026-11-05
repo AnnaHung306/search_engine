@@ -48,6 +48,7 @@ import positions
 import query_intent
 import gtfo_append
 import gtfo_functions
+import write_effects
 import ranking
 from snippets import snippet
 import synonyms
@@ -130,15 +131,24 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
         query = synonyms.translate_zh(query)   # 中文關鍵字 -> English
     parsed = parse_query(query)
     free_text = parsed["free_text"]
-    if gtfo_mode == "append":
+    if gtfo_mode in ("append", "effects"):
         free_text = gtfo_append.intent_text(free_text)
     signals = query_intent.detect(free_text, intent) if intent is not None else None
     if gtfo_mode is not None and (gtfo_mode not in gtfo_functions.MODES or intent not in ("source", "both")):
         raise ValueError("GTFOBins mode requires a known function mode and source intent")
-    if gtfo_mode == "append" and idx["collection_sha256"] != gtfo_functions.APPEND_COLLECTION:
+    if gtfo_mode == "append" and idx["collection_sha256"] not in (gtfo_functions.APPEND_COLLECTION, gtfo_functions.EFFECTS_COLLECTION):
         raise ValueError("GTFOBins append mode requires IR_INDEX_PATH=data/gtfo-v8.5/index.json.gz")
-    requested_function = (gtfo_functions.request(free_text, signals.source_host, gtfo_mode)
-                          if gtfo_mode is not None else None)
+    if gtfo_mode == "effects" and idx["collection_sha256"] != gtfo_functions.EFFECTS_COLLECTION:
+        raise ValueError("Write effects mode requires IR_INDEX_PATH=data/gtfo-v8.6/index.json.gz")
+    exclude_gtfobins, mixed_sources = (write_effects.source_constraint(free_text)
+                                       if gtfo_mode == "effects" else (False, False))
+    effect_request = (write_effects.request(free_text, outside=exclude_gtfobins)
+                      if gtfo_mode == "effects" and not mixed_sources else None)
+    if exclude_gtfobins or mixed_sources:
+        signals = query_intent.Intent(api_term=signals.api_term)
+    function_mode = "append" if gtfo_mode == "effects" else gtfo_mode
+    requested_function = (gtfo_functions.request(free_text, signals.source_host, function_mode)
+                          if gtfo_mode is not None and effect_request is None else None)
     # remember the words the user typed, to label each result matched / missing
     shown_words = []
     for w in parsed["free"] + parsed["must"] + [x for ph in parsed["phrases"] for x in tokenize(ph)]:
@@ -199,6 +209,8 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
 
     # v7.1: navigation hub pages (menus / full listings) are never results
     docs_all = idx["docs"]
+    if exclude_gtfobins:
+        cand = {d for d in cand if not write_effects.from_gtfobins(docs_all[d]["url"])}
     if SKIP_HUBS:
         cand = {d for d in cand if not docs_all[d].get("hub")}
 
@@ -264,8 +276,12 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
                     reverse=True)
     function_evidence = {}
     if requested_function:
-        function_evidence = gtfo_functions.evidence(idx, ranked, requested_function, gtfo_mode)
+        function_evidence = gtfo_functions.evidence(idx, ranked, requested_function, function_mode)
         ranked.sort(key=lambda pair: pair[1] in function_evidence, reverse=True)
+    effect_evidence = {}
+    if effect_request:
+        effect_evidence = write_effects.evidence(idx, ranked, effect_request)
+        ranked.sort(key=lambda pair: pair[1] in effect_evidence, reverse=True)
     surface_forms = {}
     for term in scoring_terms:
         for form in idx["position_aliases"].get(term, []):
@@ -316,6 +332,8 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
                     hit["url"], str(doc_id), postings.get(api_term, {}))
             if requested_function:
                 hit["explanation"]["gtfo_evidence"] = function_evidence.get(doc_id)
+            if effect_request:
+                hit["explanation"]["write_effect_evidence"] = effect_evidence.get(doc_id)
     status = "ok" if out else "no_match"
     r = _wrap(status, idx, out, terms, t0, model)
     r["expanded"] = sorted(t for t, w in weights.items()
@@ -325,7 +343,12 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
         r["intent"] = {"source_host": signals.source_host, "expanded_api": api_term if api_term in postings else None}
     if requested_function:
         r["gtfo"] = {"function": requested_function[0], "context": requested_function[1],
-                     "mode": gtfo_mode, "matched_documents": len(function_evidence)}
+                     "mode": function_mode, "matched_documents": len(function_evidence)}
+    if effect_request or exclude_gtfobins:
+        r["write_effect"] = {"effect": effect_request.effect if effect_request else None,
+                             "context": effect_request.context if effect_request else None,
+                             "exclude_gtfobins": exclude_gtfobins,
+                             "matched_documents": len(effect_evidence)}
     return r
 
 
@@ -364,10 +387,12 @@ if __name__ == "__main__":
     pv = PIVOT_SLOPE if "--pivot" in args else 0.0
     fz = "--fuzzy" in args
     cv = "--cov" in args
-    gtfo_mode = "append" if "--gtfo-append" in args else "verified" if "--gtfo-functions" in args else None
+    gtfo_mode = next((mode for flag, mode in (
+        ("--write-effects", "effects"), ("--gtfo-append", "append"), ("--gtfo-functions", "verified"))
+        if flag in args), None)
     intent = "both" if "--intent" in args or gtfo_mode else None
     args = [a for a in args if a not in ("--bm25", "--tfidf", "--boost", "--syn", "--pivot", "--fuzzy",
-                                         "--cov", "--intent", "--gtfo-functions", "--gtfo-append")]
+                                         "--cov", "--intent", "--gtfo-functions", "--gtfo-append", "--write-effects")]
     q = " ".join(args)
     r = search(q, model=model, title_boost=boost, use_synonyms=syn, pivot=pv, use_fuzzy=fz, coverage=cv,
                intent=intent, gtfo_mode=gtfo_mode)
@@ -377,6 +402,8 @@ if __name__ == "__main__":
         print("intent evidence:", r["intent"])
     if r.get("gtfo"):
         print("GTFOBins function evidence:", r["gtfo"])
+    if r.get("write_effect"):
+        print("Write-effect evidence:", r["write_effect"])
     print(f"[{r['status']}] model={r['model']} indexed={r['num_indexed']} "
           f"terms={r.get('terms')} {r['elapsed_ms']}ms")
     for i, h in enumerate(r["results"], 1):

@@ -1,0 +1,56 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "237760838c93f3674712858f765377d8b85df71fd589e7dc44840381d167bfb4",
+  "policy_sha256": "f711380ae5fb95e5e89404b687b3a1288413d642936ea3601db285b487d26c3c",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "bound_schema_sha256": "263115a38697e862dd11a4246588ff5001c08fc37bfac5501a630f36840387d6",
+  "raw_events_sha256": "6fb50593c5a9fb41a010ee34e06ea75841f84aca8dcc1cffc18216422fca1a5e",
+  "started_at": 1793860993.7570791,
+  "finished_at": 1793861001.493609,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.6-effects/response_schemas/0002.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "87799ba31c31a29049b5-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "這段是 Swaks 的 SMTP 測試文件。雖提到可在程式檔末尾加入設定，但沒有示範用 sudo 提升實際寫入程式的權限，以保留原內容並附加文字。",
+        "evidence": "Any lines added after \"__END__\" will be treated as the contents of a configuration file."
+      }
+    ]
+  }
+}

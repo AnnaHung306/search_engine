@@ -65,9 +65,15 @@ def build_index(pages, collection_hash):
         "description_postings": description_postings, "description_norms": description_norms,
         "df": df, "idf": idf, "norms": norms, "doc_len": lengths,
         "title_len": title_lengths, "avg_dl": sum(lengths) / total,
-        "avg_norm": sum(norms) / total, "title_norms": title_norms, "body_norms": body_norms,
+        "avg_norm": math.fsum(norms) / total, "title_norms": title_norms, "body_norms": body_norms,
         "positions": literal_positions, "position_aliases": aliases, "position_offsets": offsets,
         "position_offset_encoding": offset_codec.ENCODING}
+
+
+def write_compressed_index(index, raw):
+    with gzip.GzipFile(filename="", fileobj=raw, mode="wb", compresslevel=6, mtime=0) as compressed:
+        with io.TextIOWrapper(compressed, encoding="utf-8") as text:
+            json.dump(index, text, ensure_ascii=False, separators=(",", ":"))
 
 
 def write_index(index, output):
@@ -76,9 +82,7 @@ def write_index(index, output):
     temporary = output.with_suffix(".tmp")
     with temporary.open("wb") as raw:
         if output.suffix == ".gz":
-            with gzip.GzipFile(filename="", fileobj=raw, mode="wb", compresslevel=6, mtime=0) as compressed:
-                with io.TextIOWrapper(compressed, encoding="utf-8") as text:
-                    json.dump(index, text, ensure_ascii=False, separators=(",", ":"))
+            write_compressed_index(index, raw)
         else:
             raw.write(json.dumps(index, ensure_ascii=False, separators=(",", ":")).encode("utf-8"))
     temporary.replace(output)

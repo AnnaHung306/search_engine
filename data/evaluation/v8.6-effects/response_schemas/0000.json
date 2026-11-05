@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decisions"
+  ],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "decision_id",
+          "relevant",
+          "confidence",
+          "reason",
+          "evidence"
+        ],
+        "properties": {
+          "decision_id": {
+            "type": "string",
+            "enum": [
+              "109ab3e1109b95e897d6-0",
+              "20dbd2054ba24017a177-0",
+              "341fd1219e10d3af4b4a-0",
+              "444fed774c59ffbc2512-0",
+              "4df7f116147abe458918-0",
+              "58942a55465d26ebab9c-0",
+              "65fba2e7b4b382b11af1-0",
+              "709c92c922e8dce7fad7-0",
+              "7632b6ab76ca2f66f2ee-0",
+              "82b261a41d1179e5f62c-0",
+              "89e2760a5bf5c1ebcf99-0",
+              "8ead92bc64d970ee0e71-0",
+              "8fca39a53ef173e136c1-0",
+              "9458f20f1a5bf03bd947-0",
+              "99b44f64130634dc2f5c-0",
+              "a719372d8754fb9bee52-0",
+              "a8939fe29f02d5b187d2-0",
+              "afb42d6d1162c429fbc1-0",
+              "b7984534f65061921abe-0",
+              "ca359afe39e9d18dcfc2-0",
+              "e27a92b386eb828a369f-0",
+              "e5e7dc46c5a6a5166ca3-0",
+              "e673c17f6aa15d1774d7-0"
+            ]
+          },
+          "relevant": {
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

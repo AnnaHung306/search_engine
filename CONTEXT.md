@@ -20,3 +20,5 @@ v8.3 使用者要求處理 GTFOBins sudo 與 native libraries 兩題失敗並重
 v8.4 使用者要求改善 GTFOBins 同站反向 shell、sudo 寫檔與 SUID 配對。**Function/context evidence**：固定官方資料的同一功能例子，必須能對照原索引正文的功能、情境與例子。官方 alias 保留正式條目來源，可能繼承不算直接；明示刪檔不算寫入內容。以獨立索引附加檔和 opt-in 排序驗證，原索引及網站不變。
 
 v8.5 在另建的 983 頁實驗快照中補收 hashcat、screen、tee。**Append evidence** 對應同一功能及情境的明示附加效果或選項。實驗用同語料比較 v8.4 與附加順位，原 980 頁的失敗另作收錄診斷。
+
+v8.6 把覆寫、附加、刪檔分開判定，明確排除來源則在候選階段依 URL host 套用。站外補收三頁形成 986 頁實驗快照，原七站快照仍供必做比較。已知失敗與 12 道新題分開計分，終判及初判保存於 data/evaluation/v8.6-effects/。

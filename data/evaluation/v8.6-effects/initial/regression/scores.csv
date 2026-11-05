@@ -1,0 +1,5 @@
+system,query_id,query,precision_at_5
+expanded_v85,app-10,GTFOBins alternatives for appending text to a file with sudo,0.0
+expanded_v85,app-11,GTFOBins sudo overwrite a local file,0.4
+effects,app-10,GTFOBins alternatives for appending text to a file with sudo,0.6
+effects,app-11,GTFOBins sudo overwrite a local file,1.0

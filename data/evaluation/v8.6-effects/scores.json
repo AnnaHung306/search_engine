@@ -1,0 +1,104 @@
+{
+  "origin": "llm",
+  "collection_sha256": "bcc3df84616835347f5bdac17665014c777651b7ef89929cfc2a4f225c3a68eb",
+  "denominator": 5,
+  "pair_count": 116,
+  "document_count": 45,
+  "self_review_corrections": 1,
+  "adjudications_file": "review.json",
+  "mean_precision_at_5": {
+    "regression": {
+      "expanded_v85": 0.1,
+      "effects": 0.8
+    },
+    "overwrite": {
+      "expanded_v85": 0.25,
+      "effects": 1.0
+    },
+    "external": {
+      "expanded_v85": 0.0,
+      "effects": 0.6
+    },
+    "control": {
+      "expanded_v85": 0.3,
+      "effects": 0.3
+    }
+  },
+  "candidate_vs_baseline": {
+    "regression": {
+      "wins": 2,
+      "ties": 0,
+      "losses": 0
+    },
+    "overwrite": {
+      "wins": 4,
+      "ties": 0,
+      "losses": 0
+    },
+    "external": {
+      "wins": 4,
+      "ties": 0,
+      "losses": 0
+    },
+    "control": {
+      "wins": 0,
+      "ties": 4,
+      "losses": 0
+    }
+  },
+  "new_query_count": 12,
+  "new_mean_precision_at_5": {
+    "expanded_v85": 0.18333333333333332,
+    "effects": 0.6333333333333333
+  },
+  "comparison": "Compare v8.5 against write effects and explicit source exclusions on the same 986 documents. Separate two known cases from twelve predeclared queries.",
+  "evidence_sha256": {
+    "responses/0000.json": "c3720d19e093b36c23317cf704d5d7d2abc92b99a11bfbb46a2c7b59c871b8a4",
+    "raw/0000.jsonl": "04420ae274c41a2d63d43d3cbbcb18a9464e2edbfb0194f108db4096abcf5ca3",
+    "response_schemas/0000.json": "793449053eade5b2f3c8245afa942b2883af82cfbf5ae59eef9181a839b30d16",
+    "responses/0001.json": "acf911ea7de773c28da8c28ae187b69a4b3fd89d6591a007f271dbe0055d8a18",
+    "raw/0001.jsonl": "86c12fcc4bc307f7e77ec172ee5fb4e72e10ad80e59a1733d472b6fb80aa0a8d",
+    "response_schemas/0001.json": "9392247685b856dcfedcf144c6cbf08ce212a0ba5bb56452bde79274ae70d48d",
+    "responses/0002.json": "3fe5a127d77c6e395e4f2db088d412df2ebda90d53108e15515d2811d5b2821f",
+    "raw/0002.jsonl": "6fb50593c5a9fb41a010ee34e06ea75841f84aca8dcc1cffc18216422fca1a5e",
+    "response_schemas/0002.json": "263115a38697e862dd11a4246588ff5001c08fc37bfac5501a630f36840387d6",
+    "responses/0003.json": "a1b2e58cda8d7c74047ccceb21b10b596cbdd2c314f4f9f626f8ef6742ece562",
+    "raw/0003.jsonl": "2e689c975e1ae8341f7708204f88f724c3d4bf35ff2b0101ef9e353fd31c330f",
+    "response_schemas/0003.json": "8fb7b8ed4419a696122e62ce7c0b2c0e5a7dbe69d1617a8af1ff5e44163c4a88",
+    "responses/0004.json": "06f5380d0e6868e9ed9f3debf85b513dd7473b49af176c608c22121b68d92e8b",
+    "raw/0004.jsonl": "a37679fbf1ef500e49fa02100f56a33c8c1ba60c5a6a9d789d6e3fd01dba9b4f",
+    "response_schemas/0004.json": "ceec0407dd3c438ab279fbdfb382ac5900f027248ed2bea356f0128aa35f4da8",
+    "responses/0005.json": "c12939958c39eedc783fe6352b00be02152fbdcf705ce9c70e5a91477c0d86fc",
+    "raw/0005.jsonl": "682b5845424c9655a667fa2067c9c6a9111a4462e9ef025790e879474f091e6d",
+    "response_schemas/0005.json": "da1f722e743f8eb4412034229b65cb974b0f53c3c5ba970fe91a4e409f0c02e2",
+    "responses/0006.json": "172d28b34e9f6e97d2be6262933602ad963fa9660ab7cc8b1a513772404849ae",
+    "raw/0006.jsonl": "c32e4a17978814b9d360f504d94c07a324c024bfa4b03bef1a8f364e20a5c5a3",
+    "response_schemas/0006.json": "f9d4abd8dc22f73e027e90ce4e17fba749b58abdeb4eb16ab381562f33440000",
+    "review.json": "38953cc5ee7e48cf6216723c52158cb804b0484a421f541dcc21f02998e46546",
+    "regression/scores.csv": "0291f5540add71ecbeecd705fd7d1a648350c4582e76209e48c833d09a1fd389",
+    "overwrite/scores.csv": "029edb2413cda4e1f0517b320d1f2c54e6d1115f2c9d0e5c946183de299157e9",
+    "external/scores.csv": "de35846a70ee3291693bb9e52e543d7332321ee97ac2fe55e3bd6eefbd0c3948",
+    "control/scores.csv": "3560b956700a0257b0fcef24d86ba3042d9d67921badf7e916aeaabde9d69da9",
+    "control/runs.csv": "5c5eed2883f4c4ea711ca949ca34ccfe42b2b5e9e8bc37d57131f1d6515d8733",
+    "external/runs.csv": "b7884787d3dddf5e850571b3dc5a894d3fa3cff383f5103eb022a2e7e3016275",
+    "implementation.json": "8d59637c889e089adda2b1c2c92ba4e241cbf10c3667b66aa60b66aa9685e2c2",
+    "inputs/0000.json": "6dc93594339a5e2f743490c1471f18c23ba281750ae4f86cd4579087c3405a6b",
+    "inputs/0001.json": "9dbcccd282ca9d6d4ec4b4d876f7973631bee63a438a85712135a38c0a35fc43",
+    "inputs/0002.json": "237760838c93f3674712858f765377d8b85df71fd589e7dc44840381d167bfb4",
+    "inputs/0003.json": "c02b3efe6b72a4ed1f5b35aaad1fd3b3c013a6ed3d3d822c372d9a59af585e6d",
+    "inputs/0004.json": "bde5aa11e9857b578bf852a97a3dc6c164cb184beb56c0954c5720f306063942",
+    "inputs/0005.json": "353b81521379e67a21ad72d3b64aafebe68d7b2f536dd409603d9d676cbb27cf",
+    "inputs/0006.json": "c823a5d3718a24e84a2b1e2959d6d6c9b76a7153c37bffa3d4553b3d12e70a11",
+    "overwrite/runs.csv": "eb459c1290b30b2b0014e68298c5451dcda2baa47c5a8fb8b920419d5c91dfa2",
+    "pairs.json": "891c10209c4f58cd9d46e606f5e07ce765704d2a0f43cce395d0776ff0735e88",
+    "plan.json": "ea6d480075a848e4e19ce10fecf0107b34f6d0ecd8799bb9057667166aeb7677",
+    "policy.json": "f711380ae5fb95e5e89404b687b3a1288413d642936ea3601db285b487d26c3c",
+    "prompt.txt": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+    "queries.json": "261a69fddb8ce6a8a2daee5125269c1da8677b6cc2938464f485e81b59ea6ff9",
+    "regression/runs.csv": "4e9649ef14bace50a565262c4f1d8901aedcc854ddb4755bdebd0e71330b2c58",
+    "schema.json": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+    "manifest.json": "7f526b4992ded204d96e13f56ed0ad5e8b4ff760df196b3e4daa68107d0bce03",
+    "raw_llm_judgments.csv": "0950dd56ef5b7059e7f0a202b22acc68e26d7c07031bb856299870ae0ca7de34",
+    "llm_judgments.csv": "b2b04f1ef23b21c3628b6730c4353ab5a21b9be83c160dd8e9836d369737d195"
+  }
+}

@@ -1,0 +1,9 @@
+system,query_id,query,precision_at_5
+expanded_v85,effect-01,GTFOBins replace existing local file contents via sudo,0.2
+expanded_v85,effect-02,GTFOBins sudo overwrite a protected file with new text,0.2
+expanded_v85,effect-03,GTFOBins overwrite contents of a file with SUID,0.4
+expanded_v85,effect-04,GTFOBins unprivileged overwrite an existing file,0.2
+effects,effect-01,GTFOBins replace existing local file contents via sudo,1.0
+effects,effect-02,GTFOBins sudo overwrite a protected file with new text,1.0
+effects,effect-03,GTFOBins overwrite contents of a file with SUID,1.0
+effects,effect-04,GTFOBins unprivileged overwrite an existing file,1.0

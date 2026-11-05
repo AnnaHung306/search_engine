@@ -1,0 +1,263 @@
+{
+  "collection_sha256": "bcc3df84616835347f5bdac17665014c777651b7ef89929cfc2a4f225c3a68eb",
+  "documents": {
+    "https://gtfobins.org/gtfobins/aria2c/": {
+      "body_sha256": "4bdac5103de08fea323d946c255da00aa89c815918638d7374611d32c1110b29",
+      "examples": [
+        {
+          "effect": "overwrite",
+          "context": "sudo",
+          "example_start": 4003,
+          "example_length": 68,
+          "source": "https://aria2.github.io/manual/en/html/aria2c.html#cmdoption-allow-overwrite",
+          "note_start": 3451
+        },
+        {
+          "effect": "overwrite",
+          "context": "suid",
+          "example_start": 4240,
+          "example_length": 68,
+          "source": "https://aria2.github.io/manual/en/html/aria2c.html#cmdoption-allow-overwrite",
+          "note_start": 3451
+        },
+        {
+          "effect": "overwrite",
+          "context": "unprivileged",
+          "example_start": 3682,
+          "example_length": 68,
+          "source": "https://aria2.github.io/manual/en/html/aria2c.html#cmdoption-allow-overwrite",
+          "note_start": 3451
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/ash/": {
+      "body_sha256": "393d956480d85a09fc9aa75d4118d4f2724f90dd54f3d209863742fbee2fa510",
+      "examples": [
+        {
+          "effect": "overwrite",
+          "context": "sudo",
+          "example_start": 1013,
+          "example_length": 40,
+          "source": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_07_02"
+        },
+        {
+          "effect": "overwrite",
+          "context": "suid",
+          "example_start": 1222,
+          "example_length": 43,
+          "source": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_07_02"
+        },
+        {
+          "effect": "overwrite",
+          "context": "unprivileged",
+          "example_start": 720,
+          "example_length": 40,
+          "source": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_07_02"
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/bash/": {
+      "body_sha256": "f22b736ed0e6c11a8951979b9b4063cea325cf37e85d046bfea50437e29f4201",
+      "examples": [
+        {
+          "effect": "overwrite",
+          "context": "sudo",
+          "example_start": 1921,
+          "example_length": 41,
+          "source": "https://www.gnu.org/s/bash/manual/html_node/Redirections.html"
+        },
+        {
+          "effect": "overwrite",
+          "context": "suid",
+          "example_start": 2131,
+          "example_length": 44,
+          "source": "https://www.gnu.org/s/bash/manual/html_node/Redirections.html"
+        },
+        {
+          "effect": "overwrite",
+          "context": "unprivileged",
+          "example_start": 1627,
+          "example_length": 41,
+          "source": "https://www.gnu.org/s/bash/manual/html_node/Redirections.html"
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/c89/": {
+      "body_sha256": "89b7b90afc9f9deec4c4639fcf7812f21339896898d7318da8395275d79c1a2a",
+      "examples": [
+        {
+          "effect": "delete",
+          "context": "sudo",
+          "example_start": 1048,
+          "example_length": 41,
+          "source": "https://gtfobins.org/gtfobins/c89/",
+          "note_start": 652
+        },
+        {
+          "effect": "delete",
+          "context": "unprivileged",
+          "example_start": 754,
+          "example_length": 41,
+          "source": "https://gtfobins.org/gtfobins/c89/",
+          "note_start": 652
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/c99/": {
+      "body_sha256": "e2ba4796ef694038b08aad25c1965876bd2df050aa4680282813de9dade35c4e",
+      "examples": [
+        {
+          "effect": "delete",
+          "context": "sudo",
+          "example_start": 1048,
+          "example_length": 41,
+          "source": "https://gtfobins.org/gtfobins/c99/",
+          "note_start": 652
+        },
+        {
+          "effect": "delete",
+          "context": "unprivileged",
+          "example_start": 754,
+          "example_length": 41,
+          "source": "https://gtfobins.org/gtfobins/c99/",
+          "note_start": 652
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/cc/": {
+      "body_sha256": "dfe2e8d9f880e85e967e71ac2f39029ddf0bf03379c8ffc7c5d69fe120e4f3c9",
+      "examples": [
+        {
+          "effect": "delete",
+          "context": "sudo",
+          "example_start": 1047,
+          "example_length": 41,
+          "source": "https://gtfobins.org/gtfobins/cc/",
+          "note_start": 651
+        },
+        {
+          "effect": "delete",
+          "context": "unprivileged",
+          "example_start": 753,
+          "example_length": 41,
+          "source": "https://gtfobins.org/gtfobins/cc/",
+          "note_start": 651
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/cp/": {
+      "body_sha256": "2ca382ebda5e78c312697b1e8c074cc77ccddf204a807d55761eaafaff4f7885",
+      "examples": [
+        {
+          "effect": "overwrite",
+          "context": "sudo",
+          "example_start": 477,
+          "example_length": 46,
+          "source": "https://www.gnu.org/software/coreutils/manual/html_node/cp-invocation.html"
+        },
+        {
+          "effect": "overwrite",
+          "context": "suid",
+          "example_start": 692,
+          "example_length": 46,
+          "source": "https://www.gnu.org/software/coreutils/manual/html_node/cp-invocation.html"
+        },
+        {
+          "effect": "overwrite",
+          "context": "unprivileged",
+          "example_start": 178,
+          "example_length": 46,
+          "source": "https://www.gnu.org/software/coreutils/manual/html_node/cp-invocation.html"
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/csh/": {
+      "body_sha256": "a3a1feb254a11a6ec8bb869c4d32f84aaa13ee585eb73270d64254d62a9373e3",
+      "examples": [
+        {
+          "effect": "overwrite",
+          "context": "sudo",
+          "example_start": 1013,
+          "example_length": 40,
+          "source": "https://man.freebsd.org/cgi/man.cgi?query=csh&sektion=1"
+        },
+        {
+          "effect": "overwrite",
+          "context": "suid",
+          "example_start": 1222,
+          "example_length": 43,
+          "source": "https://man.freebsd.org/cgi/man.cgi?query=csh&sektion=1"
+        },
+        {
+          "effect": "overwrite",
+          "context": "unprivileged",
+          "example_start": 720,
+          "example_length": 40,
+          "source": "https://man.freebsd.org/cgi/man.cgi?query=csh&sektion=1"
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/tee/": {
+      "body_sha256": "80e94bbe9dae14af866a637faadbe857161322e541736052449b9b81e2830ed4",
+      "examples": [
+        {
+          "effect": "overwrite",
+          "context": "sudo",
+          "example_start": 485,
+          "example_length": 36,
+          "source": "https://www.gnu.org/s/coreutils/manual/html_node/tee-invocation.html"
+        },
+        {
+          "effect": "overwrite",
+          "context": "suid",
+          "example_start": 690,
+          "example_length": 36,
+          "source": "https://www.gnu.org/s/coreutils/manual/html_node/tee-invocation.html"
+        },
+        {
+          "effect": "overwrite",
+          "context": "unprivileged",
+          "example_start": 196,
+          "example_length": 36,
+          "source": "https://www.gnu.org/s/coreutils/manual/html_node/tee-invocation.html"
+        }
+      ]
+    },
+    "https://documentation.ubuntu.com/security/security-features/network/version-banners/apache2/": {
+      "body_sha256": "74aa19c8cbfb2d1269bae46f56c14da9d6f7c864cb23043604b73a71086479be",
+      "examples": [
+        {
+          "effect": "append",
+          "context": "sudo",
+          "example_start": 554,
+          "example_length": 86,
+          "source": "https://documentation.ubuntu.com/security/security-features/network/version-banners/apache2/"
+        }
+      ]
+    },
+    "https://documentation.ubuntu.com/security/security-features/network/version-banners/vsftpd/": {
+      "body_sha256": "9b73ebc3756238f1bd7f21e5e9d06bf26d5ed3ceef3e199c6aef9d0429c66d74",
+      "examples": [
+        {
+          "effect": "append",
+          "context": "sudo",
+          "example_start": 348,
+          "example_length": 60,
+          "source": "https://documentation.ubuntu.com/security/security-features/network/version-banners/vsftpd/"
+        }
+      ]
+    },
+    "https://wiki.debian.org/BootstrapBootableSystem": {
+      "body_sha256": "b051883029a856ecc7bd69795458b17ad46f81e4548f71ed1a7e22d2887a3870",
+      "examples": [
+        {
+          "effect": "append",
+          "context": "sudo",
+          "example_start": 6858,
+          "example_length": 98,
+          "source": "https://wiki.debian.org/BootstrapBootableSystem"
+        }
+      ]
+    }
+  }
+}
