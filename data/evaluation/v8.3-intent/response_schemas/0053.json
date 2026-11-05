@@ -1,0 +1,58 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decisions"
+  ],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "decision_id",
+          "relevant",
+          "confidence",
+          "reason",
+          "evidence"
+        ],
+        "properties": {
+          "decision_id": {
+            "type": "string",
+            "enum": [
+              "0d1a55aefe51fc09bf93-2",
+              "1861d4a6bf313498ccde-2",
+              "6678904b62c3f3d633b1-2",
+              "6ff06d20ae9ac89bbb58-2",
+              "903cfc56ed04aec51d3f-2",
+              "ef469ffbb833a81473a9-2",
+              "f7461b5888c3a9604f32-2"
+            ]
+          },
+          "relevant": {
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

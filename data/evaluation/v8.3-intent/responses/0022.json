@@ -1,0 +1,104 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "61903071a145541ce0e2c783bdac31f89a431ace2c2b4bb071abf5902143bc88",
+  "policy_sha256": "84cbbc3b3a00321871524241539824fab0d1248c0283925a98aec7bf8611f7a7",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "f00ae1d4dc41277fc9a891dc814943fd9c1fc58f962b3e43bb422a276bfbc648",
+  "started_at": 1793855756.196065,
+  "finished_at": 1793855781.712094,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.3-intent/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "2a5326c1ad85eeaff49c-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段說明如何開啟封包擷取檔，未提供檢視程序已載入原生模組的方法。",
+        "evidence": "Wireshark can read in previously saved capture files. To read them, simply select the File → Open menu or toolbar item."
+      },
+      {
+        "decision_id": "661ce092cb9efb34adb2-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段說明如何依模組篩選要追蹤的函式，未提供列舉指定模組匯出符號的操作。",
+        "evidence": "These options allow you to include or exclude, in one single option, all functions in a particular module (e.g., *.so, *.dll) in one, single option."
+      },
+      {
+        "decision_id": "875545bd2b68052b0774-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "本段說明如何透過動態連結器的預載機制，將 Gadget 原生共享函式庫載入程序。",
+        "evidence": "Using a dynamic linker feature like LD_PRELOAD or DYLD_INSERT_LIBRARIES"
+      },
+      {
+        "decision_id": "98ec3db270b14042db0a-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段說明如何載入 Gadget 共享函式庫，未提供列出執行中程序已載入函式庫的方法。",
+        "evidence": "Frida’s Gadget is a shared library meant to be loaded by programs to be instrumented when the Injected mode of operation isn’t suitable."
+      },
+      {
+        "decision_id": "cf3a6dec7d74c808da13-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段的列舉 API 以程序為對象，未說明如何檢視程序已映射的原生函式庫。",
+        "evidence": "This allows any connected controllers to enumerate_processes() and attach() to them as if they were local to the machine where the Portal is running."
+      },
+      {
+        "decision_id": "1c55d99cecf1a10b7461-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段的 ZIP 選項用於擷取快取中繼資料，未提供離線復原加密 ZIP 密碼或擷取其密碼雜湊的流程。",
+        "evidence": "#E extract new.zip cache meta-data in meta.zip (--extract-cache)"
+      },
+      {
+        "decision_id": "5611eff68ad6786ca176-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段示範網路服務版本偵測，未提供列舉已載入 Linux 核心模組的方法。",
+        "evidence": "To enable version detection, just add -sV to whatever Nmap flags you normally use."
+      },
+      {
+        "decision_id": "1e854f57fc1f28a138f2-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段介紹 C 原始碼混淆，未提供列出程序目前已載入原生模組的方法。",
+        "evidence": "CRandomizer is an obfuscation feature in Metasploit Framework that allows you to randomize C code."
+      }
+    ]
+  }
+}

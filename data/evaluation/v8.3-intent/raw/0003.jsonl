@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa21-2d83-77a3-aaf2-c0cef8cec7ed"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\n  \"decisions\": [\n    {\n      \"decision_id\": \"184ebfe2541c36a4a59c-0\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"此段的 Frida 選項用於二進位插樁，未提供列舉 Linux 已載入核心模組的方法。\",\n      \"evidence\": \"-O - use binary-only instrumentation (FRIDA mode)\"\n    },\n    {\n      \"decision_id\": \"65f72513e1dd756d24b3-0\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"此段的符號選項是在編譯時擷取 API 資訊，未提供列舉指定已載入原生模組匯出符號的方法。\",\n      \"evidence\": \"-emit-symbol-graph Generate Extract API information as a side effect of compilation.\"\n    }\n  ]\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":40462,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":218,"reasoning_output_tokens":0}}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa23-ba33-7201-b97b-137081f871d2"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\n  \"decisions\": [\n    {\n      \"decision_id\": \"f6d2057fa86131fa2bd4-1\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"此段說明 Clang 的編譯期符號可見性設定，未提供列舉指定已載入原生模組之匯出符號的功能。\",\n      \"evidence\": \"-fvisibility=<value> Set the default symbol visibility for all global definitions\"\n    }\n  ]\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":40985,"cached_input_tokens":26112,"cache_write_input_tokens":0,"output_tokens":126,"reasoning_output_tokens":0}}

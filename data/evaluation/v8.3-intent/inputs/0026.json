@@ -1,0 +1,94 @@
+{
+  "documents": [
+    {
+      "chunk_id": "97-0",
+      "doc_id": 97,
+      "title": "apache2 | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/apache2/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 1751,
+      "body": ".. / apache2 File read File read This executable can read data from local files. Comment The first line may be leaked as an error message. Unprivileged This function can be performed by any unprivileged user. apache2 -f /path/to/input-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . apache2 -f /path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. apache2 -f /path/to/input-file Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Comment The first line may be leaked as an error message. Unprivileged This function can be performed by any unprivileged user. apache2 -C 'Define APACHE_RUN_DIR /' -C 'Include /path/to/input-file' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . apache2 -C 'Define APACHE_RUN_DIR /' -C 'Include /path/to/input-file' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. apache2 -C 'Define APACHE_RUN_DIR /' -C 'Include /path/to/input-file' Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data.",
+      "requests": [
+        {
+          "decision_id": "3db0a7a2e32d238cca95-0",
+          "query": "gtfobins suid file read",
+          "information_need": "Find GTFOBins entries documenting local file reads in an SUID context.",
+          "rule": "GTFOBins page with file-read functionality available under SUID. Sudo-only behavior or SUID with no file-read support is nonrelevant."
+        }
+      ]
+    },
+    {
+      "chunk_id": "273-0",
+      "doc_id": 273,
+      "title": "How payloads work | Metasploit Documentation Penetration Testing Software, Pen Testing Security",
+      "url": "https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html",
+      "description": "",
+      "body_start": 0,
+      "body_end": 3071,
+      "body": "How Payloads Work Payload modules are stored in modules/payloads/{singles,stages,stagers}/<platform> . When the framework starts up, stages are combined with stagers to create a complete payload that you can use in exploits. Then, handlers are paired with payloads so the framework will know how to create sessions with a given communications mechanism. Payloads are given reference names that indicate all the pieces, like so: Staged payloads: <platform>/[arch]/<stage>/<stager> Single payloads: <platform>/[arch]/<single> This results in payloads like windows/x64/meterpreter/reverse_tcp . Breaking that down, the platform is windows , the architecture is x64 , the final stage we’re delivering is meterpreter , and the stager delivering it is reverse_tcp . Note that architecture is optional because in some cases it is either unnecessary or implied. An example is php/meterpreter/reverse_tcp . Arch is unneeded for PHP payloads because we’re delivering interpreted code rather than native. Singles Single payloads are fire-and-forget. They can create a communications mechanism with Metasploit, but they don’t have to. An example of a scenario where you might want a single is when the target has no network access – a fileformat exploit delivered via USB key is still possible. Stagers Stagers are a small stub designed to create some form of communication and then pass execution to the next stage. Using a stager solves two problems. First, it allows us to use a small payload initially to load up a larger payload with more functionality. Second, it makes it possible to separate the communications mechanism from the final stage so one payload can be used with multiple transports without duplicating code. Stages Since the stager will have taken care of dealing with any size restrictions by allocating a big chunk of memory for us to run in, stages can be arbitrarily large. One advantage of that is the ability to write final-stage payloads in a higher-level language like C. Delivering stages The IP address and port you want the payload to connect back to are embedded in the stager. As discussed above, all staged payloads are no more than a small stub that sets up communication and executes the next stage. When you create an executable using a staged payload, you’re really just creating the stager. So the following commands would create functionally identical exe files: msfvenom -f exe LHOST=192.168.1.1 -p windows/meterpreter/reverse_tcp msfvenom -f exe LHOST=192.168.1.1 -p windows/shell/reverse_tcp msfvenom -f exe LHOST=192.168.1.1 -p windows/vncinject/reverse_tcp (Note that these are functionally identical – there is a lot of randomization that goes into it so no two executables are exactly the same.) The Ruby side acts as a client using whichever transport mechanism was set up by the stager (e.g.: tcp, http, https). In the case of a shell stage, Metasploit will connect the remote process’s stdio to your terminal when you interact with it. In the case of a Meterpreter stage, Metasploit will begin speaking the Meterpreter wire protocol.",
+      "requests": [
+        {
+          "decision_id": "32970db96f1e54352d67-0",
+          "query": "which native modules are loaded in this process",
+          "information_need": "Identify the native modules currently loaded into a process.",
+          "rule": "An API, command or workflow that lists current user-space native modules or mapped libraries. Kernel modules and library injection are different tasks."
+        }
+      ]
+    },
+    {
+      "chunk_id": "924-0",
+      "doc_id": 924,
+      "title": "testdisk | Kali Linux Tools",
+      "url": "https://www.kali.org/tools/testdisk/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 4870,
+      "body": "Packages and Binaries: photorec File recovery tool PhotoRec is file data recovery software designed to recover lost pictures from digital camera memory or even hard disks. It has been extended to search also for non audio/video headers. This package also ships fidentify, which identifies file types by their signatures using the same database as PhotoRec. PhotoRec searches for the following files and is able to undelete them: Sun/NeXT audio data (.au) RIFF audio/video (.avi/.wav) BMP bitmap (.bmp) bzip2 compressed data (.bz2) Source code written in C (.c) Canon Raw picture (.crw) Canon catalog (.ctg) FAT subdirectory Microsoft Office Document (.doc) Nikon dsc (.dsc) HTML page (.html) JPEG picture (.jpg) MOV video (.mov) MP3 audio (MPEG ADTS, layer III, v1) (.mp3) Moving Picture Experts Group video (.mpg) Minolta Raw picture (.mrw) Olympus Raw Format picture (.orf) Portable Document Format (.pdf) Perl script (.pl) Portable Network Graphics (.png) Raw Fujifilm picture (.raf) Contax picture (.raw) Rollei picture (.rdc) Rich Text Format (.rtf) Shell script (.sh) Tar archive (.tar ) Tag Image File Format (.tiff) Microsoft ASF (.wma) Sigma/Foveon X3 raw picture (.x3f) zip archive (.zip) Installed size: 1.08 MB How to install: sudo apt install photorec Dependencies: libc6 libext2fs2t64 libjpeg62-turbo libncursesw6 libntfs-3g90 libtinfo6 zlib1g fidentify Determine file type using PhotoRec database root@kali:~# fidentify -h Usage: fidentify [--check] [+file_format] [directory|file] fidentify --version fidentify determines the file type, the 'extension', by using the same database as PhotoRec. By default, all known file formats are searched unless one is specifically enabled. photorec Recover lost files from harddisk, digital camera and cdrom root@kali:~# photorec -h PhotoRec 7.2, Data Recovery Utility, February 2024 Christophe GRENIER < [email protected] > https://www.cgsecurity.org Usage: photorec [/log] [/debug] [/d recup_dir] [file.dd|file.e01|device] photorec /version /log : create a photorec.log file /debug : add debug information PhotoRec searches for various file formats (JPEG, Office...). It stores files in the recup_dir directory. qphotorec Graphical interface for the PhotoRec file recovery tool QPhotoRec is a Qt-based graphical user interface for PhotoRec, the file data recovery software designed to recover lost files from digital camera memory, hard disks and other media. It provides the same recovery capabilities as the command line PhotoRec tool in a point-and-click interface. Installed size: 896 KB How to install: sudo apt install qphotorec Dependencies: libc6 libext2fs2t64 libgcc-s1 libjpeg62-turbo libntfs-3g90 libqt5core5t64 libqt5gui5t64 | libqt5gui5-gles libqt5widgets5t64 libstdc++6 zlib1g qphotorec Recover lost files from harddisk, digital camera and cdrom root@kali:~# qphotorec -h Usage: qphotorec qphotorec /version QPhotoRec searches various file formats (JPEG, Office...), it stores them in recup_dir directory. testdisk Partition scanner and disk recovery tool TestDisk checks the partition and boot sectors of your disks. It is very useful in forensics, recovering lost partitions. It works with : DOS/Windows FAT12, FAT16 and FAT32 NTFS ( Windows NT/2K/XP ) Linux Ext2 and Ext3 BeFS ( BeOS ) BSD disklabel ( FreeBSD/OpenBSD/NetBSD ) CramFS (Compressed File System) HFS and HFS+, Hierarchical File System JFS, IBM’s Journaled File System Linux Raid Linux Swap (versions 1 and 2) LVM and LVM2, Linux Logical Volume Manager Netware NSS ReiserFS 3.5 and 3.6 Sun Solaris i386 disklabel UFS and UFS2 (Sun/BSD/…) XFS, SGI’s Journaled File System The companion file recovery tool PhotoRec is shipped in the photorec package, and its graphical interface in the qphotorec package. Installed size: 528 KB How to install: sudo apt install testdisk Dependencies: libc6 libext2fs2t64 libncursesw6 libntfs-3g90 libtinfo6 ntfs-3g testdisk Scan and repair disk partitions root@kali:~# testdisk -h TestDisk 7.2, Data Recovery Utility, February 2024 Christophe GRENIER < [email protected] > https://www.cgsecurity.org Usage: testdisk [/log] [/debug] [file.dd|file.e01|device] testdisk /list [/log] [file.dd|file.e01|device] testdisk /version /log : create a testdisk.log file /debug : add debug information /list : display current partitions TestDisk checks and recovers lost partitions It works with : - BeFS (BeOS) - BSD disklabel (Free/Open/Net BSD) - CramFS, Compressed File System - DOS/Windows FAT12, FAT16 and FAT32 - XBox FATX - Windows exFAT - HFS, HFS+, Hierarchical File System - JFS, IBM's Journaled File System - Linux btrfs - Linux ext2, ext3 and ext4 - Linux GFS2 - Linux LUKS - Linux Raid - Linux Swap - LVM, LVM2, Logical Volume Manager - Netware NSS - Windows NTFS - ReiserFS 3.5, 3.6 and 4 - Sun Solaris i386 disklabel - UFS and UFS2 (Sun/BSD/...) - XFS, SGI's Journaled File System - Wii WBFS - Sun ZFS",
+      "requests": [
+        {
+          "decision_id": "0fb3ec4c37fe4cfa457f-0",
+          "query": "offline zip archive password recovery",
+          "information_need": "Recover or test the password of a locally available encrypted ZIP archive offline.",
+          "rule": "Documents a usable ZIP-specific password recovery or hash extraction workflow; generic password guesses or support limited to other archive formats do not count."
+        }
+      ]
+    },
+    {
+      "chunk_id": "135-0",
+      "doc_id": 135,
+      "title": "Protocols",
+      "url": "https://docs.mitmproxy.org/stable/concepts/protocols/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 3265,
+      "body": "Protocols mitmproxy not only supports HTTP, but also other important web protocols. This page lists details and known limitations of the respective protocol implementations. Most protocols can be disabled by toggling the respective option . HTTP/1 HTTP/1.0 and HTTP/1.1 support in mitmproxy is based on our custom HTTP stack based on h11 , which is particularly robust to HTTP syntax errors. Protocol violations are often deliberately forwarded or inserted at the proxy. Known Limitations Trailers: mitmproxy currently does not support trailers with HTTP/1.x, but we are happy to accept contributions. HTTP/2 HTTP/2 support in mitmproxy is based on hyper-h2 . In case the upstream server does not speak HTTP/2, mitmproxy seamlessly translates messages to HTTP/1. Known Limitations Priority Information : mitmproxy currently ignores HTTP/2 PRIORITY frames. This does not affect the transmitted contents, but potentially affects the order in which messages are sent. Push Promises : mitmproxy currently does not advertise support for HTTP/2 Push Promises. Cleartext HTTP/2 : mitmproxy currently does not support unencrypted HTTP/2 (h2c). HTTP/3 HTTP/3 support in mitmproxy is based on aioquic . Mitmproxy’s HTTP/3 functionality is available in reverse proxy, local and WireGuard mode. Known Limitations Replay : Client Replay is currently broken. Supported Versions : mitmproxy currently only supports QUIC Version 1. Version 2 (RFC 9369) is not supported yet. Implementation Compatibility : mitmproxy’s HTTP/3 support has only been extensively tested with cURL. Other implementations are likely to exhibit bugs. WebSocket WebSocket support in mitmproxy is based on wsproto project, including support for message compression. Known Limitations Replay : Client or server replay is not possible yet. Ping : mitmproxy will forward PING and PONG frames, but not store them. The payload is only logged to the event log. Unknown Extensions : Unknown WebSocket extensions will cause a warning message to be logged, but are otherwise passed through as-is. This may lead to noncompliant behavior. DNS DNS support in mitmproxy is based on a custom DNS implementation. Known Limitations Replay : Client or server replay is not possible yet. We have not started any work on DoT/DoH/DoQ (DNS-over-TLS/HTTPS/QUIC) yet. Contributions are welcome. Generic TCP/TLS Proxy Mitmproxy can also act as a generic TCP proxy. In this mode, mitmproxy will still detect the presence of TLS at the beginning of a connection and perform a man-in-the-middle attack if necessary, but otherwise forward messages unmodified. Users can explicitly opt into generic TCP proxying by setting the tcp_hosts option . Known Limitations Replay : Client or server replay is not possible yet. Opportunistic TLS : mitmproxy will not detect when a plaintext protocol upgrades to TLS (STARTTLS). Generic UDP/DTLS Proxy Mitmproxy can also act as a generic UDP proxy. In this mode, mitmproxy will still detect the presence of DTLS at the beginning of a connection and perform a man-in-the-middle attack if necessary, but otherwise forward messages unmodified. Users can explicitly opt into generic UDP proxying by setting the udp_hosts option . Known Limitations Replay : Client or server replay is not possible yet.",
+      "requests": [
+        {
+          "decision_id": "3102849423a2eb8c04e0-0",
+          "query": "forward http requests to upstream proxy mitmproxy",
+          "information_need": "Configure mitmproxy to forward HTTP requests through an upstream proxy.",
+          "rule": "Documents mitmproxy upstream proxy mode or a substantive upstream proxy configuration. A reverse proxy or simple replay is insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "191-0",
+      "doc_id": 191,
+      "title": "Core API | Frida • A world-class dynamic instrumentation toolkit",
+      "url": "https://frida.re/docs/frida-core-api/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 962,
+      "body": "Core API The frida-core library is Frida’s main injection and orchestration layer: enumerate devices, attach to processes, create and manage sessions, load scripts, and drive the compiler, all from C (and any language with GObject Introspection bindings). Reference The full Core API reference is auto-generated from the library’s GObject Introspection data, so it always matches the current release: Browse the Core API reference → The reference covers every class, method, signal, property, enumeration, and constant in the public API. It is generated with gi-docgen from the Frida-1.0.gir produced by frida-core’s build. The reference reflects the API surface exactly. Prose descriptions are filled in over time as documentation comments are added to the frida-core sources — contributions welcome . Using it from C See the C API overview for how the modules fit together and how to obtain the devkits, which bundle the headers and a worked example. Back Next",
+      "requests": [
+        {
+          "decision_id": "26880175c54671556cbf-0",
+          "query": "enumerate libraries already loaded into a process",
+          "information_need": "Enumerate native libraries that are already mapped in a running process.",
+          "rule": "Substantive description or example of enumerating loaded modules/libraries or inspecting the process's mapped libraries. Loading a new library is insufficient."
+        }
+      ]
+    }
+  ]
+}

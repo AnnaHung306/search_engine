@@ -1,0 +1,97 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "819e393d18076cd6220f6a6fd0ef29185ba07be999b38af1a48659c7c498e35d",
+  "policy_sha256": "84cbbc3b3a00321871524241539824fab0d1248c0283925a98aec7bf8611f7a7",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "d480614a213197ce47b4ceb7d58149f0c351f5fc890e6974e64d4606ca827367",
+  "started_at": 1793855961.805761,
+  "finished_at": 1793855982.883289,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.3-intent/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "0d1a55aefe51fc09bf93-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供列舉行程目前已載入原生模組的 API。",
+        "evidence": "Process.enumerateModules() : enumerates modules loaded right now, returning an array of Module objects."
+      },
+      {
+        "decision_id": "1861d4a6bf313498ccde-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "此 API 列舉執行中行程已載入的模組，並回傳模組物件陣列。",
+        "evidence": "Process.enumerateModules() : enumerates modules loaded right now, returning an array of Module objects."
+      },
+      {
+        "decision_id": "6678904b62c3f3d633b1-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "Process.enumerateModules() 可識別目前行程已載入的使用者空間原生模組。",
+        "evidence": "Process.enumerateModules() : enumerates modules loaded right now, returning an array of Module objects."
+      },
+      {
+        "decision_id": "6ff06d20ae9ac89bbb58-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段描述核心模組列舉 API，但未說明該 API 適用於 Linux。",
+        "evidence": "Kernel.enumerateModules() : enumerates kernel modules loaded right now, returning an array of objects"
+      },
+      {
+        "decision_id": "903cfc56ed04aec51d3f-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "文件提供列出使用者空間行程已載入模組的方法，可用來查看共享函式庫。",
+        "evidence": "Process.enumerateModules() : enumerates modules loaded right now, returning an array of Module objects."
+      },
+      {
+        "decision_id": "ef469ffbb833a81473a9-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "可列舉目標行程已載入的原生模組，並取得模組物件供檢查。",
+        "evidence": "Process.enumerateModules() : enumerates modules loaded right now, returning an array of Module objects."
+      },
+      {
+        "decision_id": "f7461b5888c3a9604f32-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "模組物件提供 enumerateExports()，可列出指定模組的匯出符號。",
+        "evidence": "enumerateExports() : enumerates exports of module, returning an array of objects"
+      }
+    ]
+  }
+}

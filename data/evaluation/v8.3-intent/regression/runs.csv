@@ -1,0 +1,41 @@
+system,query_id,query,rank,doc_id,url,score
+bm25,holdout-24,find gtfobins sudo binary techniques,1,950,https://www.kali.org/tools/unhide/,9.57408434581939
+bm25,holdout-24,find gtfobins sudo binary techniques,2,144,https://www.kali.org/tools/dnsmap/,8.912252239452043
+bm25,holdout-24,find gtfobins sudo binary techniques,3,624,https://www.kali.org/tools/commix/,8.013023237106234
+bm25,holdout-24,find gtfobins sudo binary techniques,4,347,https://nmap.org/book/vscan.html,7.68614027923447
+bm25,holdout-24,find gtfobins sudo binary techniques,5,327,https://www.kali.org/tools/burpsuite/,7.568007111879984
+bm25,holdout-09,list loaded native libraries,1,642,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html,11.172324117844626
+bm25,holdout-09,list loaded native libraries,2,593,https://www.kali.org/tools/dex2jar/,11.05623160308715
+bm25,holdout-09,list loaded native libraries,3,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,10.415135595255173
+bm25,holdout-09,list loaded native libraries,4,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,10.037042801887328
+bm25,holdout-09,list loaded native libraries,5,412,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/python-extension.html,9.898787475825749
+bm25_source,holdout-24,find gtfobins sudo binary techniques,1,20,https://gtfobins.org/contributing/,7.264316815421909
+bm25_source,holdout-24,find gtfobins sudo binary techniques,2,297,https://gtfobins.org/gtfobins/bbot/,6.385768324223698
+bm25_source,holdout-24,find gtfobins sudo binary techniques,3,104,https://gtfobins.org/gtfobins/apache2ctl/,6.378272209361951
+bm25_source,holdout-24,find gtfobins sudo binary techniques,4,497,https://gtfobins.org/gtfobins/column/,6.326338794756839
+bm25_source,holdout-24,find gtfobins sudo binary techniques,5,419,https://gtfobins.org/gtfobins/check_cups/,6.311671745167412
+bm25_source,holdout-09,list loaded native libraries,1,642,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html,11.172324117844626
+bm25_source,holdout-09,list loaded native libraries,2,593,https://www.kali.org/tools/dex2jar/,11.05623160308715
+bm25_source,holdout-09,list loaded native libraries,3,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,10.415135595255173
+bm25_source,holdout-09,list loaded native libraries,4,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,10.037042801887328
+bm25_source,holdout-09,list loaded native libraries,5,412,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/python-extension.html,9.898787475825749
+bm25_native,holdout-24,find gtfobins sudo binary techniques,1,950,https://www.kali.org/tools/unhide/,9.57408434581939
+bm25_native,holdout-24,find gtfobins sudo binary techniques,2,144,https://www.kali.org/tools/dnsmap/,8.912252239452043
+bm25_native,holdout-24,find gtfobins sudo binary techniques,3,624,https://www.kali.org/tools/commix/,8.013023237106234
+bm25_native,holdout-24,find gtfobins sudo binary techniques,4,347,https://nmap.org/book/vscan.html,7.68614027923447
+bm25_native,holdout-24,find gtfobins sudo binary techniques,5,327,https://www.kali.org/tools/burpsuite/,7.568007111879984
+bm25_native,holdout-09,list loaded native libraries,1,19,https://frida.re/docs/installation/,9.927631218341437
+bm25_native,holdout-09,list loaded native libraries,2,170,https://frida.re/docs/javascript-api/,8.222478627038777
+bm25_native,holdout-09,list loaded native libraries,3,642,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html,11.172324117844626
+bm25_native,holdout-09,list loaded native libraries,4,593,https://www.kali.org/tools/dex2jar/,11.05623160308715
+bm25_native,holdout-09,list loaded native libraries,5,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,10.415135595255173
+bm25_intent,holdout-24,find gtfobins sudo binary techniques,1,20,https://gtfobins.org/contributing/,7.264316815421909
+bm25_intent,holdout-24,find gtfobins sudo binary techniques,2,297,https://gtfobins.org/gtfobins/bbot/,6.385768324223698
+bm25_intent,holdout-24,find gtfobins sudo binary techniques,3,104,https://gtfobins.org/gtfobins/apache2ctl/,6.378272209361951
+bm25_intent,holdout-24,find gtfobins sudo binary techniques,4,497,https://gtfobins.org/gtfobins/column/,6.326338794756839
+bm25_intent,holdout-24,find gtfobins sudo binary techniques,5,419,https://gtfobins.org/gtfobins/check_cups/,6.311671745167412
+bm25_intent,holdout-09,list loaded native libraries,1,19,https://frida.re/docs/installation/,9.927631218341437
+bm25_intent,holdout-09,list loaded native libraries,2,170,https://frida.re/docs/javascript-api/,8.222478627038777
+bm25_intent,holdout-09,list loaded native libraries,3,642,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html,11.172324117844626
+bm25_intent,holdout-09,list loaded native libraries,4,593,https://www.kali.org/tools/dex2jar/,11.05623160308715
+bm25_intent,holdout-09,list loaded native libraries,5,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,10.415135595255173

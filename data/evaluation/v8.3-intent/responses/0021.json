@@ -1,0 +1,104 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "d1836e732512c94f32842fc8fe7c4ebe299bb50cae9a7afa043b73c781a685c8",
+  "policy_sha256": "84cbbc3b3a00321871524241539824fab0d1248c0283925a98aec7bf8611f7a7",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "26387ff05012c26972a1a92634376edaf23e3c71706a307aba59b8d8f067f5d4",
+  "started_at": 1793855750.764071,
+  "finished_at": 1793855775.7822468,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.3-intent/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "184ebfe2541c36a4a59c-18",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段說明 AFL 插樁追蹤，未提供列舉 Linux 已載入核心模組的方法。",
+        "evidence": "This tool displays raw tuple data captured by AFL instrumentation."
+      },
+      {
+        "decision_id": "65f72513e1dd756d24b3-18",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段描述編譯器的符號圖輸出選項，未說明如何列舉指定已載入原生模組的匯出符號。",
+        "evidence": "--symbol-graph-dir=<value> Directory in which to emit symbol graphs"
+      },
+      {
+        "decision_id": "11fd072af043407e746d-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段示範從磁碟匯入 Python 模組，未提供列舉執行中程序已映射原生函式庫的方法。",
+        "evidence": "Loads a python code file or module from disk into memory on the target."
+      },
+      {
+        "decision_id": "320a594618ded40b8b40-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段說明 Python 匯入機制，未說明如何檢查程序已載入的原生模組。",
+        "evidence": "The extension has a built-in import handler that loads modules from memory."
+      },
+      {
+        "decision_id": "8a872b2e2aa296010aff-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此 API 可列出目標上的程序，但此段未示範如何檢查指定程序已載入的原生模組。",
+        "evidence": "meterpreter.sys.ps_list() - matches the ps command and lists the processes on the target."
+      },
+      {
+        "decision_id": "f9aa8b05776904d62855-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段的 IPv6 說明限於 DNS 解析器的選擇，未提供 IPv6 主機探索的方法或選項。",
+        "evidence": "The system resolver is always used for IPv6 scans."
+      },
+      {
+        "decision_id": "1b8a1d1d4fa7043c78c2-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段的 TCP 內容是防火牆規則產生功能，未提供辨識三向交握封包的篩選器或檢查步驟。",
+        "evidence": "Rules for MAC addresses, IPv4 addresses, TCP and UDP ports, and IPv4+port combinations are supported."
+      },
+      {
+        "decision_id": "364b437ea48e738c3a52-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "這個 GTFOBins 條目說明 bbot 透過 sudo 執行時會保留取得的權限，並提供讀取本機檔案的指令。",
+        "evidence": "Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped."
+      }
+    ]
+  }
+}

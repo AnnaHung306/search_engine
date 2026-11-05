@@ -35,9 +35,16 @@ def grade_one(output, batch_path):
         me.validate_decisions(batch, record["result"])
         return batch_path.stem, "verified existing response"
     prompt = (output / "prompt.txt").read_text() + "\nSOURCE DATA:\n" + batch_path.read_text()
+    schema_path = output / "response_schemas" / batch_path.name
+    schema = me.bound_schema(batch, output / "schema.json")
+    if schema_path.exists():
+        if json.loads(schema_path.read_text()) != schema:
+            raise ValueError("Bound schema differs from frozen batch IDs")
+    else:
+        me.write_json(schema_path, schema)
     command = ["codex", "exec", "--ephemeral", "--ignore-user-config", "--skip-git-repo-check",
                "--sandbox", "read-only", "--cd", "/tmp", "--json", "--color", "never",
-               "--output-schema", str((output / "schema.json").resolve())]
+               "--output-schema", str(schema_path.resolve())]
     for feature in ("shell_tool", "apps", "plugins", "multi_agent", "browser_use", "computer_use", "memories", "chronicle"):
         command.extend(("--disable", feature))
     command.append("-")
@@ -58,6 +65,7 @@ def grade_one(output, batch_path):
     record = {"review_origin": "llm", "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
         "input_sha256": ev.digest(batch_path), "policy_sha256": ev.digest(output / "policy.json"),
         "prompt_sha256": ev.digest(output / "prompt.txt"), "schema_sha256": ev.digest(output / "schema.json"),
+        "bound_schema_sha256": ev.digest(schema_path),
         "raw_events_sha256": ev.digest(raw_path), "started_at": started, "finished_at": time.time(),
         "command": command, "result": result}
     me.write_json(result_path, record)
@@ -69,7 +77,7 @@ def run(output=me.OUTPUT, limit=None, workers=2):
     me.verify(output)
     if not 1 <= workers <= 2:
         raise ValueError("Use one or two structured classifier requests at once")
-    for directory in ("responses", "raw"):
+    for directory in ("responses", "raw", "response_schemas"):
         (output / directory).mkdir(exist_ok=True)
     batches = sorted((output / "inputs").glob("*.json"))
     if limit is not None:

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa23-c60e-7212-9625-1040ba9c473c"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\n  \"decisions\": [\n    {\n      \"decision_id\": \"f6d2057fa86131fa2bd4-2\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"此段說明如何設定編譯時的符號可見性，未提供列舉指定已載入原生模組匯出符號的功能。\",\n      \"evidence\": \"-fvisibility=<value> Set the default symbol visibility for all global definitions\"\n    }\n  ]\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":40218,"cached_input_tokens":26112,"cache_write_input_tokens":0,"output_tokens":124,"reasoning_output_tokens":0}}

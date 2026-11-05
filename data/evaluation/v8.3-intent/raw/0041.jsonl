@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa24-8859-7fe3-a068-45e74bcd1759"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"f6d2057fa86131fa2bd4-14\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此段說明 llvm-nm 如何列出磁碟上物件檔的符號，未提供針對程序中已載入的指定原生模組列舉匯出符號的方法。\",\"evidence\":\"OVERVIEW: LLVM symbol table dumper USAGE: llvm-nm [options] <input object files>\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":40837,"cached_input_tokens":26112,"cache_write_input_tokens":0,"output_tokens":154,"reasoning_output_tokens":31}}

@@ -15,6 +15,16 @@ python -B code/model_evaluation.py score --adjudications data/evaluation/v8.2-ll
 
 新實驗必須 prepare 到新 output，避免覆蓋舊判定；llm_grader.py 呼叫已登入 Codex CLI，這輪重算分數不需再推論。原人工入口仍拒絕 llm 假稱 human；原人工材料不再阻擋這版模型成績。
 
+## v8.3 查詢意圖比較
+
+兩個已見失敗分列為回歸，16 個新查詢及資訊需求凍結於 `data/benchmarks/intent-v8.3.json`。`intent-v8.3-plan.json` 固定 BM25、來源單開、原生單開、兩者合開。四組共用同一快照與同題／URL 判定；不從新題成績選模型或改規則。原 v8.2 的材料與分數獨立保留。
+
+```sh
+python -B code/intent_evaluation.py score --adjudications data/evaluation/v8.3-intent/adjudications.json
+```
+
+新一次比較才以 `intent_evaluation.py prepare --output <新目錄>` 匯出，並以 `llm_grader.py --output <新目錄>` 推論。此輪已保留 54 份有效回覆、兩次拒收紀錄與四筆複核，重算終判不需重新呼叫模型。兩版計分入口各自核對資料夾與已凍結計畫，指錯或漏傳既有複核會在寫入前拒絕。數據與限制見 [v8.3 報告](../report/QUERY_INTENT_V8_3.md)。
+
 ## 保留的獨立人工流程
 
 v8.1 已準備純 cosine 的必做十題／50 筆精簡包：data/evaluation/v8.1/course-required/。先依 [集中人工待辦](HUMAN_HANDOFF.md) 確認規則再標註，原九模型材料保持原狀。新增 `--dump --systems tfidf --output <新目錄>` 可明確限制新包的模型；預設仍為九模型。這個精簡包不能替代全部模型的比較標註。

@@ -70,6 +70,20 @@ def load_manifest(output):
     return manifest
 
 
+def retrieval_runs(queries, systems):
+    """Record the actual top five positions, including empty ones."""
+    rows = []
+    for system, options in systems.items():
+        for query in queries:
+            hits = search.search(query["query"], top_k=5, **options)["results"]
+            for rank in range(1, 6):
+                hit = hits[rank - 1] if rank <= len(hits) else None
+                rows.append({"system": system, "query_id": query["id"], "query": query["query"],
+                             "rank": rank, "doc_id": hit["doc_id"] if hit else "",
+                             "url": hit["url"] if hit else "", "score": hit["score"] if hit else ""})
+    return rows
+
+
 def export(name, output, systems=None):
     """One final run per output directory. Never overwrite labels or prior runs."""
     suite, suite_hash = load_suite(name)
@@ -82,23 +96,19 @@ def export(name, output, systems=None):
     if output.exists() and any(output.iterdir()):
         raise FileExistsError("Use a new output directory; existing runs and human work are preserved")
     output.mkdir(parents=True, exist_ok=True)
-    runs, pool = [], {}
-    for system, options in selected_systems.items():
-        for query in suite["queries"]:
-            hits = search.search(query["query"], top_k=5, **options)["results"]
-            for rank in range(1, 6):
-                hit = hits[rank - 1] if rank <= len(hits) else None
-                runs.append({"system": system, "query_id": query["id"], "query": query["query"],
-                             "rank": rank, "doc_id": hit["doc_id"] if hit else "",
-                             "url": hit["url"] if hit else "", "score": hit["score"] if hit else ""})
-                if hit:
-                    identity = query["id"] + "\n" + hit["url"]
-                    pair_id = hashlib.sha256(identity.encode()).hexdigest()[:20]
-                    pool[pair_id] = {"pair_id": pair_id, "query_id": query["id"],
-                        "query": query["query"], "information_need": query["information_need"],
-                        "relevance_rule": query["relevance_rule"], "doc_id": hit["doc_id"],
-                        "url": hit["url"], "title": hit["title"],
-                        "relevant": "", "reason": "", "reviewer": "", "review_origin": ""}
+    runs, pool = retrieval_runs(suite["queries"], selected_systems), {}
+    queries = {q["id"]: q for q in suite["queries"]}
+    for row in runs:
+        if not row["url"]:
+            continue
+        query = queries[row["query_id"]]
+        identity = query["id"] + "\n" + row["url"]
+        pair_id = hashlib.sha256(identity.encode()).hexdigest()[:20]
+        pool[pair_id] = {"pair_id": pair_id, "query_id": query["id"],
+            "query": query["query"], "information_need": query["information_need"],
+            "relevance_rule": query["relevance_rule"], "doc_id": row["doc_id"],
+            "url": row["url"], "title": index["docs"][row["doc_id"]]["title"],
+            "relevant": "", "reason": "", "reviewer": "", "review_origin": ""}
     write_csv(output / "runs.csv", runs, list(runs[0]))
     # Pair-id ordering hides rank and producing system from both reviewers.
     rows = [pool[key] for key in sorted(pool)]

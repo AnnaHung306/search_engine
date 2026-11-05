@@ -1,8 +1,8 @@
-# Pentest Tool Search — 課程整合更新 v8.2
+# Pentest Tool Search — 課程整合更新 v8.3
 
 本機資安文件搜尋引擎。從 v7.1 的固定 980 頁公開資料出發，保留自寫倒排索引、TF-IDF 與 cosine，新增位置索引、欄位／鄰近度實驗及逐筆計分解釋。
 
-作業最新截止：2026-11-12 23:59（教學平台）。本輪程式尚待使用者驗收。已依使用者授權完成 LM 判定：46 題、九模型、654 組配對；依開發集選 BM25，保留集 P@5=0.625，純 TF-IDF=0.400。這是模型評估，未冒稱人工驗證。完整結果與六筆判定修正見 [v8.2 報告](report/MODEL_EVALUATION_V8_2.md)。
+作業最新截止：2026-11-12 23:59（教學平台）。本輪程式尚待使用者驗收。[v8.3](report/QUERY_INTENT_V8_3.md) 修正兩道已知失敗，並把 16 道新題的模型 P@5 從 0.350 提到 0.425。先前的 [v8.2](report/MODEL_EVALUATION_V8_2.md) 另有 46 題、九種排序、654 組配對；依開發集選 BM25，其保留集 P@5=0.625，純 TF-IDF=0.400。兩輪題組不同，均為明示來源的模型判定。
 
 ## 安裝與正常入口
 
@@ -88,6 +88,18 @@ diagnostics 只接受 course/development，產生排名重疊、文件長度與�
 原六組固定查詢排名重現不變：0.46／0.72／0.84／0.80／0.80／0.74，僅為舊助手標註參考。12 題開發集與 24 題 holdout 已凍結並完成另存的模型判定，原人工材料保持空白。不得把未知結果自動填 0，或將不同標籤定義的分數直接相減。
 
 正常導覽的 Evaluation & review 提供全文盲評包及 CSV。3–5 分鐘展示參考 report/DEMO_SCRIPT_V8.md。組別、真實分工與各人心得仍需組員補充。
+
+### v8.3 查詢意圖實驗
+
+原 BM25 可能把指定 GTFOBins 的查詢排成跨站部分匹配；已載入原生函式庫的查詢也會漏掉用 `Process.enumerateModules` 描述的頁面。新增 opt-in：同一套 BM25，以 URL host 與精確 API 證據排序。原網站、預設純 cosine、原九種設定與索引不變。可直接比較：
+
+```sh
+python -B code/search.py --bm25 'find gtfobins sudo binary techniques'
+python -B code/search.py --bm25 --intent 'find gtfobins sudo binary techniques'
+python -B code/search.py --bm25 --intent 'list loaded native libraries'
+```
+
+兩題已知失敗作回歸；16 題新題固定於 data/benchmarks/intent-v8.3.json，並分來源、原生模組與控制組。LM 終判的新題 P@5 由 0.350 到 0.425；四種設定、判定與逐題成績見 [v8.3 報告](report/QUERY_INTENT_V8_3.md)。使用既存模型輸出重算，無需再呼叫模型：`python -B code/intent_evaluation.py score --adjudications data/evaluation/v8.3-intent/adjudications.json`。新實驗用 `--output <新目錄>`，舊 v8.2 結果保留。
 
 ### description 資料限制
 

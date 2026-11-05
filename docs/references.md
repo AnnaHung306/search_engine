@@ -16,5 +16,9 @@
 | PY | [Python gzip](https://docs.python.org/3.13/library/gzip.html)、[functools.lru_cache](https://docs.python.org/3.13/library/functools.html#functools.lru_cache) | 明確 gzip 格式、mtime=0 與有界快取；屬工程延伸，不是教授指定的排序公式 |
 | GIT | [Git attributes：text／whitespace](https://git-scm.com/docs/gitattributes#_checking_whitespace_errors) | 保留 CSV 的凍結 bytes 與 CRLF；不對已凍結材料做換行正規化 |
 | LLM | [Thomas et al., Large language models can accurately predict searcher preferences](https://arxiv.org/abs/2309.10621)；[Microsoft Research 原文頁](https://www.microsoft.com/en-us/research/publication/large-language-models-can-accurately-predict-searcher-preferences/) | LLM 搜尋偏好評估的研究依據；該研究有使用者回饋校準，本次未校準，不借用其準確率 |
+| ZONE | [Manning、Raghavan、Schütze, Introduction to Information Retrieval §6.1](https://nlp.stanford.edu/IR-book/html/htmledition/parametric-and-zone-indexes-1.html) | 區分文件 metadata 與詞彙；v8.3 的 URL host 排序層為本專題設計，非教材加權公式 |
+| QE | [Introduction to Information Retrieval §9.2.2](https://nlp.stanford.edu/IR-book/html/htmledition/query-expansion-1.html) | 受控詞彙補足查詢與文件用詞差異；v8.3 的語境條件、0.5 權重與證據優先皆為本專題設計 |
+| GTFO | [GTFOBins 官方網站](https://gtfobins.org/) | 確認集合名稱、執行檔與 sudo／SUID context 的關係；評分以凍結網頁正文為準 |
+| FRIDA | [Frida 官方 JavaScript API：Process](https://frida.re/docs/javascript-api/#process)、[Installation](https://frida.re/docs/installation/) | 已載入模組的 API 名稱與實際列舉範例；評分以凍結網頁正文為準 |
 
 課堂講義沒有直接規定本專題的新欄位混分公式或 proximity multiplier；這些是由 U1 的位置資訊、U4 的向量／欄位概念延伸的**本專題實驗設計**，不得描述成教授原公式，必須與必做 cosine 分開量測。

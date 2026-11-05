@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa23-fddb-7033-bbfa-dd673190985a"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"f6d2057fa86131fa2bd4-5\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此段的符號操作針對 Clang AST 與預編譯標頭，未說明如何列舉指定已載入原生模組的匯出符號。\",\"evidence\":\"c-index-test -test-load-tu <AST file> <symbol filter> [FileCheck prefix]\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":41083,"cached_input_tokens":26112,"cache_write_input_tokens":0,"output_tokens":113,"reasoning_output_tokens":0}}

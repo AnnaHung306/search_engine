@@ -6,6 +6,7 @@ retrieval systems, ranks, scores or old labels. No missing judgment becomes 0.
 import argparse
 import hashlib
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -72,7 +73,6 @@ def prepare(output=OUTPUT):
         raise FileExistsError("Use a new model run; prior materials and labels are preserved")
     index = search.load_index()
     output.mkdir(parents=True, exist_ok=True)
-    (output / "inputs").mkdir()
     policy = {"origin": "llm", "assessment": "single model, segmented full indexed text; not independent human validation",
         "authorization": "User explicitly requested the assistant/LM to decide relevance and compute scores instead of waiting for group members.",
         "rules_fixed_before_labels": True, "ranking_parameters_changed": False,
@@ -85,22 +85,37 @@ def prepare(output=OUTPUT):
         "chunk_body_limit": BODY_LIMIT, "overlap_chars": OVERLAP,
         "confidence": "subjective categories, not calibrated probabilities",
         "references": ["TP p.3 section 6", "Unit 3 p.9,29-38", "https://arxiv.org/abs/2309.10621"]}
-    write_json(output / "policy.json", policy)
-    write_json(output / "schema.json", SCHEMA)
-    (output / "prompt.txt").write_text(PROMPT, encoding="utf-8")
-    pairs, suites, source_artifacts = {}, {}, {}
+    suites, source_artifacts = {}, {}
     for name in ("course", "development", "holdout"):
         source = ev.ROOT / "data/evaluation/v8" / name
-        manifest, suite, runs = ev._verified_run(source)
+        manifest, suite, _ = ev._verified_run(source)
         if manifest["collection_sha256"] != index["collection_sha256"] or manifest["systems"] != ev.SYSTEMS:
             raise ValueError("Frozen source collection/systems differ from this model run")
         suite = json.loads(json.dumps(suite))
         for query in suite["queries"]:
             if query["id"] == "course-02": query["relevance_rule"] = policy["course_02"]
             if query["id"] == "course-08": query["relevance_rule"] = policy["course_08"]
-        query_map = {q["id"]: q for q in suite["queries"]}
         suites[name] = suite
-        for row in runs:
+        destination = output / name
+        destination.mkdir()
+        (destination / "runs.csv").write_bytes((source / "runs.csv").read_bytes())
+        source_artifacts[name] = {"manifest_sha256": ev.digest(source / "manifest.json"),
+                                  "runs_sha256": ev.digest(destination / "runs.csv")}
+    return freeze_inputs(output, suites, ev.SYSTEMS, policy, source_artifacts)
+
+
+def freeze_inputs(output, suites, systems, policy, source_artifacts):
+    """Freeze full-text judging inputs from already saved per-suite retrieval runs."""
+    output = Path(output)
+    index = search.load_index()
+    (output / "inputs").mkdir()
+    write_json(output / "policy.json", policy)
+    write_json(output / "schema.json", SCHEMA)
+    (output / "prompt.txt").write_text(PROMPT, encoding="utf-8")
+    pairs = {}
+    for name, suite in suites.items():
+        query_map = {q["id"]: q for q in suite["queries"]}
+        for row in ev.read_csv(output / name / "runs.csv"):
             if not row["url"]:
                 continue
             doc_id = int(row["doc_id"])
@@ -110,11 +125,6 @@ def prepare(output=OUTPUT):
             pair_id = hashlib.sha256(identity.encode()).hexdigest()[:20]
             pairs[pair_id] = {"pair_id": pair_id, "suite": name, "doc_id": doc_id,
                               "url": row["url"], **query_map[row["query_id"]]}
-        destination = output / name
-        destination.mkdir()
-        (destination / "runs.csv").write_bytes((source / "runs.csv").read_bytes())
-        source_artifacts[name] = {"manifest_sha256": ev.digest(source / "manifest.json"),
-                                  "runs_sha256": ev.digest(destination / "runs.csv")}
     write_json(output / "queries.json", suites)
     write_json(output / "pairs.json", pairs)
     by_doc = defaultdict(list)
@@ -144,7 +154,7 @@ def prepare(output=OUTPUT):
         write_json(output / "inputs" / f"{i:04d}.json", {"documents": batch_blocks})
     frozen = {str(p.relative_to(output)): ev.digest(p) for p in sorted(output.rglob("*")) if p.is_file()}
     manifest = {"origin": "llm", "index_sha256": ev.digest(search.INDEX_PATH),
-        "collection_sha256": index["collection_sha256"], "systems": ev.SYSTEMS,
+        "collection_sha256": index["collection_sha256"], "systems": systems,
         "source_runs": source_artifacts, "frozen_artifacts": frozen,
         "pair_count": len(pairs), "document_count": len(by_doc), "segment_count": len(blocks),
         "batch_count": len(batches), "full_indexed_text_chars": sum(len(index["docs"][d]["text"]) for d in by_doc),
@@ -162,7 +172,6 @@ def verify(output=OUTPUT):
     counts = ("pair_count", "document_count", "segment_count", "batch_count", "full_indexed_text_chars")
     artifacts = manifest.get("frozen_artifacts")
     required = {"policy.json", "schema.json", "prompt.txt", "queries.json", "pairs.json"}
-    required.update(name + "/runs.csv" for name in ("course", "development", "holdout"))
     if (not isinstance(artifacts, dict) or not required <= set(artifacts) or
             not isinstance(manifest.get("systems"), dict) or not manifest["systems"] or
             not all(isinstance(s, str) and s and isinstance(options, dict) for s, options in manifest["systems"].items()) or
@@ -177,6 +186,18 @@ def verify(output=OUTPUT):
             raise ValueError("Invalid model artifact path or digest")
         if ev.digest(output / file) != expected:
             raise ValueError(f"Frozen model input changed: {file}")
+    suites = json.loads((output / "queries.json").read_text())
+    if (not isinstance(suites, dict) or not suites or
+            any(not re.fullmatch(r"[a-z][a-z0-9_-]*", name) or name + "/runs.csv" not in artifacts for name in suites)):
+        raise ValueError("Invalid model suite or missing frozen retrieval run")
+    inputs = {str(path.relative_to(output)) for path in (output / "inputs").glob("*.json")}
+    if len(inputs) != manifest["batch_count"] or inputs != {name for name in artifacts if name.startswith("inputs/")}:
+        raise ValueError("Incomplete or unpinned model input batches")
+    if "plan.json" in artifacts or (output / "plan.json").exists():
+        plan = json.loads((output / "plan.json").read_text())
+        if (not isinstance(plan, dict) or not {"plan.json", "implementation.json"} <= set(artifacts) or
+                plan.get("systems") != manifest["systems"]):
+            raise ValueError("Frozen plan and manifest systems do not match")
     return manifest
 
 
@@ -196,6 +217,16 @@ def validate_decisions(batch, result):
         if row["relevant"] and not quote.strip():
             raise ValueError("Positive relevance requires source evidence")
     return rows
+
+
+def bound_schema(batch, schema_path):
+    """Constrain emitted identifiers to the frozen requests in this batch."""
+    schema = json.loads(Path(schema_path).read_text())
+    ids = [r["decision_id"] for block in batch["documents"] for r in block["requests"]]
+    if not ids or len(ids) != len(set(ids)):
+        raise ValueError("Empty or duplicate request IDs in judging batch")
+    schema["properties"]["decisions"]["items"]["properties"]["decision_id"]["enum"] = sorted(ids)
+    return schema
 
 
 def parse_trace(text):
@@ -219,7 +250,7 @@ def collect(output=OUTPUT):
     if ev.digest(search.INDEX_PATH) != manifest["index_sha256"]:
         raise ValueError("Active index differs from the frozen model experiment")
     pairs = json.loads((output / "pairs.json").read_text())
-    evidence = defaultdict(list)
+    evidence, chunks = defaultdict(list), defaultdict(set)
     response_hashes, coverage = {}, defaultdict(list)
     confidence_order = {"low": 0, "medium": 1, "high": 2}
     for path in sorted((output / "inputs").glob("*.json")):
@@ -239,11 +270,23 @@ def collect(output=OUTPUT):
         rows = {r["decision_id"]: r for r in validate_decisions(batch, response["result"])}
         response_hashes[str(response_path.relative_to(output))] = ev.digest(response_path)
         response_hashes[str(raw_path.relative_to(output))] = ev.digest(raw_path)
+        schema_path = output / "response_schemas" / path.name
+        if ("bound_schema_sha256" in response) != schema_path.is_file():
+            raise ValueError("Missing or unrecorded bound response schema")
+        if schema_path.is_file():
+            digest = ev.digest(schema_path)
+            if (digest != response["bound_schema_sha256"] or
+                    json.loads(schema_path.read_text()) != bound_schema(batch, output / "schema.json")):
+                raise ValueError("Bound response schema differs from frozen batch IDs")
+            response_hashes[str(schema_path.relative_to(output))] = digest
         for block in batch["documents"]:
             coverage[block["doc_id"]].append((block["body_start"], block["body_end"]))
             actual = search.load_index()["docs"][block["doc_id"]]
-            if actual["text"][block["body_start"]:block["body_end"]] != block["body"]:
+            if (actual["text"][block["body_start"]:block["body_end"]] != block["body"] or
+                    any(actual[field] != block[field] for field in ("url", "title", "description")) or
+                    block["chunk_id"] in chunks[block["doc_id"]]):
                 raise ValueError("Segment does not match full indexed source")
+            chunks[block["doc_id"]].add(block["chunk_id"])
             for request in block["requests"]:
                 pair_id = request["decision_id"].rsplit("-", 1)[0]
                 if pair_id not in pairs or pairs[pair_id]["doc_id"] != block["doc_id"]:
@@ -259,11 +302,16 @@ def collect(output=OUTPUT):
             covered = max(covered, end)
         if covered != len(search.load_index()["docs"][doc_id]["text"]):
             raise ValueError("Full indexed body was not completely assessed")
-    if set(evidence) != set(pairs) or len(coverage) != manifest["document_count"]:
+    if (set(evidence) != set(pairs) or len(pairs) != manifest["pair_count"] or
+            len(coverage) != manifest["document_count"] or
+            sum(map(len, chunks.values())) != manifest["segment_count"]):
         raise ValueError("Incomplete model judgments")
     judgments = []
     for pair_id, pair in sorted(pairs.items()):
         parts = evidence[pair_id]
+        expected_chunks = chunks[pair["doc_id"]]
+        if len(parts) != len(expected_chunks) or {part["chunk_id"] for part in parts} != expected_chunks:
+            raise ValueError("A query-document pair was not judged on every source segment")
         positives = [p for p in parts if p["relevant"] == 1]
         candidates = positives or parts
         chosen = max(candidates, key=lambda p: confidence_order[p["confidence"]])
@@ -340,6 +388,10 @@ def _adjudicate(output, judgments, path):
 
 def score(output=OUTPUT, adjudications=None):
     output = Path(output)
+    frozen = verify(output)
+    suites = json.loads((output / "queries.json").read_text())
+    if set(suites) != {"course", "development", "holdout"} or "plan.json" in frozen["frozen_artifacts"]:
+        raise ValueError("Use the scorer for this experiment; no files were written")
     manifest, judgments, response_hashes = collect(output)
     ev.write_csv(output / "raw_llm_judgments.csv", judgments, list(judgments[0]))
     adjudications_file, adjudication_count = None, 0
@@ -349,7 +401,6 @@ def score(output=OUTPUT, adjudications=None):
             raise ValueError("Keep explicit model self-review inside this experiment directory")
         judgments, adjudication_count = _adjudicate(output, judgments, path)
         adjudications_file = str(path.relative_to(output.resolve()))
-    suites = json.loads((output / "queries.json").read_text())
     labels = {(r["query_id"], r["url"]): r["relevant"] for r in judgments}
     records, means = {}, {}
     for name in ("course", "development", "holdout"):
@@ -400,6 +451,8 @@ def displayed_score(output=OUTPUT, collection_sha256=None):
         expected.update(name + "/scores.csv" for name in ("course", "development", "holdout"))
         for path in (output / "inputs").glob("*.json"):
             expected.update(("responses/" + path.name, "raw/" + path.stem + ".jsonl"))
+            if (output / "response_schemas" / path.name).is_file():
+                expected.add("response_schemas/" + path.name)
         if (not isinstance(summary, dict) or summary.get("origin") != "llm" or
                 summary.get("pair_count") != manifest["pair_count"] or
                 summary.get("document_count") != manifest["document_count"] or

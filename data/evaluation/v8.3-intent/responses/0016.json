@@ -1,0 +1,62 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "9d74dca4f691702431bb1f17f6974fba96eca707c023df400b6c3eb4ea584b75",
+  "policy_sha256": "84cbbc3b3a00321871524241539824fab0d1248c0283925a98aec7bf8611f7a7",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "80946d005ebbcb279af336611fda1c4284f49018f79eab1ae74d8fc5eea390a8",
+  "started_at": 1793855725.0542662,
+  "finished_at": 1793855735.393962,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.3-intent/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "184ebfe2541c36a4a59c-13",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段說明編譯器的模組搜尋選項，未提供列舉 Linux 目前已載入核心模組的方法。",
+        "evidence": "-fmodules-search-all Search even non-imported modules to resolve references"
+      },
+      {
+        "decision_id": "65f72513e1dd756d24b3-13",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段說明如何設定編譯時的符號可見性，未提供列舉指定已載入原生模組之匯出符號的方法。",
+        "evidence": "-fvisibility=<value> Set the default symbol visibility for all global definitions"
+      }
+    ]
+  }
+}

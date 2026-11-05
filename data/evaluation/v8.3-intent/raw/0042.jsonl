@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa24-a65a-7d72-b8eb-81ebcb170ae5"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"f6d2057fa86131fa2bd4-15\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此段的匯出符號功能以輸入檔案為對象，未說明如何列舉執行中程序內已載入的原生模組之匯出符號。\",\"evidence\":\"--export-symbols Export symbol list for all inputs\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":40431,"cached_input_tokens":26112,"cache_write_input_tokens":0,"output_tokens":150,"reasoning_output_tokens":41}}

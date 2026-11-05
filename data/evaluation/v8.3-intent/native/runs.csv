@@ -1,0 +1,81 @@
+system,query_id,query,rank,doc_id,url,score
+bm25,intent-05,show loaded shared libraries in a process,1,25,https://frida.re/docs/modes/,14.88068026523576
+bm25,intent-05,show loaded shared libraries in a process,2,952,https://www.kali.org/tools/yara/,13.76139471540346
+bm25,intent-05,show loaded shared libraries in a process,3,812,https://www.kali.org/tools/samba/,13.129217426785152
+bm25,intent-05,show loaded shared libraries in a process,4,30,https://frida.re/docs/gadget/,13.032340857570928
+bm25,intent-05,show loaded shared libraries in a process,5,281,https://gtfobins.org/gtfobins/bash/,12.98376939705517
+bm25,intent-06,inspect loaded native modules in target process,1,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,17.340895277922144
+bm25,intent-06,inspect loaded native modules in target process,2,170,https://frida.re/docs/javascript-api/,14.963218461388337
+bm25,intent-06,inspect loaded native modules in target process,3,412,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/python-extension.html,14.119390290688687
+bm25,intent-06,inspect loaded native modules in target process,4,54,https://frida.re/docs/functions/,13.988520339840061
+bm25,intent-06,inspect loaded native modules in target process,5,202,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/inspect_ticket.html,13.569869776491341
+bm25,intent-07,enumerate libraries already loaded into a process,1,25,https://frida.re/docs/modes/,14.944978045455898
+bm25,intent-07,enumerate libraries already loaded into a process,2,30,https://frida.re/docs/gadget/,14.607393553228226
+bm25,intent-07,enumerate libraries already loaded into a process,3,412,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/python-extension.html,13.629437502393776
+bm25,intent-07,enumerate libraries already loaded into a process,4,191,https://frida.re/docs/frida-core-api/,13.418956176973543
+bm25,intent-07,enumerate libraries already loaded into a process,5,243,https://frida.re/docs/gsoc-ideas-2015/,13.073902439647798
+bm25,intent-08,which native modules are loaded in this process,1,679,https://docs.metasploit.com/docs/development/developing-modules/libraries/obfuscation/how-to-use-metasploit-framework-obfuscation-crandomizer.html,14.65024574543743
+bm25,intent-08,which native modules are loaded in this process,2,170,https://frida.re/docs/javascript-api/,13.386371914023117
+bm25,intent-08,which native modules are loaded in this process,3,593,https://www.kali.org/tools/dex2jar/,12.357793821832555
+bm25,intent-08,which native modules are loaded in this process,4,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,12.11936844615166
+bm25,intent-08,which native modules are loaded in this process,5,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,11.537917958590429
+bm25_source,intent-05,show loaded shared libraries in a process,1,25,https://frida.re/docs/modes/,14.88068026523576
+bm25_source,intent-05,show loaded shared libraries in a process,2,952,https://www.kali.org/tools/yara/,13.76139471540346
+bm25_source,intent-05,show loaded shared libraries in a process,3,812,https://www.kali.org/tools/samba/,13.129217426785152
+bm25_source,intent-05,show loaded shared libraries in a process,4,30,https://frida.re/docs/gadget/,13.032340857570928
+bm25_source,intent-05,show loaded shared libraries in a process,5,281,https://gtfobins.org/gtfobins/bash/,12.98376939705517
+bm25_source,intent-06,inspect loaded native modules in target process,1,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,17.340895277922144
+bm25_source,intent-06,inspect loaded native modules in target process,2,170,https://frida.re/docs/javascript-api/,14.963218461388337
+bm25_source,intent-06,inspect loaded native modules in target process,3,412,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/python-extension.html,14.119390290688687
+bm25_source,intent-06,inspect loaded native modules in target process,4,54,https://frida.re/docs/functions/,13.988520339840061
+bm25_source,intent-06,inspect loaded native modules in target process,5,202,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/inspect_ticket.html,13.569869776491341
+bm25_source,intent-07,enumerate libraries already loaded into a process,1,25,https://frida.re/docs/modes/,14.944978045455898
+bm25_source,intent-07,enumerate libraries already loaded into a process,2,30,https://frida.re/docs/gadget/,14.607393553228226
+bm25_source,intent-07,enumerate libraries already loaded into a process,3,412,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/python-extension.html,13.629437502393776
+bm25_source,intent-07,enumerate libraries already loaded into a process,4,191,https://frida.re/docs/frida-core-api/,13.418956176973543
+bm25_source,intent-07,enumerate libraries already loaded into a process,5,243,https://frida.re/docs/gsoc-ideas-2015/,13.073902439647798
+bm25_source,intent-08,which native modules are loaded in this process,1,679,https://docs.metasploit.com/docs/development/developing-modules/libraries/obfuscation/how-to-use-metasploit-framework-obfuscation-crandomizer.html,14.65024574543743
+bm25_source,intent-08,which native modules are loaded in this process,2,170,https://frida.re/docs/javascript-api/,13.386371914023117
+bm25_source,intent-08,which native modules are loaded in this process,3,593,https://www.kali.org/tools/dex2jar/,12.357793821832555
+bm25_source,intent-08,which native modules are loaded in this process,4,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,12.11936844615166
+bm25_source,intent-08,which native modules are loaded in this process,5,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,11.537917958590429
+bm25_native,intent-05,show loaded shared libraries in a process,1,19,https://frida.re/docs/installation/,12.742960818599972
+bm25_native,intent-05,show loaded shared libraries in a process,2,170,https://frida.re/docs/javascript-api/,8.018063293895503
+bm25_native,intent-05,show loaded shared libraries in a process,3,25,https://frida.re/docs/modes/,14.88068026523576
+bm25_native,intent-05,show loaded shared libraries in a process,4,952,https://www.kali.org/tools/yara/,13.76139471540346
+bm25_native,intent-05,show loaded shared libraries in a process,5,812,https://www.kali.org/tools/samba/,13.129217426785152
+bm25_native,intent-06,inspect loaded native modules in target process,1,170,https://frida.re/docs/javascript-api/,15.677285664814452
+bm25_native,intent-06,inspect loaded native modules in target process,2,19,https://frida.re/docs/installation/,12.115223809396007
+bm25_native,intent-06,inspect loaded native modules in target process,3,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,17.340895277922144
+bm25_native,intent-06,inspect loaded native modules in target process,4,412,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/python-extension.html,14.119390290688687
+bm25_native,intent-06,inspect loaded native modules in target process,5,54,https://frida.re/docs/functions/,13.988520339840061
+bm25_native,intent-07,enumerate libraries already loaded into a process,1,19,https://frida.re/docs/installation/,17.096702323779635
+bm25_native,intent-07,enumerate libraries already loaded into a process,2,170,https://frida.re/docs/javascript-api/,10.548428662292288
+bm25_native,intent-07,enumerate libraries already loaded into a process,3,25,https://frida.re/docs/modes/,14.944978045455898
+bm25_native,intent-07,enumerate libraries already loaded into a process,4,30,https://frida.re/docs/gadget/,14.607393553228226
+bm25_native,intent-07,enumerate libraries already loaded into a process,5,412,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/python-extension.html,13.629437502393776
+bm25_native,intent-08,which native modules are loaded in this process,1,170,https://frida.re/docs/javascript-api/,14.100439117449232
+bm25_native,intent-08,which native modules are loaded in this process,2,19,https://frida.re/docs/installation/,12.115223809396007
+bm25_native,intent-08,which native modules are loaded in this process,3,679,https://docs.metasploit.com/docs/development/developing-modules/libraries/obfuscation/how-to-use-metasploit-framework-obfuscation-crandomizer.html,14.65024574543743
+bm25_native,intent-08,which native modules are loaded in this process,4,593,https://www.kali.org/tools/dex2jar/,12.357793821832555
+bm25_native,intent-08,which native modules are loaded in this process,5,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,12.11936844615166
+bm25_intent,intent-05,show loaded shared libraries in a process,1,19,https://frida.re/docs/installation/,12.742960818599972
+bm25_intent,intent-05,show loaded shared libraries in a process,2,170,https://frida.re/docs/javascript-api/,8.018063293895503
+bm25_intent,intent-05,show loaded shared libraries in a process,3,25,https://frida.re/docs/modes/,14.88068026523576
+bm25_intent,intent-05,show loaded shared libraries in a process,4,952,https://www.kali.org/tools/yara/,13.76139471540346
+bm25_intent,intent-05,show loaded shared libraries in a process,5,812,https://www.kali.org/tools/samba/,13.129217426785152
+bm25_intent,intent-06,inspect loaded native modules in target process,1,170,https://frida.re/docs/javascript-api/,15.677285664814452
+bm25_intent,intent-06,inspect loaded native modules in target process,2,19,https://frida.re/docs/installation/,12.115223809396007
+bm25_intent,intent-06,inspect loaded native modules in target process,3,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,17.340895277922144
+bm25_intent,intent-06,inspect loaded native modules in target process,4,412,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/python-extension.html,14.119390290688687
+bm25_intent,intent-06,inspect loaded native modules in target process,5,54,https://frida.re/docs/functions/,13.988520339840061
+bm25_intent,intent-07,enumerate libraries already loaded into a process,1,19,https://frida.re/docs/installation/,17.096702323779635
+bm25_intent,intent-07,enumerate libraries already loaded into a process,2,170,https://frida.re/docs/javascript-api/,10.548428662292288
+bm25_intent,intent-07,enumerate libraries already loaded into a process,3,25,https://frida.re/docs/modes/,14.944978045455898
+bm25_intent,intent-07,enumerate libraries already loaded into a process,4,30,https://frida.re/docs/gadget/,14.607393553228226
+bm25_intent,intent-07,enumerate libraries already loaded into a process,5,412,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/python-extension.html,13.629437502393776
+bm25_intent,intent-08,which native modules are loaded in this process,1,170,https://frida.re/docs/javascript-api/,14.100439117449232
+bm25_intent,intent-08,which native modules are loaded in this process,2,19,https://frida.re/docs/installation/,12.115223809396007
+bm25_intent,intent-08,which native modules are loaded in this process,3,679,https://docs.metasploit.com/docs/development/developing-modules/libraries/obfuscation/how-to-use-metasploit-framework-obfuscation-crandomizer.html,14.65024574543743
+bm25_intent,intent-08,which native modules are loaded in this process,4,593,https://www.kali.org/tools/dex2jar/,12.357793821832555
+bm25_intent,intent-08,which native modules are loaded in this process,5,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,12.11936844615166

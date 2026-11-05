@@ -43,3 +43,13 @@ Reviewer 另對照舊版做 3,000 組隨機摘要、1,000 組 offsets、400 組 
 Standards 初查：逾時遺失部分輸出、摘要平均／選擇未重新驗算、錯誤 manifest 結構可能 AttributeError／500。Spec 初查：浮點加總打破真正平手、逾時證據遺失（兩軸重疊）。改為保存原始部分 bytes、重新驗算凍結 scores.csv、嚴格結構驗證與整數分子比較；兩軸 focused recheck 均無剩餘 material finding。
 
 追加六筆明示自我複核後，兩軸再檢查：6 筆改動／648 筆不變，所有系統共用題目／URL 標籤，原標籤／policy hash／引句／llm 來源／初判與終判保存，holdout 未改動且未參與選模型。所審範圍無 material finding。審查與模型評分完成不等於使用者驗收或人工判定準確率。
+
+## v8.3 Standards／Spec
+
+固定比較點 `bf9455f`，依使用者授權與凍結計畫 `data/benchmarks/intent-v8.3-plan.json`，兩位 reviewer 各自唯讀審查工作稿。
+
+**Standards**：原守門漏掉非當前狀態；共用 verify 尚未在評分及分類前綁定 plan／manifest 設定；批次 schema 欄位與檔案需要存在性一致。已補條件、檢查兩份設定並核對 schema 路徑／hash／重新推導內容。最後 focused recheck 未見剩餘重大問題。
+
+**Spec**：排除／否定語境誤觸發；兩版計分器錯用資料目錄可能先寫出中間產物。修正後，反向詞、縮寫與未載入條件停止擴展，兩個入口均在蒐集或寫入前拒絕錯版本。指定範圍複查通過；後續 `no longer`／過往狀態同以記憶體驗證。
+
+Root 另核對每對完整分段、兩版分數檔、初終判及 360 筆凍結排名重現；原 414 次搜尋及 460 份資料檔不變。詳細量測與負面結果見 [010](010-query-intent.md)。使用者驗收仍獨立。

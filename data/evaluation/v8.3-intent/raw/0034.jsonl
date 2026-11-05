@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa24-1e25-7f83-9bd2-40c9af48f4bd"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\n  \"decisions\": [\n    {\n      \"decision_id\": \"f6d2057fa86131fa2bd4-7\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"此段的符號查找工具以原始碼檔案為輸入，未說明如何列舉指定已載入原生模組的匯出符號。\",\n      \"evidence\": \"USAGE: find-all-symbols [options] <source0> [... <sourceN>]\"\n    }\n  ]\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":40551,"cached_input_tokens":26112,"cache_write_input_tokens":0,"output_tokens":132,"reasoning_output_tokens":0}}

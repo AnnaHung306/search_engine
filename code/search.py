@@ -45,6 +45,7 @@ from preprocess import tokenize
 from collections import Counter
 from weighting import log_tf, vector, norm
 import positions
+import query_intent
 import ranking
 from snippets import snippet
 import synonyms
@@ -82,7 +83,7 @@ def parse_query(raw):
     """Pull out "phrases", +must, -mustnot, leave the rest as free terms."""
     phrases = re.findall(r'"([^"]+)"', raw)
     rest = re.sub(r'"[^"]+"', " ", raw)
-    must, mustnot, free = [], [], []
+    must, mustnot, free, free_text = [], [], [], []
     for tok in rest.split():
         if tok.startswith("+") and len(tok) > 1:
             must.extend(tokenize(tok[1:]))
@@ -90,9 +91,10 @@ def parse_query(raw):
             mustnot.extend(tokenize(tok[1:]))
         else:
             free.extend(tokenize(tok))
+            free_text.append(tok)
     phrase_terms = [t for ph in phrases for t in tokenize(ph)]
     return {"phrases": phrases, "must": must, "mustnot": mustnot,
-            "free": free, "all_terms": free + must + phrase_terms}
+            "free": free, "all_terms": free + must + phrase_terms, "free_text": " ".join(free_text)}
 
 
 def _title_hits(idx, doc_id, terms):
@@ -112,7 +114,7 @@ def phrase_regex(ph):
 
 def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
            pivot=0.0, use_fuzzy=False, coverage=False,
-           proximity_weight=0.0, field_weight=0.0, explain=False):
+           proximity_weight=0.0, field_weight=0.0, explain=False, intent=None):
     """title_boost=0.0, use_synonyms=False, pivot=0.0, use_fuzzy=False give the
     required pure TF-IDF cosine."""
     use_syn = use_synonyms
@@ -125,6 +127,7 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
     if use_syn or use_fuzzy:
         query = synonyms.translate_zh(query)   # 中文關鍵字 -> English
     parsed = parse_query(query)
+    signals = query_intent.detect(parsed["free_text"], intent) if intent is not None else None
     # remember the words the user typed, to label each result matched / missing
     shown_words = []
     for w in parsed["free"] + parsed["must"] + [x for ph in parsed["phrases"] for x in tokenize(ph)]:
@@ -170,6 +173,9 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
     for fixed in corrections.values():         # v7: corrected terms weigh less
         if fixed in weights:
             weights[fixed] = min(weights[fixed], fuzzy.FUZZY_WEIGHT)
+    api_term = signals.api_term if signals else None
+    if api_term in idf:
+        weights.setdefault(api_term, query_intent.API_WEIGHT)
     weights = {t: w for t, w in weights.items() if t in idf}
     if not weights:
         return _wrap("oov", idx, [], terms, t0, model)
@@ -240,6 +246,11 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
         ranked = [(s, d) for _, s, d in ranked]
     else:
         ranked = sorted(((s, d) for d, s in scores.items() if s > 0), reverse=True)
+    if signals and (signals.source_host or api_term in postings):
+        api_postings = postings.get(api_term, {})
+        # Stable ordering: evidence first, existing ranking inside each tier.
+        ranked.sort(key=lambda pair: signals.precedence(docs_all[pair[1]]["url"], str(pair[1]), api_postings),
+                    reverse=True)
     surface_forms = {}
     for term in scoring_terms:
         for form in idx["position_aliases"].get(term, []):
@@ -285,11 +296,16 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
                 "proximity_weight": proximity_weight, "proximity": proximity_evidence.get(doc_id),
                 "terms": ranking.term_scores(idx, rank_query, doc_id, model=model,
                                              pivot=pivot, field_weight=field_weight)}
+            if signals and (signals.source_host or api_term in postings):
+                hit["explanation"]["intent_evidence"] = signals.precedence(
+                    hit["url"], str(doc_id), postings.get(api_term, {}))
     status = "ok" if out else "no_match"
     r = _wrap(status, idx, out, terms, t0, model)
     r["expanded"] = sorted(t for t, w in weights.items()
                            if w < 1.0 and t not in corrections.values())
     r["corrections"] = corrections
+    if signals and (signals.source_host or api_term in postings):
+        r["intent"] = {"source_host": signals.source_host, "expanded_api": api_term if api_term in postings else None}
     return r
 
 
@@ -328,11 +344,14 @@ if __name__ == "__main__":
     pv = PIVOT_SLOPE if "--pivot" in args else 0.0
     fz = "--fuzzy" in args
     cv = "--cov" in args
-    args = [a for a in args if a not in ("--bm25", "--tfidf", "--boost", "--syn", "--pivot", "--fuzzy", "--cov")]
+    intent = "both" if "--intent" in args else None
+    args = [a for a in args if a not in ("--bm25", "--tfidf", "--boost", "--syn", "--pivot", "--fuzzy", "--cov", "--intent")]
     q = " ".join(args)
-    r = search(q, model=model, title_boost=boost, use_synonyms=syn, pivot=pv, use_fuzzy=fz, coverage=cv)
+    r = search(q, model=model, title_boost=boost, use_synonyms=syn, pivot=pv, use_fuzzy=fz, coverage=cv, intent=intent)
     if r.get("corrections"):
         print("did you mean:", r["corrections"])
+    if r.get("intent"):
+        print("intent evidence:", r["intent"])
     print(f"[{r['status']}] model={r['model']} indexed={r['num_indexed']} "
           f"terms={r.get('terms')} {r['elapsed_ms']}ms")
     for i, h in enumerate(r["results"], 1):

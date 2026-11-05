@@ -14,3 +14,5 @@
 使用者後續核可依序補真實採集、同結果效能優化、排名診斷與集中人工交接；本輪先不做 PPT。v8.1 使用 schema 4 壓縮索引，原 980 頁仍為預設研究 collection；data/crawls/v8-live-20261105/ 是另一份真實快照。新快照沒有人工品質結論，兩份資料不可混用標籤。
 
 使用者再明確指示由 LM／助手代為決定規則、判定相關性並計分，不再等待組員逐筆標註。**Model judgment**：來源標為 llm 的內容判定，保留規則、全文分段、引文、信心與模型原回應；與 Human judgment 分開，不冒稱真人、獨立雙人評估或教授已接受。本輪以 data/evaluation/v8.2-llm/ 保存，新舊人工表格不覆寫；仍不做 PPT、不 push。
+
+v8.3 使用者要求處理 GTFOBins sudo 與 native libraries 兩題失敗並重新評估。**Intent experiment** 是既有排名的獨立選項：來源層使用 URL host，原生模組以有語境的精確 API 證據補足用詞差異；不改必做基準或既有產品流程。兩題已知案例屬回歸，另凍結 16 題新比較，資料及模型標註另存於 data/evaluation/v8.3-intent/。仍不做 PPT、不 push。

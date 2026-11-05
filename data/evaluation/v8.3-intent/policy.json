@@ -1,0 +1,13 @@
+{
+  "origin": "llm",
+  "rules_fixed_before_labels": true,
+  "comparison": "Report paired P@5 for all four systems without selecting or tuning on this suite. Keep two known failures separate from new source, native and control queries.",
+  "model_settings_frozen_in": "plan.json",
+  "aggregation": "Any positive segment establishes relevance; all segments required; missing labels fail.",
+  "global_rule": "Judge the stated information need using substantive text, not mere term co-occurrence.",
+  "references": [
+    "TP p.3 §6",
+    "Unit 3 p.9,29–38",
+    "https://arxiv.org/abs/2309.10621"
+  ]
+}
