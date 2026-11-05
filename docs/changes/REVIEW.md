@@ -21,3 +21,17 @@
 ## 結案範圍
 
 Standards 初查 4 項、Spec 初查 4 項及後續 2 項（兩軸有重疊）；已報問題均處理，所複查範圍無未解 material findings。修正與量測見 005-review-fixes.md；不把審查通過當作使用者驗收或人工標註完成。
+
+## v8.1 Standards
+
+固定比較點 5d1da8f205d9db6e2473893dcc3925eb85281f81，使用 git diff 5d1da8f -- code 加新增 offsets.py／diagnostics.py 審查工作稿。明確範圍為使用者核可的真實採集、同結果效能優化、診斷與人工交接。
+
+初查 codec／快取／共享計分／gzip／明示 subset 未見 material finding；補查發現 analyze() 可直接傳入 holdout，僅 CLI 限制不足。已在函式入口拒絕，複查通過。最後候選排名省略 offset 解碼、回傳解釋才補齊也通過 focused review。審查 agent 另做 1,000 組 codec round-trip 等記憶體檢查，未修改或產生檔案。
+
+## v8.1 Spec
+
+初查未見 material finding；補查發現合法 JSON 的錯誤 manifest 結構會讓正常評估頁 HTTP 500。已以共用 load_manifest() 驗證、保持 stale 狀態，五種壞結構由 root 與 reviewer 各自用記憶體 patch 確認；複查通過。不同 collection、保護歷史輸出及最後按需解碼也通過 focused review。
+
+Reviewer 另對照舊版做 3,000 組隨機摘要、1,000 組 offsets、400 組 ranking maps／解釋 row 比對；未落盤測試產物。最終真實採集、正常瀏覽器與 414 次完整回歸由 root 驗證，人工相關性與使用者驗收仍未完成。
+
+本輪 Standards 1 項、Spec 1 項，均已解決；所審範圍無剩餘 material finding。兩軸結論不等於全部未來狀況保證。

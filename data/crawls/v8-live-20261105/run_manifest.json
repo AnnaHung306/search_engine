@@ -1,0 +1,86 @@
+{
+  "executed_source_commit": "5d1da8f205d9db6e2473893dcc3925eb85281f81",
+  "source_sha256": {
+    "crawler.py": "394fc9bbf6ec7ef9a773f4c5ff56a00c1962921cf96ee3f4e3b08dd9b2861a17",
+    "crawl_http.py": "12a5fda6835e51250b680dece518510b2eb5829599a0b9f684b8a4a7736b4f86",
+    "crawl_urls.py": "628e39799fa9576f943114412aee333fe6d0d6eb7804bf4b26c9e62dc3f26faf",
+    "config.py": "814a2dcbfdf68fc2b8f6a24665ab6b44c1b7722111b2efd227a2f641fbec3663"
+  },
+  "requirements_sha256": "da0ba20ed22a5629578664d9e594bec83c4ded7893b7826f53669be7efa5b333",
+  "config": {
+    "SEED_URLS": [
+      "https://www.kali.org/tools/",
+      "https://www.kali.org/docs/",
+      "https://nmap.org/book/toc.html",
+      "https://docs.metasploit.com/",
+      "https://www.wireshark.org/docs/wsug_html_chunked/",
+      "https://docs.mitmproxy.org/stable/",
+      "https://frida.re/docs/home/",
+      "https://gtfobins.org/"
+    ],
+    "ALLOWED_PATH_PREFIXES": {
+      "www.kali.org": [
+        "/tools/",
+        "/docs/"
+      ],
+      "nmap.org": [
+        "/book/"
+      ],
+      "docs.metasploit.com": [
+        "/"
+      ],
+      "www.wireshark.org": [
+        "/docs/wsug_html_chunked/"
+      ],
+      "docs.mitmproxy.org": [
+        "/stable/"
+      ],
+      "frida.re": [
+        "/docs/"
+      ],
+      "gtfobins.org": [
+        "/"
+      ]
+    },
+    "EXCLUDED_PATH_PREFIXES": {
+      "www.kali.org": [
+        "/docs/nethunter/",
+        "/docs/arm/",
+        "/docs/installation/",
+        "/docs/virtualization/",
+        "/docs/usb/",
+        "/docs/cloud/"
+      ],
+      "docs.metasploit.com": [
+        "/api/"
+      ],
+      "docs.mitmproxy.org": [
+        "/stable/api/"
+      ]
+    },
+    "MAX_PAGES_PER_HOST": {
+      "www.kali.org": 430,
+      "nmap.org": 150,
+      "docs.metasploit.com": 150,
+      "www.wireshark.org": 80,
+      "docs.mitmproxy.org": 50,
+      "frida.re": 40,
+      "gtfobins.org": 100
+    },
+    "USER_AGENT": "NUK-IR-SearchEngine/1.0 (course project; contact: tree.gavin@gmail.com)",
+    "DELAY_PER_HOST": 2.0,
+    "TIMEOUT": 10,
+    "MAX_VALID_PAGES": 1000,
+    "MAX_ATTEMPTS": 2500,
+    "MIN_TEXT_CHARS": 200
+  },
+  "collection_sha256": "b0b89ebfde5641fd10ff5334b91a27c28a784eec092b206a3ea6c677fb3da78f",
+  "files_sha256": {
+    "crawl_log.jsonl": "abd06c88708f1354838a7498150ed7a228469e9ba18437827b8e02ccdad4ea08",
+    "crawl_state.json": "7c0eddefbdfd3ec919d3dcf74b8e8a6b7e5975d2b2d6af7b614b081e26dd251d",
+    "crawl_summary.json": "0ddd93782e7062a5b7b9dc7635195b850805ca5fa55db9698c6c7b4b7cbbfc96",
+    "pages.json": "b0b89ebfde5641fd10ff5334b91a27c28a784eec092b206a3ea6c677fb3da78f"
+  },
+  "started_at_taipei": "2026-11-05T09:54:41.943188+08:00",
+  "finished_at_taipei": "2026-11-05T10:13:16.528631+08:00"
+}

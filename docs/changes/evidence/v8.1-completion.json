@@ -1,0 +1,144 @@
+{
+  "status": "authorized independent implementation and stated verification complete; human judgments and user acceptance pending",
+  "reference_commit": "5d1da8f205d9db6e2473893dcc3925eb85281f81",
+  "branch": "codex/ir-course-upgrade",
+  "upstream_main": "9c7c3a107b9712b5fc2f31d8d432a025be39f27a",
+  "route": "develop -> implement/codebase-design -> two-axis code-review; approved sequence on existing branch, no new spec/tickets",
+  "fresh_crawl": {
+    "valid_pages": 980,
+    "actual_http_requests": 1027,
+    "robots_denied_before_content_request": 10,
+    "http_or_network_failures_per_summary": 0,
+    "description_pages": 485,
+    "new_index_terms": 58403,
+    "new_index_bytes": 9881135,
+    "validated_occurrences": 1348436
+  },
+  "fixed_collection_equivalence": {
+    "full_searches": 414,
+    "literal_offsets": 1344488,
+    "random_summary_reference_cases": 2000,
+    "candidate_offset_decodes_without_explanation": 0
+  },
+  "performance_summary": {
+    "before": {
+      "index_bytes": 47933880,
+      "load_ms": 449.527750024572,
+      "rss_after_load_bytes": 746356736,
+      "queries": {
+        "sql injection tool": {
+          "warm_samples_ms": {
+            "median_ms": 2.904708031564951,
+            "p95_ms": 3.618291928432882
+          },
+          "cold_layout_samples_ms": {
+            "median_ms": 2.9294374980963767,
+            "p95_ms": 4.040666972286999
+          }
+        },
+        "\"port scan\" -metasploit": {
+          "warm_samples_ms": {
+            "median_ms": 4.523396026343107,
+            "p95_ms": 6.241582916118205
+          },
+          "cold_layout_samples_ms": {
+            "median_ms": 4.716250521596521,
+            "p95_ms": 6.388040957972407
+          }
+        },
+        "network packet sniffer": {
+          "warm_samples_ms": {
+            "median_ms": 3.1727079767733812,
+            "p95_ms": 4.243792034685612
+          },
+          "cold_layout_samples_ms": {
+            "median_ms": 3.1349585042335093,
+            "p95_ms": 3.99300002027303
+          }
+        }
+      }
+    },
+    "after": {
+      "index_bytes": 9806796,
+      "load_ms": 313.1359580438584,
+      "rss_after_load_bytes": 463929344,
+      "queries": {
+        "sql injection tool": {
+          "warm_samples_ms": {
+            "median_ms": 0.4578119842335582,
+            "p95_ms": 0.6213329033926129
+          },
+          "cold_layout_samples_ms": {
+            "median_ms": 1.698916545137763,
+            "p95_ms": 2.155040972866118
+          }
+        },
+        "\"port scan\" -metasploit": {
+          "warm_samples_ms": {
+            "median_ms": 0.5976039683446288,
+            "p95_ms": 0.7628749590367079
+          },
+          "cold_layout_samples_ms": {
+            "median_ms": 3.072707972023636,
+            "p95_ms": 3.7239580415189266
+          }
+        },
+        "network packet sniffer": {
+          "warm_samples_ms": {
+            "median_ms": 0.36987499333918095,
+            "p95_ms": 0.5903750425204635
+          },
+          "cold_layout_samples_ms": {
+            "median_ms": 1.8238124321214855,
+            "p95_ms": 2.187166945077479
+          }
+        }
+      }
+    }
+  },
+  "quality": "no new formal quality scores; no fabricated human labels; no holdout quality tuning",
+  "required_review_pack": {
+    "path": "data/evaluation/v8.1/course-required",
+    "queries": 10,
+    "pairs_per_reviewer": 50,
+    "labels_filled": 0
+  },
+  "review": {
+    "standards_findings": 1,
+    "spec_findings": 1,
+    "all_reported_findings_resolved": true,
+    "remaining_material_findings_in_reviewed_scope": 0
+  },
+  "human_handoff": "docs/HUMAN_HANDOFF.md",
+  "progress": "report/PROGRESS_V8_1.md",
+  "fallbacks_introduced": false,
+  "preview_ports": "5000 belongs to macOS ControlCenter; same Flask app explicitly on 5001 fixed / 5002 fresh",
+  "preview_and_acceptance": "normal browser search/explanation/fulltext/evaluation and live HTTP verified; not user acceptance",
+  "cleanup": "no disk test fixtures or temporary test scripts; previous three Ruff cache files retained pending explicit deletion reply; actual browser screenshot retained as review evidence",
+  "ppt_created": false,
+  "push_or_deploy": false,
+  "source_sha256": {
+    "toy_example.py": "97944647b0bda3f1f2684b66da63c69dca0f9b3f74836def21d084ff20f913f9",
+    "fuzzy.py": "623ab166ef0ddeef1adfd70df1ea17d9094be77cf9d456eeec604e1c7e41be4a",
+    "crawl_urls.py": "628e39799fa9576f943114412aee333fe6d0d6eb7804bf4b26c9e62dc3f26faf",
+    "config.py": "814a2dcbfdf68fc2b8f6a24665ab6b44c1b7722111b2efd227a2f641fbec3663",
+    "clean.py": "d11905f257e4975a6b7d735ff242426f016399830c858a09e2190e1e2cf43da0",
+    "fix_encoding.py": "691af4fbcf3fe56e67bb4c0e9e95be6f79209ec8ea9579cbd300559cf5f73365",
+    "preprocess.py": "b2ecd2922316c0f5b8d85fad5dd8fa6064c3945a00415a198f6dfb2de18f52b2",
+    "synonyms.py": "2e513abfae992703c5359252322bd74f7a17aaa1a73a2e1ed97d1d3c4e56a781",
+    "diagnostics.py": "f9432d2dff0c6db40e81f5fb3e4f17879b2cd17a578480f70a3fe0efd2ca0f9e",
+    "evaluation.py": "baaa35406e95c14cea872c248386fa3ad2a4015e4e7c87a001b86e015e81c807",
+    "crawl_http.py": "12a5fda6835e51250b680dece518510b2eb5829599a0b9f684b8a4a7736b4f86",
+    "positions.py": "52fed19806c998c58d37e80b3f8d63a41007c7554ab04a4403e237ae0d3e6156",
+    "weighting.py": "ee9b0aac26c24e3ef973dce5693aeafd77e39ddf670a60e9253b90564dcf49be",
+    "indexer.py": "bfa18632a7eed56fcfdff69eba1b015cee1ec78e8abb8b11a753bbafa32e447c",
+    "ranking.py": "0c65d836efc306a5a1a9dd56028c119994e1385e83c456ee4dbde0a7d40431a6",
+    "snippets.py": "e27ed4fe09c2b418da17671b72714af882765730d6c4a1d5c2b5ce73b65f2518",
+    "app.py": "66c6a506f214b7af40fee946e4fd76631ae694f91cb69b95c9d219ea7c32c692",
+    "search.py": "582a7fc447d6ee5d3dd569dc0cab00b97fe4959591c5ec9ce3567803f8b8787d",
+    "evaluate.py": "4a79b71371a65c47e75ea8dbb818e0a11ca984276cafe09a574853de2b2240ac",
+    "run_experiments.py": "fa388ff1dad668c07dd1013479beabf0f5bcae8ed5dfe67ce45ba1bff50694d0",
+    "offsets.py": "bcdeef856e439e09c39eddbe9057b45aa48b83bb9f866271c7152489fb1c3ffd",
+    "crawler.py": "394fc9bbf6ec7ef9a773f4c5ff56a00c1962921cf96ee3f4e3b08dd9b2861a17"
+  }
+}

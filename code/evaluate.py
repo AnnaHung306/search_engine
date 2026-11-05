@@ -74,12 +74,16 @@ def main():
     parser.add_argument("--output", help="separate run directory; export never overwrites a previous run")
     parser.add_argument("--repeats", type=int, default=20)
     parser.add_argument("--resolutions", help="explicit adjudication CSV for disagreeing pairs")
+    parser.add_argument("--systems", nargs="+", choices=tuple(SYSTEMS),
+                        help="explicit system subset for --dump; default is all nine")
     args = parser.parse_args()
+    if args.systems is not None and not args.dump:
+        parser.error("--systems is used only with --dump")
     output = args.output or ev.ROOT / "data/evaluation/v8" / args.suite
     if args.legacy_score:
         result = legacy_score()
     elif args.dump:
-        result = ev.export(args.suite, output)
+        result = ev.export(args.suite, output, args.systems)
     elif args.timing:
         result = timing(args.suite, output, args.repeats)
     elif args.adjudicate:

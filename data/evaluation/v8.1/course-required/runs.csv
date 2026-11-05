@@ -1,0 +1,51 @@
+system,query_id,query,rank,doc_id,url,score
+tfidf,course-01,wifi password cracking,1,763,https://www.kali.org/tools/fern-wifi-cracker/,0.2145983878891069
+tfidf,course-01,wifi password cracking,2,766,https://www.kali.org/tools/wifi-honey/,0.15060971793527983
+tfidf,course-01,wifi password cracking,3,753,https://www.kali.org/tools/sipcrack/,0.1225161884367901
+tfidf,course-01,wifi password cracking,4,749,https://www.kali.org/tools/johnny/,0.11374770250626723
+tfidf,course-01,wifi password cracking,5,754,https://www.kali.org/tools/sucrack/,0.1122406814786394
+tfidf,course-02,sql injection tool,1,845,https://www.kali.org/tools/siparmyknife/,0.18338276471756026
+tfidf,course-02,sql injection tool,2,646,https://www.kali.org/tools/laudanum/,0.16962077630441807
+tfidf,course-02,sql injection tool,3,742,https://www.kali.org/tools/sqldict/,0.13019414753676886
+tfidf,course-02,sql injection tool,4,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,0.12378248310402874
+tfidf,course-02,sql injection tool,5,721,https://docs.metasploit.com/docs/development/google-summer-of-code/gsoc-2020-project-ideas.html,0.12359204220092036
+tfidf,course-03,port scanning techniques,1,294,https://nmap.org/book/scan-methods-maimon-scan.html,0.12129069340055237
+tfidf,course-03,port scanning techniques,2,166,https://nmap.org/book/host-discovery.html,0.1057580181032926
+tfidf,course-03,port scanning techniques,3,45,https://nmap.org/book/organization.html,0.09825613767807
+tfidf,course-03,port scanning techniques,4,510,https://nmap.org/book/defenses.html,0.0930196727637841
+tfidf,course-03,port scanning techniques,5,966,https://www.kali.org/tools/portspoof/,0.08593847584495942
+tfidf,course-04,intercept https traffic,1,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,0.1902591744452443
+tfidf,course-04,intercept https traffic,2,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,0.16142731904578766
+tfidf,course-04,intercept https traffic,3,4,https://docs.mitmproxy.org/stable/,0.1317874947599301
+tfidf,course-04,intercept https traffic,4,588,https://www.kali.org/tools/javasnoop/,0.10900369066975256
+tfidf,course-04,intercept https traffic,5,60,https://docs.mitmproxy.org/stable/mitmproxytutorial-userinterface/,0.10607452091116684
+tfidf,course-05,web application vulnerability scanner,1,405,https://www.kali.org/tools/webscarab/,0.13577380911932233
+tfidf,course-05,web application vulnerability scanner,2,302,https://www.kali.org/tools/wpprobe/,0.13003976178045282
+tfidf,course-05,web application vulnerability scanner,3,327,https://www.kali.org/tools/burpsuite/,0.1047670370623091
+tfidf,course-05,web application vulnerability scanner,4,366,https://www.kali.org/tools/paros/,0.09754385131786868
+tfidf,course-05,web application vulnerability scanner,5,200,https://www.kali.org/tools/dirb/,0.09517791620734314
+tfidf,course-06,network packet sniffer,1,789,https://www.kali.org/tools/above/,0.14485480427591435
+tfidf,course-06,network packet sniffer,2,797,https://www.kali.org/tools/scapy/,0.1421177604199544
+tfidf,course-06,network packet sniffer,3,769,https://www.kali.org/tools/xspy/,0.13351465611278804
+tfidf,course-06,network packet sniffer,4,791,https://www.kali.org/tools/darkstat/,0.08649646395775835
+tfidf,course-06,network packet sniffer,5,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,0.08640038702292759
+tfidf,course-07,exploit metasploit module,1,598,https://docs.metasploit.com/docs/development/developing-modules/external-modules/writing-external-golang-modules.html,0.14300618901625434
+tfidf,course-07,exploit metasploit module,2,485,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-the-favorite-command.html,0.13688274145857052
+tfidf,course-07,exploit metasploit module,3,2,https://docs.metasploit.com/,0.1272857891315718
+tfidf,course-07,exploit metasploit module,4,504,https://docs.metasploit.com/docs/using-metasploit/other/why-cve-is-not-available.html,0.12403406786082277
+tfidf,course-07,exploit metasploit module,5,693,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-do-reporting-or-store-data-in-module-development.html,0.12345180057437893
+tfidf,course-08,decompile android apk,1,585,https://www.kali.org/tools/jadx/,0.1270586990294674
+tfidf,course-08,decompile android apk,2,579,https://www.kali.org/tools/apktool/,0.09621597359626075
+tfidf,course-08,decompile android apk,3,582,https://www.kali.org/tools/bytecode-viewer/,0.09583293836429145
+tfidf,course-08,decompile android apk,4,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.062032268951553574
+tfidf,course-08,decompile android apk,5,109,https://frida.re/docs/examples/android/,0.05704531526867221
+tfidf,course-09,directory enumeration web server,1,245,https://www.kali.org/tools/gobuster/,0.15354045721799717
+tfidf,course-09,directory enumeration web server,2,967,https://www.kali.org/tools/arsenal-ng/,0.12835599022543398
+tfidf,course-09,directory enumeration web server,3,235,https://www.kali.org/tools/finalrecon/,0.1081842383383446
+tfidf,course-09,directory enumeration web server,4,592,https://nmap.org/book/output-formats-cpe.html,0.10468272491508664
+tfidf,course-09,directory enumeration web server,5,839,https://www.kali.org/tools/ldeep/,0.09295549411467838
+tfidf,course-10,reverse shell payload,1,34,https://docs.metasploit.com/docs/pentesting/metasploit-guide-upgrading-shells-to-meterpreter.html,0.19106885565111087
+tfidf,course-10,reverse shell payload,2,519,https://gtfobins.org/gtfobins/cpan/,0.1687006740618447
+tfidf,course-10,reverse shell payload,3,511,https://gtfobins.org/gtfobins/cowthink/,0.13866864972506435
+tfidf,course-10,reverse shell payload,4,508,https://gtfobins.org/gtfobins/cowsay/,0.13866864972506435
+tfidf,course-10,reverse shell payload,5,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,0.12951781883082547

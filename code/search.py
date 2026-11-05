@@ -32,8 +32,9 @@ The same collection IDF is reused (never refit). CLI:
     python search.py "wifi password cracking"            (TF-IDF cosine)
     python search.py --bm25 "sql injection tool"
     python search.py --pivot "port scanning techniques"   (TF-IDF + pivoted normalization)
-    python search.py --bm25 --boost --syn "wifi password cracking"   (best variant)
+    python search.py --bm25 --boost --syn "wifi password cracking"   (explicit comparison)
 """
+import gzip
 import json
 import os
 import re
@@ -48,11 +49,12 @@ import ranking
 from snippets import snippet
 import synonyms
 import fuzzy
+import offsets
 
 SKIP_HUBS = True     # v7.1: see clean.is_hub(); set False to reproduce v7 numbers
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
-INDEX_PATH = os.path.join(DATA_DIR, "index-v8.json")
+INDEX_PATH = os.environ.get("IR_INDEX_PATH", os.path.join(DATA_DIR, "index-v8.1.json.gz"))
 
 K1 = 1.5
 B = 0.75
@@ -66,9 +68,11 @@ _INDEX = None
 def load_index():
     global _INDEX
     if _INDEX is None:
-        with open(INDEX_PATH, encoding="utf-8") as f:
+        opener = gzip.open if str(INDEX_PATH).endswith(".gz") else open
+        with opener(INDEX_PATH, "rt", encoding="utf-8") as f:
             _INDEX = json.load(f)
-        if _INDEX.get("schema_version") != 3:
+        if (_INDEX.get("schema_version") != 4 or
+                _INDEX.get("position_offset_encoding") != offsets.ENCODING):
             _INDEX = None
             raise ValueError("Index schema mismatch; run python code/indexer.py")
     return _INDEX
@@ -213,7 +217,7 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
         if proximity_weight < 0:
             raise ValueError("Proximity weight must be nonnegative")
         for doc_id in scores:
-            evidence = positions.proximity(idx, doc_id, scoring_terms)
+            evidence = positions.proximity(idx, doc_id, scoring_terms, include_offsets=False)
             proximity_evidence[doc_id] = evidence
             scores[doc_id] *= 1 + proximity_weight * evidence["closeness"]
 
@@ -228,7 +232,7 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
 
     if coverage:
         # v7.1 coordination-level ranking: pages containing MORE of the distinct
-        # query words come first (like a search engine's default AND), and the
+        # query words come first, and the
         # unchanged TF-IDF cosine score orders pages inside each group.
         orig = [t for t in scoring_terms if weights[t] >= 1.0] or scoring_terms
         cov = {d: sum(1 for t in orig if str(d) in postings[t] or d in postings[t]) for d in scores}
@@ -261,6 +265,8 @@ def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
     if explain:
         for hit in out:
             doc_id = hit["doc_id"]
+            if proximity_weight:
+                proximity_evidence[doc_id] = positions.proximity(idx, doc_id, scoring_terms)
             hit["explanation"] = {"model": model, "pivot": pivot, "field_weight": field_weight,
                 "query_norm": norm(query_vector), "document_norm": idx["norms"][doc_id],
                 "title_norm": idx["title_norms"][doc_id],

@@ -2,6 +2,10 @@
 
 引用：TP p.3 §6、U3 p.9、29–36，連結見 references.md。評估對象是資訊需求，而非命中標題關鍵字。
 
+v8.1 已準備純 cosine 的必做十題／50 筆精簡包：data/evaluation/v8.1/course-required/。先依 [集中人工待辦](HUMAN_HANDOFF.md) 確認規則再標註，原九模型材料保持原狀。新增 `--dump --systems tfidf --output <新目錄>` 可明確限制新包的模型；預設仍為九模型。這個精簡包不能替代全部模型的比較標註。
+
+正常評估頁會比對目前搜尋使用的 collection；選擇新採集資料時，舊材料標示 different collection 並隱藏其分數。壞格式 manifest 由共用入口驗證並顯示 stale，不造成 HTTP 500。
+
 ## 凍結與用途
 
 - course：原十題，已多次用來開發，只作課程基準／回歸，不冒稱獨立 test。

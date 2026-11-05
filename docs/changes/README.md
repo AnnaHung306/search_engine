@@ -9,5 +9,8 @@
 | [003 評估](003-evaluation.md) | TP §6、U3 p.9、29–36 | 凍結查詢、盲評包、雙人判斷、仲裁、kappa；品質成績待人工 |
 | [004 正常介面與報告](004-product-and-report.md) | TP §4／7、U3 p.37–38、U4 p.15–39 | 正常入口、明示實驗模式、計分解釋、全文／評估導覽及 v8 報告 |
 | [005 審查修正與最終量測](005-review-fixes.md) | TP §2–6、U1／U2／U3／U4、HTTP | dot segments、中斷恢復、標點／offsets、真實描述、過期成績、各排序分母與最終代價 |
+| [006 真實採集全流程](006-live-pipeline.md) | TP §2–6、U2 p.14–31、U4 p.15–39 | 七站新快照 980 頁、1,027 請求、485 頁真實描述、獨立索引與正常入口 |
+| [007 無損效能優化](007-lossless-performance.md) | U1 p.43–48、U4 p.15–39、VAR／PY | schema 4 壓縮／有界快取／共享公式；47.9→9.8 MB；冷熱、九模型及中間退步均保留 |
+| [008 診斷與人工交接](008-diagnostics-and-handoff.md) | TP §6–9、U3 p.9、29–38、U4 | 兩個弱查詢、必做 50 筆盲評包、規則模糊處、保護歷史輸出與審查修正 |
 
 來源的可查證連結見 [references.md](../references.md)。效能原始量測保留於 [evidence/latency-comparison.json](evidence/latency-comparison.json)。最終驗證、審查與待辦寫入 evidence/verification-summary.json；後續更新新增一批，不覆蓋前批結果。

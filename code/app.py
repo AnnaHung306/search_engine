@@ -1,9 +1,8 @@
 """Normal Flask product entry. TP §4; U3 p.37–38; U4 p.15–39."""
-import json
 from flask import Flask, request, render_template, abort, send_file
 
 import search as se
-from evaluation import ROOT, load_suite, displayed_score
+from evaluation import ROOT, load_suite, load_manifest, displayed_score
 from snippets import highlight
 
 app = Flask(__name__)
@@ -70,20 +69,24 @@ def document(doc_id):
 @app.get("/evaluation")
 def evaluation():
     suites = []
+    active_collection = se.load_index()["collection_sha256"]
     for name in ("course", "development", "holdout"):
         output = ROOT / "data/evaluation/v8" / name
-        manifest_path = output / "manifest.json"
+        manifest_error = False
         try:
-            manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else None
+            manifest = load_manifest(output)
+        except FileNotFoundError:
+            manifest = None
         except ValueError:
             manifest = None  # invalid records are shown as stale, never as a score
+            manifest_error = True
         try:
             suite, _ = load_suite(name)
             suite_error = False
         except ValueError:
             # Visible stale state, with no old score shown under changed queries.
             suite, suite_error = {"queries": [], "role": "Frozen query file changed; restore it or create a new experiment."}, True
-        scores, score_state = displayed_score(output) if not suite_error else (None, "stale")
+        scores, score_state = displayed_score(output, active_collection) if not (suite_error or manifest_error) else (None, "stale")
         suites.append({"name": name, "count": len(suite["queries"]), "role": suite["role"],
                        "pool": manifest["pool_size"] if manifest else None, "scores": scores,
                        "score_state": score_state})

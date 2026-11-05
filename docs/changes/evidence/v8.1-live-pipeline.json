@@ -1,0 +1,553 @@
+{
+  "status": "fresh collection indexed and searched, no relevance labels or quality claim",
+  "N": 980,
+  "terms": 58403,
+  "index_bytes": 9881135,
+  "collection_sha256": "b0b89ebfde5641fd10ff5334b91a27c28a784eec092b206a3ea6c677fb3da78f",
+  "index_sha256": "fa7b7caa6a01ff4f5534d5646c5d98f6242574036f41c882b7401a08be61cdbe",
+  "literal_occurrences_validated": 1348436,
+  "all_980_document_counts_and_l2_norms_recomputed": true,
+  "meta_description_pages": 485,
+  "runs": [
+    {
+      "query_id": "course-01",
+      "system": "tfidf",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-01",
+      "system": "tfidf_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-01",
+      "system": "tfidf_pivot",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-01",
+      "system": "tfidf_pivot_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-01",
+      "system": "bm25",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-01",
+      "system": "bm25_boost_syn",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-01",
+      "system": "tfidf_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-01",
+      "system": "tfidf_fields",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-01",
+      "system": "tfidf_fields_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-02",
+      "system": "tfidf",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-02",
+      "system": "tfidf_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-02",
+      "system": "tfidf_pivot",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-02",
+      "system": "tfidf_pivot_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-02",
+      "system": "bm25",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-02",
+      "system": "bm25_boost_syn",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-02",
+      "system": "tfidf_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-02",
+      "system": "tfidf_fields",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-02",
+      "system": "tfidf_fields_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-03",
+      "system": "tfidf",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-03",
+      "system": "tfidf_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-03",
+      "system": "tfidf_pivot",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-03",
+      "system": "tfidf_pivot_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-03",
+      "system": "bm25",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-03",
+      "system": "bm25_boost_syn",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-03",
+      "system": "tfidf_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-03",
+      "system": "tfidf_fields",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-03",
+      "system": "tfidf_fields_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-04",
+      "system": "tfidf",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-04",
+      "system": "tfidf_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-04",
+      "system": "tfidf_pivot",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-04",
+      "system": "tfidf_pivot_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-04",
+      "system": "bm25",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-04",
+      "system": "bm25_boost_syn",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-04",
+      "system": "tfidf_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-04",
+      "system": "tfidf_fields",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-04",
+      "system": "tfidf_fields_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-05",
+      "system": "tfidf",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-05",
+      "system": "tfidf_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-05",
+      "system": "tfidf_pivot",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-05",
+      "system": "tfidf_pivot_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-05",
+      "system": "bm25",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-05",
+      "system": "bm25_boost_syn",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-05",
+      "system": "tfidf_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-05",
+      "system": "tfidf_fields",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-05",
+      "system": "tfidf_fields_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-06",
+      "system": "tfidf",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-06",
+      "system": "tfidf_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-06",
+      "system": "tfidf_pivot",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-06",
+      "system": "tfidf_pivot_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-06",
+      "system": "bm25",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-06",
+      "system": "bm25_boost_syn",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-06",
+      "system": "tfidf_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-06",
+      "system": "tfidf_fields",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-06",
+      "system": "tfidf_fields_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-07",
+      "system": "tfidf",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-07",
+      "system": "tfidf_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-07",
+      "system": "tfidf_pivot",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-07",
+      "system": "tfidf_pivot_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-07",
+      "system": "bm25",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-07",
+      "system": "bm25_boost_syn",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-07",
+      "system": "tfidf_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-07",
+      "system": "tfidf_fields",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-07",
+      "system": "tfidf_fields_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-08",
+      "system": "tfidf",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-08",
+      "system": "tfidf_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-08",
+      "system": "tfidf_pivot",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-08",
+      "system": "tfidf_pivot_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-08",
+      "system": "bm25",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-08",
+      "system": "bm25_boost_syn",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-08",
+      "system": "tfidf_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-08",
+      "system": "tfidf_fields",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-08",
+      "system": "tfidf_fields_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-09",
+      "system": "tfidf",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-09",
+      "system": "tfidf_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-09",
+      "system": "tfidf_pivot",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-09",
+      "system": "tfidf_pivot_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-09",
+      "system": "bm25",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-09",
+      "system": "bm25_boost_syn",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-09",
+      "system": "tfidf_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-09",
+      "system": "tfidf_fields",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-09",
+      "system": "tfidf_fields_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-10",
+      "system": "tfidf",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-10",
+      "system": "tfidf_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-10",
+      "system": "tfidf_pivot",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-10",
+      "system": "tfidf_pivot_cov",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-10",
+      "system": "bm25",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-10",
+      "system": "bm25_boost_syn",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-10",
+      "system": "tfidf_proximity",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-10",
+      "system": "tfidf_fields",
+      "status": "ok",
+      "result_count": 10
+    },
+    {
+      "query_id": "course-10",
+      "system": "tfidf_fields_proximity",
+      "status": "ok",
+      "result_count": 10
+    }
+  ]
+}

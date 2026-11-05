@@ -1,4 +1,4 @@
-# Pentest Tool Search — 課程整合更新 v8
+# Pentest Tool Search — 課程整合更新 v8.1
 
 本機資安文件搜尋引擎。從 v7.1 的固定 980 頁公開資料出發，保留自寫倒排索引、TF-IDF 與 cosine，新增位置索引、欄位／鄰近度實驗及逐筆計分解釋。
 
@@ -18,14 +18,16 @@ python -B code/app.py
 
 開啟 http://127.0.0.1:5000/ 。預設為必做 TF-IDF cosine，無錯字修正、同義詞、pivot、覆蓋優先或欄位重排。若要比較加強功能，選 Compare enhancements，再選模型／開關並搜尋。點 Why this result 可查看 TF、DF、IDF、norm 與各詞分數貢獻。
 
+若 5000 已被其他服務占用，明確指定同一 Flask 應用的埠：`python -B -m flask --app code/app.py run --host 127.0.0.1 --port 5001`。本輪 macOS ControlCenter 占用 5000，因此實際預覽使用 5001。
+
 依賴鎖在 requirements.txt：requests 2.34.2、beautifulsoup4 4.15.0、Flask 3.1.3、pypinyin 0.55.0、Protego 0.7.0。缺少依賴會直接報錯，不靜默停用功能。
 
 ## 資料與來源
 
 - 上游 main 基底：`9c7c3a107b9712b5fc2f31d8d432a025be39f27a`，<https://github.com/AnnaHung306/search_engine>。
 - 原始 search-engine.zip、REPORT_DRAFT.docx、data/pages.json、data/index.json 與舊評估都保留。
-- 新索引：data/index-v8.json，schema 3，附 collection SHA-256。正常搜尋只讀新索引；不會在缺少新索引時偷偷改讀舊版。
-- 舊 Word 與 report/REPORT_DRAFT.md 是 **v7.1 歷史草稿**；本輪以 report/REPORT_V8.md 及 docs/changes/ 為準。
+- 目前索引：data/index-v8.1.json.gz，schema 4；literal offsets 採 gap/length varint，按需解碼，外層固定標頭 gzip。原 schema-3 index-v8.json 仍保留。缺少新索引或格式錯誤會直接報錯，不改讀舊檔。
+- 舊 Word 與 report/REPORT_DRAFT.md 是 **v7.1 歷史草稿**；v8 報告保留，後續進度見 report/PROGRESS_V8_1.md、人工待辦見 docs/HUMAN_HANDOFF.md。
 - 講義頁碼／作業條文與延伸來源見 [引用資料](docs/references.md)；每批改動見 [更新紀錄](docs/changes/README.md)。
 
 ## 爬蟲
@@ -37,10 +39,13 @@ python -B code/app.py
 ```sh
 python -B code/crawler.py --output data/crawls/new-crawl
 python -B code/crawler.py --output data/crawls/new-crawl --resume
-python -B code/indexer.py --pages data/crawls/new-crawl/pages.json --output data/index-new-crawl.json
+python -B code/indexer.py --pages data/crawls/new-crawl/pages.json --output data/index-new-crawl.json.gz
+IR_INDEX_PATH="$PWD/data/index-new-crawl.json.gz" python -B -m flask --app code/app.py run --host 127.0.0.1 --port 5002
 ```
 
-最後一行產生另一份索引；正式固定快照仍為 index-v8.json，切換研究資料必須另外凍結評估。本輪沒有重爬七站或把少量驗證頁替換成正式資料集。
+明確指定 `IR_INDEX_PATH` 才會切換資料。預設固定研究快照仍為原 data/pages.json 的 980 頁，不混入新資料。不同 collection 的舊評估會顯示不同資料集的提醒並隱藏成績。
+
+本輪已完整重爬七站，新快照另存 data/crawls/v8-live-20261105/：980 頁、1,027 實際 HTTP requests、485 頁有來源 meta description。逐站最小間隔、robots 拒絕、唯一性與來源 manifest 見 docs/changes/evidence/v8.1-live-crawl-audit.json。新舊資料即使頁數相同，也不是同一 collection，品質成績不能直接混比。
 
 每一個實際 HTTP 請求（含 robots、轉址各跳、失敗）共用 attempt budget、host 限速與紀錄。內容轉址送出前先檢查白名單／路徑／robots；robots metadata 可在白名單 host 上取得，不受內容路徑前綴限制。至少 2 秒，並遵守更長的 Crawl-delay／Request-rate 間距。500、429、timeout 等不會被當成允許爬取；受影響 host 在該次 crawl／resume 中暫停，需要新的 crawl 才重新嘗試。
 
@@ -60,13 +65,17 @@ URL 保留 query string、去 fragment，僅移除 scheme 對應的預設埠。�
 
 ```sh
 python -B code/evaluate.py --legacy-score
-python -B code/evaluate.py --dump --suite course
-python -B code/evaluate.py --dump --suite development
-python -B code/evaluate.py --dump --suite holdout
-python -B code/evaluate.py --timing --suite course
+python -B code/evaluate.py --dump --suite course --systems tfidf --output data/evaluation/my-course-required
+python -B code/evaluate.py --dump --suite development --output data/evaluation/my-development
+python -B code/evaluate.py --timing --suite course --output data/evaluation/my-timing
+python -B code/diagnostics.py --suite development --output experiments/my-development-diagnostics.json
 ```
 
 匯出不覆蓋既有結果；重新實驗用 `--output <新的資料夾>`。兩位組員各自完成 reviewer CSV、解決分歧後，才能 `--score`；完整步驟見 [評估流程](docs/evaluation.md)。
+
+已準備的精簡必做包在 data/evaluation/v8.1/course-required/：十題、純 cosine、50 組全文與兩份空白 reviewer 表。無需為了標註重新匯出。原九模型材料仍保留，人工工作依 docs/HUMAN_HANDOFF.md 分階段處理。`--systems` 只限制新匯出包的模型，預設九模型不變。
+
+diagnostics 只接受 course/development，產生排名重疊、文件長度與網站分布；這些描述統計不是相關性成績。holdout 保留作最後人工評估。舊 run_experiments.py 也改為新輸出目錄與 exclusive create，避免覆寫歷史資料。
 
 原六組固定查詢排名重現不變：0.46／0.72／0.84／0.80／0.80／0.74，僅為舊助手標註參考。新的 12 題開發集與 24 題 holdout 候選題已先凍結；需組員確認題目與獨立人工標註。不得為新方法的未知結果自動填 0 或填入好看的分數。
 
@@ -75,3 +84,5 @@ python -B code/evaluate.py --timing --suite course
 ### description 資料限制
 
 固定 v7.1 頁面只有 title/text，沒有獨立 meta description。v8 具備真實 description 的抽取、postings、norms 及位置／offset 儲存，但這 980 頁的 description 均空白，不以正文開頭或生成文字冒充。後續新資料集才能量測 description 的效果，需另凍結；目前欄位比較的 description 分量為零。
+
+新採集快照 485/980 頁有真實 meta description，其餘仍空白。已能驗證完整索引與搜尋流程；description 是否改善品質，仍待新資料集的人工評估，不能借用舊快照的標籤或 P@5。

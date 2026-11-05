@@ -9,6 +9,7 @@ import re
 from collections import defaultdict
 
 from preprocess import tokenize
+import offsets as offset_codec
 
 _WORD = re.compile(r"[a-z0-9]+(?:[+.#][a-z0-9]+)*[+#]*", re.IGNORECASE | re.ASCII)
 _JOINER = re.compile(r"[\s\-_/]+")
@@ -48,6 +49,7 @@ def build(docs):
                 postings[term].setdefault(str(doc_id), {}).setdefault(field, []).append(position)
                 for normalized in tokenize(term):
                     aliases[normalized].add(term)
+            offsets[str(doc_id)][field] = offset_codec.encode(field_offsets)
     return dict(postings), {term: sorted(forms) for term, forms in aliases.items()}, offsets
 
 
@@ -93,10 +95,11 @@ def _minimum_window(lists):
     return best
 
 
-def proximity(index, doc_id, terms):
+def proximity(index, doc_id, terms, *, include_offsets=True):
     """Return closeness in [0,1] and its evidence, independent of ranker scores."""
     terms = set(terms)
     best = {"closeness": 0.0, "field": None, "window": None, "terms": []}
+    best_positions = None
     if len(terms) < 2:
         return best
     for field in ("title", "description", "body"):
@@ -112,7 +115,10 @@ def proximity(index, doc_id, terms):
         closeness = len(lists) / len(terms) * min(1.0, (len(lists) - 1) / max(1, span))
         if closeness > best["closeness"]:
             best = {"closeness": closeness, "field": field, "window": span,
-                    "terms": sorted(lists),
-                    "character_span": [index["position_offsets"][str(doc_id)][field][start][0],
-                                       index["position_offsets"][str(doc_id)][field][end][1]]}
+                    "terms": sorted(lists)}
+            best_positions = start, end
+    if include_offsets and best_positions is not None:
+        spans = offset_codec.decode(index["position_offsets"][str(doc_id)][best["field"]])
+        start, end = best_positions
+        best["character_span"] = [spans[start][0], spans[end][1]]
     return best

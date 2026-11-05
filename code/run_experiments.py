@@ -1,37 +1,46 @@
-"""run_experiments.py — run the 10 frozen queries under each ranking variant
-and save top-5 per variant to experiments/<name>.json for before/after comparison."""
-import json, os
-import search as se
-import evaluate as ev
+"""Three historical ranking variants, written to a NEW directory. TP §6.
 
-OUT = os.path.join(os.path.dirname(__file__), "..", "experiments")
-os.makedirs(OUT, exist_ok=True)
+For the frozen nine-system human evaluation use evaluate.py. This helper never
+replaces historical experiment files and makes no new relevance claims.
+"""
+import argparse
+import json
+from pathlib import Path
+
+import evaluation as ev
+import search as se
 
 VARIANTS = {
-    "v0b_tfidf_rerun":       ("tfidf", 0.0),
-    "v2_bm25":               ("bm25", 0.0),
-    "v3_bm25_title":         ("bm25", 0.5),   # multiplicative title boost
+    'v0b_tfidf_rerun': ('tfidf', 0.0),
+    'v2_bm25': ('bm25', 0.0),
+    'v3_bm25_title': ('bm25', 0.5),
 }
-# v4 (= v3 + synonyms) is the default in search.py; run_experiments turns
-# synonyms OFF for v0b-v3 so those stay comparable. See v4_bm25_title_synonyms.json
-# (v1 additive title boost was a failed experiment; its results are kept in
-#  experiments/v1_tfidf_title_additive.json)
 
-def run(name, model, boost):
-    res, times = {}, []
-    for q, _, _ in ev.QUERIES:
-        r = se.search(q, top_k=5, model=model, title_boost=boost, use_synonyms=False)
-        times.append(r["elapsed_ms"])
-        res[q] = [(h["url"].replace("https://", ""), h["score"]) for h in r["results"]]
-    json.dump({"model": model, "title_boost": boost, "avg_ms": sum(times)/len(times),
-               "results": res}, open(os.path.join(OUT, name + ".json"), "w"), indent=1)
-    return res, sum(times)/len(times)
 
-if __name__ == "__main__":
+def run(output):
+    output = Path(output)
+    if output.exists() and any(output.iterdir()):
+        raise FileExistsError('Choose a new experiment directory; historical outputs are preserved')
+    suite, suite_hash = ev.load_suite('course')
+    index = se.load_index()
+    output.mkdir(parents=True, exist_ok=True)
     for name, (model, boost) in VARIANTS.items():
-        res, ms = run(name, model, boost)
-        print(f"===== {name} (model={model}, title_boost={boost}) avg {ms:.1f} ms")
-        for q, v in res.items():
-            print("##", q)
-            for i, (u, s) in enumerate(v, 1):
-                print(f"   {i}. {s:.3f} {u}")
+        results, times = {}, []
+        for query in suite['queries']:
+            response = se.search(query['query'], top_k=5, model=model, title_boost=boost, use_synonyms=False)
+            times.append(response['elapsed_ms'])
+            results[query['query']] = [(h['url'], h['score']) for h in response['results']]
+        record = {'model': model, 'title_boost': boost, 'avg_ms': sum(times) / len(times),
+                  'results': results, 'quality_status': 'unjudged; not a new P@5 result',
+                  'suite_sha256': suite_hash, 'index_sha256': ev.digest(se.INDEX_PATH),
+                  'collection_sha256': index['collection_sha256']}
+        with (output / (name + '.json')).open('x', encoding='utf-8') as stream:
+            json.dump(record, stream, ensure_ascii=False, indent=2)
+    return {'output': str(output), 'variants': list(VARIANTS), 'queries': len(suite['queries'])}
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', default=str(ev.ROOT / 'experiments/v8.1-legacy-variants'))
+    args = parser.parse_args()
+    print(json.dumps(run(args.output), indent=2))

@@ -1,9 +1,11 @@
 """Self-written TF-IDF index, field norms and literal positions. TP §3; U1/U4.
 
-Builds index-v8.json from the preserved pages.json; the v7.1 index is unchanged.
+Builds schema-4 index-v8.1.json.gz; historical indexes remain unchanged.
 """
 import argparse
+import gzip
 import hashlib
+import io
 import json
 import math
 from collections import Counter
@@ -13,11 +15,12 @@ from preprocess import tokenize
 from clean import clean_text, is_hub
 from weighting import log_tf
 import positions
+import offsets as offset_codec
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 PAGES_PATH = DATA_DIR / "pages.json"
-INDEX_PATH = DATA_DIR / "index-v8.json"
-SCHEMA_VERSION = 3
+INDEX_PATH = DATA_DIR / "index-v8.1.json.gz"
+SCHEMA_VERSION = 4
 
 
 def build_index(pages, collection_hash):
@@ -63,7 +66,8 @@ def build_index(pages, collection_hash):
         "df": df, "idf": idf, "norms": norms, "doc_len": lengths,
         "title_len": title_lengths, "avg_dl": sum(lengths) / total,
         "avg_norm": sum(norms) / total, "title_norms": title_norms, "body_norms": body_norms,
-        "positions": literal_positions, "position_aliases": aliases, "position_offsets": offsets}
+        "positions": literal_positions, "position_aliases": aliases, "position_offsets": offsets,
+        "position_offset_encoding": offset_codec.ENCODING}
 
 
 def build(pages_path=PAGES_PATH, output=INDEX_PATH):
@@ -72,7 +76,13 @@ def build(pages_path=PAGES_PATH, output=INDEX_PATH):
     output = Path(output)
     output.parent.mkdir(parents=True, exist_ok=True)
     temporary = output.with_suffix(".tmp")
-    temporary.write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    with temporary.open("wb") as raw:
+        if output.suffix == ".gz":
+            with gzip.GzipFile(filename="", fileobj=raw, mode="wb", compresslevel=6, mtime=0) as compressed:
+                with io.TextIOWrapper(compressed, encoding="utf-8") as text:
+                    json.dump(index, text, ensure_ascii=False, separators=(",", ":"))
+        else:
+            raw.write(json.dumps(index, ensure_ascii=False, separators=(",", ":")).encode("utf-8"))
     temporary.replace(output)
     print(f"Indexed {index['N']} docs, {len(index['postings'])} terms; {output.stat().st_size:,} bytes -> {output}")
     return index

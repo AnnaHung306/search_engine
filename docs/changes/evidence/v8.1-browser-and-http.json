@@ -1,0 +1,64 @@
+{
+  "http_checks": [
+    {
+      "url": "http://127.0.0.1:5001/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5001/?q=sql+sql+sql+injection+tool",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5001/?q=%22port+scan%22+-metasploit",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5001/?q=zxqvnonexistentzz",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5001/?q=%E7%84%A1%E7%BC%90+%E7%A0%B4%E8%A7%A3&mode=experiment&fuzzy=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5001/?q=tool&mode=experiment&model=bm25&fields=1",
+      "status": 400
+    },
+    {
+      "url": "http://127.0.0.1:5001/documents/0",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5001/documents/99999",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:5001/evaluation",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5001/evaluation/course/reviewer-a.csv",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5002/evaluation",
+      "status": 200,
+      "different_collection_states": 3
+    }
+  ],
+  "query_html_escaped": true,
+  "browser_flow": "normal homepage form -> fields+proximity -> score explanation -> indexed full text -> evaluation different_collection on fresh snapshot; original fixed snapshot repeated query validated",
+  "screenshot": "preview-live-v8.1.png",
+  "preview": {
+    "fixed_980": "http://127.0.0.1:5001/",
+    "fresh_980": "http://127.0.0.1:5002/"
+  },
+  "acceptance": "pending user confirmation",
+  "observed_fresh_data_experiment_query": {
+    "query": "sql injection tool",
+    "options": "fields+proximity, explain=True",
+    "before_deferring_offsets_ms": 292.0,
+    "after_deferring_offsets_ms": 9.6,
+    "note": "single visible browser observations; earlier request overlapped full verification; not a controlled timing comparison"
+  }
+}

@@ -56,16 +56,34 @@ def load_suite(name):
     return suite, expected["sha256"]
 
 
-def export(name, output):
+def load_manifest(output):
+    """Validate the shared display/run metadata before any caller uses fields."""
+    manifest = json.loads((Path(output) / "manifest.json").read_text())
+    hashes = ("suite_sha256", "index_sha256", "collection_sha256", "systems_sha256",
+              "runs_sha256", "review_html_sha256")
+    if (not isinstance(manifest, dict) or type(manifest.get("pool_size")) is not int or
+            manifest["pool_size"] < 0 or manifest.get("suite") not in ("course", "development", "holdout") or
+            not isinstance(manifest.get("systems"), dict) or not manifest["systems"] or
+            not all(isinstance(manifest.get(key), str) and len(manifest[key]) == 64 and
+                    all(c in "0123456789abcdef" for c in manifest[key]) for key in hashes)):
+        raise ValueError("Invalid frozen experiment manifest structure")
+    return manifest
+
+
+def export(name, output, systems=None):
     """One final run per output directory. Never overwrite labels or prior runs."""
     suite, suite_hash = load_suite(name)
+    selected = list(SYSTEMS) if systems is None else list(systems)
+    if not selected or len(set(selected)) != len(selected) or any(s not in SYSTEMS for s in selected):
+        raise ValueError("Choose distinct known systems for this frozen review pool")
+    selected_systems = {name: SYSTEMS[name] for name in selected}
     index = search.load_index()
     output = Path(output)
     if output.exists() and any(output.iterdir()):
         raise FileExistsError("Use a new output directory; existing runs and human work are preserved")
     output.mkdir(parents=True, exist_ok=True)
     runs, pool = [], {}
-    for system, options in SYSTEMS.items():
+    for system, options in selected_systems.items():
         for query in suite["queries"]:
             hits = search.search(query["query"], top_k=5, **options)["results"]
             for rank in range(1, 6):
@@ -102,8 +120,8 @@ def export(name, output):
     (output / "review.html").write_text("\n".join(parts), encoding="utf-8")
     manifest = {"suite": name, "suite_sha256": suite_hash,
                 "index_sha256": digest(search.INDEX_PATH), "collection_sha256": index["collection_sha256"],
-                "systems": SYSTEMS, "systems_sha256": hashlib.sha256(json.dumps(
-                    SYSTEMS, sort_keys=True).encode()).hexdigest(),
+                "systems": selected_systems, "systems_sha256": hashlib.sha256(json.dumps(
+                    selected_systems, sort_keys=True).encode()).hexdigest(),
                 "code_sha256": {p.name: digest(p) for p in sorted((ROOT / "code").glob("*.py"))},
                 "runs_sha256": digest(output / "runs.csv"),
                 "review_html_sha256": digest(output / "review.html"),
@@ -132,7 +150,7 @@ def _labels(path):
 
 
 def _verified_run(output):
-    manifest = json.loads((output / "manifest.json").read_text())
+    manifest = load_manifest(output)
     if digest(output / "runs.csv") != manifest["runs_sha256"]:
         raise ValueError("Run file changed after freezing")
     if digest(output / "review.html") != manifest["review_html_sha256"]:
@@ -145,9 +163,17 @@ def _verified_run(output):
     return manifest, suite, read_csv(output / "runs.csv")
 
 
-def displayed_score(output):
+def displayed_score(output, collection_sha256=None):
     """Explicit pending/current/stale states; never display an old score as current."""
     output = Path(output)
+    try:
+        manifest = load_manifest(output)
+    except FileNotFoundError:
+        return None, "pending"
+    except ValueError:
+        return None, "stale"
+    if collection_sha256 is not None and manifest["collection_sha256"] != collection_sha256:
+        return None, "different_collection"
     if not (output / "scores.json").exists():
         return None, "pending"
     try:
