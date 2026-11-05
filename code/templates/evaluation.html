@@ -1,15 +1,17 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><title>Evaluation &amp; review</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<nav><a href="/">Search</a><a href="/evaluation">Evaluation &amp; review</a></nav>
-<h1>Evaluation &amp; review</h1>
+{% extends "base.html" %}
+{% block title %}搜尋品質評估{% endblock %}
+{% block content %}
+<section class="content-page">
+<p class="eyebrow">課程語料 · 評估紀錄</p>
+<h1>搜尋品質評估</h1>
 <p>Precision@5 uses frozen queries, one fixed collection and content-based relevance judgments. Missing rank positions count as nonrelevant; unjudged returned documents stop scoring.</p>
 <h2>Language-model assessment</h2>
 <p>Relevance assessed by a language model at the user's request. These results are recorded as model judgments, separately from human review.</p>
 {% if model_score_state=='current' %}
 <p>{{ model_summary.pair_count }} query-document pairs, {{ model_summary.document_count }} full indexed documents. Selected using development queries: <strong>{{ model_summary.selected_on_development }}</strong>. Confidence labels are subjective, not calibrated probabilities.</p>
 {% if model_summary.model_self_review_corrections %}<p>{{ model_summary.model_self_review_corrections }} documented model self-review corrections; the first pass is preserved. <a href="{{ url_for('model_asset',asset='adjudications.json') }}">Review decisions &amp; scope</a></p>{% endif %}
-<table><tr><th>System</th><th>Course mean P@5</th><th>Development mean P@5</th><th>Holdout mean P@5</th></tr>
-{% for system,value in model_summary.mean_precision_at_5.course.items() %}<tr><td>{{ system }}</td><td>{{ '%.3f'|format(value) }}</td><td>{{ '%.3f'|format(model_summary.mean_precision_at_5.development[system]) }}</td><td>{{ '%.3f'|format(model_summary.mean_precision_at_5.holdout[system]) }}</td></tr>{% endfor %}</table>
+<div class="table-scroll" tabindex="0" aria-label="評估分數"><table><tr><th>System</th><th>Course mean P@5</th><th>Development mean P@5</th><th>Holdout mean P@5</th></tr>
+{% for system,value in model_summary.mean_precision_at_5.course.items() %}<tr><td>{{ system }}</td><td>{{ '%.3f'|format(value) }}</td><td>{{ '%.3f'|format(model_summary.mean_precision_at_5.development[system]) }}</td><td>{{ '%.3f'|format(model_summary.mean_precision_at_5.holdout[system]) }}</td></tr>{% endfor %}</table></div>
 <p><a href="{{ url_for('model_asset',asset='llm_judgments.csv') }}">Model labels, reasons &amp; evidence</a> · <a href="{{ url_for('model_asset',asset='policy.json') }}">Frozen judgment rules</a> · <a href="{{ url_for('model_asset',asset='scores.json') }}">Model score evidence</a></p>
 {% elif model_score_state=='different_collection' %}<p>Model assessment belongs to a different collection from the current search; its scores are hidden.</p>
 {% elif model_score_state=='stale' %}<p>Model assessment evidence changed; old model scores are hidden.</p>
@@ -18,9 +20,10 @@
 <p>The separate human-review workflow requires two independently completed reviews and explicit adjudication of disagreements. The tool checks records and declared provenance; it cannot authenticate reviewers’ identities.</p>
 {% for suite in suites %}
 <h2>{{ suite.name }} · {{ suite.count }} queries</h2><p>{{ suite.role }}</p>
-{% if suite.scores %}<table><tr><th>System</th><th>Mean P@5</th></tr>{% for system,value in suite.scores.items() %}<tr><td>{{ system }}</td><td>{{ '%.3f'|format(value) }}</td></tr>{% endfor %}</table>
+{% if suite.scores %}<div class="table-scroll" tabindex="0" aria-label="評估分數"><table><tr><th>System</th><th>Mean P@5</th></tr>{% for system,value in suite.scores.items() %}<tr><td>{{ system }}</td><td>{{ '%.3f'|format(value) }}</td></tr>{% endfor %}</table></div>
 {% else %}<p><strong>{% if suite.score_state=='stale' %}Experiment records changed — old scores are hidden. Restore the frozen records or create a new run.{% elif suite.score_state=='different_collection' %}These frozen review materials belong to a different collection from the current search. Their scores do not evaluate the current collection.{% else %}Pending human review — final quality score unavailable.{% endif %}</strong>{% if suite.pool is not none %} {{ suite.pool }} query-document pairs prepared for blind review.{% endif %}</p>{% endif %}
 {% if suite.pool is not none %}<p><a href="{{ url_for('review_asset',suite=suite.name,asset='review.html') }}">Read blinded full texts</a> · <a href="{{ url_for('review_asset',suite=suite.name,asset='reviewer-a.csv') }}">Reviewer A CSV</a> · <a href="{{ url_for('review_asset',suite=suite.name,asset='reviewer-b.csv') }}">Reviewer B CSV</a></p>{% endif %}
 {% endfor %}
 <p>The v7.1 assistant-labeled results remain historical reference: TF-IDF 0.46, pivot 0.84, BM25 0.80. Reproducing those numbers does not establish independent human validation.</p>
-</html>
+</section>
+{% endblock %}

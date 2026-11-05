@@ -40,9 +40,10 @@ import os
 import re
 import sys
 import time
+from collections import Counter
+from functools import lru_cache
 
 from preprocess import tokenize
-from collections import Counter
 from weighting import log_tf, vector, norm
 import positions
 import query_intent
@@ -66,20 +67,19 @@ TITLE_BOOST = 0.5          # value used when title boost is switched on
 PIVOT_SLOPE = 0.2          # v6: slope used when pivoted normalization is switched on
                            # (chosen up front as a common literature value, NOT tuned)
 
-_INDEX = None
+def load_index(path=None):
+    return _read_index(os.path.abspath(path if path is not None else INDEX_PATH))
 
 
-def load_index():
-    global _INDEX
-    if _INDEX is None:
-        opener = gzip.open if str(INDEX_PATH).endswith(".gz") else open
-        with opener(INDEX_PATH, "rt", encoding="utf-8") as f:
-            _INDEX = json.load(f)
-        if (_INDEX.get("schema_version") != 4 or
-                _INDEX.get("position_offset_encoding") != offsets.ENCODING):
-            _INDEX = None
-            raise ValueError("Index schema mismatch; run python code/indexer.py")
-    return _INDEX
+@lru_cache(maxsize=2)
+def _read_index(path):
+    opener = gzip.open if path.endswith(".gz") else open
+    with opener(path, "rt", encoding="utf-8") as f:
+        index = json.load(f)
+    if (index.get("schema_version") != 4 or
+            index.get("position_offset_encoding") != offsets.ENCODING):
+        raise ValueError("Index schema mismatch; run python code/indexer.py")
+    return index
 
 
 def parse_query(raw):
@@ -117,12 +117,13 @@ def phrase_regex(ph):
 
 def search(query, top_k=10, model="tfidf", title_boost=0.0, use_synonyms=False,
            pivot=0.0, use_fuzzy=False, coverage=False,
-           proximity_weight=0.0, field_weight=0.0, explain=False, intent=None, gtfo_mode=None):
+           proximity_weight=0.0, field_weight=0.0, explain=False, intent=None, gtfo_mode=None,
+           *, index_path=None):
     """title_boost=0.0, use_synonyms=False, pivot=0.0, use_fuzzy=False give the
     required pure TF-IDF cosine."""
     use_syn = use_synonyms
     boost = title_boost
-    idx = load_index()            # loaded once; not counted in query time
+    idx = load_index(index_path)  # cached by snapshot; not counted in query time
     t0 = time.perf_counter()
     zh_fixes = {}
     if use_fuzzy:

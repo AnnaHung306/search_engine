@@ -130,6 +130,8 @@ IR_INDEX_PATH=data/gtfo-v8.5/index.json.gz python -B code/append_evaluation.py s
 
 另建 986 頁快照，使用明確來源篩選與同一範例的操作、權限證據。兩版在相同快照上的 12 道新題 P@5 從 0.1833 提升至 0.6333。 [v8.6 報告](report/GTFO_WRITE_EFFECTS_V8_6.md)
 
+本機搜尋頁的「v8.6 實驗」可用同一份語料切換 v8.5 與 v8.6，並展開實際例子。現場步驟見 [五分鐘操作卡](report/DEMO_SCRIPT_V8_6.md)。
+
 ```sh
 IR_INDEX_PATH=data/gtfo-v8.6/index.json.gz python -B code/search.py --bm25 --write-effects 'GTFOBins sudo overwrite a local file'
 IR_INDEX_PATH=data/gtfo-v8.6/index.json.gz python -B code/search.py --bm25 --write-effects 'outside GTFOBins append to a local file with sudo'

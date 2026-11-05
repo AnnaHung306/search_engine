@@ -1,86 +1,121 @@
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Pentest Tool Search</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-  <h1>🛡️ Pentest Tool Search</h1>
-  <div class="tag">A mini search engine over Kali / Nmap / Metasploit / Wireshark / mitmproxy / Frida / GTFOBins docs — type a security problem in English (basic Chinese keywords work too).</div>
-  <nav><a href="/">Search</a><a href="/evaluation">Evaluation &amp; review</a></nav>
-  <p class="mode"><strong>{{ 'Required baseline' if mode=='baseline' else 'Experiment' }}</strong> · {{ mode_description }}</p>
-  {% if error %}<p class="note error">{{ error }}</p>{% endif %}
-  <form method="get" action="/">
-    <div class="mode"><label>Search mode <select name="mode">
-      <option value="baseline" {{ 'selected' if mode=='baseline' }}>Required TF-IDF cosine</option>
-      <option value="experiment" {{ 'selected' if mode=='experiment' }}>Compare enhancements</option>
-    </select></label></div>
-    <input type="text" name="q" value="{{ q|e }}" autofocus placeholder="e.g. wifi password cracking / 破解 wifi 密碼">
-    <button type="submit">Search</button>
-    <div class="models">
-      Ranking:
-      <label><input type="radio" name="model" value="tfidf" {{ 'checked' if model=='tfidf' }}> TF-IDF cosine (required)</label>
-      <label><input type="radio" name="model" value="bm25" {{ 'checked' if model=='bm25' }}> BM25 (bonus)</label>
-      &nbsp;·&nbsp;<label><input type="checkbox" name="boost" value="1" {{ 'checked' if boost }}> title boost</label>
-      <label><input type="checkbox" name="syn" value="1" {{ 'checked' if syn }}> synonym expansion</label>
-      <label><input type="checkbox" name="pivot" value="1" {{ 'checked' if pivot }}> pivoted length norm (TF-IDF)</label>
-      <label><input type="checkbox" name="cov" value="1" {{ 'checked' if cov }}> more query words first</label>
-      <label><input type="checkbox" name="fuzzy" value="1" {{ 'checked' if fuzzy }}> typo tolerance</label>
-      <label><input type="checkbox" name="proximity" value="1" {{ 'checked' if proximity }}> proximity (0.3)</label>
-      <label><input type="checkbox" name="fields" value="1" {{ 'checked' if fields }}> field cosine (title 2 : description 1 : body 1)</label>
-    </div>
-  </form>
-  <div class="ex">Try:
-    <a href="/?q=sql+injection+tool">sql injection tool</a>
-    <a href="/?q=network+packet+sniffer">network packet sniffer</a>
-    <a href='/?q="port+scan"+-metasploit'>"port scan" -metasploit</a>
-    <a href="/?mode=experiment&amp;fuzzy=1&amp;q=intercept+https+trafic">intercept https trafic</a>
-    <a href="/?mode=experiment&amp;fuzzy=1&amp;q=無缐+破解">無缐 破解</a>
+{% extends "base.html" %}
+{% block content %}
+<section class="search-hero{% if q %} is-compact{% endif %}">
+  <div class="hero-copy">
+    <p class="eyebrow">{{ 'V8.6　寫入效果實驗' if mode == 'effects' else 'TERM PROJECT I　／　WEB SEARCH ENGINE' }}</p>
+    <h1>{{ '寫入效果搜尋' if mode == 'effects' else '資安文件搜尋' }}</h1>
+    <p class="hero-description">{{ '在相同語料上比較 v8.5 與 v8.6，查看附加、覆寫和刪檔的原文證據。' if mode == 'effects' else '用關鍵字找工具、技術與操作文件，展開結果就能查看排序依據。' }}</p>
   </div>
-  <div class="meta">Indexed pages: {{ num_indexed }}{% if elapsed is not none %} · search time {{ '%.1f'|format(elapsed) }} ms (excl. index load){% endif %}{% if terms %} · terms: {{ terms }}{% endif %}{% if expanded %} · + synonyms: {{ expanded }}{% endif %}</div>
+  <div class="index-stat"><span>索引文件</span><strong>{{ num_indexed }}</strong><small>{{ 'v8.6 實驗語料' if mode == 'effects' else '搜尋語料' }}</small></div>
+  <form class="search-form" method="get" action="{{ url_for('home') }}">
+    <label class="sr-only" for="query">搜尋資安文件</label>
+    <div class="search-bar">
+      <img src="{{ url_for('static', filename='icon.svg') }}" alt="" width="32" height="32">
+      <input type="search" name="q" id="query" value="{{ q }}" maxlength="512" placeholder="{{ 'outside GTFOBins append to a local file with sudo' if mode == 'effects' else '例如 sql injection tool' }}">
+      <button type="submit">搜尋 <span aria-hidden="true">↗</span></button>
+    </div>
+    <div class="search-controls">
+      <label for="search-mode">模式</label>
+      <select id="search-mode" name="mode">
+        <option value="baseline" {{ 'selected' if mode == 'baseline' }}>課程基準 · TF-IDF</option>
+        <option value="experiment" {{ 'selected' if mode == 'experiment' }}>排序比較 · 980 頁基準</option>
+        <option value="effects" {{ 'selected' if mode == 'effects' }}>寫入效果 · v8.6 語料</option>
+      </select>
+      <label class="effect-options">版本
+        <select name="variant">
+          <option value="effects" {{ 'selected' if variant == 'effects' }}>v8.6 · 同例效果證據</option>
+          <option value="append" {{ 'selected' if variant == 'append' }}>v8.5 · 對照排序</option>
+        </select>
+      </label>
+    </div>
+    <details class="advanced">
+      <summary>排序比較設定</summary>
+      <fieldset>
+        <legend>排序方法</legend>
+        <label><input type="radio" name="model" value="tfidf" {{ 'checked' if model == 'tfidf' or mode == 'effects' }}> TF-IDF cosine</label>
+        <label><input type="radio" name="model" value="bm25" {{ 'checked' if model == 'bm25' and mode != 'effects' }}> BM25</label>
+      </fieldset>
+      <fieldset>
+        <legend>選擇加強項目</legend>
+        <div class="check-grid">
+          <label><input type="checkbox" name="boost" value="1" {{ 'checked' if boost }}> 標題加權</label>
+          <label><input type="checkbox" name="syn" value="1" {{ 'checked' if syn }}> 同義詞擴展</label>
+          <label><input type="checkbox" name="pivot" value="1" {{ 'checked' if pivot }}> 長度正規化</label>
+          <label><input type="checkbox" name="cov" value="1" {{ 'checked' if cov }}> 命中詞數優先</label>
+          <label><input type="checkbox" name="fuzzy" value="1" {{ 'checked' if fuzzy }}> 錯字容忍</label>
+          <label><input type="checkbox" name="proximity" value="1" {{ 'checked' if proximity }}> 詞距加權</label>
+          <label><input type="checkbox" name="fields" value="1" {{ 'checked' if fields }}> 欄位 cosine</label>
+        </div>
+      </fieldset>
+    </details>
+  </form>
+  <div class="examples"><span>試試看</span>
+    {% for label, example in examples %}
+      <a href="{{ url_for('home', q=example, mode=mode, variant=variant) if mode == 'effects' else url_for('home', q=example) }}">{{ label }} <span aria-hidden="true">↗</span></a>
+    {% endfor %}
+  </div>
+</section>
 
-  {% if corrections %}
-    <p class="dym">Showing results for:
-      {% for src, fixed in corrections.items() %}<span>{{ src }} → <b>{{ fixed }}</b></span>{% if not loop.last %}, {% endif %}{% endfor %}
-    </p>
+{% if error %}
+<p class="notice error" role="alert">{{ error }}</p>
+{% elif status in ('oov', 'no_match') %}
+<section class="notice" aria-labelledby="empty-result">
+  <h2 id="empty-result">沒有符合的文件</h2>
+  <p>{{ '查詢詞未出現在索引中，可以試用上方的英文技術名稱。' if status == 'oov' else '可以縮短查詢，或調整片語與排除條件。' }}</p>
+</section>
+{% elif status == 'ok' %}
+<section class="results" aria-labelledby="results-title">
+  <header class="results-header">
+    <div><p class="eyebrow">{{ '相同語料的排序比較' if mode == 'effects' else '已索引文件' }}</p><h2 id="results-title">搜尋結果 <span>{{ results|length }}</span></h2></div>
+    <div class="result-controls">
+      <span class="metric">{{ '%.1f'|format(elapsed) }} ms <small>查詢時間</small></span>
+      {% if mode == 'effects' %}
+        <a class="subtle-button" href="{{ url_for('home', q=q, mode='effects', variant='append' if variant == 'effects' else 'effects') }}">切換至 {{ 'v8.5 對照' if variant == 'effects' else 'v8.6 證據排序' }} <span aria-hidden="true">↗</span></a>
+      {% endif %}
+    </div>
+  </header>
+  {% if write_effect %}
+  <p class="query-info">
+    {% if write_effect.effect %}操作 {{ write_effect.effect }}{% endif %}
+    {% if write_effect.context %}<span>權限 {{ write_effect.context }}</span>{% endif %}
+    {% if write_effect.exclude_gtfobins %}<span>排除 GTFOBins</span>{% endif %}
+    <span>{{ write_effect.matched_documents }} 筆有同例證據</span>
+  </p>
   {% endif %}
-  {% if status == 'empty' %}
-    <p class="note">Type something to search.</p>
-  {% elif status == 'oov' %}
-    <p class="note">None of your words are in the index. Try English tool/technique keywords
-      such as <i>port scan</i>, <i>sql injection</i>, or <i>password cracking</i>.</p>
-  {% elif status == 'no_match' %}
-    <p class="note">No matching pages found.</p>
-  {% elif status == 'ok' %}
-    <p class="meta">Showing {{ results|length }} result(s) with positive score.</p>
+  {% if corrections %}
+  <p class="query-info">已校正 {% for src, fixed in corrections.items() %}<span>{{ src }} → {{ fixed }}</span>{% endfor %}</p>
+  {% endif %}
+  {% if terms or expanded %}
+  <p class="tokens">查詢詞 {{ terms|join(' · ') }}{% if expanded %}　同義詞 {{ expanded|join(' · ') }}{% endif %}</p>
+  {% endif %}
+  <ol class="result-list">
     {% for h in results %}
-      <div class="hit">
-        {% if h.url.lower().startswith('http://') or h.url.lower().startswith('https://') %}<a href="{{ h.url }}" target="_blank" rel="noopener noreferrer">{{ h.title or h.url }}</a>{% else %}{{ h.title }}{% endif %}
-        <div class="url">{{ h.url }}</div>
-        <div class="score">score {{ '%.4f'|format(h.score) }} · rank {{ loop.index }}</div>
-        <div class="snippet">{{ h.snippet_html }}</div>
+    <li class="hit">
+      <div class="rank" aria-label="第 {{ loop.index }} 名">{{ '%02d'|format(loop.index) }}</div>
+      <article>
+        <header class="hit-heading">
+          <div>
+            <p class="source-url">{{ h.url }}</p>
+            <h3>{% if h.url.lower().startswith(('http://', 'https://')) %}<a href="{{ h.url }}" target="_blank" rel="noopener noreferrer">{{ h.title or h.url }}</a>{% else %}{{ h.title }}{% endif %}</h3>
+          </div>
+          <span class="hit-score"><b>{{ '%.4f'|format(h.score) }}</b><small>{{ 'BM25' if model == 'bm25' else 'COSINE' }}</small></span>
+        </header>
+        {% if h.example_text %}
+        <details class="evidence"><summary>查看同例證據</summary>
+          {% for example in h.example_text %}<pre>{{ example }}</pre>{% endfor %}
+        </details>
+        {% endif %}
+        <p class="snippet">{{ h.snippet_html }}</p>
         <div class="kw">
           {% for w in h.matched %}<span class="ok">✓ {{ w }}</span>{% endfor %}
-          {% if h.missing %}Missing: {% for w in h.missing %}<span class="miss">{{ w }}</span>{% endfor %}{% endif %}
+          {% if h.missing %}<span class="miss">未命中 {{ h.missing|join(' · ') }}</span>{% endif %}
         </div>
-        <a class="score" href="{{ url_for('document', doc_id=h.doc_id) }}">View indexed full text</a>
-        {% if h.explanation %}{% set e=h.explanation %}
-        <details class="explanation"><summary>Why this result? · score {{ '%.6f'|format(h.score) }}</summary>
-          <p>Base score {{ '%.6f'|format(e.base_score) }} → final {{ '%.6f'|format(e.final_score) }}.</p>
-          {% if e.model=='tfidf' %}<p>Query L2 norm {{ '%.6f'|format(e.query_norm) }}.
-          {% if e.field_weight %}Field L2 norms: body {{ '%.6f'|format(e.body_norm) }}, title {{ '%.6f'|format(e.title_norm) }}, description {{ '%.6f'|format(e.description_norm) }}. Field cosine: (body + description + {{ e.field_weight }} × title) / {{ 2+e.field_weight }}. An empty field contributes zero.
-          {% else %}Document L2 norm {{ '%.6f'|format(e.document_norm) }}.{% if e.pivot %} Pivot slope {{ e.pivot }}; collection average norm {{ '%.6f'|format(e.average_document_norm) }}; effective document norm {{ '%.6f'|format(e.effective_document_norm) }}.{% endif %}{% endif %}</p>{% else %}<p>BM25 k1=1.5, b=0.75; document length {{ e.document_length }}, collection average length {{ '%.6f'|format(e.average_document_length) }}. Table IDF = ln(1 + (N − DF + 0.5)/(DF + 0.5)), N={{ num_indexed }}. Query weights are log TF times optional expansion weights.</p>{% endif %}
-          {% if e.title_boost %}<p>Title multiplier {{ '%.6f'|format(e.title_multiplier) }} uses {{ e.title_boost }} per original query-term hit.</p>{% endif %}
-          {% if e.proximity %}<p>Proximity multiplier: 1 + {{ e.proximity_weight }} × {{ '%.4f'|format(e.proximity.closeness) }} · field {{ e.proximity.field or 'none' }} · position span {{ e.proximity.window }} · character span {{ e.proximity.character_span }}.</p>{% endif %}
-          {% if e.coverage_first %}<p>Coverage-first ordering is active: scores sort results within each coverage group.</p>{% endif %}
-          <table><thead><tr><th>Term</th><th>Document TF</th><th>Title TF</th><th>Description TF</th><th>DF</th><th>IDF</th><th>Query TF</th><th>Query multiplier</th><th>Query weight</th><th>Score contribution</th></tr></thead><tbody>
-          {% for term in e.terms %}<tr><td>{{ term.term }}</td><td>{{ term.tf }}</td><td>{{ term.title_tf }}</td><td>{{ term.description_tf }}</td><td>{{ term.df }}</td><td>{{ '%.5f'|format(term.idf) }}</td><td>{{ e.query_term_counts[term.term] }}</td><td>{{ e.query_multipliers[term.term] }}</td><td>{{ '%.5f'|format(term.query_weight) }}</td><td>{{ '%.6f'|format(term.contribution) }}</td></tr>{% endfor %}
-          </tbody></table><p>Contributions sum to the base score. Optional title/proximity multipliers are applied after it.</p>
-        </details>{% endif %}
-      </div>
+        <a class="document-link" href="{{ h.document_href }}">查看索引原文 <span aria-hidden="true">↗</span></a>
+        {% include "_score.html" %}
+      </article>
+    </li>
     {% endfor %}
-  {% endif %}
-</body>
-</html>
+  </ol>
+</section>
+{% endif %}
+{% endblock %}

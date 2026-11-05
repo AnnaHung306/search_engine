@@ -18,5 +18,6 @@
 | [012 GTFOBins 附加寫入](012-gtfo-append.md) | TP §6、U3、GTFO-APPEND／BASH-REDIR | 分開測量補收與排序，12 題 P@5 +8.33 個百分點 |
 | [013 覆寫、刪檔與站外附加](013-write-effects.md) | TP §6、U2／U3、GTFO-EFFECT／WRITE-TOOLS／EXT-APPEND | 效果與來源獨立，12 道新題 P@5 +45 個百分點 |
 | [014 補齊開發歷程](014-devlog-timeline.md) | 原始 ZIP 的 DEVLOG 第 1–13 節、v8～v8.6 更新紀錄 | 從選題到最新實驗的時間線，README 可直接開啟 |
+| [015 報告與現場展示前端](015-demo-polish.md) | Term Project I、DEVLOG、v8.6 評估 | 原搜尋入口可比較 986 頁實驗、查原文證據，附五分鐘操作卡 |
 
 來源的可查證連結見 [references.md](../references.md)。效能原始量測保留於 [evidence/latency-comparison.json](evidence/latency-comparison.json)。最終驗證、審查與待辦寫入 evidence/verification-summary.json；後續更新新增一批，不覆蓋前批結果。
