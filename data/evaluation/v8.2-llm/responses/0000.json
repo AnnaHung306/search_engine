@@ -1,0 +1,146 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "3a734ad603158e014c0925133abd21fa5820a9ce32dbe7c0e8a3c2e180d04808",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "f5fac9e073df61c66454c6510b4fc9fd400b696db30ddb2b1f6791b650a14a05",
+  "started_at": 1793848270.482131,
+  "finished_at": 1793848297.723352,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "07097add6c4220dd7488-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅表示擴充功能文件尚未完成並提及外部參考，未說明如何產生 payload。",
+        "evidence": "I’m yet to get the documentation done for this extension"
+      },
+      {
+        "decision_id": "48da5782e4b37fede793-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容說明擷取介面與遠端連線設定，未提供依 IP 篩選封包的方法。",
+        "evidence": "The “Pipes” tab lets you capture from a named pipe."
+      },
+      {
+        "decision_id": "801e9a90f59b2169bff5-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確說明 bash 透過 sudo 執行時不會捨棄取得的權限，符合 sudo 安全行為需求。",
+        "evidence": "Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped."
+      },
+      {
+        "decision_id": "059eea921172246047e5-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅介紹模組開發用 SQLi 函式庫，未記載終端使用者可操作的 SQL 注入工具。",
+        "evidence": "How to use in a module You’ll need to start off by including the library."
+      },
+      {
+        "decision_id": "62e5f7fb8a3540b649e1-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明 SQLi 函式庫整合方式，未提供自動偵測 SQL 注入的工具或流程。",
+        "evidence": "Next we create our SQLi object: sqli = create_sqli"
+      },
+      {
+        "decision_id": "32c353d28ac5f9a27ac4-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供以雜湊檔案及字典進行離線密碼破解的實際指令。",
+        "evidence": "hashcat -m 500 example500.hash /usr/share/wordlists/sqlmap.txt"
+      },
+      {
+        "decision_id": "a0d6a674e4494b680e37-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確記載 identify 選項，可列出輸入雜湊所支援的演算法。",
+        "evidence": "--identify | | Shows all supported algorithms for input hashes | --identify my.hash"
+      },
+      {
+        "decision_id": "c51a090499df3f1e3fb4-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "列出的是二進位檔連結的函式庫，未記載列舉程序實際載入原生模組的方法。",
+        "evidence": "-l Linked libraries"
+      },
+      {
+        "decision_id": "65050b33b801361d47ef-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "記載流量擷取及輸出檔案選項，符合將擷取封包存檔的規則。",
+        "evidence": "--output OUTPUT File name where the traffic will be recorded, default: not set"
+      },
+      {
+        "decision_id": "9b5577441c681685ab57-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確描述網路嗅探工具，可監聽介面流量並分析既有 pcap。",
+        "evidence": "The tool can also both listen to traffic on the interface and analyze already existing pcap files."
+      },
+      {
+        "decision_id": "1a1482e380aceacf8082-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹模組回報與資料儲存 API，未記載網頁漏洞掃描工具。",
+        "evidence": "report_web_vuln() - Reports a web application vulnerability."
+      },
+      {
+        "decision_id": "50f2e9db6f9428c25bed-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為模組開發的回報 API，未說明使用者如何選擇、設定及執行 exploit 模組。",
+        "evidence": "report_vuln() - Auxiliary and post modules that exercise a particular vulnerability should report_vuln() upon success."
+      },
+      {
+        "decision_id": "c986ee769bba4c87699e-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅說明模組內部回報行為，未提供使用或執行 exploit 模組的操作資訊。",
+        "evidence": "Note that exploit modules automatically report_vuln() as part of opening a session"
+      },
+      {
+        "decision_id": "9ad34de7f2a6746d9c9f-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅概述無線網路稽核功能，未明確記載 WPA 握手擷取或處理能力。",
+        "evidence": "airgeddon is a menu driven 3rd party tools wrapper to audit wireless networks with many features."
+      }
+    ]
+  }
+}

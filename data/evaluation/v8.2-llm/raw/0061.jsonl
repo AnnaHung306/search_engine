@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9bf-7f3c-7a61-9c4a-c64ac5cdd8d7"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"886e381e8e874e5cec06-8\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段介紹靜態分析、語言伺服器與編譯器選項，未提供網站內容或路徑列舉能力。\",\"evidence\":\"The clang static analyzer results viewer.\"},{\"decision_id\":\"d0f3b25012d7d22f6cd9-8\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段描述 C++ 編輯器功能與編譯分析，未說明執行中 Android 應用的 Java 方法掛鉤。\",\"evidence\":\"clangd understands your C++ code and adds smart features to your editor: code completion compile errors go-to-definition and more.\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":39793,"cached_input_tokens":25472,"cache_write_input_tokens":0,"output_tokens":189,"reasoning_output_tokens":0}}

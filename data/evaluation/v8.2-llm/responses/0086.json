@@ -1,0 +1,132 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "8bd78a3d05e9d8cbd753a543d8c98d901b03fd4620378a1b0008cde30a4ef94e",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "c6c030b2c783b0d70030fa9d4e2bb04db5ee6c6b19d6c40c8f0591822e02a434",
+  "started_at": 1793849083.608947,
+  "finished_at": 1793849108.545418,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "8a3c5d363f200c0d6272-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹模組說明文件的產生與撰寫，未說明如何產生 payload。",
+        "evidence": "You can now generate documentation for modules on the fly using the info -d command."
+      },
+      {
+        "decision_id": "93b0026d785495694512-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅示範載入 SMB 掃描模組並查看說明，未提供 exploit 模組的設定或執行流程。",
+        "evidence": "msf > use auxiliary/scanner/smb/smb_login msf ( smb_login )> info -d"
+      },
+      {
+        "decision_id": "fe7a082d69e82c459fb1-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "符合較寬的規則，實質解釋 Metasploit 模組說明的用途及查看方式。",
+        "evidence": "Module documentation allows you to see the help for a particular module from a web page, instead of from the command line."
+      },
+      {
+        "decision_id": "41e1dc84d1a78012873e-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確提供 WPA/WPA2 握手擷取檔的處理與密碼驗證功能。",
+        "evidence": "-hC, --handshake-capture HANDSHAKE_CAPTURE Capture of the WPA/WPA2 handshakes for verifying passphrase. Requires cowpatty."
+      },
+      {
+        "decision_id": "5744e6bac2d47ed3b02d-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確介紹以暴力枚舉尋找網站隱藏目錄與檔案的工具。",
+        "evidence": "DirBuster comes a total of 9 different lists, this makes DirBuster extremely effective at finding those hidden files and directories."
+      },
+      {
+        "decision_id": "79c4d37675030c810373-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容是網站目錄枚舉；JAR 是工具執行格式，未提供 DEX 轉換功能。",
+        "evidence": "DirBuster is a multi threaded java application designed to brute force directories and files names on web/application servers."
+      },
+      {
+        "decision_id": "dd10a78ab3e5ba396c0a-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "介紹網站目錄枚舉，並以停用遞迴的選項明確證實支援遞迴搜尋。",
+        "evidence": "-R : Don't be recursive, Default: Not Set"
+      },
+      {
+        "decision_id": "24231a571b81e513ea4b-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供可操作的 SQL 注入測試與利用工具，以及命令範例。",
+        "evidence": "t/test - test whether the injection is working"
+      },
+      {
+        "decision_id": "c48c77bde9ff25c3f7ce-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "記載自動執行注入測試的模式與設定檔用法，符合 SQLi 偵測／利用工具規則。",
+        "evidence": "Connect to the target in test mode ( -m t ) with the specified config file ( -f /root/sqlninja.conf ):"
+      },
+      {
+        "decision_id": "3ee8996513556206fb4a-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "範例涵蓋 TCP、SYN 與服務版本掃描，未解釋 UDP 掃描。",
+        "evidence": "Launches host enumeration and a TCP scan at the first half of each of the 255 possible eight-bit subnets"
+      },
+      {
+        "decision_id": "6163ea660c0f07b1abb4-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供使用 -sn 僅探索存活主機的流程與實際命令。",
+        "evidence": "# nmap -n -sn -T4 -iL 50K_IPs -oA 50KHosts_DefaultPing"
+      },
+      {
+        "decision_id": "ae560ebc7e2296d22919-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容探討網路主機探索與 ping 探測策略，未介紹網站目錄或隱藏內容搜尋。",
+        "evidence": "The TCP ping options are some of the most powerful discovery techniques in Nmap."
+      }
+    ]
+  }
+}

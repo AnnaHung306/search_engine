@@ -229,18 +229,18 @@ def adjudicate(output, resolutions=None):
     return agreement
 
 
-def score(output):
-    output = Path(output)
-    manifest, suite, runs = _verified_run(output)
-    # Consensus must be produced from both current independent reviewer files.
-    adjudicate(output, output / "resolutions.csv" if (output / "resolutions.csv").exists() else None)
-    labels = _labels(output / "consensus.csv")
+def precision_at_five(runs, queries, systems, labels):
+    """Shared arithmetic only; callers must validate judgment provenance first."""
     groups = defaultdict(list)
     for run in runs:
         groups[(run["system"], run["query_id"])].append(run)
+    expected = {(system, query["id"]) for system in systems for query in queries}
+    if not queries or not systems or len({q["id"] for q in queries}) != len(queries) or set(groups) != expected:
+        raise ValueError("Run must contain exactly the declared query/system groups")
     results = []
-    for system in manifest["systems"]:
-        for query in suite["queries"]:
+    totals = defaultdict(int)
+    for system in systems:
+        for query in queries:
             rows = groups[(system, query["id"])]
             if sorted(int(row["rank"]) for row in rows) != [1, 2, 3, 4, 5]:
                 raise ValueError("Each query/system must have five distinct rank positions")
@@ -250,11 +250,24 @@ def score(output):
                     key = (query["id"], row["url"])
                     if key not in labels:
                         raise ValueError(f"Unjudged result; scoring stopped: {key}")
-                    relevant += int(labels[key]["relevant"])
+                    label = labels[key]
+                    if type(label) is not int or label not in (0, 1):
+                        raise ValueError("Relevance must be binary 0/1")
+                    relevant += label
             results.append({"system": system, "query_id": query["id"],
                             "query": query["query"], "precision_at_5": relevant / 5})
-    means = {system: sum(r["precision_at_5"] for r in results if r["system"] == system) /
-             len(suite["queries"]) for system in manifest["systems"]}
+            totals[system] += relevant
+    means = {system: totals[system] / (5 * len(queries)) for system in systems}
+    return results, means
+
+
+def score(output):
+    output = Path(output)
+    manifest, suite, runs = _verified_run(output)
+    # Consensus must be produced from both current independent reviewer files.
+    adjudicate(output, output / "resolutions.csv" if (output / "resolutions.csv").exists() else None)
+    labels = {key: int(row["relevant"]) for key, row in _labels(output / "consensus.csv").items()}
+    results, means = precision_at_five(runs, suite["queries"], manifest["systems"], labels)
     write_csv(output / "scores.csv", results, list(results[0]))
     summary = {"mean_precision_at_5": means, "denominator": 5,
                "query_count": len(suite["queries"]),

@@ -1,0 +1,76 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "a1875ece18522072676bb9aeae4f59f1bacea716a493c8e14e187233f4ccb488",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "2188be9b91afef9f68a6caa9bde4510c5563abc42bf7814b42b78f87ffc79db6",
+  "started_at": 1793848704.854147,
+  "finished_at": 1793848716.839191,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "1af5d37b0a0e054913db-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "詳細說明 Wireshark 顯示過濾器，可篩選已擷取封包。",
+        "evidence": "Wireshark provides a display filter language that enables you to precisely control which packets are displayed."
+      },
+      {
+        "decision_id": "31700d17ad0873cc263c-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供依指定 IP 位址顯示來源或目的封包的具體語法。",
+        "evidence": "to only display packets to or from the IP address 192.168.0.1, use ip.addr==192.168.0.1"
+      },
+      {
+        "decision_id": "b25fe61d73e14cd72a06-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明記錄 TLS 金鑰並在 Wireshark 設定金鑰檔以解密封包的流程。",
+        "evidence": "You can specify the key file path in Wireshark via Edit -> Preferences -> Protocols -> TLS -> (Pre)-Master-Secret log filename ."
+      },
+      {
+        "decision_id": "b599d60507a0c1373800-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為 TLS 工作階段金鑰記錄與解密，未說明代理 CA 安裝或用戶端信任設定。",
+        "evidence": "The SSL/TLS master keys can be logged by mitmproxy so that external programs can decrypt SSL/TLS connections both from and to the proxy."
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "a373d101614f297d33236ba03d4a22f718fd77220798489aed6c5cb1350f1390",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "349f85d0c8a64110010afa8be46df63e4342a95bb51d60b5c89fdd2e265b6de3",
+  "started_at": 1793848702.499425,
+  "finished_at": 1793848715.266986,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "2b71c8d1301577bd8c21-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容說明網路跳板與 SOCKS 代理；略過憑證驗證的範例並非安裝代理 CA 或設定 TLS 信任。",
+        "evidence": "Metasploit can launch a SOCKS proxy server using the module: auxiliary/server/socks_proxy ."
+      },
+      {
+        "decision_id": "946eedea9eed683655ae-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確解釋 SYN 掃描如何依 SYN/ACK 或 RST 回應判斷連接埠狀態。",
+        "evidence": "The target machine will respond with a SYN/ACK (session request acknowledgment) packet if the port is open, and RST (reset) if the port is closed."
+      },
+      {
+        "decision_id": "98e42863fb7e4f5db70d-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容是利用殭屍主機進行閒置掃描，未提供依指定 IP 篩選已擷取封包的方法。",
+        "evidence": "Fundamentally, an idle scan consists of three steps that are repeated for each port:"
+      },
+      {
+        "decision_id": "a127bcb17bf42194df67-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確記載 Frida Go API 可附加至應用程式或程序，符合所需的附加能力。",
+        "evidence": "Attaching to applications/processes"
+      },
+      {
+        "decision_id": "6e56cb3e93138e96356c-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供 Nmap 掃描指令，並解說開放連接埠的服務探測流程。",
+        "evidence": "# nmap -sSV -T4 -F -d --version-trace insecure.org"
+      }
+    ]
+  }
+}

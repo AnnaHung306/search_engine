@@ -1,0 +1,91 @@
+system,query_id,query,precision_at_5
+tfidf,course-01,wifi password cracking,0.4
+tfidf,course-02,sql injection tool,0.2
+tfidf,course-03,port scanning techniques,0.4
+tfidf,course-04,intercept https traffic,0.2
+tfidf,course-05,web application vulnerability scanner,0.6
+tfidf,course-06,network packet sniffer,0.8
+tfidf,course-07,exploit metasploit module,0.2
+tfidf,course-08,decompile android apk,0.6
+tfidf,course-09,directory enumeration web server,0.4
+tfidf,course-10,reverse shell payload,0.2
+tfidf_cov,course-01,wifi password cracking,0.6
+tfidf_cov,course-02,sql injection tool,0.8
+tfidf_cov,course-03,port scanning techniques,0.6
+tfidf_cov,course-04,intercept https traffic,1.0
+tfidf_cov,course-05,web application vulnerability scanner,0.8
+tfidf_cov,course-06,network packet sniffer,1.0
+tfidf_cov,course-07,exploit metasploit module,0.4
+tfidf_cov,course-08,decompile android apk,0.6
+tfidf_cov,course-09,directory enumeration web server,0.8
+tfidf_cov,course-10,reverse shell payload,0.8
+tfidf_pivot,course-01,wifi password cracking,1.0
+tfidf_pivot,course-02,sql injection tool,0.6
+tfidf_pivot,course-03,port scanning techniques,1.0
+tfidf_pivot,course-04,intercept https traffic,0.8
+tfidf_pivot,course-05,web application vulnerability scanner,0.6
+tfidf_pivot,course-06,network packet sniffer,1.0
+tfidf_pivot,course-07,exploit metasploit module,0.8
+tfidf_pivot,course-08,decompile android apk,0.8
+tfidf_pivot,course-09,directory enumeration web server,0.6
+tfidf_pivot,course-10,reverse shell payload,1.0
+tfidf_pivot_cov,course-01,wifi password cracking,0.6
+tfidf_pivot_cov,course-02,sql injection tool,1.0
+tfidf_pivot_cov,course-03,port scanning techniques,1.0
+tfidf_pivot_cov,course-04,intercept https traffic,1.0
+tfidf_pivot_cov,course-05,web application vulnerability scanner,0.6
+tfidf_pivot_cov,course-06,network packet sniffer,1.0
+tfidf_pivot_cov,course-07,exploit metasploit module,0.8
+tfidf_pivot_cov,course-08,decompile android apk,0.8
+tfidf_pivot_cov,course-09,directory enumeration web server,1.0
+tfidf_pivot_cov,course-10,reverse shell payload,1.0
+bm25,course-01,wifi password cracking,0.8
+bm25,course-02,sql injection tool,0.6
+bm25,course-03,port scanning techniques,0.8
+bm25,course-04,intercept https traffic,1.0
+bm25,course-05,web application vulnerability scanner,0.6
+bm25,course-06,network packet sniffer,1.0
+bm25,course-07,exploit metasploit module,0.8
+bm25,course-08,decompile android apk,0.8
+bm25,course-09,directory enumeration web server,0.8
+bm25,course-10,reverse shell payload,1.0
+bm25_boost_syn,course-01,wifi password cracking,0.8
+bm25_boost_syn,course-02,sql injection tool,0.8
+bm25_boost_syn,course-03,port scanning techniques,1.0
+bm25_boost_syn,course-04,intercept https traffic,0.8
+bm25_boost_syn,course-05,web application vulnerability scanner,0.4
+bm25_boost_syn,course-06,network packet sniffer,1.0
+bm25_boost_syn,course-07,exploit metasploit module,1.0
+bm25_boost_syn,course-08,decompile android apk,0.8
+bm25_boost_syn,course-09,directory enumeration web server,0.8
+bm25_boost_syn,course-10,reverse shell payload,0.8
+tfidf_proximity,course-01,wifi password cracking,0.4
+tfidf_proximity,course-02,sql injection tool,0.4
+tfidf_proximity,course-03,port scanning techniques,0.6
+tfidf_proximity,course-04,intercept https traffic,0.2
+tfidf_proximity,course-05,web application vulnerability scanner,0.4
+tfidf_proximity,course-06,network packet sniffer,0.8
+tfidf_proximity,course-07,exploit metasploit module,0.6
+tfidf_proximity,course-08,decompile android apk,0.8
+tfidf_proximity,course-09,directory enumeration web server,0.4
+tfidf_proximity,course-10,reverse shell payload,0.2
+tfidf_fields,course-01,wifi password cracking,0.4
+tfidf_fields,course-02,sql injection tool,0.2
+tfidf_fields,course-03,port scanning techniques,0.8
+tfidf_fields,course-04,intercept https traffic,0.2
+tfidf_fields,course-05,web application vulnerability scanner,0.2
+tfidf_fields,course-06,network packet sniffer,0.6
+tfidf_fields,course-07,exploit metasploit module,1.0
+tfidf_fields,course-08,decompile android apk,0.4
+tfidf_fields,course-09,directory enumeration web server,0.2
+tfidf_fields,course-10,reverse shell payload,0.8
+tfidf_fields_proximity,course-01,wifi password cracking,0.4
+tfidf_fields_proximity,course-02,sql injection tool,0.2
+tfidf_fields_proximity,course-03,port scanning techniques,0.8
+tfidf_fields_proximity,course-04,intercept https traffic,0.4
+tfidf_fields_proximity,course-05,web application vulnerability scanner,0.2
+tfidf_fields_proximity,course-06,network packet sniffer,0.6
+tfidf_fields_proximity,course-07,exploit metasploit module,1.0
+tfidf_fields_proximity,course-08,decompile android apk,0.4
+tfidf_fields_proximity,course-09,directory enumeration web server,0.2
+tfidf_fields_proximity,course-10,reverse shell payload,0.8

@@ -1,0 +1,55 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "6c44ca94126ae459438ea40d914ef5925351906088445524115e08b6ef08efe8",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "b8c29abed596386342b26e609fd2dff101c3898c3a9f80509baa39283b6c514e",
+  "started_at": 1793848592.969791,
+  "finished_at": 1793848600.391018,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "2a0b9d4ae0e204e4afb3-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明允許程式立即啟動後再附加的設定，符合對執行中程序進行 Frida 插樁的需求。",
+        "evidence": "Specify resume if you would like the program to be allowed to start immediately, which is useful if you just want to be able to attach at a later time."
+      }
+    ]
+  }
+}

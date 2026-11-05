@@ -1,0 +1,202 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "0430959c80530a238afa674049402b2d11d12eed05430ffa51f000b40b4060ad",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "4a47c62735b67a13569f145177873eaf8a24f5b603f7d40298d927b8349f32d8",
+  "started_at": 1793848586.863977,
+  "finished_at": 1793848625.224319,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "dfb789d83c8f812adfc8-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供 Nmap SYN 掃描指令及掃描結果範例。",
+        "evidence": "Example 5.11. SYN scan of Docsrv # nmap -sS -T4 docsrv.caldera.com"
+      },
+      {
+        "decision_id": "0ae25b8f874bf85fb4aa-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "示範使用 sessions 指令進入既有 Metasploit 工作階段。",
+        "evidence": "sessions -i -1 [*] Starting interaction with 7..."
+      },
+      {
+        "decision_id": "364b437ea48e738c3a52-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "GTFOBins 條目明確記載 sudo 執行時保留權限的讀檔行為。",
+        "evidence": "Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped."
+      },
+      {
+        "decision_id": "2a5326c1ad85eeaff49c-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容介紹開啟封包擷取檔，未說明程序原生模組檢查。",
+        "evidence": "Wireshark can read in previously saved capture files."
+      },
+      {
+        "decision_id": "31407b39adb69c33245d-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "主要說明讀取檔案與支援格式，未解釋如何擷取並輸出或儲存封包。",
+        "evidence": "To read them, simply select the File → Open menu or toolbar item."
+      },
+      {
+        "decision_id": "a543fe05921fc0ab95d7-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明如何載入已擷取封包供 Wireshark 顯示分析，符合流量分析需求。",
+        "evidence": "The “Open Capture File” dialog box allows you to search for a capture file containing previously captured packets for display in Wireshark."
+      },
+      {
+        "decision_id": "e29b3ea4622c9b5dbc83-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅介紹 OS 偵測資料庫的用途，未解釋作業系統指紋辨識或偵測方法。",
+        "evidence": "nmap-os-db (OS detection database)"
+      },
+      {
+        "decision_id": "e72fed26a79f6494ba31-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅列出版本偵測探測資料庫，未解釋服務版本偵測。",
+        "evidence": "nmap-service-probes (version detection probe database)"
+      },
+      {
+        "decision_id": "0b8cb69b9716f6ae8edd-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "提供一般 CA 安裝入口，但未說明 Android 的憑證安裝或信任設定。",
+        "evidence": "Follow the instructions for your OS / system and install the CA."
+      },
+      {
+        "decision_id": "2262871f2402402ade58-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容是代理設定與 HTTP 流量檢查，未涉及 APK 資源。",
+        "evidence": "You need to configure your browser or device to route all traffic through mitmproxy."
+      },
+      {
+        "decision_id": "585db99af0f11d6e4aeb-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅說明啟動代理與檢視流量，未介紹回應編輯或回應 hook。",
+        "evidence": "it should show up as new flow and you can inspect it."
+      },
+      {
+        "decision_id": "76c0fd74039715bb2560-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "指示透過 mitm.it 安裝代理 CA，並驗證 TLS 流量可供檢查。",
+        "evidence": "You can check that your web traffic is going through mitmproxy by browsing to http://mitm.it"
+      },
+      {
+        "decision_id": "67acd076808de22a0885-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確提供目錄探索能力及字典檔路徑模糊測試範例。",
+        "evidence": "Fuzz file paths from wordlist.txt, match all responses but filter out those with content-size 42."
+      },
+      {
+        "decision_id": "3a92863ffedc0d819aa5-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "示範在 Android 應用程式中追蹤 Java 方法。",
+        "evidence": "Launch YouTube on your Android device and trace Java methods"
+      },
+      {
+        "decision_id": "9a123fb7655be2e9b34c-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "記載依名稱或 PID 附加既有程序的選項及範例。",
+        "evidence": "-p PID, --attach-pid PID attach to PID"
+      },
+      {
+        "decision_id": "8e06c7d993c4909122fc-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "工具用於 NTFS 檔案系統資料復原，未提供密碼雜湊破解。",
+        "evidence": "Scrounge NTFS is a data recovery program for NTFS filesystems."
+      },
+      {
+        "decision_id": "fda25663d5cda0ce3b4e-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹協助檢視與審查網頁應用的工具，未記載漏洞掃描功能。",
+        "evidence": "WebScarab is designed to be a tool for anyone who needs to expose the workings of an HTTP(S) based application"
+      },
+      {
+        "decision_id": "255d4a1ce80436294cad-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹 Penelope 的 shell 管理，未說明管理 Metasploit 工作階段。",
+        "evidence": "Penelope is a modern shell handler designed for penetration testers and CTF players."
+      },
+      {
+        "decision_id": "c83366aa693bdd4e96c3-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供反向 shell 接聽設定及顯示 payload 範例的選項。",
+        "evidence": "-a, --payloads Show sample reverse shell payloads for active Listeners"
+      },
+      {
+        "decision_id": "255f8e4be16f687aba10-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "記載以掃描與注入 payload 自動偵測 SQL 注入漏洞。",
+        "evidence": "Database Injection (PHP/ASP/JSP SQL Injections and XPath Injections)"
+      },
+      {
+        "decision_id": "b35f09116d36c6f207c8-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確介紹黑箱網頁漏洞掃描器及可偵測的漏洞。",
+        "evidence": "Wapiti allows you to audit the security of your web applications. It performs “black-box” scans"
+      },
+      {
+        "decision_id": "d74e6e527ff33c5d105f-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "記載搜尋危險檔案與備份腳本的功能，可探索未連結路徑。",
+        "evidence": "Search for potentially dangerous files on the server (thank to the Nikto db)"
+      }
+    ]
+  }
+}

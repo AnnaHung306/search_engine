@@ -1,0 +1,62 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "20a6bda4a481f0d9a82d5670520451232c3494dde78e742e59b65e2b4a2c53e2",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "df9d27df5a6eb2ce6517405e3aab94a5f009424216cfda96beb14a02df0443ff",
+  "started_at": 1793849123.9011688,
+  "finished_at": 1793849131.541842,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "6b177244360b64e721df-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確介紹可擷取並分析網路封包的嗅探工具。",
+        "evidence": "Wireshark is a network “sniffer” - a tool that captures and analyzes packets off the wire."
+      },
+      {
+        "decision_id": "fb7cb183806fac01c3f4-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "記載讀取擷取檔案及使用 Wireshark 顯示過濾器篩選封包的選項。",
+        "evidence": "-Y <display filter>, --display-filter <display filter> packet displaY filter in Wireshark display filter syntax"
+      }
+    ]
+  }
+}

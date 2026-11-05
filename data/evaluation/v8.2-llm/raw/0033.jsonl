@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9b5-c886-7e42-bbdd-b7e16630f4f8"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"8c884119d7ab95eb9234-0\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段介紹 Samba 管理與驗證功能；使用或設定 NT 雜湊不等於破解離線雜湊，未提供密碼還原工具或流程。\",\"evidence\":\"--pw-nt-hash The supplied password is the NT hash\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":40284,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":103,"reasoning_output_tokens":0}}

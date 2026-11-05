@@ -1,0 +1,133 @@
+{
+  "date": "2026-11-05",
+  "checkout": "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade",
+  "branch": "codex/ir-course-upgrade",
+  "review_base": "ef9e0a0e2e2873b59bc04746ab6af4eb650254a5",
+  "origin_main": "9c7c3a107b9712b5fc2f31d8d432a025be39f27a",
+  "origin": "llm",
+  "user_acceptance": false,
+  "no_ppt": true,
+  "no_push": true,
+  "counts": {
+    "input_batches": 99,
+    "valid_responses": 99,
+    "retained_failed_raw": 1
+  },
+  "pair_count": 654,
+  "document_count": 362,
+  "segment_count": 409,
+  "full_indexed_text_chars": 5498678,
+  "model_identity": "Codex CLI default; exact model identifier not exposed by JSON events",
+  "model_self_review_corrections": 6,
+  "mean_precision_at_5": {
+    "course": {
+      "tfidf": 0.4,
+      "tfidf_cov": 0.72,
+      "tfidf_pivot": 0.8,
+      "tfidf_pivot_cov": 0.86,
+      "bm25": 0.8,
+      "bm25_boost_syn": 0.82,
+      "tfidf_proximity": 0.46,
+      "tfidf_fields": 0.46,
+      "tfidf_fields_proximity": 0.48
+    },
+    "development": {
+      "tfidf": 0.45,
+      "tfidf_cov": 0.5666666666666667,
+      "tfidf_pivot": 0.5666666666666667,
+      "tfidf_pivot_cov": 0.5833333333333334,
+      "bm25": 0.6333333333333333,
+      "bm25_boost_syn": 0.6,
+      "tfidf_proximity": 0.4666666666666667,
+      "tfidf_fields": 0.4666666666666667,
+      "tfidf_fields_proximity": 0.5166666666666667
+    },
+    "holdout": {
+      "tfidf": 0.4,
+      "tfidf_cov": 0.475,
+      "tfidf_pivot": 0.625,
+      "tfidf_pivot_cov": 0.5833333333333334,
+      "bm25": 0.625,
+      "bm25_boost_syn": 0.625,
+      "tfidf_proximity": 0.425,
+      "tfidf_fields": 0.36666666666666664,
+      "tfidf_fields_proximity": 0.35833333333333334
+    }
+  },
+  "selected_on_development": "bm25",
+  "initial_bm25": {
+    "course": 0.82,
+    "development": 0.6166666666666667,
+    "holdout": 0.625
+  },
+  "protected_prior_files_unchanged": 43,
+  "original_human_labels": "all relevant fields remain blank",
+  "http": {
+    "5001": {
+      "status": 200,
+      "h1_count": 1,
+      "model_table": true,
+      "different_collection": false
+    },
+    "5002": {
+      "status": 200,
+      "h1_count": 1,
+      "model_table": false,
+      "different_collection": true
+    },
+    "label_download_rows": 654
+  },
+  "browser": {
+    "normal_navigation": "5001 home -> Evaluation & review -> source download -> reload; 5002 home -> Evaluation & review",
+    "label_download_status": 200,
+    "label_download_rows": 654,
+    "review_download_corrections": 6,
+    "narrow_viewport": {
+      "viewport": 390,
+      "document_scroll_width": 390
+    },
+    "acceptance": "technical verification only; no user visual acceptance",
+    "screenshot": "preview-model-v8.2-viewport.png",
+    "capture_limitation": "Aside fullPage capture repeated the top viewport; retained separately as preview-model-v8.2.png. DOM and HTTP both confirmed one h1; viewport capture used as visual evidence."
+  },
+  "focused_checks": [
+    "654 decisions re-collected from hash-verified raw model output; all full body segments required",
+    "six explicit corrections revalidated against previous labels, policy and exact source quotes",
+    "fixed denominator 5; missing and boolean labels rejected",
+    "human validator rejects llm origin",
+    "missing/duplicate IDs, fabricated quotes and tool-action traces rejected",
+    "integer relevant totals preserve true tie and simpler-system selection",
+    "timeout partial stdout/stderr bytes retained",
+    "mean/selection/denominator tampering stale",
+    "malformed manifest structures stale",
+    "wrong review origin, prior label, quote, duplicate and correction count rejected"
+  ],
+  "review": {
+    "Standards": "recheck: no remaining material finding in reviewed scope",
+    "Spec": "recheck: no remaining material finding in reviewed scope"
+  },
+  "static_checks": {
+    "ruff_E9_F_no_cache": "passed",
+    "git_diff_check": "passed before staging",
+    "documentation_links": "all local links in updated top-level reports resolve"
+  },
+  "warnings": [
+    "Codex CLI state DB metadata falling_back warnings retained in stderr",
+    "Codex CLI skills scan traversal limit warning retained in stderr"
+  ],
+  "application_fallbacks_added": [],
+  "temporary_test_files_created": 0,
+  "preexisting_ruff_cache_retained_pending_cleanup_approval": [
+    ".ruff_cache/CACHEDIR.TAG",
+    ".ruff_cache/.gitignore",
+    ".ruff_cache/0.17.3/7111575367012557536"
+  ],
+  "source_hashes": {
+    "model_manifest": "2ad8be10ac4baa96fc1099f10fc32fa935d663b28f1516153f1d305ae7ca3cdd",
+    "policy": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+    "raw_labels": "36d4018d3d6fc301a238cf2a836df4ef0f55e628fbfabc2086221fc7c6ba3f94",
+    "final_labels": "62c782b383f3a8e86ad7f8b45f3a0c14f2f4efcbbb5dc6e3357f615d788e4fc9",
+    "adjudications": "3f3fb6471417b7bf09c3595b7acf9797708935b888472aff1dde0d54aa207bf2",
+    "scores": "c1dd713e93c6956623ddb6c746df21d8ccbe20abecca02969e064c061eddf177"
+  }
+}

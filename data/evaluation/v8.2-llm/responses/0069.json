@@ -1,0 +1,62 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "ac88892a4cf78f06b833c5986be932943b0254afb60e3ffc5cd743efe6d78909",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "76d673e6a85dfcd3e2436dbc74f46e9b804cba482f7de40532ba91d9cd0e2d0e",
+  "started_at": 1793848899.666859,
+  "finished_at": 1793848907.524914,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "886e381e8e874e5cec06-16",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此片段介紹 LLVM 編譯與物件檔工具，未提供網站內容或隱藏路徑列舉能力。",
+        "evidence": "OVERVIEW: LLVM object size dumper USAGE: llvm-size [options] <input object files>"
+      },
+      {
+        "decision_id": "d0f3b25012d7d22f6cd9-16",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此片段說明 LLVM 工具與編譯插樁選項，未說明執行中 Android 應用的 Java 方法掛鉤。",
+        "evidence": "OVERVIEW: llvm MC-JIT tool USAGE: llvm-rtdyld [options] <input files> --args <program arguments>..."
+      }
+    ]
+  }
+}

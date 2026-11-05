@@ -1,0 +1,55 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "21c4724c4d905fa68a69dedf2864fe27798668590ba0ac67071a9d89543f6686",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "854111c0d38b461ecf367b015d4f74751a5ba3eaf7a348a8586f76aa55983109",
+  "started_at": 1793848534.298084,
+  "finished_at": 1793848541.668902,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "1acb069855bc8c06a694-14",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此片段介紹編譯器選項與 AFL++ 模糊測試功能，未記載網站內容或隱藏路徑枚舉工具或技術。",
+        "evidence": "This is a helper application for afl-fuzz. It serves as a drop-in replacement for gcc and clang, letting you recompile third-party code with the required runtime instrumentation."
+      }
+    ]
+  }
+}

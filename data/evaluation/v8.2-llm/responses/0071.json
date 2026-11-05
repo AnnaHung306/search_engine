@@ -1,0 +1,62 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "b413dac2caef1b8f6532b8541cca0fb4004279aa1864d0847d26329982b24130",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "ff98f45aa36c2a4c6e636f797898e6778d65eeb7b89764f8320f5cc28ef89c2d",
+  "started_at": 1793848907.525663,
+  "finished_at": 1793848916.337333,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "886e381e8e874e5cec06-18",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此片段列出 LLVM 編譯與最佳化選項，未提供網頁內容或隱藏路徑枚舉工具或技術。",
+        "evidence": "--polly - Enable the polly optimizer (with -O1, -O2 or -O3)"
+      },
+      {
+        "decision_id": "d0f3b25012d7d22f6cd9-18",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此片段的插樁功能屬於編譯器函式與效能分析，未說明執行中 Android 應用的 Java 方法掛鉤。",
+        "evidence": "--post-inline-ee-instrument - Instrument function entry/exit with calls to e.g. mcount() (post inlining)"
+      }
+    ]
+  }
+}

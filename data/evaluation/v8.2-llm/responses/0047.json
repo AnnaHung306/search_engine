@@ -1,0 +1,167 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "51d07246f5a12643fee273c3c041141fc2095155660a9c6aba9f228e667ea99e",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "a467ae35a63262a30d661467a794b73f027b509c1454cf995f970c9c141f55a8",
+  "started_at": 1793848739.3302898,
+  "finished_at": 1793848771.0015109,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "3cc1e2e82c9a6c6be3db-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為 SSH 測試流程，未說明 Android 資源解碼。",
+        "evidence": "SSH Workflows SSH, also known as Secure Shell or Secure Socket Shell"
+      },
+      {
+        "decision_id": "6283cf0c35dc8f159383-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明 SYN 掃描遇到關閉埠時的 RST 回應與判定時間。",
+        "evidence": "When an Nmap TCP SYN scan encounters a closed port, the target machine sends back a RST packet"
+      },
+      {
+        "decision_id": "d1c4cfa39dc59452a771-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "討論防火牆阻擋掃描，並非篩選已擷取流量。",
+        "evidence": "To actually slow Nmap down, make sure the firewall is dropping the packets"
+      },
+      {
+        "decision_id": "099c0bc0de044324159b-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "JAR 僅用於啟動代理工具，未提供 DEX 轉換功能。",
+        "evidence": "paros Web application proxy Lightweight web application testing proxy"
+      },
+      {
+        "decision_id": "5fc8594c7f4d9fb099d8-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "文件明列網頁測試代理的漏洞掃描指令。",
+        "evidence": "-scan : Run vulnerability scan depending on previously saved policy."
+      },
+      {
+        "decision_id": "1b4411e182e7243f6704-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "解密對象為 BLE，未說明 TLS 金鑰記錄或解密流程。",
+        "evidence": "crackle Crack and decrypt BLE encryption"
+      },
+      {
+        "decision_id": "a8c1d1483a6270c02cb7-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明列網站目錄搜尋功能及字典設定。",
+        "evidence": "--dir Directory Search"
+      },
+      {
+        "decision_id": "fbcbb85ce091b12ebc35-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明列 DNS 與子網域列舉功能。",
+        "evidence": "--dns DNS Enumeration --sub Sub-Domain Enumeration"
+      },
+      {
+        "decision_id": "7e33d33c798188e0bc81-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅提及可安裝憑證，未說明安裝或信任設定步驟。",
+        "evidence": "If required, you can now install the mitmproxy certificates on the proxied machine ."
+      },
+      {
+        "decision_id": "210f808c74bf84d865f3-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確描述附加至執行中程式並注入 instrumentation 的能力。",
+        "evidence": "attach to a running program, or hijack one as it’s being spawned, and then run your instrumentation logic inside of it."
+      },
+      {
+        "decision_id": "4da02e2d1eb7b2c042a7-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅描述通用函式掛鉤與動態插樁，未說明 Android Java 方法掛鉤。",
+        "evidence": "allowing you to hook functions, enumerate loaded libraries, their imported and exported functions, read and write memory"
+      },
+      {
+        "decision_id": "66cb18e521078470c2fa-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明 Frida 注入架構及 Android 裝置上的 frida-server。",
+        "evidence": "The connected devices are typically iOS and Android devices where frida-server is running."
+      },
+      {
+        "decision_id": "eaa43a888bfd01f825b8-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為連線失敗與失效 session 的診斷，未提供既有 session 的管理操作。",
+        "evidence": "There are a few things to check for when debugging a dead shell."
+      },
+      {
+        "decision_id": "415b7dd698b5ea0551b6-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供代理啟動、用戶端設定及憑證安裝流程，可攔截 HTTPS。",
+        "evidence": "Mitmproxy auto-detects TLS traffic and intercepts it dynamically."
+      },
+      {
+        "decision_id": "87b917279f4bf95d9bd3-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅有通用憑證安裝指示，Android 段落討論繞過代理，未說明 Android 信任設定。",
+        "evidence": "There are applications that bypass the operating system’s HTTP proxy settings - Android applications are a common example."
+      },
+      {
+        "decision_id": "b6b61aa8da87900e6a58-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "在代理設定流程中明確指示前往憑證安裝入口並安裝裝置憑證。",
+        "evidence": "Open the magic domain mitm.it and install the certificate for your device."
+      },
+      {
+        "decision_id": "cbb48f15b3d3a133ff6a-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明代理模式與轉送行為，未提供回應編輯或 response hook。",
+        "evidence": "Requests by clients will be forwarded to a preconfigured target server, and responses will be forwarded back to the client:"
+      }
+    ]
+  }
+}

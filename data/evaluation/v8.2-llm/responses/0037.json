@@ -1,0 +1,104 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "f3aab92faecdeeac08d374cb882960b8f0f18c239939d6ff045e0fcffa9d1b10",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "f30f5482564415b5838ec2b1a1a4b6ccfde9be1a036f1a5abf5eda8f86f70013",
+  "started_at": 1793848657.802573,
+  "finished_at": 1793848676.237442,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "76648b1c4e345333b223-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確提供 WEP/WPA 金鑰破解工具與操作範例。",
+        "evidence": "aircrack-ng A 802.11 WEP / WPA-PSK key cracker"
+      },
+      {
+        "decision_id": "acf3efd3dc211c6616aa-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "記載從擷取檔提取並儲存 WPA 四向交握的功能。",
+        "evidence": "save any 4-way handshakes to a new file"
+      },
+      {
+        "decision_id": "c6776d1e2d952db07e36-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹無線封包注入與重播，未說明 HTTP 分析工具的請求重送功能。",
+        "evidence": "aireplay-ng Inject packets into a wireless network to generate traffic"
+      },
+      {
+        "decision_id": "015954fdb56103031471-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明定期連接埠掃描與逐步擴大掃描範圍的做法。",
+        "evidence": "You may want to start with simple port scanning, then move on to OS detection or version detection later as desired."
+      },
+      {
+        "decision_id": "9855722c9149f32ea60c-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容是網路連接埠掃描與服務防護，未記載網頁應用程式漏洞掃描器。",
+        "evidence": "Next comes audit every open port available externally through the firewall or on the internal network."
+      },
+      {
+        "decision_id": "c80d8f62590f46adf411-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹鑑識磁碟映像處理與加密功能，未提供密碼雜湊格式辨識。",
+        "evidence": "The Advanced Forensic Format (AFF) is on-disk format for storing computer forensic information."
+      },
+      {
+        "decision_id": "00827d7a6f90e7231bc6-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅教學開發瀏覽器漏洞模組，沒有選取、設定與執行模組的終端使用者流程。",
+        "evidence": "To get things started, you can always use the following template to start developing your browser exploit:"
+      },
+      {
+        "decision_id": "55cff4a44f9813aafc9f-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "依此較廣規則，文章實質解說 Metasploit 漏洞模組及其開發機制，符合模組／漏洞利用主題。",
+        "evidence": "The Metasploit Framework provides different mixins you can use to develop a browser exploit"
+      }
+    ]
+  }
+}

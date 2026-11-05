@@ -35,3 +35,11 @@ Standards 初查 4 項、Spec 初查 4 項及後續 2 項（兩軸有重疊）�
 Reviewer 另對照舊版做 3,000 組隨機摘要、1,000 組 offsets、400 組 ranking maps／解釋 row 比對；未落盤測試產物。最終真實採集、正常瀏覽器與 414 次完整回歸由 root 驗證，人工相關性與使用者驗收仍未完成。
 
 本輪 Standards 1 項、Spec 1 項，均已解決；所審範圍無剩餘 material finding。兩軸結論不等於全部未來狀況保證。
+
+## v8.2 Standards／Spec
+
+固定比較點 ef9e0a0e2e2873b59bc04746ab6af4eb650254a5，審查新增模型評估、共用 P@5、分類器與正常產品評估入口。依 code-review skill 使用既有兩位只讀 reviewer，未產生測試檔。
+
+Standards 初查：逾時遺失部分輸出、摘要平均／選擇未重新驗算、錯誤 manifest 結構可能 AttributeError／500。Spec 初查：浮點加總打破真正平手、逾時證據遺失（兩軸重疊）。改為保存原始部分 bytes、重新驗算凍結 scores.csv、嚴格結構驗證與整數分子比較；兩軸 focused recheck 均無剩餘 material finding。
+
+追加六筆明示自我複核後，兩軸再檢查：6 筆改動／648 筆不變，所有系統共用題目／URL 標籤，原標籤／policy hash／引句／llm 來源／初判與終判保存，holdout 未改動且未參與選模型。所審範圍無 material finding。審查與模型評分完成不等於使用者驗收或人工判定準確率。

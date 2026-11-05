@@ -1,0 +1,55 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "5a28fb10e4e51749889ad4a5fab7b138ce4987d3eac74d4d60ef2e62747e7c06",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "052e7eaf06d6906c186c9769eacdb3170fd5a93acc0b2bedf1b75416c7b79553",
+  "started_at": 1793848600.392063,
+  "finished_at": 1793848607.8491158,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "78d672fa82e024266bd9-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供用戶端 TLS 信任設定，可指定自訂 CA 位置以驗證伺服器憑證，符合規則。",
+        "evidence": "--tls-ca-path <ca-location> Specify an alternate location for CA information for verifying server certificates. The argument can point to a file or directory."
+      }
+    ]
+  }
+}

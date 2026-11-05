@@ -1,0 +1,83 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "1efea4468dca36d37ad90e8dda0dcf88e8f7af691f7707aee1a9f3786f90b6ea",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "6fc5e384daece0b3b77835850e20a82b2ded50e9ac7ac13fbebdef49af4fe004",
+  "started_at": 1793848796.060179,
+  "finished_at": 1793848808.368196,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "83221759ac3ec32660b8-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅記載雜湊資料庫查詢，未提供密碼雜湊格式辨識功能。",
+        "evidence": "hfind Lookup a hash value in a hash database"
+      },
+      {
+        "decision_id": "a223664f885b2fa090e4-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "文件提供磁碟鑑識與檔案復原，未記載離線密碼雜湊破解。",
+        "evidence": "tsk_recover Export files from an image into a local directory"
+      },
+      {
+        "decision_id": "9cca20504f1cdf4fec6f-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為反射式 DLL 注入開發流程，未提供自動 SQL 注入偵測工具。",
+        "evidence": "Using the ReflectiveDll loader in a metasploit module."
+      },
+      {
+        "decision_id": "c92916c50600b5d45420-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅說明 DLL 注入與酬載執行，未記載可操作的 SQL 注入偵測或利用功能。",
+        "evidence": "inject your DLL directly into the memory of notepad"
+      },
+      {
+        "decision_id": "711391710c73fc2a4c35-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明 Wireshark 將封包存入擷取檔，並可透過輸出設定指定永久檔案。",
+        "evidence": "You can also tell Wireshark to save to a specific (“permanent”) file"
+      }
+    ]
+  }
+}

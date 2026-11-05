@@ -1,0 +1,62 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "3f7186ca6bb2e5043de66cfa00f662b2506fd8215ab3b7c45e49df25a341c8d4",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "6aeaefb23ab39d04eba881bb69bfc1ca464923f8499633f0d132ea1aee38d87d",
+  "started_at": 1793848850.4241002,
+  "finished_at": 1793848858.331958,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "886e381e8e874e5cec06-5",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段介紹編譯、程式碼格式化與靜態分析工具，未提供網站路徑列舉能力或技術。",
+        "evidence": "Clang-format is both a library and a stand-alone tool with the goal of automatically reformatting C++ sources files according to configurable style guides."
+      },
+      {
+        "decision_id": "d0f3b25012d7d22f6cd9-5",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段的掛鉤指 ASan 符號化腳本外掛，未說明執行中 Android 應用的 Java 方法插樁或掛鉤。",
+        "evidence": "This script provides a way for external plug-ins to hook into the behaviour of various parts of this script (see `--plugins`)."
+      }
+    ]
+  }
+}

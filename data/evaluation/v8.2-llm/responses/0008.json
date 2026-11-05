@@ -1,0 +1,62 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "b7ae1d01abce317af8c474e7cb185349cd3257cb85d070bbad013523e0c0d98f",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "578339f30ac0e4c574fdc2fee6683fb799970683adf28654c1e61ffb86ac2cec",
+  "started_at": 1793848473.613195,
+  "finished_at": 1793848483.299721,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "3ad6804c77c54307c7ec-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段介紹連接埠掃描偵測與入侵偵測系統，未記載自動 SQL 注入偵測工具。",
+        "evidence": "Special purpose port scan detectors are a more effective approach to detecting Nmap activity."
+      },
+      {
+        "decision_id": "1acb069855bc8c06a694-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段介紹二進位格式模糊測試及編譯器選項，未提供網站內容或隱藏路徑列舉能力。",
+        "evidence": "afl++ Instrumentation-driven fuzzer for binary formats"
+      }
+    ]
+  }
+}

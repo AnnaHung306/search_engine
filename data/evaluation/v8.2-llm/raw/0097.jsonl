@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9be-339b-7e31-a57c-9d69b3326cc8"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"17fa90dad7f97cad2252-1\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"本段僅說明 DEX 類別載入、列舉與執行期插樁，未提供反編譯或重建可讀程式碼的能力。\",\"evidence\":\"load() : load the contained classes into the VM. getClassNames() : obtain an array of available class names.\"},{\"decision_id\":\"8810c777812463af7a1a-1\",\"relevant\":1,\"confidence\":\"high\",\"reason\":\"說明透過 Java.use 取得 Android 類別並替換方法實作，可觀察或修改執行中的方法行為。\",\"evidence\":\"Activity . onResume . implementation = function () { throw Exception . $new ( ' Oh noes! ' ); };\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":39635,"cached_input_tokens":25472,"cache_write_input_tokens":0,"output_tokens":203,"reasoning_output_tokens":0}}

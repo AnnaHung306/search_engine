@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9b8-a4bc-7251-b012-b15fd951cac7"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"886e381e8e874e5cec06-0\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段介紹 Clang 編譯器及編譯選項，未提供網頁內容或隱藏路徑枚舉能力。\",\"evidence\":\"Clang project is a C, C++, Objective C and Objective C++ front-end for the LLVM compiler.\"},{\"decision_id\":\"d0f3b25012d7d22f6cd9-0\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段的插樁選項針對編譯時函式進出，未說明執行中 Android 應用的 Java 方法掛鉤。\",\"evidence\":\"-finstrument-functions Generate calls to instrument function entry and exit\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":39762,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":194,"reasoning_output_tokens":0}}

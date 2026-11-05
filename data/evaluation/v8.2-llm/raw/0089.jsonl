@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9bd-2a2d-7fc2-90e8-cff48fb7ef77"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"888f649aa5f4f633a7d9-0\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段介紹 AD CS 憑證設定漏洞的列舉與利用，未記載 Web 應用程式漏洞掃描器。\",\"evidence\":\"The chart above showcases how one can go about attacking each of the AD CS vulnerabilities supported by Metasploit\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":41684,"cached_input_tokens":25472,"cache_write_input_tokens":0,"output_tokens":106,"reasoning_output_tokens":0}}

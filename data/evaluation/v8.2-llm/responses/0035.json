@@ -1,0 +1,139 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "43c79d1a3fa2fbe23a5f11a7deb1df117465124bfea5322fa9f4718f2114085e",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "235e4274cbf194e7dc318931a900a79d5c2e721f7420e9470efaa61deecc870a",
+  "started_at": 1793848632.03693,
+  "finished_at": 1793848657.8011642,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "0b3158ca25b61ffee20b-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供依主機 IP 位址篩選封包的語法與說明。",
+        "evidence": "[src|dst] host <host> This primitive allows you to filter on a host IP address or name."
+      },
+      {
+        "decision_id": "a902e477917304440338-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容說明擷取篩選條件，未說明如何儲存為 pcap 檔。",
+        "evidence": "Wireshark capture filters are written in libpcap filter language."
+      },
+      {
+        "decision_id": "cfa8c5b09560c9acd936-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明擷取時的篩選，未提供已擷取流量的顯示篩選方法。",
+        "evidence": "Wireshark supports limiting the packet capture to packets that match a capture filter ."
+      },
+      {
+        "decision_id": "ceaef3da7fc014f64685-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明透過所選封包的 IP 位址套用顯示篩選器。",
+        "evidence": "For example, the IP menu entry will set a filter to show the traffic between the two IP addresses of the current packet."
+      },
+      {
+        "decision_id": "e9ebfef99efd6653222c-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "記載將無線驗證擷取檔轉為 John 破解格式，並明確提到可破解密碼。",
+        "evidence": "-c Show only complete auths (incomplete ones might be wrong passwords but we can crack what passwords were tried)."
+      },
+      {
+        "decision_id": "1caee6903ec06c2c939a-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供含 UDP 的直接 RPC 掃描指令及 UDP 連接埠結果。",
+        "evidence": "Example 7.6. Nmap direct RPC scan # nmap -F -A -sSU ultra"
+      },
+      {
+        "decision_id": "b312783477f87b77b5a8-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "示範啟動程序後，以 Frida 附加並載入腳本的完整流程。",
+        "evidence": "session = frida . attach ( \" cat \" )"
+      },
+      {
+        "decision_id": "3abff27db62e0d2deec1-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅介紹 Zenmap 一般掃描操作，未說明 SYN 掃描行為或用法。",
+        "evidence": "Running a scan is as simple as typing the target in the “ Target ” field, selecting the “ Intense scan ” profile, and clicking the “ Scan ” button."
+      },
+      {
+        "decision_id": "df33e61baf25dc4672e4-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹一般掃描設定與結果合併，未提供 UDP 掃描資訊。",
+        "evidence": "Zenmap has the ability to combine the results of many Nmap scans into one view, a feature known as scan aggregation ."
+      },
+      {
+        "decision_id": "78c094d050a279c63d58-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "工具遞迴尋找本機 Windows 執行檔，並非探索網頁伺服器目錄。",
+        "evidence": "Miss Identify (missidentify) is a program to find MS Windows type win32 applications."
+      },
+      {
+        "decision_id": "887121762ae3b177c8b0-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此片段僅示範請求攔截，未建立 HTTPS 或 TLS 解密能力。",
+        "evidence": "An intercepted request is paused so that the user can modify (or discard) the request before sending it to the server."
+      },
+      {
+        "decision_id": "c2ab733dc819cd6f040b-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供設定攔截條件、暫停請求及放行或丟棄的操作流程。",
+        "evidence": "Enter ~u /Dunedin & ~q between the quotes of the set intercept command and press ENTER ."
+      },
+      {
+        "decision_id": "d6fdbbc2e2a8b6ccb4b5-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "教學只處理請求攔截，未說明回應編輯或回應 hook。",
+        "evidence": "Additionally, we use the filter ~q to only intercept requests, but not responses."
+      }
+    ]
+  }
+}

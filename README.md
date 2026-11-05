@@ -1,8 +1,8 @@
-# Pentest Tool Search — 課程整合更新 v8.1
+# Pentest Tool Search — 課程整合更新 v8.2
 
 本機資安文件搜尋引擎。從 v7.1 的固定 980 頁公開資料出發，保留自寫倒排索引、TF-IDF 與 cosine，新增位置索引、欄位／鄰近度實驗及逐筆計分解釋。
 
-作業最新截止：2026-11-12 23:59（教學平台）。本輪程式尚待使用者驗收；新模型品質尚待組員人工盲評。
+作業最新截止：2026-11-12 23:59（教學平台）。本輪程式尚待使用者驗收。已依使用者授權完成 LM 判定：46 題、九模型、654 組配對；依開發集選 BM25，保留集 P@5=0.625，純 TF-IDF=0.400。這是模型評估，未冒稱人工驗證。完整結果與六筆判定修正見 [v8.2 報告](report/MODEL_EVALUATION_V8_2.md)。
 
 ## 安裝與正常入口
 
@@ -27,7 +27,7 @@ python -B code/app.py
 - 上游 main 基底：`9c7c3a107b9712b5fc2f31d8d432a025be39f27a`，<https://github.com/AnnaHung306/search_engine>。
 - 原始 search-engine.zip、REPORT_DRAFT.docx、data/pages.json、data/index.json 與舊評估都保留。
 - 目前索引：data/index-v8.1.json.gz，schema 4；literal offsets 採 gap/length varint，按需解碼，外層固定標頭 gzip。原 schema-3 index-v8.json 仍保留。缺少新索引或格式錯誤會直接報錯，不改讀舊檔。
-- 舊 Word 與 report/REPORT_DRAFT.md 是 **v7.1 歷史草稿**；v8 報告保留，後續進度見 report/PROGRESS_V8_1.md、人工待辦見 docs/HUMAN_HANDOFF.md。
+- 舊 Word 與 report/REPORT_DRAFT.md 是 **v7.1 歷史草稿**；v8 與 v8.1 報告保留。最新結果見 report/MODEL_EVALUATION_V8_2.md；docs/HUMAN_HANDOFF.md 保留歷史人工材料與真實交付欄位。
 - 講義頁碼／作業條文與延伸來源見 [引用資料](docs/references.md)；每批改動見 [更新紀錄](docs/changes/README.md)。
 
 ## 爬蟲
@@ -71,13 +71,21 @@ python -B code/evaluate.py --timing --suite course --output data/evaluation/my-t
 python -B code/diagnostics.py --suite development --output experiments/my-development-diagnostics.json
 ```
 
-匯出不覆蓋既有結果；重新實驗用 `--output <新的資料夾>`。兩位組員各自完成 reviewer CSV、解決分歧後，才能 `--score`；完整步驟見 [評估流程](docs/evaluation.md)。
+匯出不覆蓋既有結果；重新實驗用 `--output <新的資料夾>`。原人工 `--score` 仍要求兩份真實 reviewer CSV；已另完成模型流程，保存輸入、原始回覆、理由／引句、初判與六筆修正，不更改人工檔案。完整步驟見 [評估流程](docs/evaluation.md)。
+
+```sh
+python -B code/model_evaluation.py verify
+# 重算同一凍結結果，不重新呼叫模型；明示套用六筆複核
+python -B code/model_evaluation.py score --adjudications data/evaluation/v8.2-llm/adjudications.json
+```
+
+新模型實驗必須使用新目錄：先 `model_evaluation.py prepare --output <新目錄>`，再 `llm_grader.py --output <新目錄>`，最後 score。分類器使用已登入的 Codex CLI，會消耗帳號用量；這輪 99 批有效回覆已存好，不需再推論。
 
 已準備的精簡必做包在 data/evaluation/v8.1/course-required/：十題、純 cosine、50 組全文與兩份空白 reviewer 表。無需為了標註重新匯出。原九模型材料仍保留，人工工作依 docs/HUMAN_HANDOFF.md 分階段處理。`--systems` 只限制新匯出包的模型，預設九模型不變。
 
-diagnostics 只接受 course/development，產生排名重疊、文件長度與網站分布；這些描述統計不是相關性成績。holdout 保留作最後人工評估。舊 run_experiments.py 也改為新輸出目錄與 exclusive create，避免覆寫歷史資料。
+diagnostics 只接受 course/development，產生排名重疊、文件長度與網站分布；這些描述統計不是相關性成績。holdout 本輪已評估，未參與選模型或調參，此後屬已見回歸集。舊 run_experiments.py 使用新輸出目錄與 exclusive create，避免覆寫歷史資料。
 
-原六組固定查詢排名重現不變：0.46／0.72／0.84／0.80／0.80／0.74，僅為舊助手標註參考。新的 12 題開發集與 24 題 holdout 候選題已先凍結；需組員確認題目與獨立人工標註。不得為新方法的未知結果自動填 0 或填入好看的分數。
+原六組固定查詢排名重現不變：0.46／0.72／0.84／0.80／0.80／0.74，僅為舊助手標註參考。12 題開發集與 24 題 holdout 已凍結並完成另存的模型判定，原人工材料保持空白。不得把未知結果自動填 0，或將不同標籤定義的分數直接相減。
 
 正常導覽的 Evaluation & review 提供全文盲評包及 CSV。3–5 分鐘展示參考 report/DEMO_SCRIPT_V8.md。組別、真實分工與各人心得仍需組員補充。
 
@@ -85,4 +93,4 @@ diagnostics 只接受 course/development，產生排名重疊、文件長度與�
 
 固定 v7.1 頁面只有 title/text，沒有獨立 meta description。v8 具備真實 description 的抽取、postings、norms 及位置／offset 儲存，但這 980 頁的 description 均空白，不以正文開頭或生成文字冒充。後續新資料集才能量測 description 的效果，需另凍結；目前欄位比較的 description 分量為零。
 
-新採集快照 485/980 頁有真實 meta description，其餘仍空白。已能驗證完整索引與搜尋流程；description 是否改善品質，仍待新資料集的人工評估，不能借用舊快照的標籤或 P@5。
+新採集快照 485/980 頁有真實 meta description，其餘仍空白。已能驗證完整索引與搜尋流程；description 是否改善品質，仍需新資料集的獨立評估，不能借用舊快照的標籤或 P@5。

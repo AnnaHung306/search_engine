@@ -1,0 +1,83 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "124461643a93ec08bc72ae5bd7d3b0d1d3f430a7f89acac60c4c9189b6edb195",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "b204de8881396779f1c43e0a97d4af6e0ae0c6c84f2720893eb264f8ac8a2294",
+  "started_at": 1793848958.891924,
+  "finished_at": 1793848972.033013,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "97442b16ef7015b01c8f-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "提供封包與 pcap 重播，未說明 HTTP 分析工具中的請求或用戶端重播。",
+        "evidence": "netsniff-ng: a zero-copy packet analyzer, pcap capturing/replaying tool"
+      },
+      {
+        "decision_id": "ef0d24e23a1965d9e48c-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確提供 WordPress 外掛掃描及已知漏洞檢查，符合網頁應用漏洞掃描需求。",
+        "evidence": "WPProbe is a high-speed WordPress plugin scanner that detects installed plugins and checks for known vulnerabilities using the Wordfence database."
+      },
+      {
+        "decision_id": "8d83430465de75219bfb-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容說明 Nmap 防火牆規避與來源位址偽裝，未提供依 IP 篩選已擷取封包的指引。",
+        "evidence": "-S <IP_Address> (Spoof source address)"
+      },
+      {
+        "decision_id": "d5912ee7587fff4b086d-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅說明即時擷取的權限、介面及網路位置前提，未說明儲存為 pcap。",
+        "evidence": "You may need special privileges to start a live capture. You need to choose the right network interface to capture packet data from."
+      },
+      {
+        "decision_id": "fe676b46a4652d37905e-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容是 Python 應用程式打包工具，未提供網頁內容或隱藏路徑枚舉功能。",
+        "evidence": "Utility to bundle a Python application into a single package"
+      }
+    ]
+  }
+}

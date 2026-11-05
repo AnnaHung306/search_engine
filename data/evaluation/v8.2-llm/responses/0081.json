@@ -1,0 +1,62 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "363bee31c8c5d93b464d678e66bf531f5bc548806ebba2813ad659a8be5e976e",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "06eedd1b291ba66dc15444f846c08991c26587fbc2b970886a43a4e4e8d01fb2",
+  "started_at": 1793849018.84746,
+  "finished_at": 1793849030.541163,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "01c3e9ecd2412385fb1a-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅說明驗證參數採用的 NTLM 雜湊格式，未提供辨識未知雜湊類型的功能或方法。",
+        "evidence": "-hashes LMHASH:NTHASH NTLM hashes, format is LMHASH:NTHASH"
+      },
+      {
+        "decision_id": "69fe77e629e7ae594495-0",
+        "relevant": 0,
+        "confidence": "medium",
+        "reason": "記載擷取票證並匯出供破解的格式，但未說明從離線雜湊還原密碼的工具能力或操作流程。",
+        "evidence": "-request Requests TGT for users and output them in JtR/hashcat format (default False)"
+      }
+    ]
+  }
+}

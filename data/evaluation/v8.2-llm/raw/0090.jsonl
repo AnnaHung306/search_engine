@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9bd-45db-7420-b5fa-97abc0c5481f"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"888f649aa5f4f633a7d9-1\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段介紹 AD CS 憑證漏洞利用及 Kerberos、LDAP 驗證，未記載網頁應用程式漏洞掃描器。\",\"evidence\":\"To exploit ESC13, we need to target a certificate that has an issuance policy linked to a universal group in Active Directory.\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":38426,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":111,"reasoning_output_tokens":0}}

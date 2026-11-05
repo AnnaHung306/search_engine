@@ -1,0 +1,62 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "32bc9ad8b60f6a21b0b952b3e668d614d93054350ca9b5320811c9caa451813b",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "8dcdce26576a00dffa0c628abb620455fce0dc5773279cda12d772105a4d0569",
+  "started_at": 1793849166.4526432,
+  "finished_at": 1793849176.935769,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "17fa90dad7f97cad2252-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段說明執行期記憶體操作與動態插樁，未記載將 Android DEX 反編譯或轉換為可讀程式碼的能力。",
+        "evidence": "Memory.patchCode(address, size, apply) : safely modify size bytes at address"
+      },
+      {
+        "decision_id": "8810c777812463af7a1a-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段主要記載原生函式與記憶體插樁；僅提及 Java 方法包裝器，未說明 Android Java 方法的掛鉤操作。",
+        "evidence": "Note that this is also possible when using the Java and ObjC APIs, as method wrappers also provide a clone(options) API"
+      }
+    ]
+  }
+}

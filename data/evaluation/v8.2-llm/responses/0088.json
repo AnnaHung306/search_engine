@@ -1,0 +1,125 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "e5e25ce0468fafd8688283812019abea9a06f666b5824eacbdae725c4d20d880",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "20f96fc94d7a946c380dfe3dbe50d937bf249a3f0501567cea09879ab89ea6d1",
+  "started_at": 1793849108.546216,
+  "finished_at": 1793849129.558238,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "2dfc9abd574865075e9b-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容介紹靜態反編譯，未說明執行中 Android Java 方法的掛鉤或修改。",
+        "evidence": "This package contains a Dex to Java decompiler."
+      },
+      {
+        "decision_id": "ad4889260e1dcd4ce680-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確提供將 DEX 反編譯成可讀 Java 原始碼的能力。",
+        "evidence": "It contains a command line and GUI tools for produce Java source code from Android Dex and Apk files."
+      },
+      {
+        "decision_id": "b40fd0d2fb49ab56771f-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確支援解碼 Android manifest 與封裝資源。",
+        "evidence": "decode AndroidManifest.xml and other resources from resources.arsc"
+      },
+      {
+        "decision_id": "b4e3131a04f84cab3c22-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "提供 DEX 至 Java 原始碼反編譯，未記載輸出 Java class 或 JAR 的轉換流程。",
+        "evidence": "--output-format - can be 'java' or 'json', default: java"
+      },
+      {
+        "decision_id": "cd2bf868d2b2de08be41-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確支援將 APK 的 Dalvik 位元碼反編譯成可讀 Java 程式碼。",
+        "evidence": "decompile Dalvik bytecode to java classes from APK, dex, aar and zip files"
+      },
+      {
+        "decision_id": "ef426929573296466899-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "直接記載 Android 應用資源解碼能力。",
+        "evidence": "decode AndroidManifest.xml and other resources from resources.arsc"
+      },
+      {
+        "decision_id": "a16385c7c02a46f4c3dd-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "示範使用 Metasploit EXE mixin 產生 payload 執行檔。",
+        "evidence": "Next, generate a payload name and the executable: payload_name = \"evil.exe\" exe = generate_payload_exe"
+      },
+      {
+        "decision_id": "e7c97bb0ac9f8e21a8b3-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明利用 Windows 寫入權限上傳並執行 payload，未提供既有 session 管理操作。",
+        "evidence": "Once the mof file is uploaded, the Windows Management Service should pick that up and execute it"
+      },
+      {
+        "decision_id": "2d6482f4a1ef719b4b57-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹 Meterpreter 設定結構與憑證雜湊驗證，未提供密碼雜湊格式辨識。",
+        "evidence": "This value contains the 20 -byte SHA1 hash of the expected certificate."
+      },
+      {
+        "decision_id": "e8686aa12e30aa073ec5-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明 payload 內部設定區塊，未教導列出、互動或管理既有 session 的操作流程。",
+        "evidence": "This document contains information on the structure and layout of the new configuration block, along with how it is used by Meterpreter."
+      },
+      {
+        "decision_id": "b69758cc264fb7499dd1-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅描述一般網路滲透與主機探索；相依工具清單不足以證明網頁目錄或隱藏內容探索能力。",
+        "evidence": "--discovery Enable host discovery (default: enabled) --staged-scan Enable staged scan"
+      }
+    ]
+  }
+}

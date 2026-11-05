@@ -4,6 +4,7 @@ from flask import Flask, request, render_template, abort, send_file
 import search as se
 from evaluation import ROOT, load_suite, load_manifest, displayed_score
 from snippets import highlight
+import model_evaluation
 
 app = Flask(__name__)
 
@@ -90,7 +91,21 @@ def evaluation():
         suites.append({"name": name, "count": len(suite["queries"]), "role": suite["role"],
                        "pool": manifest["pool_size"] if manifest else None, "scores": scores,
                        "score_state": score_state})
-    return render_template("evaluation.html", suites=suites)
+    model_summary, model_score_state = model_evaluation.displayed_score(collection_sha256=active_collection)
+    return render_template("evaluation.html", suites=suites,
+                           model_summary=model_summary, model_score_state=model_score_state)
+
+
+@app.get("/evaluation/model/<asset>")
+def model_asset(asset):
+    assets = {name: name for name in ("llm_judgments.csv", "raw_llm_judgments.csv", "adjudications.json", "policy.json", "scores.json")}
+    assets.update({name + "-scores.csv": name + "/scores.csv" for name in ("course", "development", "holdout")})
+    if asset not in assets:
+        abort(404)
+    path = model_evaluation.OUTPUT / assets[asset]
+    if not path.is_file():
+        abort(404)
+    return send_file(path, as_attachment=True)
 
 
 @app.get("/evaluation/<suite>/<asset>")

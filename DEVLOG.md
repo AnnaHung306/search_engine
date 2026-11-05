@@ -1,5 +1,13 @@
 # 開發紀錄與心路歷程（DEVLOG）
 
+## 2026-11-05 · v8.2 模型判定與評分
+
+依使用者授權由 LM 完成先前判定項目，新增獨立來源流程，保留 human CSV 空白及其檢查。46 題／九模型前五筆去重為 654 組、362 篇，完整索引正文 5,498,678 字元／409 段／99 批。100 次 CLI 呼叫取得 99 份有效回覆；一批 ID 漏字拒收後重試，失敗原始輸出保留。自我複核修正六筆，初判與終判分開保存。
+
+只依 development 選 BM25：38/60=0.6333；holdout 75/120=0.6250，基準 48/120=0.4000，+22.5 個百分點。field+proximity=0.3583 退步；GTFOBins sudo 題 BM25=0、基準=1，native libraries 兩者=0。沒有改排序參數或用 holdout 調參。引用、改動、所有升降及限制見 docs/changes/009-model-assessment.md、report/MODEL_EVALUATION_V8_2.md。
+
+修正整數平手、逾時部分輸出保存、摘要對 CSV 重新驗算及 manifest 結構檢查；兩軸 review 複查通過。CLI metadata falling_back／技能掃描警告留在 stderr，未新增應用 fallback。原快照、舊評估、姓名／分工／個人心得未造填；不做 PPT、不 push。
+
 > 這份給組員寫報告用。記錄主題怎麼定、系統怎麼一步步做出來、每次改動「改了什麼、為什麼、改前長怎樣、改後長怎樣」。
 > 專案：IR & GenAI Term Project I — Web Search Engine。主題：**滲透測試工具搜尋**（輸入資安問題 → 找到該用哪個 Kali / Nmap / Metasploit 工具）。
 

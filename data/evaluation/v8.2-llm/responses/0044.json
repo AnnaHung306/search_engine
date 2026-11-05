@@ -1,0 +1,76 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "6480b8c84c11628cde5cd6e2f24e154dc1684f2b1ee574a89f2933c44ca88a8a",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "ec5a813bcff0290a96145817aa3f7a232bb3f2923cb598a86a9ec31496c30982",
+  "started_at": 1793848723.628035,
+  "finished_at": 1793848736.100084,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "3a9ab8d4a6e13f70cac3-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "實質說明 Nmap 連接埠掃描引擎、平行化及壅塞控制等演算法。",
+        "evidence": "Here I cover the most important algorithmic features. Understanding these helps in optimizing your scans for better performance"
+      },
+      {
+        "decision_id": "5402ae5e15a9435fdbd3-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明 UDP 掃描時 ICMP 回應速率限制及掃描延遲的影響。",
+        "evidence": "Linux 2.4 kernels limit ICMP error messages returned during a UDP ( -sU ) or IP protocol ( -sO ) scan to one per second."
+      },
+      {
+        "decision_id": "a1bf19a8a979108eb25e-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段介紹 Nmap 掃描演算法，未提供 GTFOBins 的 sudo 功能文件。",
+        "evidence": "Nmap uses three algorithms modeled after TCP to control how aggressive the scan is: a congestion window, exponential backoff, and slow start."
+      },
+      {
+        "decision_id": "a30a63ed66fc78274152-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段討論網路連接埠掃描引擎，未記載 Android DEX 反編譯或可讀程式碼轉換。",
+        "evidence": "You can find ultra_scan and its high-level helper functions defined in scan_engine.cc from the Nmap tarball."
+      }
+    ]
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "51d4c02ddc8be2e1e1596ba7070343fa13e86e27e82de76807510f7771037008",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "b47726298d631a966ecaee5a447f3b3ec1eeabfbd7e1bc347a604f1c1949eefa",
+  "started_at": 1793848929.965727,
+  "finished_at": 1793848958.890825,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "8943ef218b0b61b7c6d4-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確介紹封包嗅探、協定分析及擷取檔案輸出功能。",
+        "evidence": "-w, --write <file> write sniffed data to pcapfile <file>"
+      },
+      {
+        "decision_id": "dfe01e6192509be61a2a-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明 Nmap 連接埠掃描範圍與加速選項。",
+        "evidence": "You can scan just the most popular 100 ports with the -F (fast scan) option"
+      },
+      {
+        "decision_id": "eff90097bffe46cbc9a0-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "解釋 UDP 掃描的限速問題，並建議與 TCP 分開調整時序。",
+        "evidence": "Of particular concern is ICMP error rate-limiting, which is extremely common and affects UDP scans far more often than TCP."
+      },
+      {
+        "decision_id": "11df2d80786c917b4cd5-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "詳述 Metasploit 命令注入模組及其利用方式。",
+        "evidence": "By the end of this guide you’ll understand how to turn Command injection into a shell"
+      },
+      {
+        "decision_id": "1c791c0722fccf6c8896-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "除了開發內容，也提供設定目標、回連位址並執行模組的操作。",
+        "evidence": "set RHOST 127.0.0.1 set LHOST 127.0.0.1 run"
+      },
+      {
+        "decision_id": "58f47bda0c0975eea142-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹作業系統命令注入模組，未記載 SQL 注入工具能力。",
+        "evidence": "This exploits a command injection vulnerability against a test application"
+      },
+      {
+        "decision_id": "659bf516d25ab5e50ede-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為命令注入利用模組開發，未提供自動 SQL 注入偵測。",
+        "evidence": "To have a functioning command injection Metasploit module we need a few things:"
+      },
+      {
+        "decision_id": "bb5bf1d906df8d31d2f4-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明 Nmap XML 報告轉 HTML，與 DEX 轉 JAR 無關。",
+        "evidence": "Here are commands that turn an Nmap XML output file into an HTML file using common XSLT processors."
+      },
+      {
+        "decision_id": "80047189787540434c2b-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹 Commix 命令注入工具，沒有 GTFOBins sudo 功能說明。",
+        "evidence": "commix Automated All-in-One OS Command Injection and Exploitation Tool"
+      },
+      {
+        "decision_id": "38a1f385f87b2a95c972-0",
+        "relevant": 1,
+        "confidence": "medium",
+        "reason": "明確列出 SMB 伺服器版本輸出能力，符合版本偵測需求。",
+        "evidence": "SMB sigining detection Server version output Kerberos support!"
+      },
+      {
+        "decision_id": "50462f7ac9a33b087038-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "列舉的是 SMB 分享磁碟與檔案，並非網站目錄探索。",
+        "evidence": "SMBMap allows users to enumerate samba share drives across an entire domain."
+      },
+      {
+        "decision_id": "41c825fece6d2941fcd2-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "記錄 Meterpreter TLV 通訊與除錯資訊，未說明 TLS 金鑰或解密流程。",
+        "evidence": "Log all networking requests between msfconsole and Meterpreter, i.e. TLV Packets"
+      },
+      {
+        "decision_id": "78d7be571aa315a864d5-0",
+        "relevant": 1,
+        "confidence": "medium",
+        "reason": "提供既有 Meterpreter 工作階段的通訊記錄管理設定與互動範例。",
+        "evidence": "setg SessionTlvLogging false - Disable all network logging"
+      },
+      {
+        "decision_id": "b1c460264434b140d97e-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅記載列出連接裝置，未提供程序選擇或附加流程。",
+        "evidence": "This is a command-line tool for listing attached devices"
+      },
+      {
+        "decision_id": "d5b30da28d57d7df5308-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅介紹 Frida 編譯與跨平台建置，未說明 Android 執行中程式的插樁或掛鉤。",
+        "evidence": "Building for a different machine"
+      }
+    ]
+  }
+}

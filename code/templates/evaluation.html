@@ -3,7 +3,19 @@
 <nav><a href="/">Search</a><a href="/evaluation">Evaluation &amp; review</a></nav>
 <h1>Evaluation &amp; review</h1>
 <p>Precision@5 uses frozen queries, one fixed collection and content-based relevance judgments. Missing rank positions count as nonrelevant; unjudged returned documents stop scoring.</p>
-<p>New experiments require two independently completed human reviews and explicit adjudication of disagreements. The tool checks records and declared provenance; it cannot authenticate reviewers’ identities.</p>
+<h2>Language-model assessment</h2>
+<p>Relevance assessed by a language model at the user's request. These results are recorded as model judgments, separately from human review.</p>
+{% if model_score_state=='current' %}
+<p>{{ model_summary.pair_count }} query-document pairs, {{ model_summary.document_count }} full indexed documents. Selected using development queries: <strong>{{ model_summary.selected_on_development }}</strong>. Confidence labels are subjective, not calibrated probabilities.</p>
+{% if model_summary.model_self_review_corrections %}<p>{{ model_summary.model_self_review_corrections }} documented model self-review corrections; the first pass is preserved. <a href="{{ url_for('model_asset',asset='adjudications.json') }}">Review decisions &amp; scope</a></p>{% endif %}
+<table><tr><th>System</th><th>Course mean P@5</th><th>Development mean P@5</th><th>Holdout mean P@5</th></tr>
+{% for system,value in model_summary.mean_precision_at_5.course.items() %}<tr><td>{{ system }}</td><td>{{ '%.3f'|format(value) }}</td><td>{{ '%.3f'|format(model_summary.mean_precision_at_5.development[system]) }}</td><td>{{ '%.3f'|format(model_summary.mean_precision_at_5.holdout[system]) }}</td></tr>{% endfor %}</table>
+<p><a href="{{ url_for('model_asset',asset='llm_judgments.csv') }}">Model labels, reasons &amp; evidence</a> · <a href="{{ url_for('model_asset',asset='policy.json') }}">Frozen judgment rules</a> · <a href="{{ url_for('model_asset',asset='scores.json') }}">Model score evidence</a></p>
+{% elif model_score_state=='different_collection' %}<p>Model assessment belongs to a different collection from the current search; its scores are hidden.</p>
+{% elif model_score_state=='stale' %}<p>Model assessment evidence changed; old model scores are hidden.</p>
+{% else %}<p>Model assessment in progress. Scores are unavailable until all source segments and judgments pass validation.</p>{% endif %}
+<h2>Separate human-review materials</h2>
+<p>The separate human-review workflow requires two independently completed reviews and explicit adjudication of disagreements. The tool checks records and declared provenance; it cannot authenticate reviewers’ identities.</p>
 {% for suite in suites %}
 <h2>{{ suite.name }} · {{ suite.count }} queries</h2><p>{{ suite.role }}</p>
 {% if suite.scores %}<table><tr><th>System</th><th>Mean P@5</th></tr>{% for system,value in suite.scores.items() %}<tr><td>{{ system }}</td><td>{{ '%.3f'|format(value) }}</td></tr>{% endfor %}</table>
