@@ -2,11 +2,19 @@
 
 本機資安文件搜尋引擎。從 v7.1 的固定 980 頁公開資料出發，保留自寫倒排索引、TF-IDF 與 cosine，新增位置索引、欄位／鄰近度實驗及逐筆計分解釋。
 
-## 報告、改動與心路歷程
+## 報告、簡報與心路歷程
 
 - **報告**　[課程專題報告](report/REPORT_V8.md) 說明整體系統與評估方法。[v8.6 實驗報告](report/GTFO_WRITE_EFFECTS_V8_6.md) 整理本輪方法、實測結果與限制。
-- **本次改動**　區分覆寫、附加與刪檔，依查詢套用來源排除，並在同一份 986 頁語料上切換 v8.5 與 v8.6。詳見 [排序改動](docs/changes/013-write-effects.md)、[搜尋介面改動](docs/changes/015-demo-polish.md) 與 [各版更新紀錄](docs/changes/README.md)。
-- **完整心路歷程**　從最初選題、爬蟲與排序的嘗試，到 v8.6 的實驗與取捨，集中放在 [DEVLOG.md](DEVLOG.md)。
+- **本次改動**　區分覆寫、附加與刪檔，依查詢套用來源排除，並在同一份 986 頁語料上切換 v8.5 與 v8.6。[排序改動](docs/changes/013-write-effects.md) · [搜尋介面](docs/changes/015-demo-polish.md) · [五分鐘操作卡](report/DEMO_SCRIPT_V8_6.md)
+- **心路歷程**　[DEVLOG.md](DEVLOG.md) 按版本整理從選題到 v8.6 的實驗與取捨，並連到完整原文。
+
+三套簡報各有投影 PDF 與可編輯 PPTX，集中在 [report/presentations](report/presentations/)。
+
+| 簡報 | PDF | PPTX |
+|---|---|---|
+| 開發故事（26 頁） | [PDF](report/presentations/01-development-story.pdf) | [PPTX](report/presentations/01-development-story.pptx) |
+| 設計決策與取捨（22 頁） | [PDF](report/presentations/02-decision-review.pdf) | [PPTX](report/presentations/02-decision-review.pptx) |
+| v8.6 成果總覽（17 頁） | [PDF](report/presentations/03-v8.6-overview.pdf) | [PPTX](report/presentations/03-v8.6-overview.pptx) |
 
 作業截止為 2026-11-12 23:59（教學平台）。本輪程式尚待使用者驗收。
 
@@ -31,9 +39,9 @@ python -B code/app.py
 ## 資料與來源
 
 - 上游 main 基底：`9c7c3a107b9712b5fc2f31d8d432a025be39f27a`，<https://github.com/AnnaHung306/search_engine>。
-- 原始 search-engine.zip、REPORT_DRAFT.docx、data/pages.json、data/index.json 與舊評估都保留。
+- v7.1 的原始 ZIP、Word 草稿與舊 Demo 腳本可從 [Git 歷史快照](https://github.com/AnnaHung306/search_engine/tree/950576f5b3fe5dfb87cc004ba86b42d6e343ef4d) 取回。重現評估用的資料與索引仍在 `data/`。
 - 目前索引：data/index-v8.1.json.gz，schema 4；literal offsets 採 gap/length varint，按需解碼，外層固定標頭 gzip。原 schema-3 index-v8.json 仍保留。缺少新索引或格式錯誤會直接報錯，不改讀舊檔。
-- 舊 Word 與 report/REPORT_DRAFT.md 是 **v7.1 歷史草稿**，各輪報告仍按版本保存。最新寫入效果評估見 [v8.6 報告](report/GTFO_WRITE_EFFECTS_V8_6.md)。docs/HUMAN_HANDOFF.md 保留歷史人工材料與交付欄位。
+- [人工評估與交接](docs/HUMAN_HANDOFF.md) 保留歷史人工材料與交付欄位。
 - 講義頁碼／作業條文與延伸來源見 [引用資料](docs/references.md)；每批改動見 [更新紀錄](docs/changes/README.md)。
 
 ## 爬蟲
@@ -93,7 +101,7 @@ diagnostics 只接受 course/development，產生排名重疊、文件長度與�
 
 原六組固定查詢排名重現不變：0.46／0.72／0.84／0.80／0.80／0.74，僅為舊助手標註參考。12 題開發集與 24 題 holdout 已凍結並完成另存的模型判定，原人工材料保持空白。不得把未知結果自動填 0，或將不同標籤定義的分數直接相減。
 
-正常導覽的 Evaluation & review 提供全文盲評包及 CSV。3–5 分鐘展示參考 report/DEMO_SCRIPT_V8.md。組別、真實分工與各人心得仍需組員補充。
+正常導覽的 Evaluation & review 提供全文盲評包及 CSV。現場展示見 [五分鐘操作卡](report/DEMO_SCRIPT_V8_6.md)。組別、真實分工與各人心得仍需組員補充。
 
 ### v8.3 查詢意圖實驗
 
