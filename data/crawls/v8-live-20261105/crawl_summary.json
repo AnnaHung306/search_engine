@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "attempts": 1027,
+  "attempt_definition": "all HTTP requests: content, robots, redirect hops, network failures",
+  "http_requests": {
+    "total": 1027,
+    "robots": 7,
+    "content": 1020
+  },
+  "valid_pages": 980,
+  "hosts": {
+    "www.kali.org": 430,
+    "nmap.org": 150,
+    "docs.metasploit.com": 150,
+    "www.wireshark.org": 80,
+    "docs.mitmproxy.org": 30,
+    "frida.re": 40,
+    "gtfobins.org": 100
+  },
+  "failed": 0,
+  "paused_hosts": {},
+  "skipped_and_failed": {
+    "content_urls_considered": 1026,
+    "valid": 980,
+    "skipped_thin_text": 31,
+    "skipped_nonhtml": 1,
+    "skipped_duplicate_url": 4,
+    "skipped_host_cap": 1127,
+    "robots_disallowed": 10
+  },
+  "avg_text_chars": 8800.3,
+  "frontier_left": 0
+}

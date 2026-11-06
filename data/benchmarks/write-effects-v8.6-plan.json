@@ -1,0 +1,22 @@
+{
+  "experiment": "write-effects-v8.6",
+  "new_queries_sha256": "52ffff0fc5365586aff4f4f45c78944d74a327357c1e7b2087e5dcb7e68f8fc6",
+  "index_sha256": "a27a84ba001c1068ce62572f93c9ce81ff9d2979a206e61af2b028200b265678",
+  "effects_sha256": "8b2f9a051baa18272032eacc317710213c5bbd0957fb60edbb54ea4f3a27f14b",
+  "relations_sha256": "926e314493a9c69a5b93972d57aba0abadbb2534e1e8609655ccfdf5c57220e4",
+  "baseline": "expanded_v85",
+  "candidate": "effects",
+  "systems": {
+    "expanded_v85": {
+      "model": "bm25",
+      "intent": "both",
+      "gtfo_mode": "append"
+    },
+    "effects": {
+      "model": "bm25",
+      "intent": "both",
+      "gtfo_mode": "effects"
+    }
+  },
+  "comparison": "Compare v8.5 against write effects and explicit source exclusions on the same 986 documents. Separate two known cases from twelve predeclared queries."
+}

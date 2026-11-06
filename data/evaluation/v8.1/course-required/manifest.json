@@ -1,0 +1,38 @@
+{
+  "suite": "course",
+  "suite_sha256": "da5b3aae704741065d7db9e9dd5082c2b9cf4b0e231c77fe3b270cc25caf65a8",
+  "index_sha256": "4eebfa9c8b22d773db53274c0e9f06b0ddb1a3db5d57be281eb4d9ed325e0bd4",
+  "collection_sha256": "f455264f04f5512863299f84b73e76f33004449ffc2f87c36512a4ff38020094",
+  "systems": {
+    "tfidf": {}
+  },
+  "systems_sha256": "c498e499d35caad0c71d331237691967447dd7d0454e982a4e7d16a937e46488",
+  "code_sha256": {
+    "app.py": "52d21ec5f8eb1a99c9530694dd389ec266eba51675c244438ea10983e81bac29",
+    "clean.py": "d11905f257e4975a6b7d735ff242426f016399830c858a09e2190e1e2cf43da0",
+    "config.py": "814a2dcbfdf68fc2b8f6a24665ab6b44c1b7722111b2efd227a2f641fbec3663",
+    "crawl_http.py": "12a5fda6835e51250b680dece518510b2eb5829599a0b9f684b8a4a7736b4f86",
+    "crawl_urls.py": "628e39799fa9576f943114412aee333fe6d0d6eb7804bf4b26c9e62dc3f26faf",
+    "crawler.py": "394fc9bbf6ec7ef9a773f4c5ff56a00c1962921cf96ee3f4e3b08dd9b2861a17",
+    "diagnostics.py": "0b9d7d7977c93e3ae59d03f3c64594f7b4f4ea8e62688cc0ac6d86cbecf2ebc1",
+    "evaluate.py": "4a79b71371a65c47e75ea8dbb818e0a11ca984276cafe09a574853de2b2240ac",
+    "evaluation.py": "5cb4554a24736f58fb9c06fdab032126749418a233c9c8813c9181f089623749",
+    "fix_encoding.py": "691af4fbcf3fe56e67bb4c0e9e95be6f79209ec8ea9579cbd300559cf5f73365",
+    "fuzzy.py": "623ab166ef0ddeef1adfd70df1ea17d9094be77cf9d456eeec604e1c7e41be4a",
+    "indexer.py": "04240434052f3027eab2496338c327e1e917b8859b8348516bcee0858ad7b30f",
+    "offsets.py": "bcdeef856e439e09c39eddbe9057b45aa48b83bb9f866271c7152489fb1c3ffd",
+    "positions.py": "00bb6d9489ed1b1432a8bf963ffcd2a27df22043c034bb16ebb00a5dae3e4135",
+    "preprocess.py": "b2ecd2922316c0f5b8d85fad5dd8fa6064c3945a00415a198f6dfb2de18f52b2",
+    "ranking.py": "0c65d836efc306a5a1a9dd56028c119994e1385e83c456ee4dbde0a7d40431a6",
+    "run_experiments.py": "34515ab95e82de4607d8f41497d93ff7ece9257e82406b61e3a1f4093796e431",
+    "search.py": "0fc1e16287efb01bfcc231476e3e5a2be8aebaba25932520b2805d7874defaed",
+    "snippets.py": "e27ed4fe09c2b418da17671b72714af882765730d6c4a1d5c2b5ce73b65f2518",
+    "synonyms.py": "2e513abfae992703c5359252322bd74f7a17aaa1a73a2e1ed97d1d3c4e56a781",
+    "toy_example.py": "97944647b0bda3f1f2684b66da63c69dca0f9b3f74836def21d084ff20f913f9",
+    "weighting.py": "ee9b0aac26c24e3ef973dce5693aeafd77e39ddf670a60e9253b90564dcf49be"
+  },
+  "runs_sha256": "473b844a09f299e65dfb64510526ea4eb16eababdc86cdd82c2829af497f0bd3",
+  "review_html_sha256": "608b70d2ac76474088f4fe1407c2d74d0fdd1fce19fec8dfbd26ae990dfd2bc5",
+  "pool_size": 50,
+  "human_review": "pending; no final P@5 available"
+}

@@ -1,0 +1,90 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "450288e92fe9b1c95bd4f08fc165ea027864a436c676e77c213b39e48cfb0e01",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "abf21051e4a43de9acc3ec10609032e17813fc7356368d05df779045c53f144d",
+  "started_at": 1793848716.841015,
+  "finished_at": 1793848732.6679418,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "8d6b689bea32a76ddc3b-1",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明客戶端驗證伺服器憑證時的主機檢查與根 CA 信任設定，符合 TLS 信任配置規則。",
+        "evidence": "The self-signed root CA certificate needs to be stored either in the file specified with CAfile, or in the directory specified with CApath."
+      },
+      {
+        "decision_id": "d921d21db7b59ac76c03-1",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為 TLS 隧道與憑證設定，未說明以工作階段金鑰記錄解密封包的分析流程。",
+        "evidence": "In order to provide TLS encapsulation to your local imapd service, use:"
+      },
+      {
+        "decision_id": "8dc7b1dd0ebfb98e4a31-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹 Metasploit 漏洞檢查方法，未提供 Android Java 方法插樁或掛鉤功能。",
+        "evidence": "In Metasploit, exploits and auxiliary modules support the check command that allows the user to be able to determine the vulnerable state before using the module."
+      },
+      {
+        "decision_id": "c2a9df41e439d8534bca-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為漏洞狀態檢查與檢查碼，未記載 APK 資源的擷取、解碼或檢視。",
+        "evidence": "Once you have determined the vulnerable state, you should return a check code."
+      },
+      {
+        "decision_id": "bfe711ad5b986e32634f-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "解釋 SYN 掃描如何判讀無回應，並提供以 SYN 掃描為基礎的自訂旗標用法。",
+        "evidence": "For example, a SYN scan considers no-response indicative of a filtered port, while a FIN scan treats the same as open|filtered ."
+      },
+      {
+        "decision_id": "39ee584aa32856411fcc-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹 Nmap 輸出格式與除錯選項，未解釋 UDP 掃描行為、用法或結果判讀。",
+        "evidence": "So Nmap offers several formats, including the interactive mode for humans to read directly and XML for easy parsing by software."
+      }
+    ]
+  }
+}

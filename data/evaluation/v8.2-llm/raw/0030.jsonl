@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9b5-4a84-78b1-b7bb-e76991ef2e7d"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"2a0b9d4ae0e204e4afb3-0\",\"relevant\":1,\"confidence\":\"high\",\"reason\":\"說明允許程式立即啟動後再附加的設定，符合對執行中程序進行 Frida 插樁的需求。\",\"evidence\":\"Specify resume if you would like the program to be allowed to start immediately, which is useful if you just want to be able to attach at a later time.\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":29530,"cached_input_tokens":25472,"cache_write_input_tokens":0,"output_tokens":119,"reasoning_output_tokens":0}}

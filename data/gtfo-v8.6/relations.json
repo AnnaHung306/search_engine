@@ -1,0 +1,4179 @@
+{
+  "schema": 1,
+  "collection_sha256": "bcc3df84616835347f5bdac17665014c777651b7ef89929cfc2a4f225c3a68eb",
+  "source": {
+    "archive": "https://codeload.github.com/GTFOBins/GTFOBins.github.io/tar.gz/acd524623f9c406acedd2754ebd9c2431f3675ad",
+    "revision": "acd524623f9c406acedd2754ebd9c2431f3675ad",
+    "archive_sha256": "afe286956f27472819d18a5ad63938b6c66be911fbd1abb003dbd366f4c3b3b6"
+  },
+  "documents": {
+    "https://gtfobins.org/gtfobins/7z/": {
+      "canonical": "7z",
+      "body_sha256": "b3a891cf8e5c352f64d241125639e69e43a5f77c2572abf42887699b2b0aab80",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 206,
+          "example_start": 458,
+          "example_length": 59
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 76,
+          "example_start": 146,
+          "example_length": 59
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/R/": {
+      "canonical": "R",
+      "body_sha256": "fe57e6fe94a88c2174e6a97400e58539a83de87cf082aab659206a2445f8e848",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 13,
+          "context_start": 179,
+          "example_start": 431,
+          "example_length": 34
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 13,
+          "context_start": 466,
+          "example_start": 812,
+          "example_length": 34
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 13,
+          "context_start": 74,
+          "example_start": 144,
+          "example_length": 34
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/aa-exec/": {
+      "canonical": "aa-exec",
+      "body_sha256": "0a1e4920569c29eeb3425e21d9b08155a13c0067d75fa22e81e3767bbcc59f3e",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 166,
+          "example_start": 418,
+          "example_length": 15
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 434,
+          "example_start": 602,
+          "example_length": 15
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 80,
+          "example_start": 150,
+          "example_length": 15
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/ab/": {
+      "canonical": "ab",
+      "body_sha256": "bb349d3928caebd1405f4386a5f0f72d39a6f9345d4ccab8644f27cb42aeb9c2",
+      "relations": [
+        {
+          "function": "download",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 855,
+          "context_start": 1022,
+          "example_start": 1274,
+          "example_length": 45
+        },
+        {
+          "function": "download",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 855,
+          "context_start": 1320,
+          "example_start": 1488,
+          "example_length": 45
+        },
+        {
+          "function": "download",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 855,
+          "context_start": 906,
+          "example_start": 976,
+          "example_length": 45
+        },
+        {
+          "function": "upload",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 24,
+          "context_start": 187,
+          "example_start": 439,
+          "example_length": 46
+        },
+        {
+          "function": "upload",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 24,
+          "context_start": 486,
+          "example_start": 654,
+          "example_length": 46
+        },
+        {
+          "function": "upload",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 24,
+          "context_start": 70,
+          "example_start": 140,
+          "example_length": 46
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/acr/": {
+      "canonical": "acr",
+      "body_sha256": "dd05e11ad3bb8defd8f749a2f2826888bda4863f2e869de915b704fe9eed54c3",
+      "relations": [
+        {
+          "function": "command",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 270,
+          "example_start": 522,
+          "example_length": 117
+        },
+        {
+          "function": "command",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 640,
+          "example_start": 986,
+          "example_length": 117
+        },
+        {
+          "function": "command",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 82,
+          "example_start": 152,
+          "example_length": 117
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/agetty/": {
+      "canonical": "agetty",
+      "body_sha256": "7cc6c763441bfbdcdf43c7a11d8f9c3a8b40b1d0ab657a51bfdf5675c1a2dba1",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 79,
+          "example_start": 461,
+          "example_length": 35
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/alpine/": {
+      "canonical": "alpine",
+      "body_sha256": "ad0e92723a28fcbd13e44a918cd4adf09444adc141aabd2420a9268319337fd9",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 346,
+          "example_start": 598,
+          "example_length": 29
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 628,
+          "example_start": 796,
+          "example_length": 29
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 246,
+          "example_start": 316,
+          "example_length": 29
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/ansible-playbook/": {
+      "canonical": "ansible-playbook",
+      "body_sha256": "8cd1ce7011bb8bebe85532e91a0c1431b0d1a8f98e8c6f296ab893eb6ab056d4",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 28,
+          "context_start": 299,
+          "example_start": 551,
+          "example_length": 139
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 28,
+          "context_start": 89,
+          "example_start": 159,
+          "example_length": 139
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/ansible-test/": {
+      "canonical": "ansible-test",
+      "body_sha256": "5a1703a1b77321d99bfca4a609bafe17590ad7993c719c146669de09dd087d7b",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 24,
+          "context_start": 174,
+          "example_start": 426,
+          "example_length": 18
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 24,
+          "context_start": 85,
+          "example_start": 155,
+          "example_length": 18
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/aoss/": {
+      "canonical": "aoss",
+      "body_sha256": "71ebbae9f1ad09cebd2f36f10c40e1b327d785272b48a07cb13869cbfc935e74",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 16,
+          "context_start": 160,
+          "example_start": 412,
+          "example_length": 12
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 16,
+          "context_start": 77,
+          "example_start": 147,
+          "example_length": 12
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/apache2/": {
+      "canonical": "apache2",
+      "body_sha256": "baab4c76e84d9bf91c69fe76dc4d92405e168a886cc94694c2ff126bf1d40bc1",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 23,
+          "context_start": 240,
+          "example_start": 492,
+          "example_length": 30
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 23,
+          "context_start": 523,
+          "example_start": 691,
+          "example_length": 30
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 23,
+          "context_start": 139,
+          "example_start": 209,
+          "example_length": 30
+        },
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 23,
+          "context_start": 1056,
+          "example_start": 1308,
+          "example_length": 69
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 23,
+          "context_start": 1378,
+          "example_start": 1546,
+          "example_length": 69
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 23,
+          "context_start": 916,
+          "example_start": 986,
+          "example_length": 69
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/apache2ctl/": {
+      "canonical": "apache2ctl",
+      "body_sha256": "29258e1765756b4a4f67eeebcc0114c42beb10de594b0f311e4c1e830ddedea5",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 26,
+          "context_start": 264,
+          "example_start": 516,
+          "example_length": 43
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 26,
+          "context_start": 150,
+          "example_start": 220,
+          "example_length": 43
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/apport-cli/": {
+      "canonical": "apport-cli",
+      "body_sha256": "f5f6ff5a0bfd9130bf4f83b28033e8370a5e3c7f772bc9cd5226a7803774f7de",
+      "relations": []
+    },
+    "https://gtfobins.org/gtfobins/apt/": {
+      "canonical": "apt-get",
+      "body_sha256": "11384e243e6e02cbf5a1c90749947235adbda0a7452352bf07d4c5c838530c8a",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 96,
+          "context_start": 244,
+          "example_start": 496,
+          "example_length": 105
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 96,
+          "context_start": 602,
+          "example_start": 948,
+          "example_length": 105
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 96,
+          "context_start": 1124,
+          "example_start": 1376,
+          "example_length": 51
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 96,
+          "context_start": 1428,
+          "example_start": 1774,
+          "example_length": 51
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/apt-get/": {
+      "canonical": "apt-get",
+      "body_sha256": "bba4648194a7c68a06f404ec2fce10cfa3a390cd1a8862cc3f07fae90190b14d",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 70,
+          "context_start": 218,
+          "example_start": 470,
+          "example_length": 105
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 70,
+          "context_start": 576,
+          "example_start": 922,
+          "example_length": 105
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 70,
+          "context_start": 1098,
+          "example_start": 1350,
+          "example_length": 51
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 70,
+          "context_start": 1402,
+          "example_start": 1748,
+          "example_length": 51
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/aptitude/": {
+      "canonical": "aptitude",
+      "body_sha256": "a853682295445829de872868e1cc067b9fe6c171fe23db945a84caba751ce4af",
+      "relations": []
+    },
+    "https://gtfobins.org/gtfobins/ar/": {
+      "canonical": "ar",
+      "body_sha256": "9bba3c46a7fd854252b456033245459390d35d5092099eb1f8218657d4f65fac",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 218,
+          "example_start": 470,
+          "example_length": 71
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 542,
+          "example_start": 710,
+          "example_length": 71
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 76,
+          "example_start": 146,
+          "example_length": 71
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/arch-nspawn/": {
+      "canonical": "arch-nspawn",
+      "body_sha256": "247572cce31700cc1822b20990d2e387771be6be6db3b850c1d47c83ed26b341",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 23,
+          "context_start": 84,
+          "example_start": 336,
+          "example_length": 188
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/aria2c/": {
+      "canonical": "aria2c",
+      "body_sha256": "4bdac5103de08fea323d946c255da00aa89c815918638d7374611d32c1110b29",
+      "relations": [
+        {
+          "function": "command",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 39,
+          "context_start": 389,
+          "example_start": 641,
+          "example_length": 142
+        },
+        {
+          "function": "command",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 39,
+          "context_start": 784,
+          "example_start": 1130,
+          "example_length": 142
+        },
+        {
+          "function": "command",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 39,
+          "context_start": 176,
+          "example_start": 246,
+          "example_length": 142
+        },
+        {
+          "function": "command",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 39,
+          "context_start": 1742,
+          "example_start": 1994,
+          "example_length": 115
+        },
+        {
+          "function": "command",
+          "context": "suid",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 39,
+          "context_start": 2110,
+          "example_start": 2456,
+          "example_length": 115
+        },
+        {
+          "function": "command",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 39,
+          "context_start": 1556,
+          "example_start": 1626,
+          "example_length": 115
+        },
+        {
+          "function": "download",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 3392,
+          "context_start": 3751,
+          "example_start": 4003,
+          "example_length": 68
+        },
+        {
+          "function": "download",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 3392,
+          "context_start": 4072,
+          "example_start": 4240,
+          "example_length": 68
+        },
+        {
+          "function": "download",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 3392,
+          "context_start": 3612,
+          "example_start": 3682,
+          "example_length": 68
+        },
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 2572,
+          "context_start": 2776,
+          "example_start": 3028,
+          "example_length": 29
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 2572,
+          "context_start": 3058,
+          "example_start": 3226,
+          "example_length": 29
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 2572,
+          "context_start": 2676,
+          "example_start": 2746,
+          "example_length": 29
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/arj/": {
+      "canonical": "arj",
+      "body_sha256": "56ab3b8520948cc2a784fc13008f9ac083e190452626dd64093d0c25c2fb6cbe",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 839,
+          "context_start": 1096,
+          "example_start": 1348,
+          "example_length": 73
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 839,
+          "context_start": 1422,
+          "example_start": 1590,
+          "example_length": 73
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 839,
+          "context_start": 952,
+          "example_start": 1022,
+          "example_length": 73
+        },
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 30,
+          "context_start": 275,
+          "example_start": 527,
+          "example_length": 71
+        },
+        {
+          "function": "file-write",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 30,
+          "context_start": 599,
+          "example_start": 767,
+          "example_length": 71
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 30,
+          "context_start": 133,
+          "example_start": 203,
+          "example_length": 71
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/arp/": {
+      "canonical": "arp",
+      "body_sha256": "a7853ebf796748b54665aacebdd0e36896a9f8c00fa4939201b2e3b999f90fda",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 228,
+          "example_start": 480,
+          "example_length": 29
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 510,
+          "example_start": 678,
+          "example_length": 29
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 128,
+          "example_start": 198,
+          "example_length": 29
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/as/": {
+      "canonical": "as",
+      "body_sha256": "b759396016655bb46045f1108b56d1e7a1ae9e142380bd206c6b8ccc7f239a25",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 221,
+          "example_start": 473,
+          "example_length": 23
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 497,
+          "example_start": 665,
+          "example_length": 23
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 127,
+          "example_start": 197,
+          "example_length": 23
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/ascii-xfr/": {
+      "canonical": "ascii-xfr",
+      "body_sha256": "20bedd8826a04223df7e3d4a48ef52034fb3115e317e5753dccf56aacff24fba",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 25,
+          "context_start": 187,
+          "example_start": 439,
+          "example_length": 33
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 25,
+          "context_start": 473,
+          "example_start": 641,
+          "example_length": 33
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 25,
+          "context_start": 83,
+          "example_start": 153,
+          "example_length": 33
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/ascii85/": {
+      "canonical": "ascii85",
+      "body_sha256": "fa8fc6554ccd84e30c3c8ccfb1985f9d8f5cefdd398ff42ebe747a4891a64599",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 23,
+          "context_start": 198,
+          "example_start": 450,
+          "example_length": 46
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 23,
+          "context_start": 81,
+          "example_start": 151,
+          "example_length": 46
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/ash/": {
+      "canonical": "ash",
+      "body_sha256": "393d956480d85a09fc9aa75d4118d4f2724f90dd54f3d209863742fbee2fa510",
+      "relations": [
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 592,
+          "context_start": 761,
+          "example_start": 1013,
+          "example_length": 40
+        },
+        {
+          "function": "file-write",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 592,
+          "context_start": 1054,
+          "example_start": 1222,
+          "example_length": 43
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 592,
+          "context_start": 650,
+          "example_start": 720,
+          "example_length": 40
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 26,
+          "context_start": 161,
+          "example_start": 413,
+          "example_length": 3
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 26,
+          "context_start": 417,
+          "example_start": 585,
+          "example_length": 6
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 26,
+          "context_start": 87,
+          "example_start": 157,
+          "example_length": 3
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/aspell/": {
+      "canonical": "aspell",
+      "body_sha256": "df19ab216e9e5fee7f487c3521c0e38283ce8249422ebb29b8b323d57cd307a2",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 293,
+          "example_start": 545,
+          "example_length": 29
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 575,
+          "example_start": 743,
+          "example_length": 29
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 193,
+          "example_start": 263,
+          "example_length": 29
+        },
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 1103,
+          "example_start": 1355,
+          "example_length": 33
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 1389,
+          "example_start": 1557,
+          "example_length": 33
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 999,
+          "example_start": 1069,
+          "example_length": 33
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/asterisk/": {
+      "canonical": "asterisk",
+      "body_sha256": "5f8be5611a232d532ea4093f339fb828dbd85004a3c45b1fa9b9b3bc98429668",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 338,
+          "example_start": 590,
+          "example_length": 20
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 611,
+          "example_start": 957,
+          "example_length": 20
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 247,
+          "example_start": 317,
+          "example_length": 20
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/at/": {
+      "canonical": "at",
+      "body_sha256": "ac85781106672d8aefd3c5bb516874e27d335b9ecb4e7084a1deb8743d563b21",
+      "relations": [
+        {
+          "function": "command",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 585,
+          "context_start": 751,
+          "example_start": 1003,
+          "example_length": 30
+        },
+        {
+          "function": "command",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 585,
+          "context_start": 650,
+          "example_start": 720,
+          "example_length": 30
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 265,
+          "example_start": 517,
+          "example_length": 67
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 127,
+          "example_start": 197,
+          "example_length": 67
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/atobm/": {
+      "canonical": "atobm",
+      "body_sha256": "5cae7fea19c6f0ab491e182b65c3772dbcadf2fd49a182e77c79dffce14400bd",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 21,
+          "context_start": 401,
+          "example_start": 653,
+          "example_length": 25
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 21,
+          "context_start": 679,
+          "example_start": 847,
+          "example_length": 25
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 21,
+          "context_start": 305,
+          "example_start": 375,
+          "example_length": 25
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/autoconf/": {
+      "canonical": "autoconf",
+      "body_sha256": "e89f0d71cbc2980752038d4340650ff0ae0f2991482e17bc18a0a57c8c2e4b3d",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 268,
+          "example_start": 520,
+          "example_length": 116
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 81,
+          "example_start": 151,
+          "example_length": 116
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/autoheader/": {
+      "canonical": "autoheader",
+      "body_sha256": "cb87a31514ad368ad580b4b1e0f8598bcc58bdfb465bebc2abc463ce442f8f17",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 279,
+          "example_start": 531,
+          "example_length": 125
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 83,
+          "example_start": 153,
+          "example_length": 125
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/autoreconf/": {
+      "canonical": "autoreconf",
+      "body_sha256": "a258a19a45c8bbeb19a9ab585a91535c0ddeaf0c39d23d16fe84f418d735e8fd",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 332,
+          "example_start": 584,
+          "example_length": 133
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 128,
+          "example_start": 198,
+          "example_length": 133
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/awk/": {
+      "canonical": "mawk",
+      "body_sha256": "d6ff8b459910add9ad2dbeadb521f89459604e49d8474331cfee7e3b74496143",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1604,
+          "context_start": 1762,
+          "example_start": 2014,
+          "example_length": 29
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1604,
+          "context_start": 2044,
+          "example_start": 2212,
+          "example_length": 29
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1604,
+          "context_start": 1662,
+          "example_start": 1732,
+          "example_length": 29
+        },
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 891,
+          "context_start": 1074,
+          "example_start": 1326,
+          "example_length": 54
+        },
+        {
+          "function": "file-write",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 891,
+          "context_start": 1381,
+          "example_start": 1549,
+          "example_length": 54
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 891,
+          "context_start": 949,
+          "example_start": 1019,
+          "example_length": 54
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 63,
+          "context_start": 227,
+          "example_start": 479,
+          "example_length": 32
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 63,
+          "context_start": 512,
+          "example_start": 858,
+          "example_length": 32
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 63,
+          "context_start": 124,
+          "example_start": 194,
+          "example_length": 32
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/aws/": {
+      "canonical": "aws",
+      "body_sha256": "e14912a948f4d3ed3305ce7c31e56915a2d8ab8e07dec31c6abfdeda74d6519f",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 70,
+          "context_start": 261,
+          "example_start": 513,
+          "example_length": 62
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 70,
+          "context_start": 576,
+          "example_start": 744,
+          "example_length": 62
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 70,
+          "context_start": 128,
+          "example_start": 198,
+          "example_length": 62
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/base32/": {
+      "canonical": "base32",
+      "body_sha256": "3c7fb0eb782d20c442fd0f2e41c2b9b5cd1346b4cf0a4a9efd618c8df33e4ec2",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 195,
+          "example_start": 447,
+          "example_length": 44
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 492,
+          "example_start": 660,
+          "example_length": 44
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 80,
+          "example_start": 150,
+          "example_length": 44
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/base58/": {
+      "canonical": "base58",
+      "body_sha256": "cd3409bbb344235830c26ff4b6f2acd2ecb0ae2cda490d132e935470380d7b87",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 195,
+          "example_start": 447,
+          "example_length": 44
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 80,
+          "example_start": 150,
+          "example_length": 44
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/base64/": {
+      "canonical": "base64",
+      "body_sha256": "7314d832e0b7630bbe39c243a4dc2a13d3b31db1b716101539bc182338c4615d",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 195,
+          "example_start": 447,
+          "example_length": 44
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 492,
+          "example_start": 660,
+          "example_length": 44
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 80,
+          "example_start": 150,
+          "example_length": 44
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/basenc/": {
+      "canonical": "basenc",
+      "body_sha256": "7749bc89cf24bf9d77be984eb5ea20e4cab1425ae3be752fdea1255fcd905297",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 207,
+          "example_start": 459,
+          "example_length": 56
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 516,
+          "example_start": 684,
+          "example_length": 56
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 80,
+          "example_start": 150,
+          "example_length": 56
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/basez/": {
+      "canonical": "basez",
+      "body_sha256": "8a014461b3e64b41516b61d90fab0e06cc81e751d022a1dacd39e6a9ffcfd858",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 21,
+          "context_start": 192,
+          "example_start": 444,
+          "example_length": 42
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 21,
+          "context_start": 487,
+          "example_start": 655,
+          "example_length": 42
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 21,
+          "context_start": 79,
+          "example_start": 149,
+          "example_length": 42
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/bash/": {
+      "canonical": "bash",
+      "body_sha256": "f22b736ed0e6c11a8951979b9b4063cea325cf37e85d046bfea50437e29f4201",
+      "relations": [
+        {
+          "function": "download",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 6918,
+          "context_start": 7279,
+          "example_start": 7531,
+          "example_length": 239
+        },
+        {
+          "function": "download",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 6918,
+          "context_start": 7771,
+          "example_start": 7939,
+          "example_length": 242
+        },
+        {
+          "function": "download",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 6918,
+          "context_start": 6969,
+          "example_start": 7039,
+          "example_length": 239
+        },
+        {
+          "function": "download",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 6918,
+          "context_start": 8555,
+          "example_start": 8807,
+          "example_length": 69
+        },
+        {
+          "function": "download",
+          "context": "suid",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 6918,
+          "context_start": 8877,
+          "example_start": 9045,
+          "example_length": 72
+        },
+        {
+          "function": "download",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 6918,
+          "context_start": 8415,
+          "example_start": 8485,
+          "example_length": 69
+        },
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 3123,
+          "context_start": 3292,
+          "example_start": 3544,
+          "example_length": 40
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 3123,
+          "context_start": 3585,
+          "example_start": 3753,
+          "example_length": 43
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 3123,
+          "context_start": 3181,
+          "example_start": 3251,
+          "example_length": 40
+        },
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 3123,
+          "context_start": 4147,
+          "example_start": 4399,
+          "example_length": 74
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 3123,
+          "context_start": 4474,
+          "example_start": 4642,
+          "example_length": 74
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 3123,
+          "context_start": 4002,
+          "example_start": 4072,
+          "example_length": 74
+        },
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1499,
+          "context_start": 1669,
+          "example_start": 1921,
+          "example_length": 41
+        },
+        {
+          "function": "file-write",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1499,
+          "context_start": 1963,
+          "example_start": 2131,
+          "example_length": 44
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1499,
+          "context_start": 1557,
+          "example_start": 1627,
+          "example_length": 41
+        },
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1499,
+          "context_start": 2425,
+          "example_start": 2677,
+          "example_length": 70
+        },
+        {
+          "function": "file-write",
+          "context": "suid",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1499,
+          "context_start": 2748,
+          "example_start": 2916,
+          "example_length": 70
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1499,
+          "context_start": 2284,
+          "example_start": 2354,
+          "example_length": 70
+        },
+        {
+          "function": "library-load",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 9360,
+          "context_start": 9593,
+          "example_start": 9845,
+          "example_length": 37
+        },
+        {
+          "function": "library-load",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 9360,
+          "context_start": 9883,
+          "example_start": 10051,
+          "example_length": 40
+        },
+        {
+          "function": "library-load",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 9360,
+          "context_start": 9485,
+          "example_start": 9555,
+          "example_length": 37
+        },
+        {
+          "function": "reverse-shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 649,
+          "context_start": 868,
+          "example_start": 1120,
+          "example_length": 56
+        },
+        {
+          "function": "reverse-shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 649,
+          "context_start": 1177,
+          "example_start": 1345,
+          "example_length": 62
+        },
+        {
+          "function": "reverse-shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 649,
+          "context_start": 741,
+          "example_start": 811,
+          "example_length": 56
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 80,
+          "context_start": 216,
+          "example_start": 468,
+          "example_length": 4
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 80,
+          "context_start": 473,
+          "example_start": 641,
+          "example_length": 7
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 80,
+          "context_start": 141,
+          "example_start": 211,
+          "example_length": 4
+        },
+        {
+          "function": "upload",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 4853,
+          "context_start": 5061,
+          "example_start": 5313,
+          "example_length": 91
+        },
+        {
+          "function": "upload",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 4853,
+          "context_start": 5405,
+          "example_start": 5573,
+          "example_length": 94
+        },
+        {
+          "function": "upload",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 4853,
+          "context_start": 4899,
+          "example_start": 4969,
+          "example_length": 91
+        },
+        {
+          "function": "upload",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 4853,
+          "context_start": 6101,
+          "example_start": 6353,
+          "example_length": 72
+        },
+        {
+          "function": "upload",
+          "context": "suid",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 4853,
+          "context_start": 6426,
+          "example_start": 6594,
+          "example_length": 75
+        },
+        {
+          "function": "upload",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 4853,
+          "context_start": 5958,
+          "example_start": 6028,
+          "example_length": 72
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/bashbug/": {
+      "canonical": "bashbug",
+      "body_sha256": "4f08c56c87fd93e0fc4ff573fc88cbc8b5b71658be98192c9fc168f0db830904",
+      "relations": []
+    },
+    "https://gtfobins.org/gtfobins/batcat/": {
+      "canonical": "batcat",
+      "body_sha256": "3d0e5241695fc8f39b83f9df2c72e09198d54619fa4980f6c829d687a45ec114",
+      "relations": []
+    },
+    "https://gtfobins.org/gtfobins/bbot/": {
+      "canonical": "bbot",
+      "body_sha256": "074a37de55191105425c3aad26aecf610799ae68b21e5a06e1c596d0c8d43827",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 228,
+          "example_start": 480,
+          "example_length": 31
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 126,
+          "example_start": 196,
+          "example_length": 31
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/bc/": {
+      "canonical": "bc",
+      "body_sha256": "3f665fa3938855f8537a7bf4ee31903e3d7d41ead5291c9ea45f406c966e4dad",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 252,
+          "example_start": 504,
+          "example_length": 30
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 535,
+          "example_start": 703,
+          "example_length": 30
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 151,
+          "example_start": 221,
+          "example_length": 30
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/bconsole/": {
+      "canonical": "bconsole",
+      "body_sha256": "dbf9b370f72dad37f69597d87906394777013710ded596d94648365b04b2418f",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 459,
+          "context_start": 713,
+          "example_start": 965,
+          "example_length": 31
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 459,
+          "context_start": 997,
+          "example_start": 1165,
+          "example_length": 31
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 459,
+          "context_start": 611,
+          "example_start": 681,
+          "example_length": 31
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 30,
+          "context_start": 184,
+          "example_start": 436,
+          "example_length": 22
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 30,
+          "context_start": 91,
+          "example_start": 161,
+          "example_length": 22
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/bee/": {
+      "canonical": "bee",
+      "body_sha256": "1febc443f3200ee469b8dd89267d718e2992f7101fe992ac6eca4a358a3e69bc",
+      "relations": []
+    },
+    "https://gtfobins.org/gtfobins/borg/": {
+      "canonical": "borg",
+      "body_sha256": "55197df529c583d7b3031335a4b765ed797e2bbfef11b67e96865dad48a845c9",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 16,
+          "context_start": 227,
+          "example_start": 479,
+          "example_length": 79
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 16,
+          "context_start": 77,
+          "example_start": 147,
+          "example_length": 79
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/bpftrace/": {
+      "canonical": "bpftrace",
+      "body_sha256": "e6b4b68e7ddb7a31b0061a74541c6d2407414bb758f7509071d08b065840b73c",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 81,
+          "example_start": 333,
+          "example_length": 60
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 394,
+          "example_start": 646,
+          "example_length": 101
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 2,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 748,
+          "example_start": 1000,
+          "example_length": 37
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/bridge/": {
+      "canonical": "bridge",
+      "body_sha256": "aee60e4361b2efd4cb516b37033744a59643a745366c2a0bd7df7a2f3c36610e",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 296,
+          "example_start": 548,
+          "example_length": 29
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 578,
+          "example_start": 746,
+          "example_length": 29
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 196,
+          "example_start": 266,
+          "example_length": 29
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/bundle/": {
+      "canonical": "bundle",
+      "body_sha256": "a46aac96cc990f14037bcc2bb7406b0e50990c9e085944bfda79f132cfd7cbc2",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 69,
+          "context_start": 237,
+          "example_start": 489,
+          "example_length": 36
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 69,
+          "context_start": 130,
+          "example_start": 200,
+          "example_length": 36
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 69,
+          "context_start": 630,
+          "example_start": 882,
+          "example_length": 33
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 69,
+          "context_start": 526,
+          "example_start": 596,
+          "example_length": 33
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 2,
+          "effect": "documented",
+          "function_start": 69,
+          "context_start": 1096,
+          "example_start": 1348,
+          "example_length": 48
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 2,
+          "effect": "documented",
+          "function_start": 69,
+          "context_start": 977,
+          "example_start": 1047,
+          "example_length": 48
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/bundler/": {
+      "canonical": "bundle",
+      "body_sha256": "b10d685b2675bbce9a3eaeaeaf045e1d58db934817aea79ae0dbf4b5a367b34a",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 99,
+          "context_start": 267,
+          "example_start": 519,
+          "example_length": 36
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 99,
+          "context_start": 160,
+          "example_start": 230,
+          "example_length": 36
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 99,
+          "context_start": 660,
+          "example_start": 912,
+          "example_length": 33
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 99,
+          "context_start": 556,
+          "example_start": 626,
+          "example_length": 33
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 2,
+          "effect": "documented",
+          "function_start": 99,
+          "context_start": 1126,
+          "example_start": 1378,
+          "example_length": 48
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 2,
+          "effect": "documented",
+          "function_start": 99,
+          "context_start": 1007,
+          "example_start": 1077,
+          "example_length": 48
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/busctl/": {
+      "canonical": "busctl",
+      "body_sha256": "381e6b62e9e245cb55247ad8a260a6096ef8f402da61a247cb1119b8500319fd",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 69,
+          "context_start": 391,
+          "example_start": 643,
+          "example_length": 190
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 69,
+          "context_start": 834,
+          "example_start": 1216,
+          "example_length": 194
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 69,
+          "context_start": 130,
+          "example_start": 200,
+          "example_length": 190
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 69,
+          "context_start": 1558,
+          "example_start": 1810,
+          "example_length": 76
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 69,
+          "context_start": 1887,
+          "example_start": 2269,
+          "example_length": 80
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 69,
+          "context_start": 1411,
+          "example_start": 1481,
+          "example_length": 76
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/busybox/": {
+      "canonical": "busybox",
+      "body_sha256": "359d1d84edad57604d7653884f7949f4410855718fa4c700dfea84508c59e3e4",
+      "relations": [
+        {
+          "function": "reverse-shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 181,
+          "context_start": 384,
+          "example_start": 636,
+          "example_length": 40
+        },
+        {
+          "function": "reverse-shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 181,
+          "context_start": 273,
+          "example_start": 343,
+          "example_length": 40
+        },
+        {
+          "function": "upload",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 768,
+          "context_start": 981,
+          "example_start": 1233,
+          "example_length": 30
+        },
+        {
+          "function": "upload",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 768,
+          "context_start": 880,
+          "example_start": 950,
+          "example_length": 30
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/byebug/": {
+      "canonical": "byebug",
+      "body_sha256": "1536b8a1c54395063bdd7cc3942beae14bc8b52fede7845e4fa41aa5ae8c12c6",
+      "relations": []
+    },
+    "https://gtfobins.org/gtfobins/bzip2/": {
+      "canonical": "bzip2",
+      "body_sha256": "6ab3d2b25cc4ec147026ec93c34d72779c2dc2af1ad208e31a15cbf9bac18bb3",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 236,
+          "context_start": 404,
+          "example_start": 656,
+          "example_length": 39
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 236,
+          "context_start": 696,
+          "example_start": 864,
+          "example_length": 39
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 236,
+          "context_start": 294,
+          "example_start": 364,
+          "example_length": 39
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/c89/": {
+      "canonical": "gcc",
+      "body_sha256": "89b7b90afc9f9deec4c4639fcf7812f21339896898d7318da8395275d79c1a2a",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1090,
+          "context_start": 1250,
+          "example_start": 1502,
+          "example_length": 31
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1090,
+          "context_start": 1148,
+          "example_start": 1218,
+          "example_length": 31
+        },
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1090,
+          "context_start": 1880,
+          "example_start": 2132,
+          "example_length": 24
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1090,
+          "context_start": 1785,
+          "example_start": 1855,
+          "example_length": 24
+        },
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "delete-only",
+          "function_start": 586,
+          "context_start": 796,
+          "example_start": 1048,
+          "example_length": 41,
+          "warning_start": 652
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "delete-only",
+          "function_start": 586,
+          "context_start": 684,
+          "example_start": 754,
+          "example_length": 41,
+          "warning_start": 652
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 62,
+          "context_start": 308,
+          "example_start": 560,
+          "example_length": 25
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 62,
+          "context_start": 212,
+          "example_start": 282,
+          "example_length": 25
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/c99/": {
+      "canonical": "gcc",
+      "body_sha256": "e2ba4796ef694038b08aad25c1965876bd2df050aa4680282813de9dade35c4e",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1090,
+          "context_start": 1250,
+          "example_start": 1502,
+          "example_length": 31
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1090,
+          "context_start": 1148,
+          "example_start": 1218,
+          "example_length": 31
+        },
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1090,
+          "context_start": 1880,
+          "example_start": 2132,
+          "example_length": 24
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1090,
+          "context_start": 1785,
+          "example_start": 1855,
+          "example_length": 24
+        },
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "delete-only",
+          "function_start": 586,
+          "context_start": 796,
+          "example_start": 1048,
+          "example_length": 41,
+          "warning_start": 652
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "delete-only",
+          "function_start": 586,
+          "context_start": 684,
+          "example_start": 754,
+          "example_length": 41,
+          "warning_start": 652
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 62,
+          "context_start": 308,
+          "example_start": 560,
+          "example_length": 25
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 62,
+          "context_start": 212,
+          "example_start": 282,
+          "example_length": 25
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/cabal/": {
+      "canonical": "cabal",
+      "body_sha256": "14dcd34006cc92a9e34f2763259e36cfacce6af81febedc432f008087b209207",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 195,
+          "example_start": 447,
+          "example_length": 46
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 494,
+          "example_start": 876,
+          "example_length": 49
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 78,
+          "example_start": 148,
+          "example_length": 46
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/cancel/": {
+      "canonical": "cancel",
+      "body_sha256": "e21899fb7d2e816b68f435226e31fd3233127c15683a92be6632f0be74f8e642",
+      "relations": [
+        {
+          "function": "upload",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 237,
+          "example_start": 489,
+          "example_length": 36
+        },
+        {
+          "function": "upload",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 526,
+          "example_start": 694,
+          "example_length": 36
+        },
+        {
+          "function": "upload",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 130,
+          "example_start": 200,
+          "example_length": 36
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/capsh/": {
+      "canonical": "capsh",
+      "body_sha256": "38831be08baa0a02092e3345a52fde377716dfc26d0dcb9bdf8c4e3a17495421",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 157,
+          "example_start": 409,
+          "example_length": 8
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 418,
+          "example_start": 586,
+          "example_length": 24
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 78,
+          "example_start": 148,
+          "example_length": 8
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/cargo/": {
+      "canonical": "cargo",
+      "body_sha256": "ee05eb5199195a854543b0dc176885c07e538f2843b152c529544b982ac89e2f",
+      "relations": []
+    },
+    "https://gtfobins.org/gtfobins/cat/": {
+      "canonical": "cat",
+      "body_sha256": "bb06a33836ede0a65bb92ca64b5e475d49548f7d61d98bf48e4b4ae10b4b3669",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 171,
+          "example_start": 423,
+          "example_length": 23
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 447,
+          "example_start": 615,
+          "example_length": 23
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 77,
+          "example_start": 147,
+          "example_length": 23
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/cc/": {
+      "canonical": "gcc",
+      "body_sha256": "dfe2e8d9f880e85e967e71ac2f39029ddf0bf03379c8ffc7c5d69fe120e4f3c9",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1089,
+          "context_start": 1249,
+          "example_start": 1501,
+          "example_length": 31
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1089,
+          "context_start": 1147,
+          "example_start": 1217,
+          "example_length": 31
+        },
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1089,
+          "context_start": 1879,
+          "example_start": 2131,
+          "example_length": 24
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1089,
+          "context_start": 1784,
+          "example_start": 1854,
+          "example_length": 24
+        },
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "delete-only",
+          "function_start": 585,
+          "context_start": 795,
+          "example_start": 1047,
+          "example_length": 41,
+          "warning_start": 651
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "delete-only",
+          "function_start": 585,
+          "context_start": 683,
+          "example_start": 753,
+          "example_length": 41,
+          "warning_start": 651
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 61,
+          "context_start": 307,
+          "example_start": 559,
+          "example_length": 25
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 61,
+          "context_start": 211,
+          "example_start": 281,
+          "example_length": 25
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/cdist/": {
+      "canonical": "cdist",
+      "body_sha256": "5aec78f566ff1d30a1b38e75d3820681cdc39f47c3fd69695354453993f2eaa2",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 171,
+          "example_start": 423,
+          "example_length": 22
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 78,
+          "example_start": 148,
+          "example_length": 22
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/certbot/": {
+      "canonical": "certbot",
+      "body_sha256": "25103f6ce43ca0df940f6e9d2c23fdb3c365f4400a206f74f6a5bd4efedb384b",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 354,
+          "example_start": 606,
+          "example_length": 141
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 142,
+          "example_start": 212,
+          "example_length": 141
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/chattr/": {
+      "canonical": "chattr",
+      "body_sha256": "fc3833715423334c58d5f7323b109b1a11ef299ffe3ac99e2ed566281f8560ba",
+      "relations": [
+        {
+          "function": "privilege-escalation",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 33,
+          "context_start": 279,
+          "example_start": 531,
+          "example_length": 29
+        },
+        {
+          "function": "privilege-escalation",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 33,
+          "context_start": 561,
+          "example_start": 729,
+          "example_length": 29
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/check_by_ssh/": {
+      "canonical": "check_by_ssh",
+      "body_sha256": "e7251759c1ed73aab9424a0d06d080985f51a2fb941a79c107eae53cb9007d12",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 117,
+          "context_start": 693,
+          "example_start": 945,
+          "example_length": 81
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 117,
+          "context_start": 541,
+          "example_start": 611,
+          "example_length": 81
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/check_cups/": {
+      "canonical": "check_cups",
+      "body_sha256": "ccc863926d8dd7cb191950bc5afeb0c374e58ab3842f8a5f854f8ab7d3d62c7f",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 117,
+          "context_start": 350,
+          "example_start": 602,
+          "example_length": 44
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 117,
+          "context_start": 235,
+          "example_start": 305,
+          "example_length": 44
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/check_log/": {
+      "canonical": "check_log",
+      "body_sha256": "58fd07202ee3a49e29f75f165043ed2d98e7a4e52daa3201720564337455e795",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 620,
+          "context_start": 796,
+          "example_start": 1048,
+          "example_length": 47
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 620,
+          "context_start": 678,
+          "example_start": 748,
+          "example_length": 47
+        },
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 126,
+          "context_start": 311,
+          "example_start": 563,
+          "example_length": 56
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 126,
+          "context_start": 184,
+          "example_start": 254,
+          "example_length": 56
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/check_memory/": {
+      "canonical": "check_memory",
+      "body_sha256": "d199dbdbdd545ef63cb920d4ea2b4e095f14a4393402236f11f2ce87b539bcb3",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 121,
+          "context_start": 356,
+          "example_start": 608,
+          "example_length": 46
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 121,
+          "context_start": 239,
+          "example_start": 309,
+          "example_length": 46
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/check_raid/": {
+      "canonical": "check_raid",
+      "body_sha256": "a21d014756a6add1b61ae3bb2b3dc5d8b753e3b5d1619182426cd8d14fbf70a5",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 117,
+          "context_start": 350,
+          "example_start": 602,
+          "example_length": 44
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 117,
+          "context_start": 235,
+          "example_start": 305,
+          "example_length": 44
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/check_ssl_cert/": {
+      "canonical": "check_ssl_cert",
+      "body_sha256": "cb1e8ac5e5259a76b8ac46f22dc0e9a7c647f5530974a525544bd251085e644a",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 121,
+          "context_start": 430,
+          "example_start": 682,
+          "example_length": 127
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 121,
+          "context_start": 232,
+          "example_start": 302,
+          "example_length": 127
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/check_statusfile/": {
+      "canonical": "check_statusfile",
+      "body_sha256": "a85972da1249305eb457f301c771d737a7b42809aa715bcd4700b711dfe4a66f",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 129,
+          "context_start": 354,
+          "example_start": 606,
+          "example_length": 36
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 129,
+          "context_start": 247,
+          "example_start": 317,
+          "example_length": 36
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/chmod/": {
+      "canonical": "chmod",
+      "body_sha256": "2c6abe150bac2c5c1f6ff442e1f99774ac88bc0af97e3fa85f554209ca64d852",
+      "relations": [
+        {
+          "function": "privilege-escalation",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 32,
+          "context_start": 377,
+          "example_start": 629,
+          "example_length": 30
+        },
+        {
+          "function": "privilege-escalation",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 32,
+          "context_start": 660,
+          "example_start": 828,
+          "example_length": 30
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/choom/": {
+      "canonical": "choom",
+      "body_sha256": "8d3f94c961787b9f178e7327628120c97b68964d2c32acb64c9f74475741f499",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 167,
+          "example_start": 419,
+          "example_length": 18
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 438,
+          "example_start": 820,
+          "example_length": 24
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 78,
+          "example_start": 148,
+          "example_length": 18
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/chown/": {
+      "canonical": "chown",
+      "body_sha256": "69c4571325526afe1fdec064c0360905c9928497be4f52e71e8228121568dac0",
+      "relations": [
+        {
+          "function": "privilege-escalation",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 32,
+          "context_start": 348,
+          "example_start": 600,
+          "example_length": 45
+        },
+        {
+          "function": "privilege-escalation",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 32,
+          "context_start": 646,
+          "example_start": 814,
+          "example_length": 45
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/chroot/": {
+      "canonical": "chroot",
+      "body_sha256": "ee07da345e80bd564aaee8c44987825b57da0d4de66960c90e2fde8bfd316539",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 79,
+          "example_start": 331,
+          "example_length": 8
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 18,
+          "context_start": 340,
+          "example_start": 722,
+          "example_length": 19
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/chrt/": {
+      "canonical": "chrt",
+      "body_sha256": "6e6aa38443e43721559d4bd9aafae0619c7e411264e88e078a9acece16e2881e",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 16,
+          "context_start": 207,
+          "example_start": 459,
+          "example_length": 14
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 16,
+          "context_start": 474,
+          "example_start": 856,
+          "example_length": 17
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 16,
+          "context_start": 122,
+          "example_start": 192,
+          "example_length": 14
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/clamscan/": {
+      "canonical": "clamscan",
+      "body_sha256": "8d630ac08ddd50eb384aa62ffed72e22564f401616b304bbafd31ab61468b1f3",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 24,
+          "context_start": 428,
+          "example_start": 680,
+          "example_length": 125
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 24,
+          "context_start": 806,
+          "example_start": 974,
+          "example_length": 125
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 24,
+          "context_start": 232,
+          "example_start": 302,
+          "example_length": 125
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/clisp/": {
+      "canonical": "clisp",
+      "body_sha256": "4062c6d5b0a2a0a9098f05a49edba2ff33ad8a6210ac808285cff44ab2b137b8",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 203,
+          "example_start": 455,
+          "example_length": 54
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 510,
+          "example_start": 856,
+          "example_length": 54
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 78,
+          "example_start": 148,
+          "example_length": 54
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/cmake/": {
+      "canonical": "cmake",
+      "body_sha256": "5923c197d87a1ee60827575cf05f44f70ba084c6439232e7eada7f3f4426502b",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 572,
+          "context_start": 733,
+          "example_start": 985,
+          "example_length": 32
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 572,
+          "context_start": 630,
+          "example_start": 700,
+          "example_length": 32
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 27,
+          "context_start": 239,
+          "example_start": 491,
+          "example_length": 80
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 27,
+          "context_start": 88,
+          "example_start": 158,
+          "example_length": 80
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/cmp/": {
+      "canonical": "cmp",
+      "body_sha256": "450faa4106d519a4f8cf061e88dd4ce745d5f018ea51ecf261538476c7911e09",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 286,
+          "example_start": 538,
+          "example_length": 39
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 578,
+          "example_start": 746,
+          "example_length": 39
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 19,
+          "context_start": 176,
+          "example_start": 246,
+          "example_length": 39
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/cobc/": {
+      "canonical": "cobc",
+      "body_sha256": "d0c55e115ad0a569964ee3f8ce40750ca5571c9149fa68eb798dfc2a375cc360",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 16,
+          "context_start": 329,
+          "example_start": 581,
+          "example_length": 109
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 16,
+          "context_start": 691,
+          "example_start": 1037,
+          "example_length": 109
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 16,
+          "context_start": 149,
+          "example_start": 219,
+          "example_length": 109
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/code/": {
+      "canonical": "code",
+      "body_sha256": "d57c711a962ea04a7386772a2b0946d7a72b32f986a538b7a3cc119e225142a1",
+      "relations": [
+        {
+          "function": "download",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1806,
+          "context_start": 2144,
+          "example_start": 2396,
+          "example_length": 25
+        },
+        {
+          "function": "download",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1806,
+          "context_start": 2048,
+          "example_start": 2118,
+          "example_length": 25
+        },
+        {
+          "function": "reverse-shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 40,
+          "context_start": 419,
+          "example_start": 671,
+          "example_length": 25
+        },
+        {
+          "function": "reverse-shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 40,
+          "context_start": 323,
+          "example_start": 393,
+          "example_length": 25
+        },
+        {
+          "function": "upload",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 882,
+          "context_start": 1215,
+          "example_start": 1467,
+          "example_length": 25
+        },
+        {
+          "function": "upload",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 882,
+          "context_start": 1119,
+          "example_start": 1189,
+          "example_length": 25
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/codex/": {
+      "canonical": "codex",
+      "body_sha256": "8e3f581a85faae23380fe4639bedd8bda86a3a1258f7fd75cc3cfb5ac1104476",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 176,
+          "example_start": 428,
+          "example_length": 27
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 17,
+          "context_start": 78,
+          "example_start": 148,
+          "example_length": 27
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/column/": {
+      "canonical": "column",
+      "body_sha256": "250395e85abf43599a787db966dbc80e3a62e528df2f570ad8bcb91cd65ba1a1",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 220,
+          "example_start": 472,
+          "example_length": 26
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 499,
+          "example_start": 667,
+          "example_length": 26
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 22,
+          "context_start": 123,
+          "example_start": 193,
+          "example_length": 26
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/comm/": {
+      "canonical": "comm",
+      "body_sha256": "549a3be3b1f52cbe5ddf50390e08a52c8a79ec66ae7db7894036fb5553089514",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 226,
+          "example_start": 478,
+          "example_length": 34
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 513,
+          "example_start": 681,
+          "example_length": 34
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 121,
+          "example_start": 191,
+          "example_length": 34
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/composer/": {
+      "canonical": "composer",
+      "body_sha256": "4d0228dec7a0ed76502e21fc23716e0a760f2413d40723a918b6bececb8b6c97",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 223,
+          "example_start": 475,
+          "example_length": 71
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 81,
+          "example_start": 151,
+          "example_length": 71
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/cowsay/": {
+      "canonical": "cowsay",
+      "body_sha256": "963e2c6055c439179c76c4eb54681a87a1016980934ffa508406fd4870efae34",
+      "relations": []
+    },
+    "https://gtfobins.org/gtfobins/cowthink/": {
+      "canonical": "cowthink",
+      "body_sha256": "81b87d3199bfc61903036ca144177fbec8029bec1be505cb91acfa9b67439100",
+      "relations": []
+    },
+    "https://gtfobins.org/gtfobins/cp/": {
+      "canonical": "cp",
+      "body_sha256": "2ca382ebda5e78c312697b1e8c074cc77ccddf204a807d55761eaafaff4f7885",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 739,
+          "context_start": 902,
+          "example_start": 1154,
+          "example_length": 34
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 739,
+          "context_start": 1189,
+          "example_start": 1357,
+          "example_length": 34
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 739,
+          "context_start": 797,
+          "example_start": 867,
+          "example_length": 34
+        },
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 50,
+          "context_start": 225,
+          "example_start": 477,
+          "example_length": 46
+        },
+        {
+          "function": "file-write",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 50,
+          "context_start": 524,
+          "example_start": 692,
+          "example_length": 46
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 50,
+          "context_start": 108,
+          "example_start": 178,
+          "example_length": 46
+        },
+        {
+          "function": "privilege-escalation",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1392,
+          "context_start": 1882,
+          "example_start": 2134,
+          "example_length": 43
+        },
+        {
+          "function": "privilege-escalation",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1392,
+          "context_start": 2178,
+          "example_start": 2346,
+          "example_length": 43
+        },
+        {
+          "function": "privilege-escalation",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1392,
+          "context_start": 2491,
+          "example_start": 2743,
+          "example_length": 76
+        },
+        {
+          "function": "privilege-escalation",
+          "context": "suid",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1392,
+          "context_start": 2820,
+          "example_start": 2988,
+          "example_length": 76
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/cpan/": {
+      "canonical": "cpan",
+      "body_sha256": "eae7306d0209224e3c19e3377b71e21d2b116a44d0cc5855855da40c532a52ec",
+      "relations": []
+    },
+    "https://gtfobins.org/gtfobins/cpio/": {
+      "canonical": "cpio",
+      "body_sha256": "d99832fc8b862f822789255836dcff30a240e0daddcac0c93117cbac09f3361c",
+      "relations": [
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1308,
+          "context_start": 1585,
+          "example_start": 1837,
+          "example_length": 34
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1308,
+          "context_start": 1872,
+          "example_start": 2040,
+          "example_length": 34
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 1308,
+          "context_start": 1480,
+          "example_start": 1550,
+          "example_length": 34
+        },
+        {
+          "function": "file-read",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1308,
+          "context_start": 2430,
+          "example_start": 2682,
+          "example_length": 68
+        },
+        {
+          "function": "file-read",
+          "context": "suid",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1308,
+          "context_start": 2751,
+          "example_start": 2919,
+          "example_length": 68
+        },
+        {
+          "function": "file-read",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 1308,
+          "context_start": 2299,
+          "example_start": 2369,
+          "example_length": 60
+        },
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 440,
+          "context_start": 738,
+          "example_start": 990,
+          "example_length": 74
+        },
+        {
+          "function": "file-write",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 440,
+          "context_start": 1065,
+          "example_start": 1233,
+          "example_length": 74
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 440,
+          "context_start": 600,
+          "example_start": 670,
+          "example_length": 67
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 37,
+          "context_start": 98,
+          "example_start": 350,
+          "example_length": 89
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/cpulimit/": {
+      "canonical": "cpulimit",
+      "body_sha256": "f14305e0e0f264870d2461472b869e94fe95f536439c502f266f82a51c9e3ee5",
+      "relations": [
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 181,
+          "example_start": 433,
+          "example_length": 29
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 463,
+          "example_start": 631,
+          "example_length": 32
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 81,
+          "example_start": 151,
+          "example_length": 29
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/crash/": {
+      "canonical": "crash",
+      "body_sha256": "d4b531c5b30cea42c010fdbddb78fe219ce4562ad05cfab9eb065def1c22c5ea",
+      "relations": [
+        {
+          "function": "command",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 70,
+          "context_start": 242,
+          "example_start": 494,
+          "example_length": 36
+        },
+        {
+          "function": "command",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 70,
+          "context_start": 135,
+          "example_start": 205,
+          "example_length": 36
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/crontab/": {
+      "canonical": "crontab",
+      "body_sha256": "ac146b027869914c5c68d75cba6ec99998ff6d6634ef3a960469e502039aae44",
+      "relations": [
+        {
+          "function": "command",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 56,
+          "context_start": 323,
+          "example_start": 575,
+          "example_length": 10
+        },
+        {
+          "function": "command",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 56,
+          "context_start": 242,
+          "example_start": 312,
+          "example_length": 10
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/csh/": {
+      "canonical": "csh",
+      "body_sha256": "a3a1feb254a11a6ec8bb869c4d32f84aaa13ee585eb73270d64254d62a9373e3",
+      "relations": [
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 592,
+          "context_start": 761,
+          "example_start": 1013,
+          "example_length": 40
+        },
+        {
+          "function": "file-write",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 592,
+          "context_start": 1054,
+          "example_start": 1222,
+          "example_length": 43
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 592,
+          "context_start": 650,
+          "example_start": 720,
+          "example_length": 40
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 26,
+          "context_start": 161,
+          "example_start": 413,
+          "example_length": 3
+        },
+        {
+          "function": "shell",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 26,
+          "context_start": 417,
+          "example_start": 585,
+          "example_length": 6
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 26,
+          "context_start": 87,
+          "example_start": 157,
+          "example_length": 3
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/hashcat/": {
+      "canonical": "hashcat",
+      "body_sha256": "19d9fa883bedc715d3cbd617bfd9bcd7d05608f53127c0178eec18f3817fda34",
+      "relations": [
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 24,
+          "context_start": 451,
+          "example_start": 703,
+          "example_length": 219,
+          "append": {
+            "kind": "example",
+            "note_start": 90,
+            "note_length": 42
+          }
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 24,
+          "context_start": 161,
+          "example_start": 231,
+          "example_length": 219,
+          "append": {
+            "kind": "example",
+            "note_start": 90,
+            "note_length": 42
+          }
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/screen/": {
+      "canonical": "screen",
+      "body_sha256": "be372d197620eac529946e6a0147580e12df26857dd48431cac1ee00fd4934b6",
+      "relations": [
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 426,
+          "context_start": 700,
+          "example_start": 952,
+          "example_length": 49,
+          "append": {
+            "kind": "example",
+            "note_start": 521,
+            "note_length": 32
+          }
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 426,
+          "context_start": 580,
+          "example_start": 650,
+          "example_length": 49,
+          "append": {
+            "kind": "example",
+            "note_start": 521,
+            "note_length": 32
+          }
+        },
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 426,
+          "context_start": 1345,
+          "example_start": 1597,
+          "example_length": 40,
+          "append": {
+            "kind": "example",
+            "note_start": 1175,
+            "note_length": 32
+          }
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 1,
+          "effect": "documented",
+          "function_start": 426,
+          "context_start": 1234,
+          "example_start": 1304,
+          "example_length": 40,
+          "append": {
+            "kind": "example",
+            "note_start": 1175,
+            "note_length": 32
+          }
+        },
+        {
+          "function": "shell",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 29,
+          "context_start": 167,
+          "example_start": 419,
+          "example_length": 6
+        },
+        {
+          "function": "shell",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 29,
+          "context_start": 90,
+          "example_start": 160,
+          "example_length": 6
+        }
+      ]
+    },
+    "https://gtfobins.org/gtfobins/tee/": {
+      "canonical": "tee",
+      "body_sha256": "80e94bbe9dae14af866a637faadbe857161322e541736052449b9b81e2830ed4",
+      "relations": [
+        {
+          "function": "file-write",
+          "context": "sudo",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 233,
+          "example_start": 485,
+          "example_length": 36,
+          "append": {
+            "kind": "option",
+            "note_start": 86,
+            "note_length": 39
+          }
+        },
+        {
+          "function": "file-write",
+          "context": "suid",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 522,
+          "example_start": 690,
+          "example_length": 36,
+          "append": {
+            "kind": "option",
+            "note_start": 86,
+            "note_length": 39
+          }
+        },
+        {
+          "function": "file-write",
+          "context": "unprivileged",
+          "variant": 0,
+          "effect": "documented",
+          "function_start": 20,
+          "context_start": 126,
+          "example_start": 196,
+          "example_length": 36,
+          "append": {
+            "kind": "option",
+            "note_start": 86,
+            "note_length": 39
+          }
+        }
+      ]
+    }
+  },
+  "unverified": [],
+  "counts": {
+    "grounded_relations": 352,
+    "delete_only_relations": 6,
+    "inherit_variants_excluded": 22,
+    "append_relations": 9
+  }
+}

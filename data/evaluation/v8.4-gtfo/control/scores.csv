@@ -1,0 +1,17 @@
+system,query_id,query,precision_at_5
+v83,gtfo-13,compare GTFOBins and Kali sudo tool documentation,0.0
+v83,gtfo-14,GTFOBins contribution schema and examples,0.4
+v83,gtfo-15,GTFOBins alternatives for Linux privileged file write,0.0
+v83,gtfo-16,Frida inspect exported functions from a module,0.2
+function,gtfo-13,compare GTFOBins and Kali sudo tool documentation,0.0
+function,gtfo-14,GTFOBins contribution schema and examples,0.4
+function,gtfo-15,GTFOBins alternatives for Linux privileged file write,0.0
+function,gtfo-16,Frida inspect exported functions from a module,0.2
+paired,gtfo-13,compare GTFOBins and Kali sudo tool documentation,0.0
+paired,gtfo-14,GTFOBins contribution schema and examples,0.4
+paired,gtfo-15,GTFOBins alternatives for Linux privileged file write,0.0
+paired,gtfo-16,Frida inspect exported functions from a module,0.2
+verified,gtfo-13,compare GTFOBins and Kali sudo tool documentation,0.0
+verified,gtfo-14,GTFOBins contribution schema and examples,0.4
+verified,gtfo-15,GTFOBins alternatives for Linux privileged file write,0.0
+verified,gtfo-16,Frida inspect exported functions from a module,0.2

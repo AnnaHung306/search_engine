@@ -1,0 +1,84 @@
+{
+  "reference_commit": "5d1da8f",
+  "method": "one fresh process per variant, before then after; 10 course queries, each warmed once then 20 whole search calls with top10 snippets; excludes index load/explanations/Flask/network; descriptive timing only, no quality tuning",
+  "comparison": {
+    "tfidf": {
+      "before_median_ms": 3.0047500040382147,
+      "after_median_ms": 0.4400840261951089,
+      "before_p95_ms": 5.7765410747379065,
+      "after_p95_ms": 0.6385419983416796
+    },
+    "tfidf_cov": {
+      "before_median_ms": 9.186208480969071,
+      "after_median_ms": 0.6394994561560452,
+      "before_p95_ms": 18.265375052578747,
+      "after_p95_ms": 0.869833049364388
+    },
+    "tfidf_pivot": {
+      "before_median_ms": 10.179020988289267,
+      "after_median_ms": 0.6001454894430935,
+      "before_p95_ms": 21.652207942679524,
+      "after_p95_ms": 1.0905000381171703
+    },
+    "tfidf_pivot_cov": {
+      "before_median_ms": 11.158458539284766,
+      "after_median_ms": 0.7450829725712538,
+      "before_p95_ms": 22.02929195482284,
+      "after_p95_ms": 1.2161670019850135
+    },
+    "bm25": {
+      "before_median_ms": 6.549729499965906,
+      "after_median_ms": 0.5448539741337299,
+      "before_p95_ms": 17.795667052268982,
+      "after_p95_ms": 0.8640000596642494
+    },
+    "bm25_boost_syn": {
+      "before_median_ms": 9.54679201822728,
+      "after_median_ms": 0.9260829538106918,
+      "before_p95_ms": 16.103415982797742,
+      "after_p95_ms": 1.4759580371901393
+    },
+    "tfidf_proximity": {
+      "before_median_ms": 6.791229476220906,
+      "after_median_ms": 4.249375488143414,
+      "before_p95_ms": 10.517125017940998,
+      "after_p95_ms": 8.906541974283755
+    },
+    "tfidf_fields": {
+      "before_median_ms": 6.339458515867591,
+      "after_median_ms": 0.78812544234097,
+      "before_p95_ms": 12.585332966409624,
+      "after_p95_ms": 1.4102080604061484
+    },
+    "tfidf_fields_proximity": {
+      "before_median_ms": 10.54058357840404,
+      "after_median_ms": 4.673020506743342,
+      "before_p95_ms": 19.054749980568886,
+      "after_p95_ms": 9.802166954614222
+    }
+  },
+  "code_sha256": {
+    "toy_example.py": "97944647b0bda3f1f2684b66da63c69dca0f9b3f74836def21d084ff20f913f9",
+    "fuzzy.py": "623ab166ef0ddeef1adfd70df1ea17d9094be77cf9d456eeec604e1c7e41be4a",
+    "crawl_urls.py": "628e39799fa9576f943114412aee333fe6d0d6eb7804bf4b26c9e62dc3f26faf",
+    "config.py": "814a2dcbfdf68fc2b8f6a24665ab6b44c1b7722111b2efd227a2f641fbec3663",
+    "clean.py": "d11905f257e4975a6b7d735ff242426f016399830c858a09e2190e1e2cf43da0",
+    "fix_encoding.py": "691af4fbcf3fe56e67bb4c0e9e95be6f79209ec8ea9579cbd300559cf5f73365",
+    "preprocess.py": "b2ecd2922316c0f5b8d85fad5dd8fa6064c3945a00415a198f6dfb2de18f52b2",
+    "synonyms.py": "2e513abfae992703c5359252322bd74f7a17aaa1a73a2e1ed97d1d3c4e56a781",
+    "diagnostics.py": "f9432d2dff0c6db40e81f5fb3e4f17879b2cd17a578480f70a3fe0efd2ca0f9e",
+    "evaluation.py": "baaa35406e95c14cea872c248386fa3ad2a4015e4e7c87a001b86e015e81c807",
+    "crawl_http.py": "12a5fda6835e51250b680dece518510b2eb5829599a0b9f684b8a4a7736b4f86",
+    "positions.py": "52fed19806c998c58d37e80b3f8d63a41007c7554ab04a4403e237ae0d3e6156",
+    "weighting.py": "ee9b0aac26c24e3ef973dce5693aeafd77e39ddf670a60e9253b90564dcf49be",
+    "indexer.py": "bfa18632a7eed56fcfdff69eba1b015cee1ec78e8abb8b11a753bbafa32e447c",
+    "ranking.py": "0c65d836efc306a5a1a9dd56028c119994e1385e83c456ee4dbde0a7d40431a6",
+    "snippets.py": "e27ed4fe09c2b418da17671b72714af882765730d6c4a1d5c2b5ce73b65f2518",
+    "app.py": "66c6a506f214b7af40fee946e4fd76631ae694f91cb69b95c9d219ea7c32c692",
+    "search.py": "0566bfe2503dfb6e39536ead516726034f5371989e00acc6e6b7380d6e1edc88",
+    "evaluate.py": "4a79b71371a65c47e75ea8dbb818e0a11ca984276cafe09a574853de2b2240ac",
+    "run_experiments.py": "fa388ff1dad668c07dd1013479beabf0f5bcae8ed5dfe67ce45ba1bff50694d0",
+    "offsets.py": "bcdeef856e439e09c39eddbe9057b45aa48b83bb9f866271c7152489fb1c3ffd",
+    "crawler.py": "394fc9bbf6ec7ef9a773f4c5ff56a00c1962921cf96ee3f4e3b08dd9b2861a17"
+  }
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9b9-3828-7250-9245-743912fc84a1"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"886e381e8e874e5cec06-5\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"本段介紹編譯、程式碼格式化與靜態分析工具，未提供網站路徑列舉能力或技術。\",\"evidence\":\"Clang-format is both a library and a stand-alone tool with the goal of automatically reformatting C++ sources files according to configurable style guides.\"},{\"decision_id\":\"d0f3b25012d7d22f6cd9-5\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"本段的掛鉤指 ASan 符號化腳本外掛，未說明執行中 Android 應用的 Java 方法插樁或掛鉤。\",\"evidence\":\"This script provides a way for external plug-ins to hook into the behaviour of various parts of this script (see `--plugins`).\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":40520,"cached_input_tokens":25472,"cache_write_input_tokens":0,"output_tokens":217,"reasoning_output_tokens":0}}

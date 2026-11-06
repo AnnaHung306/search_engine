@@ -1,0 +1,22 @@
+{
+  "frozen_at_utc": "2026-11-04T17:03:55.227275+00:00",
+  "author": "assistant; group validation still required",
+  "policy": "No holdout quality score until independent human judgments. Queries are not selected by new-system scores.",
+  "suites": {
+    "course": {
+      "file": "course.json",
+      "sha256": "da5b3aae704741065d7db9e9dd5082c2b9cf4b0e231c77fe3b270cc25caf65a8",
+      "count": 10
+    },
+    "development": {
+      "file": "development.json",
+      "sha256": "c5dd6073adf62ba03905cd8ca95c5a7f6ef0015b13745d8c3ef4976875a0e8a8",
+      "count": 12
+    },
+    "holdout": {
+      "file": "holdout.json",
+      "sha256": "d19ba84dccc4e0f77bb403f7a27e3f04925f7c741581fc02eebf6336a58753fd",
+      "count": 24
+    }
+  }
+}

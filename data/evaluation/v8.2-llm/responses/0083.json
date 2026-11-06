@@ -1,0 +1,167 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "61d31e0a6fa69e8fa333b32def5b0b6aef68c1abc433390ad3502a4f6992385c",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "a46eb22fbae035a1cd8993a12f346b9505136306d059f4c5f162e3f289e06259",
+  "started_at": 1793849035.005069,
+  "finished_at": 1793849065.039218,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "9b1168511f0f3230794b-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供透過 ngrok 設定反向連線負載與接收端的完整流程。",
+        "evidence": "Either run the exploit, or generate the payload with the generate command and start the handler with to_handler"
+      },
+      {
+        "decision_id": "d989e8835728c1edf2b2-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "示範在 msfconsole 產生可執行負載。",
+        "evidence": "generate -f exe -o ngrok_payload.exe"
+      },
+      {
+        "decision_id": "3b0799575d9c8cbc2d93-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確提供從擷取的 EAP-MD5 挑戰回應離線字典破解密碼的能力。",
+        "evidence": "eapmd5pass will mount an offline dictionary attack against the user’s password."
+      },
+      {
+        "decision_id": "03f0e4d19486f37e87ca-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "工具使用既有密碼雜湊進行驗證，未提供雜湊格式識別。",
+        "evidence": "Patched tools to use password hashes as authentication input"
+      },
+      {
+        "decision_id": "b64edc321742dd46efee-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹雜湊傳遞驗證工具，並非離線破解或還原密碼。",
+        "evidence": "Patched tools to use password hashes as authentication input"
+      },
+      {
+        "decision_id": "7712a3ca30604bb9746d-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅說明啟動封包擷取，沒有 HTTP 請求重送功能。",
+        "evidence": "The following methods can be used to start capturing packets with Wireshark:"
+      },
+      {
+        "decision_id": "04a039f507f3c9e2467c-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容是安裝 Android 系統 CA，未說明 Java 方法掛鉤或執行期插樁。",
+        "evidence": "Install System CA Certificate on Android Emulator"
+      },
+      {
+        "decision_id": "2142cd68aaa59b7325c9-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "詳細說明將 mitmproxy CA 安裝至 Android 系統信任憑證庫。",
+        "evidence": "Now we have to place our CA certificate inside the system certificate store located at /system/etc/security/cacerts/ in the Android filesystem."
+      },
+      {
+        "decision_id": "669d9767a25890abea97-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明系統憑證安裝，沒有 APK 解包或反編譯流程。",
+        "evidence": "Install System CA Certificate on Android Emulator"
+      },
+      {
+        "decision_id": "6b94a9ab791a58d170cd-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅描述通用密碼破解工具的圖形介面，未記載 Wi-Fi 金鑰或握手破解能力。",
+        "evidence": "Johnny is provides a GUI for the John the Ripper password cracking tool."
+      },
+      {
+        "decision_id": "4d5accb0cac81dab6d01-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹 Metasploit 資料模型 REST 服務，未提供隱藏網頁路徑探索。",
+        "evidence": "The Metasploit web service allows interaction with Metasploit’s various data models through a REST API."
+      },
+      {
+        "decision_id": "5679645bbea4158404df-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明資料服務設定與 API 連線，沒有負載產生教學。",
+        "evidence": "The msfdb tool allows you to manage both the Metasploit Framework database and web service."
+      },
+      {
+        "decision_id": "72a8236fe6da6596a695-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "文件描述資料管理 REST API，未記載網頁漏洞掃描能力。",
+        "evidence": "The Metasploit web service allows interaction with Metasploit’s various data models through a REST API."
+      },
+      {
+        "decision_id": "d98acc490e8d80a1fdd4-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為資料服務管理，並非網站目錄或檔案枚舉。",
+        "evidence": "The msfdb tool allows you to manage both the Metasploit Framework database and web service."
+      },
+      {
+        "decision_id": "e90a46277dfcb3052c68-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "管理的是資料服務連線，未說明既有 Metasploit 工作階段的操作。",
+        "evidence": "You can use the db_connect command to connect to the desired data service."
+      },
+      {
+        "decision_id": "7d8d875d6a54cba1b1b4-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "詳細說明依探測回應比對服務與版本資訊。",
+        "evidence": "The match directive tells Nmap how to recognize services based on responses to the string sent by the previous Probe directive."
+      },
+      {
+        "decision_id": "e989236d3f4570fd0e10-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確提供讀取掃描連接埠回傳 banner 的功能。",
+        "evidence": "-b Read in the banner received from the scanned port"
+      }
+    ]
+  }
+}

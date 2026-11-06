@@ -1,0 +1,78 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decisions"
+  ],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "decision_id",
+          "relevant",
+          "confidence",
+          "reason",
+          "evidence"
+        ],
+        "properties": {
+          "decision_id": {
+            "type": "string",
+            "enum": [
+              "11b3a56517f3575b62a0-0",
+              "3ffe68b6c2c8e19fb5c7-0",
+              "4d2c6862829510f8ce93-0",
+              "54f67f46015e43e05cbb-0",
+              "626b57e94cbe6302a297-0",
+              "66401e1ce168fd1019f9-0",
+              "6cd5b77b218a2d2efbb8-0",
+              "6ea4dbe12465039e0801-0",
+              "7325ecb5ceffbba16c01-0",
+              "7e4e10e6fc4db0effec2-0",
+              "84b30732dfb9b5fb5dd4-0",
+              "8c988f4457dc4986aba6-0",
+              "8d5ad5de0d55b9a21d92-0",
+              "90b3a9c2760661036de3-0",
+              "92eca96c06889f31747c-0",
+              "966b6ed2bb9df0367af7-0",
+              "a6387c77e03a5d3a2a01-0",
+              "a8b8a09633ca825f5d7e-0",
+              "bacd29f7efa9df42508e-0",
+              "c504de960916801cabe4-0",
+              "cb723bf68bd4865d0879-0",
+              "cba5ec718e5e59ad8896-0",
+              "d2333a5fae7b04722f3d-0",
+              "ef8a678174bc4b6db474-0",
+              "fb2f5ae317f18f9e5c29-0",
+              "fcd3fb566230d34f0bcc-0",
+              "fe507a6fbead4d07548e-0"
+            ]
+          },
+          "relevant": {
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

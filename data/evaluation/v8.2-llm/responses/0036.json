@@ -1,0 +1,104 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "4329c771c3c869c62ef76d4d54f769590c245b754157202f54cb94d68dcc13e0",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "4f934e679df4803ad16022747e3de71cb84338521321b18d0598c9481227ccfd",
+  "started_at": 1793848644.411768,
+  "finished_at": 1793848663.6102998,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "6da64c135487641c60f1-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容說明尋找組織 IP 與網段，未提供依 IP 篩選已擷取封包的指引。",
+        "evidence": "This section demonstrates a few of the most common and effective ways to turn that into a list of netblocks owned, operated by, or affiliated with the target company."
+      },
+      {
+        "decision_id": "d6010194e991e37a05ca-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容介紹隱藏程序與連接埠偵測，並非 GTFOBins 的 sudo 功能文件。",
+        "evidence": "Unhide is a forensic tool to find processes and TCP/UDP ports hidden by rootkits, Linux kernel modules or by other techniques."
+      },
+      {
+        "decision_id": "d84918e61c035f5f1fcd-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確記載以暴力探測所有 TCP/UDP 連接埠，找出未列出的監聽埠，符合連接埠掃描工具需求。",
+        "evidence": "unhide-tcp identifies TCP/UDP ports that are listening but are not listed in /bin/netstat through brute forcing of all TCP/UDP ports available."
+      },
+      {
+        "decision_id": "31377bcc5b261d69f796-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "工具自動偵測與利用的是 XSS，未記載 SQL 注入偵測能力。",
+        "evidence": "Cross Site “Scripter” (aka XSSer) is an automatic -framework- to detect, exploit and report XSS vulnerabilities in web-based applications."
+      },
+      {
+        "decision_id": "e72ea99ff524920d14ea-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段介紹防火牆與入侵偵測系統的探測及規避，未記載自動 SQL 注入工具。",
+        "evidence": "Nmap offers many features to help understand these complex networks, and to verify that filters are working as intended."
+      },
+      {
+        "decision_id": "c97a545acabd8c286434-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅介紹繼承 Ruby 功能及 sudo 權限行為，沒有列舉或檢視程序已載入原生函式庫的方法。",
+        "evidence": "Functions Inherits from ruby , thus possibly granting the following functions: Shell Reverse shell File write File read Upload Download Library load"
+      },
+      {
+        "decision_id": "6e5cd2fe1bdd0d8f8b5d-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為 .NET 反序列化酬載生成，未說明程序原生模組的列舉或檢視。",
+        "evidence": "Metasploit includes a library for leveraging .NET deserialization attacks."
+      },
+      {
+        "decision_id": "8f1253cc65d5d241560c-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供 Metasploit 酬載生成 API、獨立命令列工具及具體參數範例。",
+        "evidence": "./dot_net.rb -c \"net user msf msf /ADD\" -f BinaryFormatter -g TypeConfuseDelegate -o base64"
+      }
+    ]
+  }
+}

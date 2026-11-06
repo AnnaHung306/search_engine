@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9b5-6783-7710-b9e6-5974df3907cf"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"78d672fa82e024266bd9-0\",\"relevant\":1,\"confidence\":\"high\",\"reason\":\"提供用戶端 TLS 信任設定，可指定自訂 CA 位置以驗證伺服器憑證，符合規則。\",\"evidence\":\"--tls-ca-path <ca-location> Specify an alternate location for CA information for verifying server certificates. The argument can point to a file or directory.\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":40384,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":161,"reasoning_output_tokens":51}}

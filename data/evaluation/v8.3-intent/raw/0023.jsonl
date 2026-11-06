@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa22-e468-76c3-8211-d09079aec66e"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\n  \"decisions\": [\n    {\n      \"decision_id\": \"90ab94a94c2dddaea7b9-0\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"此段記載列出 Samba 程序及顯示常駐程序堆疊的指令，未提供列舉已載入共享函式庫或顯示程序記憶體映射的方法。\",\n      \"evidence\": \"stacktrace Display a stack trace of a daemon\"\n    }\n  ]\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":40927,"cached_input_tokens":26112,"cache_write_input_tokens":0,"output_tokens":133,"reasoning_output_tokens":0}}

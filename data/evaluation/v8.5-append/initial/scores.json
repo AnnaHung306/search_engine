@@ -1,0 +1,83 @@
+{
+  "origin": "llm",
+  "collection_sha256": "cf69d35aeb9d4838cf9a1d7538bf805318124bb118906a98b8af361792a89ef9",
+  "denominator": 5,
+  "pair_count": 72,
+  "document_count": 24,
+  "self_review_corrections": 0,
+  "adjudications_file": null,
+  "mean_precision_at_5": {
+    "regression": {
+      "expanded_v84": 0.6,
+      "append": 0.6
+    },
+    "append": {
+      "expanded_v84": 0.45,
+      "append": 0.6
+    },
+    "context": {
+      "expanded_v84": 0.3,
+      "append": 0.4
+    },
+    "control": {
+      "expanded_v84": 0.6,
+      "append": 0.6
+    }
+  },
+  "candidate_vs_baseline": {
+    "regression": {
+      "wins": 0,
+      "ties": 1,
+      "losses": 0
+    },
+    "append": {
+      "wins": 2,
+      "ties": 2,
+      "losses": 0
+    },
+    "context": {
+      "wins": 1,
+      "ties": 3,
+      "losses": 0
+    },
+    "control": {
+      "wins": 0,
+      "ties": 4,
+      "losses": 0
+    }
+  },
+  "new_query_count": 12,
+  "new_mean_precision_at_5": {
+    "expanded_v84": 0.45,
+    "append": 0.5333333333333333
+  },
+  "comparison": "Same expanded collection, v8.4 rules against append evidence. One known regression reported separately; twelve predeclared new questions. Original 980-page failure is diagnosed separately.",
+  "evidence_sha256": {
+    "responses/0000.json": "c4880b0da7c9a0b5d9734b5ccff3cf4c471c7157ddcf6d94fc07133653beee93",
+    "raw/0000.jsonl": "798848f2da1d96f5aa5fbcbaddda332be8812d4eabaf40e3ca23b05dd525284b",
+    "response_schemas/0000.json": "33e7469133d1316e7101059f692e90d094699add88eea9643fc329efa981bc3f",
+    "responses/0001.json": "6b95439b20253d8dcda1165714b23d365d3c41e8ac8b2266728185b2d4a2bb78",
+    "raw/0001.jsonl": "15122fa51347244ef750061f438ac2de9f266f57ea9b78e03c7462fedf4b5fe3",
+    "response_schemas/0001.json": "d46533a53b42c7257d6f62b6f28233b0fcdbc9e17d85679495b75c6621a0d9d8",
+    "regression/scores.csv": "7d07e8029d5e04c3336138c6bdcb3f7efefa1ad8e21d383a3fe14f0d4987f4b1",
+    "append/scores.csv": "01ce3b5428e6f549607db9f2f18671d1e55279e6482f968bb03fb1d04c6d8666",
+    "context/scores.csv": "2d77d4933b1d28176d526380b73b8acb437cc6ba1476cc83dcb33216979c3198",
+    "control/scores.csv": "168d93ea42d3289e6f3985aec280069244a04a0e26fc8d0624f7d310557135d0",
+    "append/runs.csv": "318fbeab60c630de928527b20d71ad52ef40e986115230dcc56c86eb74f47446",
+    "context/runs.csv": "4f3cd1b209de7cc327369c6a3daf5baa235c975205c523756ef1541eba27f22a",
+    "control/runs.csv": "38b8e7bbe439ec86a7f50712dcb6ca8efe869d9cc0dd18b77844714c9e3dcdd9",
+    "implementation.json": "f48954143b1b864eaa4198e7ef6ad7f705b9bc96f5189d6cc8d3e4a510e832dd",
+    "inputs/0000.json": "9d9de85fd3ef149e6fa1aea37f565dfdaf4c00595ccf50973ecc6f754136b844",
+    "inputs/0001.json": "661d68a14d53b304c65c02dbe8f2ddda78c224f45fa9af6b56f0caaa5656f520",
+    "pairs.json": "668bd4208f7ad9e61928bca7678761e9d484104e1ecfd559b6d1e5af8c0f4bdd",
+    "plan.json": "60d9eee08325d2e7118887d8189586fe259316126fecb08067e5f666bbcb882b",
+    "policy.json": "d6c7ab4a10879befddb5a6da74a77cd97573e083f793f0d2d46f80d14740a24c",
+    "prompt.txt": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+    "queries.json": "e0c74b39cb81f846cff24ce5eee1b7b4276f8cf5283b34ff3def8689fae7c41e",
+    "regression/runs.csv": "774cafc3b520c05f5f35fac2a9b33365571ab319eb7984808cb2996b14da77cd",
+    "schema.json": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+    "manifest.json": "f9b541b9a1950a33adb07934c0a43fa0819ee201c5506b8d9313fcbb9ed77508",
+    "raw_llm_judgments.csv": "238f90d874aa4e837def3874407a7fa6cc2a55f1e9e7260baba3ae7bffbeb9a0",
+    "llm_judgments.csv": "238f90d874aa4e837def3874407a7fa6cc2a55f1e9e7260baba3ae7bffbeb9a0"
+  }
+}

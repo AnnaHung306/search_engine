@@ -1,0 +1,69 @@
+"""indexer.py — build a self-implemented inverted index + TF-IDF model.
+
+Reads data/pages.json, assigns integer doc IDs, builds:
+  - inverted index: term -> {doc_id: term_frequency}
+  - document frequency per term
+  - TF-IDF document-vector L2 norm per doc (so cosine is cheap at query time)
+
+Writes data/index.json with everything search.py needs. No TfidfVectorizer.
+
+Definitions (also in README):
+  tf(t,d)  = 1 + log10(raw_count)        (log tf, 0 when count 0)
+  idf(t)   = log10(N / df(t))            (N = number of docs)
+  weight   = tf * idf
+  doc norm = sqrt(sum_t weight(t,d)^2)
+Query uses the SAME idf values (collection-derived), never refit per query.
+"""
+import json
+import math
+import os
+
+from preprocess import tokenize
+
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+PAGES_PATH = os.path.join(DATA_DIR, "pages.json")
+INDEX_PATH = os.path.join(DATA_DIR, "index.json")
+
+
+def build():
+    with open(PAGES_PATH, encoding="utf-8") as f:
+        pages = json.load(f)
+
+    docs = []                      # doc_id -> {url, title, text}
+    postings = {}                  # term -> {doc_id: tf_count}
+    for doc_id, p in enumerate(pages):
+        docs.append({"url": p["url"], "title": p["title"], "text": p["text"]})
+        counts = {}
+        for tok in tokenize(p["title"] + " " + p["text"]):
+            counts[tok] = counts.get(tok, 0) + 1
+        for term, c in counts.items():
+            postings.setdefault(term, {})[doc_id] = c
+
+    N = len(docs)
+    df = {term: len(plist) for term, plist in postings.items()}
+    idf = {term: math.log10(N / df[term]) for term in df}
+
+    # document vector norms using log-tf * idf
+    norms = [0.0] * N
+    for term, plist in postings.items():
+        w_idf = idf[term]
+        for doc_id, c in plist.items():
+            w = (1 + math.log10(c)) * w_idf
+            norms[doc_id] += w * w
+    norms = [math.sqrt(x) for x in norms]
+
+    index = {
+        "N": N,
+        "docs": docs,
+        "postings": postings,      # term -> {str(doc_id): count}
+        "df": df,
+        "idf": idf,
+        "norms": norms,
+    }
+    with open(INDEX_PATH, "w", encoding="utf-8") as f:
+        json.dump(index, f, ensure_ascii=False)
+    print(f"Indexed {N} docs, {len(postings)} unique terms -> {INDEX_PATH}")
+
+
+if __name__ == "__main__":
+    build()

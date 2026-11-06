@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa24-6dcb-7173-8475-51591de60db6"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\n  \"decisions\": [\n    {\n      \"decision_id\": \"f6d2057fa86131fa2bd4-12\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"此段說明如何產生連結符號映射，未記載如何列出指定已載入原生模組的匯出符號。\",\n      \"evidence\": \"-map <path> Writes all symbols and their addresses to <path>\"\n    }\n  ]\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":40564,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":120,"reasoning_output_tokens":0}}

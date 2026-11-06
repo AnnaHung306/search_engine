@@ -1,0 +1,9 @@
+system,query_id,query,precision_at_5
+bm25,holdout-24,find gtfobins sudo binary techniques,0.0
+bm25,holdout-09,list loaded native libraries,0.0
+bm25_source,holdout-24,find gtfobins sudo binary techniques,0.8
+bm25_source,holdout-09,list loaded native libraries,0.0
+bm25_native,holdout-24,find gtfobins sudo binary techniques,0.0
+bm25_native,holdout-09,list loaded native libraries,0.4
+bm25_intent,holdout-24,find gtfobins sudo binary techniques,0.8
+bm25_intent,holdout-09,list loaded native libraries,0.4

@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://gtfobins.org/gtfobins/hashcat/",
+    "title": "hashcat | GTFOBins",
+    "text": ".. / hashcat Sponsor Fork Star Sponsor Fork Star File write File write This executable can write data to local files. Comment Append data to the end of the output file, creating if does not exist. Unprivileged This function can be performed by any unprivileged user. echo -n DATA | tee /path/to/wordlist | md5sum | awk '{print $1}' >/path/to/hash hashcat -m 0 --quiet --potfile-disable -o /path/to/output-file --outfile-format=2 --outfile-autohex-disable /path/to/hash /path/to/wordlist Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . echo -n DATA | tee /path/to/wordlist | md5sum | awk '{print $1}' >/path/to/hash hashcat -m 0 --quiet --potfile-disable -o /path/to/output-file --outfile-format=2 --outfile-autohex-disable /path/to/hash /path/to/wordlist Source | History",
+    "description": "Living off the land using \"hashcat\".",
+    "fetch_time": "2026-11-05T06:04:54.137139+00:00"
+  },
+  {
+    "url": "https://gtfobins.org/gtfobins/screen/",
+    "title": "screen | GTFOBins",
+    "text": ".. / screen Sponsor Fork Star Sponsor Fork Star Shell File write Shell This executable can spawn an interactive system shell. Unprivileged This function can be performed by any unprivileged user. screen Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . screen File write This executable can write data to local files. Version requirements 4.06.02 Comment Data is appended to the file and \\n is converted to \\r\\n . Unprivileged This function can be performed by any unprivileged user. screen -L -Logfile /path/to/output-file echo DATA Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . screen -L -Logfile /path/to/output-file echo DATA Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Version requirements 4.05.00 Comment Data is appended to the file and \\n is converted to \\r\\n . Unprivileged This function can be performed by any unprivileged user. screen -L /path/to/output-file echo DATA Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . screen -L /path/to/output-file echo DATA Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Source | History",
+    "description": "Living off the land using \"screen\".",
+    "fetch_time": "2026-11-05T06:04:56.393907+00:00"
+  },
+  {
+    "url": "https://gtfobins.org/gtfobins/tee/",
+    "title": "tee | GTFOBins",
+    "text": ".. / tee Sponsor Fork Star Sponsor Fork Star File write File write This executable can write data to local files. Comment Use -a to append data to exising files. Unprivileged This function can be performed by any unprivileged user. echo DATA | tee /path/to/output-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . echo DATA | tee /path/to/output-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. echo DATA | tee /path/to/output-file Source | History",
+    "description": "Living off the land using \"tee\".",
+    "fetch_time": "2026-11-05T06:04:58.695254+00:00"
+  }
+]

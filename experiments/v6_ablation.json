@@ -1,0 +1,197 @@
+{
+ "note": "Ablation on the SAME final judgments (data/eval_judgments.csv, 2026-10-21). Unlabeled top-5 pages count as 0 (lower bound). pivot=0 is plain cosine.",
+ "results": {
+  "v5 baseline | pivot=0": {
+   "mean_p5": 0.42,
+   "unlabeled_in_top5": 0,
+   "per_query": {
+    "wifi password cracking": 0.4,
+    "sql injection tool": 0.2,
+    "port scanning techniques": 0.0,
+    "password hash cracking": 0.4,
+    "web application vulnerability scanner": 0.4,
+    "network packet sniffer": 0.6,
+    "exploit metasploit module": 0.2,
+    "brute force login": 0.8,
+    "directory enumeration web server": 0.2,
+    "wireless deauthentication attack": 1.0
+   }
+  },
+  "v5 baseline | pivot=0.2": {
+   "mean_p5": 0.7,
+   "unlabeled_in_top5": 0,
+   "per_query": {
+    "wifi password cracking": 0.6,
+    "sql injection tool": 0.6,
+    "port scanning techniques": 0.6,
+    "password hash cracking": 0.6,
+    "web application vulnerability scanner": 0.8,
+    "network packet sniffer": 1.0,
+    "exploit metasploit module": 0.8,
+    "brute force login": 0.6,
+    "directory enumeration web server": 0.4,
+    "wireless deauthentication attack": 1.0
+   }
+  },
+  "v5 baseline | pivot=0.3": {
+   "mean_p5": 0.66,
+   "unlabeled_in_top5": 0,
+   "per_query": {
+    "wifi password cracking": 0.6,
+    "sql injection tool": 0.8,
+    "port scanning techniques": 0.4,
+    "password hash cracking": 0.6,
+    "web application vulnerability scanner": 0.6,
+    "network packet sniffer": 1.0,
+    "exploit metasploit module": 0.6,
+    "brute force login": 0.6,
+    "directory enumeration web server": 0.4,
+    "wireless deauthentication attack": 1.0
+   }
+  },
+  "+ clean | pivot=0": {
+   "mean_p5": 0.48,
+   "unlabeled_in_top5": 0,
+   "per_query": {
+    "wifi password cracking": 0.4,
+    "sql injection tool": 0.4,
+    "port scanning techniques": 0.0,
+    "password hash cracking": 0.6,
+    "web application vulnerability scanner": 0.4,
+    "network packet sniffer": 0.6,
+    "exploit metasploit module": 0.2,
+    "brute force login": 0.8,
+    "directory enumeration web server": 0.4,
+    "wireless deauthentication attack": 1.0
+   }
+  },
+  "+ clean | pivot=0.2": {
+   "mean_p5": 0.66,
+   "unlabeled_in_top5": 1,
+   "per_query": {
+    "wifi password cracking": 0.6,
+    "sql injection tool": 0.6,
+    "port scanning techniques": 0.6,
+    "password hash cracking": 0.6,
+    "web application vulnerability scanner": 0.6,
+    "network packet sniffer": 1.0,
+    "exploit metasploit module": 0.8,
+    "brute force login": 0.6,
+    "directory enumeration web server": 0.2,
+    "wireless deauthentication attack": 1.0
+   }
+  },
+  "+ clean | pivot=0.3": {
+   "mean_p5": 0.66,
+   "unlabeled_in_top5": 0,
+   "per_query": {
+    "wifi password cracking": 0.6,
+    "sql injection tool": 0.8,
+    "port scanning techniques": 0.4,
+    "password hash cracking": 0.6,
+    "web application vulnerability scanner": 0.6,
+    "network packet sniffer": 1.0,
+    "exploit metasploit module": 0.6,
+    "brute force login": 0.6,
+    "directory enumeration web server": 0.4,
+    "wireless deauthentication attack": 1.0
+   }
+  },
+  "+ stem | pivot=0": {
+   "mean_p5": 0.48,
+   "unlabeled_in_top5": 3,
+   "per_query": {
+    "wifi password cracking": 0.4,
+    "sql injection tool": 0.4,
+    "port scanning techniques": 0.2,
+    "password hash cracking": 0.4,
+    "web application vulnerability scanner": 0.8,
+    "network packet sniffer": 0.6,
+    "exploit metasploit module": 0.2,
+    "brute force login": 0.8,
+    "directory enumeration web server": 0.2,
+    "wireless deauthentication attack": 0.8
+   }
+  },
+  "+ stem | pivot=0.2": {
+   "mean_p5": 0.7,
+   "unlabeled_in_top5": 1,
+   "per_query": {
+    "wifi password cracking": 0.6,
+    "sql injection tool": 0.6,
+    "port scanning techniques": 0.4,
+    "password hash cracking": 0.8,
+    "web application vulnerability scanner": 0.8,
+    "network packet sniffer": 0.8,
+    "exploit metasploit module": 0.8,
+    "brute force login": 0.6,
+    "directory enumeration web server": 0.6,
+    "wireless deauthentication attack": 1.0
+   }
+  },
+  "+ stem | pivot=0.3": {
+   "mean_p5": 0.66,
+   "unlabeled_in_top5": 0,
+   "per_query": {
+    "wifi password cracking": 0.6,
+    "sql injection tool": 0.8,
+    "port scanning techniques": 0.4,
+    "password hash cracking": 0.4,
+    "web application vulnerability scanner": 0.8,
+    "network packet sniffer": 0.8,
+    "exploit metasploit module": 0.8,
+    "brute force login": 0.6,
+    "directory enumeration web server": 0.4,
+    "wireless deauthentication attack": 1.0
+   }
+  },
+  "+ clean + stem (v6 default) | pivot=0": {
+   "mean_p5": 0.54,
+   "unlabeled_in_top5": 0,
+   "per_query": {
+    "wifi password cracking": 0.4,
+    "sql injection tool": 0.4,
+    "port scanning techniques": 0.2,
+    "password hash cracking": 0.6,
+    "web application vulnerability scanner": 0.8,
+    "network packet sniffer": 0.6,
+    "exploit metasploit module": 0.2,
+    "brute force login": 0.8,
+    "directory enumeration web server": 0.4,
+    "wireless deauthentication attack": 1.0
+   }
+  },
+  "+ clean + stem (v6 default) | pivot=0.2": {
+   "mean_p5": 0.68,
+   "unlabeled_in_top5": 0,
+   "per_query": {
+    "wifi password cracking": 0.6,
+    "sql injection tool": 0.6,
+    "port scanning techniques": 0.6,
+    "password hash cracking": 0.8,
+    "web application vulnerability scanner": 0.6,
+    "network packet sniffer": 0.8,
+    "exploit metasploit module": 0.8,
+    "brute force login": 0.6,
+    "directory enumeration web server": 0.4,
+    "wireless deauthentication attack": 1.0
+   }
+  },
+  "+ clean + stem (v6 default) | pivot=0.3": {
+   "mean_p5": 0.68,
+   "unlabeled_in_top5": 0,
+   "per_query": {
+    "wifi password cracking": 0.6,
+    "sql injection tool": 0.8,
+    "port scanning techniques": 0.4,
+    "password hash cracking": 0.6,
+    "web application vulnerability scanner": 0.8,
+    "network packet sniffer": 0.8,
+    "exploit metasploit module": 0.8,
+    "brute force login": 0.6,
+    "directory enumeration web server": 0.4,
+    "wireless deauthentication attack": 1.0
+   }
+  }
+ }
+}

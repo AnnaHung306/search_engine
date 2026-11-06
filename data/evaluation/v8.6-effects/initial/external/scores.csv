@@ -1,0 +1,9 @@
+system,query_id,query,precision_at_5
+expanded_v85,effect-05,outside GTFOBins append to a local file with sudo,0.0
+expanded_v85,effect-06,non-GTFOBins sudo append to an existing file,0.0
+expanded_v85,effect-07,alternatives to GTFOBins for appending a line to a file under sudo,0.0
+expanded_v85,effect-08,GTFOBins alternatives for sudo add text to the end of a local file,0.0
+effects,effect-05,outside GTFOBins append to a local file with sudo,0.6
+effects,effect-06,non-GTFOBins sudo append to an existing file,0.6
+effects,effect-07,alternatives to GTFOBins for appending a line to a file under sudo,0.6
+effects,effect-08,GTFOBins alternatives for sudo add text to the end of a local file,0.6

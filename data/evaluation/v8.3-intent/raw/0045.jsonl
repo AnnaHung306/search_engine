@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa24-cc6f-7070-8299-4c506e460582"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\n  \"decisions\": [\n    {\n      \"decision_id\": \"f6d2057fa86131fa2bd4-18\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"此段描述指定要保留的符號名稱，未提供列舉已載入原生模組之匯出符號的功能。\",\n      \"evidence\": \"--internalize-public-api-file=<filename> - A file containing list of symbol names to preserve\"\n    }\n  ]\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":41095,"cached_input_tokens":26112,"cache_write_input_tokens":0,"output_tokens":123,"reasoning_output_tokens":0}}

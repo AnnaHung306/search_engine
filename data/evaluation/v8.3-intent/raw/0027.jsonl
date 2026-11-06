@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa23-9b92-7c41-a48d-cc6bfbfe5f8f"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\n  \"decisions\": [\n    {\n      \"decision_id\": \"f6d2057fa86131fa2bd4-0\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"此段說明 Clang 如何在編譯時擷取 API 資訊，未提供列出指定已載入原生模組匯出符號的功能。\",\n      \"evidence\": \"-emit-symbol-graph Generate Extract API information as a side effect of compilation.\"\n    }\n  ]\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":40325,"cached_input_tokens":26112,"cache_write_input_tokens":0,"output_tokens":125,"reasoning_output_tokens":0}}

@@ -1,0 +1,201 @@
+system,query,rank,doc_id,url,relevant,reason
+tfidf,wifi password cracking,1,580,https://www.kali.org/tools/fern-wifi-cracker/,1,Automated Wi-Fi (WEP/WPA) cracker
+tfidf,wifi password cracking,2,583,https://www.kali.org/tools/wifi-honey/,1,Wi-Fi honeypot used to capture WPA handshakes
+tfidf,wifi password cracking,3,810,https://www.kali.org/docs/general-use/kernel-configuration/,0,Kernel config page; mentions Wi-Fi injection patch but is not a cracking tool
+tfidf,wifi password cracking,4,939,https://www.kali.org/tools/dploot/,0,DPAPI secret dumper; can dump saved Wi-Fi keys on a Windows host but does not crack Wi-Fi networks
+tfidf,wifi password cracking,5,918,https://www.kali.org/tools/crack/,0,"Unix password file cracker, not Wi-Fi"
+tfidf,sql injection tool,1,662,https://www.kali.org/tools/siparmyknife/,1,SIP fuzzer that also searches for SQL injection
+tfidf,sql injection tool,2,423,https://www.kali.org/tools/laudanum/,0,Web shells used after SQLi is found; does not detect/exploit SQLi itself
+tfidf,sql injection tool,3,546,https://www.kali.org/tools/sqldict/,0,"Dictionary attack on SQL Server logins, not SQL injection"
+tfidf,sql injection tool,4,927,https://www.kali.org/tools/dbeaver/,0,"Database client, not an injection tool"
+tfidf,sql injection tool,5,387,https://www.kali.org/tools/sqlmap/,1,sqlmap: automatic SQL injection detection and exploitation
+tfidf,port scanning techniques,1,812,https://www.kali.org/docs/general-use/nonroot-behavioral-differences-in-packages/,0,Kali non-root package behaviour; only mentions Nmap privileges
+tfidf,port scanning techniques,2,138,https://nmap.org/book/scan-methods-maimon-scan.html,1,explains the TCP Maimon port scan technique
+tfidf,port scanning techniques,3,75,https://nmap.org/book/host-discovery.html,0,"Host discovery chapter, not port scanning"
+tfidf,port scanning techniques,4,22,https://nmap.org/book/organization.html,0,Book audience/organization overview
+tfidf,port scanning techniques,5,278,https://nmap.org/book/defenses.html,0,"About defending against Nmap scans, not how to port scan"
+tfidf,password hash cracking,1,918,https://www.kali.org/tools/crack/,1,cracks crypt() hashes in Unix password files
+tfidf,password hash cracking,2,568,https://www.kali.org/tools/sipcrack/,1,Cracks sniffed SIP digest password hashes
+tfidf,password hash cracking,3,560,https://www.kali.org/tools/johnny/,1,GUI for John the Ripper hash cracking
+tfidf,password hash cracking,4,570,https://www.kali.org/tools/sucrack/,0,"Online su brute force, not hash cracking"
+tfidf,password hash cracking,5,519,https://www.kali.org/tools/hashid/,0,Identifies hash types; does not crack
+tfidf,web application vulnerability scanner,1,215,https://www.kali.org/tools/webscarab/,1,"web application review/testing proxy, same rule as paros"
+tfidf,web application vulnerability scanner,2,152,https://www.kali.org/tools/wpprobe/,1,WordPress plugin scanner mapping to known vulnerabilities
+tfidf,web application vulnerability scanner,3,167,https://www.kali.org/tools/burpsuite/,1,web app security testing platform with a scanner
+tfidf,web application vulnerability scanner,4,191,https://www.kali.org/tools/paros/,1,Web application testing proxy with spider/scanner
+tfidf,web application vulnerability scanner,5,648,https://www.kali.org/tools/cisco-global-exploiter/,0,Exploits Cisco vulnerabilities; not a web app scanner
+tfidf,network packet sniffer,1,614,https://www.kali.org/tools/scapy/,1,scapy: packet generator and sniffer
+tfidf,network packet sniffer,2,606,https://www.kali.org/tools/above/,1,Network security sniffer
+tfidf,network packet sniffer,3,586,https://www.kali.org/tools/xspy/,0,"X server keystroke sniffer, not network packets"
+tfidf,network packet sniffer,4,608,https://www.kali.org/tools/darkstat/,1,Packet sniffer / traffic analyzer
+tfidf,network packet sniffer,5,810,https://www.kali.org/docs/general-use/kernel-configuration/,0,Kernel config page
+tfidf,exploit metasploit module,1,461,https://docs.metasploit.com/api/Msf/Exploit/Remote/Kerberos/ServiceAuthenticator.html,0,Kerberos authenticator class API
+tfidf,exploit metasploit module,2,350,https://docs.metasploit.com/api/Msf/Exploit/Remote/HTTP/Joomla.html,0,Developer API mixin (Joomla); not about using/running modules
+tfidf,exploit metasploit module,3,413,https://docs.metasploit.com/api/Msf/Exploit/Remote/HTTP/Webmin.html,0,Developer API mixin (Webmin)
+tfidf,exploit metasploit module,4,410,https://docs.metasploit.com/api/Msf/Exploit/Remote/HTTP/Typo3.html,0,Developer API mixin (Typo3)
+tfidf,exploit metasploit module,5,265,https://docs.metasploit.com/docs/development/developing-modules/external-modules/writing-external-golang-modules.html,1,Explains writing Metasploit modules in Go
+tfidf,brute force login,1,570,https://www.kali.org/tools/sucrack/,0,"su brute-forcer for LOCAL accounts, not a login service over the network"
+tfidf,brute force login,2,535,https://www.kali.org/tools/crowbar/,1,crowbar: brute force RDP/SSH/VPN logins
+tfidf,brute force login,3,545,https://www.kali.org/tools/patator/,1,patator: multi-protocol login brute-forcer
+tfidf,brute force login,4,548,https://www.kali.org/tools/thc-pptp-bruter/,1,Brute forces PPTP VPN logins
+tfidf,brute force login,5,541,https://www.kali.org/tools/medusa/,1,medusa: parallel login brute-forcer
+tfidf,directory enumeration web server,1,119,https://www.kali.org/tools/gobuster/,1,gobuster: directory/file brute forcing
+tfidf,directory enumeration web server,2,784,https://www.kali.org/tools/arsenal-ng/,0,"Cheat-sheet launcher, not a discovery tool"
+tfidf,directory enumeration web server,3,355,https://nmap.org/book/output-formats-cpe.html,0,CPE naming in Nmap output; 'enumeration' is a different meaning
+tfidf,directory enumeration web server,4,113,https://www.kali.org/tools/finalrecon/,1,all-in-one web recon with a --dir directory search option
+tfidf,directory enumeration web server,5,656,https://www.kali.org/tools/ldeep/,0,"LDAP enumeration, not web"
+tfidf,wireless deauthentication attack,1,719,https://www.kali.org/tools/mdk3/,1,mdk3: wireless DoS incl. deauthentication
+tfidf,wireless deauthentication attack,2,227,https://www.kali.org/tools/bettercap/,1,bettercap includes Wi-Fi deauth module
+tfidf,wireless deauthentication attack,3,580,https://www.kali.org/tools/fern-wifi-cracker/,1,Wireless attack tool
+tfidf,wireless deauthentication attack,4,584,https://www.kali.org/tools/wifiphisher/,1,Uses deauth/jamming to push clients to rogue AP
+tfidf,wireless deauthentication attack,5,576,https://www.kali.org/tools/airgeddon/,1,airgeddon wireless audit incl. deauth/DoS
+tfidf_pivot,wifi password cracking,1,583,https://www.kali.org/tools/wifi-honey/,1,Wi-Fi honeypot used to capture WPA handshakes
+tfidf_pivot,wifi password cracking,2,580,https://www.kali.org/tools/fern-wifi-cracker/,1,Automated Wi-Fi (WEP/WPA) cracker
+tfidf_pivot,wifi password cracking,3,254,https://www.kali.org/tools/kismet/,0,wireless detector/sniffer; page says nothing about cracking keys or handshakes
+tfidf_pivot,wifi password cracking,4,260,https://www.kali.org/tools/reaver/,1,reaver/wash attack WPS to recover the WPA passphrase
+tfidf_pivot,wifi password cracking,5,939,https://www.kali.org/tools/dploot/,0,DPAPI secret dumper; can dump saved Wi-Fi keys on a Windows host but does not crack Wi-Fi networks
+tfidf_pivot,sql injection tool,1,387,https://www.kali.org/tools/sqlmap/,1,sqlmap: automatic SQL injection detection and exploitation
+tfidf_pivot,sql injection tool,2,419,https://docs.metasploit.com/api/Msf/Exploit/Remote/MSSQL_SQLI.html,0,"2nd pass: developer API mixin (library code), not a SQLi tool a user runs; same rule as the API mixins under the Metasploit query"
+tfidf_pivot,sql injection tool,3,396,https://www.kali.org/tools/jsql/,1,jSQL Injection: finds and exploits SQL injection
+tfidf_pivot,sql injection tool,4,390,https://www.kali.org/tools/sqlninja/,1,sqlninja: exploits SQL injection on MS SQL Server
+tfidf_pivot,sql injection tool,5,185,https://www.kali.org/tools/nikto/,0,general web server scanner; not described as a SQLi tool
+tfidf_pivot,port scanning techniques,1,767,https://www.kali.org/tools/unhide/,0,forensic tool for hidden processes/ports on the local host
+tfidf_pivot,port scanning techniques,2,466,https://nmap.org/book/idx.html,0,Book index page; list of terms
+tfidf_pivot,port scanning techniques,3,406,https://nmap.org/book/man-port-scanning-techniques.html,1,"Reference of Nmap port scan techniques (-sS, -sT, -sU...)"
+tfidf_pivot,port scanning techniques,4,114,https://nmap.org/book/scan-methods.html,1,Chapter on port scanning techniques and algorithms
+tfidf_pivot,port scanning techniques,5,150,https://nmap.org/book/port-scanning-algorithms.html,1,how Nmap's port scanning engine works
+tfidf_pivot,password hash cracking,1,918,https://www.kali.org/tools/crack/,1,cracks crypt() hashes in Unix password files
+tfidf_pivot,password hash cracking,2,556,https://www.kali.org/tools/hashcat/,1,hashcat: password hash cracker
+tfidf_pivot,password hash cracking,3,558,https://www.kali.org/tools/john/,1,John the Ripper: password hash cracker
+tfidf_pivot,password hash cracking,4,567,https://docs.metasploit.com/api/Msf/Auxiliary/Brocade.html,0,developer API mixin for Brocade configs
+tfidf_pivot,password hash cracking,5,564,https://www.kali.org/tools/rainbowcrack/,1,Cracks hashes with rainbow tables
+tfidf_pivot,web application vulnerability scanner,1,212,https://www.kali.org/tools/web-cache-vulnerability-scanner/,1,Scanner for web cache poisoning vulnerabilities
+tfidf_pivot,web application vulnerability scanner,2,98,https://www.kali.org/tools/dirb/,0,"Web content (directory) scanner, not a vulnerability scanner"
+tfidf_pivot,web application vulnerability scanner,3,206,https://www.kali.org/tools/wapiti/,1,wapiti: web application vulnerability scanner
+tfidf_pivot,web application vulnerability scanner,4,158,https://www.kali.org/tools/gvm/,1,"Greenbone/OpenVAS vulnerability scanner (network, includes web checks)"
+tfidf_pivot,web application vulnerability scanner,5,272,https://nmap.org/book/subvert-ids.html,0,"IDS evasion, not a web scanner"
+tfidf_pivot,network packet sniffer,1,254,https://www.kali.org/tools/kismet/,1,kismet: wireless sniffer
+tfidf_pivot,network packet sniffer,2,613,https://www.kali.org/tools/wireshark/,1,wireshark/tshark: packet capture and analysis
+tfidf_pivot,network packet sniffer,3,858,https://www.kali.org/tools/snort/,1,snort: libpcap-based packet sniffer / IDS
+tfidf_pivot,network packet sniffer,4,614,https://www.kali.org/tools/scapy/,1,scapy: packet generator and sniffer
+tfidf_pivot,network packet sniffer,5,424,https://nmap.org/book/man-bypass-firewalls-ids.html,0,"Firewall/IDS evasion options, not packet capture"
+tfidf_pivot,exploit metasploit module,1,2,https://docs.metasploit.com/,0,Docs landing page; general intro only
+tfidf_pivot,exploit metasploit module,2,55,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,1,How to load and run private modules
+tfidf_pivot,exploit metasploit module,3,214,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html,1,How to use a Metasploit module appropriately
+tfidf_pivot,exploit metasploit module,4,20,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,1,"Using msfconsole: search, use, set, run modules"
+tfidf_pivot,exploit metasploit module,5,44,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,1,Guide to writing a Metasploit exploit module
+tfidf_pivot,brute force login,1,545,https://www.kali.org/tools/patator/,1,patator: multi-protocol login brute-forcer
+tfidf_pivot,brute force login,2,559,https://docs.metasploit.com/api/Msf/Auxiliary/AuthBrute.html,0,"2nd pass: developer API mixin (AuthBrute), not a brute-force tool a user runs; same rule as other API mixin pages"
+tfidf_pivot,brute force login,3,535,https://www.kali.org/tools/crowbar/,1,crowbar: brute force RDP/SSH/VPN logins
+tfidf_pivot,brute force login,4,305,https://docs.metasploit.com/api/Msf/Auxiliary/CNPILOT.html,0,"cnPilot device helper module, not a brute-force tool"
+tfidf_pivot,brute force login,5,541,https://www.kali.org/tools/medusa/,1,medusa: parallel login brute-forcer
+tfidf_pivot,directory enumeration web server,1,784,https://www.kali.org/tools/arsenal-ng/,0,"Cheat-sheet launcher, not a discovery tool"
+tfidf_pivot,directory enumeration web server,2,119,https://www.kali.org/tools/gobuster/,1,gobuster: directory/file brute forcing
+tfidf_pivot,directory enumeration web server,3,77,https://www.kali.org/tools/dnsrecon/,0,"DNS enumeration, not web directories"
+tfidf_pivot,directory enumeration web server,4,627,https://www.kali.org/tools/enum4linux-ng/,0,"Windows/Samba enumeration, not web"
+tfidf_pivot,directory enumeration web server,5,113,https://www.kali.org/tools/finalrecon/,1,all-in-one web recon with a --dir directory search option
+tfidf_pivot,wireless deauthentication attack,1,719,https://www.kali.org/tools/mdk3/,1,mdk3: wireless DoS incl. deauthentication
+tfidf_pivot,wireless deauthentication attack,2,575,https://www.kali.org/tools/aircrack-ng/,1,aircrack-ng suite incl. aireplay-ng deauthentication
+tfidf_pivot,wireless deauthentication attack,3,227,https://www.kali.org/tools/bettercap/,1,bettercap includes Wi-Fi deauth module
+tfidf_pivot,wireless deauthentication attack,4,584,https://www.kali.org/tools/wifiphisher/,1,Uses deauth/jamming to push clients to rogue AP
+tfidf_pivot,wireless deauthentication attack,5,585,https://www.kali.org/tools/wifite/,1,wifite: automated wireless attacks incl. deauth
+bm25,wifi password cracking,1,580,https://www.kali.org/tools/fern-wifi-cracker/,1,Automated Wi-Fi (WEP/WPA) cracker
+bm25,wifi password cracking,2,429,https://www.kali.org/tools/seclists/,0,"wordlist collection, not a Wi-Fi tool"
+bm25,wifi password cracking,3,0,https://www.kali.org/tools/,0,Kali tools listing page; just a list of names
+bm25,wifi password cracking,4,583,https://www.kali.org/tools/wifi-honey/,1,Wi-Fi honeypot used to capture WPA handshakes
+bm25,wifi password cracking,5,260,https://www.kali.org/tools/reaver/,1,reaver/wash attack WPS to recover the WPA passphrase
+bm25,sql injection tool,1,387,https://www.kali.org/tools/sqlmap/,1,sqlmap: automatic SQL injection detection and exploitation
+bm25,sql injection tool,2,396,https://www.kali.org/tools/jsql/,1,jSQL Injection: finds and exploits SQL injection
+bm25,sql injection tool,3,390,https://www.kali.org/tools/sqlninja/,1,sqlninja: exploits SQL injection on MS SQL Server
+bm25,sql injection tool,4,419,https://docs.metasploit.com/api/Msf/Exploit/Remote/MSSQL_SQLI.html,0,"2nd pass: developer API mixin (library code), not a SQLi tool a user runs; same rule as the API mixins under the Metasploit query"
+bm25,sql injection tool,5,662,https://www.kali.org/tools/siparmyknife/,1,SIP fuzzer that also searches for SQL injection
+bm25,port scanning techniques,1,466,https://nmap.org/book/idx.html,0,Book index page; list of terms
+bm25,port scanning techniques,2,114,https://nmap.org/book/scan-methods.html,1,Chapter on port scanning techniques and algorithms
+bm25,port scanning techniques,3,75,https://nmap.org/book/host-discovery.html,0,"Host discovery chapter, not port scanning"
+bm25,port scanning techniques,4,138,https://nmap.org/book/scan-methods-maimon-scan.html,1,explains the TCP Maimon port scan technique
+bm25,port scanning techniques,5,289,https://nmap.org/book/nmap-defenses-trickery.html,0,defensive trickery against scanners
+bm25,password hash cracking,1,556,https://www.kali.org/tools/hashcat/,1,hashcat: password hash cracker
+bm25,password hash cracking,2,558,https://www.kali.org/tools/john/,1,John the Ripper: password hash cracker
+bm25,password hash cracking,3,564,https://www.kali.org/tools/rainbowcrack/,1,Cracks hashes with rainbow tables
+bm25,password hash cracking,4,251,https://www.kali.org/tools/asleap/,1,"recovers LEAP passwords from captured challenge/response hashes, like cowpatty"
+bm25,password hash cracking,5,578,https://www.kali.org/tools/cowpatty/,1,"2nd pass: cowpatty dictionary-cracks WPA-PSK hashes (PMK); counted like sipcrack, which cracks SIP digest hashes"
+bm25,web application vulnerability scanner,1,212,https://www.kali.org/tools/web-cache-vulnerability-scanner/,1,Scanner for web cache poisoning vulnerabilities
+bm25,web application vulnerability scanner,2,98,https://www.kali.org/tools/dirb/,0,"Web content (directory) scanner, not a vulnerability scanner"
+bm25,web application vulnerability scanner,3,206,https://www.kali.org/tools/wapiti/,1,wapiti: web application vulnerability scanner
+bm25,web application vulnerability scanner,4,167,https://www.kali.org/tools/burpsuite/,1,web app security testing platform with a scanner
+bm25,web application vulnerability scanner,5,140,https://www.kali.org/tools/uniscan/,1,scanner for LFI/RFI/RCE web vulnerabilities
+bm25,network packet sniffer,1,614,https://www.kali.org/tools/scapy/,1,scapy: packet generator and sniffer
+bm25,network packet sniffer,2,606,https://www.kali.org/tools/above/,1,Network security sniffer
+bm25,network packet sniffer,3,858,https://www.kali.org/tools/snort/,1,snort: libpcap-based packet sniffer / IDS
+bm25,network packet sniffer,4,254,https://www.kali.org/tools/kismet/,1,kismet: wireless sniffer
+bm25,network packet sniffer,5,611,https://www.kali.org/tools/hexinject/,1,hexinject: packet sniffing and injection
+bm25,exploit metasploit module,1,55,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,1,How to load and run private modules
+bm25,exploit metasploit module,2,2,https://docs.metasploit.com/,0,Docs landing page; general intro only
+bm25,exploit metasploit module,3,214,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html,1,How to use a Metasploit module appropriately
+bm25,exploit metasploit module,4,14,https://docs.metasploit.com/docs/development/maintainers/process/guidelines-for-accepting-modules-and-enhancements.html,0,"pull-request acceptance guidelines, not using modules"
+bm25,exploit metasploit module,5,20,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,1,"Using msfconsole: search, use, set, run modules"
+bm25,brute force login,1,545,https://www.kali.org/tools/patator/,1,patator: multi-protocol login brute-forcer
+bm25,brute force login,2,535,https://www.kali.org/tools/crowbar/,1,crowbar: brute force RDP/SSH/VPN logins
+bm25,brute force login,3,559,https://docs.metasploit.com/api/Msf/Auxiliary/AuthBrute.html,0,"2nd pass: developer API mixin (AuthBrute), not a brute-force tool a user runs; same rule as other API mixin pages"
+bm25,brute force login,4,305,https://docs.metasploit.com/api/Msf/Auxiliary/CNPILOT.html,0,"cnPilot device helper module, not a brute-force tool"
+bm25,brute force login,5,541,https://www.kali.org/tools/medusa/,1,medusa: parallel login brute-forcer
+bm25,directory enumeration web server,1,119,https://www.kali.org/tools/gobuster/,1,gobuster: directory/file brute forcing
+bm25,directory enumeration web server,2,784,https://www.kali.org/tools/arsenal-ng/,0,"Cheat-sheet launcher, not a discovery tool"
+bm25,directory enumeration web server,3,113,https://www.kali.org/tools/finalrecon/,1,all-in-one web recon with a --dir directory search option
+bm25,directory enumeration web server,4,107,https://www.kali.org/tools/feroxbuster/,1,feroxbuster: recursive content discovery
+bm25,directory enumeration web server,5,56,https://www.kali.org/tools/autorecon/,1,Recon tool that runs feroxbuster/gobuster for web directory enumeration
+bm25,wireless deauthentication attack,1,719,https://www.kali.org/tools/mdk3/,1,mdk3: wireless DoS incl. deauthentication
+bm25,wireless deauthentication attack,2,227,https://www.kali.org/tools/bettercap/,1,bettercap includes Wi-Fi deauth module
+bm25,wireless deauthentication attack,3,584,https://www.kali.org/tools/wifiphisher/,1,Uses deauth/jamming to push clients to rogue AP
+bm25,wireless deauthentication attack,4,575,https://www.kali.org/tools/aircrack-ng/,1,aircrack-ng suite incl. aireplay-ng deauthentication
+bm25,wireless deauthentication attack,5,585,https://www.kali.org/tools/wifite/,1,wifite: automated wireless attacks incl. deauth
+bm25_boost_syn,wifi password cracking,1,580,https://www.kali.org/tools/fern-wifi-cracker/,1,Automated Wi-Fi (WEP/WPA) cracker
+bm25_boost_syn,wifi password cracking,2,260,https://www.kali.org/tools/reaver/,1,reaver/wash attack WPS to recover the WPA passphrase
+bm25_boost_syn,wifi password cracking,3,575,https://www.kali.org/tools/aircrack-ng/,1,aircrack-ng cracks WEP/WPA keys from captured handshakes
+bm25_boost_syn,wifi password cracking,4,583,https://www.kali.org/tools/wifi-honey/,1,Wi-Fi honeypot used to capture WPA handshakes
+bm25_boost_syn,wifi password cracking,5,882,https://www.kali.org/tools/berate-ap/,0,rogue access point script; does not crack Wi-Fi keys
+bm25_boost_syn,sql injection tool,1,390,https://www.kali.org/tools/sqlninja/,1,sqlninja: exploits SQL injection on MS SQL Server
+bm25_boost_syn,sql injection tool,2,396,https://www.kali.org/tools/jsql/,1,jSQL Injection: finds and exploits SQL injection
+bm25_boost_syn,sql injection tool,3,387,https://www.kali.org/tools/sqlmap/,1,sqlmap: automatic SQL injection detection and exploitation
+bm25_boost_syn,sql injection tool,4,393,https://www.kali.org/tools/sqlsus/,1,sqlsus: MySQL injection exploitation tool
+bm25_boost_syn,sql injection tool,5,662,https://www.kali.org/tools/siparmyknife/,1,SIP fuzzer that also searches for SQL injection
+bm25_boost_syn,port scanning techniques,1,114,https://nmap.org/book/scan-methods.html,1,Chapter on port scanning techniques and algorithms
+bm25_boost_syn,port scanning techniques,2,406,https://nmap.org/book/man-port-scanning-techniques.html,1,"Reference of Nmap port scan techniques (-sS, -sT, -sU...)"
+bm25_boost_syn,port scanning techniques,3,281,https://nmap.org/book/nmap-defenses-proactive-scanning.html,0,"defense advice (scan your own network), same rule as Chapter 11 Defenses"
+bm25_boost_syn,port scanning techniques,4,99,https://nmap.org/book/port-scanning.html,1,Port scanning overview chapter with tutorial
+bm25_boost_syn,port scanning techniques,5,153,https://nmap.org/book/reduce-scantime.html,1,Techniques to speed up port scans
+bm25_boost_syn,password hash cracking,1,564,https://www.kali.org/tools/rainbowcrack/,1,Cracks hashes with rainbow tables
+bm25_boost_syn,password hash cracking,2,522,https://www.kali.org/tools/hash-identifier/,0,Identifies hash types; helps before cracking but does not crack
+bm25_boost_syn,password hash cracking,3,556,https://www.kali.org/tools/hashcat/,1,hashcat: password hash cracker
+bm25_boost_syn,password hash cracking,4,558,https://www.kali.org/tools/john/,1,John the Ripper: password hash cracker
+bm25_boost_syn,password hash cracking,5,750,https://www.kali.org/tools/afflib/,0,forensic disk image format library
+bm25_boost_syn,web application vulnerability scanner,1,212,https://www.kali.org/tools/web-cache-vulnerability-scanner/,1,Scanner for web cache poisoning vulnerabilities
+bm25_boost_syn,web application vulnerability scanner,2,171,https://nmap.org/book/vscan.html,0,"Nmap service/version detection, not a web vulnerability scanner"
+bm25_boost_syn,web application vulnerability scanner,3,206,https://www.kali.org/tools/wapiti/,1,wapiti: web application vulnerability scanner
+bm25_boost_syn,web application vulnerability scanner,4,281,https://nmap.org/book/nmap-defenses-proactive-scanning.html,0,"Nmap defense chapter, not a web scanner"
+bm25_boost_syn,web application vulnerability scanner,5,98,https://www.kali.org/tools/dirb/,0,"Web content (directory) scanner, not a vulnerability scanner"
+bm25_boost_syn,network packet sniffer,1,607,https://www.kali.org/tools/dsniff/,1,tools to sniff network traffic
+bm25_boost_syn,network packet sniffer,2,670,https://www.kali.org/tools/ettercap/,1,ettercap: LAN sniffer/interceptor
+bm25_boost_syn,network packet sniffer,3,248,https://www.kali.org/tools/ubertooth/,0,"Bluetooth hardware platform, not network packet capture"
+bm25_boost_syn,network packet sniffer,4,611,https://www.kali.org/tools/hexinject/,1,hexinject: packet sniffing and injection
+bm25_boost_syn,network packet sniffer,5,243,https://nmap.org/book/nse-api.html,0,NSE scripting API
+bm25_boost_syn,exploit metasploit module,1,130,https://docs.metasploit.com/docs/development/developing-modules/libraries/http/how-to-write-a-module-using-httpserver-and-httpclient.html,1,Guide to writing a module using HttpServer/HttpClient
+bm25_boost_syn,exploit metasploit module,2,55,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,1,How to load and run private modules
+bm25_boost_syn,exploit metasploit module,3,20,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,1,"Using msfconsole: search, use, set, run modules"
+bm25_boost_syn,exploit metasploit module,4,44,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,1,Guide to writing a Metasploit exploit module
+bm25_boost_syn,exploit metasploit module,5,14,https://docs.metasploit.com/docs/development/maintainers/process/guidelines-for-accepting-modules-and-enhancements.html,0,"pull-request acceptance guidelines, not using modules"
+bm25_boost_syn,brute force login,1,559,https://docs.metasploit.com/api/Msf/Auxiliary/AuthBrute.html,0,"2nd pass: developer API mixin (AuthBrute), not a brute-force tool a user runs; same rule as other API mixin pages"
+bm25_boost_syn,brute force login,2,104,https://www.kali.org/tools/dirsearch/,0,"Brute forces web paths, not logins"
+bm25_boost_syn,brute force login,3,535,https://www.kali.org/tools/crowbar/,1,crowbar: brute force RDP/SSH/VPN logins
+bm25_boost_syn,brute force login,4,545,https://www.kali.org/tools/patator/,1,patator: multi-protocol login brute-forcer
+bm25_boost_syn,brute force login,5,558,https://www.kali.org/tools/john/,0,"offline password hash cracker, not an online login brute-forcer"
+bm25_boost_syn,directory enumeration web server,1,119,https://www.kali.org/tools/gobuster/,1,gobuster: directory/file brute forcing
+bm25_boost_syn,directory enumeration web server,2,56,https://www.kali.org/tools/autorecon/,1,Recon tool that runs feroxbuster/gobuster for web directory enumeration
+bm25_boost_syn,directory enumeration web server,3,221,https://www.kali.org/tools/wpscan/,0,"WordPress plugin enumeration, not directory discovery"
+bm25_boost_syn,directory enumeration web server,4,107,https://www.kali.org/tools/feroxbuster/,1,feroxbuster: recursive content discovery
+bm25_boost_syn,directory enumeration web server,5,478,https://www.kali.org/tools/smbmap/,0,"SMB share enumeration, not web"
+bm25_boost_syn,wireless deauthentication attack,1,719,https://www.kali.org/tools/mdk3/,1,mdk3: wireless DoS incl. deauthentication
+bm25_boost_syn,wireless deauthentication attack,2,584,https://www.kali.org/tools/wifiphisher/,1,Uses deauth/jamming to push clients to rogue AP
+bm25_boost_syn,wireless deauthentication attack,3,227,https://www.kali.org/tools/bettercap/,1,bettercap includes Wi-Fi deauth module
+bm25_boost_syn,wireless deauthentication attack,4,260,https://www.kali.org/tools/reaver/,1,Wireless (WPS) attack tool
+bm25_boost_syn,wireless deauthentication attack,5,575,https://www.kali.org/tools/aircrack-ng/,1,aircrack-ng suite incl. aireplay-ng deauthentication

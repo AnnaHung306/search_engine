@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9bb-ca50-71f3-aec8-fd476ef101ed"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"01c3e9ecd2412385fb1a-0\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"僅說明驗證參數採用的 NTLM 雜湊格式，未提供辨識未知雜湊類型的功能或方法。\",\"evidence\":\"-hashes LMHASH:NTHASH NTLM hashes, format is LMHASH:NTHASH\"},{\"decision_id\":\"69fe77e629e7ae594495-0\",\"relevant\":0,\"confidence\":\"medium\",\"reason\":\"記載擷取票證並匯出供破解的格式，但未說明從離線雜湊還原密碼的工具能力或操作流程。\",\"evidence\":\"-request Requests TGT for users and output them in JtR/hashcat format (default False)\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":41313,"cached_input_tokens":25472,"cache_write_input_tokens":0,"output_tokens":255,"reasoning_output_tokens":60}}

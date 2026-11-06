@@ -1,0 +1,1081 @@
+system,query_id,query,rank,doc_id,url,score
+tfidf,holdout-01,capture packets to pcap file,1,189,https://www.wireshark.org/docs/wsug_html_chunked/ChUseEditMenuSection.html,0.1577625235454836
+tfidf,holdout-01,capture packets to pcap file,2,369,https://www.wireshark.org/docs/wsug_html_chunked/ChIOFileSetSection.html,0.13834902721073256
+tfidf,holdout-01,capture packets to pcap file,3,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,0.13617428998708486
+tfidf,holdout-01,capture packets to pcap file,4,296,https://www.wireshark.org/docs/wsug_html_chunked/ChCapPrerequisitesSection.html,0.1255219522379924
+tfidf,holdout-01,capture packets to pcap file,5,340,https://www.wireshark.org/docs/wsug_html_chunked/ChCapRunningSection.html,0.12022436353227618
+tfidf,holdout-02,decrypt tls sessions with key log,1,197,https://docs.mitmproxy.org/stable/howto/wireshark-tls/,0.2766890372881475
+tfidf,holdout-02,decrypt tls sessions with key log,2,859,https://www.kali.org/tools/ssldump/,0.15630565977067715
+tfidf,holdout-02,decrypt tls sessions with key log,3,189,https://www.wireshark.org/docs/wsug_html_chunked/ChUseEditMenuSection.html,0.10652401141547022
+tfidf,holdout-02,decrypt tls sessions with key log,4,745,https://www.kali.org/tools/crackle/,0.10402479410593521
+tfidf,holdout-02,decrypt tls sessions with key log,5,720,https://www.kali.org/tools/ccrypt/,0.08008626740249203
+tfidf,holdout-03,filter packets by ip address,1,403,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayFilterSection.html,0.12220643652001491
+tfidf,holdout-03,filter packets by ip address,2,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,0.11297741056734566
+tfidf,holdout-03,filter packets by ip address,3,549,https://nmap.org/book/zenmap-filter.html,0.1065200602899593
+tfidf,holdout-03,filter packets by ip address,4,264,https://www.wireshark.org/docs/wsug_html_chunked/ChUsePacketListPaneSection.html,0.10618431461930213
+tfidf,holdout-03,filter packets by ip address,5,636,https://nmap.org/book/man-port-scanning-basics.html,0.10504995301963024
+tfidf,holdout-04,mitmproxy modify http response,1,81,https://docs.mitmproxy.org/stable/mitmproxytutorial-replayrequests/,0.22177556785279062
+tfidf,holdout-04,mitmproxy modify http response,2,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,0.19535240112874336
+tfidf,holdout-04,mitmproxy modify http response,3,88,https://docs.mitmproxy.org/stable/mitmproxytutorial-whatsnext/,0.18991482203191298
+tfidf,holdout-04,mitmproxy modify http response,4,18,https://docs.mitmproxy.org/stable/overview/getting-started/,0.1837777746710812
+tfidf,holdout-04,mitmproxy modify http response,5,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,0.17421401805340955
+tfidf,holdout-05,install proxy certificate android,1,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,0.12233979792379002
+tfidf,holdout-05,install proxy certificate android,2,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.11160023173107386
+tfidf,holdout-05,install proxy certificate android,3,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,0.09252931371942674
+tfidf,holdout-05,install proxy certificate android,4,883,https://www.kali.org/tools/proxytunnel/,0.09232663260960453
+tfidf,holdout-05,install proxy certificate android,5,18,https://docs.mitmproxy.org/stable/overview/getting-started/,0.08531649758606578
+tfidf,holdout-06,replay captured http requests,1,81,https://docs.mitmproxy.org/stable/mitmproxytutorial-replayrequests/,0.23011211726498484
+tfidf,holdout-06,replay captured http requests,2,114,https://docs.mitmproxy.org/stable/concepts/filters/,0.13466224251185802
+tfidf,holdout-06,replay captured http requests,3,300,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCapturingSection.html,0.12334122661889323
+tfidf,holdout-06,replay captured http requests,4,128,https://docs.mitmproxy.org/stable/concepts/commands/,0.12281782847038931
+tfidf,holdout-06,replay captured http requests,5,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,0.11435665698603374
+tfidf,holdout-07,frida attach running process,1,149,https://frida.re/docs/frida-ls-devices/,0.24837297663742455
+tfidf,holdout-07,frida attach running process,2,129,https://frida.re/docs/frida-ps/,0.2249689973159875
+tfidf,holdout-07,frida attach running process,3,205,https://frida.re/docs/go-api/,0.2165223748793942
+tfidf,holdout-07,frida attach running process,4,198,https://frida.re/docs/swift-api/,0.21109460091092008
+tfidf,holdout-07,frida attach running process,5,226,https://frida.re/docs/troubleshooting/,0.19760118354664546
+tfidf,holdout-08,hook java method android,1,109,https://frida.re/docs/examples/android/,0.13642943035409646
+tfidf,holdout-08,hook java method android,2,591,https://www.kali.org/tools/jd-gui/,0.10822891888558324
+tfidf,holdout-08,hook java method android,3,588,https://www.kali.org/tools/javasnoop/,0.10276200492068627
+tfidf,holdout-08,hook java method android,4,25,https://frida.re/docs/modes/,0.102107745684752
+tfidf,holdout-08,hook java method android,5,582,https://www.kali.org/tools/bytecode-viewer/,0.09338863188675352
+tfidf,holdout-09,list loaded native libraries,1,350,https://gtfobins.org/gtfobins/byebug/,0.09135374536404059
+tfidf,holdout-09,list loaded native libraries,2,13,https://gtfobins.org/scope/,0.0868023713456369
+tfidf,holdout-09,list loaded native libraries,3,5,https://frida.re/docs/home/,0.08222275053346352
+tfidf,holdout-09,list loaded native libraries,4,642,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html,0.07795952390607379
+tfidf,holdout-09,list loaded native libraries,5,679,https://docs.metasploit.com/docs/development/developing-modules/libraries/obfuscation/how-to-use-metasploit-framework-obfuscation-crandomizer.html,0.07423268825324739
+tfidf,holdout-10,extract source code from dex,1,582,https://www.kali.org/tools/bytecode-viewer/,0.12962917139007782
+tfidf,holdout-10,extract source code from dex,2,585,https://www.kali.org/tools/jadx/,0.09539258474081501
+tfidf,holdout-10,extract source code from dex,3,593,https://www.kali.org/tools/dex2jar/,0.09163672115359871
+tfidf,holdout-10,extract source code from dex,4,579,https://www.kali.org/tools/apktool/,0.06973817130788576
+tfidf,holdout-10,extract source code from dex,5,316,https://gtfobins.org/gtfobins/borg/,0.05543979360741538
+tfidf,holdout-11,inspect apk resources,1,579,https://www.kali.org/tools/apktool/,0.12389532631303155
+tfidf,holdout-11,inspect apk resources,2,88,https://docs.mitmproxy.org/stable/mitmproxytutorial-whatsnext/,0.10681464118792275
+tfidf,holdout-11,inspect apk resources,3,582,https://www.kali.org/tools/bytecode-viewer/,0.10401999877546157
+tfidf,holdout-11,inspect apk resources,4,18,https://docs.mitmproxy.org/stable/overview/getting-started/,0.10029859702278919
+tfidf,holdout-11,inspect apk resources,5,585,https://www.kali.org/tools/jadx/,0.06637662517621923
+tfidf,holdout-12,convert dex to jar,1,582,https://www.kali.org/tools/bytecode-viewer/,0.18172192327513786
+tfidf,holdout-12,convert dex to jar,2,366,https://www.kali.org/tools/paros/,0.14941425389401647
+tfidf,holdout-12,convert dex to jar,3,593,https://www.kali.org/tools/dex2jar/,0.1306436672459895
+tfidf,holdout-12,convert dex to jar,4,585,https://www.kali.org/tools/jadx/,0.10753993236786834
+tfidf,holdout-12,convert dex to jar,5,207,https://www.kali.org/tools/dirbuster/,0.09892218793878475
+tfidf,holdout-13,nmap service version detection,1,603,https://nmap.org/book/data-files.html,0.1474776025514026
+tfidf,holdout-13,nmap service version detection,2,592,https://nmap.org/book/output-formats-cpe.html,0.14018235844921137
+tfidf,holdout-13,nmap service version detection,3,608,https://nmap.org/book/nmap-service-probes.html,0.13654197842041801
+tfidf,holdout-13,nmap service version detection,4,45,https://nmap.org/book/organization.html,0.13145571845412213
+tfidf,holdout-13,nmap service version detection,5,671,https://nmap.org/book/man-book.html,0.12784106593226616
+tfidf,holdout-14,nmap operating system detection,1,592,https://nmap.org/book/output-formats-cpe.html,0.163443317802424
+tfidf,holdout-14,nmap operating system detection,2,603,https://nmap.org/book/data-files.html,0.13828680244846028
+tfidf,holdout-14,nmap operating system detection,3,99,https://nmap.org/book/nmap-phases.html,0.11790284197655934
+tfidf,holdout-14,nmap operating system detection,4,671,https://nmap.org/book/man-book.html,0.11689225932620032
+tfidf,holdout-14,nmap operating system detection,5,647,https://nmap.org/book/man-os-detection.html,0.11257403846186653
+tfidf,holdout-15,nmap udp scan,1,456,https://nmap.org/book/nse-scripts.html,0.1260300759847075
+tfidf,holdout-15,nmap udp scan,2,608,https://nmap.org/book/nmap-service-probes.html,0.12470412336997122
+tfidf,holdout-15,nmap udp scan,3,641,https://nmap.org/book/man-port-specification.html,0.12438179923503656
+tfidf,holdout-15,nmap udp scan,4,636,https://nmap.org/book/man-port-scanning-basics.html,0.12172722798070947
+tfidf,holdout-15,nmap udp scan,5,619,https://nmap.org/book/nmap-protocols.html,0.11542648249766806
+tfidf,holdout-16,nmap host discovery without port scan,1,671,https://nmap.org/book/man-book.html,0.15155628547695246
+tfidf,holdout-16,nmap host discovery without port scan,2,636,https://nmap.org/book/man-port-scanning-basics.html,0.14214506055551188
+tfidf,holdout-16,nmap host discovery without port scan,3,215,https://nmap.org/book/host-discovery-algorithms.html,0.14200862068077746
+tfidf,holdout-16,nmap host discovery without port scan,4,166,https://nmap.org/book/host-discovery.html,0.14071134767860516
+tfidf,holdout-16,nmap host discovery without port scan,5,45,https://nmap.org/book/organization.html,0.13426902443791622
+tfidf,holdout-17,discover hidden web paths,1,213,https://gtfobins.org/gtfobins/at/,0.12000737462551303
+tfidf,holdout-17,discover hidden web paths,2,305,https://www.wireshark.org/docs/wsug_html_chunked/ChCapInterfaceSection.html,0.11079213135131608
+tfidf,holdout-17,discover hidden web paths,3,248,https://www.wireshark.org/docs/wsug_html_chunked/ChUseHelpMenuSection.html,0.10408618490884962
+tfidf,holdout-17,discover hidden web paths,4,207,https://www.kali.org/tools/dirbuster/,0.10252459374383473
+tfidf,holdout-17,discover hidden web paths,5,549,https://nmap.org/book/zenmap-filter.html,0.09547372469978853
+tfidf,holdout-18,recursive web directory discovery,1,949,https://www.kali.org/tools/ssdeep/,0.1157158657104432
+tfidf,holdout-18,recursive web directory discovery,2,187,https://nmap.org/book/host-discovery-dns.html,0.11238878619668198
+tfidf,holdout-18,recursive web directory discovery,3,271,https://www.kali.org/tools/subfinder/,0.10125606548231794
+tfidf,holdout-18,recursive web directory discovery,4,207,https://www.kali.org/tools/dirbuster/,0.09733849949314677
+tfidf,holdout-18,recursive web directory discovery,5,911,https://www.kali.org/tools/missidentify/,0.0787114003869263
+tfidf,holdout-19,detect sql injection automatically,1,845,https://www.kali.org/tools/siparmyknife/,0.15257404943031433
+tfidf,holdout-19,detect sql injection automatically,2,646,https://www.kali.org/tools/laudanum/,0.1414624656858703
+tfidf,holdout-19,detect sql injection automatically,3,613,https://www.kali.org/tools/sqlmap/,0.11799581991642803
+tfidf,holdout-19,detect sql injection automatically,4,742,https://www.kali.org/tools/sqldict/,0.10588810600661976
+tfidf,holdout-19,detect sql injection automatically,5,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,0.10511993943710343
+tfidf,holdout-20,audit wireless wpa handshake,1,768,https://www.kali.org/tools/wifite/,0.17242539944007196
+tfidf,holdout-20,audit wireless wpa handshake,2,763,https://www.kali.org/tools/fern-wifi-cracker/,0.171984875000227
+tfidf,holdout-20,audit wireless wpa handshake,3,761,https://www.kali.org/tools/cowpatty/,0.14850836203897913
+tfidf,holdout-20,audit wireless wpa handshake,4,766,https://www.kali.org/tools/wifi-honey/,0.12006160026343882
+tfidf,holdout-20,audit wireless wpa handshake,5,759,https://www.kali.org/tools/airgeddon/,0.11823337821850886
+tfidf,holdout-21,identify password hash format,1,727,https://www.kali.org/tools/hashid/,0.20540143546185383
+tfidf,holdout-21,identify password hash format,2,949,https://www.kali.org/tools/ssdeep/,0.12735925517110835
+tfidf,holdout-21,identify password hash format,3,728,https://www.kali.org/tools/hash-identifier/,0.11325489090530912
+tfidf,holdout-21,identify password hash format,4,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,0.10234887943913908
+tfidf,holdout-21,identify password hash format,5,761,https://www.kali.org/tools/cowpatty/,0.07739040473876946
+tfidf,holdout-22,generate metasploit payload,1,407,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/powershell-extension.html,0.17869584456858695
+tfidf,holdout-22,generate metasploit payload,2,683,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-phpexe-to-exploit-an-arbitrary-file-upload-bug.html,0.12646132200850202
+tfidf,holdout-22,generate metasploit payload,3,34,https://docs.metasploit.com/docs/pentesting/metasploit-guide-upgrading-shells-to-meterpreter.html,0.11781126261951275
+tfidf,holdout-22,generate metasploit payload,4,706,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-wbemexec-for-a-write-privilege-attack-on-windows.html,0.11696678505577418
+tfidf,holdout-22,generate metasploit payload,5,695,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-the-seh-mixin-to-exploit-an-exception-handler.html,0.10660173281163221
+tfidf,holdout-23,use metasploit exploit module,1,598,https://docs.metasploit.com/docs/development/developing-modules/external-modules/writing-external-golang-modules.html,0.1411924739871921
+tfidf,holdout-23,use metasploit exploit module,2,485,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-the-favorite-command.html,0.13786473907959582
+tfidf,holdout-23,use metasploit exploit module,3,2,https://docs.metasploit.com/,0.1287754692723696
+tfidf,holdout-23,use metasploit exploit module,4,693,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-do-reporting-or-store-data-in-module-development.html,0.12501544783048565
+tfidf,holdout-23,use metasploit exploit module,5,504,https://docs.metasploit.com/docs/using-metasploit/other/why-cve-is-not-available.html,0.12246097193719575
+tfidf,holdout-24,find gtfobins sudo binary techniques,1,171,https://gtfobins.org/gtfobins/as/,0.12116001715846927
+tfidf,holdout-24,find gtfobins sudo binary techniques,2,390,https://gtfobins.org/gtfobins/cat/,0.12044352702445466
+tfidf,holdout-24,find gtfobins sudo binary techniques,3,265,https://gtfobins.org/gtfobins/base64/,0.11153302123963878
+tfidf,holdout-24,find gtfobins sudo binary techniques,4,90,https://gtfobins.org/gtfobins/aoss/,0.1093069024969447
+tfidf,holdout-24,find gtfobins sudo binary techniques,5,399,https://gtfobins.org/gtfobins/cdist/,0.10890797748742045
+tfidf_cov,holdout-01,capture packets to pcap file,1,189,https://www.wireshark.org/docs/wsug_html_chunked/ChUseEditMenuSection.html,0.1577625235454836
+tfidf_cov,holdout-01,capture packets to pcap file,2,325,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFiles.html,0.1185503334001097
+tfidf_cov,holdout-01,capture packets to pcap file,3,310,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureOptions.html,0.10851883853076624
+tfidf_cov,holdout-01,capture packets to pcap file,4,789,https://www.kali.org/tools/above/,0.107151588567638
+tfidf_cov,holdout-01,capture packets to pcap file,5,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,0.10580785086483689
+tfidf_cov,holdout-02,decrypt tls sessions with key log,1,197,https://docs.mitmproxy.org/stable/howto/wireshark-tls/,0.2766890372881475
+tfidf_cov,holdout-02,decrypt tls sessions with key log,2,374,https://www.wireshark.org/docs/wsug_html_chunked/ChIOExportSection.html,0.07093346919786345
+tfidf_cov,holdout-02,decrypt tls sessions with key log,3,888,https://www.kali.org/tools/stunnel4/,0.04469057866535477
+tfidf_cov,holdout-02,decrypt tls sessions with key log,4,857,https://www.kali.org/tools/mitmproxy/,0.06462944815193525
+tfidf_cov,holdout-02,decrypt tls sessions with key log,5,860,https://www.kali.org/tools/sslsplit/,0.06347766339561527
+tfidf_cov,holdout-03,filter packets by ip address,1,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,0.11297741056734566
+tfidf_cov,holdout-03,filter packets by ip address,2,264,https://www.wireshark.org/docs/wsug_html_chunked/ChUsePacketListPaneSection.html,0.10618431461930213
+tfidf_cov,holdout-03,filter packets by ip address,3,636,https://nmap.org/book/man-port-scanning-basics.html,0.10504995301963024
+tfidf_cov,holdout-03,filter packets by ip address,4,315,https://www.wireshark.org/docs/wsug_html_chunked/ChCapManageInterfacesSection.html,0.09839964584741298
+tfidf_cov,holdout-03,filter packets by ip address,5,294,https://nmap.org/book/scan-methods-maimon-scan.html,0.09471924068350723
+tfidf_cov,holdout-04,mitmproxy modify http response,1,4,https://docs.mitmproxy.org/stable/,0.14986911741295855
+tfidf_cov,holdout-04,mitmproxy modify http response,2,24,https://docs.mitmproxy.org/stable/overview/features/,0.10612885661549604
+tfidf_cov,holdout-04,mitmproxy modify http response,3,232,https://docs.mitmproxy.org/stable/tutorials/highscores/,0.10331844010492107
+tfidf_cov,holdout-04,mitmproxy modify http response,4,102,https://docs.mitmproxy.org/stable/concepts/modes/,0.10309872207651695
+tfidf_cov,holdout-04,mitmproxy modify http response,5,121,https://docs.mitmproxy.org/stable/concepts/options/,0.09810466879530706
+tfidf_cov,holdout-05,install proxy certificate android,1,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,0.12233979792379002
+tfidf_cov,holdout-05,install proxy certificate android,2,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.11160023173107386
+tfidf_cov,holdout-05,install proxy certificate android,3,102,https://docs.mitmproxy.org/stable/concepts/modes/,0.07281103661870775
+tfidf_cov,holdout-05,install proxy certificate android,4,457,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-wishlist.html,0.052017158103117384
+tfidf_cov,holdout-05,install proxy certificate android,5,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,0.09252931371942674
+tfidf_cov,holdout-06,replay captured http requests,1,24,https://docs.mitmproxy.org/stable/overview/features/,0.09721547353612676
+tfidf_cov,holdout-06,replay captured http requests,2,795,https://www.kali.org/tools/netsniff-ng/,0.04201724438660591
+tfidf_cov,holdout-06,replay captured http requests,3,758,https://www.kali.org/tools/aircrack-ng/,0.033091312104915366
+tfidf_cov,holdout-06,replay captured http requests,4,114,https://docs.mitmproxy.org/stable/concepts/filters/,0.13466224251185802
+tfidf_cov,holdout-06,replay captured http requests,5,4,https://docs.mitmproxy.org/stable/,0.11083739522677513
+tfidf_cov,holdout-07,frida attach running process,1,149,https://frida.re/docs/frida-ls-devices/,0.24837297663742455
+tfidf_cov,holdout-07,frida attach running process,2,226,https://frida.re/docs/troubleshooting/,0.19760118354664546
+tfidf_cov,holdout-07,frida attach running process,3,89,https://frida.re/docs/examples/macos/,0.18328482776192506
+tfidf_cov,holdout-07,frida attach running process,4,25,https://frida.re/docs/modes/,0.16712339690181954
+tfidf_cov,holdout-07,frida attach running process,5,19,https://frida.re/docs/installation/,0.15895258146983662
+tfidf_cov,holdout-08,hook java method android,1,109,https://frida.re/docs/examples/android/,0.13642943035409646
+tfidf_cov,holdout-08,hook java method android,2,457,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-wishlist.html,0.05342834430926539
+tfidf_cov,holdout-08,hook java method android,3,170,https://frida.re/docs/javascript-api/,0.034425122440029106
+tfidf_cov,holdout-08,hook java method android,4,551,https://www.kali.org/tools/llvm-defaults/,0.011549801911087799
+tfidf_cov,holdout-08,hook java method android,5,136,https://frida.re/docs/frida-trace/,0.07127800814973174
+tfidf_cov,holdout-09,list loaded native libraries,1,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,0.057638146648093504
+tfidf_cov,holdout-09,list loaded native libraries,2,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,0.05074624467357278
+tfidf_cov,holdout-09,list loaded native libraries,3,593,https://www.kali.org/tools/dex2jar/,0.04700191300936797
+tfidf_cov,holdout-09,list loaded native libraries,4,645,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/generating-ysoserial-java-serialized-objects.html,0.04238162510217801
+tfidf_cov,holdout-09,list loaded native libraries,5,573,https://www.kali.org/tools/rizin/,0.03888786760341913
+tfidf_cov,holdout-10,extract source code from dex,1,585,https://www.kali.org/tools/jadx/,0.09539258474081501
+tfidf_cov,holdout-10,extract source code from dex,2,593,https://www.kali.org/tools/dex2jar/,0.09163672115359871
+tfidf_cov,holdout-10,extract source code from dex,3,579,https://www.kali.org/tools/apktool/,0.06973817130788576
+tfidf_cov,holdout-10,extract source code from dex,4,943,https://www.kali.org/tools/binwalk3/,0.032345679880435525
+tfidf_cov,holdout-10,extract source code from dex,5,11,https://docs.mitmproxy.org/stable/overview/installation/,0.030547149210808665
+tfidf_cov,holdout-11,inspect apk resources,1,579,https://www.kali.org/tools/apktool/,0.12389532631303155
+tfidf_cov,holdout-11,inspect apk resources,2,18,https://docs.mitmproxy.org/stable/overview/getting-started/,0.10029859702278919
+tfidf_cov,holdout-11,inspect apk resources,3,585,https://www.kali.org/tools/jadx/,0.06637662517621923
+tfidf_cov,holdout-11,inspect apk resources,4,575,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-write-a-check-method.html,0.05480634737716968
+tfidf_cov,holdout-11,inspect apk resources,5,202,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/inspect_ticket.html,0.04293633426057776
+tfidf_cov,holdout-12,convert dex to jar,1,593,https://www.kali.org/tools/dex2jar/,0.1306436672459895
+tfidf_cov,holdout-12,convert dex to jar,2,585,https://www.kali.org/tools/jadx/,0.10753993236786834
+tfidf_cov,holdout-12,convert dex to jar,3,582,https://www.kali.org/tools/bytecode-viewer/,0.18172192327513786
+tfidf_cov,holdout-12,convert dex to jar,4,597,https://nmap.org/book/output-formats-output-to-html.html,0.09882595289403259
+tfidf_cov,holdout-12,convert dex to jar,5,645,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/generating-ysoserial-java-serialized-objects.html,0.04410006361923912
+tfidf_cov,holdout-13,nmap service version detection,1,603,https://nmap.org/book/data-files.html,0.1474776025514026
+tfidf_cov,holdout-13,nmap service version detection,2,592,https://nmap.org/book/output-formats-cpe.html,0.14018235844921137
+tfidf_cov,holdout-13,nmap service version detection,3,608,https://nmap.org/book/nmap-service-probes.html,0.13654197842041801
+tfidf_cov,holdout-13,nmap service version detection,4,45,https://nmap.org/book/organization.html,0.13145571845412213
+tfidf_cov,holdout-13,nmap service version detection,5,644,https://nmap.org/book/man-version-detection.html,0.11985569276909815
+tfidf_cov,holdout-14,nmap operating system detection,1,592,https://nmap.org/book/output-formats-cpe.html,0.163443317802424
+tfidf_cov,holdout-14,nmap operating system detection,2,603,https://nmap.org/book/data-files.html,0.13828680244846028
+tfidf_cov,holdout-14,nmap operating system detection,3,99,https://nmap.org/book/nmap-phases.html,0.11790284197655934
+tfidf_cov,holdout-14,nmap operating system detection,4,647,https://nmap.org/book/man-os-detection.html,0.11257403846186653
+tfidf_cov,holdout-14,nmap operating system detection,5,536,https://nmap.org/book/zenmap-results.html,0.10777602629450489
+tfidf_cov,holdout-15,nmap udp scan,1,608,https://nmap.org/book/nmap-service-probes.html,0.12470412336997122
+tfidf_cov,holdout-15,nmap udp scan,2,641,https://nmap.org/book/man-port-specification.html,0.12438179923503656
+tfidf_cov,holdout-15,nmap udp scan,3,636,https://nmap.org/book/man-port-scanning-basics.html,0.12172722798070947
+tfidf_cov,holdout-15,nmap udp scan,4,619,https://nmap.org/book/nmap-protocols.html,0.11542648249766806
+tfidf_cov,holdout-15,nmap udp scan,5,328,https://nmap.org/book/performance-port-selection.html,0.11469821463420711
+tfidf_cov,holdout-16,nmap host discovery without port scan,1,636,https://nmap.org/book/man-port-scanning-basics.html,0.14214506055551188
+tfidf_cov,holdout-16,nmap host discovery without port scan,2,633,https://nmap.org/book/man-host-discovery.html,0.09560284383107344
+tfidf_cov,holdout-16,nmap host discovery without port scan,3,194,https://nmap.org/book/host-discovery-controls.html,0.08265133126284871
+tfidf_cov,holdout-16,nmap host discovery without port scan,4,236,https://nmap.org/book/port-scanning-options.html,0.07620856557070206
+tfidf_cov,holdout-16,nmap host discovery without port scan,5,441,https://nmap.org/book/nse-usage.html,0.0733118020466446
+tfidf_cov,holdout-17,discover hidden web paths,1,525,https://nmap.org/book/nmap-defenses-trickery.html,0.046658294448683336
+tfidf_cov,holdout-17,discover hidden web paths,2,503,https://nmap.org/book/subvert-ids.html,0.02745197266157589
+tfidf_cov,holdout-17,discover hidden web paths,3,528,https://www.kali.org/tools/aflplusplus/,0.014876291841324165
+tfidf_cov,holdout-17,discover hidden web paths,4,551,https://www.kali.org/tools/llvm-defaults/,0.012391278177376671
+tfidf_cov,holdout-17,discover hidden web paths,5,347,https://nmap.org/book/vscan.html,0.0636012450847262
+tfidf_cov,holdout-18,recursive web directory discovery,1,105,https://www.kali.org/tools/autorecon/,0.07365624808399773
+tfidf_cov,holdout-18,recursive web directory discovery,2,221,https://www.kali.org/tools/feroxbuster/,0.0724264003983757
+tfidf_cov,holdout-18,recursive web directory discovery,3,298,https://www.kali.org/tools/wfuzz/,0.06598847759994586
+tfidf_cov,holdout-18,recursive web directory discovery,4,187,https://nmap.org/book/host-discovery-dns.html,0.11238878619668198
+tfidf_cov,holdout-18,recursive web directory discovery,5,271,https://www.kali.org/tools/subfinder/,0.10125606548231794
+tfidf_cov,holdout-19,detect sql injection automatically,1,441,https://nmap.org/book/nse-usage.html,0.055882867623023996
+tfidf_cov,holdout-19,detect sql injection automatically,2,613,https://www.kali.org/tools/sqlmap/,0.11799581991642803
+tfidf_cov,holdout-19,detect sql injection automatically,3,616,https://www.kali.org/tools/sqlninja/,0.10105198925281361
+tfidf_cov,holdout-19,detect sql injection automatically,4,314,https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-ranking.html,0.1000607043829718
+tfidf_cov,holdout-19,detect sql injection automatically,5,599,https://www.kali.org/tools/exploitdb/,0.06828240754692567
+tfidf_cov,holdout-20,audit wireless wpa handshake,1,768,https://www.kali.org/tools/wifite/,0.17242539944007196
+tfidf_cov,holdout-20,audit wireless wpa handshake,2,763,https://www.kali.org/tools/fern-wifi-cracker/,0.171984875000227
+tfidf_cov,holdout-20,audit wireless wpa handshake,3,761,https://www.kali.org/tools/cowpatty/,0.14850836203897913
+tfidf_cov,holdout-20,audit wireless wpa handshake,4,766,https://www.kali.org/tools/wifi-honey/,0.12006160026343882
+tfidf_cov,holdout-20,audit wireless wpa handshake,5,767,https://www.kali.org/tools/wifiphisher/,0.0858837171142238
+tfidf_cov,holdout-21,identify password hash format,1,727,https://www.kali.org/tools/hashid/,0.20540143546185383
+tfidf_cov,holdout-21,identify password hash format,2,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,0.10234887943913908
+tfidf_cov,holdout-21,identify password hash format,3,368,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-configuration.html,0.07191329166638893
+tfidf_cov,holdout-21,identify password hash format,4,319,https://docs.metasploit.com/docs/using-metasploit/intermediate/hashes-and-password-cracking.html,0.06161409698940972
+tfidf_cov,holdout-21,identify password hash format,5,940,https://www.kali.org/tools/sleuthkit/,0.054506516265379334
+tfidf_cov,holdout-22,generate metasploit payload,1,683,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-phpexe-to-exploit-an-arbitrary-file-upload-bug.html,0.12646132200850202
+tfidf_cov,holdout-22,generate metasploit payload,2,706,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-wbemexec-for-a-write-privilege-attack-on-windows.html,0.11696678505577418
+tfidf_cov,holdout-22,generate metasploit payload,3,695,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-the-seh-mixin-to-exploit-an-exception-handler.html,0.10660173281163221
+tfidf_cov,holdout-22,generate metasploit payload,4,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,0.10365771183095583
+tfidf_cov,holdout-22,generate metasploit payload,5,279,https://docs.metasploit.com/docs/using-metasploit/basics/module-documentation.html,0.10218317357861793
+tfidf_cov,holdout-23,use metasploit exploit module,1,485,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-the-favorite-command.html,0.13786473907959582
+tfidf_cov,holdout-23,use metasploit exploit module,2,2,https://docs.metasploit.com/,0.1287754692723696
+tfidf_cov,holdout-23,use metasploit exploit module,3,693,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-do-reporting-or-store-data-in-module-development.html,0.12501544783048565
+tfidf_cov,holdout-23,use metasploit exploit module,4,651,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-the-fileformat-mixin-to-create-a-file-format-exploit.html,0.11907342424254076
+tfidf_cov,holdout-23,use metasploit exploit module,5,581,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-write-a-browser-exploit-using-httpserver.html,0.11678870662126299
+tfidf_cov,holdout-24,find gtfobins sudo binary techniques,1,950,https://www.kali.org/tools/unhide/,0.04987326341211005
+tfidf_cov,holdout-24,find gtfobins sudo binary techniques,2,327,https://www.kali.org/tools/burpsuite/,0.049508945162060065
+tfidf_cov,holdout-24,find gtfobins sudo binary techniques,3,144,https://www.kali.org/tools/dnsmap/,0.04182440383309609
+tfidf_cov,holdout-24,find gtfobins sudo binary techniques,4,624,https://www.kali.org/tools/commix/,0.03875217293776192
+tfidf_cov,holdout-24,find gtfobins sudo binary techniques,5,132,https://nmap.org/book/inst-linux.html,0.030862961112622503
+tfidf_pivot,holdout-01,capture packets to pcap file,1,467,https://www.kali.org/tools/kismet/,0.11859183943196829
+tfidf_pivot,holdout-01,capture packets to pcap file,2,189,https://www.wireshark.org/docs/wsug_html_chunked/ChUseEditMenuSection.html,0.11798739565086164
+tfidf_pivot,holdout-01,capture packets to pcap file,3,799,https://www.kali.org/tools/tcpflow/,0.11751621695130857
+tfidf_pivot,holdout-01,capture packets to pcap file,4,822,https://www.kali.org/tools/tcpreplay/,0.11366426188663536
+tfidf_pivot,holdout-01,capture packets to pcap file,5,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,0.11272557215159684
+tfidf_pivot,holdout-02,decrypt tls sessions with key log,1,197,https://docs.mitmproxy.org/stable/howto/wireshark-tls/,0.1269671249561397
+tfidf_pivot,holdout-02,decrypt tls sessions with key log,2,374,https://www.wireshark.org/docs/wsug_html_chunked/ChIOExportSection.html,0.12089362157066093
+tfidf_pivot,holdout-02,decrypt tls sessions with key log,3,888,https://www.kali.org/tools/stunnel4/,0.10973545735588766
+tfidf_pivot,holdout-02,decrypt tls sessions with key log,4,857,https://www.kali.org/tools/mitmproxy/,0.10457556084496106
+tfidf_pivot,holdout-02,decrypt tls sessions with key log,5,121,https://docs.mitmproxy.org/stable/concepts/options/,0.09568553616903504
+tfidf_pivot,holdout-03,filter packets by ip address,1,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,0.09349652366777986
+tfidf_pivot,holdout-03,filter packets by ip address,2,398,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayPopUpSection.html,0.08951171886950159
+tfidf_pivot,holdout-03,filter packets by ip address,3,495,https://nmap.org/book/determining-firewall-rules.html,0.08654289483202313
+tfidf_pivot,holdout-03,filter packets by ip address,4,499,https://nmap.org/book/firewall-subversion.html,0.0820965478100857
+tfidf_pivot,holdout-03,filter packets by ip address,5,656,https://nmap.org/book/man-bypass-firewalls-ids.html,0.08202200087679176
+tfidf_pivot,holdout-04,mitmproxy modify http response,1,169,https://docs.mitmproxy.org/stable/addons/examples/,0.1579994979186685
+tfidf_pivot,holdout-04,mitmproxy modify http response,2,121,https://docs.mitmproxy.org/stable/concepts/options/,0.15139297012755246
+tfidf_pivot,holdout-04,mitmproxy modify http response,3,24,https://docs.mitmproxy.org/stable/overview/features/,0.14630646758976212
+tfidf_pivot,holdout-04,mitmproxy modify http response,4,102,https://docs.mitmproxy.org/stable/concepts/modes/,0.137200965712359
+tfidf_pivot,holdout-04,mitmproxy modify http response,5,857,https://www.kali.org/tools/mitmproxy/,0.1355891234093335
+tfidf_pivot,holdout-05,install proxy certificate android,1,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,0.14965199311376057
+tfidf_pivot,holdout-05,install proxy certificate android,2,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.13712641436919473
+tfidf_pivot,holdout-05,install proxy certificate android,3,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,0.10650067385200666
+tfidf_pivot,holdout-05,install proxy certificate android,4,102,https://docs.mitmproxy.org/stable/concepts/modes/,0.09689494047453405
+tfidf_pivot,holdout-05,install proxy certificate android,5,457,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-wishlist.html,0.0912514987855098
+tfidf_pivot,holdout-06,replay captured http requests,1,24,https://docs.mitmproxy.org/stable/overview/features/,0.13401871066667037
+tfidf_pivot,holdout-06,replay captured http requests,2,81,https://docs.mitmproxy.org/stable/mitmproxytutorial-replayrequests/,0.11714023022992547
+tfidf_pivot,holdout-06,replay captured http requests,3,857,https://www.kali.org/tools/mitmproxy/,0.11308108284848253
+tfidf_pivot,holdout-06,replay captured http requests,4,822,https://www.kali.org/tools/tcpreplay/,0.10568539362537706
+tfidf_pivot,holdout-06,replay captured http requests,5,121,https://docs.mitmproxy.org/stable/concepts/options/,0.10515903035716628
+tfidf_pivot,holdout-07,frida attach running process,1,212,https://frida.re/docs/bridges/,0.14462353317426735
+tfidf_pivot,holdout-07,frida attach running process,2,136,https://frida.re/docs/frida-trace/,0.14389898849686358
+tfidf_pivot,holdout-07,frida attach running process,3,226,https://frida.re/docs/troubleshooting/,0.1408025672535031
+tfidf_pivot,holdout-07,frida attach running process,4,30,https://frida.re/docs/gadget/,0.13492195298301027
+tfidf_pivot,holdout-07,frida attach running process,5,54,https://frida.re/docs/functions/,0.13490287869884518
+tfidf_pivot,holdout-08,hook java method android,1,109,https://frida.re/docs/examples/android/,0.15232128491062033
+tfidf_pivot,holdout-08,hook java method android,2,585,https://www.kali.org/tools/jadx/,0.10697737898873268
+tfidf_pivot,holdout-08,hook java method android,3,170,https://frida.re/docs/javascript-api/,0.10332772486697898
+tfidf_pivot,holdout-08,hook java method android,4,136,https://frida.re/docs/frida-trace/,0.10061772333895842
+tfidf_pivot,holdout-08,hook java method android,5,48,https://frida.re/docs/presentations/,0.09453246004970633
+tfidf_pivot,holdout-09,list loaded native libraries,1,593,https://www.kali.org/tools/dex2jar/,0.08248764167126975
+tfidf_pivot,holdout-09,list loaded native libraries,2,642,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html,0.07893620665139688
+tfidf_pivot,holdout-09,list loaded native libraries,3,5,https://frida.re/docs/home/,0.07199724179352227
+tfidf_pivot,holdout-09,list loaded native libraries,4,697,https://www.kali.org/tools/freerdp3/,0.07095100068980356
+tfidf_pivot,holdout-09,list loaded native libraries,5,573,https://www.kali.org/tools/rizin/,0.07079716234063749
+tfidf_pivot,holdout-10,extract source code from dex,1,585,https://www.kali.org/tools/jadx/,0.1652681238906381
+tfidf_pivot,holdout-10,extract source code from dex,2,593,https://www.kali.org/tools/dex2jar/,0.1608210503462178
+tfidf_pivot,holdout-10,extract source code from dex,3,582,https://www.kali.org/tools/bytecode-viewer/,0.10050994338070808
+tfidf_pivot,holdout-10,extract source code from dex,4,579,https://www.kali.org/tools/apktool/,0.07560196123625797
+tfidf_pivot,holdout-10,extract source code from dex,5,170,https://frida.re/docs/javascript-api/,0.05610808894718139
+tfidf_pivot,holdout-11,inspect apk resources,1,579,https://www.kali.org/tools/apktool/,0.13431280863271194
+tfidf_pivot,holdout-11,inspect apk resources,2,585,https://www.kali.org/tools/jadx/,0.11499783073151398
+tfidf_pivot,holdout-11,inspect apk resources,3,593,https://www.kali.org/tools/dex2jar/,0.0912665528725367
+tfidf_pivot,holdout-11,inspect apk resources,4,582,https://www.kali.org/tools/bytecode-viewer/,0.08065348312627742
+tfidf_pivot,holdout-11,inspect apk resources,5,249,https://frida.re/docs/gsod-ideas-2023/,0.07018259007945023
+tfidf_pivot,holdout-12,convert dex to jar,1,593,https://www.kali.org/tools/dex2jar/,0.2292776468110972
+tfidf_pivot,holdout-12,convert dex to jar,2,585,https://www.kali.org/tools/jadx/,0.18631346360991646
+tfidf_pivot,holdout-12,convert dex to jar,3,582,https://www.kali.org/tools/bytecode-viewer/,0.14090084834728434
+tfidf_pivot,holdout-12,convert dex to jar,4,597,https://nmap.org/book/output-formats-output-to-html.html,0.08358836118470678
+tfidf_pivot,holdout-12,convert dex to jar,5,366,https://www.kali.org/tools/paros/,0.07961067576347494
+tfidf_pivot,holdout-13,nmap service version detection,1,644,https://nmap.org/book/man-version-detection.html,0.10793485043884253
+tfidf_pivot,holdout-13,nmap service version detection,2,347,https://nmap.org/book/vscan.html,0.10196026577626117
+tfidf_pivot,holdout-13,nmap service version detection,3,377,https://nmap.org/book/vscan-community.html,0.10109021267686949
+tfidf_pivot,holdout-13,nmap service version detection,4,39,https://nmap.org/book/nse.html,0.09930818763231887
+tfidf_pivot,holdout-13,nmap service version detection,5,357,https://nmap.org/book/vscan-technique.html,0.0989583010030333
+tfidf_pivot,holdout-14,nmap operating system detection,1,411,https://nmap.org/book/osdetect-other-methods.html,0.10867455790781427
+tfidf_pivot,holdout-14,nmap operating system detection,2,396,https://nmap.org/book/osdetect-usage.html,0.10802250517597714
+tfidf_pivot,holdout-14,nmap operating system detection,3,99,https://nmap.org/book/nmap-phases.html,0.10332607897207616
+tfidf_pivot,holdout-14,nmap operating system detection,4,525,https://nmap.org/book/nmap-defenses-trickery.html,0.09717055790824024
+tfidf_pivot,holdout-14,nmap operating system detection,5,647,https://nmap.org/book/man-os-detection.html,0.09574136912695871
+tfidf_pivot,holdout-15,nmap udp scan,1,267,https://nmap.org/book/scan-methods-udp-scan.html,0.10434175230758087
+tfidf_pivot,holdout-15,nmap udp scan,2,236,https://nmap.org/book/port-scanning-options.html,0.10007484128600215
+tfidf_pivot,holdout-15,nmap udp scan,3,639,https://nmap.org/book/man-port-scanning-techniques.html,0.09663900413107092
+tfidf_pivot,holdout-15,nmap udp scan,4,357,https://nmap.org/book/vscan-technique.html,0.09575960611364738
+tfidf_pivot,holdout-15,nmap udp scan,5,303,https://nmap.org/book/scan-methods-ip-protocol-scan.html,0.09564899836205165
+tfidf_pivot,holdout-16,nmap host discovery without port scan,1,633,https://nmap.org/book/man-host-discovery.html,0.13449725122453837
+tfidf_pivot,holdout-16,nmap host discovery without port scan,2,194,https://nmap.org/book/host-discovery-controls.html,0.11895575512708204
+tfidf_pivot,holdout-16,nmap host discovery without port scan,3,441,https://nmap.org/book/nse-usage.html,0.11792547608584916
+tfidf_pivot,holdout-16,nmap host discovery without port scan,4,99,https://nmap.org/book/nmap-phases.html,0.11620991584770696
+tfidf_pivot,holdout-16,nmap host discovery without port scan,5,201,https://nmap.org/book/host-discovery-techniques.html,0.10914751574156936
+tfidf_pivot,holdout-17,discover hidden web paths,1,525,https://nmap.org/book/nmap-defenses-trickery.html,0.08322768618877228
+tfidf_pivot,holdout-17,discover hidden web paths,2,347,https://nmap.org/book/vscan.html,0.07701494714065377
+tfidf_pivot,holdout-17,discover hidden web paths,3,520,https://www.kali.org/tools/pyinstaller/,0.07497695766714432
+tfidf_pivot,holdout-17,discover hidden web paths,4,391,https://www.kali.org/tools/wapiti/,0.0748271848214065
+tfidf_pivot,holdout-17,discover hidden web paths,5,207,https://www.kali.org/tools/dirbuster/,0.06941575793235183
+tfidf_pivot,holdout-18,recursive web directory discovery,1,105,https://www.kali.org/tools/autorecon/,0.103313791812279
+tfidf_pivot,holdout-18,recursive web directory discovery,2,271,https://www.kali.org/tools/subfinder/,0.09996266748970531
+tfidf_pivot,holdout-18,recursive web directory discovery,3,221,https://www.kali.org/tools/feroxbuster/,0.0972242071497445
+tfidf_pivot,holdout-18,recursive web directory discovery,4,214,https://www.kali.org/tools/dirsearch/,0.08714086736348318
+tfidf_pivot,holdout-18,recursive web directory discovery,5,187,https://nmap.org/book/host-discovery-dns.html,0.08685972525276342
+tfidf_pivot,holdout-19,detect sql injection automatically,1,613,https://www.kali.org/tools/sqlmap/,0.11833350920599396
+tfidf_pivot,holdout-19,detect sql injection automatically,2,616,https://www.kali.org/tools/sqlninja/,0.09650401442615764
+tfidf_pivot,holdout-19,detect sql injection automatically,3,621,https://www.kali.org/tools/jsql/,0.09589207427553376
+tfidf_pivot,holdout-19,detect sql injection automatically,4,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,0.09006835067569341
+tfidf_pivot,holdout-19,detect sql injection automatically,5,441,https://nmap.org/book/nse-usage.html,0.0898902166569947
+tfidf_pivot,holdout-20,audit wireless wpa handshake,1,768,https://www.kali.org/tools/wifite/,0.18586604302333998
+tfidf_pivot,holdout-20,audit wireless wpa handshake,2,758,https://www.kali.org/tools/aircrack-ng/,0.12889914684024317
+tfidf_pivot,holdout-20,audit wireless wpa handshake,3,761,https://www.kali.org/tools/cowpatty/,0.1271550674285077
+tfidf_pivot,holdout-20,audit wireless wpa handshake,4,767,https://www.kali.org/tools/wifiphisher/,0.11757435119671103
+tfidf_pivot,holdout-20,audit wireless wpa handshake,5,766,https://www.kali.org/tools/wifi-honey/,0.09319051711054695
+tfidf_pivot,holdout-21,identify password hash format,1,319,https://docs.metasploit.com/docs/using-metasploit/intermediate/hashes-and-password-cracking.html,0.11542577682500833
+tfidf_pivot,holdout-21,identify password hash format,2,727,https://www.kali.org/tools/hashid/,0.10409236194181874
+tfidf_pivot,holdout-21,identify password hash format,3,940,https://www.kali.org/tools/sleuthkit/,0.09803041745445264
+tfidf_pivot,holdout-21,identify password hash format,4,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,0.09450717196874768
+tfidf_pivot,holdout-21,identify password hash format,5,949,https://www.kali.org/tools/ssdeep/,0.09079979401878405
+tfidf_pivot,holdout-22,generate metasploit payload,1,481,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-with-ngrok.html,0.09819043826533157
+tfidf_pivot,holdout-22,generate metasploit payload,2,645,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/generating-ysoserial-java-serialized-objects.html,0.09810428790281264
+tfidf_pivot,holdout-22,generate metasploit payload,3,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,0.09686705653107082
+tfidf_pivot,holdout-22,generate metasploit payload,4,695,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-the-seh-mixin-to-exploit-an-exception-handler.html,0.09286721663773106
+tfidf_pivot,holdout-22,generate metasploit payload,5,706,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-wbemexec-for-a-write-privilege-attack-on-windows.html,0.09206025621435575
+tfidf_pivot,holdout-23,use metasploit exploit module,1,2,https://docs.metasploit.com/,0.10833965065999407
+tfidf_pivot,holdout-23,use metasploit exploit module,2,339,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,0.10569607553471663
+tfidf_pivot,holdout-23,use metasploit exploit module,3,268,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html,0.10491673566747328
+tfidf_pivot,holdout-23,use metasploit exploit module,4,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,0.10237782161863473
+tfidf_pivot,holdout-23,use metasploit exploit module,5,590,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,0.10122956509562943
+tfidf_pivot,holdout-24,find gtfobins sudo binary techniques,1,950,https://www.kali.org/tools/unhide/,0.0720821561868681
+tfidf_pivot,holdout-24,find gtfobins sudo binary techniques,2,144,https://www.kali.org/tools/dnsmap/,0.05739240205241427
+tfidf_pivot,holdout-24,find gtfobins sudo binary techniques,3,624,https://www.kali.org/tools/commix/,0.05560342741026298
+tfidf_pivot,holdout-24,find gtfobins sudo binary techniques,4,313,https://nmap.org/book/port-scanning-algorithms.html,0.049303586336883365
+tfidf_pivot,holdout-24,find gtfobins sudo binary techniques,5,166,https://nmap.org/book/host-discovery.html,0.04902721950127102
+tfidf_pivot_cov,holdout-01,capture packets to pcap file,1,467,https://www.kali.org/tools/kismet/,0.11859183943196829
+tfidf_pivot_cov,holdout-01,capture packets to pcap file,2,189,https://www.wireshark.org/docs/wsug_html_chunked/ChUseEditMenuSection.html,0.11798739565086164
+tfidf_pivot_cov,holdout-01,capture packets to pcap file,3,799,https://www.kali.org/tools/tcpflow/,0.11751621695130857
+tfidf_pivot_cov,holdout-01,capture packets to pcap file,4,822,https://www.kali.org/tools/tcpreplay/,0.11366426188663536
+tfidf_pivot_cov,holdout-01,capture packets to pcap file,5,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,0.11272557215159684
+tfidf_pivot_cov,holdout-02,decrypt tls sessions with key log,1,197,https://docs.mitmproxy.org/stable/howto/wireshark-tls/,0.1269671249561397
+tfidf_pivot_cov,holdout-02,decrypt tls sessions with key log,2,374,https://www.wireshark.org/docs/wsug_html_chunked/ChIOExportSection.html,0.12089362157066093
+tfidf_pivot_cov,holdout-02,decrypt tls sessions with key log,3,888,https://www.kali.org/tools/stunnel4/,0.10973545735588766
+tfidf_pivot_cov,holdout-02,decrypt tls sessions with key log,4,857,https://www.kali.org/tools/mitmproxy/,0.10457556084496106
+tfidf_pivot_cov,holdout-02,decrypt tls sessions with key log,5,121,https://docs.mitmproxy.org/stable/concepts/options/,0.09568553616903504
+tfidf_pivot_cov,holdout-03,filter packets by ip address,1,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,0.09349652366777986
+tfidf_pivot_cov,holdout-03,filter packets by ip address,2,398,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayPopUpSection.html,0.08951171886950159
+tfidf_pivot_cov,holdout-03,filter packets by ip address,3,495,https://nmap.org/book/determining-firewall-rules.html,0.08654289483202313
+tfidf_pivot_cov,holdout-03,filter packets by ip address,4,499,https://nmap.org/book/firewall-subversion.html,0.0820965478100857
+tfidf_pivot_cov,holdout-03,filter packets by ip address,5,656,https://nmap.org/book/man-bypass-firewalls-ids.html,0.08202200087679176
+tfidf_pivot_cov,holdout-04,mitmproxy modify http response,1,169,https://docs.mitmproxy.org/stable/addons/examples/,0.1579994979186685
+tfidf_pivot_cov,holdout-04,mitmproxy modify http response,2,121,https://docs.mitmproxy.org/stable/concepts/options/,0.15139297012755246
+tfidf_pivot_cov,holdout-04,mitmproxy modify http response,3,24,https://docs.mitmproxy.org/stable/overview/features/,0.14630646758976212
+tfidf_pivot_cov,holdout-04,mitmproxy modify http response,4,102,https://docs.mitmproxy.org/stable/concepts/modes/,0.137200965712359
+tfidf_pivot_cov,holdout-04,mitmproxy modify http response,5,857,https://www.kali.org/tools/mitmproxy/,0.1355891234093335
+tfidf_pivot_cov,holdout-05,install proxy certificate android,1,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,0.14965199311376057
+tfidf_pivot_cov,holdout-05,install proxy certificate android,2,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.13712641436919473
+tfidf_pivot_cov,holdout-05,install proxy certificate android,3,102,https://docs.mitmproxy.org/stable/concepts/modes/,0.09689494047453405
+tfidf_pivot_cov,holdout-05,install proxy certificate android,4,457,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-wishlist.html,0.0912514987855098
+tfidf_pivot_cov,holdout-05,install proxy certificate android,5,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,0.10650067385200666
+tfidf_pivot_cov,holdout-06,replay captured http requests,1,24,https://docs.mitmproxy.org/stable/overview/features/,0.13401871066667037
+tfidf_pivot_cov,holdout-06,replay captured http requests,2,795,https://www.kali.org/tools/netsniff-ng/,0.08167784218849673
+tfidf_pivot_cov,holdout-06,replay captured http requests,3,758,https://www.kali.org/tools/aircrack-ng/,0.08027757901355867
+tfidf_pivot_cov,holdout-06,replay captured http requests,4,857,https://www.kali.org/tools/mitmproxy/,0.11308108284848253
+tfidf_pivot_cov,holdout-06,replay captured http requests,5,822,https://www.kali.org/tools/tcpreplay/,0.10568539362537706
+tfidf_pivot_cov,holdout-07,frida attach running process,1,212,https://frida.re/docs/bridges/,0.14462353317426735
+tfidf_pivot_cov,holdout-07,frida attach running process,2,136,https://frida.re/docs/frida-trace/,0.14389898849686358
+tfidf_pivot_cov,holdout-07,frida attach running process,3,226,https://frida.re/docs/troubleshooting/,0.1408025672535031
+tfidf_pivot_cov,holdout-07,frida attach running process,4,30,https://frida.re/docs/gadget/,0.13492195298301027
+tfidf_pivot_cov,holdout-07,frida attach running process,5,54,https://frida.re/docs/functions/,0.13490287869884518
+tfidf_pivot_cov,holdout-08,hook java method android,1,109,https://frida.re/docs/examples/android/,0.15232128491062033
+tfidf_pivot_cov,holdout-08,hook java method android,2,170,https://frida.re/docs/javascript-api/,0.10332772486697898
+tfidf_pivot_cov,holdout-08,hook java method android,3,457,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-wishlist.html,0.09372708301718134
+tfidf_pivot_cov,holdout-08,hook java method android,4,551,https://www.kali.org/tools/llvm-defaults/,0.044839244638179114
+tfidf_pivot_cov,holdout-08,hook java method android,5,585,https://www.kali.org/tools/jadx/,0.10697737898873268
+tfidf_pivot_cov,holdout-09,list loaded native libraries,1,593,https://www.kali.org/tools/dex2jar/,0.08248764167126975
+tfidf_pivot_cov,holdout-09,list loaded native libraries,2,697,https://www.kali.org/tools/freerdp3/,0.07095100068980356
+tfidf_pivot_cov,holdout-09,list loaded native libraries,3,573,https://www.kali.org/tools/rizin/,0.07079716234063749
+tfidf_pivot_cov,holdout-09,list loaded native libraries,4,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,0.07061234399922459
+tfidf_pivot_cov,holdout-09,list loaded native libraries,5,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,0.07052986761048399
+tfidf_pivot_cov,holdout-10,extract source code from dex,1,585,https://www.kali.org/tools/jadx/,0.1652681238906381
+tfidf_pivot_cov,holdout-10,extract source code from dex,2,593,https://www.kali.org/tools/dex2jar/,0.1608210503462178
+tfidf_pivot_cov,holdout-10,extract source code from dex,3,579,https://www.kali.org/tools/apktool/,0.07560196123625797
+tfidf_pivot_cov,holdout-10,extract source code from dex,4,170,https://frida.re/docs/javascript-api/,0.05610808894718139
+tfidf_pivot_cov,holdout-10,extract source code from dex,5,524,https://www.kali.org/tools/oletools/,0.036614493302795724
+tfidf_pivot_cov,holdout-11,inspect apk resources,1,579,https://www.kali.org/tools/apktool/,0.13431280863271194
+tfidf_pivot_cov,holdout-11,inspect apk resources,2,585,https://www.kali.org/tools/jadx/,0.11499783073151398
+tfidf_pivot_cov,holdout-11,inspect apk resources,3,202,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/inspect_ticket.html,0.061502335226912744
+tfidf_pivot_cov,holdout-11,inspect apk resources,4,857,https://www.kali.org/tools/mitmproxy/,0.06076401731118775
+tfidf_pivot_cov,holdout-11,inspect apk resources,5,575,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-write-a-check-method.html,0.056410092427136634
+tfidf_pivot_cov,holdout-12,convert dex to jar,1,593,https://www.kali.org/tools/dex2jar/,0.2292776468110972
+tfidf_pivot_cov,holdout-12,convert dex to jar,2,585,https://www.kali.org/tools/jadx/,0.18631346360991646
+tfidf_pivot_cov,holdout-12,convert dex to jar,3,582,https://www.kali.org/tools/bytecode-viewer/,0.14090084834728434
+tfidf_pivot_cov,holdout-12,convert dex to jar,4,597,https://nmap.org/book/output-formats-output-to-html.html,0.08358836118470678
+tfidf_pivot_cov,holdout-12,convert dex to jar,5,645,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/generating-ysoserial-java-serialized-objects.html,0.06697849916549188
+tfidf_pivot_cov,holdout-13,nmap service version detection,1,644,https://nmap.org/book/man-version-detection.html,0.10793485043884253
+tfidf_pivot_cov,holdout-13,nmap service version detection,2,347,https://nmap.org/book/vscan.html,0.10196026577626117
+tfidf_pivot_cov,holdout-13,nmap service version detection,3,377,https://nmap.org/book/vscan-community.html,0.10109021267686949
+tfidf_pivot_cov,holdout-13,nmap service version detection,4,39,https://nmap.org/book/nse.html,0.09930818763231887
+tfidf_pivot_cov,holdout-13,nmap service version detection,5,357,https://nmap.org/book/vscan-technique.html,0.0989583010030333
+tfidf_pivot_cov,holdout-14,nmap operating system detection,1,411,https://nmap.org/book/osdetect-other-methods.html,0.10867455790781427
+tfidf_pivot_cov,holdout-14,nmap operating system detection,2,396,https://nmap.org/book/osdetect-usage.html,0.10802250517597714
+tfidf_pivot_cov,holdout-14,nmap operating system detection,3,99,https://nmap.org/book/nmap-phases.html,0.10332607897207616
+tfidf_pivot_cov,holdout-14,nmap operating system detection,4,525,https://nmap.org/book/nmap-defenses-trickery.html,0.09717055790824024
+tfidf_pivot_cov,holdout-14,nmap operating system detection,5,647,https://nmap.org/book/man-os-detection.html,0.09574136912695871
+tfidf_pivot_cov,holdout-15,nmap udp scan,1,267,https://nmap.org/book/scan-methods-udp-scan.html,0.10434175230758087
+tfidf_pivot_cov,holdout-15,nmap udp scan,2,236,https://nmap.org/book/port-scanning-options.html,0.10007484128600215
+tfidf_pivot_cov,holdout-15,nmap udp scan,3,639,https://nmap.org/book/man-port-scanning-techniques.html,0.09663900413107092
+tfidf_pivot_cov,holdout-15,nmap udp scan,4,357,https://nmap.org/book/vscan-technique.html,0.09575960611364738
+tfidf_pivot_cov,holdout-15,nmap udp scan,5,303,https://nmap.org/book/scan-methods-ip-protocol-scan.html,0.09564899836205165
+tfidf_pivot_cov,holdout-16,nmap host discovery without port scan,1,633,https://nmap.org/book/man-host-discovery.html,0.13449725122453837
+tfidf_pivot_cov,holdout-16,nmap host discovery without port scan,2,194,https://nmap.org/book/host-discovery-controls.html,0.11895575512708204
+tfidf_pivot_cov,holdout-16,nmap host discovery without port scan,3,441,https://nmap.org/book/nse-usage.html,0.11792547608584916
+tfidf_pivot_cov,holdout-16,nmap host discovery without port scan,4,208,https://nmap.org/book/host-discovery-strategies.html,0.10738956946643777
+tfidf_pivot_cov,holdout-16,nmap host discovery without port scan,5,222,https://nmap.org/book/port-scanning.html,0.10410596130083691
+tfidf_pivot_cov,holdout-17,discover hidden web paths,1,525,https://nmap.org/book/nmap-defenses-trickery.html,0.08322768618877228
+tfidf_pivot_cov,holdout-17,discover hidden web paths,2,503,https://nmap.org/book/subvert-ids.html,0.05644222963582011
+tfidf_pivot_cov,holdout-17,discover hidden web paths,3,528,https://www.kali.org/tools/aflplusplus/,0.05422995359053803
+tfidf_pivot_cov,holdout-17,discover hidden web paths,4,551,https://www.kali.org/tools/llvm-defaults/,0.04810606777954628
+tfidf_pivot_cov,holdout-17,discover hidden web paths,5,347,https://nmap.org/book/vscan.html,0.07701494714065377
+tfidf_pivot_cov,holdout-18,recursive web directory discovery,1,105,https://www.kali.org/tools/autorecon/,0.103313791812279
+tfidf_pivot_cov,holdout-18,recursive web directory discovery,2,221,https://www.kali.org/tools/feroxbuster/,0.0972242071497445
+tfidf_pivot_cov,holdout-18,recursive web directory discovery,3,298,https://www.kali.org/tools/wfuzz/,0.07706805806963184
+tfidf_pivot_cov,holdout-18,recursive web directory discovery,4,271,https://www.kali.org/tools/subfinder/,0.09996266748970531
+tfidf_pivot_cov,holdout-18,recursive web directory discovery,5,214,https://www.kali.org/tools/dirsearch/,0.08714086736348318
+tfidf_pivot_cov,holdout-19,detect sql injection automatically,1,441,https://nmap.org/book/nse-usage.html,0.0898902166569947
+tfidf_pivot_cov,holdout-19,detect sql injection automatically,2,613,https://www.kali.org/tools/sqlmap/,0.11833350920599396
+tfidf_pivot_cov,holdout-19,detect sql injection automatically,3,616,https://www.kali.org/tools/sqlninja/,0.09650401442615764
+tfidf_pivot_cov,holdout-19,detect sql injection automatically,4,391,https://www.kali.org/tools/wapiti/,0.07653552880035938
+tfidf_pivot_cov,holdout-19,detect sql injection automatically,5,467,https://www.kali.org/tools/kismet/,0.07484014341786029
+tfidf_pivot_cov,holdout-20,audit wireless wpa handshake,1,768,https://www.kali.org/tools/wifite/,0.18586604302333998
+tfidf_pivot_cov,holdout-20,audit wireless wpa handshake,2,758,https://www.kali.org/tools/aircrack-ng/,0.12889914684024317
+tfidf_pivot_cov,holdout-20,audit wireless wpa handshake,3,761,https://www.kali.org/tools/cowpatty/,0.1271550674285077
+tfidf_pivot_cov,holdout-20,audit wireless wpa handshake,4,767,https://www.kali.org/tools/wifiphisher/,0.11757435119671103
+tfidf_pivot_cov,holdout-20,audit wireless wpa handshake,5,766,https://www.kali.org/tools/wifi-honey/,0.09319051711054695
+tfidf_pivot_cov,holdout-21,identify password hash format,1,319,https://docs.metasploit.com/docs/using-metasploit/intermediate/hashes-and-password-cracking.html,0.11542577682500833
+tfidf_pivot_cov,holdout-21,identify password hash format,2,727,https://www.kali.org/tools/hashid/,0.10409236194181874
+tfidf_pivot_cov,holdout-21,identify password hash format,3,940,https://www.kali.org/tools/sleuthkit/,0.09803041745445264
+tfidf_pivot_cov,holdout-21,identify password hash format,4,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,0.09450717196874768
+tfidf_pivot_cov,holdout-21,identify password hash format,5,747,https://www.kali.org/tools/hashcat/,0.08693247972792521
+tfidf_pivot_cov,holdout-22,generate metasploit payload,1,481,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-with-ngrok.html,0.09819043826533157
+tfidf_pivot_cov,holdout-22,generate metasploit payload,2,645,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/generating-ysoserial-java-serialized-objects.html,0.09810428790281264
+tfidf_pivot_cov,holdout-22,generate metasploit payload,3,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,0.09686705653107082
+tfidf_pivot_cov,holdout-22,generate metasploit payload,4,695,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-the-seh-mixin-to-exploit-an-exception-handler.html,0.09286721663773106
+tfidf_pivot_cov,holdout-22,generate metasploit payload,5,706,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-wbemexec-for-a-write-privilege-attack-on-windows.html,0.09206025621435575
+tfidf_pivot_cov,holdout-23,use metasploit exploit module,1,2,https://docs.metasploit.com/,0.10833965065999407
+tfidf_pivot_cov,holdout-23,use metasploit exploit module,2,339,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,0.10569607553471663
+tfidf_pivot_cov,holdout-23,use metasploit exploit module,3,268,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html,0.10491673566747328
+tfidf_pivot_cov,holdout-23,use metasploit exploit module,4,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,0.10237782161863473
+tfidf_pivot_cov,holdout-23,use metasploit exploit module,5,590,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,0.10122956509562943
+tfidf_pivot_cov,holdout-24,find gtfobins sudo binary techniques,1,950,https://www.kali.org/tools/unhide/,0.0720821561868681
+tfidf_pivot_cov,holdout-24,find gtfobins sudo binary techniques,2,144,https://www.kali.org/tools/dnsmap/,0.05739240205241427
+tfidf_pivot_cov,holdout-24,find gtfobins sudo binary techniques,3,624,https://www.kali.org/tools/commix/,0.05560342741026298
+tfidf_pivot_cov,holdout-24,find gtfobins sudo binary techniques,4,524,https://www.kali.org/tools/oletools/,0.03673554770494458
+tfidf_pivot_cov,holdout-24,find gtfobins sudo binary techniques,5,132,https://nmap.org/book/inst-linux.html,0.03661246133641551
+bm25,holdout-01,capture packets to pcap file,1,189,https://www.wireshark.org/docs/wsug_html_chunked/ChUseEditMenuSection.html,15.186884894312179
+bm25,holdout-01,capture packets to pcap file,2,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,15.044151044706897
+bm25,holdout-01,capture packets to pcap file,3,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,14.864521601626992
+bm25,holdout-01,capture packets to pcap file,4,799,https://www.kali.org/tools/tcpflow/,14.58406459874323
+bm25,holdout-01,capture packets to pcap file,5,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,14.072631517792892
+bm25,holdout-02,decrypt tls sessions with key log,1,197,https://docs.mitmproxy.org/stable/howto/wireshark-tls/,22.296458925167517
+bm25,holdout-02,decrypt tls sessions with key log,2,374,https://www.wireshark.org/docs/wsug_html_chunked/ChIOExportSection.html,19.734331510153865
+bm25,holdout-02,decrypt tls sessions with key log,3,888,https://www.kali.org/tools/stunnel4/,16.780577579568657
+bm25,holdout-02,decrypt tls sessions with key log,4,860,https://www.kali.org/tools/sslsplit/,15.179169084191928
+bm25,holdout-02,decrypt tls sessions with key log,5,857,https://www.kali.org/tools/mitmproxy/,14.621786546709979
+bm25,holdout-03,filter packets by ip address,1,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,12.352482546189659
+bm25,holdout-03,filter packets by ip address,2,495,https://nmap.org/book/determining-firewall-rules.html,12.111070356793846
+bm25,holdout-03,filter packets by ip address,3,499,https://nmap.org/book/firewall-subversion.html,11.91588038830002
+bm25,holdout-03,filter packets by ip address,4,408,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html,11.723988812550695
+bm25,holdout-03,filter packets by ip address,5,299,https://nmap.org/book/idlescan.html,11.685014770632542
+bm25,holdout-04,mitmproxy modify http response,1,169,https://docs.mitmproxy.org/stable/addons/examples/,18.706496373595996
+bm25,holdout-04,mitmproxy modify http response,2,24,https://docs.mitmproxy.org/stable/overview/features/,18.391019618756076
+bm25,holdout-04,mitmproxy modify http response,3,857,https://www.kali.org/tools/mitmproxy/,17.321490015255335
+bm25,holdout-04,mitmproxy modify http response,4,4,https://docs.mitmproxy.org/stable/,16.263404949821712
+bm25,holdout-04,mitmproxy modify http response,5,121,https://docs.mitmproxy.org/stable/concepts/options/,16.010113639997304
+bm25,holdout-05,install proxy certificate android,1,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,18.07853308484937
+bm25,holdout-05,install proxy certificate android,2,108,https://docs.mitmproxy.org/stable/concepts/certificates/,16.750482174109703
+bm25,holdout-05,install proxy certificate android,3,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,13.058923397842609
+bm25,holdout-05,install proxy certificate android,4,457,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-wishlist.html,11.934657020904027
+bm25,holdout-05,install proxy certificate android,5,102,https://docs.mitmproxy.org/stable/concepts/modes/,11.791319931220459
+bm25,holdout-06,replay captured http requests,1,24,https://docs.mitmproxy.org/stable/overview/features/,16.33192078340186
+bm25,holdout-06,replay captured http requests,2,857,https://www.kali.org/tools/mitmproxy/,12.54632362754544
+bm25,holdout-06,replay captured http requests,3,121,https://docs.mitmproxy.org/stable/concepts/options/,12.18799718637257
+bm25,holdout-06,replay captured http requests,4,4,https://docs.mitmproxy.org/stable/,11.982792902688395
+bm25,holdout-06,replay captured http requests,5,114,https://docs.mitmproxy.org/stable/concepts/filters/,11.972408802084518
+bm25,holdout-07,frida attach running process,1,226,https://frida.re/docs/troubleshooting/,18.69212319445671
+bm25,holdout-07,frida attach running process,2,54,https://frida.re/docs/functions/,17.83052207855963
+bm25,holdout-07,frida attach running process,3,61,https://frida.re/docs/messages/,17.77491089188507
+bm25,holdout-07,frida attach running process,4,136,https://frida.re/docs/frida-trace/,17.596700947334007
+bm25,holdout-07,frida attach running process,5,89,https://frida.re/docs/examples/macos/,17.23788380492206
+bm25,holdout-08,hook java method android,1,109,https://frida.re/docs/examples/android/,22.638319132618733
+bm25,holdout-08,hook java method android,2,585,https://www.kali.org/tools/jadx/,16.458986156578707
+bm25,holdout-08,hook java method android,3,136,https://frida.re/docs/frida-trace/,15.793072742100698
+bm25,holdout-08,hook java method android,4,170,https://frida.re/docs/javascript-api/,15.053481270077498
+bm25,holdout-08,hook java method android,5,593,https://www.kali.org/tools/dex2jar/,14.113860691949823
+bm25,holdout-09,list loaded native libraries,1,642,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html,11.172324117844626
+bm25,holdout-09,list loaded native libraries,2,593,https://www.kali.org/tools/dex2jar/,11.05623160308715
+bm25,holdout-09,list loaded native libraries,3,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,10.415135595255173
+bm25,holdout-09,list loaded native libraries,4,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,10.037042801887328
+bm25,holdout-09,list loaded native libraries,5,412,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/python-extension.html,9.898787475825749
+bm25,holdout-10,extract source code from dex,1,585,https://www.kali.org/tools/jadx/,19.075458926702638
+bm25,holdout-10,extract source code from dex,2,593,https://www.kali.org/tools/dex2jar/,15.592099362816533
+bm25,holdout-10,extract source code from dex,3,582,https://www.kali.org/tools/bytecode-viewer/,12.25520806127658
+bm25,holdout-10,extract source code from dex,4,579,https://www.kali.org/tools/apktool/,10.627313863485702
+bm25,holdout-10,extract source code from dex,5,943,https://www.kali.org/tools/binwalk3/,9.801949564523596
+bm25,holdout-11,inspect apk resources,1,579,https://www.kali.org/tools/apktool/,15.851029094579562
+bm25,holdout-11,inspect apk resources,2,585,https://www.kali.org/tools/jadx/,14.122243474593267
+bm25,holdout-11,inspect apk resources,3,202,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/inspect_ticket.html,9.604929482227776
+bm25,holdout-11,inspect apk resources,4,593,https://www.kali.org/tools/dex2jar/,9.47848882569458
+bm25,holdout-11,inspect apk resources,5,582,https://www.kali.org/tools/bytecode-viewer/,9.384832946280588
+bm25,holdout-12,convert dex to jar,1,593,https://www.kali.org/tools/dex2jar/,25.607481222846765
+bm25,holdout-12,convert dex to jar,2,585,https://www.kali.org/tools/jadx/,22.383558700691665
+bm25,holdout-12,convert dex to jar,3,582,https://www.kali.org/tools/bytecode-viewer/,18.66711494402002
+bm25,holdout-12,convert dex to jar,4,597,https://nmap.org/book/output-formats-output-to-html.html,12.833201511531039
+bm25,holdout-12,convert dex to jar,5,645,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/generating-ysoserial-java-serialized-objects.html,11.144178718951938
+bm25,holdout-13,nmap service version detection,1,644,https://nmap.org/book/man-version-detection.html,13.611652260088627
+bm25,holdout-13,nmap service version detection,2,347,https://nmap.org/book/vscan.html,13.44129331810355
+bm25,holdout-13,nmap service version detection,3,377,https://nmap.org/book/vscan-community.html,13.353842704943693
+bm25,holdout-13,nmap service version detection,4,39,https://nmap.org/book/nse.html,13.305642922861784
+bm25,holdout-13,nmap service version detection,5,480,https://nmap.org/book/nse-vscan.html,13.2839916236756
+bm25,holdout-14,nmap operating system detection,1,411,https://nmap.org/book/osdetect-other-methods.html,15.198796676374357
+bm25,holdout-14,nmap operating system detection,2,396,https://nmap.org/book/osdetect-usage.html,14.820511827871318
+bm25,holdout-14,nmap operating system detection,3,525,https://nmap.org/book/nmap-defenses-trickery.html,14.29085721807524
+bm25,holdout-14,nmap operating system detection,4,592,https://nmap.org/book/output-formats-cpe.html,14.268405768220575
+bm25,holdout-14,nmap operating system detection,5,99,https://nmap.org/book/nmap-phases.html,14.175855189860618
+bm25,holdout-15,nmap udp scan,1,267,https://nmap.org/book/scan-methods-udp-scan.html,11.545365482657804
+bm25,holdout-15,nmap udp scan,2,367,https://nmap.org/book/vscan-post-processors.html,11.26076916986979
+bm25,holdout-15,nmap udp scan,3,303,https://nmap.org/book/scan-methods-ip-protocol-scan.html,11.239934182415107
+bm25,holdout-15,nmap udp scan,4,495,https://nmap.org/book/determining-firewall-rules.html,11.14571628893326
+bm25,holdout-15,nmap udp scan,5,236,https://nmap.org/book/port-scanning-options.html,11.052118845734265
+bm25,holdout-16,nmap host discovery without port scan,1,194,https://nmap.org/book/host-discovery-controls.html,19.56851117956263
+bm25,holdout-16,nmap host discovery without port scan,2,633,https://nmap.org/book/man-host-discovery.html,19.196300218045437
+bm25,holdout-16,nmap host discovery without port scan,3,441,https://nmap.org/book/nse-usage.html,18.73480478466534
+bm25,holdout-16,nmap host discovery without port scan,4,636,https://nmap.org/book/man-port-scanning-basics.html,17.609370864381894
+bm25,holdout-16,nmap host discovery without port scan,5,208,https://nmap.org/book/host-discovery-strategies.html,17.59455999151152
+bm25,holdout-17,discover hidden web paths,1,525,https://nmap.org/book/nmap-defenses-trickery.html,11.190079618748655
+bm25,holdout-17,discover hidden web paths,2,391,https://www.kali.org/tools/wapiti/,11.188592873644398
+bm25,holdout-17,discover hidden web paths,3,347,https://nmap.org/book/vscan.html,10.892223270755492
+bm25,holdout-17,discover hidden web paths,4,207,https://www.kali.org/tools/dirbuster/,9.595993116600688
+bm25,holdout-17,discover hidden web paths,5,200,https://www.kali.org/tools/dirb/,8.969670249060211
+bm25,holdout-18,recursive web directory discovery,1,105,https://www.kali.org/tools/autorecon/,14.923587431760415
+bm25,holdout-18,recursive web directory discovery,2,271,https://www.kali.org/tools/subfinder/,14.143784883708806
+bm25,holdout-18,recursive web directory discovery,3,221,https://www.kali.org/tools/feroxbuster/,13.960982351225919
+bm25,holdout-18,recursive web directory discovery,4,187,https://nmap.org/book/host-discovery-dns.html,12.619009514640796
+bm25,holdout-18,recursive web directory discovery,5,214,https://www.kali.org/tools/dirsearch/,12.56009376542505
+bm25,holdout-19,detect sql injection automatically,1,613,https://www.kali.org/tools/sqlmap/,16.03761140332237
+bm25,holdout-19,detect sql injection automatically,2,616,https://www.kali.org/tools/sqlninja/,14.639261257839955
+bm25,holdout-19,detect sql injection automatically,3,314,https://docs.metasploit.com/docs/using-metasploit/intermediate/exploit-ranking.html,12.722216382887492
+bm25,holdout-19,detect sql injection automatically,4,621,https://www.kali.org/tools/jsql/,12.598692893665973
+bm25,holdout-19,detect sql injection automatically,5,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,12.320875233659342
+bm25,holdout-20,audit wireless wpa handshake,1,768,https://www.kali.org/tools/wifite/,29.475320215443396
+bm25,holdout-20,audit wireless wpa handshake,2,761,https://www.kali.org/tools/cowpatty/,19.07478339518503
+bm25,holdout-20,audit wireless wpa handshake,3,767,https://www.kali.org/tools/wifiphisher/,18.56057953541727
+bm25,holdout-20,audit wireless wpa handshake,4,763,https://www.kali.org/tools/fern-wifi-cracker/,17.908279297279606
+bm25,holdout-20,audit wireless wpa handshake,5,758,https://www.kali.org/tools/aircrack-ng/,17.40026861979281
+bm25,holdout-21,identify password hash format,1,319,https://docs.metasploit.com/docs/using-metasploit/intermediate/hashes-and-password-cracking.html,16.739757646078587
+bm25,holdout-21,identify password hash format,2,727,https://www.kali.org/tools/hashid/,15.487860369145485
+bm25,holdout-21,identify password hash format,3,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,13.428928031398844
+bm25,holdout-21,identify password hash format,4,747,https://www.kali.org/tools/hashcat/,13.246063238417353
+bm25,holdout-21,identify password hash format,5,940,https://www.kali.org/tools/sleuthkit/,13.07741319455322
+bm25,holdout-22,generate metasploit payload,1,645,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/generating-ysoserial-java-serialized-objects.html,12.242411565263174
+bm25,holdout-22,generate metasploit payload,2,695,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-the-seh-mixin-to-exploit-an-exception-handler.html,12.228385631861645
+bm25,holdout-22,generate metasploit payload,3,706,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-wbemexec-for-a-write-privilege-attack-on-windows.html,12.212821599404498
+bm25,holdout-22,generate metasploit payload,4,481,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-with-ngrok.html,11.93235271108558
+bm25,holdout-22,generate metasploit payload,5,642,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html,11.631539881040457
+bm25,holdout-23,use metasploit exploit module,1,2,https://docs.metasploit.com/,13.040741212128166
+bm25,holdout-23,use metasploit exploit module,2,268,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html,12.822438278099048
+bm25,holdout-23,use metasploit exploit module,3,339,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,12.820737103882779
+bm25,holdout-23,use metasploit exploit module,4,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,12.732029703654138
+bm25,holdout-23,use metasploit exploit module,5,590,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,12.593440405691977
+bm25,holdout-24,find gtfobins sudo binary techniques,1,950,https://www.kali.org/tools/unhide/,9.57408434581939
+bm25,holdout-24,find gtfobins sudo binary techniques,2,144,https://www.kali.org/tools/dnsmap/,8.912252239452043
+bm25,holdout-24,find gtfobins sudo binary techniques,3,624,https://www.kali.org/tools/commix/,8.013023237106234
+bm25,holdout-24,find gtfobins sudo binary techniques,4,347,https://nmap.org/book/vscan.html,7.68614027923447
+bm25,holdout-24,find gtfobins sudo binary techniques,5,327,https://www.kali.org/tools/burpsuite/,7.568007111879984
+bm25_boost_syn,holdout-01,capture packets to pcap file,1,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,33.228318988646365
+bm25_boost_syn,holdout-01,capture packets to pcap file,2,325,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFiles.html,29.661272177925515
+bm25_boost_syn,holdout-01,capture packets to pcap file,3,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,24.572325823327006
+bm25_boost_syn,holdout-01,capture packets to pcap file,4,310,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureOptions.html,21.41113881453429
+bm25_boost_syn,holdout-01,capture packets to pcap file,5,359,https://www.wireshark.org/docs/wsug_html_chunked/ChIOMergeSection.html,18.704569225395286
+bm25_boost_syn,holdout-02,decrypt tls sessions with key log,1,197,https://docs.mitmproxy.org/stable/howto/wireshark-tls/,33.44468838775128
+bm25_boost_syn,holdout-02,decrypt tls sessions with key log,2,374,https://www.wireshark.org/docs/wsug_html_chunked/ChIOExportSection.html,19.734331510153865
+bm25_boost_syn,holdout-02,decrypt tls sessions with key log,3,216,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/keytab.html,18.49075569041342
+bm25_boost_syn,holdout-02,decrypt tls sessions with key log,4,888,https://www.kali.org/tools/stunnel4/,16.780577579568657
+bm25_boost_syn,holdout-02,decrypt tls sessions with key log,5,860,https://www.kali.org/tools/sslsplit/,15.179169084191928
+bm25_boost_syn,holdout-03,filter packets by ip address,1,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,22.09944073898058
+bm25_boost_syn,holdout-03,filter packets by ip address,2,507,https://nmap.org/book/firewall-ids-packet-forgery.html,18.083905646340213
+bm25_boost_syn,holdout-03,filter packets by ip address,3,408,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html,17.585983218826044
+bm25_boost_syn,holdout-03,filter packets by ip address,4,264,https://www.wireshark.org/docs/wsug_html_chunked/ChUsePacketListPaneSection.html,16.857106174029834
+bm25_boost_syn,holdout-03,filter packets by ip address,5,303,https://nmap.org/book/scan-methods-ip-protocol-scan.html,16.54647781147883
+bm25_boost_syn,holdout-04,mitmproxy modify http response,1,857,https://www.kali.org/tools/mitmproxy/,25.982235022883003
+bm25_boost_syn,holdout-04,mitmproxy modify http response,2,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,19.073133810971967
+bm25_boost_syn,holdout-04,mitmproxy modify http response,3,169,https://docs.mitmproxy.org/stable/addons/examples/,18.706496373595996
+bm25_boost_syn,holdout-04,mitmproxy modify http response,4,24,https://docs.mitmproxy.org/stable/overview/features/,18.391019618756076
+bm25_boost_syn,holdout-04,mitmproxy modify http response,5,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,16.929811446378967
+bm25_boost_syn,holdout-05,install proxy certificate android,1,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,27.117799627274053
+bm25_boost_syn,holdout-05,install proxy certificate android,2,108,https://docs.mitmproxy.org/stable/concepts/certificates/,25.125723261164552
+bm25_boost_syn,holdout-05,install proxy certificate android,3,102,https://docs.mitmproxy.org/stable/concepts/modes/,17.68697989683069
+bm25_boost_syn,holdout-05,install proxy certificate android,4,190,https://docs.mitmproxy.org/stable/howto/transparent/,13.88775259584042
+bm25_boost_syn,holdout-05,install proxy certificate android,5,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,13.058923397842609
+bm25_boost_syn,holdout-06,replay captured http requests,1,81,https://docs.mitmproxy.org/stable/mitmproxytutorial-replayrequests/,22.514784184354617
+bm25_boost_syn,holdout-06,replay captured http requests,2,24,https://docs.mitmproxy.org/stable/overview/features/,16.33192078340186
+bm25_boost_syn,holdout-06,replay captured http requests,3,225,https://docs.mitmproxy.org/stable/tutorials/client-replay/,15.814733694144547
+bm25_boost_syn,holdout-06,replay captured http requests,4,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,14.285918844748075
+bm25_boost_syn,holdout-06,replay captured http requests,5,857,https://www.kali.org/tools/mitmproxy/,12.54632362754544
+bm25_boost_syn,holdout-07,frida attach running process,1,226,https://frida.re/docs/troubleshooting/,28.03818479168506
+bm25_boost_syn,holdout-07,frida attach running process,2,54,https://frida.re/docs/functions/,26.745783117839444
+bm25_boost_syn,holdout-07,frida attach running process,3,61,https://frida.re/docs/messages/,26.662366337827606
+bm25_boost_syn,holdout-07,frida attach running process,4,136,https://frida.re/docs/frida-trace/,26.39505142100101
+bm25_boost_syn,holdout-07,frida attach running process,5,89,https://frida.re/docs/examples/macos/,25.856825707383088
+bm25_boost_syn,holdout-08,hook java method android,1,109,https://frida.re/docs/examples/android/,33.9574786989281
+bm25_boost_syn,holdout-08,hook java method android,2,75,https://frida.re/docs/android/,17.786239535391573
+bm25_boost_syn,holdout-08,hook java method android,3,585,https://www.kali.org/tools/jadx/,16.458986156578707
+bm25_boost_syn,holdout-08,hook java method android,4,136,https://frida.re/docs/frida-trace/,15.793072742100698
+bm25_boost_syn,holdout-08,hook java method android,5,645,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/generating-ysoserial-java-serialized-objects.html,15.219587590619431
+bm25_boost_syn,holdout-09,list loaded native libraries,1,642,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html,11.172324117844626
+bm25_boost_syn,holdout-09,list loaded native libraries,2,593,https://www.kali.org/tools/dex2jar/,11.05623160308715
+bm25_boost_syn,holdout-09,list loaded native libraries,3,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,10.415135595255173
+bm25_boost_syn,holdout-09,list loaded native libraries,4,689,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html,10.037042801887328
+bm25_boost_syn,holdout-09,list loaded native libraries,5,412,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/python-extension.html,9.898787475825749
+bm25_boost_syn,holdout-10,extract source code from dex,1,585,https://www.kali.org/tools/jadx/,19.075458926702638
+bm25_boost_syn,holdout-10,extract source code from dex,2,593,https://www.kali.org/tools/dex2jar/,15.592099362816533
+bm25_boost_syn,holdout-10,extract source code from dex,3,582,https://www.kali.org/tools/bytecode-viewer/,12.25520806127658
+bm25_boost_syn,holdout-10,extract source code from dex,4,579,https://www.kali.org/tools/apktool/,10.627313863485702
+bm25_boost_syn,holdout-10,extract source code from dex,5,125,https://nmap.org/book/inst-source.html,10.148197634948101
+bm25_boost_syn,holdout-11,inspect apk resources,1,579,https://www.kali.org/tools/apktool/,15.851029094579562
+bm25_boost_syn,holdout-11,inspect apk resources,2,202,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/inspect_ticket.html,14.407394223341665
+bm25_boost_syn,holdout-11,inspect apk resources,3,585,https://www.kali.org/tools/jadx/,14.122243474593267
+bm25_boost_syn,holdout-11,inspect apk resources,4,593,https://www.kali.org/tools/dex2jar/,9.47848882569458
+bm25_boost_syn,holdout-11,inspect apk resources,5,582,https://www.kali.org/tools/bytecode-viewer/,9.384832946280588
+bm25_boost_syn,holdout-12,convert dex to jar,1,593,https://www.kali.org/tools/dex2jar/,25.607481222846765
+bm25_boost_syn,holdout-12,convert dex to jar,2,585,https://www.kali.org/tools/jadx/,22.383558700691665
+bm25_boost_syn,holdout-12,convert dex to jar,3,582,https://www.kali.org/tools/bytecode-viewer/,18.66711494402002
+bm25_boost_syn,holdout-12,convert dex to jar,4,597,https://nmap.org/book/output-formats-output-to-html.html,12.833201511531039
+bm25_boost_syn,holdout-12,convert dex to jar,5,645,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/generating-ysoserial-java-serialized-objects.html,11.144178718951938
+bm25_boost_syn,holdout-13,nmap service version detection,1,644,https://nmap.org/book/man-version-detection.html,40.834956780265884
+bm25_boost_syn,holdout-13,nmap service version detection,2,347,https://nmap.org/book/vscan.html,40.323879954310655
+bm25_boost_syn,holdout-13,nmap service version detection,3,480,https://nmap.org/book/nse-vscan.html,33.209979059189
+bm25_boost_syn,holdout-13,nmap service version detection,4,387,https://nmap.org/book/vscan-hack-it.html,33.03020413467558
+bm25_boost_syn,holdout-13,nmap service version detection,5,608,https://nmap.org/book/nmap-service-probes.html,32.91389558606176
+bm25_boost_syn,holdout-14,nmap operating system detection,1,507,https://nmap.org/book/firewall-ids-packet-forgery.html,30.40889059132004
+bm25_boost_syn,holdout-14,nmap operating system detection,2,503,https://nmap.org/book/subvert-ids.html,30.035752677216607
+bm25_boost_syn,holdout-14,nmap operating system detection,3,614,https://nmap.org/book/nmap-os-db.html,28.271021472088627
+bm25_boost_syn,holdout-14,nmap operating system detection,4,347,https://nmap.org/book/vscan.html,26.808953481421554
+bm25_boost_syn,holdout-14,nmap operating system detection,5,647,https://nmap.org/book/man-os-detection.html,25.741649115156655
+bm25_boost_syn,holdout-15,nmap udp scan,1,267,https://nmap.org/book/scan-methods-udp-scan.html,28.863413706644508
+bm25_boost_syn,holdout-15,nmap udp scan,2,33,https://nmap.org/book/performance.html,25.350195707626447
+bm25_boost_syn,holdout-15,nmap udp scan,3,313,https://nmap.org/book/port-scanning-algorithms.html,24.622241176599214
+bm25_boost_syn,holdout-15,nmap udp scan,4,636,https://nmap.org/book/man-port-scanning-basics.html,24.472753180484435
+bm25_boost_syn,holdout-15,nmap udp scan,5,318,https://nmap.org/book/reduce-scantime.html,23.70198912155211
+bm25_boost_syn,holdout-16,nmap host discovery without port scan,1,633,https://nmap.org/book/man-host-discovery.html,59.76429019185554
+bm25_boost_syn,holdout-16,nmap host discovery without port scan,2,194,https://nmap.org/book/host-discovery-controls.html,58.70553353868789
+bm25_boost_syn,holdout-16,nmap host discovery without port scan,3,208,https://nmap.org/book/host-discovery-strategies.html,52.783679974534564
+bm25_boost_syn,holdout-16,nmap host discovery without port scan,4,215,https://nmap.org/book/host-discovery-algorithms.html,52.5487930574476
+bm25_boost_syn,holdout-16,nmap host discovery without port scan,5,201,https://nmap.org/book/host-discovery-techniques.html,50.829214261081745
+bm25_boost_syn,holdout-17,discover hidden web paths,1,525,https://nmap.org/book/nmap-defenses-trickery.html,11.190079618748655
+bm25_boost_syn,holdout-17,discover hidden web paths,2,391,https://www.kali.org/tools/wapiti/,11.188592873644398
+bm25_boost_syn,holdout-17,discover hidden web paths,3,347,https://nmap.org/book/vscan.html,10.892223270755492
+bm25_boost_syn,holdout-17,discover hidden web paths,4,207,https://www.kali.org/tools/dirbuster/,9.595993116600688
+bm25_boost_syn,holdout-17,discover hidden web paths,5,200,https://www.kali.org/tools/dirb/,8.969670249060211
+bm25_boost_syn,holdout-18,recursive web directory discovery,1,105,https://www.kali.org/tools/autorecon/,18.41118025982115
+bm25_boost_syn,holdout-18,recursive web directory discovery,2,221,https://www.kali.org/tools/feroxbuster/,17.590968991525394
+bm25_boost_syn,holdout-18,recursive web directory discovery,3,194,https://nmap.org/book/host-discovery-controls.html,16.416908955042622
+bm25_boost_syn,holdout-18,recursive web directory discovery,4,271,https://www.kali.org/tools/subfinder/,15.763193072294591
+bm25_boost_syn,holdout-18,recursive web directory discovery,5,214,https://www.kali.org/tools/dirsearch/,14.855907994167348
+bm25_boost_syn,holdout-19,detect sql injection automatically,1,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,41.61322010331853
+bm25_boost_syn,holdout-19,detect sql injection automatically,2,616,https://www.kali.org/tools/sqlninja/,17.130475082340368
+bm25_boost_syn,holdout-19,detect sql injection automatically,3,613,https://www.kali.org/tools/sqlmap/,16.03761140332237
+bm25_boost_syn,holdout-19,detect sql injection automatically,4,621,https://www.kali.org/tools/jsql/,14.621855517046347
+bm25_boost_syn,holdout-19,detect sql injection automatically,5,638,https://www.kali.org/tools/xsser/,13.837736838857754
+bm25_boost_syn,holdout-20,audit wireless wpa handshake,1,237,https://www.wireshark.org/docs/wsug_html_chunked/ChUseWirelessMenuSection.html,32.559161887045434
+bm25_boost_syn,holdout-20,audit wireless wpa handshake,2,768,https://www.kali.org/tools/wifite/,29.475320215443396
+bm25_boost_syn,holdout-20,audit wireless wpa handshake,3,767,https://www.kali.org/tools/wifiphisher/,26.467835879067025
+bm25_boost_syn,holdout-20,audit wireless wpa handshake,4,425,https://www.kali.org/tools/bettercap/,25.588384288967184
+bm25_boost_syn,holdout-20,audit wireless wpa handshake,5,758,https://www.kali.org/tools/aircrack-ng/,25.066417366738275
+bm25_boost_syn,holdout-21,identify password hash format,1,319,https://docs.metasploit.com/docs/using-metasploit/intermediate/hashes-and-password-cracking.html,40.92700374177169
+bm25_boost_syn,holdout-21,identify password hash format,2,728,https://www.kali.org/tools/hash-identifier/,33.681243869411816
+bm25_boost_syn,holdout-21,identify password hash format,3,747,https://www.kali.org/tools/hashcat/,20.7318598571956
+bm25_boost_syn,holdout-21,identify password hash format,4,933,https://www.kali.org/tools/afflib/,20.67621614816587
+bm25_boost_syn,holdout-21,identify password hash format,5,686,https://www.kali.org/tools/impacket-scripts/,19.677819783735604
+bm25_boost_syn,holdout-22,generate metasploit payload,1,645,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/generating-ysoserial-java-serialized-objects.html,18.36361734789476
+bm25_boost_syn,holdout-22,generate metasploit payload,2,695,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-the-seh-mixin-to-exploit-an-exception-handler.html,18.34257844779247
+bm25_boost_syn,holdout-22,generate metasploit payload,3,706,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-wbemexec-for-a-write-privilege-attack-on-windows.html,18.319232399106745
+bm25_boost_syn,holdout-22,generate metasploit payload,4,481,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-with-ngrok.html,17.89852906662837
+bm25_boost_syn,holdout-22,generate metasploit payload,5,642,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html,17.447309821560687
+bm25_boost_syn,holdout-23,use metasploit exploit module,1,672,https://docs.metasploit.com/docs/development/developing-modules/libraries/http/how-to-write-a-module-using-httpserver-and-httpclient.html,32.61978870238192
+bm25_boost_syn,holdout-23,use metasploit exploit module,2,268,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html,32.05609569524762
+bm25_boost_syn,holdout-23,use metasploit exploit module,3,578,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-write-a-cmd-injection-module.html,31.957791249101145
+bm25_boost_syn,holdout-23,use metasploit exploit module,4,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,30.03615922125395
+bm25_boost_syn,holdout-23,use metasploit exploit module,5,339,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,29.55215531540066
+bm25_boost_syn,holdout-24,find gtfobins sudo binary techniques,1,20,https://gtfobins.org/contributing/,10.896475223132864
+bm25_boost_syn,holdout-24,find gtfobins sudo binary techniques,2,252,https://nmap.org/book/scan-methods.html,9.840376372492027
+bm25_boost_syn,holdout-24,find gtfobins sudo binary techniques,3,297,https://gtfobins.org/gtfobins/bbot/,9.578652486335548
+bm25_boost_syn,holdout-24,find gtfobins sudo binary techniques,4,950,https://www.kali.org/tools/unhide/,9.57408434581939
+bm25_boost_syn,holdout-24,find gtfobins sudo binary techniques,5,104,https://gtfobins.org/gtfobins/apache2ctl/,9.567408314042925
+tfidf_proximity,holdout-01,capture packets to pcap file,1,189,https://www.wireshark.org/docs/wsug_html_chunked/ChUseEditMenuSection.html,0.16421644496325338
+tfidf_proximity,holdout-01,capture packets to pcap file,2,296,https://www.wireshark.org/docs/wsug_html_chunked/ChCapPrerequisitesSection.html,0.14435024507369124
+tfidf_proximity,holdout-01,capture packets to pcap file,3,369,https://www.wireshark.org/docs/wsug_html_chunked/ChIOFileSetSection.html,0.13914719467540987
+tfidf_proximity,holdout-01,capture packets to pcap file,4,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,0.1377868802632477
+tfidf_proximity,holdout-01,capture packets to pcap file,5,325,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFiles.html,0.13633288341012614
+tfidf_proximity,holdout-02,decrypt tls sessions with key log,1,197,https://docs.mitmproxy.org/stable/howto/wireshark-tls/,0.28105781156111825
+tfidf_proximity,holdout-02,decrypt tls sessions with key log,2,859,https://www.kali.org/tools/ssldump/,0.15801081242272091
+tfidf_proximity,holdout-02,decrypt tls sessions with key log,3,189,https://www.wireshark.org/docs/wsug_html_chunked/ChUseEditMenuSection.html,0.11291545210039844
+tfidf_proximity,holdout-02,decrypt tls sessions with key log,4,745,https://www.kali.org/tools/crackle/,0.10459220207378575
+tfidf_proximity,holdout-02,decrypt tls sessions with key log,5,720,https://www.kali.org/tools/ccrypt/,0.0824888554245668
+tfidf_proximity,holdout-03,filter packets by ip address,1,403,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayFilterSection.html,0.14053740199801712
+tfidf_proximity,holdout-03,filter packets by ip address,2,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,0.11660882733558176
+tfidf_proximity,holdout-03,filter packets by ip address,3,549,https://nmap.org/book/zenmap-filter.html,0.10851731142039604
+tfidf_proximity,holdout-03,filter packets by ip address,4,264,https://www.wireshark.org/docs/wsug_html_chunked/ChUsePacketListPaneSection.html,0.10758969525396936
+tfidf_proximity,holdout-03,filter packets by ip address,5,636,https://nmap.org/book/man-port-scanning-basics.html,0.10642016979814715
+tfidf_proximity,holdout-04,mitmproxy modify http response,1,81,https://docs.mitmproxy.org/stable/mitmproxytutorial-replayrequests/,0.22236262082651861
+tfidf_proximity,holdout-04,mitmproxy modify http response,2,18,https://docs.mitmproxy.org/stable/overview/getting-started/,0.19756110777141228
+tfidf_proximity,holdout-04,mitmproxy modify http response,3,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,0.19583808389398058
+tfidf_proximity,holdout-04,mitmproxy modify http response,4,88,https://docs.mitmproxy.org/stable/mitmproxytutorial-whatsnext/,0.18991482203191298
+tfidf_proximity,holdout-04,mitmproxy modify http response,5,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,0.17944043859501185
+tfidf_proximity,holdout-05,install proxy certificate android,1,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,0.12373354245709903
+tfidf_proximity,holdout-05,install proxy certificate android,2,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.11252170153435795
+tfidf_proximity,holdout-05,install proxy certificate android,3,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,0.09297703620516591
+tfidf_proximity,holdout-05,install proxy certificate android,4,883,https://www.kali.org/tools/proxytunnel/,0.0925895882088091
+tfidf_proximity,holdout-05,install proxy certificate android,5,18,https://docs.mitmproxy.org/stable/overview/getting-started/,0.08600207658452524
+tfidf_proximity,holdout-06,replay captured http requests,1,81,https://docs.mitmproxy.org/stable/mitmproxytutorial-replayrequests/,0.26462893485473254
+tfidf_proximity,holdout-06,replay captured http requests,2,114,https://docs.mitmproxy.org/stable/concepts/filters/,0.1364985458188379
+tfidf_proximity,holdout-06,replay captured http requests,3,300,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCapturingSection.html,0.12334122661889323
+tfidf_proximity,holdout-06,replay captured http requests,4,128,https://docs.mitmproxy.org/stable/concepts/commands/,0.12281782847038931
+tfidf_proximity,holdout-06,replay captured http requests,5,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,0.11504279692794994
+tfidf_proximity,holdout-07,frida attach running process,1,129,https://frida.re/docs/frida-ps/,0.2587143469133856
+tfidf_proximity,holdout-07,frida attach running process,2,149,https://frida.re/docs/frida-ls-devices/,0.2580919192014977
+tfidf_proximity,holdout-07,frida attach running process,3,205,https://frida.re/docs/go-api/,0.22193543425137904
+tfidf_proximity,holdout-07,frida attach running process,4,198,https://frida.re/docs/swift-api/,0.21109460091092008
+tfidf_proximity,holdout-07,frida attach running process,5,96,https://frida.re/docs/examples/linux/,0.20635836762459697
+tfidf_proximity,holdout-08,hook java method android,1,109,https://frida.re/docs/examples/android/,0.13753561492453506
+tfidf_proximity,holdout-08,hook java method android,2,591,https://www.kali.org/tools/jd-gui/,0.1089668433325304
+tfidf_proximity,holdout-08,hook java method android,3,588,https://www.kali.org/tools/javasnoop/,0.10308996876617783
+tfidf_proximity,holdout-08,hook java method android,4,25,https://frida.re/docs/modes/,0.10219679313738404
+tfidf_proximity,holdout-08,hook java method android,5,582,https://www.kali.org/tools/bytecode-viewer/,0.09689070558250679
+tfidf_proximity,holdout-09,list loaded native libraries,1,350,https://gtfobins.org/gtfobins/byebug/,0.10505680716864667
+tfidf_proximity,holdout-09,list loaded native libraries,2,13,https://gtfobins.org/scope/,0.09982272704748242
+tfidf_proximity,holdout-09,list loaded native libraries,3,5,https://frida.re/docs/home/,0.08838945682347328
+tfidf_proximity,holdout-09,list loaded native libraries,4,642,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html,0.07828137515155759
+tfidf_proximity,holdout-09,list loaded native libraries,5,679,https://docs.metasploit.com/docs/development/developing-modules/libraries/obfuscation/how-to-use-metasploit-framework-obfuscation-crandomizer.html,0.0744013989083684
+tfidf_proximity,holdout-10,extract source code from dex,1,582,https://www.kali.org/tools/bytecode-viewer/,0.13020106479326934
+tfidf_proximity,holdout-10,extract source code from dex,2,585,https://www.kali.org/tools/jadx/,0.09566341542304446
+tfidf_proximity,holdout-10,extract source code from dex,3,593,https://www.kali.org/tools/dex2jar/,0.0917302280119187
+tfidf_proximity,holdout-10,extract source code from dex,4,579,https://www.kali.org/tools/apktool/,0.06983443565478314
+tfidf_proximity,holdout-10,extract source code from dex,5,316,https://gtfobins.org/gtfobins/borg/,0.05543979360741538
+tfidf_proximity,holdout-11,inspect apk resources,1,579,https://www.kali.org/tools/apktool/,0.13009009262868312
+tfidf_proximity,holdout-11,inspect apk resources,2,18,https://docs.mitmproxy.org/stable/overview/getting-started/,0.1069851701576418
+tfidf_proximity,holdout-11,inspect apk resources,3,88,https://docs.mitmproxy.org/stable/mitmproxytutorial-whatsnext/,0.10681464118792275
+tfidf_proximity,holdout-11,inspect apk resources,4,582,https://www.kali.org/tools/bytecode-viewer/,0.10401999877546157
+tfidf_proximity,holdout-11,inspect apk resources,5,585,https://www.kali.org/tools/jadx/,0.06748290226248954
+tfidf_proximity,holdout-12,convert dex to jar,1,582,https://www.kali.org/tools/bytecode-viewer/,0.1830199370128174
+tfidf_proximity,holdout-12,convert dex to jar,2,593,https://www.kali.org/tools/dex2jar/,0.15677240069518739
+tfidf_proximity,holdout-12,convert dex to jar,3,366,https://www.kali.org/tools/paros/,0.14941425389401647
+tfidf_proximity,holdout-12,convert dex to jar,4,585,https://www.kali.org/tools/jadx/,0.11560542729545846
+tfidf_proximity,holdout-12,convert dex to jar,5,207,https://www.kali.org/tools/dirbuster/,0.09892218793878475
+tfidf_proximity,holdout-13,nmap service version detection,1,608,https://nmap.org/book/nmap-service-probes.html,0.17750457194654343
+tfidf_proximity,holdout-13,nmap service version detection,2,603,https://nmap.org/book/data-files.html,0.17402357101065508
+tfidf_proximity,holdout-13,nmap service version detection,3,45,https://nmap.org/book/organization.html,0.14624448678021087
+tfidf_proximity,holdout-13,nmap service version detection,4,592,https://nmap.org/book/output-formats-cpe.html,0.14378704766647682
+tfidf_proximity,holdout-13,nmap service version detection,5,644,https://nmap.org/book/man-version-detection.html,0.1414297174675358
+tfidf_proximity,holdout-14,nmap operating system detection,1,592,https://nmap.org/book/output-formats-cpe.html,0.17395038823257983
+tfidf_proximity,holdout-14,nmap operating system detection,2,603,https://nmap.org/book/data-files.html,0.13913925534026586
+tfidf_proximity,holdout-14,nmap operating system detection,3,99,https://nmap.org/book/nmap-phases.html,0.13116691169892228
+tfidf_proximity,holdout-14,nmap operating system detection,4,671,https://nmap.org/book/man-book.html,0.13004263850039785
+tfidf_proximity,holdout-14,nmap operating system detection,5,647,https://nmap.org/book/man-os-detection.html,0.12101709134650651
+tfidf_proximity,holdout-15,nmap udp scan,1,456,https://nmap.org/book/nse-scripts.html,0.13863308358317827
+tfidf_proximity,holdout-15,nmap udp scan,2,608,https://nmap.org/book/nmap-service-probes.html,0.13717453570696836
+tfidf_proximity,holdout-15,nmap udp scan,3,641,https://nmap.org/book/man-port-specification.html,0.13681997915854022
+tfidf_proximity,holdout-15,nmap udp scan,4,636,https://nmap.org/book/man-port-scanning-basics.html,0.13389995077878042
+tfidf_proximity,holdout-15,nmap udp scan,5,619,https://nmap.org/book/nmap-protocols.html,0.12696913074743488
+tfidf_proximity,holdout-16,nmap host discovery without port scan,1,671,https://nmap.org/book/man-book.html,0.1591340997508001
+tfidf_proximity,holdout-16,nmap host discovery without port scan,2,166,https://nmap.org/book/host-discovery.html,0.1547824824464657
+tfidf_proximity,holdout-16,nmap host discovery without port scan,3,215,https://nmap.org/book/host-discovery-algorithms.html,0.15418078816770123
+tfidf_proximity,holdout-16,nmap host discovery without port scan,4,636,https://nmap.org/book/man-port-scanning-basics.html,0.15280594009717527
+tfidf_proximity,holdout-16,nmap host discovery without port scan,5,99,https://nmap.org/book/nmap-phases.html,0.14586469774784253
+tfidf_proximity,holdout-17,discover hidden web paths,1,213,https://gtfobins.org/gtfobins/at/,0.12120744837176817
+tfidf_proximity,holdout-17,discover hidden web paths,2,305,https://www.wireshark.org/docs/wsug_html_chunked/ChCapInterfaceSection.html,0.11079213135131608
+tfidf_proximity,holdout-17,discover hidden web paths,3,248,https://www.wireshark.org/docs/wsug_html_chunked/ChUseHelpMenuSection.html,0.10720877045611511
+tfidf_proximity,holdout-17,discover hidden web paths,4,207,https://www.kali.org/tools/dirbuster/,0.10342922251216267
+tfidf_proximity,holdout-17,discover hidden web paths,5,549,https://nmap.org/book/zenmap-filter.html,0.09551861830074454
+tfidf_proximity,holdout-18,recursive web directory discovery,1,949,https://www.kali.org/tools/ssdeep/,0.11633577213389201
+tfidf_proximity,holdout-18,recursive web directory discovery,2,187,https://nmap.org/book/host-discovery-dns.html,0.11250949014367126
+tfidf_proximity,holdout-18,recursive web directory discovery,3,271,https://www.kali.org/tools/subfinder/,0.10141427808463406
+tfidf_proximity,holdout-18,recursive web directory discovery,4,207,https://www.kali.org/tools/dirbuster/,0.09747667717381528
+tfidf_proximity,holdout-18,recursive web directory discovery,5,911,https://www.kali.org/tools/missidentify/,0.0787114003869263
+tfidf_proximity,holdout-19,detect sql injection automatically,1,845,https://www.kali.org/tools/siparmyknife/,0.17546015684486146
+tfidf_proximity,holdout-19,detect sql injection automatically,2,646,https://www.kali.org/tools/laudanum/,0.16268183553875082
+tfidf_proximity,holdout-19,detect sql injection automatically,3,613,https://www.kali.org/tools/sqlmap/,0.12861544370890657
+tfidf_proximity,holdout-19,detect sql injection automatically,4,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,0.12088793035266894
+tfidf_proximity,holdout-19,detect sql injection automatically,5,721,https://docs.metasploit.com/docs/development/google-summer-of-code/gsoc-2020-project-ideas.html,0.12070194275528075
+tfidf_proximity,holdout-20,audit wireless wpa handshake,1,763,https://www.kali.org/tools/fern-wifi-cracker/,0.17465360581919603
+tfidf_proximity,holdout-20,audit wireless wpa handshake,2,768,https://www.kali.org/tools/wifite/,0.17302922379608776
+tfidf_proximity,holdout-20,audit wireless wpa handshake,3,761,https://www.kali.org/tools/cowpatty/,0.15041775526519457
+tfidf_proximity,holdout-20,audit wireless wpa handshake,4,759,https://www.kali.org/tools/airgeddon/,0.1359683849512852
+tfidf_proximity,holdout-20,audit wireless wpa handshake,5,766,https://www.kali.org/tools/wifi-honey/,0.12114215466580976
+tfidf_proximity,holdout-21,identify password hash format,1,727,https://www.kali.org/tools/hashid/,0.2090986613001672
+tfidf_proximity,holdout-21,identify password hash format,2,949,https://www.kali.org/tools/ssdeep/,0.12761741582348224
+tfidf_proximity,holdout-21,identify password hash format,3,728,https://www.kali.org/tools/hash-identifier/,0.11644018471202093
+tfidf_proximity,holdout-21,identify password hash format,4,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,0.10274421845843189
+tfidf_proximity,holdout-21,identify password hash format,5,761,https://www.kali.org/tools/cowpatty/,0.07757369780262444
+tfidf_proximity,holdout-22,generate metasploit payload,1,407,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/powershell-extension.html,0.17869584456858695
+tfidf_proximity,holdout-22,generate metasploit payload,2,683,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-phpexe-to-exploit-an-arbitrary-file-upload-bug.html,0.12691029711622454
+tfidf_proximity,holdout-22,generate metasploit payload,3,309,https://docs.metasploit.com/docs/using-metasploit/intermediate/evading-anti-virus.html,0.1266823095874581
+tfidf_proximity,holdout-22,generate metasploit payload,4,34,https://docs.metasploit.com/docs/pentesting/metasploit-guide-upgrading-shells-to-meterpreter.html,0.11781126261951275
+tfidf_proximity,holdout-22,generate metasploit payload,5,706,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-wbemexec-for-a-write-privilege-attack-on-windows.html,0.11747904834798925
+tfidf_proximity,holdout-23,use metasploit exploit module,1,598,https://docs.metasploit.com/docs/development/developing-modules/external-modules/writing-external-golang-modules.html,0.1517819095362315
+tfidf_proximity,holdout-23,use metasploit exploit module,2,485,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-the-favorite-command.html,0.1420006812519837
+tfidf_proximity,holdout-23,use metasploit exploit module,3,2,https://docs.metasploit.com/,0.13705389229702195
+tfidf_proximity,holdout-23,use metasploit exploit module,4,268,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html,0.1277271736108105
+tfidf_proximity,holdout-23,use metasploit exploit module,5,693,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-do-reporting-or-store-data-in-module-development.html,0.12667006405177147
+tfidf_proximity,holdout-24,find gtfobins sudo binary techniques,1,171,https://gtfobins.org/gtfobins/as/,0.12116001715846927
+tfidf_proximity,holdout-24,find gtfobins sudo binary techniques,2,390,https://gtfobins.org/gtfobins/cat/,0.12044352702445466
+tfidf_proximity,holdout-24,find gtfobins sudo binary techniques,3,265,https://gtfobins.org/gtfobins/base64/,0.11153302123963878
+tfidf_proximity,holdout-24,find gtfobins sudo binary techniques,4,90,https://gtfobins.org/gtfobins/aoss/,0.1093069024969447
+tfidf_proximity,holdout-24,find gtfobins sudo binary techniques,5,399,https://gtfobins.org/gtfobins/cdist/,0.10890797748742045
+tfidf_fields,holdout-01,capture packets to pcap file,1,526,https://docs.metasploit.com/docs/development/get-started/sanitizing-pcaps.html,0.18199985724669593
+tfidf_fields,holdout-01,capture packets to pcap file,2,325,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFiles.html,0.1418825672067697
+tfidf_fields,holdout-01,capture packets to pcap file,3,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,0.13102423000700092
+tfidf_fields,holdout-01,capture packets to pcap file,4,210,https://www.wireshark.org/docs/wsug_html_chunked/ChUseCaptureMenuSection.html,0.12811109666921858
+tfidf_fields,holdout-01,capture packets to pcap file,5,340,https://www.wireshark.org/docs/wsug_html_chunked/ChCapRunningSection.html,0.12576369222041947
+tfidf_fields,holdout-02,decrypt tls sessions with key log,1,197,https://docs.mitmproxy.org/stable/howto/wireshark-tls/,0.18793897348440317
+tfidf_fields,holdout-02,decrypt tls sessions with key log,2,216,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/keytab.html,0.15209694698248416
+tfidf_fields,holdout-02,decrypt tls sessions with key log,3,424,https://gtfobins.org/gtfobins/check_log/,0.08997279324255435
+tfidf_fields,holdout-02,decrypt tls sessions with key log,4,675,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-log-in-metasploit.html,0.06627122854772338
+tfidf_fields,holdout-02,decrypt tls sessions with key log,5,378,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-debugging-meterpreter-sessions.html,0.06127462540541118
+tfidf_fields,holdout-03,filter packets by ip address,1,403,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayFilterSection.html,0.17973863667572437
+tfidf_fields,holdout-03,filter packets by ip address,2,549,https://nmap.org/book/zenmap-filter.html,0.1750919756809062
+tfidf_fields,holdout-03,filter packets by ip address,3,114,https://docs.mitmproxy.org/stable/concepts/filters/,0.15926114642595388
+tfidf_fields,holdout-03,filter packets by ip address,4,180,https://nmap.org/book/host-discovery-find-ips.html,0.12033656743767948
+tfidf_fields,holdout-03,filter packets by ip address,5,393,https://www.wireshark.org/docs/wsug_html_chunked/ChapterWork.html,0.11392916982165832
+tfidf_fields,holdout-04,mitmproxy modify http response,1,857,https://www.kali.org/tools/mitmproxy/,0.3745243411691513
+tfidf_fields,holdout-04,mitmproxy modify http response,2,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,0.3736414529567737
+tfidf_fields,holdout-04,mitmproxy modify http response,3,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,0.2834259020231603
+tfidf_fields,holdout-04,mitmproxy modify http response,4,666,https://docs.metasploit.com/docs/development/developing-modules/libraries/http/how-to-parse-an-http-response.html,0.07742478658938859
+tfidf_fields,holdout-04,mitmproxy modify http response,5,81,https://docs.mitmproxy.org/stable/mitmproxytutorial-replayrequests/,0.05549829080174763
+tfidf_fields,holdout-05,install proxy certificate android,1,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.2964270436697497
+tfidf_fields,holdout-05,install proxy certificate android,2,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,0.20501897418469076
+tfidf_fields,holdout-05,install proxy certificate android,3,102,https://docs.mitmproxy.org/stable/concepts/modes/,0.18708283308195842
+tfidf_fields,holdout-05,install proxy certificate android,4,75,https://frida.re/docs/android/,0.16102015998857502
+tfidf_fields,holdout-05,install proxy certificate android,5,109,https://frida.re/docs/examples/android/,0.1557803644944538
+tfidf_fields,holdout-06,replay captured http requests,1,81,https://docs.mitmproxy.org/stable/mitmproxytutorial-replayrequests/,0.46414389735947903
+tfidf_fields,holdout-06,replay captured http requests,2,225,https://docs.mitmproxy.org/stable/tutorials/client-replay/,0.3722986664802169
+tfidf_fields,holdout-06,replay captured http requests,3,393,https://www.wireshark.org/docs/wsug_html_chunked/ChapterWork.html,0.18751243508299043
+tfidf_fields,holdout-06,replay captured http requests,4,300,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCapturingSection.html,0.17585056149745623
+tfidf_fields,holdout-06,replay captured http requests,5,291,https://www.wireshark.org/docs/wsug_html_chunked/ChapterCapture.html,0.17460851359273974
+tfidf_fields,holdout-07,frida attach running process,1,129,https://frida.re/docs/frida-ps/,0.19872458576961347
+tfidf_fields,holdout-07,frida attach running process,2,205,https://frida.re/docs/go-api/,0.19492475963519437
+tfidf_fields,holdout-07,frida attach running process,3,149,https://frida.re/docs/frida-ls-devices/,0.19423844486482642
+tfidf_fields,holdout-07,frida attach running process,4,96,https://frida.re/docs/examples/linux/,0.19412826011042902
+tfidf_fields,holdout-07,frida attach running process,5,122,https://frida.re/docs/frida-cli/,0.19361263944953958
+tfidf_fields,holdout-08,hook java method android,1,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,0.1483991280345286
+tfidf_fields,holdout-08,hook java method android,2,109,https://frida.re/docs/examples/android/,0.14431555824128425
+tfidf_fields,holdout-08,hook java method android,3,75,https://frida.re/docs/android/,0.13214877079115042
+tfidf_fields,holdout-08,hook java method android,4,645,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/generating-ysoserial-java-serialized-objects.html,0.1118304289099123
+tfidf_fields,holdout-08,hook java method android,5,575,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-write-a-check-method.html,0.05237082210883455
+tfidf_fields,holdout-09,list loaded native libraries,1,461,https://nmap.org/book/nse-library.html,0.11091725980900267
+tfidf_fields,holdout-09,list loaded native libraries,2,540,https://nmap.org/book/zenmap-saving.html,0.0850216171024719
+tfidf_fields,holdout-09,list loaded native libraries,3,350,https://gtfobins.org/gtfobins/byebug/,0.023297437668742572
+tfidf_fields,holdout-09,list loaded native libraries,4,13,https://gtfobins.org/scope/,0.021955870676016682
+tfidf_fields,holdout-09,list loaded native libraries,5,5,https://frida.re/docs/home/,0.020711869269576577
+tfidf_fields,holdout-10,extract source code from dex,1,490,https://gtfobins.org/gtfobins/code/,0.054421779870683244
+tfidf_fields,holdout-10,extract source code from dex,2,125,https://nmap.org/book/inst-source.html,0.03734468847826164
+tfidf_fields,holdout-10,extract source code from dex,3,313,https://nmap.org/book/port-scanning-algorithms.html,0.03534940180353706
+tfidf_fields,holdout-10,extract source code from dex,4,215,https://nmap.org/book/host-discovery-algorithms.html,0.03344991497225539
+tfidf_fields,holdout-10,extract source code from dex,5,582,https://www.kali.org/tools/bytecode-viewer/,0.03254648050559102
+tfidf_fields,holdout-11,inspect apk resources,1,202,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/inspect_ticket.html,0.16058466198014132
+tfidf_fields,holdout-11,inspect apk resources,2,57,https://nmap.org/book/resources.html,0.14453055363249934
+tfidf_fields,holdout-11,inspect apk resources,3,223,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/rbcd.html,0.041639779662899216
+tfidf_fields,holdout-11,inspect apk resources,4,579,https://www.kali.org/tools/apktool/,0.030989306415939583
+tfidf_fields,holdout-11,inspect apk resources,5,88,https://docs.mitmproxy.org/stable/mitmproxytutorial-whatsnext/,0.026780547065522905
+tfidf_fields,holdout-12,convert dex to jar,1,188,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/ticket_converter.html,0.07111236690693609
+tfidf_fields,holdout-12,convert dex to jar,2,582,https://www.kali.org/tools/bytecode-viewer/,0.0456256024002132
+tfidf_fields,holdout-12,convert dex to jar,3,366,https://www.kali.org/tools/paros/,0.03746474438036788
+tfidf_fields,holdout-12,convert dex to jar,4,593,https://www.kali.org/tools/dex2jar/,0.03266315370308425
+tfidf_fields,holdout-12,convert dex to jar,5,585,https://www.kali.org/tools/jadx/,0.02688669309098083
+tfidf_fields,holdout-13,nmap service version detection,1,644,https://nmap.org/book/man-version-detection.html,0.4743806578519225
+tfidf_fields,holdout-13,nmap service version detection,2,647,https://nmap.org/book/man-os-detection.html,0.3437598967555914
+tfidf_fields,holdout-13,nmap service version detection,3,347,https://nmap.org/book/vscan.html,0.3412367723227829
+tfidf_fields,holdout-13,nmap service version detection,4,480,https://nmap.org/book/nse-vscan.html,0.2955459753329001
+tfidf_fields,holdout-13,nmap service version detection,5,392,https://nmap.org/book/osdetect.html,0.25053154877407857
+tfidf_fields,holdout-14,nmap operating system detection,1,647,https://nmap.org/book/man-os-detection.html,0.3002008962178612
+tfidf_fields,holdout-14,nmap operating system detection,2,644,https://nmap.org/book/man-version-detection.html,0.298764342097088
+tfidf_fields,holdout-14,nmap operating system detection,3,480,https://nmap.org/book/nse-vscan.html,0.22772253025173742
+tfidf_fields,holdout-14,nmap operating system detection,4,347,https://nmap.org/book/vscan.html,0.22136002034335947
+tfidf_fields,holdout-14,nmap operating system detection,5,392,https://nmap.org/book/osdetect.html,0.21541643289744924
+tfidf_fields,holdout-15,nmap udp scan,1,532,https://nmap.org/book/zenmap-scanning.html,0.3446330205866529
+tfidf_fields,holdout-15,nmap udp scan,2,668,https://nmap.org/book/man-examples.html,0.3295595756290092
+tfidf_fields,holdout-15,nmap udp scan,3,267,https://nmap.org/book/scan-methods-udp-scan.html,0.325054112847763
+tfidf_fields,holdout-15,nmap udp scan,4,659,https://nmap.org/book/man-output.html,0.3122997478138893
+tfidf_fields,holdout-15,nmap udp scan,5,352,https://nmap.org/book/vscan-examples.html,0.30777209061769867
+tfidf_fields,holdout-16,nmap host discovery without port scan,1,633,https://nmap.org/book/man-host-discovery.html,0.45446004171700444
+tfidf_fields,holdout-16,nmap host discovery without port scan,2,194,https://nmap.org/book/host-discovery-controls.html,0.4027556126345512
+tfidf_fields,holdout-16,nmap host discovery without port scan,3,201,https://nmap.org/book/host-discovery-techniques.html,0.38171786243655575
+tfidf_fields,holdout-16,nmap host discovery without port scan,4,215,https://nmap.org/book/host-discovery-algorithms.html,0.3650096909506191
+tfidf_fields,holdout-16,nmap host discovery without port scan,5,166,https://nmap.org/book/host-discovery.html,0.34913890421723387
+tfidf_fields,holdout-17,discover hidden web paths,1,353,https://docs.metasploit.com/docs/using-metasploit/advanced/metasploit-web-service.html,0.07236374905044739
+tfidf_fields,holdout-17,discover hidden web paths,2,400,https://www.kali.org/tools/web-cache-vulnerability-scanner/,0.045747440277397834
+tfidf_fields,holdout-17,discover hidden web paths,3,213,https://gtfobins.org/gtfobins/at/,0.030167072089924037
+tfidf_fields,holdout-17,discover hidden web paths,4,305,https://www.wireshark.org/docs/wsug_html_chunked/ChCapInterfaceSection.html,0.02806918807206869
+tfidf_fields,holdout-17,discover hidden web paths,5,248,https://www.wireshark.org/docs/wsug_html_chunked/ChUseHelpMenuSection.html,0.026195540419119073
+tfidf_fields,holdout-18,recursive web directory discovery,1,633,https://nmap.org/book/man-host-discovery.html,0.21015213779194533
+tfidf_fields,holdout-18,recursive web directory discovery,2,194,https://nmap.org/book/host-discovery-controls.html,0.19164903400348862
+tfidf_fields,holdout-18,recursive web directory discovery,3,201,https://nmap.org/book/host-discovery-techniques.html,0.1771373072837994
+tfidf_fields,holdout-18,recursive web directory discovery,4,215,https://nmap.org/book/host-discovery-algorithms.html,0.16516944738289532
+tfidf_fields,holdout-18,recursive web directory discovery,5,166,https://nmap.org/book/host-discovery.html,0.15597233181892864
+tfidf_fields,holdout-19,detect sql injection automatically,1,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,0.3341527485188853
+tfidf_fields,holdout-19,detect sql injection automatically,2,578,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-write-a-cmd-injection-module.html,0.1548498257530588
+tfidf_fields,holdout-19,detect sql injection automatically,3,691,https://docs.metasploit.com/docs/development/developing-modules/libraries/using-reflectivedll-injection.html,0.12012747329007825
+tfidf_fields,holdout-19,detect sql injection automatically,4,521,https://nmap.org/book/nmap-defenses-detection.html,0.11763588854534593
+tfidf_fields,holdout-19,detect sql injection automatically,5,27,https://nmap.org/book/firewalls.html,0.05799386288680053
+tfidf_fields,holdout-20,audit wireless wpa handshake,1,237,https://www.wireshark.org/docs/wsug_html_chunked/ChUseWirelessMenuSection.html,0.12038811395459775
+tfidf_fields,holdout-20,audit wireless wpa handshake,2,307,https://www.kali.org/tools/cisco-auditing-tool/,0.09659540978029983
+tfidf_fields,holdout-20,audit wireless wpa handshake,3,436,https://nmap.org/book/osdetect-find-rogue-ap.html,0.08519205806285358
+tfidf_fields,holdout-20,audit wireless wpa handshake,4,763,https://www.kali.org/tools/fern-wifi-cracker/,0.04367039983945231
+tfidf_fields,holdout-20,audit wireless wpa handshake,5,768,https://www.kali.org/tools/wifite/,0.04313276840562303
+tfidf_fields,holdout-21,identify password hash format,1,728,https://www.kali.org/tools/hash-identifier/,0.13267286394310254
+tfidf_fields,holdout-21,identify password hash format,2,692,https://www.kali.org/tools/passing-the-hash/,0.11760258772266782
+tfidf_fields,holdout-21,identify password hash format,3,319,https://docs.metasploit.com/docs/using-metasploit/intermediate/hashes-and-password-cracking.html,0.07376876417590965
+tfidf_fields,holdout-21,identify password hash format,4,446,https://nmap.org/book/nse-script-format.html,0.06937535267213574
+tfidf_fields,holdout-21,identify password hash format,5,727,https://www.kali.org/tools/hashid/,0.051566755242384986
+tfidf_fields,holdout-22,generate metasploit payload,1,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,0.2610883368919452
+tfidf_fields,holdout-22,generate metasploit payload,2,329,https://docs.metasploit.com/docs/using-metasploit/intermediate/payload-uuid.html,0.20338730279232603
+tfidf_fields,holdout-22,generate metasploit payload,3,569,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-use-fetch-payloads.html,0.19638688237917787
+tfidf_fields,holdout-22,generate metasploit payload,4,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,0.15423581196336633
+tfidf_fields,holdout-22,generate metasploit payload,5,353,https://docs.metasploit.com/docs/using-metasploit/advanced/metasploit-web-service.html,0.15008075104769494
+tfidf_fields,holdout-23,use metasploit exploit module,1,279,https://docs.metasploit.com/docs/using-metasploit/basics/module-documentation.html,0.2485206848299028
+tfidf_fields,holdout-23,use metasploit exploit module,2,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,0.24214313742749444
+tfidf_fields,holdout-23,use metasploit exploit module,3,28,https://docs.metasploit.com/docs/pentesting/metasploit-guide-setting-module-options.html,0.24204320196277096
+tfidf_fields,holdout-23,use metasploit exploit module,4,590,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,0.23831823057674065
+tfidf_fields,holdout-23,use metasploit exploit module,5,581,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-write-a-browser-exploit-using-httpserver.html,0.2217850733324852
+tfidf_fields,holdout-24,find gtfobins sudo binary techniques,1,171,https://gtfobins.org/gtfobins/as/,0.3204800123444186
+tfidf_fields,holdout-24,find gtfobins sudo binary techniques,2,213,https://gtfobins.org/gtfobins/at/,0.3195880007759204
+tfidf_fields,holdout-24,find gtfobins sudo binary techniques,3,116,https://gtfobins.org/gtfobins/apt/,0.3006577792319775
+tfidf_fields,holdout-24,find gtfobins sudo binary techniques,4,37,https://gtfobins.org/gtfobins/R/,0.2810235449241239
+tfidf_fields,holdout-24,find gtfobins sudo binary techniques,5,490,https://gtfobins.org/gtfobins/code/,0.28020356692612675
+tfidf_fields_proximity,holdout-01,capture packets to pcap file,1,526,https://docs.metasploit.com/docs/development/get-started/sanitizing-pcaps.html,0.18224580299973203
+tfidf_fields_proximity,holdout-01,capture packets to pcap file,2,325,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFiles.html,0.16316495228778513
+tfidf_fields_proximity,holdout-01,capture packets to pcap file,3,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,0.15067786450805104
+tfidf_fields_proximity,holdout-01,capture packets to pcap file,4,359,https://www.wireshark.org/docs/wsug_html_chunked/ChIOMergeSection.html,0.14231702704246757
+tfidf_fields_proximity,holdout-01,capture packets to pcap file,5,210,https://www.wireshark.org/docs/wsug_html_chunked/ChUseCaptureMenuSection.html,0.12958930163078647
+tfidf_fields_proximity,holdout-02,decrypt tls sessions with key log,1,197,https://docs.mitmproxy.org/stable/howto/wireshark-tls/,0.1909064309604727
+tfidf_fields_proximity,holdout-02,decrypt tls sessions with key log,2,216,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/keytab.html,0.15513888592213385
+tfidf_fields_proximity,holdout-02,decrypt tls sessions with key log,3,424,https://gtfobins.org/gtfobins/check_log/,0.08997279324255435
+tfidf_fields_proximity,holdout-02,decrypt tls sessions with key log,4,675,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-log-in-metasploit.html,0.06627122854772338
+tfidf_fields_proximity,holdout-02,decrypt tls sessions with key log,5,378,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-debugging-meterpreter-sessions.html,0.06495110292973585
+tfidf_fields_proximity,holdout-03,filter packets by ip address,1,403,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayFilterSection.html,0.206699432177083
+tfidf_fields_proximity,holdout-03,filter packets by ip address,2,549,https://nmap.org/book/zenmap-filter.html,0.1783749502249232
+tfidf_fields_proximity,holdout-03,filter packets by ip address,3,114,https://docs.mitmproxy.org/stable/concepts/filters/,0.15962867214847531
+tfidf_fields_proximity,holdout-03,filter packets by ip address,4,180,https://nmap.org/book/host-discovery-find-ips.html,0.1383870525533314
+tfidf_fields_proximity,holdout-03,filter packets by ip address,5,393,https://www.wireshark.org/docs/wsug_html_chunked/ChapterWork.html,0.13101854529490706
+tfidf_fields_proximity,holdout-04,mitmproxy modify http response,1,857,https://www.kali.org/tools/mitmproxy/,0.38748864528654503
+tfidf_fields_proximity,holdout-04,mitmproxy modify http response,2,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,0.37564310359761355
+tfidf_fields_proximity,holdout-04,mitmproxy modify http response,3,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,0.2919286790838551
+tfidf_fields_proximity,holdout-04,mitmproxy modify http response,4,666,https://docs.metasploit.com/docs/development/developing-modules/libraries/http/how-to-parse-an-http-response.html,0.08903850457779687
+tfidf_fields_proximity,holdout-04,mitmproxy modify http response,5,81,https://docs.mitmproxy.org/stable/mitmproxytutorial-replayrequests/,0.0556451980421052
+tfidf_fields_proximity,holdout-05,install proxy certificate android,1,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.2988746064156467
+tfidf_fields_proximity,holdout-05,install proxy certificate android,2,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,0.2073546333842632
+tfidf_fields_proximity,holdout-05,install proxy certificate android,3,102,https://docs.mitmproxy.org/stable/concepts/modes/,0.18885519676378748
+tfidf_fields_proximity,holdout-05,install proxy certificate android,4,75,https://frida.re/docs/android/,0.16102015998857502
+tfidf_fields_proximity,holdout-05,install proxy certificate android,5,109,https://frida.re/docs/examples/android/,0.1557803644944538
+tfidf_fields_proximity,holdout-06,replay captured http requests,1,81,https://docs.mitmproxy.org/stable/mitmproxytutorial-replayrequests/,0.5337654819634008
+tfidf_fields_proximity,holdout-06,replay captured http requests,2,225,https://docs.mitmproxy.org/stable/tutorials/client-replay/,0.37328999429037135
+tfidf_fields_proximity,holdout-06,replay captured http requests,3,393,https://www.wireshark.org/docs/wsug_html_chunked/ChapterWork.html,0.18751243508299043
+tfidf_fields_proximity,holdout-06,replay captured http requests,4,300,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCapturingSection.html,0.17585056149745623
+tfidf_fields_proximity,holdout-06,replay captured http requests,5,291,https://www.wireshark.org/docs/wsug_html_chunked/ChapterCapture.html,0.17460851359273974
+tfidf_fields_proximity,holdout-07,frida attach running process,1,129,https://frida.re/docs/frida-ps/,0.22853327363505546
+tfidf_fields_proximity,holdout-07,frida attach running process,2,96,https://frida.re/docs/examples/linux/,0.22324749912699335
+tfidf_fields_proximity,holdout-07,frida attach running process,3,149,https://frida.re/docs/frida-ls-devices/,0.20183907966388484
+tfidf_fields_proximity,holdout-07,frida attach running process,4,205,https://frida.re/docs/go-api/,0.1997978786260742
+tfidf_fields_proximity,holdout-07,frida attach running process,5,122,https://frida.re/docs/frida-cli/,0.1975728979837347
+tfidf_fields_proximity,holdout-08,hook java method android,1,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,0.14922356763472042
+tfidf_fields_proximity,holdout-08,hook java method android,2,109,https://frida.re/docs/examples/android/,0.14548568438918655
+tfidf_fields_proximity,holdout-08,hook java method android,3,75,https://frida.re/docs/android/,0.13250274071291246
+tfidf_fields_proximity,holdout-08,hook java method android,4,645,https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/generating-ysoserial-java-serialized-objects.html,0.11742195035540791
+tfidf_fields_proximity,holdout-08,hook java method android,5,575,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-write-a-check-method.html,0.05237082210883455
+tfidf_fields_proximity,holdout-09,list loaded native libraries,1,461,https://nmap.org/book/nse-library.html,0.11923605429467787
+tfidf_fields_proximity,holdout-09,list loaded native libraries,2,540,https://nmap.org/book/zenmap-saving.html,0.08510896807894704
+tfidf_fields_proximity,holdout-09,list loaded native libraries,3,350,https://gtfobins.org/gtfobins/byebug/,0.026792053319053957
+tfidf_fields_proximity,holdout-09,list loaded native libraries,4,13,https://gtfobins.org/scope/,0.02524925127741918
+tfidf_fields_proximity,holdout-09,list loaded native libraries,5,5,https://frida.re/docs/home/,0.02226525946479482
+tfidf_fields_proximity,holdout-10,extract source code from dex,1,490,https://gtfobins.org/gtfobins/code/,0.054421779870683244
+tfidf_fields_proximity,holdout-10,extract source code from dex,2,125,https://nmap.org/book/inst-source.html,0.04294639175000088
+tfidf_fields_proximity,holdout-10,extract source code from dex,3,215,https://nmap.org/book/host-discovery-algorithms.html,0.0384674022180937
+tfidf_fields_proximity,holdout-10,extract source code from dex,4,313,https://nmap.org/book/port-scanning-algorithms.html,0.03538059245218724
+tfidf_fields_proximity,holdout-10,extract source code from dex,5,582,https://www.kali.org/tools/bytecode-viewer/,0.03269006791958628
+tfidf_fields_proximity,holdout-11,inspect apk resources,1,202,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/inspect_ticket.html,0.1606517119433898
+tfidf_fields_proximity,holdout-11,inspect apk resources,2,57,https://nmap.org/book/resources.html,0.14453055363249934
+tfidf_fields_proximity,holdout-11,inspect apk resources,3,223,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/rbcd.html,0.041639779662899216
+tfidf_fields_proximity,holdout-11,inspect apk resources,4,579,https://www.kali.org/tools/apktool/,0.03253877173673656
+tfidf_fields_proximity,holdout-11,inspect apk resources,5,88,https://docs.mitmproxy.org/stable/mitmproxytutorial-whatsnext/,0.026780547065522905
+tfidf_fields_proximity,holdout-12,convert dex to jar,1,188,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/ticket_converter.html,0.07111236690693609
+tfidf_fields_proximity,holdout-12,convert dex to jar,2,582,https://www.kali.org/tools/bytecode-viewer/,0.04595149956021472
+tfidf_fields_proximity,holdout-12,convert dex to jar,3,593,https://www.kali.org/tools/dex2jar/,0.0391957844437011
+tfidf_fields_proximity,holdout-12,convert dex to jar,4,366,https://www.kali.org/tools/paros/,0.03746474438036788
+tfidf_fields_proximity,holdout-12,convert dex to jar,5,585,https://www.kali.org/tools/jadx/,0.02890319507280439
+tfidf_fields_proximity,holdout-13,nmap service version detection,1,644,https://nmap.org/book/man-version-detection.html,0.5597691762652686
+tfidf_fields_proximity,holdout-13,nmap service version detection,2,347,https://nmap.org/book/vscan.html,0.3924222881712003
+tfidf_fields_proximity,holdout-13,nmap service version detection,3,647,https://nmap.org/book/man-os-detection.html,0.3695418890122607
+tfidf_fields_proximity,holdout-13,nmap service version detection,4,480,https://nmap.org/book/nse-vscan.html,0.32214511311286115
+tfidf_fields_proximity,holdout-13,nmap service version detection,5,392,https://nmap.org/book/osdetect.html,0.26932141493213446
+tfidf_fields_proximity,holdout-14,nmap operating system detection,1,647,https://nmap.org/book/man-os-detection.html,0.3227159634342008
+tfidf_fields_proximity,holdout-14,nmap operating system detection,2,644,https://nmap.org/book/man-version-detection.html,0.3211716677543696
+tfidf_fields_proximity,holdout-14,nmap operating system detection,3,480,https://nmap.org/book/nse-vscan.html,0.2533413149050579
+tfidf_fields_proximity,holdout-14,nmap operating system detection,4,347,https://nmap.org/book/vscan.html,0.23796202186911142
+tfidf_fields_proximity,holdout-14,nmap operating system detection,5,392,https://nmap.org/book/osdetect.html,0.23157266536475793
+tfidf_fields_proximity,holdout-15,nmap udp scan,1,532,https://nmap.org/book/zenmap-scanning.html,0.4135596247039835
+tfidf_fields_proximity,holdout-15,nmap udp scan,2,267,https://nmap.org/book/scan-methods-udp-scan.html,0.3738122297749274
+tfidf_fields_proximity,holdout-15,nmap udp scan,3,352,https://nmap.org/book/vscan-examples.html,0.3693265087412384
+tfidf_fields_proximity,holdout-15,nmap udp scan,4,396,https://nmap.org/book/osdetect-usage.html,0.3669821390906483
+tfidf_fields_proximity,holdout-15,nmap udp scan,5,441,https://nmap.org/book/nse-usage.html,0.3662715299631396
+tfidf_fields_proximity,holdout-16,nmap host discovery without port scan,1,633,https://nmap.org/book/man-host-discovery.html,0.508995246723045
+tfidf_fields_proximity,holdout-16,nmap host discovery without port scan,2,194,https://nmap.org/book/host-discovery-controls.html,0.44303117389800634
+tfidf_fields_proximity,holdout-16,nmap host discovery without port scan,3,201,https://nmap.org/book/host-discovery-techniques.html,0.4198896486802114
+tfidf_fields_proximity,holdout-16,nmap host discovery without port scan,4,215,https://nmap.org/book/host-discovery-algorithms.html,0.39629623588924356
+tfidf_fields_proximity,holdout-16,nmap host discovery without port scan,5,166,https://nmap.org/book/host-discovery.html,0.3840527946389573
+tfidf_fields_proximity,holdout-17,discover hidden web paths,1,353,https://docs.metasploit.com/docs/using-metasploit/advanced/metasploit-web-service.html,0.07236374905044739
+tfidf_fields_proximity,holdout-17,discover hidden web paths,2,400,https://www.kali.org/tools/web-cache-vulnerability-scanner/,0.045840171575257424
+tfidf_fields_proximity,holdout-17,discover hidden web paths,3,213,https://gtfobins.org/gtfobins/at/,0.030468742810823277
+tfidf_fields_proximity,holdout-17,discover hidden web paths,4,305,https://www.wireshark.org/docs/wsug_html_chunked/ChCapInterfaceSection.html,0.02806918807206869
+tfidf_fields_proximity,holdout-17,discover hidden web paths,5,248,https://www.wireshark.org/docs/wsug_html_chunked/ChUseHelpMenuSection.html,0.026981406631692646
+tfidf_fields_proximity,holdout-18,recursive web directory discovery,1,633,https://nmap.org/book/man-host-discovery.html,0.21029542334043985
+tfidf_fields_proximity,holdout-18,recursive web directory discovery,2,194,https://nmap.org/book/host-discovery-controls.html,0.1919495290045394
+tfidf_fields_proximity,holdout-18,recursive web directory discovery,3,201,https://nmap.org/book/host-discovery-techniques.html,0.17735509905504995
+tfidf_fields_proximity,holdout-18,recursive web directory discovery,4,215,https://nmap.org/book/host-discovery-algorithms.html,0.16516944738289532
+tfidf_fields_proximity,holdout-18,recursive web directory discovery,5,166,https://nmap.org/book/host-discovery.html,0.15597233181892864
+tfidf_fields_proximity,holdout-19,detect sql injection automatically,1,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,0.3842756607967181
+tfidf_fields_proximity,holdout-19,detect sql injection automatically,2,578,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-write-a-cmd-injection-module.html,0.1548498257530588
+tfidf_fields_proximity,holdout-19,detect sql injection automatically,3,691,https://docs.metasploit.com/docs/development/developing-modules/libraries/using-reflectivedll-injection.html,0.12012747329007825
+tfidf_fields_proximity,holdout-19,detect sql injection automatically,4,521,https://nmap.org/book/nmap-defenses-detection.html,0.11763588854534593
+tfidf_fields_proximity,holdout-19,detect sql injection automatically,5,27,https://nmap.org/book/firewalls.html,0.05799386288680053
+tfidf_fields_proximity,holdout-20,audit wireless wpa handshake,1,237,https://www.wireshark.org/docs/wsug_html_chunked/ChUseWirelessMenuSection.html,0.12038811395459775
+tfidf_fields_proximity,holdout-20,audit wireless wpa handshake,2,307,https://www.kali.org/tools/cisco-auditing-tool/,0.09659540978029983
+tfidf_fields_proximity,holdout-20,audit wireless wpa handshake,3,436,https://nmap.org/book/osdetect-find-rogue-ap.html,0.08519205806285358
+tfidf_fields_proximity,holdout-20,audit wireless wpa handshake,4,763,https://www.kali.org/tools/fern-wifi-cracker/,0.04434804397489209
+tfidf_fields_proximity,holdout-20,audit wireless wpa handshake,5,768,https://www.kali.org/tools/wifite/,0.04328381701093455
+tfidf_fields_proximity,holdout-21,identify password hash format,1,728,https://www.kali.org/tools/hash-identifier/,0.1364042882415023
+tfidf_fields_proximity,holdout-21,identify password hash format,2,692,https://www.kali.org/tools/passing-the-hash/,0.12348271710880122
+tfidf_fields_proximity,holdout-21,identify password hash format,3,319,https://docs.metasploit.com/docs/using-metasploit/intermediate/hashes-and-password-cracking.html,0.07406515653197357
+tfidf_fields_proximity,holdout-21,identify password hash format,4,446,https://nmap.org/book/nse-script-format.html,0.06937535267213574
+tfidf_fields_proximity,holdout-21,identify password hash format,5,727,https://www.kali.org/tools/hashid/,0.052494956836747916
+tfidf_fields_proximity,holdout-22,generate metasploit payload,1,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,0.2784942260180749
+tfidf_fields_proximity,holdout-22,generate metasploit payload,2,329,https://docs.metasploit.com/docs/using-metasploit/intermediate/payload-uuid.html,0.24406476335079122
+tfidf_fields_proximity,holdout-22,generate metasploit payload,3,569,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-use-fetch-payloads.html,0.21602557061709568
+tfidf_fields_proximity,holdout-22,generate metasploit payload,4,324,https://docs.metasploit.com/docs/using-metasploit/intermediate/how-to-use-plugins.html,0.1701651930809348
+tfidf_fields_proximity,holdout-22,generate metasploit payload,5,2,https://docs.metasploit.com/,0.15938204421444208
+tfidf_fields_proximity,holdout-23,use metasploit exploit module,1,279,https://docs.metasploit.com/docs/using-metasploit/basics/module-documentation.html,0.26094671907139794
+tfidf_fields_proximity,holdout-23,use metasploit exploit module,2,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,0.2603038727345565
+tfidf_fields_proximity,holdout-23,use metasploit exploit module,3,28,https://docs.metasploit.com/docs/pentesting/metasploit-guide-setting-module-options.html,0.25880003902173204
+tfidf_fields_proximity,holdout-23,use metasploit exploit module,4,590,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,0.2561920978699962
+tfidf_fields_proximity,holdout-23,use metasploit exploit module,5,581,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-write-a-browser-exploit-using-httpserver.html,0.2384189538324216
+tfidf_fields_proximity,holdout-24,find gtfobins sudo binary techniques,1,171,https://gtfobins.org/gtfobins/as/,0.3204800123444186
+tfidf_fields_proximity,holdout-24,find gtfobins sudo binary techniques,2,213,https://gtfobins.org/gtfobins/at/,0.3195880007759204
+tfidf_fields_proximity,holdout-24,find gtfobins sudo binary techniques,3,116,https://gtfobins.org/gtfobins/apt/,0.3006577792319775
+tfidf_fields_proximity,holdout-24,find gtfobins sudo binary techniques,4,37,https://gtfobins.org/gtfobins/R/,0.2810235449241239
+tfidf_fields_proximity,holdout-24,find gtfobins sudo binary techniques,5,490,https://gtfobins.org/gtfobins/code/,0.28020356692612675

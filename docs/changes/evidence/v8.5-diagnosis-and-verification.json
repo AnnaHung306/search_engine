@@ -1,0 +1,135 @@
+{
+  "baseline": "78f4664",
+  "old_sudo_write_variants": 12,
+  "old_sudo_append_evidence": 0,
+  "old_host_cap_skips": [
+    {
+      "url": "https://gtfobins.org/gtfobins/hashcat/",
+      "status": "skipped",
+      "reason": "host_cap"
+    },
+    {
+      "url": "https://gtfobins.org/gtfobins/screen/",
+      "status": "skipped",
+      "reason": "host_cap"
+    },
+    {
+      "url": "https://gtfobins.org/gtfobins/tee/",
+      "status": "skipped",
+      "reason": "host_cap"
+    }
+  ],
+  "old_regression_top5": [
+    "https://gtfobins.org/gtfobins/comm/",
+    "https://gtfobins.org/contributing/",
+    "https://gtfobins.org/gtfobins/column/",
+    "https://gtfobins.org/gtfobins/csh/",
+    "https://gtfobins.org/gtfobins/ash/"
+  ],
+  "old_compat_searches_exact": 558,
+  "original_data_files_byte_identical": 776,
+  "collection_sizes": [
+    980,
+    983
+  ],
+  "expanded_gtfobins_documents": 103,
+  "replayed_new_rank_rows": 130,
+  "relation_build_reproduced_both": true,
+  "append_context_guard_checks": [
+    "GTFOBins sudo preserve existing contents of a file",
+    "GTFOBins sudo append to a file and run a reverse shell",
+    "GTFOBins non-append file writes",
+    "GTFOBins alternatives for appending text to a file with sudo"
+  ],
+  "review_corrections": 1,
+  "p3_by_group": {
+    "regression": {
+      "expanded_v84": 0.6666666666666666,
+      "append": 1.0
+    },
+    "append": {
+      "expanded_v84": 0.6666666666666666,
+      "append": 1.0
+    },
+    "context": {
+      "expanded_v84": 0.3333333333333333,
+      "append": 0.6666666666666666
+    },
+    "control": {
+      "expanded_v84": 0.5833333333333334,
+      "append": 0.5833333333333334
+    },
+    "new": {
+      "expanded_v84": 0.5277777777777778,
+      "append": 0.75
+    }
+  },
+  "warm_timing": {
+    "expanded_v84": {
+      "median_ms": 2.3696669999999997,
+      "p95_ms": 3.17976715,
+      "samples": 390
+    },
+    "append": {
+      "median_ms": 2.4212290000000003,
+      "p95_ms": 3.30490215,
+      "samples": 390
+    }
+  },
+  "query_median_ms": {
+    "gtfo-08": {
+      "expanded_v84": 2.268042,
+      "append": 2.3962495
+    },
+    "app-01": {
+      "expanded_v84": 2.4076044999999997,
+      "append": 2.515104
+    },
+    "app-02": {
+      "expanded_v84": 2.8715625,
+      "append": 2.9619790000000004
+    },
+    "app-03": {
+      "expanded_v84": 2.8604380000000003,
+      "append": 3.0610835
+    },
+    "app-04": {
+      "expanded_v84": 1.9161044999999999,
+      "append": 2.0484169999999997
+    },
+    "app-05": {
+      "expanded_v84": 1.969125,
+      "append": 2.042354
+    },
+    "app-06": {
+      "expanded_v84": 2.5053124999999996,
+      "append": 2.4415829999999996
+    },
+    "app-07": {
+      "expanded_v84": 2.7794375000000002,
+      "append": 3.1723125
+    },
+    "app-08": {
+      "expanded_v84": 1.8491875,
+      "append": 2.147875
+    },
+    "app-09": {
+      "expanded_v84": 2.7785835,
+      "append": 2.8454375
+    },
+    "app-10": {
+      "expanded_v84": 2.025771,
+      "append": 2.0450835
+    },
+    "app-11": {
+      "expanded_v84": 2.231062,
+      "append": 2.2567915000000003
+    },
+    "app-12": {
+      "expanded_v84": 2.5613330000000003,
+      "append": 2.678146
+    }
+  },
+  "scores_sha256": "a2c6903992833c339e86d27e26b3ed95cd2206b1d970a1a0659a4ff0fd87d3ba",
+  "no_temporary_test_files": true
+}

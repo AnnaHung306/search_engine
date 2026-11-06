@@ -1,0 +1,109 @@
+system,query_id,query,precision_at_5
+tfidf,development-01,tls certificate proxy setup,0.4
+tfidf,development-02,android dynamic instrumentation,0.2
+tfidf,development-03,tcp syn scan,0.6
+tfidf,development-04,dns reconnaissance,0.6
+tfidf,development-05,offline password hash recovery,0.4
+tfidf,development-06,http request interception,0.6
+tfidf,development-07,apk resource decoding,0.4
+tfidf,development-08,network traffic display filter,0.4
+tfidf,development-09,service banner detection,0.8
+tfidf,development-10,web content discovery,0.2
+tfidf,development-11,metasploit session management,0.4
+tfidf,development-12,sudo binary capabilities,0.2
+tfidf_cov,development-01,tls certificate proxy setup,0.8
+tfidf_cov,development-02,android dynamic instrumentation,0.8
+tfidf_cov,development-03,tcp syn scan,0.6
+tfidf_cov,development-04,dns reconnaissance,0.8
+tfidf_cov,development-05,offline password hash recovery,0.4
+tfidf_cov,development-06,http request interception,0.6
+tfidf_cov,development-07,apk resource decoding,0.4
+tfidf_cov,development-08,network traffic display filter,0.4
+tfidf_cov,development-09,service banner detection,0.8
+tfidf_cov,development-10,web content discovery,0.4
+tfidf_cov,development-11,metasploit session management,0.6
+tfidf_cov,development-12,sudo binary capabilities,0.0
+tfidf_pivot,development-01,tls certificate proxy setup,0.6
+tfidf_pivot,development-02,android dynamic instrumentation,0.8
+tfidf_pivot,development-03,tcp syn scan,0.8
+tfidf_pivot,development-04,dns reconnaissance,0.6
+tfidf_pivot,development-05,offline password hash recovery,0.4
+tfidf_pivot,development-06,http request interception,1.0
+tfidf_pivot,development-07,apk resource decoding,0.4
+tfidf_pivot,development-08,network traffic display filter,0.4
+tfidf_pivot,development-09,service banner detection,1.0
+tfidf_pivot,development-10,web content discovery,0.0
+tfidf_pivot,development-11,metasploit session management,0.6
+tfidf_pivot,development-12,sudo binary capabilities,0.2
+tfidf_pivot_cov,development-01,tls certificate proxy setup,0.8
+tfidf_pivot_cov,development-02,android dynamic instrumentation,0.8
+tfidf_pivot_cov,development-03,tcp syn scan,0.8
+tfidf_pivot_cov,development-04,dns reconnaissance,0.8
+tfidf_pivot_cov,development-05,offline password hash recovery,0.4
+tfidf_pivot_cov,development-06,http request interception,0.8
+tfidf_pivot_cov,development-07,apk resource decoding,0.4
+tfidf_pivot_cov,development-08,network traffic display filter,0.2
+tfidf_pivot_cov,development-09,service banner detection,0.8
+tfidf_pivot_cov,development-10,web content discovery,0.4
+tfidf_pivot_cov,development-11,metasploit session management,0.6
+tfidf_pivot_cov,development-12,sudo binary capabilities,0.2
+bm25,development-01,tls certificate proxy setup,0.6
+bm25,development-02,android dynamic instrumentation,0.8
+bm25,development-03,tcp syn scan,1.0
+bm25,development-04,dns reconnaissance,0.8
+bm25,development-05,offline password hash recovery,0.6
+bm25,development-06,http request interception,0.8
+bm25,development-07,apk resource decoding,0.4
+bm25,development-08,network traffic display filter,0.2
+bm25,development-09,service banner detection,1.0
+bm25,development-10,web content discovery,0.4
+bm25,development-11,metasploit session management,0.6
+bm25,development-12,sudo binary capabilities,0.2
+bm25_boost_syn,development-01,tls certificate proxy setup,0.6
+bm25_boost_syn,development-02,android dynamic instrumentation,1.0
+bm25_boost_syn,development-03,tcp syn scan,0.8
+bm25_boost_syn,development-04,dns reconnaissance,0.8
+bm25_boost_syn,development-05,offline password hash recovery,0.6
+bm25_boost_syn,development-06,http request interception,0.8
+bm25_boost_syn,development-07,apk resource decoding,0.4
+bm25_boost_syn,development-08,network traffic display filter,0.4
+bm25_boost_syn,development-09,service banner detection,1.0
+bm25_boost_syn,development-10,web content discovery,0.0
+bm25_boost_syn,development-11,metasploit session management,0.6
+bm25_boost_syn,development-12,sudo binary capabilities,0.2
+tfidf_proximity,development-01,tls certificate proxy setup,0.4
+tfidf_proximity,development-02,android dynamic instrumentation,0.2
+tfidf_proximity,development-03,tcp syn scan,0.8
+tfidf_proximity,development-04,dns reconnaissance,0.6
+tfidf_proximity,development-05,offline password hash recovery,0.4
+tfidf_proximity,development-06,http request interception,0.6
+tfidf_proximity,development-07,apk resource decoding,0.4
+tfidf_proximity,development-08,network traffic display filter,0.4
+tfidf_proximity,development-09,service banner detection,0.8
+tfidf_proximity,development-10,web content discovery,0.2
+tfidf_proximity,development-11,metasploit session management,0.4
+tfidf_proximity,development-12,sudo binary capabilities,0.2
+tfidf_fields,development-01,tls certificate proxy setup,0.4
+tfidf_fields,development-02,android dynamic instrumentation,0.8
+tfidf_fields,development-03,tcp syn scan,0.4
+tfidf_fields,development-04,dns reconnaissance,0.6
+tfidf_fields,development-05,offline password hash recovery,0.6
+tfidf_fields,development-06,http request interception,0.6
+tfidf_fields,development-07,apk resource decoding,0.4
+tfidf_fields,development-08,network traffic display filter,0.6
+tfidf_fields,development-09,service banner detection,0.6
+tfidf_fields,development-10,web content discovery,0.0
+tfidf_fields,development-11,metasploit session management,0.4
+tfidf_fields,development-12,sudo binary capabilities,0.2
+tfidf_fields_proximity,development-01,tls certificate proxy setup,0.4
+tfidf_fields_proximity,development-02,android dynamic instrumentation,0.8
+tfidf_fields_proximity,development-03,tcp syn scan,0.6
+tfidf_fields_proximity,development-04,dns reconnaissance,0.8
+tfidf_fields_proximity,development-05,offline password hash recovery,0.4
+tfidf_fields_proximity,development-06,http request interception,0.6
+tfidf_fields_proximity,development-07,apk resource decoding,0.4
+tfidf_fields_proximity,development-08,network traffic display filter,0.8
+tfidf_fields_proximity,development-09,service banner detection,0.8
+tfidf_fields_proximity,development-10,web content discovery,0.0
+tfidf_fields_proximity,development-11,metasploit session management,0.4
+tfidf_fields_proximity,development-12,sudo binary capabilities,0.2

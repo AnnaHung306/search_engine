@@ -1,0 +1,21 @@
+system,query_id,query,rank,doc_id,url,score
+expanded_v85,app-10,GTFOBins alternatives for appending text to a file with sudo,1,124,https://www.kali.org/tools/nmap/,11.71076400552037
+expanded_v85,app-10,GTFOBins alternatives for appending text to a file with sudo,2,981,https://gtfobins.org/gtfobins/screen/,11.15203061505642
+expanded_v85,app-10,GTFOBins alternatives for appending text to a file with sudo,3,982,https://gtfobins.org/gtfobins/tee/,10.710699367538613
+expanded_v85,app-10,GTFOBins alternatives for appending text to a file with sudo,4,501,https://gtfobins.org/gtfobins/comm/,10.655226695609631
+expanded_v85,app-10,GTFOBins alternatives for appending text to a file with sudo,5,980,https://gtfobins.org/gtfobins/hashcat/,10.423816575316595
+expanded_v85,app-11,GTFOBins sudo overwrite a local file,1,150,https://gtfobins.org/gtfobins/aria2c/,13.540788655022464
+expanded_v85,app-11,GTFOBins sudo overwrite a local file,2,20,https://gtfobins.org/contributing/,9.26708833634733
+expanded_v85,app-11,GTFOBins sudo overwrite a local file,3,424,https://gtfobins.org/gtfobins/check_log/,8.522649217581403
+expanded_v85,app-11,GTFOBins sudo overwrite a local file,4,13,https://gtfobins.org/scope/,8.450022003191773
+expanded_v85,app-11,GTFOBins sudo overwrite a local file,5,260,https://gtfobins.org/gtfobins/base58/,8.355244420954596
+effects,app-10,GTFOBins alternatives for appending text to a file with sudo,1,985,https://wiki.debian.org/BootstrapBootableSystem,7.17501367874083
+effects,app-10,GTFOBins alternatives for appending text to a file with sudo,2,984,https://documentation.ubuntu.com/security/security-features/network/version-banners/vsftpd/,1.8906641087474485
+effects,app-10,GTFOBins alternatives for appending text to a file with sudo,3,983,https://documentation.ubuntu.com/security/security-features/network/version-banners/apache2/,1.3551453498641857
+effects,app-10,GTFOBins alternatives for appending text to a file with sudo,4,124,https://www.kali.org/tools/nmap/,11.71076400552037
+effects,app-10,GTFOBins alternatives for appending text to a file with sudo,5,713,https://www.kali.org/tools/stegsnow/,10.168060757842706
+effects,app-11,GTFOBins sudo overwrite a local file,1,150,https://gtfobins.org/gtfobins/aria2c/,13.540788655022464
+effects,app-11,GTFOBins sudo overwrite a local file,2,982,https://gtfobins.org/gtfobins/tee/,8.228542098957735
+effects,app-11,GTFOBins sudo overwrite a local file,3,538,https://gtfobins.org/gtfobins/csh/,8.077138379911611
+effects,app-11,GTFOBins sudo overwrite a local file,4,192,https://gtfobins.org/gtfobins/ash/,8.077138379911611
+effects,app-11,GTFOBins sudo overwrite a local file,5,515,https://gtfobins.org/gtfobins/cp/,7.929100907697956

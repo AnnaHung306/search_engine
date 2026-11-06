@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9b9-2de8-7430-9d88-5cf1c42d1b66"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"886e381e8e874e5cec06-4\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"本段列出編譯器選項，未提供網頁內容或隱藏路徑枚舉工具或技術。\",\"evidence\":\"-I <dir> Add directory to the end of the list of include search paths\"},{\"decision_id\":\"d0f3b25012d7d22f6cd9-4\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"本段的插樁是編譯器函式插樁選項，未說明執行中 Android 應用的 Java 方法掛鉤。\",\"evidence\":\"-finstrument-functions Generate calls to instrument function entry and exit\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":39629,"cached_input_tokens":25472,"cache_write_input_tokens":0,"output_tokens":184,"reasoning_output_tokens":0}}

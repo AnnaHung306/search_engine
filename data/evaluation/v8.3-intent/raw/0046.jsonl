@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa24-e134-7b83-a4b4-c861960481d9"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\n  \"decisions\": [\n    {\n      \"decision_id\": \"f6d2057fa86131fa2bd4-19\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"此段說明 LLVM 的 JIT 符號解析選項，未提供列舉指定已載入原生模組匯出符號的功能。\",\n      \"evidence\": \"--no-process-syms - Do not resolve lli process symbols in JIT'd code\"\n    }\n  ]\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":40301,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":126,"reasoning_output_tokens":0}}

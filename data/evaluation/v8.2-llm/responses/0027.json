@@ -1,0 +1,174 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "d656ec283145c155c71e8c0c099f286d94c461652e17a7fef4799e753266bb1c",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "b5e3ed99e4d5d112c3f6a36c16017e34d96573d3c1fcd0ffde1c9ea65c592f64",
+  "started_at": 1793848551.281337,
+  "finished_at": 1793848586.86257,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "1eaf1061bf1e49256405-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明 TLS 解密所需的 session keys、key log file，以及 Wireshark 匯出流程。",
+        "evidence": "Decryption of TLS traffic requires TLS secrets. You can get them in the form of stored session keys in a \"key log file\""
+      },
+      {
+        "decision_id": "d6832ab3c0eb6b16376c-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供錄製 HTTP 登入請求並以 mitmdump 重播的操作流程。",
+        "evidence": "you can replay it at any time like this: mitmdump -C wireless-login"
+      },
+      {
+        "decision_id": "2f0951e4fc910c116a31-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確說明選取既有請求並按 r 再次送往伺服器。",
+        "evidence": "Every time you press r , mitmproxy sends this request to the server again and updates the flow."
+      },
+      {
+        "decision_id": "5c2e25b485ca2473745d-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹請求重播與重播前修改 flow，未說明回應編輯或 response hook。",
+        "evidence": "In this tutorial we focus on the more common use case of client-side replays."
+      },
+      {
+        "decision_id": "f462a444768ce1b7e59e-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容是既有請求重播，未提供暫停攔截並檢查請求的流程。",
+        "evidence": "Client-side Replay: mitmproxy replays previous client requests, i.e., sends the same request to the server again."
+      },
+      {
+        "decision_id": "0c9677a440ee02bce9ce-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅提出新增 SQLi 程式庫支援的開發構想，未記載可操作的 SQLi 工具。",
+        "evidence": "Enable faster implementation of SQL injection based exploit modules by adding library support for common injection attack vectors."
+      },
+      {
+        "decision_id": "e1dad176e8d8f8c418bc-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "描述 SQLi 模組開發支援提案，沒有自動偵測或利用工具的說明。",
+        "evidence": "Enable faster implementation of SQL injection based exploit modules by adding library support for common injection attack vectors."
+      },
+      {
+        "decision_id": "81fbb62e2e8db1ae4c9b-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容是 Linux 安裝 Nmap，沒有 GTFOBins sudo 功能或技巧。",
+        "evidence": "Here are simple package instructions for the most common distributions."
+      },
+      {
+        "decision_id": "4b7d0e9c925fa5ae272c-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "主要記載 keytab 管理與 Kerberos 解密；雖提及離線暴力破解，未提供破解工具或流程。",
+        "evidence": "The modules/auxiliary/admin/kerberos/keytab module provides utilities for interacting with MIT keytab files"
+      },
+      {
+        "decision_id": "833c147bb20971380727-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明以 keytab 解密 Kerberos，未說明擷取後流量篩選。",
+        "evidence": "Configuring Wireshark with a Keytab file can decrypt these values automatically."
+      },
+      {
+        "decision_id": "8514fe57d723cf9910e8-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "處理 Kerberos keytab 解密，並非 TLS session keys 或 key log 解密。",
+        "evidence": "Decrypting Kerberos traffic in wireshark"
+      },
+      {
+        "decision_id": "b9e494144edc42862ca4-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅記載 Kerberos 流量解密，未提供 HTTPS/TLS 攔截或解密方法。",
+        "evidence": "Keytab files can be also useful for decrypting Kerberos traffic using Wireshark dissectors"
+      },
+      {
+        "decision_id": "5492c1fd38583371fb0e-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明擷取輸出檔名及 pcapng、pcap 格式設定。",
+        "evidence": "Output format Allows you to set the format of the capture file. pcapng is the default and is more flexible than pcap."
+      },
+      {
+        "decision_id": "affed430813312430c02-0",
+        "relevant": 1,
+        "confidence": "medium",
+        "reason": "明確記載可用 frame.process 欄位篩選封包的程序資訊，提供分析篩選能力。",
+        "evidence": "They are shown under “Process information” in the frame details, and can be filtered on with the frame.process fields."
+      },
+      {
+        "decision_id": "c2033235bb822bc3b67a-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供 Windows reverse shell 產生器與 handler，並列出操作範例。",
+        "evidence": "Hoaxshell is a Windows reverse shell payload generator and handler that abuses the http(s) protocol to establish a beacon-like reverse shell"
+      },
+      {
+        "decision_id": "086c6ca4477273c9e43c-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "記載目錄探測工具選擇、字典與副檔名等設定。",
+        "evidence": "The tool to use for directory busting. Default: feroxbuster"
+      },
+      {
+        "decision_id": "4f2ceff005c53b88c34b-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確提供子網域枚舉的基礎網域與字典設定。",
+        "evidence": "The domain to use as the base domain (e.g. example.com) for subdomain enumeration."
+      },
+      {
+        "decision_id": "acfaa2616d405a9d5d2b-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確提供啟用遞迴目錄搜尋的選項。",
+        "evidence": "--dirbuster.recursive Enables recursive searching (where available)."
+      }
+    ]
+  }
+}

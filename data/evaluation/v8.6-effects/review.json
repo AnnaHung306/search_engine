@@ -1,0 +1,19 @@
+{
+  "review_origin": "llm",
+  "reviewer": "Codex assistant, second-pass evidence review",
+  "independence": "Same workflow after initial scoring. Not independent or human validation.",
+  "scope": "Reviewed the 116 pair decisions against the declared same-example requirement and authoritative command semantics. One correction applies equally to both systems.",
+  "policy_sha256": "f711380ae5fb95e5e89404b687b3a1288413d642936ea3601db285b487d26c3c",
+  "initial_judgments_sha256": "0950dd56ef5b7059e7f0a202b22acc68e26d7c07031bb856299870ae0ca7de34",
+  "decisions": [
+    {
+      "pair_id": "2f6834bb6f5ea9467605",
+      "previous_relevant": 1,
+      "relevant": 0,
+      "confidence": "high",
+      "review_origin": "llm",
+      "reason": "原文證明可指定輸出檔，未交代既有內容會被覆寫還是追加。沿用同一覆寫題的判定規則。",
+      "evidence": "check_log -F /path/to/input-file -O /path/to/output-file"
+    }
+  ]
+}

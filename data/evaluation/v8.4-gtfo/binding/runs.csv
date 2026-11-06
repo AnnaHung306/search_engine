@@ -1,0 +1,81 @@
+system,query_id,query,rank,doc_id,url,score
+v83,gtfo-09,GTFOBins read a local file under sudo,1,355,https://gtfobins.org/gtfobins/bzip2/,13.789039228817657
+v83,gtfo-09,GTFOBins read a local file under sudo,2,424,https://gtfobins.org/gtfobins/check_log/,10.69250274471693
+v83,gtfo-09,GTFOBins read a local file under sudo,3,20,https://gtfobins.org/contributing/,10.655067094645718
+v83,gtfo-09,GTFOBins read a local file under sudo,4,260,https://gtfobins.org/gtfobins/base58/,10.577248817668913
+v83,gtfo-09,GTFOBins read a local file under sudo,5,185,https://gtfobins.org/gtfobins/ascii85/,10.577248817668913
+v83,gtfo-10,GTFOBins read protected files with setuid,1,281,https://gtfobins.org/gtfobins/bash/,11.387730172746483
+v83,gtfo-10,GTFOBins read protected files with setuid,2,20,https://gtfobins.org/contributing/,7.283240069948981
+v83,gtfo-10,GTFOBins read protected files with setuid,3,444,https://gtfobins.org/gtfobins/check_statusfile/,7.036626566143979
+v83,gtfo-10,GTFOBins read protected files with setuid,4,260,https://gtfobins.org/gtfobins/base58/,7.018687335169018
+v83,gtfo-10,GTFOBins read protected files with setuid,5,185,https://gtfobins.org/gtfobins/ascii85/,7.018687335169018
+v83,gtfo-11,GTFOBins SUID interactive shell,1,13,https://gtfobins.org/scope/,16.99559794031049
+v83,gtfo-11,GTFOBins SUID interactive shell,2,62,https://gtfobins.org/gtfobins/agetty/,16.922157579720356
+v83,gtfo-11,GTFOBins SUID interactive shell,3,462,https://gtfobins.org/gtfobins/chroot/,16.748136867434496
+v83,gtfo-11,GTFOBins SUID interactive shell,4,474,https://gtfobins.org/gtfobins/clisp/,16.73422779062003
+v83,gtfo-11,GTFOBins SUID interactive shell,5,37,https://gtfobins.org/gtfobins/R/,16.702460196153115
+v83,gtfo-12,GTFOBins sudo noninteractive command execution,1,20,https://gtfobins.org/contributing/,10.441797983526865
+v83,gtfo-12,GTFOBins sudo noninteractive command execution,2,13,https://gtfobins.org/scope/,9.965705870128025
+v83,gtfo-12,GTFOBins sudo noninteractive command execution,3,486,https://gtfobins.org/gtfobins/cobc/,9.901021103157996
+v83,gtfo-12,GTFOBins sudo noninteractive command execution,4,213,https://gtfobins.org/gtfobins/at/,7.2045481503151905
+v83,gtfo-12,GTFOBins sudo noninteractive command execution,5,530,https://gtfobins.org/gtfobins/crash/,7.1914972529553935
+function,gtfo-09,GTFOBins read a local file under sudo,1,355,https://gtfobins.org/gtfobins/bzip2/,13.789039228817657
+function,gtfo-09,GTFOBins read a local file under sudo,2,424,https://gtfobins.org/gtfobins/check_log/,10.69250274471693
+function,gtfo-09,GTFOBins read a local file under sudo,3,260,https://gtfobins.org/gtfobins/base58/,10.577248817668913
+function,gtfo-09,GTFOBins read a local file under sudo,4,185,https://gtfobins.org/gtfobins/ascii85/,10.577248817668913
+function,gtfo-09,GTFOBins read a local file under sudo,5,444,https://gtfobins.org/gtfobins/check_statusfile/,10.56089537551367
+function,gtfo-10,GTFOBins read protected files with setuid,1,281,https://gtfobins.org/gtfobins/bash/,11.387730172746483
+function,gtfo-10,GTFOBins read protected files with setuid,2,444,https://gtfobins.org/gtfobins/check_statusfile/,7.036626566143979
+function,gtfo-10,GTFOBins read protected files with setuid,3,260,https://gtfobins.org/gtfobins/base58/,7.018687335169018
+function,gtfo-10,GTFOBins read protected files with setuid,4,185,https://gtfobins.org/gtfobins/ascii85/,7.018687335169018
+function,gtfo-10,GTFOBins read protected files with setuid,5,434,https://gtfobins.org/gtfobins/check_raid/,7.016721496666781
+function,gtfo-11,GTFOBins SUID interactive shell,1,62,https://gtfobins.org/gtfobins/agetty/,16.922157579720356
+function,gtfo-11,GTFOBins SUID interactive shell,2,462,https://gtfobins.org/gtfobins/chroot/,16.748136867434496
+function,gtfo-11,GTFOBins SUID interactive shell,3,474,https://gtfobins.org/gtfobins/clisp/,16.73422779062003
+function,gtfo-11,GTFOBins SUID interactive shell,4,37,https://gtfobins.org/gtfobins/R/,16.702460196153115
+function,gtfo-11,GTFOBins SUID interactive shell,5,206,https://gtfobins.org/gtfobins/asterisk/,16.63779705808747
+function,gtfo-12,GTFOBins sudo noninteractive command execution,1,213,https://gtfobins.org/gtfobins/at/,7.2045481503151905
+function,gtfo-12,GTFOBins sudo noninteractive command execution,2,530,https://gtfobins.org/gtfobins/crash/,7.1914972529553935
+function,gtfo-12,GTFOBins sudo noninteractive command execution,3,534,https://gtfobins.org/gtfobins/crontab/,7.159096158810794
+function,gtfo-12,GTFOBins sudo noninteractive command execution,4,55,https://gtfobins.org/gtfobins/acr/,6.946074337886126
+function,gtfo-12,GTFOBins sudo noninteractive command execution,5,150,https://gtfobins.org/gtfobins/aria2c/,6.425050230627651
+paired,gtfo-09,GTFOBins read a local file under sudo,1,355,https://gtfobins.org/gtfobins/bzip2/,13.789039228817657
+paired,gtfo-09,GTFOBins read a local file under sudo,2,424,https://gtfobins.org/gtfobins/check_log/,10.69250274471693
+paired,gtfo-09,GTFOBins read a local file under sudo,3,260,https://gtfobins.org/gtfobins/base58/,10.577248817668913
+paired,gtfo-09,GTFOBins read a local file under sudo,4,185,https://gtfobins.org/gtfobins/ascii85/,10.577248817668913
+paired,gtfo-09,GTFOBins read a local file under sudo,5,444,https://gtfobins.org/gtfobins/check_statusfile/,10.56089537551367
+paired,gtfo-10,GTFOBins read protected files with setuid,1,281,https://gtfobins.org/gtfobins/bash/,11.387730172746483
+paired,gtfo-10,GTFOBins read protected files with setuid,2,390,https://gtfobins.org/gtfobins/cat/,6.974569797364348
+paired,gtfo-10,GTFOBins read protected files with setuid,3,171,https://gtfobins.org/gtfobins/as/,6.971107224376124
+paired,gtfo-10,GTFOBins read protected files with setuid,4,276,https://gtfobins.org/gtfobins/basez/,6.953855945300683
+paired,gtfo-10,GTFOBins read protected files with setuid,5,265,https://gtfobins.org/gtfobins/base64/,6.953855945300683
+paired,gtfo-11,GTFOBins SUID interactive shell,1,62,https://gtfobins.org/gtfobins/agetty/,16.922157579720356
+paired,gtfo-11,GTFOBins SUID interactive shell,2,462,https://gtfobins.org/gtfobins/chroot/,16.748136867434496
+paired,gtfo-11,GTFOBins SUID interactive shell,3,474,https://gtfobins.org/gtfobins/clisp/,16.73422779062003
+paired,gtfo-11,GTFOBins SUID interactive shell,4,37,https://gtfobins.org/gtfobins/R/,16.702460196153115
+paired,gtfo-11,GTFOBins SUID interactive shell,5,206,https://gtfobins.org/gtfobins/asterisk/,16.63779705808747
+paired,gtfo-12,GTFOBins sudo noninteractive command execution,1,213,https://gtfobins.org/gtfobins/at/,7.2045481503151905
+paired,gtfo-12,GTFOBins sudo noninteractive command execution,2,530,https://gtfobins.org/gtfobins/crash/,7.1914972529553935
+paired,gtfo-12,GTFOBins sudo noninteractive command execution,3,534,https://gtfobins.org/gtfobins/crontab/,7.159096158810794
+paired,gtfo-12,GTFOBins sudo noninteractive command execution,4,55,https://gtfobins.org/gtfobins/acr/,6.946074337886126
+paired,gtfo-12,GTFOBins sudo noninteractive command execution,5,150,https://gtfobins.org/gtfobins/aria2c/,6.425050230627651
+verified,gtfo-09,GTFOBins read a local file under sudo,1,355,https://gtfobins.org/gtfobins/bzip2/,13.789039228817657
+verified,gtfo-09,GTFOBins read a local file under sudo,2,424,https://gtfobins.org/gtfobins/check_log/,10.69250274471693
+verified,gtfo-09,GTFOBins read a local file under sudo,3,260,https://gtfobins.org/gtfobins/base58/,10.577248817668913
+verified,gtfo-09,GTFOBins read a local file under sudo,4,185,https://gtfobins.org/gtfobins/ascii85/,10.577248817668913
+verified,gtfo-09,GTFOBins read a local file under sudo,5,444,https://gtfobins.org/gtfobins/check_statusfile/,10.56089537551367
+verified,gtfo-10,GTFOBins read protected files with setuid,1,281,https://gtfobins.org/gtfobins/bash/,11.387730172746483
+verified,gtfo-10,GTFOBins read protected files with setuid,2,390,https://gtfobins.org/gtfobins/cat/,6.974569797364348
+verified,gtfo-10,GTFOBins read protected files with setuid,3,171,https://gtfobins.org/gtfobins/as/,6.971107224376124
+verified,gtfo-10,GTFOBins read protected files with setuid,4,276,https://gtfobins.org/gtfobins/basez/,6.953855945300683
+verified,gtfo-10,GTFOBins read protected files with setuid,5,265,https://gtfobins.org/gtfobins/base64/,6.953855945300683
+verified,gtfo-11,GTFOBins SUID interactive shell,1,62,https://gtfobins.org/gtfobins/agetty/,16.922157579720356
+verified,gtfo-11,GTFOBins SUID interactive shell,2,462,https://gtfobins.org/gtfobins/chroot/,16.748136867434496
+verified,gtfo-11,GTFOBins SUID interactive shell,3,474,https://gtfobins.org/gtfobins/clisp/,16.73422779062003
+verified,gtfo-11,GTFOBins SUID interactive shell,4,37,https://gtfobins.org/gtfobins/R/,16.702460196153115
+verified,gtfo-11,GTFOBins SUID interactive shell,5,206,https://gtfobins.org/gtfobins/asterisk/,16.63779705808747
+verified,gtfo-12,GTFOBins sudo noninteractive command execution,1,213,https://gtfobins.org/gtfobins/at/,7.2045481503151905
+verified,gtfo-12,GTFOBins sudo noninteractive command execution,2,530,https://gtfobins.org/gtfobins/crash/,7.1914972529553935
+verified,gtfo-12,GTFOBins sudo noninteractive command execution,3,534,https://gtfobins.org/gtfobins/crontab/,7.159096158810794
+verified,gtfo-12,GTFOBins sudo noninteractive command execution,4,55,https://gtfobins.org/gtfobins/acr/,6.946074337886126
+verified,gtfo-12,GTFOBins sudo noninteractive command execution,5,150,https://gtfobins.org/gtfobins/aria2c/,6.425050230627651

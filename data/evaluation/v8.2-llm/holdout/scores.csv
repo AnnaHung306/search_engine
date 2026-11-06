@@ -1,0 +1,217 @@
+system,query_id,query,precision_at_5
+tfidf,holdout-01,capture packets to pcap file,0.2
+tfidf,holdout-02,decrypt tls sessions with key log,0.6
+tfidf,holdout-03,filter packets by ip address,0.4
+tfidf,holdout-04,mitmproxy modify http response,0.0
+tfidf,holdout-05,install proxy certificate android,0.4
+tfidf,holdout-06,replay captured http requests,0.4
+tfidf,holdout-07,frida attach running process,0.6
+tfidf,holdout-08,hook java method android,0.2
+tfidf,holdout-09,list loaded native libraries,0.0
+tfidf,holdout-10,extract source code from dex,0.8
+tfidf,holdout-11,inspect apk resources,0.4
+tfidf,holdout-12,convert dex to jar,0.4
+tfidf,holdout-13,nmap service version detection,0.6
+tfidf,holdout-14,nmap operating system detection,0.6
+tfidf,holdout-15,nmap udp scan,0.6
+tfidf,holdout-16,nmap host discovery without port scan,0.2
+tfidf,holdout-17,discover hidden web paths,0.2
+tfidf,holdout-18,recursive web directory discovery,0.2
+tfidf,holdout-19,detect sql injection automatically,0.4
+tfidf,holdout-20,audit wireless wpa handshake,0.6
+tfidf,holdout-21,identify password hash format,0.4
+tfidf,holdout-22,generate metasploit payload,0.4
+tfidf,holdout-23,use metasploit exploit module,0.0
+tfidf,holdout-24,find gtfobins sudo binary techniques,1.0
+tfidf_cov,holdout-01,capture packets to pcap file,0.8
+tfidf_cov,holdout-02,decrypt tls sessions with key log,0.4
+tfidf_cov,holdout-03,filter packets by ip address,0.2
+tfidf_cov,holdout-04,mitmproxy modify http response,0.6
+tfidf_cov,holdout-05,install proxy certificate android,0.4
+tfidf_cov,holdout-06,replay captured http requests,0.4
+tfidf_cov,holdout-07,frida attach running process,0.8
+tfidf_cov,holdout-08,hook java method android,0.6
+tfidf_cov,holdout-09,list loaded native libraries,0.0
+tfidf_cov,holdout-10,extract source code from dex,0.6
+tfidf_cov,holdout-11,inspect apk resources,0.4
+tfidf_cov,holdout-12,convert dex to jar,0.4
+tfidf_cov,holdout-13,nmap service version detection,0.8
+tfidf_cov,holdout-14,nmap operating system detection,0.8
+tfidf_cov,holdout-15,nmap udp scan,0.8
+tfidf_cov,holdout-16,nmap host discovery without port scan,0.6
+tfidf_cov,holdout-17,discover hidden web paths,0.0
+tfidf_cov,holdout-18,recursive web directory discovery,0.6
+tfidf_cov,holdout-19,detect sql injection automatically,0.4
+tfidf_cov,holdout-20,audit wireless wpa handshake,0.8
+tfidf_cov,holdout-21,identify password hash format,0.4
+tfidf_cov,holdout-22,generate metasploit payload,0.6
+tfidf_cov,holdout-23,use metasploit exploit module,0.0
+tfidf_cov,holdout-24,find gtfobins sudo binary techniques,0.0
+tfidf_pivot,holdout-01,capture packets to pcap file,0.6
+tfidf_pivot,holdout-02,decrypt tls sessions with key log,0.4
+tfidf_pivot,holdout-03,filter packets by ip address,0.4
+tfidf_pivot,holdout-04,mitmproxy modify http response,0.8
+tfidf_pivot,holdout-05,install proxy certificate android,0.4
+tfidf_pivot,holdout-06,replay captured http requests,0.8
+tfidf_pivot,holdout-07,frida attach running process,1.0
+tfidf_pivot,holdout-08,hook java method android,0.6
+tfidf_pivot,holdout-09,list loaded native libraries,0.0
+tfidf_pivot,holdout-10,extract source code from dex,0.8
+tfidf_pivot,holdout-11,inspect apk resources,0.4
+tfidf_pivot,holdout-12,convert dex to jar,0.4
+tfidf_pivot,holdout-13,nmap service version detection,1.0
+tfidf_pivot,holdout-14,nmap operating system detection,1.0
+tfidf_pivot,holdout-15,nmap udp scan,1.0
+tfidf_pivot,holdout-16,nmap host discovery without port scan,1.0
+tfidf_pivot,holdout-17,discover hidden web paths,0.4
+tfidf_pivot,holdout-18,recursive web directory discovery,0.6
+tfidf_pivot,holdout-19,detect sql injection automatically,0.6
+tfidf_pivot,holdout-20,audit wireless wpa handshake,1.0
+tfidf_pivot,holdout-21,identify password hash format,0.4
+tfidf_pivot,holdout-22,generate metasploit payload,0.8
+tfidf_pivot,holdout-23,use metasploit exploit module,0.6
+tfidf_pivot,holdout-24,find gtfobins sudo binary techniques,0.0
+tfidf_pivot_cov,holdout-01,capture packets to pcap file,0.6
+tfidf_pivot_cov,holdout-02,decrypt tls sessions with key log,0.4
+tfidf_pivot_cov,holdout-03,filter packets by ip address,0.4
+tfidf_pivot_cov,holdout-04,mitmproxy modify http response,0.8
+tfidf_pivot_cov,holdout-05,install proxy certificate android,0.4
+tfidf_pivot_cov,holdout-06,replay captured http requests,0.4
+tfidf_pivot_cov,holdout-07,frida attach running process,1.0
+tfidf_pivot_cov,holdout-08,hook java method android,0.4
+tfidf_pivot_cov,holdout-09,list loaded native libraries,0.0
+tfidf_pivot_cov,holdout-10,extract source code from dex,0.6
+tfidf_pivot_cov,holdout-11,inspect apk resources,0.4
+tfidf_pivot_cov,holdout-12,convert dex to jar,0.4
+tfidf_pivot_cov,holdout-13,nmap service version detection,1.0
+tfidf_pivot_cov,holdout-14,nmap operating system detection,1.0
+tfidf_pivot_cov,holdout-15,nmap udp scan,1.0
+tfidf_pivot_cov,holdout-16,nmap host discovery without port scan,0.8
+tfidf_pivot_cov,holdout-17,discover hidden web paths,0.0
+tfidf_pivot_cov,holdout-18,recursive web directory discovery,0.8
+tfidf_pivot_cov,holdout-19,detect sql injection automatically,0.6
+tfidf_pivot_cov,holdout-20,audit wireless wpa handshake,1.0
+tfidf_pivot_cov,holdout-21,identify password hash format,0.6
+tfidf_pivot_cov,holdout-22,generate metasploit payload,0.8
+tfidf_pivot_cov,holdout-23,use metasploit exploit module,0.6
+tfidf_pivot_cov,holdout-24,find gtfobins sudo binary techniques,0.0
+bm25,holdout-01,capture packets to pcap file,0.4
+bm25,holdout-02,decrypt tls sessions with key log,0.4
+bm25,holdout-03,filter packets by ip address,0.4
+bm25,holdout-04,mitmproxy modify http response,1.0
+bm25,holdout-05,install proxy certificate android,0.4
+bm25,holdout-06,replay captured http requests,0.8
+bm25,holdout-07,frida attach running process,1.0
+bm25,holdout-08,hook java method android,0.6
+bm25,holdout-09,list loaded native libraries,0.0
+bm25,holdout-10,extract source code from dex,0.8
+bm25,holdout-11,inspect apk resources,0.4
+bm25,holdout-12,convert dex to jar,0.4
+bm25,holdout-13,nmap service version detection,1.0
+bm25,holdout-14,nmap operating system detection,1.0
+bm25,holdout-15,nmap udp scan,1.0
+bm25,holdout-16,nmap host discovery without port scan,0.8
+bm25,holdout-17,discover hidden web paths,0.6
+bm25,holdout-18,recursive web directory discovery,0.6
+bm25,holdout-19,detect sql injection automatically,0.6
+bm25,holdout-20,audit wireless wpa handshake,0.8
+bm25,holdout-21,identify password hash format,0.6
+bm25,holdout-22,generate metasploit payload,0.8
+bm25,holdout-23,use metasploit exploit module,0.6
+bm25,holdout-24,find gtfobins sudo binary techniques,0.0
+bm25_boost_syn,holdout-01,capture packets to pcap file,0.6
+bm25_boost_syn,holdout-02,decrypt tls sessions with key log,0.4
+bm25_boost_syn,holdout-03,filter packets by ip address,0.4
+bm25_boost_syn,holdout-04,mitmproxy modify http response,0.6
+bm25_boost_syn,holdout-05,install proxy certificate android,0.4
+bm25_boost_syn,holdout-06,replay captured http requests,0.8
+bm25_boost_syn,holdout-07,frida attach running process,1.0
+bm25_boost_syn,holdout-08,hook java method android,0.4
+bm25_boost_syn,holdout-09,list loaded native libraries,0.0
+bm25_boost_syn,holdout-10,extract source code from dex,0.8
+bm25_boost_syn,holdout-11,inspect apk resources,0.4
+bm25_boost_syn,holdout-12,convert dex to jar,0.4
+bm25_boost_syn,holdout-13,nmap service version detection,1.0
+bm25_boost_syn,holdout-14,nmap operating system detection,1.0
+bm25_boost_syn,holdout-15,nmap udp scan,0.8
+bm25_boost_syn,holdout-16,nmap host discovery without port scan,0.8
+bm25_boost_syn,holdout-17,discover hidden web paths,0.6
+bm25_boost_syn,holdout-18,recursive web directory discovery,0.6
+bm25_boost_syn,holdout-19,detect sql injection automatically,0.6
+bm25_boost_syn,holdout-20,audit wireless wpa handshake,0.8
+bm25_boost_syn,holdout-21,identify password hash format,0.6
+bm25_boost_syn,holdout-22,generate metasploit payload,0.8
+bm25_boost_syn,holdout-23,use metasploit exploit module,0.8
+bm25_boost_syn,holdout-24,find gtfobins sudo binary techniques,0.4
+tfidf_proximity,holdout-01,capture packets to pcap file,0.4
+tfidf_proximity,holdout-02,decrypt tls sessions with key log,0.6
+tfidf_proximity,holdout-03,filter packets by ip address,0.4
+tfidf_proximity,holdout-04,mitmproxy modify http response,0.0
+tfidf_proximity,holdout-05,install proxy certificate android,0.4
+tfidf_proximity,holdout-06,replay captured http requests,0.4
+tfidf_proximity,holdout-07,frida attach running process,0.4
+tfidf_proximity,holdout-08,hook java method android,0.2
+tfidf_proximity,holdout-09,list loaded native libraries,0.0
+tfidf_proximity,holdout-10,extract source code from dex,0.8
+tfidf_proximity,holdout-11,inspect apk resources,0.4
+tfidf_proximity,holdout-12,convert dex to jar,0.4
+tfidf_proximity,holdout-13,nmap service version detection,0.8
+tfidf_proximity,holdout-14,nmap operating system detection,0.6
+tfidf_proximity,holdout-15,nmap udp scan,0.6
+tfidf_proximity,holdout-16,nmap host discovery without port scan,0.4
+tfidf_proximity,holdout-17,discover hidden web paths,0.2
+tfidf_proximity,holdout-18,recursive web directory discovery,0.2
+tfidf_proximity,holdout-19,detect sql injection automatically,0.4
+tfidf_proximity,holdout-20,audit wireless wpa handshake,0.6
+tfidf_proximity,holdout-21,identify password hash format,0.4
+tfidf_proximity,holdout-22,generate metasploit payload,0.4
+tfidf_proximity,holdout-23,use metasploit exploit module,0.2
+tfidf_proximity,holdout-24,find gtfobins sudo binary techniques,1.0
+tfidf_fields,holdout-01,capture packets to pcap file,0.2
+tfidf_fields,holdout-02,decrypt tls sessions with key log,0.2
+tfidf_fields,holdout-03,filter packets by ip address,0.4
+tfidf_fields,holdout-04,mitmproxy modify http response,0.2
+tfidf_fields,holdout-05,install proxy certificate android,0.4
+tfidf_fields,holdout-06,replay captured http requests,0.4
+tfidf_fields,holdout-07,frida attach running process,0.6
+tfidf_fields,holdout-08,hook java method android,0.2
+tfidf_fields,holdout-09,list loaded native libraries,0.0
+tfidf_fields,holdout-10,extract source code from dex,0.2
+tfidf_fields,holdout-11,inspect apk resources,0.2
+tfidf_fields,holdout-12,convert dex to jar,0.4
+tfidf_fields,holdout-13,nmap service version detection,0.6
+tfidf_fields,holdout-14,nmap operating system detection,0.8
+tfidf_fields,holdout-15,nmap udp scan,0.2
+tfidf_fields,holdout-16,nmap host discovery without port scan,0.8
+tfidf_fields,holdout-17,discover hidden web paths,0.0
+tfidf_fields,holdout-18,recursive web directory discovery,0.0
+tfidf_fields,holdout-19,detect sql injection automatically,0.0
+tfidf_fields,holdout-20,audit wireless wpa handshake,0.2
+tfidf_fields,holdout-21,identify password hash format,0.6
+tfidf_fields,holdout-22,generate metasploit payload,0.8
+tfidf_fields,holdout-23,use metasploit exploit module,0.4
+tfidf_fields,holdout-24,find gtfobins sudo binary techniques,1.0
+tfidf_fields_proximity,holdout-01,capture packets to pcap file,0.2
+tfidf_fields_proximity,holdout-02,decrypt tls sessions with key log,0.2
+tfidf_fields_proximity,holdout-03,filter packets by ip address,0.4
+tfidf_fields_proximity,holdout-04,mitmproxy modify http response,0.2
+tfidf_fields_proximity,holdout-05,install proxy certificate android,0.4
+tfidf_fields_proximity,holdout-06,replay captured http requests,0.4
+tfidf_fields_proximity,holdout-07,frida attach running process,0.6
+tfidf_fields_proximity,holdout-08,hook java method android,0.2
+tfidf_fields_proximity,holdout-09,list loaded native libraries,0.0
+tfidf_fields_proximity,holdout-10,extract source code from dex,0.2
+tfidf_fields_proximity,holdout-11,inspect apk resources,0.2
+tfidf_fields_proximity,holdout-12,convert dex to jar,0.4
+tfidf_fields_proximity,holdout-13,nmap service version detection,0.6
+tfidf_fields_proximity,holdout-14,nmap operating system detection,0.8
+tfidf_fields_proximity,holdout-15,nmap udp scan,0.2
+tfidf_fields_proximity,holdout-16,nmap host discovery without port scan,0.8
+tfidf_fields_proximity,holdout-17,discover hidden web paths,0.0
+tfidf_fields_proximity,holdout-18,recursive web directory discovery,0.0
+tfidf_fields_proximity,holdout-19,detect sql injection automatically,0.0
+tfidf_fields_proximity,holdout-20,audit wireless wpa handshake,0.2
+tfidf_fields_proximity,holdout-21,identify password hash format,0.6
+tfidf_fields_proximity,holdout-22,generate metasploit payload,0.6
+tfidf_fields_proximity,holdout-23,use metasploit exploit module,0.4
+tfidf_fields_proximity,holdout-24,find gtfobins sudo binary techniques,1.0

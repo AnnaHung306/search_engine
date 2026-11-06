@@ -1,0 +1,216 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "682018bfd485aca16d4b72e9a768e424abebe041ac672eb672737e81f2e81dc6",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "c0af150ba30ca3075f714d11f8eb6cb0e27ea50a6df943716a21bdc07dad3f64",
+  "started_at": 1793848808.369238,
+  "finished_at": 1793848850.4227068,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "226d1ef8965ea8f13ede-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅記錄腳本自身通訊，未說明封包擷取或嗅探功能。",
+        "evidence": "all incoming and outgoing communication performed by scripts is printed."
+      },
+      {
+        "decision_id": "30f9315d4baca5e72aa5-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅以腳本名稱舉例，未具體說明自動 SQL 注入偵測能力。",
+        "evidence": "Examples include sniffer-detect and sql-injection ."
+      },
+      {
+        "decision_id": "43578ac94620b2ce9258-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確說明使用 -sn 僅進行主機探索而不掃描連接埠。",
+        "evidence": "With the -sn option it is possible to run a script scan without a port scan, only host discovery."
+      },
+      {
+        "decision_id": "5dcdfeebea0d55620f55-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹 NSE 腳本選擇與執行，未記載網站目錄或隱藏內容探索。",
+        "evidence": "The --script option takes a comma-separated list of categories, filenames, and directory names."
+      },
+      {
+        "decision_id": "76946ae0de45cfcce5c2-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為腳本掃描操作，未解釋 UDP 連接埠掃描。",
+        "evidence": "Performs a script scan using the default set of scripts."
+      },
+      {
+        "decision_id": "ec6db1b9d6e61c301af1-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明 -sV 如何啟用版本偵測腳本及整合結果。",
+        "evidence": "A version scan automatically executes the scripts in the version category."
+      },
+      {
+        "decision_id": "56e9360ed6fbdfeabd48-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "轉換的是 Kerberos 票證格式，與 DEX 轉 JAR 無關。",
+        "evidence": "The auxiliary/admin/kerberos/ticket_converter module is used to convert from a ccache file format to the kirbi file format and vice versa."
+      },
+      {
+        "decision_id": "305ef5d915fc9a9e4d09-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅修改既有 PCAP 的位址，未說明擷取流量並存檔。",
+        "evidence": "Kali Linux tcprewrite can be used to change the IP and MAC addresses."
+      },
+      {
+        "decision_id": "be61f970e8c7d76e924e-0",
+        "relevant": 1,
+        "confidence": "medium",
+        "reason": "提供透過既有工作階段執行命令與互動的 API 及範例。",
+        "evidence": "Post exploitation mixins provide a consistent API for interacting with compromised systems across different session types (Meterpreter, shell, PowerShell)."
+      },
+      {
+        "decision_id": "16deb38241faac868cad-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明主機存活探索探測，未說明連接埠掃描方法。",
+        "evidence": "The goal of these probes is to solicit responses which demonstrate that an IP address is actually active (is being used by a host or network device)."
+      },
+      {
+        "decision_id": "23907e17d9ed1cf0f71c-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "DNS 僅出現在章節目錄，未提供 DNS 列舉能力或實質說明。",
+        "evidence": "Finding an Organization's IP Addresses DNS Tricks Whois Queries Against IP Registries Internet Routing Information DNS Resolution"
+      },
+      {
+        "decision_id": "6d5a6196cb71f9c56f0a-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為網路主機探索，未說明遞迴網站目錄探索。",
+        "evidence": "Host discovery can find those machines in a sparsely allocated sea of IP addresses."
+      },
+      {
+        "decision_id": "73e49ad7ddb8b5c77939-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為 Nmap 主機探索，沒有 GTFOBins 或 sudo 功能。",
+        "evidence": "This chapter first discusses how Nmap ping scanning works overall, with high-level control options."
+      },
+      {
+        "decision_id": "8ed69516e597377ffb0f-0",
+        "relevant": 1,
+        "confidence": "medium",
+        "reason": "列出停用連接埠掃描的 -sn，並說明以探測回應辨識活躍主機。",
+        "evidence": "Disable Port Scan ( -sn )"
+      },
+      {
+        "decision_id": "ad64e92fd64a7a2204c3-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "探索對象為活躍 IP 主機，非網站未連結內容。",
+        "evidence": "One of the very first steps in any network reconnaissance mission is to reduce a (sometimes huge) set of IP ranges into a list of active or interesting hosts."
+      },
+      {
+        "decision_id": "eb4d25d6fdff95a0f1fa-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "TCP SYN 用於主機存活探測，未說明 SYN 連接埠掃描。",
+        "evidence": "TCP SYN Ping ( -PS <port list> )"
+      },
+      {
+        "decision_id": "3d0bce10526fd3239906-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明開始與停止擷取，但未說明將封包儲存為 PCAP。",
+        "evidence": "Immediately starts capturing packets with the same settings as the last time."
+      },
+      {
+        "decision_id": "fdcca462c59f9d0de3f7-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "記載利用 WPS 雜湊等輸入離線還原 PIN 的工具與操作。",
+        "evidence": "Pixiewps is a tool written in C used to bruteforce offline the WPS pin exploiting the low or non-existing entropy of some APs (pixie dust attack)."
+      },
+      {
+        "decision_id": "07d85de7a1a59033ad4c-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "提供 WPA 密碼破解，未提供未知雜湊格式辨識。",
+        "evidence": "cowpatty Brute-force dictionary attack against WPA-PSK"
+      },
+      {
+        "decision_id": "addffd28be9da008be86-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確使用含四向交握的封包檔處理 WPA 密碼稽核。",
+        "evidence": "Supply a libpcap capture file that includes the 4-way handshake, a dictionary file of passphrases to guess with, and the SSID for the network."
+      },
+      {
+        "decision_id": "6d332fa9a183aa800ca5-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "只說明 Linux Docker 的執行設定，沒有 Android 插樁。",
+        "evidence": "In order to run Frida using Linux in Docker, you will need to start the container without seccomp"
+      },
+      {
+        "decision_id": "edeb6cfd60949b09ab19-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅提及測試 frida-trace，未說明附加既有程序或選擇程序。",
+        "evidence": "You can then use frida-trace to test out Frida."
+      },
+      {
+        "decision_id": "6951c9ec70116cbc69a6-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅介紹檢視流量與代理設定，未說明回應編輯或 hook。",
+        "evidence": "In this tutorial we have used mitmproxy to inspect requests initiated by curl."
+      },
+      {
+        "decision_id": "6ad5b80c5b4864128064-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為 mitmproxy 網頁流量檢視，與 APK 資源檢查無關。",
+        "evidence": "You probably also want to inspect web traffic from your browser or some other tool."
+      }
+    ]
+  }
+}

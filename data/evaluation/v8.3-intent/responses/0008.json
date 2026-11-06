@@ -1,0 +1,62 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "a2fd166014afe08a523699019ab1bfbb0204f72d49ba2ea47b3b04d31974073f",
+  "policy_sha256": "84cbbc3b3a00321871524241539824fab0d1248c0283925a98aec7bf8611f7a7",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "46bdd5bed8a01f9f67a2d4ed305e66a3a4867ce1f78691947df639fb5cc5e812",
+  "started_at": 1793855684.853733,
+  "finished_at": 1793855694.377054,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.3-intent/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "184ebfe2541c36a4a59c-5",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段列出 Clang 的編譯模組選項，未提供列舉 Linux 目前已載入核心模組的方法。",
+        "evidence": "-module-dependency-dir <value> Directory to dump module dependencies to -module-file-info Provide information about a particular module file"
+      },
+      {
+        "decision_id": "65f72513e1dd756d24b3-5",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段描述編譯時擷取 API 資訊，未提供列舉特定已載入原生模組匯出符號的方法。",
+        "evidence": "-emit-symbol-graph Generate Extract API information as a side effect of compilation."
+      }
+    ]
+  }
+}

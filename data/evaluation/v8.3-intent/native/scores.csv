@@ -1,0 +1,17 @@
+system,query_id,query,precision_at_5
+bm25,intent-05,show loaded shared libraries in a process,0.0
+bm25,intent-06,inspect loaded native modules in target process,0.2
+bm25,intent-07,enumerate libraries already loaded into a process,0.0
+bm25,intent-08,which native modules are loaded in this process,0.2
+bm25_source,intent-05,show loaded shared libraries in a process,0.0
+bm25_source,intent-06,inspect loaded native modules in target process,0.2
+bm25_source,intent-07,enumerate libraries already loaded into a process,0.0
+bm25_source,intent-08,which native modules are loaded in this process,0.2
+bm25_native,intent-05,show loaded shared libraries in a process,0.4
+bm25_native,intent-06,inspect loaded native modules in target process,0.4
+bm25_native,intent-07,enumerate libraries already loaded into a process,0.4
+bm25_native,intent-08,which native modules are loaded in this process,0.4
+bm25_intent,intent-05,show loaded shared libraries in a process,0.4
+bm25_intent,intent-06,inspect loaded native modules in target process,0.4
+bm25_intent,intent-07,enumerate libraries already loaded into a process,0.4
+bm25_intent,intent-08,which native modules are loaded in this process,0.4

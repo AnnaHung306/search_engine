@@ -1,0 +1,41 @@
+system,query_id,query,rank,doc_id,url,score
+expanded_v85,effect-09,GTFOBins sudo delete a local file,1,394,https://gtfobins.org/gtfobins/cc/,12.258324920273571
+expanded_v85,effect-09,GTFOBins sudo delete a local file,2,365,https://gtfobins.org/gtfobins/c99/,12.258324920273571
+expanded_v85,effect-09,GTFOBins sudo delete a local file,3,360,https://gtfobins.org/gtfobins/c89/,12.258324920273571
+expanded_v85,effect-09,GTFOBins sudo delete a local file,4,20,https://gtfobins.org/contributing/,9.26708833634733
+expanded_v85,effect-09,GTFOBins sudo delete a local file,5,424,https://gtfobins.org/gtfobins/check_log/,8.522649217581403
+expanded_v85,effect-10,GTFOBins sudo append lines to a local file,1,981,https://gtfobins.org/gtfobins/screen/,13.124086470299051
+expanded_v85,effect-10,GTFOBins sudo append lines to a local file,2,982,https://gtfobins.org/gtfobins/tee/,12.834937574278584
+expanded_v85,effect-10,GTFOBins sudo append lines to a local file,3,980,https://gtfobins.org/gtfobins/hashcat/,12.483356220725058
+expanded_v85,effect-10,GTFOBins sudo append lines to a local file,4,501,https://gtfobins.org/gtfobins/comm/,12.766488591084437
+expanded_v85,effect-10,GTFOBins sudo append lines to a local file,5,171,https://gtfobins.org/gtfobins/as/,10.250151787664594
+expanded_v85,effect-11,compare GTFOBins and Ubuntu ways to append text with sudo,1,573,https://www.kali.org/tools/rizin/,13.198940509260039
+expanded_v85,effect-11,compare GTFOBins and Ubuntu ways to append text with sudo,2,739,https://www.kali.org/tools/medusa/,12.268202555994877
+expanded_v85,effect-11,compare GTFOBins and Ubuntu ways to append text with sudo,3,398,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayPopUpSection.html,12.069644789848777
+expanded_v85,effect-11,compare GTFOBins and Ubuntu ways to append text with sudo,4,124,https://www.kali.org/tools/nmap/,12.062354748209133
+expanded_v85,effect-11,compare GTFOBins and Ubuntu ways to append text with sudo,5,393,https://www.wireshark.org/docs/wsug_html_chunked/ChapterWork.html,11.579187304129489
+expanded_v85,effect-12,non-GTFOBins SUID append text to a local file,1,982,https://gtfobins.org/gtfobins/tee/,17.17717393753665
+expanded_v85,effect-12,non-GTFOBins SUID append text to a local file,2,501,https://gtfobins.org/gtfobins/comm/,17.0907175432772
+expanded_v85,effect-12,non-GTFOBins SUID append text to a local file,3,13,https://gtfobins.org/scope/,16.199979173521584
+expanded_v85,effect-12,non-GTFOBins SUID append text to a local file,4,150,https://gtfobins.org/gtfobins/aria2c/,14.455494099390785
+expanded_v85,effect-12,non-GTFOBins SUID append text to a local file,5,55,https://gtfobins.org/gtfobins/acr/,13.516786614298892
+effects,effect-09,GTFOBins sudo delete a local file,1,394,https://gtfobins.org/gtfobins/cc/,12.258324920273571
+effects,effect-09,GTFOBins sudo delete a local file,2,365,https://gtfobins.org/gtfobins/c99/,12.258324920273571
+effects,effect-09,GTFOBins sudo delete a local file,3,360,https://gtfobins.org/gtfobins/c89/,12.258324920273571
+effects,effect-09,GTFOBins sudo delete a local file,4,20,https://gtfobins.org/contributing/,9.26708833634733
+effects,effect-09,GTFOBins sudo delete a local file,5,424,https://gtfobins.org/gtfobins/check_log/,8.522649217581403
+effects,effect-10,GTFOBins sudo append lines to a local file,1,981,https://gtfobins.org/gtfobins/screen/,13.124086470299051
+effects,effect-10,GTFOBins sudo append lines to a local file,2,982,https://gtfobins.org/gtfobins/tee/,12.834937574278584
+effects,effect-10,GTFOBins sudo append lines to a local file,3,980,https://gtfobins.org/gtfobins/hashcat/,12.483356220725058
+effects,effect-10,GTFOBins sudo append lines to a local file,4,501,https://gtfobins.org/gtfobins/comm/,12.766488591084437
+effects,effect-10,GTFOBins sudo append lines to a local file,5,171,https://gtfobins.org/gtfobins/as/,10.250151787664594
+effects,effect-11,compare GTFOBins and Ubuntu ways to append text with sudo,1,573,https://www.kali.org/tools/rizin/,13.198940509260039
+effects,effect-11,compare GTFOBins and Ubuntu ways to append text with sudo,2,739,https://www.kali.org/tools/medusa/,12.268202555994877
+effects,effect-11,compare GTFOBins and Ubuntu ways to append text with sudo,3,398,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayPopUpSection.html,12.069644789848777
+effects,effect-11,compare GTFOBins and Ubuntu ways to append text with sudo,4,124,https://www.kali.org/tools/nmap/,12.062354748209133
+effects,effect-11,compare GTFOBins and Ubuntu ways to append text with sudo,5,393,https://www.wireshark.org/docs/wsug_html_chunked/ChapterWork.html,11.579187304129489
+effects,effect-12,non-GTFOBins SUID append text to a local file,1,968,https://www.kali.org/tools/gemini-cli/,11.97735594629146
+effects,effect-12,non-GTFOBins SUID append text to a local file,2,971,https://www.kali.org/tools/powershell/,11.475389073254604
+effects,effect-12,non-GTFOBins SUID append text to a local file,3,46,https://docs.metasploit.com/docs/pentesting/metasploit-guide-http.html,11.273220325734076
+effects,effect-12,non-GTFOBins SUID append text to a local file,4,739,https://www.kali.org/tools/medusa/,11.23372601801752
+effects,effect-12,non-GTFOBins SUID append text to a local file,5,398,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayPopUpSection.html,11.167751365719418

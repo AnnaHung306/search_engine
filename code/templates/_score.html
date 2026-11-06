@@ -1,0 +1,13 @@
+{% if h.explanation %}{% set e=h.explanation %}
+        <details class="explanation"><summary>Why this result? · score {{ '%.6f'|format(h.score) }}</summary>
+          <p>Base score {{ '%.6f'|format(e.base_score) }} → final {{ '%.6f'|format(e.final_score) }}.</p>
+          {% if e.model=='tfidf' %}<p>Query L2 norm {{ '%.6f'|format(e.query_norm) }}.
+          {% if e.field_weight %}Field L2 norms: body {{ '%.6f'|format(e.body_norm) }}, title {{ '%.6f'|format(e.title_norm) }}, description {{ '%.6f'|format(e.description_norm) }}. Field cosine: (body + description + {{ e.field_weight }} × title) / {{ 2+e.field_weight }}. An empty field contributes zero.
+          {% else %}Document L2 norm {{ '%.6f'|format(e.document_norm) }}.{% if e.pivot %} Pivot slope {{ e.pivot }}; collection average norm {{ '%.6f'|format(e.average_document_norm) }}; effective document norm {{ '%.6f'|format(e.effective_document_norm) }}.{% endif %}{% endif %}</p>{% else %}<p>BM25 k1=1.5, b=0.75; document length {{ e.document_length }}, collection average length {{ '%.6f'|format(e.average_document_length) }}. Table IDF = ln(1 + (N − DF + 0.5)/(DF + 0.5)), N={{ num_indexed }}. Query weights are log TF times optional expansion weights.</p>{% endif %}
+          {% if e.title_boost %}<p>Title multiplier {{ '%.6f'|format(e.title_multiplier) }} uses {{ e.title_boost }} per original query-term hit.</p>{% endif %}
+          {% if e.proximity %}<p>Proximity multiplier: 1 + {{ e.proximity_weight }} × {{ '%.4f'|format(e.proximity.closeness) }} · field {{ e.proximity.field or 'none' }} · position span {{ e.proximity.window }} · character span {{ e.proximity.character_span }}.</p>{% endif %}
+          {% if e.coverage_first %}<p>Coverage-first ordering is active: scores sort results within each coverage group.</p>{% endif %}
+          <div class="table-scroll" tabindex="0" aria-label="逐詞計分表"><table><thead><tr><th>Term</th><th>Document TF</th><th>Title TF</th><th>Description TF</th><th>DF</th><th>IDF</th><th>Query TF</th><th>Query multiplier</th><th>Query weight</th><th>Score contribution</th></tr></thead><tbody>
+          {% for term in e.terms %}<tr><td>{{ term.term }}</td><td>{{ term.tf }}</td><td>{{ term.title_tf }}</td><td>{{ term.description_tf }}</td><td>{{ term.df }}</td><td>{{ '%.5f'|format(term.idf) }}</td><td>{{ e.query_term_counts[term.term] }}</td><td>{{ e.query_multipliers[term.term] }}</td><td>{{ '%.5f'|format(term.query_weight) }}</td><td>{{ '%.6f'|format(term.contribution) }}</td></tr>{% endfor %}
+          </tbody></table></div><p>Contributions sum to the base score. Optional title/proximity multipliers are applied after it.</p>
+        </details>{% endif %}

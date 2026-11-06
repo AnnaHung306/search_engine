@@ -1,0 +1,62 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "56accfe004f4bdcf48f05f961986291de623941dbf02cbab88657ff542983241",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "065732229e1f62d8609fb5824dd793c109ac4ec4ed48928774dbcc7838302cf2",
+  "started_at": 1793848812.6840699,
+  "finished_at": 1793848821.849559,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "886e381e8e874e5cec06-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此片段介紹 Clang 編譯器及編譯選項，未提供網頁內容或隱藏路徑枚舉能力。",
+        "evidence": "Clang project is a C, C++, Objective C and Objective C++ front-end for the LLVM compiler."
+      },
+      {
+        "decision_id": "d0f3b25012d7d22f6cd9-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此片段的插樁選項針對編譯時函式進出，未說明執行中 Android 應用的 Java 方法掛鉤。",
+        "evidence": "-finstrument-functions Generate calls to instrument function entry and exit"
+      }
+    ]
+  }
+}

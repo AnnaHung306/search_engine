@@ -1,0 +1,113 @@
+{
+  "regression": {
+    "queries": [
+      {
+        "id": "gtfo-08",
+        "group": "write",
+        "query": "GTFOBins append data to a file with sudo",
+        "information_need": "Find sudo examples that append to an existing local file without replacing its old content.",
+        "relevance_rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient. Must show append behavior, not just overwriting."
+      }
+    ],
+    "role": "Known failure"
+  },
+  "append": {
+    "queries": [
+      {
+        "id": "app-01",
+        "group": "append",
+        "query": "GTFOBins sudo append to an existing file",
+        "information_need": "Find local file append with sudo.",
+        "relevance_rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+      },
+      {
+        "id": "app-02",
+        "group": "append",
+        "query": "GTFOBins add text to the end of a local file via sudo",
+        "information_need": "Add selected text to the end of a local file under sudo.",
+        "relevance_rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+      },
+      {
+        "id": "app-03",
+        "group": "append",
+        "query": "GTFOBins write to a file keeping existing contents with sudo",
+        "information_need": "Add to a local file and preserve previous contents under sudo.",
+        "relevance_rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+      },
+      {
+        "id": "app-04",
+        "group": "append",
+        "query": "GTFOBins sudo append lines to a log",
+        "information_need": "Append chosen text lines to a local log under sudo.",
+        "relevance_rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+      }
+    ],
+    "role": "Predeclared new questions"
+  },
+  "context": {
+    "queries": [
+      {
+        "id": "app-05",
+        "group": "context",
+        "query": "GTFOBins file append under SUID",
+        "information_need": "Append chosen text to a local file in the documented SUID context.",
+        "relevance_rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+      },
+      {
+        "id": "app-06",
+        "group": "context",
+        "query": "GTFOBins append file contents as an unprivileged user",
+        "information_need": "Append chosen text to a local file as an unprivileged user.",
+        "relevance_rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+      },
+      {
+        "id": "app-07",
+        "group": "context",
+        "query": "GTFOBins add new data to the end of an existing file",
+        "information_need": "Find an append capability for a local file with no particular privilege condition.",
+        "relevance_rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+      },
+      {
+        "id": "app-08",
+        "group": "context",
+        "query": "GTFOBins setuid append a line to an existing log",
+        "information_need": "Append selected text to an existing local log under SUID.",
+        "relevance_rule": "Requires documented addition of chosen text to the end of a local file while retaining old contents, in the requested context of the same example. A documented append option tied to that example qualifies. Ordinary overwrite, deletion, merely appending a newline to emitted data, and other contexts do not qualify. Text formatting or tool prerequisites are allowed."
+      }
+    ],
+    "role": "Predeclared new questions"
+  },
+  "control": {
+    "queries": [
+      {
+        "id": "app-09",
+        "group": "control",
+        "query": "GTFOBins write data to a local path through sudo",
+        "information_need": "Find writing chosen content to a selected local file under sudo.",
+        "relevance_rule": "Requires substantive writing under sudo. Both append and overwrite qualify, but deletion and read-only examples do not."
+      },
+      {
+        "id": "app-10",
+        "group": "control",
+        "query": "GTFOBins alternatives for appending text to a file with sudo",
+        "information_need": "Find other sources for appending local text under sudo.",
+        "relevance_rule": "Only non-GTFOBins documents with substantive append-to-file and sudo evidence qualify."
+      },
+      {
+        "id": "app-11",
+        "group": "control",
+        "query": "GTFOBins sudo overwrite a local file",
+        "information_need": "Find an example that can replace existing local file contents under sudo.",
+        "relevance_rule": "Requires an actual write replacing content under sudo. Append-only, deletion and mere truncation do not qualify."
+      },
+      {
+        "id": "app-12",
+        "group": "control",
+        "query": "GTFOBins setuid read contents from a local file",
+        "information_need": "Find a documented SUID local file read.",
+        "relevance_rule": "Retrieves substantive contents from a selected file under SUID, in the file-read example itself."
+      }
+    ],
+    "role": "Predeclared new questions"
+  }
+}

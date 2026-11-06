@@ -1,0 +1,111 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "b0360390236e076acc6d6175be02a76b7e80062fdf4778bfa82ce1a660342290",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "c65cb087370137f0b0eed99d082f04ab2995e8372891d83fe03599e9bfba95ad",
+  "started_at": 1793849065.0400991,
+  "finished_at": 1793849086.314562,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "00252283d7bc14eb8531-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供 Metasploit Java 反序列化載荷的生成方法與程式範例。",
+        "evidence": "java_payload = generate_java_deserialization_for_payload('CommonsCollections2', payload)"
+      },
+      {
+        "decision_id": "3cd697f3930b4bfd52d0-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為 Java 反序列化載荷生成，未介紹 DEX 轉 JAR 工具或流程。",
+        "evidence": "Metasploit offers ysoserial-generated binaries with built-in randomization."
+      },
+      {
+        "decision_id": "4200bbff02cbe4743003-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹反序列化時執行載荷，未說明 Android Java 方法的執行期掛鉤。",
+        "evidence": "This method will generate a serialized Java object that when loaded will execute the specified Metasploit payload."
+      },
+      {
+        "decision_id": "733e80c7cdfd3fc485b6-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹序列化物件與命令生成，未提供程序原生函式庫的列舉或檢查功能。",
+        "evidence": "This method will generate a serialized Java object that when loaded will execute the specific operating system command using the specified shell."
+      },
+      {
+        "decision_id": "66509662266046ce4b6d-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "實質解說 Window 掃描；僅提及 SYN 掃描作比較，未解釋其行為或用法。",
+        "evidence": "Window scan sends the same bare ACK probe as ACK scan, interpreting the results as shown in Table 5.6 ."
+      },
+      {
+        "decision_id": "1275fef5bd29f1e96081-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容討論 IDS 偵測與規避及網路連接埠掃描，未介紹網頁路徑列舉。",
+        "evidence": "This section focuses on stealthy port scanning, which is even easier than stealthily exploiting vulnerabilities."
+      },
+      {
+        "decision_id": "a642a16347951c538a77-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明 Nmap 作業系統偵測的封包特徵、-O 選項及指紋測試。",
+        "evidence": "OS detection is also easy to spot by intrusion detection systems, because a few of the tests use rather unusual packets and packet sequences."
+      },
+      {
+        "decision_id": "aa82e73792d47cf1ff0f-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "工具用於掃描 TLS 參數與憑證，未說明代理 CA 安裝或客戶端信任設定。",
+        "evidence": "This tool allow queries SSL/TLS services (such as HTTPS) and reports the protocol versions, cipher suites, key exchanges, signature algorithms, and certificates in use."
+      },
+      {
+        "decision_id": "da22c9e6cd07497a7ddc-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "示範在既有 Meterpreter 工作階段進入 IRB，透過 session 物件互動與檢查。",
+        "evidence": "meterpreter > irb [*] Starting IRB shell [*] The 'client' variable holds the meterpreter client >> session.class => Msf::Sessions::Meterpreter_x86_Win"
+      }
+    ]
+  }
+}

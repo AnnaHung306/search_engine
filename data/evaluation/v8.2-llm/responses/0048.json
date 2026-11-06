@@ -1,0 +1,153 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "88602fc842771aeadeb3c092ccb903aacdd1f7ed28a7654ad82a1add521cbfed",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "b3d414f0759d35ff8b06c11c96c68cbf0a5da0c2020887e9f96b2e7470e91bcd",
+  "started_at": 1793848757.712987,
+  "finished_at": 1793848785.548416,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "31afc98b9c61b03709cf-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供反向 TCP payload 的產生與監聽流程，可用來取得目標連線。",
+        "evidence": "Started reverse TCP handler on 10.5.135.201:4567"
+      },
+      {
+        "decision_id": "8eb34dd3a5ac0b95b6ac-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確示範設定 Metasploit payload 並執行產生命令。",
+        "evidence": "msf payload ( cmd/linux/http/x64/meterpreter/reverse_tcp ) > generate -f raw"
+      },
+      {
+        "decision_id": "28ff5f7b2de9b8b6ff25-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "Nikto 是可操作的掃描工具，掃描調整選項明確包含 SQL 注入。",
+        "evidence": "8 Command Execution / Remote Shell 9 SQL Injection"
+      },
+      {
+        "decision_id": "4be125d6bd6c1af9955b-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段介紹連接埠掃描，未提供僅探索主機而不掃描連接埠的流程。",
+        "evidence": "The simple command nmap <target> scans the most commonly used 1,000 TCP ports"
+      },
+      {
+        "decision_id": "d745fab1022cfa77b207-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "實質解釋 Nmap 連接埠掃描、狀態及掃描用途。",
+        "evidence": "Port scanning is the act of remotely testing numerous ports to determine what state they are in."
+      },
+      {
+        "decision_id": "a929f9276f7af7abd3d2-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "說明一般 Java 程序的方法攔截，未建立 Android Java 方法掛鉤能力。",
+        "evidence": "JavaSnoop attempts to solve this problem by allowing you attach to an existing process (like a debugger)"
+      },
+      {
+        "decision_id": "b6c40e42650a2c826d27-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "工具用於 Java 程序與方法呼叫操作，未記載 HTTPS 攔截或解密。",
+        "evidence": "instantly begin tampering with method calls, run custom code, or just watch what’s happening on the system."
+      },
+      {
+        "decision_id": "66c437cba5d3b4fbafb4-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確記載擷取 WPA/WPA2 握手封包，供後續破解金鑰。",
+        "evidence": "capturing the first two packets of the four way handshake and so can attempt to crack the key with either aircrack-ng or coWPAtty."
+      },
+      {
+        "decision_id": "fa96d7cd9ae5020a648a-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明搭配 airodump-ng 擷取 WPA/WPA2 四向握手的前兩個封包。",
+        "evidence": "In the case of WPA/WPA2, by running airodump-ng along side this you also end up capturing the first two packets of the four way handshake"
+      },
+      {
+        "decision_id": "3b9a9b337bb8ff569a1c-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "示範 Android 原生 open() 函式追蹤，未說明 Java 方法掛鉤。",
+        "evidence": "Tracing open() calls in Chrome"
+      },
+      {
+        "decision_id": "562729e108129ab3af03-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "提供 Android Frida 安裝、程序列舉與執行中函式追蹤流程。",
+        "evidence": "frida-trace -U -i open -N com.android.chrome"
+      },
+      {
+        "decision_id": "dbd94c138c8a81fe6d48-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容為 Android 動態插樁設定與追蹤，未說明代理 CA 安裝或信任設定。",
+        "evidence": "In this tutorial we show how to do function tracing on your Android device."
+      },
+      {
+        "decision_id": "ffeace74ed76d01f6d8c-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "僅說明執行期函式追蹤，未提供 APK 解包或反編譯為可讀程式碼的流程。",
+        "evidence": "you should start seeing open() calls flying in"
+      },
+      {
+        "decision_id": "6d7d4765deadcff3f982-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "介紹跨平台二進位函式掛鉤，未具體說明 Android Java 方法插樁。",
+        "evidence": "Hook any function, spy on crypto APIs or trace private application code."
+      },
+      {
+        "decision_id": "d803b7232e958a82094d-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確描述支援 Android 的動態插樁工具，可將腳本注入執行中程序。",
+        "evidence": "Frida, a scriptable dynamic binary instrumentation toolkit for Windows, Mac, Linux, iOS, Android, and QNX."
+      }
+    ]
+  }
+}

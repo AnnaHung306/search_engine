@@ -1,0 +1,190 @@
+{
+  "baseline": "27ef47a",
+  "relation_build_reproduced": true,
+  "source": {
+    "archive": "https://codeload.github.com/GTFOBins/GTFOBins.github.io/tar.gz/acd524623f9c406acedd2754ebd9c2431f3675ad",
+    "revision": "acd524623f9c406acedd2754ebd9c2431f3675ad",
+    "archive_sha256": "afe286956f27472819d18a5ad63938b6c66be911fbd1abb003dbd366f4c3b3b6"
+  },
+  "source_site_documents": 100,
+  "entry_documents": 97,
+  "relation_counts": {
+    "grounded_relations": 341,
+    "delete_only_relations": 6,
+    "inherit_variants_excluded": 22
+  },
+  "documents_per_verified_pair": {
+    "command/sudo": 5,
+    "command/suid": 2,
+    "command/unprivileged": 5,
+    "download/sudo": 4,
+    "download/suid": 3,
+    "download/unprivileged": 4,
+    "file-read/sudo": 42,
+    "file-read/suid": 28,
+    "file-read/unprivileged": 42,
+    "file-write/sudo": 8,
+    "file-write/suid": 7,
+    "file-write/unprivileged": 8,
+    "library-load/sudo": 1,
+    "library-load/suid": 1,
+    "library-load/unprivileged": 1,
+    "privilege-escalation/sudo": 4,
+    "privilege-escalation/suid": 4,
+    "reverse-shell/sudo": 3,
+    "reverse-shell/suid": 1,
+    "reverse-shell/unprivileged": 3,
+    "shell/sudo": 42,
+    "shell/suid": 19,
+    "shell/unprivileged": 36,
+    "upload/sudo": 5,
+    "upload/suid": 3,
+    "upload/unprivileged": 5
+  },
+  "unknown_rows": 0,
+  "old_search_results_scores_explanations_unchanged": 486,
+  "frozen_rank_rows_reproduced": 360,
+  "wrong_version_scoring_rejected_before_writes": true,
+  "wrong_collection_sidecar_rejected": true,
+  "no_temporary_test_files_created": true,
+  "final": {
+    "current_code_sha256": {
+      "toy_example.py": "97944647b0bda3f1f2684b66da63c69dca0f9b3f74836def21d084ff20f913f9",
+      "intent_evaluation.py": "79c33917d3840112bd63a00652e762c1fc9b0c388b9b3c8bf8a1fd3c72c0fdb2",
+      "model_evaluation.py": "f2cee03c03253cac7a9a8641a4bed021fe52255f5e59917376449d29382f52c4",
+      "fuzzy.py": "623ab166ef0ddeef1adfd70df1ea17d9094be77cf9d456eeec604e1c7e41be4a",
+      "crawl_urls.py": "628e39799fa9576f943114412aee333fe6d0d6eb7804bf4b26c9e62dc3f26faf",
+      "config.py": "814a2dcbfdf68fc2b8f6a24665ab6b44c1b7722111b2efd227a2f641fbec3663",
+      "clean.py": "d11905f257e4975a6b7d735ff242426f016399830c858a09e2190e1e2cf43da0",
+      "fix_encoding.py": "691af4fbcf3fe56e67bb4c0e9e95be6f79209ec8ea9579cbd300559cf5f73365",
+      "preprocess.py": "b2ecd2922316c0f5b8d85fad5dd8fa6064c3945a00415a198f6dfb2de18f52b2",
+      "synonyms.py": "2e513abfae992703c5359252322bd74f7a17aaa1a73a2e1ed97d1d3c4e56a781",
+      "diagnostics.py": "f9432d2dff0c6db40e81f5fb3e4f17879b2cd17a578480f70a3fe0efd2ca0f9e",
+      "evaluation.py": "1e9f291963fe7d077a837e49b03d63ee21ffe69f56584e4ccf9e205a94522456",
+      "gtfo_evaluation.py": "61eca3f9ddab225efb7e1b5dc07aee6244e91abba476b2e21fcb4dd6c9a405af",
+      "crawl_http.py": "12a5fda6835e51250b680dece518510b2eb5829599a0b9f684b8a4a7736b4f86",
+      "positions.py": "52fed19806c998c58d37e80b3f8d63a41007c7554ab04a4403e237ae0d3e6156",
+      "query_intent.py": "e419ec2c7aaefb0235e0a6be9ebd5a1f9ba588822291955613ae2607a17d0812",
+      "weighting.py": "ee9b0aac26c24e3ef973dce5693aeafd77e39ddf670a60e9253b90564dcf49be",
+      "indexer.py": "bfa18632a7eed56fcfdff69eba1b015cee1ec78e8abb8b11a753bbafa32e447c",
+      "gtfo_functions.py": "ae45994758b825c52646e815a5ae33c911f2d122c74216ab27dabac7efcad94e",
+      "ranking.py": "0c65d836efc306a5a1a9dd56028c119994e1385e83c456ee4dbde0a7d40431a6",
+      "snippets.py": "e27ed4fe09c2b418da17671b72714af882765730d6c4a1d5c2b5ce73b65f2518",
+      "app.py": "0a40ab4a16d2285e4c0897e54cbc11ba09fc60d8711889bc9faec6ef2b1acfdc",
+      "search.py": "41f9d904b1a8909d3008d72941ed5d18ae78e3b69b9d289fdea70a8e9e87dbf5",
+      "evaluate.py": "4a79b71371a65c47e75ea8dbb818e0a11ca984276cafe09a574853de2b2240ac",
+      "build_gtfo_functions.py": "fc8c4b15e1642dbd74eab174f13be3f83cfd023483b5197eba1a39b1f7217caf",
+      "run_experiments.py": "fa388ff1dad668c07dd1013479beabf0f5bcae8ed5dfe67ce45ba1bff50694d0",
+      "llm_grader.py": "78e6ff10b00f9f01ad341bd63bf3f1dd9244ade277172ea72c43cf755245f9d5",
+      "offsets.py": "bcdeef856e439e09c39eddbe9057b45aa48b83bb9f866271c7152489fb1c3ffd",
+      "crawler.py": "394fc9bbf6ec7ef9a773f4c5ff56a00c1962921cf96ee3f4e3b08dd9b2861a17"
+    },
+    "scores_sha256": "853ccaac9b79a966774629a54301cf02dbd2c417596131ecaeaa346508e7d9b3",
+    "reviewed_labels_unchanged": 121,
+    "response_batches": 7,
+    "response_segment_decisions": 123,
+    "rejected_model_attempts": 0,
+    "previous_data_files_byte_identical": 709,
+    "current_guard_probes": [
+      "GTFOBins reverse-shell examples",
+      "GTFOBins sudo file-write",
+      "GTFOBins SUID file-read",
+      "GTFOBins reverse shell capabilities",
+      "GTFOBins reverse shell Linux capabilities"
+    ],
+    "explanation_cache_isolation_passed": true,
+    "implicit_zero_correction_overwrite_rejected": true,
+    "legacy_v8_2_current_and_v8_3_recollected": true,
+    "user_acceptance": false,
+    "no_ppt_no_push": true
+  },
+  "timing": {
+    "protocol": "18 queries x 30 repetitions, alternated order, warm index and relations, top 10 with snippets, no HTTP/explain",
+    "models": {
+      "v83": {
+        "samples": 540,
+        "median_ms": 2.0355835,
+        "p95_ms": 3.1911215
+      },
+      "verified": {
+        "samples": 540,
+        "median_ms": 2.290354,
+        "p95_ms": 3.3601476000000003
+      }
+    },
+    "per_query_median_ms": {
+      "intent-03": {
+        "v83": 1.8931875,
+        "verified": 2.3447500000000003
+      },
+      "intent-04": {
+        "v83": 2.7902915,
+        "verified": 2.974042
+      },
+      "gtfo-01": {
+        "v83": 1.7503955,
+        "verified": 2.2058125000000004
+      },
+      "gtfo-02": {
+        "v83": 2.1656665000000004,
+        "verified": 2.4975625
+      },
+      "gtfo-03": {
+        "v83": 2.2421665,
+        "verified": 2.1350005000000003
+      },
+      "gtfo-04": {
+        "v83": 1.6644795000000001,
+        "verified": 1.7014585
+      },
+      "gtfo-05": {
+        "v83": 3.0301875000000003,
+        "verified": 3.1760205
+      },
+      "gtfo-06": {
+        "v83": 2.6979794999999998,
+        "verified": 2.6445835
+      },
+      "gtfo-07": {
+        "v83": 2.2959994999999997,
+        "verified": 2.6973955
+      },
+      "gtfo-08": {
+        "v83": 2.3229794999999998,
+        "verified": 2.389688
+      },
+      "gtfo-09": {
+        "v83": 2.417896,
+        "verified": 2.512042
+      },
+      "gtfo-10": {
+        "v83": 2.1644995,
+        "verified": 2.3391455
+      },
+      "gtfo-11": {
+        "v83": 1.0199165,
+        "verified": 1.0927505
+      },
+      "gtfo-12": {
+        "v83": 2.0838125,
+        "verified": 2.305937
+      },
+      "gtfo-13": {
+        "v83": 2.1090835,
+        "verified": 2.1108745
+      },
+      "gtfo-14": {
+        "v83": 1.4887709999999998,
+        "verified": 1.565458
+      },
+      "gtfo-15": {
+        "v83": 1.255354,
+        "verified": 1.362896
+      },
+      "gtfo-16": {
+        "v83": 3.9130000000000003,
+        "verified": 3.7466665
+      }
+    }
+  }
+}

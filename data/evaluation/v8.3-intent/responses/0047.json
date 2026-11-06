@@ -1,0 +1,97 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "94e217d1fd2252ca5d1398a22035e1878ccbd70c3f32b56e4fae667cc2544c3a",
+  "policy_sha256": "84cbbc3b3a00321871524241539824fab0d1248c0283925a98aec7bf8611f7a7",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "b1b761bb8020185c8f2ee1a3bd9b2f078228440d8dfe845bfe9f8d5a8d56dfed",
+  "started_at": 1793855909.186434,
+  "finished_at": 1793855935.751818,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.3-intent/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "f6d2057fa86131fa2bd4-20",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段記載如何保留符號，未說明如何列出指定已載入原生模組的匯出符號。",
+        "evidence": "--internalize-public-api-file=<filename> - A file containing list of symbol names to preserve"
+      },
+      {
+        "decision_id": "5564733db5ab64d28b07-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "範圍說明只定義反向 shell 類別，未提供具備該功能的特定執行檔條目或範例。",
+        "evidence": "Reverse shell This executable can send back a reverse system shell to a listening attacker."
+      },
+      {
+        "decision_id": "ea1361c931a6fe118845-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "GTFOBins 說明兩種具體的間接提權手法，包括設定 SUID 位元與修改另一個執行檔的擁有權。",
+        "evidence": "indirectly enabling elevated privileges, such as setting the SUID bit or modifying the ownership of another executable."
+      },
+      {
+        "decision_id": "02775dba4f42c9378fc8-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "GTFOBins 的 chown 條目說明如何利用提升後的權限變更檔案擁有權，進而讀取、寫入或執行檔案。",
+        "evidence": "This can be run with elevated privileges to change ownership and then read, write, or execute a file."
+      },
+      {
+        "decision_id": "057c4d90ca91778d8a17-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "clisp 條目提供啟動互動式 shell 的命令，並說明透過 sudo 執行時會保留取得的權限。",
+        "evidence": "clisp -x '(ext:run-shell-command \"/bin/sh\")(ext:exit)' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped."
+      },
+      {
+        "decision_id": "ab538ba4eb790e367498-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段介紹 Burp Suite 的網頁安全測試功能，sudo 僅用於套件安裝。",
+        "evidence": "Burp Suite is an integrated platform for performing security testing of web applications."
+      },
+      {
+        "decision_id": "80047189787540434c2b-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此段介紹 Commix 的作業系統命令注入功能，sudo 僅用於套件安裝。",
+        "evidence": "Automated All-in-One OS Command Injection and Exploitation Tool"
+      }
+    ]
+  }
+}

@@ -1,0 +1,627 @@
+{
+  "fixed_point": "bf9455f",
+  "collection_sha256": "f455264f04f5512863299f84b73e76f33004449ffc2f87c36512a4ff38020094",
+  "old_searches_exact": 414,
+  "old_query_changes_with_opt_in": [
+    "holdout-09",
+    "holdout-24"
+  ],
+  "v8_3_frozen_rows_exact_after_review": 360,
+  "current_code_sha256": {
+    "toy_example.py": "97944647b0bda3f1f2684b66da63c69dca0f9b3f74836def21d084ff20f913f9",
+    "intent_evaluation.py": "a71f7e6d3795bb77823988ba78ca775029bcbf346913e8cfe76e69580c0ab413",
+    "model_evaluation.py": "f2cee03c03253cac7a9a8641a4bed021fe52255f5e59917376449d29382f52c4",
+    "fuzzy.py": "623ab166ef0ddeef1adfd70df1ea17d9094be77cf9d456eeec604e1c7e41be4a",
+    "crawl_urls.py": "628e39799fa9576f943114412aee333fe6d0d6eb7804bf4b26c9e62dc3f26faf",
+    "config.py": "814a2dcbfdf68fc2b8f6a24665ab6b44c1b7722111b2efd227a2f641fbec3663",
+    "clean.py": "d11905f257e4975a6b7d735ff242426f016399830c858a09e2190e1e2cf43da0",
+    "fix_encoding.py": "691af4fbcf3fe56e67bb4c0e9e95be6f79209ec8ea9579cbd300559cf5f73365",
+    "preprocess.py": "b2ecd2922316c0f5b8d85fad5dd8fa6064c3945a00415a198f6dfb2de18f52b2",
+    "synonyms.py": "2e513abfae992703c5359252322bd74f7a17aaa1a73a2e1ed97d1d3c4e56a781",
+    "diagnostics.py": "f9432d2dff0c6db40e81f5fb3e4f17879b2cd17a578480f70a3fe0efd2ca0f9e",
+    "evaluation.py": "1e9f291963fe7d077a837e49b03d63ee21ffe69f56584e4ccf9e205a94522456",
+    "crawl_http.py": "12a5fda6835e51250b680dece518510b2eb5829599a0b9f684b8a4a7736b4f86",
+    "positions.py": "52fed19806c998c58d37e80b3f8d63a41007c7554ab04a4403e237ae0d3e6156",
+    "query_intent.py": "e419ec2c7aaefb0235e0a6be9ebd5a1f9ba588822291955613ae2607a17d0812",
+    "weighting.py": "ee9b0aac26c24e3ef973dce5693aeafd77e39ddf670a60e9253b90564dcf49be",
+    "indexer.py": "bfa18632a7eed56fcfdff69eba1b015cee1ec78e8abb8b11a753bbafa32e447c",
+    "ranking.py": "0c65d836efc306a5a1a9dd56028c119994e1385e83c456ee4dbde0a7d40431a6",
+    "snippets.py": "e27ed4fe09c2b418da17671b72714af882765730d6c4a1d5c2b5ce73b65f2518",
+    "app.py": "0a40ab4a16d2285e4c0897e54cbc11ba09fc60d8711889bc9faec6ef2b1acfdc",
+    "search.py": "39f92f30e5686aeaae0c2c055b32333bc9f0aeec43c608ffd910647ac36c384a",
+    "evaluate.py": "4a79b71371a65c47e75ea8dbb818e0a11ca984276cafe09a574853de2b2240ac",
+    "run_experiments.py": "fa388ff1dad668c07dd1013479beabf0f5bcae8ed5dfe67ce45ba1bff50694d0",
+    "llm_grader.py": "78e6ff10b00f9f01ad341bd63bf3f1dd9244ade277172ea72c43cf755245f9d5",
+    "offsets.py": "bcdeef856e439e09c39eddbe9057b45aa48b83bb9f866271c7152489fb1c3ffd",
+    "crawler.py": "394fc9bbf6ec7ef9a773f4c5ff56a00c1962921cf96ee3f4e3b08dd9b2861a17"
+  },
+  "rejected_wrong_score_inputs": [
+    "Score requires a frozen intent experiment; no files were written",
+    "Use the scorer for this experiment; no files were written",
+    "Intent plan, systems or suite groups do not match"
+  ],
+  "negative_intent_probes": [
+    "exclude GTFOBins from sudo binary techniques",
+    "sudo techniques other than GTFOBins",
+    "list native modules not loaded into this process",
+    "list native modules to be loaded",
+    "list loaded Linux kernel modules",
+    "load a shared library into a process",
+    "list exported symbols of a loaded native module",
+    "compare GTFOBins and Kali privilege escalation techniques",
+    "sudo -gtfobins",
+    "\"gtfobins\" sudo",
+    "sudo techniques instead of GTFOBins",
+    "sudo techniques rather than GTFOBins",
+    "which native modules aren't loaded",
+    "which native modules aren’t loaded",
+    "exclude already loaded native modules from list",
+    "list native modules no longer loaded in this process",
+    "list previously loaded shared libraries"
+  ],
+  "explicit_boolean_and_phrase_checks_passed": 3,
+  "v8_2_current_and_recollected_pairs": 654,
+  "existing_stopword_limit": {
+    "query": "gtfobins sudo +as",
+    "must": [],
+    "impact": "Legacy parser strips as even in a signed query. Changing operator token semantics is a separate method change."
+  },
+  "timing": {
+    "protocol": "30 repetitions, 18 queries, alternated order after inference, top 10, warm index, no explanation/HTTP",
+    "models": {
+      "bm25": {
+        "samples": 540,
+        "median_ms": 2.9915415000000003,
+        "p95_ms": 68.3725149
+      },
+      "bm25_intent": {
+        "samples": 540,
+        "median_ms": 2.7276249999999997,
+        "p95_ms": 69.54608715
+      }
+    },
+    "per_query_median_ms": {
+      "holdout-24": {
+        "bm25": 4.075021,
+        "bm25_intent": 2.398459
+      },
+      "holdout-09": {
+        "bm25": 30.0689165,
+        "bm25_intent": 8.238353499999999
+      },
+      "intent-01": {
+        "bm25": 0.928604,
+        "bm25_intent": 1.7895210000000001
+      },
+      "intent-02": {
+        "bm25": 1.0345205,
+        "bm25_intent": 2.2916670000000003
+      },
+      "intent-03": {
+        "bm25": 1.048708,
+        "bm25_intent": 2.2146665
+      },
+      "intent-04": {
+        "bm25": 1.643896,
+        "bm25_intent": 3.245209
+      },
+      "intent-05": {
+        "bm25": 36.1045415,
+        "bm25_intent": 38.3422295
+      },
+      "intent-06": {
+        "bm25": 5.0798119999999995,
+        "bm25_intent": 4.801062
+      },
+      "intent-07": {
+        "bm25": 4.3894375,
+        "bm25_intent": 4.5057915
+      },
+      "intent-08": {
+        "bm25": 19.100479,
+        "bm25_intent": 19.380229500000002
+      },
+      "intent-09": {
+        "bm25": 35.388146,
+        "bm25_intent": 35.111958
+      },
+      "intent-10": {
+        "bm25": 16.7244165,
+        "bm25_intent": 16.400625
+      },
+      "intent-11": {
+        "bm25": 36.3061875,
+        "bm25_intent": 36.9142295
+      },
+      "intent-12": {
+        "bm25": 1.6145625,
+        "bm25_intent": 1.7809165
+      },
+      "intent-13": {
+        "bm25": 2.143229,
+        "bm25_intent": 2.179625
+      },
+      "intent-14": {
+        "bm25": 4.93825,
+        "bm25_intent": 4.9144795
+      },
+      "intent-15": {
+        "bm25": 4.1535415,
+        "bm25_intent": 4.533291500000001
+      },
+      "intent-16": {
+        "bm25": 2.2860625,
+        "bm25_intent": 2.2656455
+      }
+    }
+  },
+  "cases": [
+    {
+      "query": "find gtfobins sudo binary techniques",
+      "terms": [
+        "find",
+        "gtfobin",
+        "sudo",
+        "binary",
+        "technique"
+      ],
+      "df": {
+        "find": 261,
+        "gtfobin": 100,
+        "sudo": 532,
+        "binary": 524,
+        "technique": 100
+      },
+      "original_top_five": [
+        {
+          "doc_id": 950,
+          "url": "https://www.kali.org/tools/unhide/",
+          "score": 9.57408434581939
+        },
+        {
+          "doc_id": 144,
+          "url": "https://www.kali.org/tools/dnsmap/",
+          "score": 8.912252239452043
+        },
+        {
+          "doc_id": 624,
+          "url": "https://www.kali.org/tools/commix/",
+          "score": 8.013023237106234
+        },
+        {
+          "doc_id": 347,
+          "url": "https://nmap.org/book/vscan.html",
+          "score": 7.68614027923447
+        },
+        {
+          "doc_id": 327,
+          "url": "https://www.kali.org/tools/burpsuite/",
+          "score": 7.568007111879984
+        }
+      ],
+      "candidate_top_five": [
+        {
+          "doc_id": 20,
+          "url": "https://gtfobins.org/contributing/",
+          "score": 7.264316815421909,
+          "evidence": [
+            true,
+            false
+          ]
+        },
+        {
+          "doc_id": 297,
+          "url": "https://gtfobins.org/gtfobins/bbot/",
+          "score": 6.385768324223698,
+          "evidence": [
+            true,
+            false
+          ]
+        },
+        {
+          "doc_id": 104,
+          "url": "https://gtfobins.org/gtfobins/apache2ctl/",
+          "score": 6.378272209361951,
+          "evidence": [
+            true,
+            false
+          ]
+        },
+        {
+          "doc_id": 497,
+          "url": "https://gtfobins.org/gtfobins/column/",
+          "score": 6.326338794756839,
+          "evidence": [
+            true,
+            false
+          ]
+        },
+        {
+          "doc_id": 419,
+          "url": "https://gtfobins.org/gtfobins/check_cups/",
+          "score": 6.311671745167412,
+          "evidence": [
+            true,
+            false
+          ]
+        }
+      ],
+      "document_examples": [
+        {
+          "doc_id": 171,
+          "url": "https://gtfobins.org/gtfobins/as/",
+          "hub": false,
+          "length": 74,
+          "original_rank": 74,
+          "term_scores": [
+            {
+              "term": "find",
+              "tf": 0,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 261,
+              "idf": 1.3221381760603854,
+              "query_weight": 1,
+              "document_weight": 0.0,
+              "contribution": 0.0
+            },
+            {
+              "term": "gtfobin",
+              "tf": 1,
+              "title_tf": 1,
+              "description_tf": 0,
+              "df": 100,
+              "idf": 2.2784147320662327,
+              "query_weight": 1,
+              "document_weight": 0.9912260756924949,
+              "contribution": 3.9318496928890414
+            },
+            {
+              "term": "sudo",
+              "tf": 4,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 532,
+              "idf": 0.6109895619817829,
+              "query_weight": 1,
+              "document_weight": 0.42504965488849655,
+              "contribution": 1.3734141284601225
+            },
+            {
+              "term": "binary",
+              "tf": 0,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 524,
+              "idf": 0.6261270317290112,
+              "query_weight": 1,
+              "document_weight": 0.0,
+              "contribution": 0.0
+            },
+            {
+              "term": "technique",
+              "tf": 0,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 100,
+              "idf": 2.2784147320662327,
+              "query_weight": 1,
+              "document_weight": 0.0,
+              "contribution": 0.0
+            }
+          ]
+        },
+        {
+          "doc_id": 950,
+          "url": "https://www.kali.org/tools/unhide/",
+          "hub": false,
+          "length": 1582,
+          "original_rank": 1,
+          "term_scores": [
+            {
+              "term": "find",
+              "tf": 10,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 261,
+              "idf": 1.3221381760603854,
+              "query_weight": 1,
+              "document_weight": 1.1491711367084279,
+              "contribution": 2.765886264138885
+            },
+            {
+              "term": "gtfobin",
+              "tf": 0,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 100,
+              "idf": 2.2784147320662327,
+              "query_weight": 1,
+              "document_weight": 0.0,
+              "contribution": 0.0
+            },
+            {
+              "term": "sudo",
+              "tf": 2,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 532,
+              "idf": 0.6109895619817829,
+              "query_weight": 1,
+              "document_weight": 0.3451820491429716,
+              "contribution": 0.7733256884048728
+            },
+            {
+              "term": "binary",
+              "tf": 1,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 524,
+              "idf": 0.6261270317290112,
+              "query_weight": 1,
+              "document_weight": 0.27189478870876815,
+              "contribution": 0.5305437229035469
+            },
+            {
+              "term": "technique",
+              "tf": 56,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 100,
+              "idf": 2.2784147320662327,
+              "query_weight": 1,
+              "document_weight": 2.7240756332744565,
+              "contribution": 5.504328670372085
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "list loaded native libraries",
+      "terms": [
+        "list",
+        "load",
+        "native",
+        "library"
+      ],
+      "df": {
+        "list": 437,
+        "load": 210,
+        "native": 43,
+        "library": 140
+      },
+      "original_top_five": [
+        {
+          "doc_id": 642,
+          "url": "https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html",
+          "score": 11.172324117844626
+        },
+        {
+          "doc_id": 593,
+          "url": "https://www.kali.org/tools/dex2jar/",
+          "score": 11.05623160308715
+        },
+        {
+          "doc_id": 349,
+          "url": "https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html",
+          "score": 10.415135595255173
+        },
+        {
+          "doc_id": 689,
+          "url": "https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-railgun-for-windows-post-exploitation.html",
+          "score": 10.037042801887328
+        },
+        {
+          "doc_id": 412,
+          "url": "https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/python-extension.html",
+          "score": 9.898787475825749
+        }
+      ],
+      "candidate_top_five": [
+        {
+          "doc_id": 19,
+          "url": "https://frida.re/docs/installation/",
+          "score": 9.927631218341437,
+          "evidence": [
+            false,
+            true
+          ]
+        },
+        {
+          "doc_id": 170,
+          "url": "https://frida.re/docs/javascript-api/",
+          "score": 8.222478627038777,
+          "evidence": [
+            false,
+            true
+          ]
+        },
+        {
+          "doc_id": 642,
+          "url": "https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html",
+          "score": 11.172324117844626,
+          "evidence": [
+            false,
+            false
+          ]
+        },
+        {
+          "doc_id": 593,
+          "url": "https://www.kali.org/tools/dex2jar/",
+          "score": 11.05623160308715,
+          "evidence": [
+            false,
+            false
+          ]
+        },
+        {
+          "doc_id": 349,
+          "url": "https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html",
+          "score": 10.415135595255173,
+          "evidence": [
+            false,
+            false
+          ]
+        }
+      ],
+      "document_examples": [
+        {
+          "doc_id": 170,
+          "url": "https://frida.re/docs/javascript-api/",
+          "hub": false,
+          "length": 18612,
+          "original_rank": 23,
+          "term_scores": [
+            {
+              "term": "list",
+              "tf": 7,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 437,
+              "idf": 0.8074957537676938,
+              "query_weight": 1,
+              "document_weight": 0.6471582454516056,
+              "contribution": 0.5454076594232665
+            },
+            {
+              "term": "load",
+              "tf": 41,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 210,
+              "idf": 1.539086806442927,
+              "query_weight": 1,
+              "document_weight": 1.7479701173246023,
+              "contribution": 2.6332502683044154
+            },
+            {
+              "term": "native",
+              "tf": 14,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 43,
+              "idf": 3.1158115214707247,
+              "query_weight": 1,
+              "document_weight": 2.913921694180076,
+              "contribution": 3.313748080887707
+            },
+            {
+              "term": "library",
+              "tf": 5,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 140,
+              "idf": 1.9433649707915626,
+              "query_weight": 1,
+              "document_weight": 1.4357962207073829,
+              "contribution": 1.0160054149972744
+            }
+          ]
+        },
+        {
+          "doc_id": 642,
+          "url": "https://docs.metasploit.com/docs/development/developing-modules/libraries/deserialization/dot-net-deserialization.html",
+          "hub": false,
+          "length": 548,
+          "original_rank": 1,
+          "term_scores": [
+            {
+              "term": "list",
+              "tf": 3,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 437,
+              "idf": 0.8074957537676938,
+              "query_weight": 1,
+              "document_weight": 0.5180923608353432,
+              "contribution": 1.54467199138022
+            },
+            {
+              "term": "load",
+              "tf": 0,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 210,
+              "idf": 1.539086806442927,
+              "query_weight": 1,
+              "document_weight": 0.0,
+              "contribution": 0.0
+            },
+            {
+              "term": "native",
+              "tf": 2,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 43,
+              "idf": 3.1158115214707247,
+              "query_weight": 1,
+              "document_weight": 1.766483390608235,
+              "contribution": 5.333988188245339
+            },
+            {
+              "term": "library",
+              "tf": 7,
+              "title_tf": 0,
+              "description_tf": 0,
+              "df": 140,
+              "idf": 1.9433649707915626,
+              "query_weight": 1,
+              "document_weight": 1.5592887372501953,
+              "contribution": 4.2936639382190664
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "manifest_mismatch_rejected_by_shared_verifier": true,
+  "timing_during_inference": {
+    "protocol": "25 repetitions, 18 queries, alternated order, top 10, warm index, no explanation/HTTP",
+    "models": {
+      "bm25": {
+        "samples": 450,
+        "median_ms": 3.3010625,
+        "p95_ms": 70.06929199999999
+      },
+      "bm25_intent": {
+        "samples": 450,
+        "median_ms": 3.2096875000000002,
+        "p95_ms": 69.7956561
+      }
+    }
+  },
+  "final": {
+    "new_pairs": 103,
+    "model_batches": 54,
+    "response_decisions": 174,
+    "failed_attempts_retained": 2,
+    "review_corrections": [
+      [
+        "intent-07",
+        25
+      ],
+      [
+        "intent-05",
+        25
+      ],
+      [
+        "intent-03",
+        508
+      ],
+      [
+        "intent-03",
+        511
+      ]
+    ],
+    "previous_data_files_byte_identical": 460,
+    "scores_sha256": "24f76cd68350c11a382450c35c334293ed06253ee70e890807260893ea6bd0c7",
+    "initial_scores_sha256": "b63df1aca9aa159ae4a5bf7f6e5801a12e8a768ac00e87be3b1aff6630a61fb9",
+    "bound_schema_provenance_guard": "passed",
+    "wrong_scorer_and_missing_adjudication_write_guards": "passed",
+    "user_accepted": false,
+    "pushed": false,
+    "ppt_created": false,
+    "temporary_test_files_created": 0
+  }
+}

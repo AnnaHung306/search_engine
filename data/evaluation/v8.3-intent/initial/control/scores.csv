@@ -1,0 +1,33 @@
+system,query_id,query,precision_at_5
+bm25,intent-09,list loaded Linux kernel modules,0.0
+bm25,intent-10,load a shared library into a process,0.6
+bm25,intent-11,list exported symbols of a loaded native module,0.2
+bm25,intent-12,compare GTFOBins and Kali privilege escalation techniques,1.0
+bm25,intent-13,inspect a tcp handshake in wireshark,0.2
+bm25,intent-14,nmap ipv6 host discovery,0.6
+bm25,intent-15,forward http requests to upstream proxy mitmproxy,0.6
+bm25,intent-16,offline zip archive password recovery,0.2
+bm25_source,intent-09,list loaded Linux kernel modules,0.0
+bm25_source,intent-10,load a shared library into a process,0.6
+bm25_source,intent-11,list exported symbols of a loaded native module,0.2
+bm25_source,intent-12,compare GTFOBins and Kali privilege escalation techniques,1.0
+bm25_source,intent-13,inspect a tcp handshake in wireshark,0.2
+bm25_source,intent-14,nmap ipv6 host discovery,0.6
+bm25_source,intent-15,forward http requests to upstream proxy mitmproxy,0.6
+bm25_source,intent-16,offline zip archive password recovery,0.2
+bm25_native,intent-09,list loaded Linux kernel modules,0.0
+bm25_native,intent-10,load a shared library into a process,0.6
+bm25_native,intent-11,list exported symbols of a loaded native module,0.2
+bm25_native,intent-12,compare GTFOBins and Kali privilege escalation techniques,1.0
+bm25_native,intent-13,inspect a tcp handshake in wireshark,0.2
+bm25_native,intent-14,nmap ipv6 host discovery,0.6
+bm25_native,intent-15,forward http requests to upstream proxy mitmproxy,0.6
+bm25_native,intent-16,offline zip archive password recovery,0.2
+bm25_intent,intent-09,list loaded Linux kernel modules,0.0
+bm25_intent,intent-10,load a shared library into a process,0.6
+bm25_intent,intent-11,list exported symbols of a loaded native module,0.2
+bm25_intent,intent-12,compare GTFOBins and Kali privilege escalation techniques,1.0
+bm25_intent,intent-13,inspect a tcp handshake in wireshark,0.2
+bm25_intent,intent-14,nmap ipv6 host discovery,0.6
+bm25_intent,intent-15,forward http requests to upstream proxy mitmproxy,0.6
+bm25_intent,intent-16,offline zip archive password recovery,0.2

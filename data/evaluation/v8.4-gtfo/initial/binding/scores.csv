@@ -1,0 +1,17 @@
+system,query_id,query,precision_at_5
+v83,gtfo-09,GTFOBins read a local file under sudo,0.8
+v83,gtfo-10,GTFOBins read protected files with setuid,0.2
+v83,gtfo-11,GTFOBins SUID interactive shell,0.8
+v83,gtfo-12,GTFOBins sudo noninteractive command execution,0.4
+function,gtfo-09,GTFOBins read a local file under sudo,1.0
+function,gtfo-10,GTFOBins read protected files with setuid,0.2
+function,gtfo-11,GTFOBins SUID interactive shell,1.0
+function,gtfo-12,GTFOBins sudo noninteractive command execution,1.0
+paired,gtfo-09,GTFOBins read a local file under sudo,1.0
+paired,gtfo-10,GTFOBins read protected files with setuid,1.0
+paired,gtfo-11,GTFOBins SUID interactive shell,1.0
+paired,gtfo-12,GTFOBins sudo noninteractive command execution,1.0
+verified,gtfo-09,GTFOBins read a local file under sudo,1.0
+verified,gtfo-10,GTFOBins read protected files with setuid,1.0
+verified,gtfo-11,GTFOBins SUID interactive shell,1.0
+verified,gtfo-12,GTFOBins sudo noninteractive command execution,1.0

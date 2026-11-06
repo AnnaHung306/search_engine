@@ -1,0 +1,301 @@
+system,query,rank,doc_id,url,title,score
+tfidf,wifi password cracking,1,763,https://www.kali.org/tools/fern-wifi-cracker/,fern-wifi-cracker | Kali Linux Tools,0.2146
+tfidf,wifi password cracking,2,766,https://www.kali.org/tools/wifi-honey/,wifi-honey | Kali Linux Tools,0.1506
+tfidf,wifi password cracking,3,753,https://www.kali.org/tools/sipcrack/,sipcrack | Kali Linux Tools,0.1225
+tfidf,wifi password cracking,4,749,https://www.kali.org/tools/johnny/,johnny | Kali Linux Tools,0.1137
+tfidf,wifi password cracking,5,754,https://www.kali.org/tools/sucrack/,sucrack | Kali Linux Tools,0.1122
+tfidf,sql injection tool,1,845,https://www.kali.org/tools/siparmyknife/,siparmyknife | Kali Linux Tools,0.1834
+tfidf,sql injection tool,2,646,https://www.kali.org/tools/laudanum/,laudanum | Kali Linux Tools,0.1696
+tfidf,sql injection tool,3,742,https://www.kali.org/tools/sqldict/,sqldict | Kali Linux Tools,0.1302
+tfidf,sql injection tool,4,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,"SQL Injection | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1238
+tfidf,sql injection tool,5,721,https://docs.metasploit.com/docs/development/google-summer-of-code/gsoc-2020-project-ideas.html,"2020 Project Ideas | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1236
+tfidf,port scanning techniques,1,294,https://nmap.org/book/scan-methods-maimon-scan.html,TCP Maimon Scan (-sM) | Nmap Network Scanning,0.1213
+tfidf,port scanning techniques,2,166,https://nmap.org/book/host-discovery.html,Chapter 3. Host Discovery (“Ping Scanning”) | Nmap Network Scanning,0.1058
+tfidf,port scanning techniques,3,45,https://nmap.org/book/organization.html,Intended Audience and Organization | Nmap Network Scanning,0.0983
+tfidf,port scanning techniques,4,510,https://nmap.org/book/defenses.html,Chapter 11. Defenses Against Nmap | Nmap Network Scanning,0.093
+tfidf,port scanning techniques,5,966,https://www.kali.org/tools/portspoof/,portspoof | Kali Linux Tools,0.0859
+tfidf,intercept https traffic,1,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,Intercept Requests,0.1903
+tfidf,intercept https traffic,2,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,Modify Requests,0.1614
+tfidf,intercept https traffic,3,4,https://docs.mitmproxy.org/stable/,Introduction,0.1318
+tfidf,intercept https traffic,4,588,https://www.kali.org/tools/javasnoop/,javasnoop | Kali Linux Tools,0.109
+tfidf,intercept https traffic,5,60,https://docs.mitmproxy.org/stable/mitmproxytutorial-userinterface/,User Interface,0.1061
+tfidf,web application vulnerability scanner,1,405,https://www.kali.org/tools/webscarab/,webscarab | Kali Linux Tools,0.1358
+tfidf,web application vulnerability scanner,2,302,https://www.kali.org/tools/wpprobe/,wpprobe | Kali Linux Tools,0.13
+tfidf,web application vulnerability scanner,3,327,https://www.kali.org/tools/burpsuite/,burpsuite | Kali Linux Tools,0.1048
+tfidf,web application vulnerability scanner,4,366,https://www.kali.org/tools/paros/,paros | Kali Linux Tools,0.0975
+tfidf,web application vulnerability scanner,5,200,https://www.kali.org/tools/dirb/,dirb | Kali Linux Tools,0.0952
+tfidf,network packet sniffer,1,789,https://www.kali.org/tools/above/,above | Kali Linux Tools,0.1449
+tfidf,network packet sniffer,2,797,https://www.kali.org/tools/scapy/,scapy | Kali Linux Tools,0.1421
+tfidf,network packet sniffer,3,769,https://www.kali.org/tools/xspy/,xspy | Kali Linux Tools,0.1335
+tfidf,network packet sniffer,4,791,https://www.kali.org/tools/darkstat/,darkstat | Kali Linux Tools,0.0865
+tfidf,network packet sniffer,5,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,5.3. Saving Captured Packets,0.0864
+tfidf,exploit metasploit module,1,598,https://docs.metasploit.com/docs/development/developing-modules/external-modules/writing-external-golang-modules.html,"Writing GoLang Modules | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.143
+tfidf,exploit metasploit module,2,485,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-the-favorite-command.html,"How to use the Favorite command | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1369
+tfidf,exploit metasploit module,3,2,https://docs.metasploit.com/,"Home | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1273
+tfidf,exploit metasploit module,4,504,https://docs.metasploit.com/docs/using-metasploit/other/why-cve-is-not-available.html,"Why CVE is not available | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.124
+tfidf,exploit metasploit module,5,693,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-do-reporting-or-store-data-in-module-development.html,"Reporting and Storing Data | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1235
+tfidf,decompile android apk,1,585,https://www.kali.org/tools/jadx/,jadx | Kali Linux Tools,0.1271
+tfidf,decompile android apk,2,579,https://www.kali.org/tools/apktool/,apktool | Kali Linux Tools,0.0962
+tfidf,decompile android apk,3,582,https://www.kali.org/tools/bytecode-viewer/,bytecode-viewer | Kali Linux Tools,0.0958
+tfidf,decompile android apk,4,108,https://docs.mitmproxy.org/stable/concepts/certificates/,Certificates,0.062
+tfidf,decompile android apk,5,109,https://frida.re/docs/examples/android/,Android | Frida • A world-class dynamic instrumentation toolkit,0.057
+tfidf,directory enumeration web server,1,245,https://www.kali.org/tools/gobuster/,gobuster | Kali Linux Tools,0.1535
+tfidf,directory enumeration web server,2,967,https://www.kali.org/tools/arsenal-ng/,arsenal-ng | Kali Linux Tools,0.1284
+tfidf,directory enumeration web server,3,235,https://www.kali.org/tools/finalrecon/,finalrecon | Kali Linux Tools,0.1082
+tfidf,directory enumeration web server,4,592,https://nmap.org/book/output-formats-cpe.html,Common Platform Enumeration (CPE) | Nmap Network Scanning,0.1047
+tfidf,directory enumeration web server,5,839,https://www.kali.org/tools/ldeep/,ldeep | Kali Linux Tools,0.093
+tfidf,reverse shell payload,1,34,https://docs.metasploit.com/docs/pentesting/metasploit-guide-upgrading-shells-to-meterpreter.html,"Upgrading Shells to Meterpreter | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1911
+tfidf,reverse shell payload,2,519,https://gtfobins.org/gtfobins/cpan/,cpan | GTFOBins,0.1687
+tfidf,reverse shell payload,3,511,https://gtfobins.org/gtfobins/cowthink/,cowthink | GTFOBins,0.1387
+tfidf,reverse shell payload,4,508,https://gtfobins.org/gtfobins/cowsay/,cowsay | GTFOBins,0.1387
+tfidf,reverse shell payload,5,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,"How to use a reverse shell in Metasploit | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1295
+tfidf_cov,wifi password cracking,1,652,https://www.kali.org/tools/seclists/,seclists | Kali Linux Tools,0.091
+tfidf_cov,wifi password cracking,2,748,https://www.kali.org/tools/john/,john | Kali Linux Tools,0.0441
+tfidf_cov,wifi password cracking,3,457,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-wishlist.html,"Wishlist | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.0397
+tfidf_cov,wifi password cracking,4,758,https://www.kali.org/tools/aircrack-ng/,aircrack-ng | Kali Linux Tools,0.0384
+tfidf_cov,wifi password cracking,5,763,https://www.kali.org/tools/fern-wifi-cracker/,fern-wifi-cracker | Kali Linux Tools,0.2146
+tfidf_cov,sql injection tool,1,845,https://www.kali.org/tools/siparmyknife/,siparmyknife | Kali Linux Tools,0.1834
+tfidf_cov,sql injection tool,2,646,https://www.kali.org/tools/laudanum/,laudanum | Kali Linux Tools,0.1696
+tfidf_cov,sql injection tool,3,613,https://www.kali.org/tools/sqlmap/,sqlmap | Kali Linux Tools,0.1226
+tfidf_cov,sql injection tool,4,621,https://www.kali.org/tools/jsql/,jsql | Kali Linux Tools,0.1216
+tfidf_cov,sql injection tool,5,618,https://www.kali.org/tools/sqlsus/,sqlsus | Kali Linux Tools,0.1123
+tfidf_cov,port scanning techniques,1,294,https://nmap.org/book/scan-methods-maimon-scan.html,TCP Maimon Scan (-sM) | Nmap Network Scanning,0.1213
+tfidf_cov,port scanning techniques,2,166,https://nmap.org/book/host-discovery.html,Chapter 3. Host Discovery (“Ping Scanning”) | Nmap Network Scanning,0.1058
+tfidf_cov,port scanning techniques,3,45,https://nmap.org/book/organization.html,Intended Audience and Organization | Nmap Network Scanning,0.0983
+tfidf_cov,port scanning techniques,4,510,https://nmap.org/book/defenses.html,Chapter 11. Defenses Against Nmap | Nmap Network Scanning,0.093
+tfidf_cov,port scanning techniques,5,252,https://nmap.org/book/scan-methods.html,Chapter 5. Port Scanning Techniques and Algorithms | Nmap Network Scanning,0.0845
+tfidf_cov,intercept https traffic,1,4,https://docs.mitmproxy.org/stable/,Introduction,0.1318
+tfidf_cov,intercept https traffic,2,102,https://docs.mitmproxy.org/stable/concepts/modes/,Proxy Modes,0.0992
+tfidf_cov,intercept https traffic,3,190,https://docs.mitmproxy.org/stable/howto/transparent/,Transparent Proxying,0.0777
+tfidf_cov,intercept https traffic,4,790,https://www.kali.org/tools/dsniff/,dsniff | Kali Linux Tools,0.0764
+tfidf_cov,intercept https traffic,5,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,How mitmproxy works,0.0761
+tfidf_cov,web application vulnerability scanner,1,327,https://www.kali.org/tools/burpsuite/,burpsuite | Kali Linux Tools,0.1048
+tfidf_cov,web application vulnerability scanner,2,200,https://www.kali.org/tools/dirb/,dirb | Kali Linux Tools,0.0952
+tfidf_cov,web application vulnerability scanner,3,400,https://www.kali.org/tools/web-cache-vulnerability-scanner/,web-cache-vulnerability-scanner | Kali Linux Tools,0.0811
+tfidf_cov,web application vulnerability scanner,4,391,https://www.kali.org/tools/wapiti/,wapiti | Kali Linux Tools,0.0697
+tfidf_cov,web application vulnerability scanner,5,833,https://www.kali.org/tools/cisco-torch/,cisco-torch | Kali Linux Tools,0.0691
+tfidf_cov,network packet sniffer,1,789,https://www.kali.org/tools/above/,above | Kali Linux Tools,0.1449
+tfidf_cov,network packet sniffer,2,797,https://www.kali.org/tools/scapy/,scapy | Kali Linux Tools,0.1421
+tfidf_cov,network packet sniffer,3,791,https://www.kali.org/tools/darkstat/,darkstat | Kali Linux Tools,0.0865
+tfidf_cov,network packet sniffer,4,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,5.3. Saving Captured Packets,0.0864
+tfidf_cov,network packet sniffer,5,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,5.2. Open Capture Files,0.0713
+tfidf_cov,exploit metasploit module,1,598,https://docs.metasploit.com/docs/development/developing-modules/external-modules/writing-external-golang-modules.html,"Writing GoLang Modules | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.143
+tfidf_cov,exploit metasploit module,2,485,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-the-favorite-command.html,"How to use the Favorite command | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1369
+tfidf_cov,exploit metasploit module,3,2,https://docs.metasploit.com/,"Home | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1273
+tfidf_cov,exploit metasploit module,4,693,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-do-reporting-or-store-data-in-module-development.html,"Reporting and Storing Data | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1235
+tfidf_cov,exploit metasploit module,5,651,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-the-fileformat-mixin-to-create-a-file-format-exploit.html,"Fileformat | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1183
+tfidf_cov,decompile android apk,1,585,https://www.kali.org/tools/jadx/,jadx | Kali Linux Tools,0.1271
+tfidf_cov,decompile android apk,2,579,https://www.kali.org/tools/apktool/,apktool | Kali Linux Tools,0.0962
+tfidf_cov,decompile android apk,3,582,https://www.kali.org/tools/bytecode-viewer/,bytecode-viewer | Kali Linux Tools,0.0958
+tfidf_cov,decompile android apk,4,108,https://docs.mitmproxy.org/stable/concepts/certificates/,Certificates,0.062
+tfidf_cov,decompile android apk,5,109,https://frida.re/docs/examples/android/,Android | Frida • A world-class dynamic instrumentation toolkit,0.057
+tfidf_cov,directory enumeration web server,1,245,https://www.kali.org/tools/gobuster/,gobuster | Kali Linux Tools,0.1535
+tfidf_cov,directory enumeration web server,2,235,https://www.kali.org/tools/finalrecon/,finalrecon | Kali Linux Tools,0.1082
+tfidf_cov,directory enumeration web server,3,696,https://www.kali.org/tools/smbmap/,smbmap | Kali Linux Tools,0.0664
+tfidf_cov,directory enumeration web server,4,221,https://www.kali.org/tools/feroxbuster/,feroxbuster | Kali Linux Tools,0.0561
+tfidf_cov,directory enumeration web server,5,105,https://www.kali.org/tools/autorecon/,autorecon | Kali Linux Tools,0.0541
+tfidf_cov,reverse shell payload,1,34,https://docs.metasploit.com/docs/pentesting/metasploit-guide-upgrading-shells-to-meterpreter.html,"Upgrading Shells to Meterpreter | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1911
+tfidf_cov,reverse shell payload,2,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,"How to use a reverse shell in Metasploit | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1295
+tfidf_cov,reverse shell payload,3,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,"How payloads work | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.128
+tfidf_cov,reverse shell payload,4,868,https://www.kali.org/tools/penelope/,penelope | Kali Linux Tools,0.0989
+tfidf_cov,reverse shell payload,5,892,https://www.kali.org/tools/hoaxshell/,hoaxshell | Kali Linux Tools,0.0932
+tfidf_pivot,wifi password cracking,1,766,https://www.kali.org/tools/wifi-honey/,wifi-honey | Kali Linux Tools,0.1169
+tfidf_pivot,wifi password cracking,2,763,https://www.kali.org/tools/fern-wifi-cracker/,fern-wifi-cracker | Kali Linux Tools,0.1162
+tfidf_pivot,wifi password cracking,3,475,https://www.kali.org/tools/reaver/,reaver | Kali Linux Tools,0.0997
+tfidf_pivot,wifi password cracking,4,467,https://www.kali.org/tools/kismet/,kismet | Kali Linux Tools,0.0945
+tfidf_pivot,wifi password cracking,5,748,https://www.kali.org/tools/john/,john | Kali Linux Tools,0.0943
+tfidf_pivot,sql injection tool,1,613,https://www.kali.org/tools/sqlmap/,sqlmap | Kali Linux Tools,0.123
+tfidf_pivot,sql injection tool,2,621,https://www.kali.org/tools/jsql/,jsql | Kali Linux Tools,0.1146
+tfidf_pivot,sql injection tool,3,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,"SQL Injection | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1061
+tfidf_pivot,sql injection tool,4,721,https://docs.metasploit.com/docs/development/google-summer-of-code/gsoc-2020-project-ideas.html,"2020 Project Ideas | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1036
+tfidf_pivot,sql injection tool,5,616,https://www.kali.org/tools/sqlninja/,sqlninja | Kali Linux Tools,0.1035
+tfidf_pivot,port scanning techniques,1,950,https://www.kali.org/tools/unhide/,unhide | Kali Linux Tools,0.0927
+tfidf_pivot,port scanning techniques,2,639,https://nmap.org/book/man-port-scanning-techniques.html,Port Scanning Techniques | Nmap Network Scanning,0.0856
+tfidf_pivot,port scanning techniques,3,252,https://nmap.org/book/scan-methods.html,Chapter 5. Port Scanning Techniques and Algorithms | Nmap Network Scanning,0.0816
+tfidf_pivot,port scanning techniques,4,313,https://nmap.org/book/port-scanning-algorithms.html,Scan Code and Algorithms | Nmap Network Scanning,0.0803
+tfidf_pivot,port scanning techniques,5,499,https://nmap.org/book/firewall-subversion.html,Bypassing Firewall Rules | Nmap Network Scanning,0.079
+tfidf_pivot,intercept https traffic,1,102,https://docs.mitmproxy.org/stable/concepts/modes/,Proxy Modes,0.132
+tfidf_pivot,intercept https traffic,2,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,Intercept Requests,0.115
+tfidf_pivot,intercept https traffic,3,4,https://docs.mitmproxy.org/stable/,Introduction,0.1105
+tfidf_pivot,intercept https traffic,4,857,https://www.kali.org/tools/mitmproxy/,mitmproxy | Kali Linux Tools,0.1082
+tfidf_pivot,intercept https traffic,5,190,https://docs.mitmproxy.org/stable/howto/transparent/,Transparent Proxying,0.1051
+tfidf_pivot,web application vulnerability scanner,1,400,https://www.kali.org/tools/web-cache-vulnerability-scanner/,web-cache-vulnerability-scanner | Kali Linux Tools,0.1167
+tfidf_pivot,web application vulnerability scanner,2,200,https://www.kali.org/tools/dirb/,dirb | Kali Linux Tools,0.0969
+tfidf_pivot,web application vulnerability scanner,3,391,https://www.kali.org/tools/wapiti/,wapiti | Kali Linux Tools,0.0933
+tfidf_pivot,web application vulnerability scanner,4,312,https://www.kali.org/tools/gvm/,gvm | Kali Linux Tools,0.0872
+tfidf_pivot,web application vulnerability scanner,5,327,https://www.kali.org/tools/burpsuite/,burpsuite | Kali Linux Tools,0.0758
+tfidf_pivot,network packet sniffer,1,467,https://www.kali.org/tools/kismet/,kismet | Kali Linux Tools,0.1137
+tfidf_pivot,network packet sniffer,2,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,5.3. Saving Captured Packets,0.092
+tfidf_pivot,network packet sniffer,3,789,https://www.kali.org/tools/above/,above | Kali Linux Tools,0.092
+tfidf_pivot,network packet sniffer,4,796,https://www.kali.org/tools/wireshark/,wireshark | Kali Linux Tools,0.0918
+tfidf_pivot,network packet sniffer,5,797,https://www.kali.org/tools/scapy/,scapy | Kali Linux Tools,0.0907
+tfidf_pivot,exploit metasploit module,1,2,https://docs.metasploit.com/,"Home | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1071
+tfidf_pivot,exploit metasploit module,2,339,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,"Running Private Modules | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1054
+tfidf_pivot,exploit metasploit module,3,268,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html,"How to use a Metasploit module appropriately | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1041
+tfidf_pivot,exploit metasploit module,4,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,"Running modules | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1015
+tfidf_pivot,exploit metasploit module,5,590,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,"Writing an exploit | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1006
+tfidf_pivot,decompile android apk,1,585,https://www.kali.org/tools/jadx/,jadx | Kali Linux Tools,0.2201
+tfidf_pivot,decompile android apk,2,579,https://www.kali.org/tools/apktool/,apktool | Kali Linux Tools,0.1043
+tfidf_pivot,decompile android apk,3,593,https://www.kali.org/tools/dex2jar/,dex2jar | Kali Linux Tools,0.0859
+tfidf_pivot,decompile android apk,4,108,https://docs.mitmproxy.org/stable/concepts/certificates/,Certificates,0.0762
+tfidf_pivot,decompile android apk,5,582,https://www.kali.org/tools/bytecode-viewer/,bytecode-viewer | Kali Linux Tools,0.0743
+tfidf_pivot,directory enumeration web server,1,967,https://www.kali.org/tools/arsenal-ng/,arsenal-ng | Kali Linux Tools,0.1038
+tfidf_pivot,directory enumeration web server,2,245,https://www.kali.org/tools/gobuster/,gobuster | Kali Linux Tools,0.0988
+tfidf_pivot,directory enumeration web server,3,151,https://www.kali.org/tools/dnsrecon/,dnsrecon | Kali Linux Tools,0.0818
+tfidf_pivot,directory enumeration web server,4,235,https://www.kali.org/tools/finalrecon/,finalrecon | Kali Linux Tools,0.0798
+tfidf_pivot,directory enumeration web server,5,105,https://www.kali.org/tools/autorecon/,autorecon | Kali Linux Tools,0.0759
+tfidf_pivot,reverse shell payload,1,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,"How to use a reverse shell in Metasploit | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.121
+tfidf_pivot,reverse shell payload,2,569,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-use-fetch-payloads.html,"How to use Fetch Payloads | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1145
+tfidf_pivot,reverse shell payload,3,432,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-stageless-mode.html,"Stageless Mode | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1009
+tfidf_pivot,reverse shell payload,4,481,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-with-ngrok.html,"How to use Metasploit with ngrok | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.0968
+tfidf_pivot,reverse shell payload,5,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,"How payloads work | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.0947
+tfidf_pivot_cov,wifi password cracking,1,748,https://www.kali.org/tools/john/,john | Kali Linux Tools,0.0943
+tfidf_pivot_cov,wifi password cracking,2,758,https://www.kali.org/tools/aircrack-ng/,aircrack-ng | Kali Linux Tools,0.0931
+tfidf_pivot_cov,wifi password cracking,3,652,https://www.kali.org/tools/seclists/,seclists | Kali Linux Tools,0.0868
+tfidf_pivot_cov,wifi password cracking,4,457,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-wishlist.html,"Wishlist | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.0697
+tfidf_pivot_cov,wifi password cracking,5,766,https://www.kali.org/tools/wifi-honey/,wifi-honey | Kali Linux Tools,0.1169
+tfidf_pivot_cov,sql injection tool,1,613,https://www.kali.org/tools/sqlmap/,sqlmap | Kali Linux Tools,0.123
+tfidf_pivot_cov,sql injection tool,2,621,https://www.kali.org/tools/jsql/,jsql | Kali Linux Tools,0.1146
+tfidf_pivot_cov,sql injection tool,3,616,https://www.kali.org/tools/sqlninja/,sqlninja | Kali Linux Tools,0.1035
+tfidf_pivot_cov,sql injection tool,4,356,https://www.kali.org/tools/nikto/,nikto | Kali Linux Tools,0.0848
+tfidf_pivot_cov,sql injection tool,5,845,https://www.kali.org/tools/siparmyknife/,siparmyknife | Kali Linux Tools,0.0836
+tfidf_pivot_cov,port scanning techniques,1,950,https://www.kali.org/tools/unhide/,unhide | Kali Linux Tools,0.0927
+tfidf_pivot_cov,port scanning techniques,2,639,https://nmap.org/book/man-port-scanning-techniques.html,Port Scanning Techniques | Nmap Network Scanning,0.0856
+tfidf_pivot_cov,port scanning techniques,3,252,https://nmap.org/book/scan-methods.html,Chapter 5. Port Scanning Techniques and Algorithms | Nmap Network Scanning,0.0816
+tfidf_pivot_cov,port scanning techniques,4,313,https://nmap.org/book/port-scanning-algorithms.html,Scan Code and Algorithms | Nmap Network Scanning,0.0803
+tfidf_pivot_cov,port scanning techniques,5,499,https://nmap.org/book/firewall-subversion.html,Bypassing Firewall Rules | Nmap Network Scanning,0.079
+tfidf_pivot_cov,intercept https traffic,1,102,https://docs.mitmproxy.org/stable/concepts/modes/,Proxy Modes,0.132
+tfidf_pivot_cov,intercept https traffic,2,4,https://docs.mitmproxy.org/stable/,Introduction,0.1105
+tfidf_pivot_cov,intercept https traffic,3,857,https://www.kali.org/tools/mitmproxy/,mitmproxy | Kali Linux Tools,0.1082
+tfidf_pivot_cov,intercept https traffic,4,190,https://docs.mitmproxy.org/stable/howto/transparent/,Transparent Proxying,0.1051
+tfidf_pivot_cov,intercept https traffic,5,121,https://docs.mitmproxy.org/stable/concepts/options/,Options,0.0958
+tfidf_pivot_cov,web application vulnerability scanner,1,400,https://www.kali.org/tools/web-cache-vulnerability-scanner/,web-cache-vulnerability-scanner | Kali Linux Tools,0.1167
+tfidf_pivot_cov,web application vulnerability scanner,2,200,https://www.kali.org/tools/dirb/,dirb | Kali Linux Tools,0.0969
+tfidf_pivot_cov,web application vulnerability scanner,3,391,https://www.kali.org/tools/wapiti/,wapiti | Kali Linux Tools,0.0933
+tfidf_pivot_cov,web application vulnerability scanner,4,327,https://www.kali.org/tools/burpsuite/,burpsuite | Kali Linux Tools,0.0758
+tfidf_pivot_cov,web application vulnerability scanner,5,718,https://docs.metasploit.com/docs/development/google-summer-of-code/gsoc-2018-project-ideas.html,"2018 Project Ideas | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.0753
+tfidf_pivot_cov,network packet sniffer,1,467,https://www.kali.org/tools/kismet/,kismet | Kali Linux Tools,0.1137
+tfidf_pivot_cov,network packet sniffer,2,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,5.3. Saving Captured Packets,0.092
+tfidf_pivot_cov,network packet sniffer,3,789,https://www.kali.org/tools/above/,above | Kali Linux Tools,0.092
+tfidf_pivot_cov,network packet sniffer,4,796,https://www.kali.org/tools/wireshark/,wireshark | Kali Linux Tools,0.0918
+tfidf_pivot_cov,network packet sniffer,5,797,https://www.kali.org/tools/scapy/,scapy | Kali Linux Tools,0.0907
+tfidf_pivot_cov,exploit metasploit module,1,2,https://docs.metasploit.com/,"Home | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1071
+tfidf_pivot_cov,exploit metasploit module,2,339,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,"Running Private Modules | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1054
+tfidf_pivot_cov,exploit metasploit module,3,268,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html,"How to use a Metasploit module appropriately | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1041
+tfidf_pivot_cov,exploit metasploit module,4,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,"Running modules | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1015
+tfidf_pivot_cov,exploit metasploit module,5,590,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,"Writing an exploit | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1006
+tfidf_pivot_cov,decompile android apk,1,585,https://www.kali.org/tools/jadx/,jadx | Kali Linux Tools,0.2201
+tfidf_pivot_cov,decompile android apk,2,579,https://www.kali.org/tools/apktool/,apktool | Kali Linux Tools,0.1043
+tfidf_pivot_cov,decompile android apk,3,593,https://www.kali.org/tools/dex2jar/,dex2jar | Kali Linux Tools,0.0859
+tfidf_pivot_cov,decompile android apk,4,108,https://docs.mitmproxy.org/stable/concepts/certificates/,Certificates,0.0762
+tfidf_pivot_cov,decompile android apk,5,582,https://www.kali.org/tools/bytecode-viewer/,bytecode-viewer | Kali Linux Tools,0.0743
+tfidf_pivot_cov,directory enumeration web server,1,245,https://www.kali.org/tools/gobuster/,gobuster | Kali Linux Tools,0.0988
+tfidf_pivot_cov,directory enumeration web server,2,235,https://www.kali.org/tools/finalrecon/,finalrecon | Kali Linux Tools,0.0798
+tfidf_pivot_cov,directory enumeration web server,3,105,https://www.kali.org/tools/autorecon/,autorecon | Kali Linux Tools,0.0759
+tfidf_pivot_cov,directory enumeration web server,4,221,https://www.kali.org/tools/feroxbuster/,feroxbuster | Kali Linux Tools,0.0753
+tfidf_pivot_cov,directory enumeration web server,5,415,https://www.kali.org/tools/wpscan/,wpscan | Kali Linux Tools,0.0749
+tfidf_pivot_cov,reverse shell payload,1,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,"How to use a reverse shell in Metasploit | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.121
+tfidf_pivot_cov,reverse shell payload,2,569,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-use-fetch-payloads.html,"How to use Fetch Payloads | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1145
+tfidf_pivot_cov,reverse shell payload,3,432,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-stageless-mode.html,"Stageless Mode | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.1009
+tfidf_pivot_cov,reverse shell payload,4,481,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-with-ngrok.html,"How to use Metasploit with ngrok | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.0968
+tfidf_pivot_cov,reverse shell payload,5,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,"How payloads work | Metasploit Documentation Penetration Testing Software, Pen Testing Security",0.0947
+bm25,wifi password cracking,1,763,https://www.kali.org/tools/fern-wifi-cracker/,fern-wifi-cracker | Kali Linux Tools,13.9827
+bm25,wifi password cracking,2,652,https://www.kali.org/tools/seclists/,seclists | Kali Linux Tools,13.48
+bm25,wifi password cracking,3,766,https://www.kali.org/tools/wifi-honey/,wifi-honey | Kali Linux Tools,13.1061
+bm25,wifi password cracking,4,475,https://www.kali.org/tools/reaver/,reaver | Kali Linux Tools,12.2582
+bm25,wifi password cracking,5,748,https://www.kali.org/tools/john/,john | Kali Linux Tools,12.0609
+bm25,sql injection tool,1,613,https://www.kali.org/tools/sqlmap/,sqlmap | Kali Linux Tools,13.9676
+bm25,sql injection tool,2,621,https://www.kali.org/tools/jsql/,jsql | Kali Linux Tools,13.7173
+bm25,sql injection tool,3,616,https://www.kali.org/tools/sqlninja/,sqlninja | Kali Linux Tools,13.2079
+bm25,sql injection tool,4,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,"SQL Injection | Metasploit Documentation Penetration Testing Software, Pen Testing Security",12.3209
+bm25,sql injection tool,5,721,https://docs.metasploit.com/docs/development/google-summer-of-code/gsoc-2020-project-ideas.html,"2020 Project Ideas | Metasploit Documentation Penetration Testing Software, Pen Testing Security",12.0041
+bm25,port scanning techniques,1,252,https://nmap.org/book/scan-methods.html,Chapter 5. Port Scanning Techniques and Algorithms | Nmap Network Scanning,9.9202
+bm25,port scanning techniques,2,166,https://nmap.org/book/host-discovery.html,Chapter 3. Host Discovery (“Ping Scanning”) | Nmap Network Scanning,9.8217
+bm25,port scanning techniques,3,294,https://nmap.org/book/scan-methods-maimon-scan.html,TCP Maimon Scan (-sM) | Nmap Network Scanning,9.8171
+bm25,port scanning techniques,4,525,https://nmap.org/book/nmap-defenses-trickery.html,Clever Trickery | Nmap Network Scanning,9.6922
+bm25,port scanning techniques,5,639,https://nmap.org/book/man-port-scanning-techniques.html,Port Scanning Techniques | Nmap Network Scanning,9.6053
+bm25,intercept https traffic,1,102,https://docs.mitmproxy.org/stable/concepts/modes/,Proxy Modes,14.2092
+bm25,intercept https traffic,2,4,https://docs.mitmproxy.org/stable/,Introduction,13.7594
+bm25,intercept https traffic,3,190,https://docs.mitmproxy.org/stable/howto/transparent/,Transparent Proxying,12.0707
+bm25,intercept https traffic,4,857,https://www.kali.org/tools/mitmproxy/,mitmproxy | Kali Linux Tools,11.8417
+bm25,intercept https traffic,5,790,https://www.kali.org/tools/dsniff/,dsniff | Kali Linux Tools,11.0114
+bm25,web application vulnerability scanner,1,400,https://www.kali.org/tools/web-cache-vulnerability-scanner/,web-cache-vulnerability-scanner | Kali Linux Tools,15.7157
+bm25,web application vulnerability scanner,2,200,https://www.kali.org/tools/dirb/,dirb | Kali Linux Tools,14.5042
+bm25,web application vulnerability scanner,3,391,https://www.kali.org/tools/wapiti/,wapiti | Kali Linux Tools,14.223
+bm25,web application vulnerability scanner,4,327,https://www.kali.org/tools/burpsuite/,burpsuite | Kali Linux Tools,13.5477
+bm25,web application vulnerability scanner,5,718,https://docs.metasploit.com/docs/development/google-summer-of-code/gsoc-2018-project-ideas.html,"2018 Project Ideas | Metasploit Documentation Penetration Testing Software, Pen Testing Security",12.2147
+bm25,network packet sniffer,1,797,https://www.kali.org/tools/scapy/,scapy | Kali Linux Tools,12.0218
+bm25,network packet sniffer,2,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,5.3. Saving Captured Packets,11.7654
+bm25,network packet sniffer,3,789,https://www.kali.org/tools/above/,above | Kali Linux Tools,11.679
+bm25,network packet sniffer,4,349,https://www.wireshark.org/docs/wsug_html_chunked/ChIOOpenSection.html,5.2. Open Capture Files,11.6283
+bm25,network packet sniffer,5,467,https://www.kali.org/tools/kismet/,kismet | Kali Linux Tools,11.035
+bm25,exploit metasploit module,1,339,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,"Running Private Modules | Metasploit Documentation Penetration Testing Software, Pen Testing Security",11.9635
+bm25,exploit metasploit module,2,2,https://docs.metasploit.com/,"Home | Metasploit Documentation Penetration Testing Software, Pen Testing Security",11.9375
+bm25,exploit metasploit module,3,268,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-metasploit-module-appropriately.html,"How to use a Metasploit module appropriately | Metasploit Documentation Penetration Testing Software, Pen Testing Security",11.812
+bm25,exploit metasploit module,4,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,"Running modules | Metasploit Documentation Penetration Testing Software, Pen Testing Security",11.7162
+bm25,exploit metasploit module,5,590,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,"Writing an exploit | Metasploit Documentation Penetration Testing Software, Pen Testing Security",11.6675
+bm25,decompile android apk,1,585,https://www.kali.org/tools/jadx/,jadx | Kali Linux Tools,27.2569
+bm25,decompile android apk,2,579,https://www.kali.org/tools/apktool/,apktool | Kali Linux Tools,17.349
+bm25,decompile android apk,3,582,https://www.kali.org/tools/bytecode-viewer/,bytecode-viewer | Kali Linux Tools,14.4372
+bm25,decompile android apk,4,593,https://www.kali.org/tools/dex2jar/,dex2jar | Kali Linux Tools,14.2413
+bm25,decompile android apk,5,108,https://docs.mitmproxy.org/stable/concepts/certificates/,Certificates,13.0801
+bm25,directory enumeration web server,1,245,https://www.kali.org/tools/gobuster/,gobuster | Kali Linux Tools,14.3041
+bm25,directory enumeration web server,2,967,https://www.kali.org/tools/arsenal-ng/,arsenal-ng | Kali Linux Tools,12.9729
+bm25,directory enumeration web server,3,235,https://www.kali.org/tools/finalrecon/,finalrecon | Kali Linux Tools,12.8454
+bm25,directory enumeration web server,4,221,https://www.kali.org/tools/feroxbuster/,feroxbuster | Kali Linux Tools,10.6977
+bm25,directory enumeration web server,5,105,https://www.kali.org/tools/autorecon/,autorecon | Kali Linux Tools,10.3293
+bm25,reverse shell payload,1,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,"How to use a reverse shell in Metasploit | Metasploit Documentation Penetration Testing Software, Pen Testing Security",12.7313
+bm25,reverse shell payload,2,569,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-use-fetch-payloads.html,"How to use Fetch Payloads | Metasploit Documentation Penetration Testing Software, Pen Testing Security",12.3118
+bm25,reverse shell payload,3,432,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-stageless-mode.html,"Stageless Mode | Metasploit Documentation Penetration Testing Software, Pen Testing Security",11.9735
+bm25,reverse shell payload,4,892,https://www.kali.org/tools/hoaxshell/,hoaxshell | Kali Linux Tools,11.8355
+bm25,reverse shell payload,5,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,"How payloads work | Metasploit Documentation Penetration Testing Software, Pen Testing Security",11.5514
+bm25_boost_syn,wifi password cracking,1,763,https://www.kali.org/tools/fern-wifi-cracker/,fern-wifi-cracker | Kali Linux Tools,47.3629
+bm25_boost_syn,wifi password cracking,2,475,https://www.kali.org/tools/reaver/,reaver | Kali Linux Tools,35.5106
+bm25_boost_syn,wifi password cracking,3,758,https://www.kali.org/tools/aircrack-ng/,aircrack-ng | Kali Linux Tools,33.8189
+bm25_boost_syn,wifi password cracking,4,319,https://docs.metasploit.com/docs/using-metasploit/intermediate/hashes-and-password-cracking.html,"Hashes and Password Cracking | Metasploit Documentation Penetration Testing Software, Pen Testing Security",33.7742
+bm25_boost_syn,wifi password cracking,5,766,https://www.kali.org/tools/wifi-honey/,wifi-honey | Kali Linux Tools,29.0905
+bm25_boost_syn,sql injection tool,1,702,https://docs.metasploit.com/docs/development/developing-modules/libraries/sql-injection-libraries.html,"SQL Injection | Metasploit Documentation Penetration Testing Software, Pen Testing Security",41.6132
+bm25_boost_syn,sql injection tool,2,621,https://www.kali.org/tools/jsql/,jsql | Kali Linux Tools,23.6106
+bm25_boost_syn,sql injection tool,3,616,https://www.kali.org/tools/sqlninja/,sqlninja | Kali Linux Tools,23.5487
+bm25_boost_syn,sql injection tool,4,613,https://www.kali.org/tools/sqlmap/,sqlmap | Kali Linux Tools,20.9515
+bm25_boost_syn,sql injection tool,5,618,https://www.kali.org/tools/sqlsus/,sqlsus | Kali Linux Tools,20.6229
+bm25_boost_syn,port scanning techniques,1,252,https://nmap.org/book/scan-methods.html,Chapter 5. Port Scanning Techniques and Algorithms | Nmap Network Scanning,24.8005
+bm25_boost_syn,port scanning techniques,2,639,https://nmap.org/book/man-port-scanning-techniques.html,Port Scanning Techniques | Nmap Network Scanning,24.0133
+bm25_boost_syn,port scanning techniques,3,513,https://nmap.org/book/nmap-defenses-proactive-scanning.html,"Scan Proactively, Then Close or Block Ports and Fix Vulnerabilities | Nmap Network Scanning",20.5291
+bm25_boost_syn,port scanning techniques,4,222,https://nmap.org/book/port-scanning.html,Chapter 4. Port Scanning Overview | Nmap Network Scanning,19.6696
+bm25_boost_syn,port scanning techniques,5,318,https://nmap.org/book/reduce-scantime.html,Scan Time Reduction Techniques | Nmap Network Scanning,19.3025
+bm25_boost_syn,intercept https traffic,1,102,https://docs.mitmproxy.org/stable/concepts/modes/,Proxy Modes,14.2092
+bm25_boost_syn,intercept https traffic,2,4,https://docs.mitmproxy.org/stable/,Introduction,13.7594
+bm25_boost_syn,intercept https traffic,3,663,https://docs.metasploit.com/docs/development/developing-modules/libraries/http/how-to-send-an-http-request-using-httpclient.html,"How to Send an HTTP Request Using HttpClient | Metasploit Documentation Penetration Testing Software, Pen Testing Security",13.4656
+bm25_boost_syn,intercept https traffic,4,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,Intercept Requests,12.9272
+bm25_boost_syn,intercept https traffic,5,190,https://docs.mitmproxy.org/stable/howto/transparent/,Transparent Proxying,12.0707
+bm25_boost_syn,web application vulnerability scanner,1,400,https://www.kali.org/tools/web-cache-vulnerability-scanner/,web-cache-vulnerability-scanner | Kali Linux Tools,41.2179
+bm25_boost_syn,web application vulnerability scanner,2,347,https://nmap.org/book/vscan.html,Chapter 7. Service and Application Version Detection | Nmap Network Scanning,18.1452
+bm25_boost_syn,web application vulnerability scanner,3,391,https://www.kali.org/tools/wapiti/,wapiti | Kali Linux Tools,17.5483
+bm25_boost_syn,web application vulnerability scanner,4,200,https://www.kali.org/tools/dirb/,dirb | Kali Linux Tools,15.6158
+bm25_boost_syn,web application vulnerability scanner,5,513,https://nmap.org/book/nmap-defenses-proactive-scanning.html,"Scan Proactively, Then Close or Block Ports and Fix Vulnerabilities | Nmap Network Scanning",15.6069
+bm25_boost_syn,network packet sniffer,1,354,https://www.wireshark.org/docs/wsug_html_chunked/ChIOSaveSection.html,5.3. Saving Captured Packets,27.7326
+bm25_boost_syn,network packet sniffer,2,790,https://www.kali.org/tools/dsniff/,dsniff | Kali Linux Tools,22.011
+bm25_boost_syn,network packet sniffer,3,853,https://www.kali.org/tools/ettercap/,ettercap | Kali Linux Tools,21.4114
+bm25_boost_syn,network packet sniffer,4,460,https://www.kali.org/tools/ubertooth/,ubertooth | Kali Linux Tools,19.1834
+bm25_boost_syn,network packet sniffer,5,794,https://www.kali.org/tools/hexinject/,hexinject | Kali Linux Tools,19.1501
+bm25_boost_syn,exploit metasploit module,1,672,https://docs.metasploit.com/docs/development/developing-modules/libraries/http/how-to-write-a-module-using-httpserver-and-httpclient.html,"How to write a module using HttpServer and HttpClient | Metasploit Documentation Penetration Testing Software, Pen Testing Security",30.788
+bm25_boost_syn,exploit metasploit module,2,578,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-write-a-cmd-injection-module.html,"How to write a cmd injection module | Metasploit Documentation Penetration Testing Software, Pen Testing Security",30.35
+bm25_boost_syn,exploit metasploit module,3,339,https://docs.metasploit.com/docs/using-metasploit/intermediate/running-private-modules.html,"Running Private Modules | Metasploit Documentation Penetration Testing Software, Pen Testing Security",27.8376
+bm25_boost_syn,exploit metasploit module,4,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,"Running modules | Metasploit Documentation Penetration Testing Software, Pen Testing Security",27.5182
+bm25_boost_syn,exploit metasploit module,5,590,https://docs.metasploit.com/docs/development/developing-modules/guides/get-started-writing-an-exploit.html,"Writing an exploit | Metasploit Documentation Penetration Testing Software, Pen Testing Security",27.1123
+bm25_boost_syn,decompile android apk,1,585,https://www.kali.org/tools/jadx/,jadx | Kali Linux Tools,27.2569
+bm25_boost_syn,decompile android apk,2,109,https://frida.re/docs/examples/android/,Android | Frida • A world-class dynamic instrumentation toolkit,18.6094
+bm25_boost_syn,decompile android apk,3,579,https://www.kali.org/tools/apktool/,apktool | Kali Linux Tools,17.349
+bm25_boost_syn,decompile android apk,4,582,https://www.kali.org/tools/bytecode-viewer/,bytecode-viewer | Kali Linux Tools,14.4372
+bm25_boost_syn,decompile android apk,5,593,https://www.kali.org/tools/dex2jar/,dex2jar | Kali Linux Tools,14.2413
+bm25_boost_syn,directory enumeration web server,1,245,https://www.kali.org/tools/gobuster/,gobuster | Kali Linux Tools,22.0758
+bm25_boost_syn,directory enumeration web server,2,105,https://www.kali.org/tools/autorecon/,autorecon | Kali Linux Tools,19.2764
+bm25_boost_syn,directory enumeration web server,3,221,https://www.kali.org/tools/feroxbuster/,feroxbuster | Kali Linux Tools,17.4899
+bm25_boost_syn,directory enumeration web server,4,415,https://www.kali.org/tools/wpscan/,wpscan | Kali Linux Tools,17.4213
+bm25_boost_syn,directory enumeration web server,5,696,https://www.kali.org/tools/smbmap/,smbmap | Kali Linux Tools,16.7843
+bm25_boost_syn,reverse shell payload,1,284,https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html,"How to use a reverse shell in Metasploit | Metasploit Documentation Penetration Testing Software, Pen Testing Security",25.4625
+bm25_boost_syn,reverse shell payload,2,569,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-use-fetch-payloads.html,"How to use Fetch Payloads | Metasploit Documentation Penetration Testing Software, Pen Testing Security",18.4678
+bm25_boost_syn,reverse shell payload,3,273,https://docs.metasploit.com/docs/using-metasploit/basics/how-payloads-work.html,"How payloads work | Metasploit Documentation Penetration Testing Software, Pen Testing Security",17.3271
+bm25_boost_syn,reverse shell payload,4,34,https://docs.metasploit.com/docs/pentesting/metasploit-guide-upgrading-shells-to-meterpreter.html,"Upgrading Shells to Meterpreter | Metasploit Documentation Penetration Testing Software, Pen Testing Security",16.085
+bm25_boost_syn,reverse shell payload,5,329,https://docs.metasploit.com/docs/using-metasploit/intermediate/payload-uuid.html,"Payload UUID | Metasploit Documentation Penetration Testing Software, Pen Testing Security",12.5137

@@ -1,0 +1,45 @@
+{
+ "note": "v7.1 ablation on final judgments (144 pairs). value=[P@5, unjudged results in top5 counted as non-relevant]",
+ "results": {
+  "tfidf | skip_hubs=False": [
+   0.46,
+   0
+  ],
+  "tfidf_cov | skip_hubs=False": [
+   0.68,
+   0
+  ],
+  "tfidf_pivot | skip_hubs=False": [
+   0.84,
+   0
+  ],
+  "tfidf_pivot_cov | skip_hubs=False": [
+   0.78,
+   0
+  ],
+  "bm25 | skip_hubs=False": [
+   0.76,
+   0
+  ],
+  "tfidf | skip_hubs=True": [
+   0.46,
+   0
+  ],
+  "tfidf_cov | skip_hubs=True": [
+   0.72,
+   0
+  ],
+  "tfidf_pivot | skip_hubs=True": [
+   0.84,
+   0
+  ],
+  "tfidf_pivot_cov | skip_hubs=True": [
+   0.8,
+   0
+  ],
+  "bm25 | skip_hubs=True": [
+   0.8,
+   0
+  ]
+ }
+}

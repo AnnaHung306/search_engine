@@ -1,0 +1,62 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "391a398232c8538290eeb7ad118073eebc647bc3b51e89015f4fb01099a11a2e",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "b1a73e49a858f55ab08c74fd2e580a930393fb5122098dc3639d4f0436ca1474",
+  "started_at": 1793848875.2036622,
+  "finished_at": 1793848882.926879,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "886e381e8e874e5cec06-11",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此片段介紹編譯器最佳化與連結器選項，未提供網頁內容或路徑列舉能力。",
+        "evidence": "LLVM is a collection of libraries and tools that make it easy to build compilers, optimizers, just-in-time code generators"
+      },
+      {
+        "decision_id": "d0f3b25012d7d22f6cd9-11",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "函式插樁選項用於編譯器效能分析，未說明執行中 Android 應用的 Java 方法掛鉤。",
+        "evidence": "--instrument-function-entry=<string> - Sets the name of the profiling function called during function entry"
+      }
+    ]
+  }
+}

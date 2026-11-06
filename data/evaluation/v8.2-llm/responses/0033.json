@@ -1,0 +1,55 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "3ad34d0af4980e5132252389b7b2aedfaa39a8f1714144d6630f5dadce660809",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "9a6412042d2c8471cd086997a8eaead1750089925dd5422364c8c5d8f20df815",
+  "started_at": 1793848625.2258308,
+  "finished_at": 1793848632.036227,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "8c884119d7ab95eb9234-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此片段介紹 Samba 管理與驗證功能；使用或設定 NT 雜湊不等於破解離線雜湊，未提供密碼還原工具或流程。",
+        "evidence": "--pw-nt-hash The supplied password is the NT hash"
+      }
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+"""search.py — load the index and rank documents by cosine similarity.
+
+Uses the inverted index to gather only candidate docs that contain >=1 query
+term, then scores cosine similarity between the query TF-IDF vector and each
+candidate document vector. The same collection IDF is reused (never refit).
+
+Can be imported by app.py or run from the CLI:
+    python search.py "wifi password cracking"
+"""
+import json
+import math
+import os
+import sys
+
+from preprocess import tokenize
+
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+INDEX_PATH = os.path.join(DATA_DIR, "index.json")
+
+_INDEX = None
+
+
+def load_index():
+    global _INDEX
+    if _INDEX is None:
+        with open(INDEX_PATH, encoding="utf-8") as f:
+            _INDEX = json.load(f)
+    return _INDEX
+
+
+def snippet(text, query_terms, max_words=80):
+    """Plain-text snippet ~50-100 words, centered on the first query term hit."""
+    words = text.split()
+    low = [w.lower() for w in words]
+    pos = 0
+    qset = set(query_terms)
+    for i, w in enumerate(low):
+        if any(q in w for q in qset):
+            pos = max(0, i - 15)
+            break
+    chunk = words[pos:pos + max_words]
+    s = " ".join(chunk)
+    if pos > 0:
+        s = "… " + s
+    if pos + max_words < len(words):
+        s = s + " …"
+    return s
+
+
+def search(query, top_k=10):
+    idx = load_index()
+    terms = tokenize(query)
+    if not terms:
+        return {"status": "empty", "num_indexed": idx["N"], "results": []}
+
+    idf = idx["idf"]
+    postings = idx["postings"]
+    norms = idx["norms"]
+
+    # query vector: log-tf * idf, keeping only in-vocabulary terms
+    q_counts = {}
+    for t in terms:
+        q_counts[t] = q_counts.get(t, 0) + 1
+    q_weights = {}
+    for t, c in q_counts.items():
+        if t in idf:                               # OOV terms contribute nothing
+            q_weights[t] = (1 + math.log10(c)) * idf[t]
+
+    if not q_weights:
+        return {"status": "oov", "num_indexed": idx["N"], "results": [],
+                "terms": terms}
+
+    q_norm = math.sqrt(sum(w * w for w in q_weights.values()))
+
+    # candidate docs = union of postings for query terms
+    scores = {}
+    for t, qw in q_weights.items():
+        for doc_id_str, c in postings[t].items():
+            doc_id = int(doc_id_str)
+            dw = (1 + math.log10(c)) * idf[t]
+            scores[doc_id] = scores.get(doc_id, 0.0) + qw * dw
+
+    results = []
+    for doc_id, dot in scores.items():
+        denom = q_norm * norms[doc_id]
+        if denom == 0:
+            continue
+        cos = dot / denom
+        if cos > 0:
+            results.append((cos, doc_id))
+    results.sort(reverse=True)
+
+    out = []
+    for cos, doc_id in results[:top_k]:
+        d = idx["docs"][doc_id]
+        out.append({
+            "doc_id": doc_id,
+            "url": d["url"],
+            "title": d["title"],
+            "score": round(cos, 4),
+            "snippet": snippet(d["text"], q_weights.keys()),
+        })
+    status = "ok" if out else "no_match"
+    return {"status": status, "num_indexed": idx["N"], "results": out,
+            "terms": terms}
+
+
+if __name__ == "__main__":
+    q = " ".join(sys.argv[1:])
+    r = search(q)
+    print(f"[{r['status']}] indexed={r['num_indexed']} query terms={r.get('terms')}")
+    for i, hit in enumerate(r["results"], 1):
+        print(f"{i:2}. {hit['score']:.4f}  {hit['title']}")
+        print(f"     {hit['url']}")

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ doc.title }}{% endblock %}
+{% block content %}
+<article class="content-page">
+  <a class="back-link" href="{{ url_for('home', mode='effects' if collection == 'effects' else 'baseline') }}">← 回到搜尋</a>
+  <p class="eyebrow">索引原文 · 文件 {{ doc_id }} · 語料共 {{ num_indexed }} 頁</p>
+  <h1>{{ doc.title or doc.url }}</h1>
+  <p class="source-url">{% if doc.url.lower().startswith(('http://', 'https://')) %}<a href="{{ doc.url }}" rel="noopener noreferrer">{{ doc.url }}</a>{% else %}{{ doc.url }}{% endif %}</p>
+  <p class="tokens">採集時間 {{ doc.fetch_time }}</p>
+  {% if doc.description %}<p>{{ doc.description }}</p>{% endif %}
+  <pre class="document-body">{{ doc.text }}</pre>
+</article>
+{% endblock %}

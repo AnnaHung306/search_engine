@@ -1,0 +1,62 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "4b18cfcc3f97c99ca36662d9aa5f14f5b19184fd78e32dfe1ea7bc933c0a686e",
+  "policy_sha256": "84cbbc3b3a00321871524241539824fab0d1248c0283925a98aec7bf8611f7a7",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "7b0edad703bda3e3ae84444fe9357093afcbc86ebd97aa7ead3b184fb962217f",
+  "started_at": 1793855650.714598,
+  "finished_at": 1793855663.409765,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.3-intent/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "0f0373086d2ebb45da98-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "文件明確列出 `upstream:SPEC` 模式，並說明如何指定上游代理位址。",
+        "evidence": "\"upstream:SPEC\", and \"wireguard[:PATH]\" proxy servers. For reverse and upstream proxy modes, SPEC is host specification in the form of \"http[s]://host[:port]\"."
+      },
+      {
+        "decision_id": "edb48a7d1fe497aa5153-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "此條目提供透過 cowsay 執行 Perl 腳本的指令，並明確將反向 shell 列為可繼承的功能。",
+        "evidence": "cowsay -f /path/to/script.pl x Functions Inherits from perl , thus possibly granting the following functions: Shell Reverse shell File read Upload Download"
+      }
+    ]
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "9d9de85fd3ef149e6fa1aea37f565dfdaf4c00595ccf50973ecc6f754136b844",
+  "policy_sha256": "d6c7ab4a10879befddb5a6da74a77cd97573e083f793f0d2d46f80d14740a24c",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "bound_schema_sha256": "33e7469133d1316e7101059f692e90d094699add88eea9643fc329efa981bc3f",
+  "raw_events_sha256": "798848f2da1d96f5aa5fbcbaddda332be8812d4eabaf40e3ca23b05dd525284b",
+  "started_at": 1793858907.0937998,
+  "finished_at": 1793858999.808654,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.5-append/response_schemas/0000.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "471ac40d91cc179e7be7-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "SUID 範例以 `>` 覆寫檔案，未保留既有日誌內容。",
+        "evidence": "bash -p -c 'echo DATA >/path/to/output-file'"
+      },
+      {
+        "decision_id": "ce4c4bc25e5157435f58-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "SUID 的 Bash 檔案讀取範例會輸出指定本機檔案的內容。",
+        "evidence": "bash -p -c 'echo \"$(</path/to/input-file)\"'"
+      },
+      {
+        "decision_id": "ee8b44604c7b5f3f2065-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "sudo 範例以 `>` 覆寫目標，未示範保留原內容的追加。",
+        "evidence": "bash -c 'echo DATA >/path/to/output-file' Sudo"
+      },
+      {
+        "decision_id": "11b3a56517f3575b62a0-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "同一下載範例涵蓋 sudo，並明載可用覆寫選項將下載內容寫入指定檔案。",
+        "evidence": "Download This executable can download remote data. Comment Use --allow-overwrite if needed."
+      },
+      {
+        "decision_id": "15aecf9afabef5f9f15f-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "這是讀檔範例；換行出現在讀取輸出，未追加至既有檔案。",
+        "evidence": "File read This executable can read data from local files. Comment A newline is appended to the file."
+      },
+      {
+        "decision_id": "2c83add72e7df1895702-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "sudo 範例讀取指定檔案，未將所選資料追加寫回。",
+        "evidence": "comm /path/to/input-file /dev/null Sudo"
+      },
+      {
+        "decision_id": "303ad6de2aaa0f5b82c1-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "範例僅讀檔並在輸出加上換行，未向日誌追加指定文字。",
+        "evidence": "File read This executable can read data from local files. Comment A newline is appended to the file."
+      },
+      {
+        "decision_id": "85462a1e23b5ab3c8d9a-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "SUID 範例的功能是讀取，沒有把文字寫到本機檔案末尾。",
+        "evidence": "comm /path/to/input-file /dev/null Remarks The content is corrupted or otherwise altered by the process"
+      },
+      {
+        "decision_id": "c6381c87d091d91e376b-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "SUID 範例只讀取本機檔案，未追加所選文字至既有日誌。",
+        "evidence": "File read This executable can read data from local files."
+      },
+      {
+        "decision_id": "d0824172f525e697f016-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "一般使用者範例讀取指定檔案，沒有寫入選定文字。",
+        "evidence": "Unprivileged This function can be performed by any unprivileged user. comm /path/to/input-file /dev/null"
+      },
+      {
+        "decision_id": "d2333a5fae7b04722f3d-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "來源是 GTFOBins，且段落示範讀檔，未提供 sudo 追加。",
+        "evidence": ".. / comm File read File read This executable can read data from local files."
+      },
+      {
+        "decision_id": "14286f5f7d37dda4ee0e-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "同一 Screen 寫檔範例明載追加行為，且提供 sudo 情境。",
+        "evidence": "screen -L -Logfile /path/to/output-file echo DATA Sudo This function is performed by the privileged user if executed via sudo"
+      },
+      {
+        "decision_id": "3641238bda7371ae25f9-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "Screen 有追加日誌的範例，但此段只涵蓋一般使用者與 sudo，未涵蓋 SUID。",
+        "evidence": "screen -L -Logfile /path/to/output-file echo DATA Sudo"
+      },
+      {
+        "decision_id": "51dc611ef637344a44df-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "一般使用者可用 Screen 將選定文字追加至指定檔案。",
+        "evidence": "Unprivileged This function can be performed by any unprivileged user. screen -L -Logfile /path/to/output-file echo DATA"
+      },
+      {
+        "decision_id": "76cdc61940e66c7e41f5-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "Screen 的 sudo 寫檔範例會將選定文字加到本機檔案末尾。",
+        "evidence": "screen -L -Logfile /path/to/output-file echo DATA Sudo This function is performed by the privileged user if executed via sudo"
+      },
+      {
+        "decision_id": "858b3a66b8e0fbd01f43-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "段落明載資料追加至本機檔案，保留原內容；換行會轉換格式。",
+        "evidence": "File write This executable can write data to local files. Version requirements 4.06.02 Comment Data is appended to the file and \\n is converted to \\r\\n ."
+      },
+      {
+        "decision_id": "8d5ad5de0d55b9a21d92-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "雖有 sudo 追加範例，來源仍是 GTFOBins，不符合外部來源條件。",
+        "evidence": "screen | GTFOBins"
+      },
+      {
+        "decision_id": "8d9393a4a71490f0c1ad-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "Screen 的檔案寫入範例明載追加，且同一範例適用於 sudo。",
+        "evidence": "screen -L -Logfile /path/to/output-file echo DATA Sudo This function is performed by the privileged user if executed via sudo"
+      },
+      {
+        "decision_id": "c1b73fe72a7bd0456012-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "Screen 的 sudo 範例將選定文字追加至指定的本機日誌。",
+        "evidence": "screen -L -Logfile /path/to/output-file echo DATA Sudo"
+      },
+      {
+        "decision_id": "eaf4f30281533ffa7d29-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "同一 sudo 範例會把實際文字追加寫入所選檔案，保留原內容。",
+        "evidence": "screen -L -Logfile /path/to/output-file echo DATA Sudo This function is performed by the privileged user if executed via sudo"
+      },
+      {
+        "decision_id": "1ff593c75eea46d34481-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "SUID 讀檔範例解析指定檔案，並透過錯誤訊息顯示內容。",
+        "evidence": "SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bc -s /path/to/input-file quit"
+      },
+      {
+        "decision_id": "94443d016b9ae50c260f-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "SUID 範例使用 Alpine 在終端介面顯示指定檔案的內容。",
+        "evidence": "File read This executable can read data from local files. Comment The file is displayed in the terminal interface."
+      },
+      {
+        "decision_id": "18e539f6418c86c2f504-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "SUID 讀檔範例利用錯誤訊息取出指定檔案的逐行內容。",
+        "evidence": "Comment Each line of the file is interpreted as a path and the content is leaked via error messages."
+      },
+      {
+        "decision_id": "207d3fc37bbd79ec6cc1-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "Hashcat 的同一 sudo 寫檔範例明載會追加至輸出檔末尾。",
+        "evidence": "Comment Append data to the end of the output file, creating if does not exist."
+      },
+      {
+        "decision_id": "251d5b12e52cc765b9a0-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "追加寫檔範例提供一般使用者與 sudo 情境，未記載 SUID。",
+        "evidence": "--outfile-autohex-disable /path/to/hash /path/to/wordlist Sudo This function is performed by the privileged user if executed via sudo"
+      },
+      {
+        "decision_id": "3f84f423e66543f1abcc-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "同一 sudo 範例以選定資料產生輸出，並明載將其追加至目標檔案。",
+        "evidence": "File write This executable can write data to local files. Comment Append data to the end of the output file, creating if does not exist."
+      },
+      {
+        "decision_id": "6250d948d5d50eb64c7f-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "Hashcat 的 sudo 範例可把選定文字追加到指定輸出檔，該路徑可指向本機日誌。",
+        "evidence": "hashcat -m 0 --quiet --potfile-disable -o /path/to/output-file --outfile-format=2 --outfile-autohex-disable /path/to/hash /path/to/wordlist Sudo"
+      },
+      {
+        "decision_id": "68ccf1a882419ee5bb70-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "範例明載資料會寫到輸出檔末尾，既有內容得以保留。",
+        "evidence": "Comment Append data to the end of the output file, creating if does not exist."
+      },
+      {
+        "decision_id": "84277022f122da5ff393-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "同一追加寫入範例提供 sudo 版本，並允許指定本機輸出路徑。",
+        "evidence": "hashcat -m 0 --quiet --potfile-disable -o /path/to/output-file --outfile-format=2 --outfile-autohex-disable /path/to/hash /path/to/wordlist Sudo"
+      },
+      {
+        "decision_id": "9c72b6810717490c1dac-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "Hashcat 的 sudo 寫檔範例採追加方式，可保留既有檔案內容。",
+        "evidence": "Comment Append data to the end of the output file, creating if does not exist."
+      },
+      {
+        "decision_id": "cb50c4a3b84c3eae818a-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "同一寫檔範例支援 sudo，可將選定內容寫到指定本機路徑。",
+        "evidence": "hashcat -m 0 --quiet --potfile-disable -o /path/to/output-file --outfile-format=2 --outfile-autohex-disable /path/to/hash /path/to/wordlist Sudo"
+      },
+      {
+        "decision_id": "e6fe181dbf8da9ccc67d-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "追加寫檔的同一範例明載一般使用者可執行，並可指定資料。",
+        "evidence": "Comment Append data to the end of the output file, creating if does not exist. Unprivileged This function can be performed by any unprivileged user."
+      },
+      {
+        "decision_id": "eda04e31029fa7601414-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "雖有 sudo 追加寫檔內容，來源是 GTFOBins，未符合來源限制。",
+        "evidence": "hashcat | GTFOBins"
+      },
+      {
+        "decision_id": "ae678dd3ded24da5272f-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "sudo 範例讀取並解碼檔案，未寫入內容來覆蓋本機檔案。",
+        "evidence": "base58 /path/to/input-file | base58 --decode Sudo"
+      },
+      {
+        "decision_id": "ef026465f21340b0567d-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "SUID 範例修改檔案權限，未將任何選定文字追加至檔案。",
+        "evidence": "chmod 6777 /path/to/input-file"
+      },
+      {
+        "decision_id": "a6df8e103fc1a82eb567-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "sudo 範例使用 mawk 將指定文字寫入選定本機檔案。",
+        "evidence": "mawk 'BEGIN { print \"DATA\" > \"/path/to/output-file\" }' Sudo"
+      },
+      {
+        "decision_id": "fd93e69d05fde804b74a-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "sudo 範例以 `>` 覆寫，未示範保留原內容的追加。",
+        "evidence": "mawk 'BEGIN { print \"DATA\" > \"/path/to/output-file\" }' Sudo"
+      },
+      {
+        "decision_id": "fe242f08a893a68bc932-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "SUID 範例以 `>` 覆寫指定檔案，未在末尾追加。",
+        "evidence": "mawk 'BEGIN { print \"DATA\" > \"/path/to/output-file\" }' File read"
+      },
+      {
+        "decision_id": "1422fe25b98b96876833-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "同一讀檔範例明列 SUID 情境，會輸出指定本機文字檔的內容。",
+        "evidence": "column /path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership"
+      },
+      {
+        "decision_id": "2f6834bb6f5ea9467605-0",
+        "relevant": 1,
+        "confidence": "medium",
+        "reason": "sudo 範例以 `-O` 將指定輸入內容寫到本機輸出檔，作為替換內容的寫入。",
+        "evidence": "check_log -F /path/to/input-file -O /path/to/output-file Sudo"
+      },
+      {
+        "decision_id": "3912813b6786f63a6f19-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "sudo 範例指定輸出檔寫入，但未記載保留舊內容的追加方式。",
+        "evidence": "check_log -F /path/to/input-file -O /path/to/output-file Sudo"
+      },
+      {
+        "decision_id": "5b45798c2e9e4beb26b3-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "段落示範把輸入內容寫至輸出檔，未記載向既有日誌追加文字。",
+        "evidence": "check_log -F /path/to/input-file -O /path/to/output-file Sudo"
+      },
+      {
+        "decision_id": "992b5c261b661f791d5d-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "sudo 寫檔範例會將選定輸入檔的內容寫到指定本機路徑。",
+        "evidence": "check_log -F /path/to/input-file -O /path/to/output-file Sudo This function is performed by the privileged user if executed via sudo"
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa45-815f-7570-8439-a6117a3b1a38"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\n  \"decisions\": [\n    {\n      \"decision_id\": \"9ff80bad55f69f3ac974-2\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"此段用單一函式位址建立控制流程圖，未說明如何列舉指定已載入模組的匯出符號。\",\n      \"evidence\": \"ControlFlowGraph new ControlFlowGraph(entrypoint) : builds the control-flow graph of the function containing entrypoint , specified as a NativePointer .\"\n    }\n  ]\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":40562,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":134,"reasoning_output_tokens":0}}

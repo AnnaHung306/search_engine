@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9b9-72f3-7b41-af9c-291cf0414747"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"886e381e8e8745cec06-8\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段介紹靜態分析、語言伺服器與編譯器選項，未提供網站內容或路徑枚舉能力。\",\"evidence\":\"The clang static analyzer results viewer.\"},{\"decision_id\":\"d0f3b25012d7d22f6cd9-8\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段的函式插樁屬於編譯器效能分析選項，未說明執行中 Android 應用的 Java 方法掛鉤。\",\"evidence\":\"--instrument-function-entry=<string> - Sets the name of the profiling function called during function entry\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":39793,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":188,"reasoning_output_tokens":0}}

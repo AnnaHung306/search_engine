@@ -1,0 +1,117 @@
+{
+  "role": "New focused queries fixed before candidate runs; distinct reverse, write, binding, and control groups.",
+  "queries": [
+    {
+      "id": "gtfo-01",
+      "group": "reverse",
+      "query": "GTFOBins outbound shell examples",
+      "information_need": "Locate direct outbound reverse-shell examples in GTFOBins.",
+      "relevance_rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone."
+    },
+    {
+      "id": "gtfo-02",
+      "group": "reverse",
+      "query": "GTFOBins reverse shell through sudo",
+      "information_need": "Find direct reverse-shell examples documented with sudo.",
+      "relevance_rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+    },
+    {
+      "id": "gtfo-03",
+      "group": "reverse",
+      "query": "GTFOBins SUID reverse shell examples",
+      "information_need": "Find a direct outbound shell example for an executable with SUID.",
+      "relevance_rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+    },
+    {
+      "id": "gtfo-04",
+      "group": "reverse",
+      "query": "GTFOBins unprivileged connect back shell",
+      "information_need": "Find a direct reverse-shell example in an unprivileged context.",
+      "relevance_rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone. The requested unprivileged context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+    },
+    {
+      "id": "gtfo-05",
+      "group": "write",
+      "query": "GTFOBins write contents to a local file with sudo",
+      "information_need": "Find a documented way to write selected content to a chosen local path via sudo.",
+      "relevance_rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+    },
+    {
+      "id": "gtfo-06",
+      "group": "write",
+      "query": "GTFOBins SUID write data to a file",
+      "information_need": "Find actual local file writes in an SUID context.",
+      "relevance_rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+    },
+    {
+      "id": "gtfo-07",
+      "group": "write",
+      "query": "GTFOBins unprivileged local file writing",
+      "information_need": "Find direct examples writing user-chosen data to a local file without elevated privileges.",
+      "relevance_rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. The requested unprivileged context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+    },
+    {
+      "id": "gtfo-08",
+      "group": "write",
+      "query": "GTFOBins append data to a file with sudo",
+      "information_need": "Find sudo examples that append to an existing local file without replacing its old content.",
+      "relevance_rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient. Must show append behavior, not just overwriting."
+    },
+    {
+      "id": "gtfo-09",
+      "group": "binding",
+      "query": "GTFOBins read a local file under sudo",
+      "information_need": "Find a direct read of a chosen local file with sudo.",
+      "relevance_rule": "Must provide a way to retrieve substantive content from a specified local file. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+    },
+    {
+      "id": "gtfo-10",
+      "group": "binding",
+      "query": "GTFOBins read protected files with setuid",
+      "information_need": "Find direct documented file reads under SUID.",
+      "relevance_rule": "Must provide a way to retrieve substantive content from a specified local file. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+    },
+    {
+      "id": "gtfo-11",
+      "group": "binding",
+      "query": "GTFOBins SUID interactive shell",
+      "information_need": "Find interactive local shells documented for the executable's SUID context.",
+      "relevance_rule": "An interactive local shell qualifies. Outbound or bind-only shells, single-command execution, or indirect inheritance alone do not. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+    },
+    {
+      "id": "gtfo-12",
+      "group": "binding",
+      "query": "GTFOBins sudo noninteractive command execution",
+      "information_need": "Find a documented sudo technique to run noninteractive commands, without needing an interactive shell.",
+      "relevance_rule": "A direct documented command execution method can qualify; a page with only interactive shell, file read, write, or inheritance cannot. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+    },
+    {
+      "id": "gtfo-13",
+      "group": "control",
+      "query": "compare GTFOBins and Kali sudo tool documentation",
+      "information_need": "Find actual sudo behavior or workflow examples from either source.",
+      "relevance_rule": "Substantive sudo functionality from either named source; routine installation commands alone are insufficient."
+    },
+    {
+      "id": "gtfo-14",
+      "group": "control",
+      "query": "GTFOBins contribution schema and examples",
+      "information_need": "Find GTFOBins contributor documentation that explains entry schemas.",
+      "relevance_rule": "Official documentation explaining the functions and contexts schema. An executable example without schema is nonrelevant."
+    },
+    {
+      "id": "gtfo-15",
+      "group": "control",
+      "query": "GTFOBins alternatives for Linux privileged file write",
+      "information_need": "Find a non-GTFOBins source documenting writing content to a local path with elevated privileges.",
+      "relevance_rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. A GTFOBins entry is not an alternative."
+    },
+    {
+      "id": "gtfo-16",
+      "group": "control",
+      "query": "Frida inspect exported functions from a module",
+      "information_need": "Find a Frida API or workflow to enumerate a loaded module's exports.",
+      "relevance_rule": "Documentation of actual symbol or export enumeration for a specified module."
+    }
+  ]
+}

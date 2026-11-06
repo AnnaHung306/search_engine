@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9b3-e8b3-74f2-94ac-012d1597bd79"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"1acb069855bc8c06a694-5\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段是 Clang 編譯器選項說明，未提供網站內容或隱藏路徑列舉工具與技術。\",\"evidence\":\"OVERVIEW: clang LLVM compiler USAGE: clang [options] file...\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":40525,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":99,"reasoning_output_tokens":0}}

@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decisions"
+  ],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "decision_id",
+          "relevant",
+          "confidence",
+          "reason",
+          "evidence"
+        ],
+        "properties": {
+          "decision_id": {
+            "type": "string",
+            "enum": [
+              "1d865b159723244ccc29-0",
+              "257a3da0adf7f7a92507-0",
+              "36fdb3957f583918fda0-0",
+              "841f3d1d19abf3ce5280-0",
+              "87799ba31c31a29049b5-1",
+              "8d369673b62d1154d093-0",
+              "94bb3c08a87090ea9cd0-0",
+              "9fadaef0fcd8edebdcfb-0",
+              "ae678dd3ded24da5272f-0",
+              "b0c05da2f92a151497eb-0",
+              "babb1e6cd568d1d7d982-0",
+              "e3f2591f881aa88a6b9e-0",
+              "eda04e31029fa7601414-0"
+            ]
+          },
+          "relevant": {
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

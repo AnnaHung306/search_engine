@@ -1,0 +1,55 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "d88706fefe1359f005df770ca8272277c18c7ddcd78f50733417c34fd64e7762",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "bf98c59de651f5d829c602c17d749c2932e6199788373803d915d70b92d12d62",
+  "started_at": 1793848732.66886,
+  "finished_at": 1793848739.328655,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "554542a83226aadcac95-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "此片段介紹 RDP 用戶端、代理伺服器及連線選項，未提供列舉或檢視程序已載入原生程式庫的能力。",
+        "evidence": "FreeRDP is a libre client/server implementation of the Remote Desktop Protocol (RDP)."
+      }
+    ]
+  }
+}

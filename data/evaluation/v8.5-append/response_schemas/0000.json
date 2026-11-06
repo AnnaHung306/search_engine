@@ -1,0 +1,94 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decisions"
+  ],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "decision_id",
+          "relevant",
+          "confidence",
+          "reason",
+          "evidence"
+        ],
+        "properties": {
+          "decision_id": {
+            "type": "string",
+            "enum": [
+              "11b3a56517f3575b62a0-0",
+              "1422fe25b98b96876833-0",
+              "14286f5f7d37dda4ee0e-0",
+              "15aecf9afabef5f9f15f-0",
+              "18e539f6418c86c2f504-0",
+              "1ff593c75eea46d34481-0",
+              "207d3fc37bbd79ec6cc1-0",
+              "251d5b12e52cc765b9a0-0",
+              "2c83add72e7df1895702-0",
+              "2f6834bb6f5ea9467605-0",
+              "303ad6de2aaa0f5b82c1-0",
+              "3641238bda7371ae25f9-0",
+              "3912813b6786f63a6f19-0",
+              "3f84f423e66543f1abcc-0",
+              "471ac40d91cc179e7be7-0",
+              "51dc611ef637344a44df-0",
+              "5b45798c2e9e4beb26b3-0",
+              "6250d948d5d50eb64c7f-0",
+              "68ccf1a882419ee5bb70-0",
+              "76cdc61940e66c7e41f5-0",
+              "84277022f122da5ff393-0",
+              "85462a1e23b5ab3c8d9a-0",
+              "858b3a66b8e0fbd01f43-0",
+              "8d5ad5de0d55b9a21d92-0",
+              "8d9393a4a71490f0c1ad-0",
+              "94443d016b9ae50c260f-0",
+              "992b5c261b661f791d5d-0",
+              "9c72b6810717490c1dac-0",
+              "a6df8e103fc1a82eb567-0",
+              "ae678dd3ded24da5272f-0",
+              "c1b73fe72a7bd0456012-0",
+              "c6381c87d091d91e376b-0",
+              "cb50c4a3b84c3eae818a-0",
+              "ce4c4bc25e5157435f58-0",
+              "d0824172f525e697f016-0",
+              "d2333a5fae7b04722f3d-0",
+              "e6fe181dbf8da9ccc67d-0",
+              "eaf4f30281533ffa7d29-0",
+              "eda04e31029fa7601414-0",
+              "ee8b44604c7b5f3f2065-0",
+              "ef026465f21340b0567d-0",
+              "fd93e69d05fde804b74a-0",
+              "fe242f08a893a68bc932-0"
+            ]
+          },
+          "relevant": {
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

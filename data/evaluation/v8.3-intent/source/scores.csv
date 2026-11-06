@@ -1,0 +1,17 @@
+system,query_id,query,precision_at_5
+bm25,intent-01,gtfobins sudo shell,0.6
+bm25,intent-02,gtfobins suid file read,1.0
+bm25,intent-03,reverse shell examples from GTFOBins,0.0
+bm25,intent-04,GTFOBins sudo arbitrary file write,0.2
+bm25_source,intent-01,gtfobins sudo shell,0.6
+bm25_source,intent-02,gtfobins suid file read,1.0
+bm25_source,intent-03,reverse shell examples from GTFOBins,0.0
+bm25_source,intent-04,GTFOBins sudo arbitrary file write,0.2
+bm25_native,intent-01,gtfobins sudo shell,0.6
+bm25_native,intent-02,gtfobins suid file read,1.0
+bm25_native,intent-03,reverse shell examples from GTFOBins,0.0
+bm25_native,intent-04,GTFOBins sudo arbitrary file write,0.2
+bm25_intent,intent-01,gtfobins sudo shell,0.6
+bm25_intent,intent-02,gtfobins suid file read,1.0
+bm25_intent,intent-03,reverse shell examples from GTFOBins,0.0
+bm25_intent,intent-04,GTFOBins sudo arbitrary file write,0.2

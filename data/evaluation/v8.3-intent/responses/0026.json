@@ -1,0 +1,83 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "0fc519726d4fe098773ee28cc600a12b54664c35a8e214f50163382f3e21fc5f",
+  "policy_sha256": "84cbbc3b3a00321871524241539824fab0d1248c0283925a98aec7bf8611f7a7",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "7d54deec28826425653c359242a0c5dec23a19de58df122334d9e49a4bed176c",
+  "started_at": 1793855808.061693,
+  "finished_at": 1793855830.059809,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.3-intent/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "3db0a7a2e32d238cca95-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "GTFOBins 條目提供在 SUID 權限下讀取本機檔案的 apache2 指令。",
+        "evidence": "SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped."
+      },
+      {
+        "decision_id": "32970db96f1e54352d67-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段說明如何組合 Metasploit 酬載，未提供列舉程序目前載入的原生模組的方法。",
+        "evidence": "When the framework starts up, stages are combined with stagers to create a complete payload that you can use in exploits."
+      },
+      {
+        "decision_id": "0fb3ec4c37fe4cfa457f-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段介紹遺失檔案的復原，未提供離線復原 ZIP 密碼或擷取密碼雜湊的流程。",
+        "evidence": "PhotoRec searches for the following files and is able to undelete them:"
+      },
+      {
+        "decision_id": "3102849423a2eb8c04e0-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段說明 HTTP 協定轉換，未提供透過上游代理轉送 HTTP 請求的設定。",
+        "evidence": "In case the upstream server does not speak HTTP/2, mitmproxy seamlessly translates messages to HTTP/1."
+      },
+      {
+        "decision_id": "26880175c54671556cbf-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段概述裝置列舉、程序附加與指令碼載入，未說明如何列舉程序已映射的原生函式庫。",
+        "evidence": "enumerate devices, attach to processes, create and manage sessions, load scripts, and drive the compiler"
+      }
+    ]
+  }
+}

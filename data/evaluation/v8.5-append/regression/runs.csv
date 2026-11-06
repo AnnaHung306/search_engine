@@ -1,0 +1,11 @@
+system,query_id,query,rank,doc_id,url,score
+expanded_v84,gtfo-08,GTFOBins append data to a file with sudo,1,981,https://gtfobins.org/gtfobins/screen/,13.05270939215329
+expanded_v84,gtfo-08,GTFOBins append data to a file with sudo,2,982,https://gtfobins.org/gtfobins/tee/,12.560879219279716
+expanded_v84,gtfo-08,GTFOBins append data to a file with sudo,3,501,https://gtfobins.org/gtfobins/comm/,12.290076426763218
+expanded_v84,gtfo-08,GTFOBins append data to a file with sudo,4,980,https://gtfobins.org/gtfobins/hashcat/,12.217532050847915
+expanded_v84,gtfo-08,GTFOBins append data to a file with sudo,5,20,https://gtfobins.org/contributing/,8.591911315242916
+append,gtfo-08,GTFOBins append data to a file with sudo,1,981,https://gtfobins.org/gtfobins/screen/,13.05270939215329
+append,gtfo-08,GTFOBins append data to a file with sudo,2,982,https://gtfobins.org/gtfobins/tee/,12.560879219279716
+append,gtfo-08,GTFOBins append data to a file with sudo,3,980,https://gtfobins.org/gtfobins/hashcat/,12.217532050847915
+append,gtfo-08,GTFOBins append data to a file with sudo,4,501,https://gtfobins.org/gtfobins/comm/,12.290076426763218
+append,gtfo-08,GTFOBins append data to a file with sudo,5,20,https://gtfobins.org/contributing/,8.591911315242916

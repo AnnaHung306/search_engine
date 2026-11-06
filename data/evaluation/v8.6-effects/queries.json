@@ -1,0 +1,120 @@
+{
+  "regression": {
+    "queries": [
+      {
+        "id": "app-10",
+        "group": "control",
+        "query": "GTFOBins alternatives for appending text to a file with sudo",
+        "information_need": "Find other sources for appending local text under sudo.",
+        "relevance_rule": "Only non-GTFOBins documents with substantive append-to-file and sudo evidence qualify."
+      },
+      {
+        "id": "app-11",
+        "group": "control",
+        "query": "GTFOBins sudo overwrite a local file",
+        "information_need": "Find an example that can replace existing local file contents under sudo.",
+        "relevance_rule": "Requires an actual write replacing content under sudo. Append-only, deletion and mere truncation do not qualify."
+      }
+    ],
+    "role": "Known failures"
+  },
+  "overwrite": {
+    "queries": [
+      {
+        "id": "effect-01",
+        "group": "overwrite",
+        "query": "GTFOBins replace existing local file contents via sudo",
+        "information_need": "Find GTFOBins examples replacing old local file contents with chosen data under sudo.",
+        "relevance_rule": "Must document writing chosen content that replaces a selected existing local file in the requested privilege context. Append-only, deleting, merely truncating, unrelated preparation, and unspecified effect do not count. A documented overwrite option on that example qualifies."
+      },
+      {
+        "id": "effect-02",
+        "group": "overwrite",
+        "query": "GTFOBins sudo overwrite a protected file with new text",
+        "information_need": "Replace a chosen existing local file with new text using sudo.",
+        "relevance_rule": "Must document writing chosen content that replaces a selected existing local file in the requested privilege context. Append-only, deleting, merely truncating, unrelated preparation, and unspecified effect do not count. A documented overwrite option on that example qualifies."
+      },
+      {
+        "id": "effect-03",
+        "group": "overwrite",
+        "query": "GTFOBins overwrite contents of a file with SUID",
+        "information_need": "Replace a selected local file's old contents in a documented SUID context.",
+        "relevance_rule": "Must document writing chosen content that replaces a selected existing local file in the requested privilege context. Append-only, deleting, merely truncating, unrelated preparation, and unspecified effect do not count. A documented overwrite option on that example qualifies."
+      },
+      {
+        "id": "effect-04",
+        "group": "overwrite",
+        "query": "GTFOBins unprivileged overwrite an existing file",
+        "information_need": "Replace a chosen existing local file with selected content as a normal user.",
+        "relevance_rule": "Must document writing chosen content that replaces a selected existing local file in the requested privilege context. Append-only, deleting, merely truncating, unrelated preparation, and unspecified effect do not count. A documented overwrite option on that example qualifies."
+      }
+    ],
+    "role": "Predeclared new questions"
+  },
+  "external": {
+    "queries": [
+      {
+        "id": "effect-05",
+        "group": "external",
+        "query": "outside GTFOBins append to a local file with sudo",
+        "information_need": "Find a non-GTFOBins example of appending local text with sudo.",
+        "relevance_rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+      },
+      {
+        "id": "effect-06",
+        "group": "external",
+        "query": "non-GTFOBins sudo append to an existing file",
+        "information_need": "Find non-GTFOBins docs for sudo append preserving old data.",
+        "relevance_rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+      },
+      {
+        "id": "effect-07",
+        "group": "external",
+        "query": "alternatives to GTFOBins for appending a line to a file under sudo",
+        "information_need": "Find other sources for privileged append of selected local text.",
+        "relevance_rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+      },
+      {
+        "id": "effect-08",
+        "group": "external",
+        "query": "GTFOBins alternatives for sudo add text to the end of a local file",
+        "information_need": "Find other sources demonstrating append with an elevated file writer.",
+        "relevance_rule": "Only non-GTFOBins documentation. Must give a substantive example adding selected text at the end of a local file while preserving previous contents, with sudo applied to the actual writer. An unrelated sudo command, append without sudo, and a shell redirect outside sudo do not qualify."
+      }
+    ],
+    "role": "Predeclared new questions"
+  },
+  "control": {
+    "queries": [
+      {
+        "id": "effect-09",
+        "group": "control",
+        "query": "GTFOBins sudo delete a local file",
+        "information_need": "Find an explicit documented deletion of a local file via sudo.",
+        "relevance_rule": "A substantive same-example sudo deletion qualifies even if a category says write. Mere truncation, overwrite, or unrelated cleanup does not qualify."
+      },
+      {
+        "id": "effect-10",
+        "group": "control",
+        "query": "GTFOBins sudo append lines to a local file",
+        "information_need": "Find GTFOBins documentation that appends selected local lines via sudo.",
+        "relevance_rule": "Documented local append retaining old contents in the stated privilege context. A documented append option tied to that example qualifies."
+      },
+      {
+        "id": "effect-11",
+        "group": "control",
+        "query": "compare GTFOBins and Ubuntu ways to append text with sudo",
+        "information_need": "Find applicable append examples from either GTFOBins or Ubuntu documentation.",
+        "relevance_rule": "Documented local append retaining old contents in the stated privilege context. A documented append option tied to that example qualifies. Either source is allowed."
+      },
+      {
+        "id": "effect-12",
+        "group": "control",
+        "query": "non-GTFOBins SUID append text to a local file",
+        "information_need": "Find non-GTFOBins evidence of append in SUID context.",
+        "relevance_rule": "Documented local append retaining old contents in the stated privilege context. A documented append option tied to that example qualifies. Non-GTFOBins only. Ordinary sudo or normal-user examples do not qualify."
+      }
+    ],
+    "role": "Predeclared new questions"
+  }
+}

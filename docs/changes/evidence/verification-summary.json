@@ -1,0 +1,60 @@
+{
+  "status": "implementation and stated verification complete; independent review resolved; human judgments and user acceptance pending",
+  "base_commit": "9c7c3a107b9712b5fc2f31d8d432a025be39f27a",
+  "legacy_precision_at_5": {
+    "tfidf": 0.46,
+    "tfidf_cov": 0.72,
+    "tfidf_pivot": 0.84,
+    "tfidf_pivot_cov": 0.8,
+    "bm25": 0.8,
+    "bm25_boost_syn": 0.74
+  },
+  "legacy_rank_differences": [],
+  "checks_completed": [
+    "repeated query TF agrees with independent calculation",
+    "index postings and norms reproduce from fixed collection",
+    "controlled per-hop scope, robots, delays, failure pause and request counts",
+    "literal phrase stopwords, punctuation and field boundaries",
+    "score contributions sum to actual base scores",
+    "Flask normal and experiment routes, OOV, Chinese correction, invalid option combinations",
+    "browser normal form submission and score-table expansion",
+    "all 1,344,488 literal offsets match source strings",
+    "interruption and resume recover unfinished URL without disk test fixtures",
+    "Crawl-delay restored before first resumed robots request",
+    "absolute/encoded dot-segment scope rejection",
+    "field/pivot/BM25 displayed denominators and IDF independently reproduce scores",
+    "kappa=0 for 50% observed and expected agreement; disagreement resolutions required",
+    "stale suite/run/review records never display a prior score",
+    "all nine systems x 46 queries reproduce frozen run URLs/ranks/scores after explanation-only fix",
+    "real Nmap robots/content returned 200 with >=2 seconds spacing",
+    "normal browser navigation search -> explanation -> full text -> evaluation -> blind review",
+    "CSV HTTP downloads returned 200 for all three suites with expected blank-label row counts",
+    "normal browser OOV form submission shows the expected no-vocabulary message",
+    "normal browser empty-query submission shows Type something to search",
+    "normal browser Chinese example explicitly enters experiment mode and corrects 無缐 to 無線"
+  ],
+  "human_review": "pending; no assistant-filled human labels or new final quality scores",
+  "snapshot_sha256": {
+    "search-engine.zip": "4521628303325a641d919ccb4f0230da5b9e33da50278a350db413e91d44ea51",
+    "data/pages.json": "f455264f04f5512863299f84b73e76f33004449ffc2f87c36512a4ff38020094",
+    "data/index.json": "8ca124319634cea69148359d33c4f51bc35f1c9c3ccd2221e9ab583775e6fa5a",
+    "data/index-v8.json": "7baebf0c7db2714523897ac9d2ca95b15cbbd340c57ebe168cf45c6ea4730825",
+    "data/eval_judgments.csv": "06f6c4ff44ab8240afb7edde70354552eaab67c99b78180a7be644e0e14a7e72"
+  },
+  "temporary_files": "three listed Ruff cache files still await the explicit cleanup reply; no temporary scripts/fixtures/bytecode",
+  "code_review": {
+    "standards": "all reported findings resolved",
+    "spec": "all reported findings resolved",
+    "record": "../REVIEW.md"
+  },
+  "preview": "http://127.0.0.1:5000/",
+  "regression_assertions": 188,
+  "human_review_pools": {
+    "course": 134,
+    "development": 164,
+    "holdout": 356
+  },
+  "preview_screenshot": "preview-explanation.png",
+  "latency_record": "latency-final.json",
+  "normal_preview_process": "final code; python -B code/app.py, loopback 127.0.0.1:5000"
+}

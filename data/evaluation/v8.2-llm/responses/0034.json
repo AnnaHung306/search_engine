@@ -1,0 +1,83 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "e775cbe0282871a8c4723c0567b52d28e838a5c39c3cdc76b56a40cfee1f4293",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "37a9302bf10b95c954ea8aef951058aef14eea2abfc8fc43439ba4889e4fba72",
+  "started_at": 1793848631.215759,
+  "finished_at": 1793848644.410323,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "8c884119d7ab95eb9234-1",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段介紹 SMB 管理、認證與資料庫工具，未提供離線雜湊破解功能或流程。",
+        "evidence": "smbpasswd The Samba encrypted password file Change a user’s SMB password"
+      },
+      {
+        "decision_id": "533e21b76b9ca2e7d6f7-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確提供 WPA/WPA2 用戶端握手自動擷取功能。",
+        "evidence": "WiFi networks scanning, deauthentication attack, clientless PMKID association attack and automatic WPA/WPA2 client handshakes capture."
+      },
+      {
+        "decision_id": "7101b1bf171ed45004b0-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "DNS 功能是中間人攻擊用的偽造，未記載 DNS 紀錄查詢、子網域探索或列舉能力。",
+        "evidence": "ARP, DNS, NDP and DHCPv6 spoofers for MITM attacks on IPv4 and IPv6 based networks."
+      },
+      {
+        "decision_id": "8b6b0c832a4e5fa43763-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明以 -O 啟用遠端作業系統偵測，並將探測回應與指紋資料庫比對。",
+        "evidence": "The nmap-os-db OS database is consulted when remote OS detection is requested with the -O option."
+      },
+      {
+        "decision_id": "42f63a8e1044dfef6e57-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確提供遞迴與逐層深度掃描，可探索巢狀網站目錄。",
+        "evidence": "-r, --recursive Brute-force recursively --deep-recursive Perform recursive scan on every directory depth (e.g. api/users -> api/)"
+      }
+    ]
+  }
+}

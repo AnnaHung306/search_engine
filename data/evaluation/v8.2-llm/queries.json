@@ -1,0 +1,296 @@
+{
+  "course": {
+    "name": "course",
+    "role": "legacy regression; previously used for development",
+    "queries": [
+      {
+        "id": "course-01",
+        "query": "wifi password cracking",
+        "information_need": "User wants a tool to recover/crack Wi-Fi (WEP/WPA) passwords.",
+        "relevance_rule": "Relevant if the page is about a tool that cracks or captures Wi-Fi keys/handshakes."
+      },
+      {
+        "id": "course-02",
+        "query": "sql injection tool",
+        "information_need": "User wants a tool to find/exploit SQL injection.",
+        "relevance_rule": "A user-operable tool explicitly documenting SQLi detection or exploitation is relevant, including an explicitly SQLi-capable SIP fuzzer; API-only library or post-exploitation files alone are insufficient."
+      },
+      {
+        "id": "course-03",
+        "query": "port scanning techniques",
+        "information_need": "User wants to learn how to scan ports / a port scanner.",
+        "relevance_rule": "Relevant if the page explains port scanning or documents a port scanner."
+      },
+      {
+        "id": "course-04",
+        "query": "intercept https traffic",
+        "information_need": "User wants to intercept / inspect encrypted HTTPS traffic (man-in-the-middle proxy).",
+        "relevance_rule": "Relevant if the page documents a tool or method that intercepts or decrypts HTTPS/TLS traffic (e.g. mitmproxy, burpsuite, Wireshark TLS decryption)."
+      },
+      {
+        "id": "course-05",
+        "query": "web application vulnerability scanner",
+        "information_need": "User wants a scanner for web app vulnerabilities.",
+        "relevance_rule": "Relevant if the page documents a web vulnerability scanner."
+      },
+      {
+        "id": "course-06",
+        "query": "network packet sniffer",
+        "information_need": "User wants to capture/analyze network traffic.",
+        "relevance_rule": "Relevant if the page is about packet capture/sniffing."
+      },
+      {
+        "id": "course-07",
+        "query": "exploit metasploit module",
+        "information_need": "User wants to use/run a Metasploit exploit module.",
+        "relevance_rule": "Relevant if the page explains Metasploit modules/exploitation."
+      },
+      {
+        "id": "course-08",
+        "query": "decompile android apk",
+        "information_need": "User wants to unpack / decompile an Android app (APK) to read its code.",
+        "relevance_rule": "APK unpacking/decompilation/reconstruction leading to readable code; runtime hooks alone do not satisfy decompile."
+      },
+      {
+        "id": "course-09",
+        "query": "directory enumeration web server",
+        "information_need": "User wants to enumerate directories/files on a web server.",
+        "relevance_rule": "Relevant if the page is about web content/directory discovery."
+      },
+      {
+        "id": "course-10",
+        "query": "reverse shell payload",
+        "information_need": "User wants to get a reverse shell on a target.",
+        "relevance_rule": "Relevant if the page explains how to create or catch a reverse shell (e.g. msfvenom payloads, GTFOBins reverse-shell entries, netcat)."
+      }
+    ]
+  },
+  "development": {
+    "name": "development",
+    "role": "development; human judgments pending",
+    "queries": [
+      {
+        "id": "development-01",
+        "query": "tls certificate proxy setup",
+        "information_need": "Configure a trusted certificate for a TLS inspection proxy.",
+        "relevance_rule": "Explains proxy CA installation or client TLS trust configuration."
+      },
+      {
+        "id": "development-02",
+        "query": "android dynamic instrumentation",
+        "information_need": "Inspect a running Android app with instrumentation.",
+        "relevance_rule": "Documents Frida Android instrumentation, attachment or hooks."
+      },
+      {
+        "id": "development-03",
+        "query": "tcp syn scan",
+        "information_need": "Understand TCP SYN port scanning.",
+        "relevance_rule": "Explains SYN scan behavior or its Nmap usage."
+      },
+      {
+        "id": "development-04",
+        "query": "dns reconnaissance",
+        "information_need": "Find DNS reconnaissance tools.",
+        "relevance_rule": "Documents DNS records, subdomain discovery or DNS enumeration tools."
+      },
+      {
+        "id": "development-05",
+        "query": "offline password hash recovery",
+        "information_need": "Recover passwords from offline hashes.",
+        "relevance_rule": "Documents a hash cracking tool or relevant workflow, not remote login guessing."
+      },
+      {
+        "id": "development-06",
+        "query": "http request interception",
+        "information_need": "Pause and inspect an HTTP request in a proxy.",
+        "relevance_rule": "Explains an interception proxy or request interception workflow."
+      },
+      {
+        "id": "development-07",
+        "query": "apk resource decoding",
+        "information_need": "Decode Android application resources.",
+        "relevance_rule": "Explains APK resource extraction/decoding, not only runtime hooks."
+      },
+      {
+        "id": "development-08",
+        "query": "network traffic display filter",
+        "information_need": "Filter already captured network traffic.",
+        "relevance_rule": "Explains Wireshark display filters or equivalent analysis."
+      },
+      {
+        "id": "development-09",
+        "query": "service banner detection",
+        "information_need": "Identify a service from network responses.",
+        "relevance_rule": "Explains service/version detection or banner inspection."
+      },
+      {
+        "id": "development-10",
+        "query": "web content discovery",
+        "information_need": "Locate unlinked content on a web server.",
+        "relevance_rule": "Documents web directory/file/content discovery."
+      },
+      {
+        "id": "development-11",
+        "query": "metasploit session management",
+        "information_need": "Manage an existing Metasploit session.",
+        "relevance_rule": "Explains listing, interacting with or managing sessions."
+      },
+      {
+        "id": "development-12",
+        "query": "sudo binary capabilities",
+        "information_need": "Understand documented security behavior of binaries under sudo.",
+        "relevance_rule": "A GTFOBins entry or explanation with a sudo-specific function."
+      }
+    ]
+  },
+  "holdout": {
+    "name": "holdout",
+    "role": "new frozen candidate test; group validation and human judgments pending",
+    "queries": [
+      {
+        "id": "holdout-01",
+        "query": "capture packets to pcap file",
+        "information_need": "Save captured traffic as a pcap file.",
+        "relevance_rule": "Explains packet capture with file output or saving captured packets."
+      },
+      {
+        "id": "holdout-02",
+        "query": "decrypt tls sessions with key log",
+        "information_need": "Analyze encrypted TLS traffic using session keys.",
+        "relevance_rule": "Explains TLS key logging/decryption in a packet analysis workflow."
+      },
+      {
+        "id": "holdout-03",
+        "query": "filter packets by ip address",
+        "information_need": "Show captured packets for a chosen IP address.",
+        "relevance_rule": "Provides relevant packet filtering guidance."
+      },
+      {
+        "id": "holdout-04",
+        "query": "mitmproxy modify http response",
+        "information_need": "Modify an intercepted HTTP response.",
+        "relevance_rule": "Explains response editing or a response hook in mitmproxy."
+      },
+      {
+        "id": "holdout-05",
+        "query": "install proxy certificate android",
+        "information_need": "Trust an interception proxy CA on Android.",
+        "relevance_rule": "Explains Android certificate installation/trust for proxy inspection."
+      },
+      {
+        "id": "holdout-06",
+        "query": "replay captured http requests",
+        "information_need": "Send captured HTTP requests again.",
+        "relevance_rule": "Explains request/client replay in an HTTP analysis tool."
+      },
+      {
+        "id": "holdout-07",
+        "query": "frida attach running process",
+        "information_need": "Instrument an already running process with Frida.",
+        "relevance_rule": "Explains attaching, process selection or attach workflows."
+      },
+      {
+        "id": "holdout-08",
+        "query": "hook java method android",
+        "information_need": "Observe or modify Java method behavior in a running Android app.",
+        "relevance_rule": "Explains Android Java method instrumentation/hooks."
+      },
+      {
+        "id": "holdout-09",
+        "query": "list loaded native libraries",
+        "information_need": "Inspect native modules loaded into a process.",
+        "relevance_rule": "Explains enumeration or inspection of native modules/libraries."
+      },
+      {
+        "id": "holdout-10",
+        "query": "extract source code from dex",
+        "information_need": "Read reconstructed code from Android DEX files.",
+        "relevance_rule": "Documents decompilation or conversion leading to readable code; runtime hooking alone is insufficient."
+      },
+      {
+        "id": "holdout-11",
+        "query": "inspect apk resources",
+        "information_need": "Inspect resources packaged in an Android APK.",
+        "relevance_rule": "Documents resource extraction, decoding or inspection."
+      },
+      {
+        "id": "holdout-12",
+        "query": "convert dex to jar",
+        "information_need": "Convert DEX content to Java class/JAR form.",
+        "relevance_rule": "Documents a DEX-to-JAR converter or workflow."
+      },
+      {
+        "id": "holdout-13",
+        "query": "nmap service version detection",
+        "information_need": "Determine versions of services on open ports.",
+        "relevance_rule": "Explains Nmap service/version detection."
+      },
+      {
+        "id": "holdout-14",
+        "query": "nmap operating system detection",
+        "information_need": "Determine a hosts operating system with Nmap.",
+        "relevance_rule": "Explains OS fingerprinting/detection."
+      },
+      {
+        "id": "holdout-15",
+        "query": "nmap udp scan",
+        "information_need": "Understand scanning UDP ports.",
+        "relevance_rule": "Explains UDP scan behavior, usage or interpretation."
+      },
+      {
+        "id": "holdout-16",
+        "query": "nmap host discovery without port scan",
+        "information_need": "Find active hosts without performing a port scan.",
+        "relevance_rule": "Explains host-discovery-only workflows; a general port-scan listing is insufficient."
+      },
+      {
+        "id": "holdout-17",
+        "query": "discover hidden web paths",
+        "information_need": "Discover web paths not linked from the homepage.",
+        "relevance_rule": "Documents web content/path enumeration tools or techniques."
+      },
+      {
+        "id": "holdout-18",
+        "query": "recursive web directory discovery",
+        "information_need": "Discover nested directories on a web server.",
+        "relevance_rule": "Explains recursive web directory/content discovery."
+      },
+      {
+        "id": "holdout-19",
+        "query": "detect sql injection automatically",
+        "information_need": "Find a tool for automated SQL injection detection.",
+        "relevance_rule": "Documents an automated SQLi detection/exploitation tool, not a generic library mention."
+      },
+      {
+        "id": "holdout-20",
+        "query": "audit wireless wpa handshake",
+        "information_need": "Find tools for capturing or analyzing WPA authentication handshakes.",
+        "relevance_rule": "Documents Wi-Fi/WPA handshake capture or processing."
+      },
+      {
+        "id": "holdout-21",
+        "query": "identify password hash format",
+        "information_need": "Determine what kind of password hash a value uses.",
+        "relevance_rule": "Documents hash identification, not only password cracking."
+      },
+      {
+        "id": "holdout-22",
+        "query": "generate metasploit payload",
+        "information_need": "Create a payload using Metasploit tooling.",
+        "relevance_rule": "Explains payload generation rather than an unrelated API definition."
+      },
+      {
+        "id": "holdout-23",
+        "query": "use metasploit exploit module",
+        "information_need": "Learn how to select/configure/run a Metasploit exploit module.",
+        "relevance_rule": "Explains an end-user module workflow; module development alone is insufficient."
+      },
+      {
+        "id": "holdout-24",
+        "query": "find gtfobins sudo binary techniques",
+        "information_need": "Locate documented sudo behavior for Unix binaries.",
+        "relevance_rule": "A GTFOBins entry with a sudo function or overview of that feature."
+      }
+    ]
+  }
+}

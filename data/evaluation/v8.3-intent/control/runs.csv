@@ -1,0 +1,161 @@
+system,query_id,query,rank,doc_id,url,score
+bm25,intent-09,list loaded Linux kernel modules,1,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,14.349700596460089
+bm25,intent-09,list loaded Linux kernel modules,2,170,https://frida.re/docs/javascript-api/,12.005440186143788
+bm25,intent-09,list loaded Linux kernel modules,3,950,https://www.kali.org/tools/unhide/,10.767055481696845
+bm25,intent-09,list loaded Linux kernel modules,4,352,https://nmap.org/book/vscan-examples.html,10.60723262880823
+bm25,intent-09,list loaded Linux kernel modules,5,528,https://www.kali.org/tools/aflplusplus/,10.384831805296498
+bm25,intent-10,load a shared library into a process,1,25,https://frida.re/docs/modes/,14.88068026523576
+bm25,intent-10,load a shared library into a process,2,30,https://frida.re/docs/gadget/,13.032340857570928
+bm25,intent-10,load a shared library into a process,3,281,https://gtfobins.org/gtfobins/bash/,12.98376939705517
+bm25,intent-10,load a shared library into a process,4,952,https://www.kali.org/tools/yara/,11.89528537702961
+bm25,intent-10,load a shared library into a process,5,275,https://frida.re/docs/frida-trace/session-initialization-primer/,11.641376880118624
+bm25,intent-11,list exported symbols of a loaded native module,1,551,https://www.kali.org/tools/llvm-defaults/,16.491136561664906
+bm25,intent-11,list exported symbols of a loaded native module,2,170,https://frida.re/docs/javascript-api/,16.268257222392634
+bm25,intent-11,list exported symbols of a loaded native module,3,570,https://www.kali.org/tools/radare2/,14.53386562022316
+bm25,intent-11,list exported symbols of a loaded native module,4,528,https://www.kali.org/tools/aflplusplus/,14.515027200501903
+bm25,intent-11,list exported symbols of a loaded native module,5,136,https://frida.re/docs/frida-trace/,13.99912463747879
+bm25,intent-12,compare GTFOBins and Kali privilege escalation techniques,1,409,https://gtfobins.org/gtfobins/chattr/,16.053629437474704
+bm25,intent-12,compare GTFOBins and Kali privilege escalation techniques,2,449,https://gtfobins.org/gtfobins/chmod/,16.034695009776925
+bm25,intent-12,compare GTFOBins and Kali privilege escalation techniques,3,459,https://gtfobins.org/gtfobins/chown/,16.023715443007543
+bm25,intent-12,compare GTFOBins and Kali privilege escalation techniques,4,13,https://gtfobins.org/scope/,14.992074449052732
+bm25,intent-12,compare GTFOBins and Kali privilege escalation techniques,5,515,https://gtfobins.org/gtfobins/cp/,14.941464091218542
+bm25,intent-13,inspect a tcp handshake in wireshark,1,242,https://www.wireshark.org/docs/wsug_html_chunked/ChUseToolsMenuSection.html,12.422337552163716
+bm25,intent-13,inspect a tcp handshake in wireshark,2,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,12.411463700972671
+bm25,intent-13,inspect a tcp handshake in wireshark,3,428,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkFindPacketSection.html,11.571563625169256
+bm25,intent-13,inspect a tcp handshake in wireshark,4,907,https://www.kali.org/tools/thc-ssl-dos/,10.52792592704446
+bm25,intent-13,inspect a tcp handshake in wireshark,5,258,https://nmap.org/book/synscan.html,9.737596307333527
+bm25,intent-14,nmap ipv6 host discovery,1,187,https://nmap.org/book/host-discovery-dns.html,16.092463526733045
+bm25,intent-14,nmap ipv6 host discovery,2,633,https://nmap.org/book/man-host-discovery.html,15.806522394327379
+bm25,intent-14,nmap ipv6 host discovery,3,99,https://nmap.org/book/nmap-phases.html,15.176957937875228
+bm25,intent-14,nmap ipv6 host discovery,4,201,https://nmap.org/book/host-discovery-techniques.html,15.139682988169598
+bm25,intent-14,nmap ipv6 host discovery,5,208,https://nmap.org/book/host-discovery-strategies.html,14.079435196086859
+bm25,intent-15,forward http requests to upstream proxy mitmproxy,1,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,29.294956238509133
+bm25,intent-15,forward http requests to upstream proxy mitmproxy,2,857,https://www.kali.org/tools/mitmproxy/,27.387660036566743
+bm25,intent-15,forward http requests to upstream proxy mitmproxy,3,121,https://docs.mitmproxy.org/stable/concepts/options/,26.78868970210697
+bm25,intent-15,forward http requests to upstream proxy mitmproxy,4,102,https://docs.mitmproxy.org/stable/concepts/modes/,25.879916236144478
+bm25,intent-15,forward http requests to upstream proxy mitmproxy,5,135,https://docs.mitmproxy.org/stable/concepts/protocols/,24.381840303700265
+bm25,intent-16,offline zip archive password recovery,1,852,https://www.kali.org/tools/httrack/,20.38367400012684
+bm25,intent-16,offline zip archive password recovery,2,524,https://www.kali.org/tools/oletools/,18.97203746034618
+bm25,intent-16,offline zip archive password recovery,3,924,https://www.kali.org/tools/testdisk/,18.8921932794474
+bm25,intent-16,offline zip archive password recovery,4,746,https://www.kali.org/tools/fcrackzip/,16.210347302179677
+bm25,intent-16,offline zip archive password recovery,5,838,https://www.kali.org/tools/bloodhound-ce-python/,14.409839275529437
+bm25_source,intent-09,list loaded Linux kernel modules,1,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,14.349700596460089
+bm25_source,intent-09,list loaded Linux kernel modules,2,170,https://frida.re/docs/javascript-api/,12.005440186143788
+bm25_source,intent-09,list loaded Linux kernel modules,3,950,https://www.kali.org/tools/unhide/,10.767055481696845
+bm25_source,intent-09,list loaded Linux kernel modules,4,352,https://nmap.org/book/vscan-examples.html,10.60723262880823
+bm25_source,intent-09,list loaded Linux kernel modules,5,528,https://www.kali.org/tools/aflplusplus/,10.384831805296498
+bm25_source,intent-10,load a shared library into a process,1,25,https://frida.re/docs/modes/,14.88068026523576
+bm25_source,intent-10,load a shared library into a process,2,30,https://frida.re/docs/gadget/,13.032340857570928
+bm25_source,intent-10,load a shared library into a process,3,281,https://gtfobins.org/gtfobins/bash/,12.98376939705517
+bm25_source,intent-10,load a shared library into a process,4,952,https://www.kali.org/tools/yara/,11.89528537702961
+bm25_source,intent-10,load a shared library into a process,5,275,https://frida.re/docs/frida-trace/session-initialization-primer/,11.641376880118624
+bm25_source,intent-11,list exported symbols of a loaded native module,1,551,https://www.kali.org/tools/llvm-defaults/,16.491136561664906
+bm25_source,intent-11,list exported symbols of a loaded native module,2,170,https://frida.re/docs/javascript-api/,16.268257222392634
+bm25_source,intent-11,list exported symbols of a loaded native module,3,570,https://www.kali.org/tools/radare2/,14.53386562022316
+bm25_source,intent-11,list exported symbols of a loaded native module,4,528,https://www.kali.org/tools/aflplusplus/,14.515027200501903
+bm25_source,intent-11,list exported symbols of a loaded native module,5,136,https://frida.re/docs/frida-trace/,13.99912463747879
+bm25_source,intent-12,compare GTFOBins and Kali privilege escalation techniques,1,409,https://gtfobins.org/gtfobins/chattr/,16.053629437474704
+bm25_source,intent-12,compare GTFOBins and Kali privilege escalation techniques,2,449,https://gtfobins.org/gtfobins/chmod/,16.034695009776925
+bm25_source,intent-12,compare GTFOBins and Kali privilege escalation techniques,3,459,https://gtfobins.org/gtfobins/chown/,16.023715443007543
+bm25_source,intent-12,compare GTFOBins and Kali privilege escalation techniques,4,13,https://gtfobins.org/scope/,14.992074449052732
+bm25_source,intent-12,compare GTFOBins and Kali privilege escalation techniques,5,515,https://gtfobins.org/gtfobins/cp/,14.941464091218542
+bm25_source,intent-13,inspect a tcp handshake in wireshark,1,242,https://www.wireshark.org/docs/wsug_html_chunked/ChUseToolsMenuSection.html,12.422337552163716
+bm25_source,intent-13,inspect a tcp handshake in wireshark,2,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,12.411463700972671
+bm25_source,intent-13,inspect a tcp handshake in wireshark,3,428,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkFindPacketSection.html,11.571563625169256
+bm25_source,intent-13,inspect a tcp handshake in wireshark,4,907,https://www.kali.org/tools/thc-ssl-dos/,10.52792592704446
+bm25_source,intent-13,inspect a tcp handshake in wireshark,5,258,https://nmap.org/book/synscan.html,9.737596307333527
+bm25_source,intent-14,nmap ipv6 host discovery,1,187,https://nmap.org/book/host-discovery-dns.html,16.092463526733045
+bm25_source,intent-14,nmap ipv6 host discovery,2,633,https://nmap.org/book/man-host-discovery.html,15.806522394327379
+bm25_source,intent-14,nmap ipv6 host discovery,3,99,https://nmap.org/book/nmap-phases.html,15.176957937875228
+bm25_source,intent-14,nmap ipv6 host discovery,4,201,https://nmap.org/book/host-discovery-techniques.html,15.139682988169598
+bm25_source,intent-14,nmap ipv6 host discovery,5,208,https://nmap.org/book/host-discovery-strategies.html,14.079435196086859
+bm25_source,intent-15,forward http requests to upstream proxy mitmproxy,1,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,29.294956238509133
+bm25_source,intent-15,forward http requests to upstream proxy mitmproxy,2,857,https://www.kali.org/tools/mitmproxy/,27.387660036566743
+bm25_source,intent-15,forward http requests to upstream proxy mitmproxy,3,121,https://docs.mitmproxy.org/stable/concepts/options/,26.78868970210697
+bm25_source,intent-15,forward http requests to upstream proxy mitmproxy,4,102,https://docs.mitmproxy.org/stable/concepts/modes/,25.879916236144478
+bm25_source,intent-15,forward http requests to upstream proxy mitmproxy,5,135,https://docs.mitmproxy.org/stable/concepts/protocols/,24.381840303700265
+bm25_source,intent-16,offline zip archive password recovery,1,852,https://www.kali.org/tools/httrack/,20.38367400012684
+bm25_source,intent-16,offline zip archive password recovery,2,524,https://www.kali.org/tools/oletools/,18.97203746034618
+bm25_source,intent-16,offline zip archive password recovery,3,924,https://www.kali.org/tools/testdisk/,18.8921932794474
+bm25_source,intent-16,offline zip archive password recovery,4,746,https://www.kali.org/tools/fcrackzip/,16.210347302179677
+bm25_source,intent-16,offline zip archive password recovery,5,838,https://www.kali.org/tools/bloodhound-ce-python/,14.409839275529437
+bm25_native,intent-09,list loaded Linux kernel modules,1,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,14.349700596460089
+bm25_native,intent-09,list loaded Linux kernel modules,2,170,https://frida.re/docs/javascript-api/,12.005440186143788
+bm25_native,intent-09,list loaded Linux kernel modules,3,950,https://www.kali.org/tools/unhide/,10.767055481696845
+bm25_native,intent-09,list loaded Linux kernel modules,4,352,https://nmap.org/book/vscan-examples.html,10.60723262880823
+bm25_native,intent-09,list loaded Linux kernel modules,5,528,https://www.kali.org/tools/aflplusplus/,10.384831805296498
+bm25_native,intent-10,load a shared library into a process,1,25,https://frida.re/docs/modes/,14.88068026523576
+bm25_native,intent-10,load a shared library into a process,2,30,https://frida.re/docs/gadget/,13.032340857570928
+bm25_native,intent-10,load a shared library into a process,3,281,https://gtfobins.org/gtfobins/bash/,12.98376939705517
+bm25_native,intent-10,load a shared library into a process,4,952,https://www.kali.org/tools/yara/,11.89528537702961
+bm25_native,intent-10,load a shared library into a process,5,275,https://frida.re/docs/frida-trace/session-initialization-primer/,11.641376880118624
+bm25_native,intent-11,list exported symbols of a loaded native module,1,551,https://www.kali.org/tools/llvm-defaults/,16.491136561664906
+bm25_native,intent-11,list exported symbols of a loaded native module,2,170,https://frida.re/docs/javascript-api/,16.268257222392634
+bm25_native,intent-11,list exported symbols of a loaded native module,3,570,https://www.kali.org/tools/radare2/,14.53386562022316
+bm25_native,intent-11,list exported symbols of a loaded native module,4,528,https://www.kali.org/tools/aflplusplus/,14.515027200501903
+bm25_native,intent-11,list exported symbols of a loaded native module,5,136,https://frida.re/docs/frida-trace/,13.99912463747879
+bm25_native,intent-12,compare GTFOBins and Kali privilege escalation techniques,1,409,https://gtfobins.org/gtfobins/chattr/,16.053629437474704
+bm25_native,intent-12,compare GTFOBins and Kali privilege escalation techniques,2,449,https://gtfobins.org/gtfobins/chmod/,16.034695009776925
+bm25_native,intent-12,compare GTFOBins and Kali privilege escalation techniques,3,459,https://gtfobins.org/gtfobins/chown/,16.023715443007543
+bm25_native,intent-12,compare GTFOBins and Kali privilege escalation techniques,4,13,https://gtfobins.org/scope/,14.992074449052732
+bm25_native,intent-12,compare GTFOBins and Kali privilege escalation techniques,5,515,https://gtfobins.org/gtfobins/cp/,14.941464091218542
+bm25_native,intent-13,inspect a tcp handshake in wireshark,1,242,https://www.wireshark.org/docs/wsug_html_chunked/ChUseToolsMenuSection.html,12.422337552163716
+bm25_native,intent-13,inspect a tcp handshake in wireshark,2,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,12.411463700972671
+bm25_native,intent-13,inspect a tcp handshake in wireshark,3,428,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkFindPacketSection.html,11.571563625169256
+bm25_native,intent-13,inspect a tcp handshake in wireshark,4,907,https://www.kali.org/tools/thc-ssl-dos/,10.52792592704446
+bm25_native,intent-13,inspect a tcp handshake in wireshark,5,258,https://nmap.org/book/synscan.html,9.737596307333527
+bm25_native,intent-14,nmap ipv6 host discovery,1,187,https://nmap.org/book/host-discovery-dns.html,16.092463526733045
+bm25_native,intent-14,nmap ipv6 host discovery,2,633,https://nmap.org/book/man-host-discovery.html,15.806522394327379
+bm25_native,intent-14,nmap ipv6 host discovery,3,99,https://nmap.org/book/nmap-phases.html,15.176957937875228
+bm25_native,intent-14,nmap ipv6 host discovery,4,201,https://nmap.org/book/host-discovery-techniques.html,15.139682988169598
+bm25_native,intent-14,nmap ipv6 host discovery,5,208,https://nmap.org/book/host-discovery-strategies.html,14.079435196086859
+bm25_native,intent-15,forward http requests to upstream proxy mitmproxy,1,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,29.294956238509133
+bm25_native,intent-15,forward http requests to upstream proxy mitmproxy,2,857,https://www.kali.org/tools/mitmproxy/,27.387660036566743
+bm25_native,intent-15,forward http requests to upstream proxy mitmproxy,3,121,https://docs.mitmproxy.org/stable/concepts/options/,26.78868970210697
+bm25_native,intent-15,forward http requests to upstream proxy mitmproxy,4,102,https://docs.mitmproxy.org/stable/concepts/modes/,25.879916236144478
+bm25_native,intent-15,forward http requests to upstream proxy mitmproxy,5,135,https://docs.mitmproxy.org/stable/concepts/protocols/,24.381840303700265
+bm25_native,intent-16,offline zip archive password recovery,1,852,https://www.kali.org/tools/httrack/,20.38367400012684
+bm25_native,intent-16,offline zip archive password recovery,2,524,https://www.kali.org/tools/oletools/,18.97203746034618
+bm25_native,intent-16,offline zip archive password recovery,3,924,https://www.kali.org/tools/testdisk/,18.8921932794474
+bm25_native,intent-16,offline zip archive password recovery,4,746,https://www.kali.org/tools/fcrackzip/,16.210347302179677
+bm25_native,intent-16,offline zip archive password recovery,5,838,https://www.kali.org/tools/bloodhound-ce-python/,14.409839275529437
+bm25_intent,intent-09,list loaded Linux kernel modules,1,218,https://docs.mitmproxy.org/stable/howto/install-system-trusted-ca-android/,14.349700596460089
+bm25_intent,intent-09,list loaded Linux kernel modules,2,170,https://frida.re/docs/javascript-api/,12.005440186143788
+bm25_intent,intent-09,list loaded Linux kernel modules,3,950,https://www.kali.org/tools/unhide/,10.767055481696845
+bm25_intent,intent-09,list loaded Linux kernel modules,4,352,https://nmap.org/book/vscan-examples.html,10.60723262880823
+bm25_intent,intent-09,list loaded Linux kernel modules,5,528,https://www.kali.org/tools/aflplusplus/,10.384831805296498
+bm25_intent,intent-10,load a shared library into a process,1,25,https://frida.re/docs/modes/,14.88068026523576
+bm25_intent,intent-10,load a shared library into a process,2,30,https://frida.re/docs/gadget/,13.032340857570928
+bm25_intent,intent-10,load a shared library into a process,3,281,https://gtfobins.org/gtfobins/bash/,12.98376939705517
+bm25_intent,intent-10,load a shared library into a process,4,952,https://www.kali.org/tools/yara/,11.89528537702961
+bm25_intent,intent-10,load a shared library into a process,5,275,https://frida.re/docs/frida-trace/session-initialization-primer/,11.641376880118624
+bm25_intent,intent-11,list exported symbols of a loaded native module,1,551,https://www.kali.org/tools/llvm-defaults/,16.491136561664906
+bm25_intent,intent-11,list exported symbols of a loaded native module,2,170,https://frida.re/docs/javascript-api/,16.268257222392634
+bm25_intent,intent-11,list exported symbols of a loaded native module,3,570,https://www.kali.org/tools/radare2/,14.53386562022316
+bm25_intent,intent-11,list exported symbols of a loaded native module,4,528,https://www.kali.org/tools/aflplusplus/,14.515027200501903
+bm25_intent,intent-11,list exported symbols of a loaded native module,5,136,https://frida.re/docs/frida-trace/,13.99912463747879
+bm25_intent,intent-12,compare GTFOBins and Kali privilege escalation techniques,1,409,https://gtfobins.org/gtfobins/chattr/,16.053629437474704
+bm25_intent,intent-12,compare GTFOBins and Kali privilege escalation techniques,2,449,https://gtfobins.org/gtfobins/chmod/,16.034695009776925
+bm25_intent,intent-12,compare GTFOBins and Kali privilege escalation techniques,3,459,https://gtfobins.org/gtfobins/chown/,16.023715443007543
+bm25_intent,intent-12,compare GTFOBins and Kali privilege escalation techniques,4,13,https://gtfobins.org/scope/,14.992074449052732
+bm25_intent,intent-12,compare GTFOBins and Kali privilege escalation techniques,5,515,https://gtfobins.org/gtfobins/cp/,14.941464091218542
+bm25_intent,intent-13,inspect a tcp handshake in wireshark,1,242,https://www.wireshark.org/docs/wsug_html_chunked/ChUseToolsMenuSection.html,12.422337552163716
+bm25_intent,intent-13,inspect a tcp handshake in wireshark,2,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,12.411463700972671
+bm25_intent,intent-13,inspect a tcp handshake in wireshark,3,428,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkFindPacketSection.html,11.571563625169256
+bm25_intent,intent-13,inspect a tcp handshake in wireshark,4,907,https://www.kali.org/tools/thc-ssl-dos/,10.52792592704446
+bm25_intent,intent-13,inspect a tcp handshake in wireshark,5,258,https://nmap.org/book/synscan.html,9.737596307333527
+bm25_intent,intent-14,nmap ipv6 host discovery,1,187,https://nmap.org/book/host-discovery-dns.html,16.092463526733045
+bm25_intent,intent-14,nmap ipv6 host discovery,2,633,https://nmap.org/book/man-host-discovery.html,15.806522394327379
+bm25_intent,intent-14,nmap ipv6 host discovery,3,99,https://nmap.org/book/nmap-phases.html,15.176957937875228
+bm25_intent,intent-14,nmap ipv6 host discovery,4,201,https://nmap.org/book/host-discovery-techniques.html,15.139682988169598
+bm25_intent,intent-14,nmap ipv6 host discovery,5,208,https://nmap.org/book/host-discovery-strategies.html,14.079435196086859
+bm25_intent,intent-15,forward http requests to upstream proxy mitmproxy,1,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,29.294956238509133
+bm25_intent,intent-15,forward http requests to upstream proxy mitmproxy,2,857,https://www.kali.org/tools/mitmproxy/,27.387660036566743
+bm25_intent,intent-15,forward http requests to upstream proxy mitmproxy,3,121,https://docs.mitmproxy.org/stable/concepts/options/,26.78868970210697
+bm25_intent,intent-15,forward http requests to upstream proxy mitmproxy,4,102,https://docs.mitmproxy.org/stable/concepts/modes/,25.879916236144478
+bm25_intent,intent-15,forward http requests to upstream proxy mitmproxy,5,135,https://docs.mitmproxy.org/stable/concepts/protocols/,24.381840303700265
+bm25_intent,intent-16,offline zip archive password recovery,1,852,https://www.kali.org/tools/httrack/,20.38367400012684
+bm25_intent,intent-16,offline zip archive password recovery,2,524,https://www.kali.org/tools/oletools/,18.97203746034618
+bm25_intent,intent-16,offline zip archive password recovery,3,924,https://www.kali.org/tools/testdisk/,18.8921932794474
+bm25_intent,intent-16,offline zip archive password recovery,4,746,https://www.kali.org/tools/fcrackzip/,16.210347302179677
+bm25_intent,intent-16,offline zip archive password recovery,5,838,https://www.kali.org/tools/bloodhound-ce-python/,14.409839275529437

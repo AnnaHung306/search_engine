@@ -1,0 +1,541 @@
+system,query_id,query,rank,doc_id,url,score
+tfidf,development-01,tls certificate proxy setup,1,18,https://docs.mitmproxy.org/stable/overview/getting-started/,0.12982732388186452
+tfidf,development-01,tls certificate proxy setup,2,197,https://docs.mitmproxy.org/stable/howto/wireshark-tls/,0.1261292591640127
+tfidf,development-01,tls certificate proxy setup,3,783,https://www.kali.org/tools/sslscan/,0.1118887219559696
+tfidf,development-01,tls certificate proxy setup,4,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.11074580701122982
+tfidf,development-01,tls certificate proxy setup,5,861,https://www.kali.org/tools/sslsniff/,0.10641709400449194
+tfidf,development-02,android dynamic instrumentation,1,198,https://frida.re/docs/swift-api/,0.20720015735205083
+tfidf,development-02,android dynamic instrumentation,2,25,https://frida.re/docs/modes/,0.17492284049897966
+tfidf,development-02,android dynamic instrumentation,3,96,https://frida.re/docs/examples/linux/,0.15474827039152855
+tfidf,development-02,android dynamic instrumentation,4,129,https://frida.re/docs/frida-ps/,0.1424751049620668
+tfidf,development-02,android dynamic instrumentation,5,163,https://frida.re/docs/gum-graft/,0.12982568237247633
+tfidf,development-03,tcp syn scan,1,262,https://nmap.org/book/scan-methods-connect-scan.html,0.14070604875584872
+tfidf,development-03,tcp syn scan,2,278,https://nmap.org/book/scan-methods-custom-scanflags.html,0.10952084618126962
+tfidf,development-03,tcp syn scan,3,166,https://nmap.org/book/host-discovery.html,0.10463889799289858
+tfidf,development-03,tcp syn scan,4,323,https://nmap.org/book/scantime-coping.html,0.09933612300070808
+tfidf,development-03,tcp syn scan,5,636,https://nmap.org/book/man-port-scanning-basics.html,0.09792435576721847
+tfidf,development-04,dns reconnaissance,1,235,https://www.kali.org/tools/finalrecon/,0.1215287071381286
+tfidf,development-04,dns reconnaissance,2,245,https://www.kali.org/tools/gobuster/,0.12114265003531252
+tfidf,development-04,dns reconnaissance,3,967,https://www.kali.org/tools/arsenal-ng/,0.11472091055967813
+tfidf,development-04,dns reconnaissance,4,817,https://www.kali.org/tools/netdiscover/,0.10558769801929191
+tfidf,development-04,dns reconnaissance,5,803,https://www.kali.org/tools/fierce/,0.10050263291788752
+tfidf,development-05,offline password hash recovery,1,762,https://www.kali.org/tools/eapmd5pass/,0.10364802028655293
+tfidf,development-05,offline password hash recovery,2,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,0.09246592974539809
+tfidf,development-05,offline password hash recovery,3,773,https://www.kali.org/tools/mfoc/,0.09053437795037643
+tfidf,development-05,offline password hash recovery,4,932,https://www.kali.org/tools/scrounge-ntfs/,0.08943561398245552
+tfidf,development-05,offline password hash recovery,5,724,https://www.kali.org/tools/chntpw/,0.08413840210470962
+tfidf,development-06,http request interception,1,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,0.20160191629841806
+tfidf,development-06,http request interception,2,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,0.1822757448236305
+tfidf,development-06,http request interception,3,861,https://www.kali.org/tools/sslsniff/,0.1579180359204454
+tfidf,development-06,http request interception,4,204,https://docs.mitmproxy.org/stable/howto/ignore-domains/,0.13034238089970587
+tfidf,development-06,http request interception,5,60,https://docs.mitmproxy.org/stable/mitmproxytutorial-userinterface/,0.1223435206267453
+tfidf,development-07,apk resource decoding,1,579,https://www.kali.org/tools/apktool/,0.16289824626259733
+tfidf,development-07,apk resource decoding,2,582,https://www.kali.org/tools/bytecode-viewer/,0.1028818259258982
+tfidf,development-07,apk resource decoding,3,585,https://www.kali.org/tools/jadx/,0.06565034106248553
+tfidf,development-07,apk resource decoding,4,79,https://docs.metasploit.com/docs/pentesting/metasploit-guide-ssh.html,0.06445582080316567
+tfidf,development-07,apk resource decoding,5,631,https://docs.metasploit.com/docs/development/developing-modules/libraries/c/how-to-decode-base64-with-metasploit-framework-compiler.html,0.05811745395921473
+tfidf,development-08,network traffic display filter,1,859,https://www.kali.org/tools/ssldump/,0.15262290168112763
+tfidf,development-08,network traffic display filter,2,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,0.11690080456814941
+tfidf,development-08,network traffic display filter,3,403,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayFilterSection.html,0.10650946973484998
+tfidf,development-08,network traffic display filter,4,418,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDefineFilterSection.html,0.10089962975597377
+tfidf,development-08,network traffic display filter,5,793,https://www.kali.org/tools/driftnet/,0.0981330694218782
+tfidf,development-09,service banner detection,1,966,https://www.kali.org/tools/portspoof/,0.09225162124655585
+tfidf,development-09,service banner detection,2,357,https://nmap.org/book/vscan-technique.html,0.07543955650412347
+tfidf,development-09,service banner detection,3,592,https://nmap.org/book/output-formats-cpe.html,0.07020942257933147
+tfidf,development-09,service banner detection,4,613,https://www.kali.org/tools/sqlmap/,0.07005837312951219
+tfidf,development-09,service banner detection,5,111,https://www.kali.org/tools/dmitry/,0.06529399138829699
+tfidf,development-10,web content discovery,1,187,https://nmap.org/book/host-discovery-dns.html,0.09911422015732334
+tfidf,development-10,web content discovery,2,166,https://nmap.org/book/host-discovery.html,0.08492699049688536
+tfidf,development-10,web content discovery,3,652,https://www.kali.org/tools/seclists/,0.08245614773548898
+tfidf,development-10,web content discovery,4,671,https://nmap.org/book/man-book.html,0.08081758049594094
+tfidf,development-10,web content discovery,5,245,https://www.kali.org/tools/gobuster/,0.07898423628622532
+tfidf,development-11,metasploit session management,1,34,https://docs.metasploit.com/docs/pentesting/metasploit-guide-upgrading-shells-to-meterpreter.html,0.10068499331565603
+tfidf,development-11,metasploit session management,2,706,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-wbemexec-for-a-write-privilege-attack-on-windows.html,0.09722330081732272
+tfidf,development-11,metasploit session management,3,86,https://docs.metasploit.com/docs/pentesting/metasploit-guide-winrm.html,0.09152855796305769
+tfidf,development-11,metasploit session management,4,629,https://www.kali.org/tools/armitage/,0.08976573198496295
+tfidf,development-11,metasploit session management,5,868,https://www.kali.org/tools/penelope/,0.08933094844172904
+tfidf,development-12,sudo binary capabilities,1,13,https://gtfobins.org/scope/,0.16425193854841932
+tfidf,development-12,sudo binary capabilities,2,567,https://www.kali.org/tools/ghidra/,0.09482913043783178
+tfidf,development-12,sudo binary capabilities,3,897,https://www.kali.org/tools/raven/,0.0908762067336711
+tfidf,development-12,sudo binary capabilities,4,595,https://docs.metasploit.com/docs/development/developing-modules/external-modules/writing-external-metasploit-modules.html,0.0883061732698114
+tfidf,development-12,sudo binary capabilities,5,20,https://gtfobins.org/contributing/,0.07544916362100815
+tfidf_cov,development-01,tls certificate proxy setup,1,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.11074580701122982
+tfidf_cov,development-01,tls certificate proxy setup,2,334,https://docs.metasploit.com/docs/using-metasploit/intermediate/pivoting-in-metasploit.html,0.05483462710318064
+tfidf_cov,development-01,tls certificate proxy setup,3,888,https://www.kali.org/tools/stunnel4/,0.05035407500860393
+tfidf_cov,development-01,tls certificate proxy setup,4,830,https://www.kali.org/tools/swaks/,0.04339136092712885
+tfidf_cov,development-01,tls certificate proxy setup,5,18,https://docs.mitmproxy.org/stable/overview/getting-started/,0.12982732388186452
+tfidf_cov,development-02,android dynamic instrumentation,1,25,https://frida.re/docs/modes/,0.17492284049897966
+tfidf_cov,development-02,android dynamic instrumentation,2,233,https://frida.re/docs/building/,0.1214195632973206
+tfidf_cov,development-02,android dynamic instrumentation,3,5,https://frida.re/docs/home/,0.11153696372776851
+tfidf_cov,development-02,android dynamic instrumentation,4,75,https://frida.re/docs/android/,0.11017900672709954
+tfidf_cov,development-02,android dynamic instrumentation,5,243,https://frida.re/docs/gsoc-ideas-2015/,0.10749045495430783
+tfidf_cov,development-03,tcp syn scan,1,262,https://nmap.org/book/scan-methods-connect-scan.html,0.14070604875584872
+tfidf_cov,development-03,tcp syn scan,2,278,https://nmap.org/book/scan-methods-custom-scanflags.html,0.10952084618126962
+tfidf_cov,development-03,tcp syn scan,3,166,https://nmap.org/book/host-discovery.html,0.10463889799289858
+tfidf_cov,development-03,tcp syn scan,4,323,https://nmap.org/book/scantime-coping.html,0.09933612300070808
+tfidf_cov,development-03,tcp syn scan,5,636,https://nmap.org/book/man-port-scanning-basics.html,0.09792435576721847
+tfidf_cov,development-04,dns reconnaissance,1,235,https://www.kali.org/tools/finalrecon/,0.1215287071381286
+tfidf_cov,development-04,dns reconnaissance,2,245,https://www.kali.org/tools/gobuster/,0.12114265003531252
+tfidf_cov,development-04,dns reconnaissance,3,803,https://www.kali.org/tools/fierce/,0.10050263291788752
+tfidf_cov,development-04,dns reconnaissance,4,166,https://nmap.org/book/host-discovery.html,0.09377299499533046
+tfidf_cov,development-04,dns reconnaissance,5,165,https://www.kali.org/tools/massdns/,0.08473321878949171
+tfidf_cov,development-05,offline password hash recovery,1,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,0.09246592974539809
+tfidf_cov,development-05,offline password hash recovery,2,724,https://www.kali.org/tools/chntpw/,0.08413840210470962
+tfidf_cov,development-05,offline password hash recovery,3,216,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/keytab.html,0.048690482388704645
+tfidf_cov,development-05,offline password hash recovery,4,940,https://www.kali.org/tools/sleuthkit/,0.04060544953309224
+tfidf_cov,development-05,offline password hash recovery,5,747,https://www.kali.org/tools/hashcat/,0.037354460543233284
+tfidf_cov,development-06,http request interception,1,861,https://www.kali.org/tools/sslsniff/,0.1579180359204454
+tfidf_cov,development-06,http request interception,2,204,https://docs.mitmproxy.org/stable/howto/ignore-domains/,0.13034238089970587
+tfidf_cov,development-06,http request interception,3,60,https://docs.mitmproxy.org/stable/mitmproxytutorial-userinterface/,0.1223435206267453
+tfidf_cov,development-06,http request interception,4,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,0.10640919044599034
+tfidf_cov,development-06,http request interception,5,4,https://docs.mitmproxy.org/stable/,0.09200882840261754
+tfidf_cov,development-07,apk resource decoding,1,579,https://www.kali.org/tools/apktool/,0.16289824626259733
+tfidf_cov,development-07,apk resource decoding,2,585,https://www.kali.org/tools/jadx/,0.06565034106248553
+tfidf_cov,development-07,apk resource decoding,3,52,https://docs.metasploit.com/docs/pentesting/metasploit-guide-kubernetes.html,0.03765356991143843
+tfidf_cov,development-07,apk resource decoding,4,524,https://www.kali.org/tools/oletools/,0.03335090536815021
+tfidf_cov,development-07,apk resource decoding,5,582,https://www.kali.org/tools/bytecode-viewer/,0.1028818259258982
+tfidf_cov,development-08,network traffic display filter,1,859,https://www.kali.org/tools/ssldump/,0.15262290168112763
+tfidf_cov,development-08,network traffic display filter,2,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,0.11690080456814941
+tfidf_cov,development-08,network traffic display filter,3,793,https://www.kali.org/tools/driftnet/,0.0981330694218782
+tfidf_cov,development-08,network traffic display filter,4,310,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureOptions.html,0.07396894381822612
+tfidf_cov,development-08,network traffic display filter,5,790,https://www.kali.org/tools/dsniff/,0.06711251164697996
+tfidf_cov,development-09,service banner detection,1,357,https://nmap.org/book/vscan-technique.html,0.07543955650412347
+tfidf_cov,development-09,service banner detection,2,372,https://nmap.org/book/vscan-fileformat.html,0.05706919173113905
+tfidf_cov,development-09,service banner detection,3,396,https://nmap.org/book/osdetect-usage.html,0.054472430719856135
+tfidf_cov,development-09,service banner detection,4,441,https://nmap.org/book/nse-usage.html,0.049557620159333564
+tfidf_cov,development-09,service banner detection,5,477,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-mcp-server.html,0.0387306845776454
+tfidf_cov,development-10,web content discovery,1,187,https://nmap.org/book/host-discovery-dns.html,0.09911422015732334
+tfidf_cov,development-10,web content discovery,2,652,https://www.kali.org/tools/seclists/,0.08245614773548898
+tfidf_cov,development-10,web content discovery,3,633,https://nmap.org/book/man-host-discovery.html,0.06666800821579698
+tfidf_cov,development-10,web content discovery,4,228,https://www.kali.org/tools/ffuf/,0.061128962471536506
+tfidf_cov,development-10,web content discovery,5,298,https://www.kali.org/tools/wfuzz/,0.050800488052096686
+tfidf_cov,development-11,metasploit session management,1,86,https://docs.metasploit.com/docs/pentesting/metasploit-guide-winrm.html,0.09152855796305769
+tfidf_cov,development-11,metasploit session management,2,584,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-get-started-with-writing-a-post-module.html,0.07801159490576501
+tfidf_cov,development-11,metasploit session management,3,348,https://docs.metasploit.com/docs/using-metasploit/advanced/how-to-configure-dns.html,0.07650246780375451
+tfidf_cov,development-11,metasploit session management,4,368,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-configuration.html,0.07324644711568992
+tfidf_cov,development-11,metasploit session management,5,685,https://docs.metasploit.com/docs/development/developing-modules/libraries/post-mixins.html,0.07308738437956154
+tfidf_cov,development-12,sudo binary capabilities,1,567,https://www.kali.org/tools/ghidra/,0.09482913043783178
+tfidf_cov,development-12,sudo binary capabilities,2,897,https://www.kali.org/tools/raven/,0.0908762067336711
+tfidf_cov,development-12,sudo binary capabilities,3,20,https://gtfobins.org/contributing/,0.07544916362100815
+tfidf_cov,development-12,sudo binary capabilities,4,817,https://www.kali.org/tools/netdiscover/,0.07173347258111766
+tfidf_cov,development-12,sudo binary capabilities,5,785,https://www.kali.org/tools/tlssled/,0.07107730391896502
+tfidf_pivot,development-01,tls certificate proxy setup,1,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.13607655814252534
+tfidf_pivot,development-01,tls certificate proxy setup,2,888,https://www.kali.org/tools/stunnel4/,0.12364188640693138
+tfidf_pivot,development-01,tls certificate proxy setup,3,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,0.12173305022494277
+tfidf_pivot,development-01,tls certificate proxy setup,4,783,https://www.kali.org/tools/sslscan/,0.1190269068936714
+tfidf_pivot,development-01,tls certificate proxy setup,5,784,https://www.kali.org/tools/sslyze/,0.10775608925411659
+tfidf_pivot,development-02,android dynamic instrumentation,1,48,https://frida.re/docs/presentations/,0.14739084460712687
+tfidf_pivot,development-02,android dynamic instrumentation,2,25,https://frida.re/docs/modes/,0.12378794775639765
+tfidf_pivot,development-02,android dynamic instrumentation,3,243,https://frida.re/docs/gsoc-ideas-2015/,0.11814784025842845
+tfidf_pivot,development-02,android dynamic instrumentation,4,75,https://frida.re/docs/android/,0.1110997971244481
+tfidf_pivot,development-02,android dynamic instrumentation,5,233,https://frida.re/docs/building/,0.10196108932733725
+tfidf_pivot,development-03,tcp syn scan,1,258,https://nmap.org/book/synscan.html,0.12089825474730335
+tfidf_pivot,development-03,tcp syn scan,2,278,https://nmap.org/book/scan-methods-custom-scanflags.html,0.11528050922147472
+tfidf_pivot,development-03,tcp syn scan,3,262,https://nmap.org/book/scan-methods-connect-scan.html,0.11431271160745389
+tfidf_pivot,development-03,tcp syn scan,4,633,https://nmap.org/book/man-host-discovery.html,0.10878083924875019
+tfidf_pivot,development-03,tcp syn scan,5,639,https://nmap.org/book/man-port-scanning-techniques.html,0.10848784348140075
+tfidf_pivot,development-04,dns reconnaissance,1,967,https://www.kali.org/tools/arsenal-ng/,0.09279736076848695
+tfidf_pivot,development-04,dns reconnaissance,2,235,https://www.kali.org/tools/finalrecon/,0.08965300049528337
+tfidf_pivot,development-04,dns reconnaissance,3,425,https://www.kali.org/tools/bettercap/,0.08412333310144483
+tfidf_pivot,development-04,dns reconnaissance,4,803,https://www.kali.org/tools/fierce/,0.08318059836125771
+tfidf_pivot,development-04,dns reconnaissance,5,105,https://www.kali.org/tools/autorecon/,0.0813823094177865
+tfidf_pivot,development-05,offline password hash recovery,1,724,https://www.kali.org/tools/chntpw/,0.09512294456225041
+tfidf_pivot,development-05,offline password hash recovery,2,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,0.08538142841998451
+tfidf_pivot,development-05,offline password hash recovery,3,747,https://www.kali.org/tools/hashcat/,0.07841475729980213
+tfidf_pivot,development-05,offline password hash recovery,4,940,https://www.kali.org/tools/sleuthkit/,0.07302923469322993
+tfidf_pivot,development-05,offline password hash recovery,5,812,https://www.kali.org/tools/samba/,0.07298567758636562
+tfidf_pivot,development-06,http request interception,1,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,0.122476327025488
+tfidf_pivot,development-06,http request interception,2,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,0.12186157299900699
+tfidf_pivot,development-06,http request interception,3,857,https://www.kali.org/tools/mitmproxy/,0.1121282399631351
+tfidf_pivot,development-06,http request interception,4,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,0.11188418027335259
+tfidf_pivot,development-06,http request interception,5,861,https://www.kali.org/tools/sslsniff/,0.10954921226005278
+tfidf_pivot,development-07,apk resource decoding,1,579,https://www.kali.org/tools/apktool/,0.17659520845518215
+tfidf_pivot,development-07,apk resource decoding,2,585,https://www.kali.org/tools/jadx/,0.1137395399197651
+tfidf_pivot,development-07,apk resource decoding,3,593,https://www.kali.org/tools/dex2jar/,0.0902679265143785
+tfidf_pivot,development-07,apk resource decoding,4,582,https://www.kali.org/tools/bytecode-viewer/,0.07977098355121781
+tfidf_pivot,development-07,apk resource decoding,5,249,https://frida.re/docs/gsod-ideas-2023/,0.06941466160914814
+tfidf_pivot,development-08,network traffic display filter,1,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,0.09674340017355276
+tfidf_pivot,development-08,network traffic display filter,2,793,https://www.kali.org/tools/driftnet/,0.08684777252897512
+tfidf_pivot,development-08,network traffic display filter,3,796,https://www.kali.org/tools/wireshark/,0.08631841025373692
+tfidf_pivot,development-08,network traffic display filter,4,822,https://www.kali.org/tools/tcpreplay/,0.08177422042800192
+tfidf_pivot,development-08,network traffic display filter,5,857,https://www.kali.org/tools/mitmproxy/,0.07815464353603828
+tfidf_pivot,development-09,service banner detection,1,357,https://nmap.org/book/vscan-technique.html,0.0950001429755501
+tfidf_pivot,development-09,service banner detection,2,372,https://nmap.org/book/vscan-fileformat.html,0.08576757675293888
+tfidf_pivot,development-09,service banner detection,3,441,https://nmap.org/book/nse-usage.html,0.07971575909773405
+tfidf_pivot,development-09,service banner detection,4,396,https://nmap.org/book/osdetect-usage.html,0.07769513072039488
+tfidf_pivot,development-09,service banner detection,5,696,https://www.kali.org/tools/smbmap/,0.07077036855056133
+tfidf_pivot,development-10,web content discovery,1,633,https://nmap.org/book/man-host-discovery.html,0.0937907649011298
+tfidf_pivot,development-10,web content discovery,2,652,https://www.kali.org/tools/seclists/,0.07867437506903674
+tfidf_pivot,development-10,web content discovery,3,187,https://nmap.org/book/host-discovery-dns.html,0.07660047076619439
+tfidf_pivot,development-10,web content discovery,4,441,https://nmap.org/book/nse-usage.html,0.0762576088589218
+tfidf_pivot,development-10,web content discovery,5,117,https://www.kali.org/tools/legion/,0.07435303056678613
+tfidf_pivot,development-11,metasploit session management,1,477,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-mcp-server.html,0.10198974966179403
+tfidf_pivot,development-11,metasploit session management,2,584,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-get-started-with-writing-a-post-module.html,0.09775802217636845
+tfidf_pivot,development-11,metasploit session management,3,324,https://docs.metasploit.com/docs/using-metasploit/intermediate/how-to-use-plugins.html,0.09489024057665593
+tfidf_pivot,development-11,metasploit session management,4,86,https://docs.metasploit.com/docs/pentesting/metasploit-guide-winrm.html,0.09437343524939316
+tfidf_pivot,development-11,metasploit session management,5,368,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-configuration.html,0.0804975044287788
+tfidf_pivot,development-12,sudo binary capabilities,1,595,https://docs.metasploit.com/docs/development/developing-modules/external-modules/writing-external-metasploit-modules.html,0.06691248547765377
+tfidf_pivot,development-12,sudo binary capabilities,2,13,https://gtfobins.org/scope/,0.06672613669597019
+tfidf_pivot,development-12,sudo binary capabilities,3,567,https://www.kali.org/tools/ghidra/,0.06434579555031684
+tfidf_pivot,development-12,sudo binary capabilities,4,897,https://www.kali.org/tools/raven/,0.0639681879803588
+tfidf_pivot,development-12,sudo binary capabilities,5,20,https://gtfobins.org/contributing/,0.06367697646980865
+tfidf_pivot_cov,development-01,tls certificate proxy setup,1,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.13607655814252534
+tfidf_pivot_cov,development-01,tls certificate proxy setup,2,888,https://www.kali.org/tools/stunnel4/,0.12364188640693138
+tfidf_pivot_cov,development-01,tls certificate proxy setup,3,830,https://www.kali.org/tools/swaks/,0.10516482297765642
+tfidf_pivot_cov,development-01,tls certificate proxy setup,4,334,https://docs.metasploit.com/docs/using-metasploit/intermediate/pivoting-in-metasploit.html,0.09957247905661558
+tfidf_pivot_cov,development-01,tls certificate proxy setup,5,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,0.12173305022494277
+tfidf_pivot_cov,development-02,android dynamic instrumentation,1,48,https://frida.re/docs/presentations/,0.14739084460712687
+tfidf_pivot_cov,development-02,android dynamic instrumentation,2,25,https://frida.re/docs/modes/,0.12378794775639765
+tfidf_pivot_cov,development-02,android dynamic instrumentation,3,243,https://frida.re/docs/gsoc-ideas-2015/,0.11814784025842845
+tfidf_pivot_cov,development-02,android dynamic instrumentation,4,75,https://frida.re/docs/android/,0.1110997971244481
+tfidf_pivot_cov,development-02,android dynamic instrumentation,5,233,https://frida.re/docs/building/,0.10196108932733725
+tfidf_pivot_cov,development-03,tcp syn scan,1,258,https://nmap.org/book/synscan.html,0.12089825474730335
+tfidf_pivot_cov,development-03,tcp syn scan,2,278,https://nmap.org/book/scan-methods-custom-scanflags.html,0.11528050922147472
+tfidf_pivot_cov,development-03,tcp syn scan,3,262,https://nmap.org/book/scan-methods-connect-scan.html,0.11431271160745389
+tfidf_pivot_cov,development-03,tcp syn scan,4,633,https://nmap.org/book/man-host-discovery.html,0.10878083924875019
+tfidf_pivot_cov,development-03,tcp syn scan,5,639,https://nmap.org/book/man-port-scanning-techniques.html,0.10848784348140075
+tfidf_pivot_cov,development-04,dns reconnaissance,1,235,https://www.kali.org/tools/finalrecon/,0.08965300049528337
+tfidf_pivot_cov,development-04,dns reconnaissance,2,425,https://www.kali.org/tools/bettercap/,0.08412333310144483
+tfidf_pivot_cov,development-04,dns reconnaissance,3,803,https://www.kali.org/tools/fierce/,0.08318059836125771
+tfidf_pivot_cov,development-04,dns reconnaissance,4,105,https://www.kali.org/tools/autorecon/,0.0813823094177865
+tfidf_pivot_cov,development-04,dns reconnaissance,5,245,https://www.kali.org/tools/gobuster/,0.07793392586562789
+tfidf_pivot_cov,development-05,offline password hash recovery,1,724,https://www.kali.org/tools/chntpw/,0.09512294456225041
+tfidf_pivot_cov,development-05,offline password hash recovery,2,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,0.08538142841998451
+tfidf_pivot_cov,development-05,offline password hash recovery,3,747,https://www.kali.org/tools/hashcat/,0.07841475729980213
+tfidf_pivot_cov,development-05,offline password hash recovery,4,940,https://www.kali.org/tools/sleuthkit/,0.07302923469322993
+tfidf_pivot_cov,development-05,offline password hash recovery,5,812,https://www.kali.org/tools/samba/,0.07298567758636562
+tfidf_pivot_cov,development-06,http request interception,1,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,0.122476327025488
+tfidf_pivot_cov,development-06,http request interception,2,857,https://www.kali.org/tools/mitmproxy/,0.1121282399631351
+tfidf_pivot_cov,development-06,http request interception,3,861,https://www.kali.org/tools/sslsniff/,0.10954921226005278
+tfidf_pivot_cov,development-06,http request interception,4,204,https://docs.mitmproxy.org/stable/howto/ignore-domains/,0.10922018666063403
+tfidf_pivot_cov,development-06,http request interception,5,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.08866032702156859
+tfidf_pivot_cov,development-07,apk resource decoding,1,579,https://www.kali.org/tools/apktool/,0.17659520845518215
+tfidf_pivot_cov,development-07,apk resource decoding,2,585,https://www.kali.org/tools/jadx/,0.1137395399197651
+tfidf_pivot_cov,development-07,apk resource decoding,3,524,https://www.kali.org/tools/oletools/,0.04802595038840314
+tfidf_pivot_cov,development-07,apk resource decoding,4,52,https://docs.metasploit.com/docs/pentesting/metasploit-guide-kubernetes.html,0.04639149648883656
+tfidf_pivot_cov,development-07,apk resource decoding,5,593,https://www.kali.org/tools/dex2jar/,0.0902679265143785
+tfidf_pivot_cov,development-08,network traffic display filter,1,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,0.09674340017355276
+tfidf_pivot_cov,development-08,network traffic display filter,2,793,https://www.kali.org/tools/driftnet/,0.08684777252897512
+tfidf_pivot_cov,development-08,network traffic display filter,3,796,https://www.kali.org/tools/wireshark/,0.08631841025373692
+tfidf_pivot_cov,development-08,network traffic display filter,4,822,https://www.kali.org/tools/tcpreplay/,0.08177422042800192
+tfidf_pivot_cov,development-08,network traffic display filter,5,3,https://www.wireshark.org/docs/wsug_html_chunked/,0.077521475208052
+tfidf_pivot_cov,development-09,service banner detection,1,357,https://nmap.org/book/vscan-technique.html,0.0950001429755501
+tfidf_pivot_cov,development-09,service banner detection,2,372,https://nmap.org/book/vscan-fileformat.html,0.08576757675293888
+tfidf_pivot_cov,development-09,service banner detection,3,441,https://nmap.org/book/nse-usage.html,0.07971575909773405
+tfidf_pivot_cov,development-09,service banner detection,4,396,https://nmap.org/book/osdetect-usage.html,0.07769513072039488
+tfidf_pivot_cov,development-09,service banner detection,5,477,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-mcp-server.html,0.05821503233076353
+tfidf_pivot_cov,development-10,web content discovery,1,633,https://nmap.org/book/man-host-discovery.html,0.0937907649011298
+tfidf_pivot_cov,development-10,web content discovery,2,652,https://www.kali.org/tools/seclists/,0.07867437506903674
+tfidf_pivot_cov,development-10,web content discovery,3,187,https://nmap.org/book/host-discovery-dns.html,0.07660047076619439
+tfidf_pivot_cov,development-10,web content discovery,4,228,https://www.kali.org/tools/ffuf/,0.07083263529152103
+tfidf_pivot_cov,development-10,web content discovery,5,221,https://www.kali.org/tools/feroxbuster/,0.0676858738008388
+tfidf_pivot_cov,development-11,metasploit session management,1,477,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-mcp-server.html,0.10198974966179403
+tfidf_pivot_cov,development-11,metasploit session management,2,584,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-get-started-with-writing-a-post-module.html,0.09775802217636845
+tfidf_pivot_cov,development-11,metasploit session management,3,324,https://docs.metasploit.com/docs/using-metasploit/intermediate/how-to-use-plugins.html,0.09489024057665593
+tfidf_pivot_cov,development-11,metasploit session management,4,86,https://docs.metasploit.com/docs/pentesting/metasploit-guide-winrm.html,0.09437343524939316
+tfidf_pivot_cov,development-11,metasploit session management,5,368,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-configuration.html,0.0804975044287788
+tfidf_pivot_cov,development-12,sudo binary capabilities,1,567,https://www.kali.org/tools/ghidra/,0.06434579555031684
+tfidf_pivot_cov,development-12,sudo binary capabilities,2,897,https://www.kali.org/tools/raven/,0.0639681879803588
+tfidf_pivot_cov,development-12,sudo binary capabilities,3,20,https://gtfobins.org/contributing/,0.06367697646980865
+tfidf_pivot_cov,development-12,sudo binary capabilities,4,896,https://www.kali.org/tools/goshs/,0.061406945155533466
+tfidf_pivot_cov,development-12,sudo binary capabilities,5,281,https://gtfobins.org/gtfobins/bash/,0.053003315909680035
+bm25,development-01,tls certificate proxy setup,1,108,https://docs.mitmproxy.org/stable/concepts/certificates/,18.211260414299357
+bm25,development-01,tls certificate proxy setup,2,888,https://www.kali.org/tools/stunnel4/,17.285176329971904
+bm25,development-01,tls certificate proxy setup,3,783,https://www.kali.org/tools/sslscan/,17.106448748900583
+bm25,development-01,tls certificate proxy setup,4,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,16.105761397030307
+bm25,development-01,tls certificate proxy setup,5,784,https://www.kali.org/tools/sslyze/,15.307915185045248
+bm25,development-02,android dynamic instrumentation,1,48,https://frida.re/docs/presentations/,19.601476619207535
+bm25,development-02,android dynamic instrumentation,2,25,https://frida.re/docs/modes/,17.686035008588277
+bm25,development-02,android dynamic instrumentation,3,243,https://frida.re/docs/gsoc-ideas-2015/,15.923071915078793
+bm25,development-02,android dynamic instrumentation,4,233,https://frida.re/docs/building/,15.512104035025732
+bm25,development-02,android dynamic instrumentation,5,75,https://frida.re/docs/android/,14.950469961644014
+bm25,development-03,tcp syn scan,1,258,https://nmap.org/book/synscan.html,12.41698381378027
+bm25,development-03,tcp syn scan,2,278,https://nmap.org/book/scan-methods-custom-scanflags.html,12.329784357793542
+bm25,development-03,tcp syn scan,3,262,https://nmap.org/book/scan-methods-connect-scan.html,12.238571810969528
+bm25,development-03,tcp syn scan,4,639,https://nmap.org/book/man-port-scanning-techniques.html,11.855823240286815
+bm25,development-03,tcp syn scan,5,272,https://nmap.org/book/scan-methods-null-fin-xmas-scan.html,11.81003239640105
+bm25,development-04,dns reconnaissance,1,235,https://www.kali.org/tools/finalrecon/,10.629746000270002
+bm25,development-04,dns reconnaissance,2,245,https://www.kali.org/tools/gobuster/,9.772578158793586
+bm25,development-04,dns reconnaissance,3,803,https://www.kali.org/tools/fierce/,9.506943853310604
+bm25,development-04,dns reconnaissance,4,425,https://www.kali.org/tools/bettercap/,9.429778057819597
+bm25,development-04,dns reconnaissance,5,98,https://www.kali.org/tools/amass/,8.972931768775547
+bm25,development-05,offline password hash recovery,1,724,https://www.kali.org/tools/chntpw/,13.90231859625017
+bm25,development-05,offline password hash recovery,2,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,13.883432883850034
+bm25,development-05,offline password hash recovery,3,747,https://www.kali.org/tools/hashcat/,13.846764443683398
+bm25,development-05,offline password hash recovery,4,216,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/keytab.html,11.936774148628338
+bm25,development-05,offline password hash recovery,5,765,https://www.kali.org/tools/pixiewps/,10.87665853162229
+bm25,development-06,http request interception,1,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,12.957445994513971
+bm25,development-06,http request interception,2,204,https://docs.mitmproxy.org/stable/howto/ignore-domains/,12.579166764771916
+bm25,development-06,http request interception,3,861,https://www.kali.org/tools/sslsniff/,12.520568547173625
+bm25,development-06,http request interception,4,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,11.940360200652098
+bm25,development-06,http request interception,5,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,11.559466436859534
+bm25,development-07,apk resource decoding,1,579,https://www.kali.org/tools/apktool/,22.703760097767578
+bm25,development-07,apk resource decoding,2,585,https://www.kali.org/tools/jadx/,14.122243474593267
+bm25,development-07,apk resource decoding,3,593,https://www.kali.org/tools/dex2jar/,9.47848882569458
+bm25,development-07,apk resource decoding,4,582,https://www.kali.org/tools/bytecode-viewer/,9.384832946280588
+bm25,development-07,apk resource decoding,5,52,https://docs.metasploit.com/docs/pentesting/metasploit-guide-kubernetes.html,7.7813543976961235
+bm25,development-08,network traffic display filter,1,793,https://www.kali.org/tools/driftnet/,13.292633274935806
+bm25,development-08,network traffic display filter,2,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,13.072148078895346
+bm25,development-08,network traffic display filter,3,796,https://www.kali.org/tools/wireshark/,12.187265147702572
+bm25,development-08,network traffic display filter,4,859,https://www.kali.org/tools/ssldump/,12.14526117018011
+bm25,development-08,network traffic display filter,5,3,https://www.wireshark.org/docs/wsug_html_chunked/,11.85816726555241
+bm25,development-09,service banner detection,1,357,https://nmap.org/book/vscan-technique.html,11.747566696042908
+bm25,development-09,service banner detection,2,372,https://nmap.org/book/vscan-fileformat.html,10.914996500393064
+bm25,development-09,service banner detection,3,396,https://nmap.org/book/osdetect-usage.html,9.636311658564864
+bm25,development-09,service banner detection,4,441,https://nmap.org/book/nse-usage.html,9.260156349618958
+bm25,development-09,service banner detection,5,613,https://www.kali.org/tools/sqlmap/,8.48720268022613
+bm25,development-10,web content discovery,1,652,https://www.kali.org/tools/seclists/,11.098376511598005
+bm25,development-10,web content discovery,2,187,https://nmap.org/book/host-discovery-dns.html,9.979817118939703
+bm25,development-10,web content discovery,3,228,https://www.kali.org/tools/ffuf/,9.735854717531023
+bm25,development-10,web content discovery,4,117,https://www.kali.org/tools/legion/,9.337972991201307
+bm25,development-10,web content discovery,5,221,https://www.kali.org/tools/feroxbuster/,8.724994402675604
+bm25,development-11,metasploit session management,1,584,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-get-started-with-writing-a-post-module.html,12.435888380991608
+bm25,development-11,metasploit session management,2,86,https://docs.metasploit.com/docs/pentesting/metasploit-guide-winrm.html,12.397071927715094
+bm25,development-11,metasploit session management,3,324,https://docs.metasploit.com/docs/using-metasploit/intermediate/how-to-use-plugins.html,12.16181366313506
+bm25,development-11,metasploit session management,4,477,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-mcp-server.html,12.145788368478152
+bm25,development-11,metasploit session management,5,348,https://docs.metasploit.com/docs/using-metasploit/advanced/how-to-configure-dns.html,10.602484945989408
+bm25,development-12,sudo binary capabilities,1,567,https://www.kali.org/tools/ghidra/,7.632995499235753
+bm25,development-12,sudo binary capabilities,2,897,https://www.kali.org/tools/raven/,7.173191576509535
+bm25,development-12,sudo binary capabilities,3,20,https://gtfobins.org/contributing/,7.161020778861691
+bm25,development-12,sudo binary capabilities,4,13,https://gtfobins.org/scope/,6.8340675966318365
+bm25,development-12,sudo binary capabilities,5,785,https://www.kali.org/tools/tlssled/,6.353118376716563
+bm25_boost_syn,development-01,tls certificate proxy setup,1,108,https://docs.mitmproxy.org/stable/concepts/certificates/,27.316890621449033
+bm25_boost_syn,development-01,tls certificate proxy setup,2,102,https://docs.mitmproxy.org/stable/concepts/modes/,19.053084184293414
+bm25_boost_syn,development-01,tls certificate proxy setup,3,211,https://docs.mitmproxy.org/stable/howto/transparent-vms/,17.83312139225417
+bm25_boost_syn,development-01,tls certificate proxy setup,4,888,https://www.kali.org/tools/stunnel4/,17.285176329971904
+bm25_boost_syn,development-01,tls certificate proxy setup,5,783,https://www.kali.org/tools/sslscan/,17.106448748900583
+bm25_boost_syn,development-02,android dynamic instrumentation,1,48,https://frida.re/docs/presentations/,39.20295323841507
+bm25_boost_syn,development-02,android dynamic instrumentation,2,75,https://frida.re/docs/android/,37.37617490411004
+bm25_boost_syn,development-02,android dynamic instrumentation,3,25,https://frida.re/docs/modes/,35.372070017176554
+bm25_boost_syn,development-02,android dynamic instrumentation,4,109,https://frida.re/docs/examples/android/,34.968204679434436
+bm25_boost_syn,development-02,android dynamic instrumentation,5,243,https://frida.re/docs/gsoc-ideas-2015/,31.846143830157587
+bm25_boost_syn,development-03,tcp syn scan,1,258,https://nmap.org/book/synscan.html,31.042459534450675
+bm25_boost_syn,development-03,tcp syn scan,2,262,https://nmap.org/book/scan-methods-connect-scan.html,24.477143621939057
+bm25_boost_syn,development-03,tcp syn scan,3,272,https://nmap.org/book/scan-methods-null-fin-xmas-scan.html,23.6200647928021
+bm25_boost_syn,development-03,tcp syn scan,4,299,https://nmap.org/book/idlescan.html,22.557852187697527
+bm25_boost_syn,development-03,tcp syn scan,5,289,https://nmap.org/book/scan-methods-window-scan.html,19.26737903913137
+bm25_boost_syn,development-04,dns reconnaissance,1,235,https://www.kali.org/tools/finalrecon/,10.629746000270002
+bm25_boost_syn,development-04,dns reconnaissance,2,245,https://www.kali.org/tools/gobuster/,9.772578158793586
+bm25_boost_syn,development-04,dns reconnaissance,3,803,https://www.kali.org/tools/fierce/,9.506943853310604
+bm25_boost_syn,development-04,dns reconnaissance,4,425,https://www.kali.org/tools/bettercap/,9.429778057819597
+bm25_boost_syn,development-04,dns reconnaissance,5,98,https://www.kali.org/tools/amass/,8.972931768775547
+bm25_boost_syn,development-05,offline password hash recovery,1,319,https://docs.metasploit.com/docs/using-metasploit/intermediate/hashes-and-password-cracking.html,29.842999385277487
+bm25_boost_syn,development-05,offline password hash recovery,2,728,https://www.kali.org/tools/hash-identifier/,27.16504786632467
+bm25_boost_syn,development-05,offline password hash recovery,3,747,https://www.kali.org/tools/hashcat/,21.332561062461643
+bm25_boost_syn,development-05,offline password hash recovery,4,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,18.708686064021112
+bm25_boost_syn,development-05,offline password hash recovery,5,686,https://www.kali.org/tools/impacket-scripts/,17.8719066390227
+bm25_boost_syn,development-06,http request interception,1,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,17.91054030097815
+bm25_boost_syn,development-06,http request interception,2,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,17.3391996552893
+bm25_boost_syn,development-06,http request interception,3,95,https://docs.mitmproxy.org/stable/concepts/how-mitmproxy-works/,12.957445994513971
+bm25_boost_syn,development-06,http request interception,4,204,https://docs.mitmproxy.org/stable/howto/ignore-domains/,12.579166764771916
+bm25_boost_syn,development-06,http request interception,5,861,https://www.kali.org/tools/sslsniff/,12.520568547173625
+bm25_boost_syn,development-07,apk resource decoding,1,579,https://www.kali.org/tools/apktool/,22.703760097767578
+bm25_boost_syn,development-07,apk resource decoding,2,585,https://www.kali.org/tools/jadx/,14.122243474593267
+bm25_boost_syn,development-07,apk resource decoding,3,593,https://www.kali.org/tools/dex2jar/,9.47848882569458
+bm25_boost_syn,development-07,apk resource decoding,4,582,https://www.kali.org/tools/bytecode-viewer/,9.384832946280588
+bm25_boost_syn,development-07,apk resource decoding,5,52,https://docs.metasploit.com/docs/pentesting/metasploit-guide-kubernetes.html,7.7813543976961235
+bm25_boost_syn,development-08,network traffic display filter,1,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,19.60822211834302
+bm25_boost_syn,development-08,network traffic display filter,2,408,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html,15.113337507277503
+bm25_boost_syn,development-08,network traffic display filter,3,517,https://nmap.org/book/nmap-defenses-firewalls.html,15.097516702366633
+bm25_boost_syn,development-08,network traffic display filter,4,413,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkFilterAddExpressionSection.html,13.871508622691021
+bm25_boost_syn,development-08,network traffic display filter,5,291,https://www.wireshark.org/docs/wsug_html_chunked/ChapterCapture.html,13.680368673980157
+bm25_boost_syn,development-09,service banner detection,1,372,https://nmap.org/book/vscan-fileformat.html,16.372494750589595
+bm25_boost_syn,development-09,service banner detection,2,644,https://nmap.org/book/man-version-detection.html,15.57543630871106
+bm25_boost_syn,development-09,service banner detection,3,347,https://nmap.org/book/vscan.html,15.311048770764348
+bm25_boost_syn,development-09,service banner detection,4,357,https://nmap.org/book/vscan-technique.html,11.747566696042908
+bm25_boost_syn,development-09,service banner detection,5,480,https://nmap.org/book/nse-vscan.html,11.4286547747259
+bm25_boost_syn,development-10,web content discovery,1,633,https://nmap.org/book/man-host-discovery.html,12.595202220118157
+bm25_boost_syn,development-10,web content discovery,2,194,https://nmap.org/book/host-discovery-controls.html,11.803923817202218
+bm25_boost_syn,development-10,web content discovery,3,208,https://nmap.org/book/host-discovery-strategies.html,11.753665403010658
+bm25_boost_syn,development-10,web content discovery,4,201,https://nmap.org/book/host-discovery-techniques.html,11.55338700439366
+bm25_boost_syn,development-10,web content discovery,5,652,https://www.kali.org/tools/seclists/,11.098376511598005
+bm25_boost_syn,development-11,metasploit session management,1,584,https://docs.metasploit.com/docs/development/developing-modules/guides/how-to-get-started-with-writing-a-post-module.html,18.653832571487413
+bm25_boost_syn,development-11,metasploit session management,2,86,https://docs.metasploit.com/docs/pentesting/metasploit-guide-winrm.html,18.59560789157264
+bm25_boost_syn,development-11,metasploit session management,3,324,https://docs.metasploit.com/docs/using-metasploit/intermediate/how-to-use-plugins.html,18.24272049470259
+bm25_boost_syn,development-11,metasploit session management,4,477,https://docs.metasploit.com/docs/using-metasploit/other/how-to-use-metasploit-mcp-server.html,18.21868255271723
+bm25_boost_syn,development-11,metasploit session management,5,348,https://docs.metasploit.com/docs/using-metasploit/advanced/how-to-configure-dns.html,15.903727418984111
+bm25_boost_syn,development-12,sudo binary capabilities,1,567,https://www.kali.org/tools/ghidra/,7.632995499235753
+bm25_boost_syn,development-12,sudo binary capabilities,2,897,https://www.kali.org/tools/raven/,7.173191576509535
+bm25_boost_syn,development-12,sudo binary capabilities,3,20,https://gtfobins.org/contributing/,7.161020778861691
+bm25_boost_syn,development-12,sudo binary capabilities,4,13,https://gtfobins.org/scope/,6.8340675966318365
+bm25_boost_syn,development-12,sudo binary capabilities,5,785,https://www.kali.org/tools/tlssled/,6.353118376716563
+tfidf_proximity,development-01,tls certificate proxy setup,1,18,https://docs.mitmproxy.org/stable/overview/getting-started/,0.1303945306366882
+tfidf_proximity,development-01,tls certificate proxy setup,2,197,https://docs.mitmproxy.org/stable/howto/wireshark-tls/,0.12883202900324156
+tfidf_proximity,development-01,tls certificate proxy setup,3,783,https://www.kali.org/tools/sslscan/,0.1122199714617603
+tfidf_proximity,development-01,tls certificate proxy setup,4,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.11157640056381406
+tfidf_proximity,development-01,tls certificate proxy setup,5,861,https://www.kali.org/tools/sslsniff/,0.10721522220952563
+tfidf_proximity,development-02,android dynamic instrumentation,1,198,https://frida.re/docs/swift-api/,0.24864018882246097
+tfidf_proximity,development-02,android dynamic instrumentation,2,25,https://frida.re/docs/modes/,0.20990740859877557
+tfidf_proximity,development-02,android dynamic instrumentation,3,96,https://frida.re/docs/examples/linux/,0.18569792446983427
+tfidf_proximity,development-02,android dynamic instrumentation,4,129,https://frida.re/docs/frida-ps/,0.17097012595448016
+tfidf_proximity,development-02,android dynamic instrumentation,5,163,https://frida.re/docs/gum-graft/,0.15579081884697157
+tfidf_proximity,development-03,tcp syn scan,1,262,https://nmap.org/book/scan-methods-connect-scan.html,0.16181195606922602
+tfidf_proximity,development-03,tcp syn scan,2,278,https://nmap.org/book/scan-methods-custom-scanflags.html,0.1160920969521458
+tfidf_proximity,development-03,tcp syn scan,3,166,https://nmap.org/book/host-discovery.html,0.10946838559257083
+tfidf_proximity,development-03,tcp syn scan,4,258,https://nmap.org/book/synscan.html,0.10875287384889723
+tfidf_proximity,development-03,tcp syn scan,5,517,https://nmap.org/book/nmap-defenses-firewalls.html,0.10319902909006352
+tfidf_proximity,development-04,dns reconnaissance,1,803,https://www.kali.org/tools/fierce/,0.1306534227932538
+tfidf_proximity,development-04,dns reconnaissance,2,245,https://www.kali.org/tools/gobuster/,0.12279459526306678
+tfidf_proximity,development-04,dns reconnaissance,3,235,https://www.kali.org/tools/finalrecon/,0.12204954445443486
+tfidf_proximity,development-04,dns reconnaissance,4,967,https://www.kali.org/tools/arsenal-ng/,0.11472091055967813
+tfidf_proximity,development-04,dns reconnaissance,5,817,https://www.kali.org/tools/netdiscover/,0.10558769801929191
+tfidf_proximity,development-05,offline password hash recovery,1,762,https://www.kali.org/tools/eapmd5pass/,0.1055914206669258
+tfidf_proximity,development-05,offline password hash recovery,2,724,https://www.kali.org/tools/chntpw/,0.1030695425782693
+tfidf_proximity,development-05,offline password hash recovery,3,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,0.09285480515086939
+tfidf_proximity,development-05,offline password hash recovery,4,773,https://www.kali.org/tools/mfoc/,0.09053437795037643
+tfidf_proximity,development-05,offline password hash recovery,5,932,https://www.kali.org/tools/scrounge-ntfs/,0.08943561398245552
+tfidf_proximity,development-06,http request interception,1,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,0.22176210792825987
+tfidf_proximity,development-06,http request interception,2,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,0.18683263844422124
+tfidf_proximity,development-06,http request interception,3,861,https://www.kali.org/tools/sslsniff/,0.16242997980388668
+tfidf_proximity,development-06,http request interception,4,204,https://docs.mitmproxy.org/stable/howto/ignore-domains/,0.13111669207336749
+tfidf_proximity,development-06,http request interception,5,60,https://docs.mitmproxy.org/stable/mitmproxytutorial-userinterface/,0.12253720430056073
+tfidf_proximity,development-07,apk resource decoding,1,579,https://www.kali.org/tools/apktool/,0.17375812934677048
+tfidf_proximity,development-07,apk resource decoding,2,582,https://www.kali.org/tools/bytecode-viewer/,0.1028818259258982
+tfidf_proximity,development-07,apk resource decoding,3,585,https://www.kali.org/tools/jadx/,0.06674451341352695
+tfidf_proximity,development-07,apk resource decoding,4,79,https://docs.metasploit.com/docs/pentesting/metasploit-guide-ssh.html,0.06445582080316567
+tfidf_proximity,development-07,apk resource decoding,5,631,https://docs.metasploit.com/docs/development/developing-modules/libraries/c/how-to-decode-base64-with-metasploit-framework-compiler.html,0.05811745395921473
+tfidf_proximity,development-08,network traffic display filter,1,859,https://www.kali.org/tools/ssldump/,0.15427784880779047
+tfidf_proximity,development-08,network traffic display filter,2,403,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayFilterSection.html,0.12248589019507747
+tfidf_proximity,development-08,network traffic display filter,3,335,https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureFilterSection.html,0.1179424949058854
+tfidf_proximity,development-08,network traffic display filter,4,418,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDefineFilterSection.html,0.11603457421936983
+tfidf_proximity,development-08,network traffic display filter,5,793,https://www.kali.org/tools/driftnet/,0.10549304962851906
+tfidf_proximity,development-09,service banner detection,1,966,https://www.kali.org/tools/portspoof/,0.09409665367148697
+tfidf_proximity,development-09,service banner detection,2,592,https://nmap.org/book/output-formats-cpe.html,0.08425130709519775
+tfidf_proximity,development-09,service banner detection,3,357,https://nmap.org/book/vscan-technique.html,0.07651726445418237
+tfidf_proximity,development-09,service banner detection,4,613,https://www.kali.org/tools/sqlmap/,0.07021067394066331
+tfidf_proximity,development-09,service banner detection,5,608,https://nmap.org/book/nmap-service-probes.html,0.07000719716151105
+tfidf_proximity,development-10,web content discovery,1,187,https://nmap.org/book/host-discovery-dns.html,0.10021548927018248
+tfidf_proximity,development-10,web content discovery,2,652,https://www.kali.org/tools/seclists/,0.08795322425118825
+tfidf_proximity,development-10,web content discovery,3,166,https://nmap.org/book/host-discovery.html,0.08492699049688536
+tfidf_proximity,development-10,web content discovery,4,671,https://nmap.org/book/man-book.html,0.08081758049594094
+tfidf_proximity,development-10,web content discovery,5,245,https://www.kali.org/tools/gobuster/,0.07952895515716481
+tfidf_proximity,development-11,metasploit session management,1,868,https://www.kali.org/tools/penelope/,0.10719713813007484
+tfidf_proximity,development-11,metasploit session management,2,34,https://docs.metasploit.com/docs/pentesting/metasploit-guide-upgrading-shells-to-meterpreter.html,0.10068499331565603
+tfidf_proximity,development-11,metasploit session management,3,629,https://www.kali.org/tools/armitage/,0.09874230518345925
+tfidf_proximity,development-11,metasploit session management,4,706,https://docs.metasploit.com/docs/development/developing-modules/libraries/how-to-use-wbemexec-for-a-write-privilege-attack-on-windows.html,0.09768626891645282
+tfidf_proximity,development-11,metasploit session management,5,86,https://docs.metasploit.com/docs/pentesting/metasploit-guide-winrm.html,0.09232445846708427
+tfidf_proximity,development-12,sudo binary capabilities,1,13,https://gtfobins.org/scope/,0.16511642243551627
+tfidf_proximity,development-12,sudo binary capabilities,2,567,https://www.kali.org/tools/ghidra/,0.09510941358198301
+tfidf_proximity,development-12,sudo binary capabilities,3,897,https://www.kali.org/tools/raven/,0.09135873526500034
+tfidf_proximity,development-12,sudo binary capabilities,4,595,https://docs.metasploit.com/docs/development/developing-modules/external-modules/writing-external-metasploit-modules.html,0.0883061732698114
+tfidf_proximity,development-12,sudo binary capabilities,5,20,https://gtfobins.org/contributing/,0.07564429076830385
+tfidf_fields,development-01,tls certificate proxy setup,1,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.27704542334723553
+tfidf_fields,development-01,tls certificate proxy setup,2,102,https://docs.mitmproxy.org/stable/concepts/modes/,0.17434357987627513
+tfidf_fields,development-01,tls certificate proxy setup,3,197,https://docs.mitmproxy.org/stable/howto/wireshark-tls/,0.15994703254636083
+tfidf_fields,development-01,tls certificate proxy setup,4,146,https://docs.metasploit.com/docs/pentesting/active-directory/ad-certificates/icpr_cert.html,0.13633514113532316
+tfidf_fields,development-01,tls certificate proxy setup,5,140,https://docs.metasploit.com/docs/pentesting/active-directory/ad-certificates/ad_cs_cert_template.html,0.11066561942714227
+tfidf_fields,development-02,android dynamic instrumentation,1,75,https://frida.re/docs/android/,0.33763865957197015
+tfidf_fields,development-02,android dynamic instrumentation,2,109,https://frida.re/docs/examples/android/,0.33316709387957677
+tfidf_fields,development-02,android dynamic instrumentation,3,25,https://frida.re/docs/modes/,0.24489513966503962
+tfidf_fields,development-02,android dynamic instrumentation,4,233,https://frida.re/docs/building/,0.22508647166833645
+tfidf_fields,development-02,android dynamic instrumentation,5,5,https://frida.re/docs/home/,0.22204272449250337
+tfidf_fields,development-03,tcp syn scan,1,258,https://nmap.org/book/synscan.html,0.30320692126341886
+tfidf_fields,development-03,tcp syn scan,2,262,https://nmap.org/book/scan-methods-connect-scan.html,0.14305875642187835
+tfidf_fields,development-03,tcp syn scan,3,289,https://nmap.org/book/scan-methods-window-scan.html,0.11848913705037528
+tfidf_fields,development-03,tcp syn scan,4,283,https://nmap.org/book/scan-methods-ack-scan.html,0.11792241393559871
+tfidf_fields,development-03,tcp syn scan,5,532,https://nmap.org/book/zenmap-scanning.html,0.11694291443021898
+tfidf_fields,development-04,dns reconnaissance,1,187,https://nmap.org/book/host-discovery-dns.html,0.12422932750888292
+tfidf_fields,development-04,dns reconnaissance,2,348,https://docs.metasploit.com/docs/using-metasploit/advanced/how-to-configure-dns.html,0.1043736134513408
+tfidf_fields,development-04,dns reconnaissance,3,235,https://www.kali.org/tools/finalrecon/,0.030441125108569694
+tfidf_fields,development-04,dns reconnaissance,4,245,https://www.kali.org/tools/gobuster/,0.030352783364456355
+tfidf_fields,development-04,dns reconnaissance,5,967,https://www.kali.org/tools/arsenal-ng/,0.028826970171569637
+tfidf_fields,development-05,offline password hash recovery,1,728,https://www.kali.org/tools/hash-identifier/,0.07858740535855324
+tfidf_fields,development-05,offline password hash recovery,2,692,https://www.kali.org/tools/passing-the-hash/,0.07501706852410919
+tfidf_fields,development-05,offline password hash recovery,3,319,https://docs.metasploit.com/docs/using-metasploit/intermediate/hashes-and-password-cracking.html,0.043183703469907755
+tfidf_fields,development-05,offline password hash recovery,4,762,https://www.kali.org/tools/eapmd5pass/,0.025995945878570896
+tfidf_fields,development-05,offline password hash recovery,5,174,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/kerberos_login.html,0.023224693287942497
+tfidf_fields,development-06,http request interception,1,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,0.10173046549529166
+tfidf_fields,development-06,http request interception,2,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,0.0899051394852998
+tfidf_fields,development-06,http request interception,3,64,https://nmap.org/book/pref-rfc.html,0.048996203742078505
+tfidf_fields,development-06,http request interception,4,81,https://docs.mitmproxy.org/stable/mitmproxytutorial-replayrequests/,0.04551304471965605
+tfidf_fields,development-06,http request interception,5,861,https://www.kali.org/tools/sslsniff/,0.03956657353786616
+tfidf_fields,development-07,apk resource decoding,1,57,https://nmap.org/book/resources.html,0.1429491197350431
+tfidf_fields,development-07,apk resource decoding,2,223,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/rbcd.html,0.041184162788913126
+tfidf_fields,development-07,apk resource decoding,3,579,https://www.kali.org/tools/apktool/,0.04074490796607107
+tfidf_fields,development-07,apk resource decoding,4,582,https://www.kali.org/tools/bytecode-viewer/,0.025830924520845577
+tfidf_fields,development-07,apk resource decoding,5,585,https://www.kali.org/tools/jadx/,0.01641362917569271
+tfidf_fields,development-08,network traffic display filter,1,549,https://nmap.org/book/zenmap-filter.html,0.1973948991876157
+tfidf_fields,development-08,network traffic display filter,2,114,https://docs.mitmproxy.org/stable/concepts/filters/,0.13164603446003645
+tfidf_fields,development-08,network traffic display filter,3,408,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html,0.12175077279727047
+tfidf_fields,development-08,network traffic display filter,4,413,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkFilterAddExpressionSection.html,0.12052863336159253
+tfidf_fields,development-08,network traffic display filter,5,216,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/keytab.html,0.09845607928692547
+tfidf_fields,development-09,service banner detection,1,644,https://nmap.org/book/man-version-detection.html,0.22866822151778196
+tfidf_fields,development-09,service banner detection,2,347,https://nmap.org/book/vscan.html,0.16436807649527524
+tfidf_fields,development-09,service banner detection,3,647,https://nmap.org/book/man-os-detection.html,0.15434684237989052
+tfidf_fields,development-09,service banner detection,4,480,https://nmap.org/book/nse-vscan.html,0.12406293045563267
+tfidf_fields,development-09,service banner detection,5,392,https://nmap.org/book/osdetect.html,0.11300560646255763
+tfidf_fields,development-10,web content discovery,1,633,https://nmap.org/book/man-host-discovery.html,0.29340241431566744
+tfidf_fields,development-10,web content discovery,2,194,https://nmap.org/book/host-discovery-controls.html,0.25796128639711347
+tfidf_fields,development-10,web content discovery,3,201,https://nmap.org/book/host-discovery-techniques.html,0.2458867173423379
+tfidf_fields,development-10,web content discovery,4,215,https://nmap.org/book/host-discovery-algorithms.html,0.22927396743792838
+tfidf_fields,development-10,web content discovery,5,166,https://nmap.org/book/host-discovery.html,0.21650732561798283
+tfidf_fields,development-11,metasploit session management,1,378,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-debugging-meterpreter-sessions.html,0.15506002918128708
+tfidf_fields,development-11,metasploit session management,2,295,https://docs.metasploit.com/docs/using-metasploit/basics/managing-sessions.html,0.14449517910777243
+tfidf_fields,development-11,metasploit session management,3,373,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/debugging-dead-meterpreter-sessions.html,0.1307850866595346
+tfidf_fields,development-11,metasploit session management,4,324,https://docs.metasploit.com/docs/using-metasploit/intermediate/how-to-use-plugins.html,0.12333289310242519
+tfidf_fields,development-11,metasploit session management,5,353,https://docs.metasploit.com/docs/using-metasploit/advanced/metasploit-web-service.html,0.11773384248661087
+tfidf_fields,development-12,sudo binary capabilities,1,13,https://gtfobins.org/scope/,0.04154603457426631
+tfidf_fields,development-12,sudo binary capabilities,2,567,https://www.kali.org/tools/ghidra/,0.023753903840333122
+tfidf_fields,development-12,sudo binary capabilities,3,897,https://www.kali.org/tools/raven/,0.022760959186890084
+tfidf_fields,development-12,sudo binary capabilities,4,595,https://docs.metasploit.com/docs/development/developing-modules/external-modules/writing-external-metasploit-modules.html,0.02219125556635852
+tfidf_fields,development-12,sudo binary capabilities,5,20,https://gtfobins.org/contributing/,0.018896657648083296
+tfidf_fields_proximity,development-01,tls certificate proxy setup,1,108,https://docs.mitmproxy.org/stable/concepts/certificates/,0.27912326402233983
+tfidf_fields_proximity,development-01,tls certificate proxy setup,2,102,https://docs.mitmproxy.org/stable/concepts/modes/,0.1744619126227975
+tfidf_fields_proximity,development-01,tls certificate proxy setup,3,197,https://docs.mitmproxy.org/stable/howto/wireshark-tls/,0.16337446895806856
+tfidf_fields_proximity,development-01,tls certificate proxy setup,4,146,https://docs.metasploit.com/docs/pentesting/active-directory/ad-certificates/icpr_cert.html,0.13633514113532316
+tfidf_fields_proximity,development-01,tls certificate proxy setup,5,140,https://docs.metasploit.com/docs/pentesting/active-directory/ad-certificates/ad_cs_cert_template.html,0.11303702555772388
+tfidf_fields_proximity,development-02,android dynamic instrumentation,1,75,https://frida.re/docs/android/,0.3629615590398679
+tfidf_fields_proximity,development-02,android dynamic instrumentation,2,109,https://frida.re/docs/examples/android/,0.35815462592054503
+tfidf_fields_proximity,development-02,android dynamic instrumentation,3,25,https://frida.re/docs/modes/,0.2938741675980475
+tfidf_fields_proximity,development-02,android dynamic instrumentation,4,233,https://frida.re/docs/building/,0.27010376600200375
+tfidf_fields_proximity,development-02,android dynamic instrumentation,5,5,https://frida.re/docs/home/,0.26645126939100405
+tfidf_fields_proximity,development-03,tcp syn scan,1,258,https://nmap.org/book/synscan.html,0.33959175181502915
+tfidf_fields_proximity,development-03,tcp syn scan,2,262,https://nmap.org/book/scan-methods-connect-scan.html,0.1645175698851601
+tfidf_fields_proximity,development-03,tcp syn scan,3,289,https://nmap.org/book/scan-methods-window-scan.html,0.13033805075541283
+tfidf_fields_proximity,development-03,tcp syn scan,4,283,https://nmap.org/book/scan-methods-ack-scan.html,0.1297146553291586
+tfidf_fields_proximity,development-03,tcp syn scan,5,639,https://nmap.org/book/man-port-scanning-techniques.html,0.12490549651533545
+tfidf_fields_proximity,development-04,dns reconnaissance,1,187,https://nmap.org/book/host-discovery-dns.html,0.12422932750888292
+tfidf_fields_proximity,development-04,dns reconnaissance,2,348,https://docs.metasploit.com/docs/using-metasploit/advanced/how-to-configure-dns.html,0.1043736134513408
+tfidf_fields_proximity,development-04,dns reconnaissance,3,803,https://www.kali.org/tools/fierce/,0.032702902508631414
+tfidf_fields_proximity,development-04,dns reconnaissance,4,245,https://www.kali.org/tools/gobuster/,0.030766684955789853
+tfidf_fields_proximity,development-04,dns reconnaissance,5,235,https://www.kali.org/tools/finalrecon/,0.030571587073320704
+tfidf_fields_proximity,development-05,offline password hash recovery,1,728,https://www.kali.org/tools/hash-identifier/,0.07942941327310916
+tfidf_fields_proximity,development-05,offline password hash recovery,2,692,https://www.kali.org/tools/passing-the-hash/,0.07876792195031465
+tfidf_fields_proximity,development-05,offline password hash recovery,3,319,https://docs.metasploit.com/docs/using-metasploit/intermediate/hashes-and-password-cracking.html,0.04966125899039391
+tfidf_fields_proximity,development-05,offline password hash recovery,4,762,https://www.kali.org/tools/eapmd5pass/,0.026483369863794102
+tfidf_fields_proximity,development-05,offline password hash recovery,5,724,https://www.kali.org/tools/chntpw/,0.025787427581226145
+tfidf_fields_proximity,development-06,http request interception,1,74,https://docs.mitmproxy.org/stable/mitmproxytutorial-modifyrequests/,0.10427372713267394
+tfidf_fields_proximity,development-06,http request interception,2,67,https://docs.mitmproxy.org/stable/mitmproxytutorial-interceptrequests/,0.09889565343382978
+tfidf_fields_proximity,development-06,http request interception,3,64,https://nmap.org/book/pref-rfc.html,0.048996203742078505
+tfidf_fields_proximity,development-06,http request interception,4,663,https://docs.metasploit.com/docs/development/developing-modules/libraries/http/how-to-send-an-http-request-using-httpclient.html,0.04617241443238821
+tfidf_fields_proximity,development-06,http request interception,5,669,https://docs.metasploit.com/docs/development/developing-modules/libraries/http/how-to-send-an-http-request-using-rex-proto-http-client.html,0.04598101424413244
+tfidf_fields_proximity,development-07,apk resource decoding,1,57,https://nmap.org/book/resources.html,0.1429491197350431
+tfidf_fields_proximity,development-07,apk resource decoding,2,579,https://www.kali.org/tools/apktool/,0.04346123516380914
+tfidf_fields_proximity,development-07,apk resource decoding,3,223,https://docs.metasploit.com/docs/pentesting/active-directory/kerberos/rbcd.html,0.041184162788913126
+tfidf_fields_proximity,development-07,apk resource decoding,4,582,https://www.kali.org/tools/bytecode-viewer/,0.025830924520845577
+tfidf_fields_proximity,development-07,apk resource decoding,5,585,https://www.kali.org/tools/jadx/,0.016687189661954253
+tfidf_fields_proximity,development-08,network traffic display filter,1,549,https://nmap.org/book/zenmap-filter.html,0.2072646441469965
+tfidf_fields_proximity,development-08,network traffic display filter,2,408,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html,0.14001338871686103
+tfidf_fields_proximity,development-08,network traffic display filter,3,413,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkFilterAddExpressionSection.html,0.1386079283658314
+tfidf_fields_proximity,development-08,network traffic display filter,4,114,https://docs.mitmproxy.org/stable/concepts/filters/,0.13164603446003645
+tfidf_fields_proximity,development-08,network traffic display filter,5,403,https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayFilterSection.html,0.10782047412127155
+tfidf_fields_proximity,development-09,service banner detection,1,644,https://nmap.org/book/man-version-detection.html,0.24391276961896743
+tfidf_fields_proximity,development-09,service banner detection,2,347,https://nmap.org/book/vscan.html,0.172586480320039
+tfidf_fields_proximity,development-09,service banner detection,3,647,https://nmap.org/book/man-os-detection.html,0.15434684237989052
+tfidf_fields_proximity,development-09,service banner detection,4,480,https://nmap.org/book/nse-vscan.html,0.12681988446575784
+tfidf_fields_proximity,development-09,service banner detection,5,387,https://nmap.org/book/vscan-hack-it.html,0.12087584722604659
+tfidf_fields_proximity,development-10,web content discovery,1,633,https://nmap.org/book/man-host-discovery.html,0.29401794385618985
+tfidf_fields_proximity,development-10,web content discovery,2,194,https://nmap.org/book/host-discovery-controls.html,0.2582544242225647
+tfidf_fields_proximity,development-10,web content discovery,3,201,https://nmap.org/book/host-discovery-techniques.html,0.24628981032158764
+tfidf_fields_proximity,development-10,web content discovery,4,215,https://nmap.org/book/host-discovery-algorithms.html,0.22927396743792838
+tfidf_fields_proximity,development-10,web content discovery,5,166,https://nmap.org/book/host-discovery.html,0.21650732561798283
+tfidf_fields_proximity,development-11,metasploit session management,1,378,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-debugging-meterpreter-sessions.html,0.17056603209941582
+tfidf_fields_proximity,development-11,metasploit session management,2,295,https://docs.metasploit.com/docs/using-metasploit/basics/managing-sessions.html,0.15894469701854969
+tfidf_fields_proximity,development-11,metasploit session management,3,373,https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/debugging-dead-meterpreter-sessions.html,0.14386359532548806
+tfidf_fields_proximity,development-11,metasploit session management,4,324,https://docs.metasploit.com/docs/using-metasploit/intermediate/how-to-use-plugins.html,0.12544717126989532
+tfidf_fields_proximity,development-11,metasploit session management,5,263,https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html,0.12381161414300396
+tfidf_fields_proximity,development-12,sudo binary capabilities,1,13,https://gtfobins.org/scope/,0.04176469791413087
+tfidf_fields_proximity,development-12,sudo binary capabilities,2,567,https://www.kali.org/tools/ghidra/,0.023824112423112432
+tfidf_fields_proximity,development-12,sudo binary capabilities,3,897,https://www.kali.org/tools/raven/,0.022881813837439945
+tfidf_fields_proximity,development-12,sudo binary capabilities,4,595,https://docs.metasploit.com/docs/development/developing-modules/external-modules/writing-external-metasploit-modules.html,0.02219125556635852
+tfidf_fields_proximity,development-12,sudo binary capabilities,5,20,https://gtfobins.org/contributing/,0.018945528314414546

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9ba-1ac4-77d0-b56f-587b2436b573"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"886e381e8e874e5cec06-19\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段介紹 LLVM 編譯與二進位最佳化工具，未提供網站內容或隱藏路徑枚舉能力。\",\"evidence\":\"OVERVIEW: BOLT - Binary Optimization and Layout Tool\"},{\"decision_id\":\"d0f3b25012d7d22f6cd9-19\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段的插樁用於收集二進位執行剖析資料，未說明 Android Java 方法掛鉤或行為修改。\",\"evidence\":\"--instrument - instrument code to generate accurate profile data\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":39951,"cached_input_tokens":25472,"cache_write_input_tokens":0,"output_tokens":176,"reasoning_output_tokens":0}}

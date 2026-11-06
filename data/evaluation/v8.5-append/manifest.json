@@ -1,0 +1,45 @@
+{
+  "origin": "llm",
+  "index_sha256": "2d8c6c36568f476738e58c5eb42e2d276a17f76b23a3108b3a880467e1b72a22",
+  "collection_sha256": "cf69d35aeb9d4838cf9a1d7538bf805318124bb118906a98b8af361792a89ef9",
+  "systems": {
+    "expanded_v84": {
+      "model": "bm25",
+      "intent": "both",
+      "gtfo_mode": "verified"
+    },
+    "append": {
+      "model": "bm25",
+      "intent": "both",
+      "gtfo_mode": "append"
+    }
+  },
+  "source_runs": {
+    "new_queries_sha256": "16099ed4fef6aaf654fd481de9b75c41740b9615cc95d45c5f2cd6c1274f6c16",
+    "index_sha256": "2d8c6c36568f476738e58c5eb42e2d276a17f76b23a3108b3a880467e1b72a22",
+    "relations_sha256": "5ea2c15eef1df3689fa380648735bc75fd8622d9ec09d44ebae1be41ec26d55a",
+    "previous_queries_sha256": "68eac4eec76a28c2090b8fab07ac315fb4fc95900f7e9c7423a595fc84aa35b5",
+    "plan_sha256": "60d9eee08325d2e7118887d8189586fe259316126fecb08067e5f666bbcb882b"
+  },
+  "frozen_artifacts": {
+    "append/runs.csv": "318fbeab60c630de928527b20d71ad52ef40e986115230dcc56c86eb74f47446",
+    "context/runs.csv": "4f3cd1b209de7cc327369c6a3daf5baa235c975205c523756ef1541eba27f22a",
+    "control/runs.csv": "38b8e7bbe439ec86a7f50712dcb6ca8efe869d9cc0dd18b77844714c9e3dcdd9",
+    "implementation.json": "f48954143b1b864eaa4198e7ef6ad7f705b9bc96f5189d6cc8d3e4a510e832dd",
+    "inputs/0000.json": "9d9de85fd3ef149e6fa1aea37f565dfdaf4c00595ccf50973ecc6f754136b844",
+    "inputs/0001.json": "661d68a14d53b304c65c02dbe8f2ddda78c224f45fa9af6b56f0caaa5656f520",
+    "pairs.json": "668bd4208f7ad9e61928bca7678761e9d484104e1ecfd559b6d1e5af8c0f4bdd",
+    "plan.json": "60d9eee08325d2e7118887d8189586fe259316126fecb08067e5f666bbcb882b",
+    "policy.json": "d6c7ab4a10879befddb5a6da74a77cd97573e083f793f0d2d46f80d14740a24c",
+    "prompt.txt": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+    "queries.json": "e0c74b39cb81f846cff24ce5eee1b7b4276f8cf5283b34ff3def8689fae7c41e",
+    "regression/runs.csv": "774cafc3b520c05f5f35fac2a9b33365571ab319eb7984808cb2996b14da77cd",
+    "schema.json": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5"
+  },
+  "pair_count": 72,
+  "document_count": 24,
+  "segment_count": 24,
+  "batch_count": 2,
+  "full_indexed_text_chars": 68886,
+  "policy_sha256": "d6c7ab4a10879befddb5a6da74a77cd97573e083f793f0d2d46f80d14740a24c"
+}

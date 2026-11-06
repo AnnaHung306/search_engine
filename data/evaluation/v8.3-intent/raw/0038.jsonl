@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa24-60dd-7301-9af3-1676f0a21a47"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\n  \"decisions\": [\n    {\n      \"decision_id\": \"f6d2057fa86131fa2bd4-11\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"本段說明連結時如何將符號加入動態符號表，未提供列舉指定已載入原生模組匯出符號的方法。\",\n      \"evidence\": \"--export-dynamic Put symbols in the dynamic symbol table\"\n    }\n  ]\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":40393,"cached_input_tokens":26112,"cache_write_input_tokens":0,"output_tokens":120,"reasoning_output_tokens":0}}

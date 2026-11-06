@@ -1,0 +1,76 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "1ae61cd2c14aea55d6d3a67284b5dbcf92382d3a0fa1f77efdc9c7e5d977f76e",
+  "policy_sha256": "84cbbc3b3a00321871524241539824fab0d1248c0283925a98aec7bf8611f7a7",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "57918f9acf56de12de4fa984e1a625783f23b77ec3db0242cd5f5ce83e2b7113",
+  "started_at": 1793855935.7525709,
+  "finished_at": 1793855952.617599,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.3-intent/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "b74d864a482787054783-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "明確說明 Nmap 對 IPv6 目標執行 TCP ACK 探測時，會改用 connect 系統呼叫進行主機探索。",
+        "evidence": "If an unprivileged user tries this, or an IPv6 target is specified, the connect workaround discussed previously is used."
+      },
+      {
+        "decision_id": "83a484b5378169e54982-0",
+        "relevant": 0,
+        "confidence": "medium",
+        "reason": "列出 rabin2 查詢二進位檔匯出符號的選項，但未說明如何針對行程中已載入的指定模組列舉符號。",
+        "evidence": "-E globally exportable symbols -f [str] select sub-bin named str -F [binfmt] force to use that bin plugin (ignore header check)"
+      },
+      {
+        "decision_id": "de24cbc97e9fce427a10-0",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "內容介紹 dnsmap 的子網域暴力枚舉，未提供 GTFOBins 的 sudo 功能條目。",
+        "evidence": "dnsmap scans a domain for common subdomains using a built-in or an external wordlist (if specified using -w option)."
+      },
+      {
+        "decision_id": "f80d6cf7f5426134d4d3-0",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "GTFOBins 條目說明 check_cups 經 sudo 執行時會保留取得的權限，並提供讀取檔案的指令。",
+        "evidence": "Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped."
+      }
+    ]
+  }
+}

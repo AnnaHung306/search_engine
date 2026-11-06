@@ -1,0 +1,29 @@
+{
+  "new_queries_sha256": "56fec32bde772d9be321f95338c2e47f629d2a3825055293c07007bd69ca7741",
+  "regression_ids": [
+    "holdout-24",
+    "holdout-09"
+  ],
+  "baseline": "bm25",
+  "candidate": "bm25_intent",
+  "systems": {
+    "bm25": {
+      "model": "bm25"
+    },
+    "bm25_source": {
+      "model": "bm25",
+      "intent": "source"
+    },
+    "bm25_native": {
+      "model": "bm25",
+      "intent": "native"
+    },
+    "bm25_intent": {
+      "model": "bm25",
+      "intent": "both"
+    }
+  },
+  "source_signal": "Explicit GTFOBins name is a stable URL-host ranking tier. Preserve other BM25 results in lower tiers. Comparative or exclusion wording is not source intent.",
+  "native_signal": "For unsigned, unquoted wording asking to list already-loaded native/shared/process modules, add exact process.enumeratemodules with weight 0.5 and prefer matching evidence. Exclude other tasks such as kernel or exports.",
+  "comparison": "Report paired P@5 for all four systems without selecting or tuning on this suite. Keep two known failures separate from new source, native and control queries."
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1a9b9-bd41-71d0-818c-b0cb9ed0e492"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"decisions\":[{\"decision_id\":\"886e381e8e874e5cec06-13\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段介紹 LLVM 編譯、最佳化與除錯選項，未提供網站內容或隱藏路徑列舉能力。\",\"evidence\":\"llc LLVM static compiler root@kali:~# llc -h OVERVIEW: llvm system compiler\"},{\"decision_id\":\"d0f3b25012d7d22f6cd9-13\",\"relevant\":0,\"confidence\":\"high\",\"reason\":\"此片段的插樁屬於編譯器函式處理，未說明執行中 Android 應用的 Java 方法掛鉤。\",\"evidence\":\"--post-inline-ee-instrument - Instrument function entry/exit with calls to e.g. mcount() (post inlining)\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":40165,"cached_input_tokens":25472,"cache_write_input_tokens":0,"output_tokens":205,"reasoning_output_tokens":0}}

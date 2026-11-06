@@ -1,0 +1,114 @@
+{
+  "boundary": "inside search(): from receiving the query string to the finished top-10 list with snippets; index loading, Flask rendering and network are excluded; 1 warm-up call, then repeats per query",
+  "repeats_per_query": 20,
+  "systems": {
+    "tfidf": {
+      "mean_ms": 1.18,
+      "median_ms": 1.085,
+      "min_ms": 0.63,
+      "max_ms": 4.38,
+      "median_per_query_ms": {
+        "wifi password cracking": 0.67,
+        "sql injection tool": 1.055,
+        "port scanning techniques": 1.04,
+        "intercept https traffic": 1.43,
+        "web application vulnerability scanner": 0.865,
+        "network packet sniffer": 1.21,
+        "exploit metasploit module": 1.01,
+        "decompile android apk": 1.47,
+        "directory enumeration web server": 1.145,
+        "reverse shell payload": 0.67
+      }
+    },
+    "tfidf_cov": {
+      "mean_ms": 2.13,
+      "median_ms": 2.05,
+      "min_ms": 1.26,
+      "max_ms": 3.21,
+      "median_per_query_ms": {
+        "wifi password cracking": 2.085,
+        "sql injection tool": 1.66,
+        "port scanning techniques": 1.555,
+        "intercept https traffic": 3.09,
+        "web application vulnerability scanner": 2.33,
+        "network packet sniffer": 3.14,
+        "exploit metasploit module": 1.295,
+        "decompile android apk": 1.525,
+        "directory enumeration web server": 3.01,
+        "reverse shell payload": 1.54
+      }
+    },
+    "tfidf_pivot": {
+      "mean_ms": 2.315,
+      "median_ms": 2.155,
+      "min_ms": 1.24,
+      "max_ms": 4.07,
+      "median_per_query_ms": {
+        "wifi password cracking": 3.17,
+        "sql injection tool": 1.27,
+        "port scanning techniques": 3.09,
+        "intercept https traffic": 2.28,
+        "web application vulnerability scanner": 2.555,
+        "network packet sniffer": 3.91,
+        "exploit metasploit module": 1.68,
+        "decompile android apk": 1.48,
+        "directory enumeration web server": 1.7,
+        "reverse shell payload": 1.96
+      }
+    },
+    "tfidf_pivot_cov": {
+      "mean_ms": 3.001,
+      "median_ms": 3.095,
+      "min_ms": 1.5,
+      "max_ms": 4.68,
+      "median_per_query_ms": {
+        "wifi password cracking": 3.775,
+        "sql injection tool": 2.28,
+        "port scanning techniques": 3.56,
+        "intercept https traffic": 3.135,
+        "web application vulnerability scanner": 3.75,
+        "network packet sniffer": 4.525,
+        "exploit metasploit module": 1.97,
+        "decompile android apk": 1.54,
+        "directory enumeration web server": 3.01,
+        "reverse shell payload": 2.32
+      }
+    },
+    "bm25": {
+      "mean_ms": 1.921,
+      "median_ms": 1.51,
+      "min_ms": 1.11,
+      "max_ms": 3.99,
+      "median_per_query_ms": {
+        "wifi password cracking": 1.385,
+        "sql injection tool": 1.13,
+        "port scanning techniques": 2.63,
+        "intercept https traffic": 2.445,
+        "web application vulnerability scanner": 1.4,
+        "network packet sniffer": 3.795,
+        "exploit metasploit module": 1.495,
+        "decompile android apk": 1.49,
+        "directory enumeration web server": 1.84,
+        "reverse shell payload": 1.51
+      }
+    },
+    "bm25_boost_syn": {
+      "mean_ms": 2.373,
+      "median_ms": 2.52,
+      "min_ms": 1.49,
+      "max_ms": 3.25,
+      "median_per_query_ms": {
+        "wifi password cracking": 2.57,
+        "sql injection tool": 1.74,
+        "port scanning techniques": 3.095,
+        "intercept https traffic": 2.86,
+        "web application vulnerability scanner": 2.175,
+        "network packet sniffer": 2.7,
+        "exploit metasploit module": 2.27,
+        "decompile android apk": 1.52,
+        "directory enumeration web server": 3.01,
+        "reverse shell payload": 1.715
+      }
+    }
+  }
+}

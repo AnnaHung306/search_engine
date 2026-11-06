@@ -1,0 +1,9 @@
+system,query_id,query,precision_at_5
+expanded_v85,effect-09,GTFOBins sudo delete a local file,0.6
+expanded_v85,effect-10,GTFOBins sudo append lines to a local file,0.6
+expanded_v85,effect-11,compare GTFOBins and Ubuntu ways to append text with sudo,0.0
+expanded_v85,effect-12,non-GTFOBins SUID append text to a local file,0.0
+effects,effect-09,GTFOBins sudo delete a local file,0.6
+effects,effect-10,GTFOBins sudo append lines to a local file,0.6
+effects,effect-11,compare GTFOBins and Ubuntu ways to append text with sudo,0.0
+effects,effect-12,non-GTFOBins SUID append text to a local file,0.0

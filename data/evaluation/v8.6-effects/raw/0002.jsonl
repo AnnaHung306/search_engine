@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa72-832b-7b03-8355-05e73bc4d045"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\n  \"decisions\": [\n    {\n      \"decision_id\": \"87799ba31c31a29049b5-0\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"這段是 Swaks 的 SMTP 測試文件。雖提到可在程式檔末尾加入設定，但沒有示範用 sudo 提升實際寫入程式的權限，以保留原內容並附加文字。\",\n      \"evidence\": \"Any lines added after \\\"__END__\\\" will be treated as the contents of a configuration file.\"\n    }\n  ]\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":41073,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":144,"reasoning_output_tokens":0}}

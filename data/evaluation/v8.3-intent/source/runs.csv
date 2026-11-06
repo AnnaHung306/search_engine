@@ -1,0 +1,81 @@
+system,query_id,query,rank,doc_id,url,score
+bm25,intent-01,gtfobins sudo shell,1,20,https://gtfobins.org/contributing/,9.266767909172852
+bm25,intent-01,gtfobins sudo shell,2,399,https://gtfobins.org/gtfobins/cdist/,8.845936603418878
+bm25,intent-01,gtfobins sudo shell,3,83,https://gtfobins.org/gtfobins/ansible-test/,8.838469424344161
+bm25,intent-01,gtfobins sudo shell,4,474,https://gtfobins.org/gtfobins/clisp/,8.746910321638726
+bm25,intent-01,gtfobins sudo shell,5,519,https://gtfobins.org/gtfobins/cpan/,8.710262171407027
+bm25,intent-02,gtfobins suid file read,1,355,https://gtfobins.org/gtfobins/bzip2/,13.004233898043992
+bm25,intent-02,gtfobins suid file read,2,244,https://gtfobins.org/gtfobins/awk/,12.956050275507696
+bm25,intent-02,gtfobins suid file read,3,515,https://gtfobins.org/gtfobins/cp/,12.941408453120987
+bm25,intent-02,gtfobins suid file read,4,199,https://gtfobins.org/gtfobins/aspell/,12.830235230352132
+bm25,intent-02,gtfobins suid file read,5,97,https://gtfobins.org/gtfobins/apache2/,12.781486959514979
+bm25,intent-03,reverse shell examples from GTFOBins,1,20,https://gtfobins.org/contributing/,12.239850397593187
+bm25,intent-03,reverse shell examples from GTFOBins,2,13,https://gtfobins.org/scope/,12.121119163774837
+bm25,intent-03,reverse shell examples from GTFOBins,3,519,https://gtfobins.org/gtfobins/cpan/,11.170886296055984
+bm25,intent-03,reverse shell examples from GTFOBins,4,511,https://gtfobins.org/gtfobins/cowthink/,11.135708428851668
+bm25,intent-03,reverse shell examples from GTFOBins,5,508,https://gtfobins.org/gtfobins/cowsay/,11.135708428851668
+bm25,intent-04,GTFOBins sudo arbitrary file write,1,394,https://gtfobins.org/gtfobins/cc/,13.67373006003855
+bm25,intent-04,GTFOBins sudo arbitrary file write,2,365,https://gtfobins.org/gtfobins/c99/,13.67373006003855
+bm25,intent-04,GTFOBins sudo arbitrary file write,3,360,https://gtfobins.org/gtfobins/c89/,13.67373006003855
+bm25,intent-04,GTFOBins sudo arbitrary file write,4,250,https://gtfobins.org/gtfobins/aws/,13.20758285159144
+bm25,intent-04,GTFOBins sudo arbitrary file write,5,157,https://gtfobins.org/gtfobins/arj/,12.851623471342574
+bm25_source,intent-01,gtfobins sudo shell,1,20,https://gtfobins.org/contributing/,9.266767909172852
+bm25_source,intent-01,gtfobins sudo shell,2,399,https://gtfobins.org/gtfobins/cdist/,8.845936603418878
+bm25_source,intent-01,gtfobins sudo shell,3,83,https://gtfobins.org/gtfobins/ansible-test/,8.838469424344161
+bm25_source,intent-01,gtfobins sudo shell,4,474,https://gtfobins.org/gtfobins/clisp/,8.746910321638726
+bm25_source,intent-01,gtfobins sudo shell,5,519,https://gtfobins.org/gtfobins/cpan/,8.710262171407027
+bm25_source,intent-02,gtfobins suid file read,1,355,https://gtfobins.org/gtfobins/bzip2/,13.004233898043992
+bm25_source,intent-02,gtfobins suid file read,2,244,https://gtfobins.org/gtfobins/awk/,12.956050275507696
+bm25_source,intent-02,gtfobins suid file read,3,515,https://gtfobins.org/gtfobins/cp/,12.941408453120987
+bm25_source,intent-02,gtfobins suid file read,4,199,https://gtfobins.org/gtfobins/aspell/,12.830235230352132
+bm25_source,intent-02,gtfobins suid file read,5,97,https://gtfobins.org/gtfobins/apache2/,12.781486959514979
+bm25_source,intent-03,reverse shell examples from GTFOBins,1,20,https://gtfobins.org/contributing/,12.239850397593187
+bm25_source,intent-03,reverse shell examples from GTFOBins,2,13,https://gtfobins.org/scope/,12.121119163774837
+bm25_source,intent-03,reverse shell examples from GTFOBins,3,519,https://gtfobins.org/gtfobins/cpan/,11.170886296055984
+bm25_source,intent-03,reverse shell examples from GTFOBins,4,511,https://gtfobins.org/gtfobins/cowthink/,11.135708428851668
+bm25_source,intent-03,reverse shell examples from GTFOBins,5,508,https://gtfobins.org/gtfobins/cowsay/,11.135708428851668
+bm25_source,intent-04,GTFOBins sudo arbitrary file write,1,394,https://gtfobins.org/gtfobins/cc/,13.67373006003855
+bm25_source,intent-04,GTFOBins sudo arbitrary file write,2,365,https://gtfobins.org/gtfobins/c99/,13.67373006003855
+bm25_source,intent-04,GTFOBins sudo arbitrary file write,3,360,https://gtfobins.org/gtfobins/c89/,13.67373006003855
+bm25_source,intent-04,GTFOBins sudo arbitrary file write,4,250,https://gtfobins.org/gtfobins/aws/,13.20758285159144
+bm25_source,intent-04,GTFOBins sudo arbitrary file write,5,157,https://gtfobins.org/gtfobins/arj/,12.851623471342574
+bm25_native,intent-01,gtfobins sudo shell,1,20,https://gtfobins.org/contributing/,9.266767909172852
+bm25_native,intent-01,gtfobins sudo shell,2,399,https://gtfobins.org/gtfobins/cdist/,8.845936603418878
+bm25_native,intent-01,gtfobins sudo shell,3,83,https://gtfobins.org/gtfobins/ansible-test/,8.838469424344161
+bm25_native,intent-01,gtfobins sudo shell,4,474,https://gtfobins.org/gtfobins/clisp/,8.746910321638726
+bm25_native,intent-01,gtfobins sudo shell,5,519,https://gtfobins.org/gtfobins/cpan/,8.710262171407027
+bm25_native,intent-02,gtfobins suid file read,1,355,https://gtfobins.org/gtfobins/bzip2/,13.004233898043992
+bm25_native,intent-02,gtfobins suid file read,2,244,https://gtfobins.org/gtfobins/awk/,12.956050275507696
+bm25_native,intent-02,gtfobins suid file read,3,515,https://gtfobins.org/gtfobins/cp/,12.941408453120987
+bm25_native,intent-02,gtfobins suid file read,4,199,https://gtfobins.org/gtfobins/aspell/,12.830235230352132
+bm25_native,intent-02,gtfobins suid file read,5,97,https://gtfobins.org/gtfobins/apache2/,12.781486959514979
+bm25_native,intent-03,reverse shell examples from GTFOBins,1,20,https://gtfobins.org/contributing/,12.239850397593187
+bm25_native,intent-03,reverse shell examples from GTFOBins,2,13,https://gtfobins.org/scope/,12.121119163774837
+bm25_native,intent-03,reverse shell examples from GTFOBins,3,519,https://gtfobins.org/gtfobins/cpan/,11.170886296055984
+bm25_native,intent-03,reverse shell examples from GTFOBins,4,511,https://gtfobins.org/gtfobins/cowthink/,11.135708428851668
+bm25_native,intent-03,reverse shell examples from GTFOBins,5,508,https://gtfobins.org/gtfobins/cowsay/,11.135708428851668
+bm25_native,intent-04,GTFOBins sudo arbitrary file write,1,394,https://gtfobins.org/gtfobins/cc/,13.67373006003855
+bm25_native,intent-04,GTFOBins sudo arbitrary file write,2,365,https://gtfobins.org/gtfobins/c99/,13.67373006003855
+bm25_native,intent-04,GTFOBins sudo arbitrary file write,3,360,https://gtfobins.org/gtfobins/c89/,13.67373006003855
+bm25_native,intent-04,GTFOBins sudo arbitrary file write,4,250,https://gtfobins.org/gtfobins/aws/,13.20758285159144
+bm25_native,intent-04,GTFOBins sudo arbitrary file write,5,157,https://gtfobins.org/gtfobins/arj/,12.851623471342574
+bm25_intent,intent-01,gtfobins sudo shell,1,20,https://gtfobins.org/contributing/,9.266767909172852
+bm25_intent,intent-01,gtfobins sudo shell,2,399,https://gtfobins.org/gtfobins/cdist/,8.845936603418878
+bm25_intent,intent-01,gtfobins sudo shell,3,83,https://gtfobins.org/gtfobins/ansible-test/,8.838469424344161
+bm25_intent,intent-01,gtfobins sudo shell,4,474,https://gtfobins.org/gtfobins/clisp/,8.746910321638726
+bm25_intent,intent-01,gtfobins sudo shell,5,519,https://gtfobins.org/gtfobins/cpan/,8.710262171407027
+bm25_intent,intent-02,gtfobins suid file read,1,355,https://gtfobins.org/gtfobins/bzip2/,13.004233898043992
+bm25_intent,intent-02,gtfobins suid file read,2,244,https://gtfobins.org/gtfobins/awk/,12.956050275507696
+bm25_intent,intent-02,gtfobins suid file read,3,515,https://gtfobins.org/gtfobins/cp/,12.941408453120987
+bm25_intent,intent-02,gtfobins suid file read,4,199,https://gtfobins.org/gtfobins/aspell/,12.830235230352132
+bm25_intent,intent-02,gtfobins suid file read,5,97,https://gtfobins.org/gtfobins/apache2/,12.781486959514979
+bm25_intent,intent-03,reverse shell examples from GTFOBins,1,20,https://gtfobins.org/contributing/,12.239850397593187
+bm25_intent,intent-03,reverse shell examples from GTFOBins,2,13,https://gtfobins.org/scope/,12.121119163774837
+bm25_intent,intent-03,reverse shell examples from GTFOBins,3,519,https://gtfobins.org/gtfobins/cpan/,11.170886296055984
+bm25_intent,intent-03,reverse shell examples from GTFOBins,4,511,https://gtfobins.org/gtfobins/cowthink/,11.135708428851668
+bm25_intent,intent-03,reverse shell examples from GTFOBins,5,508,https://gtfobins.org/gtfobins/cowsay/,11.135708428851668
+bm25_intent,intent-04,GTFOBins sudo arbitrary file write,1,394,https://gtfobins.org/gtfobins/cc/,13.67373006003855
+bm25_intent,intent-04,GTFOBins sudo arbitrary file write,2,365,https://gtfobins.org/gtfobins/c99/,13.67373006003855
+bm25_intent,intent-04,GTFOBins sudo arbitrary file write,3,360,https://gtfobins.org/gtfobins/c89/,13.67373006003855
+bm25_intent,intent-04,GTFOBins sudo arbitrary file write,4,250,https://gtfobins.org/gtfobins/aws/,13.20758285159144
+bm25_intent,intent-04,GTFOBins sudo arbitrary file write,5,157,https://gtfobins.org/gtfobins/arj/,12.851623471342574

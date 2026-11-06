@@ -1,0 +1,81 @@
+system,query_id,query,rank,doc_id,url,score
+v83,gtfo-01,GTFOBins outbound shell examples,1,20,https://gtfobins.org/contributing/,9.74554585845894
+v83,gtfo-01,GTFOBins outbound shell examples,2,13,https://gtfobins.org/scope/,8.424143971230931
+v83,gtfo-01,GTFOBins outbound shell examples,3,399,https://gtfobins.org/gtfobins/cdist/,7.465414860115349
+v83,gtfo-01,GTFOBins outbound shell examples,4,83,https://gtfobins.org/gtfobins/ansible-test/,7.458568653575111
+v83,gtfo-01,GTFOBins outbound shell examples,5,474,https://gtfobins.org/gtfobins/clisp/,7.384777875349572
+v83,gtfo-02,GTFOBins reverse shell through sudo,1,519,https://gtfobins.org/gtfobins/cpan/,12.545839325456395
+v83,gtfo-02,GTFOBins reverse shell through sudo,2,511,https://gtfobins.org/gtfobins/cowthink/,12.508507961046828
+v83,gtfo-02,GTFOBins reverse shell through sudo,3,508,https://gtfobins.org/gtfobins/cowsay/,12.508507961046828
+v83,gtfo-02,GTFOBins reverse shell through sudo,4,350,https://gtfobins.org/gtfobins/byebug/,12.466169752243863
+v83,gtfo-02,GTFOBins reverse shell through sudo,5,311,https://gtfobins.org/gtfobins/bee/,12.336054471286962
+v83,gtfo-03,GTFOBins SUID reverse shell examples,1,13,https://gtfobins.org/scope/,18.102626198424435
+v83,gtfo-03,GTFOBins SUID reverse shell examples,2,311,https://gtfobins.org/gtfobins/bee/,16.649769772946733
+v83,gtfo-03,GTFOBins SUID reverse shell examples,3,20,https://gtfobins.org/contributing/,15.991461663104305
+v83,gtfo-03,GTFOBins SUID reverse shell examples,4,281,https://gtfobins.org/gtfobins/bash/,15.51672007627062
+v83,gtfo-03,GTFOBins SUID reverse shell examples,5,62,https://gtfobins.org/gtfobins/agetty/,13.52346764431159
+v83,gtfo-04,GTFOBins unprivileged connect back shell,1,13,https://gtfobins.org/scope/,17.01355244896451
+v83,gtfo-04,GTFOBins unprivileged connect back shell,2,345,https://gtfobins.org/gtfobins/busybox/,14.655322151373667
+v83,gtfo-04,GTFOBins unprivileged connect back shell,3,490,https://gtfobins.org/gtfobins/code/,14.18245232501016
+v83,gtfo-04,GTFOBins unprivileged connect back shell,4,281,https://gtfobins.org/gtfobins/bash/,12.119125754947783
+v83,gtfo-04,GTFOBins unprivileged connect back shell,5,331,https://gtfobins.org/gtfobins/bundle/,12.051935579056286
+function,gtfo-01,GTFOBins outbound shell examples,1,345,https://gtfobins.org/gtfobins/busybox/,6.868586447810559
+function,gtfo-01,GTFOBins outbound shell examples,2,490,https://gtfobins.org/gtfobins/code/,6.607298332504808
+function,gtfo-01,GTFOBins outbound shell examples,3,281,https://gtfobins.org/gtfobins/bash/,5.905748351686574
+function,gtfo-01,GTFOBins outbound shell examples,4,20,https://gtfobins.org/contributing/,9.74554585845894
+function,gtfo-01,GTFOBins outbound shell examples,5,13,https://gtfobins.org/scope/,8.424143971230931
+function,gtfo-02,GTFOBins reverse shell through sudo,1,345,https://gtfobins.org/gtfobins/busybox/,12.196524947572522
+function,gtfo-02,GTFOBins reverse shell through sudo,2,490,https://gtfobins.org/gtfobins/code/,11.872563539192058
+function,gtfo-02,GTFOBins reverse shell through sudo,3,281,https://gtfobins.org/gtfobins/bash/,9.848055717020243
+function,gtfo-02,GTFOBins reverse shell through sudo,4,519,https://gtfobins.org/gtfobins/cpan/,12.545839325456395
+function,gtfo-02,GTFOBins reverse shell through sudo,5,511,https://gtfobins.org/gtfobins/cowthink/,12.508507961046828
+function,gtfo-03,GTFOBins SUID reverse shell examples,1,281,https://gtfobins.org/gtfobins/bash/,15.51672007627062
+function,gtfo-03,GTFOBins SUID reverse shell examples,2,345,https://gtfobins.org/gtfobins/busybox/,10.728054037810832
+function,gtfo-03,GTFOBins SUID reverse shell examples,3,490,https://gtfobins.org/gtfobins/code/,10.427086684312824
+function,gtfo-03,GTFOBins SUID reverse shell examples,4,13,https://gtfobins.org/scope/,18.102626198424435
+function,gtfo-03,GTFOBins SUID reverse shell examples,5,311,https://gtfobins.org/gtfobins/bee/,16.649769772946733
+function,gtfo-04,GTFOBins unprivileged connect back shell,1,345,https://gtfobins.org/gtfobins/busybox/,14.655322151373667
+function,gtfo-04,GTFOBins unprivileged connect back shell,2,490,https://gtfobins.org/gtfobins/code/,14.18245232501016
+function,gtfo-04,GTFOBins unprivileged connect back shell,3,281,https://gtfobins.org/gtfobins/bash/,12.119125754947783
+function,gtfo-04,GTFOBins unprivileged connect back shell,4,13,https://gtfobins.org/scope/,17.01355244896451
+function,gtfo-04,GTFOBins unprivileged connect back shell,5,331,https://gtfobins.org/gtfobins/bundle/,12.051935579056286
+paired,gtfo-01,GTFOBins outbound shell examples,1,345,https://gtfobins.org/gtfobins/busybox/,6.868586447810559
+paired,gtfo-01,GTFOBins outbound shell examples,2,490,https://gtfobins.org/gtfobins/code/,6.607298332504808
+paired,gtfo-01,GTFOBins outbound shell examples,3,281,https://gtfobins.org/gtfobins/bash/,5.905748351686574
+paired,gtfo-01,GTFOBins outbound shell examples,4,20,https://gtfobins.org/contributing/,9.74554585845894
+paired,gtfo-01,GTFOBins outbound shell examples,5,13,https://gtfobins.org/scope/,8.424143971230931
+paired,gtfo-02,GTFOBins reverse shell through sudo,1,345,https://gtfobins.org/gtfobins/busybox/,12.196524947572522
+paired,gtfo-02,GTFOBins reverse shell through sudo,2,490,https://gtfobins.org/gtfobins/code/,11.872563539192058
+paired,gtfo-02,GTFOBins reverse shell through sudo,3,281,https://gtfobins.org/gtfobins/bash/,9.848055717020243
+paired,gtfo-02,GTFOBins reverse shell through sudo,4,519,https://gtfobins.org/gtfobins/cpan/,12.545839325456395
+paired,gtfo-02,GTFOBins reverse shell through sudo,5,511,https://gtfobins.org/gtfobins/cowthink/,12.508507961046828
+paired,gtfo-03,GTFOBins SUID reverse shell examples,1,281,https://gtfobins.org/gtfobins/bash/,15.51672007627062
+paired,gtfo-03,GTFOBins SUID reverse shell examples,2,13,https://gtfobins.org/scope/,18.102626198424435
+paired,gtfo-03,GTFOBins SUID reverse shell examples,3,311,https://gtfobins.org/gtfobins/bee/,16.649769772946733
+paired,gtfo-03,GTFOBins SUID reverse shell examples,4,20,https://gtfobins.org/contributing/,15.991461663104305
+paired,gtfo-03,GTFOBins SUID reverse shell examples,5,62,https://gtfobins.org/gtfobins/agetty/,13.52346764431159
+paired,gtfo-04,GTFOBins unprivileged connect back shell,1,345,https://gtfobins.org/gtfobins/busybox/,14.655322151373667
+paired,gtfo-04,GTFOBins unprivileged connect back shell,2,490,https://gtfobins.org/gtfobins/code/,14.18245232501016
+paired,gtfo-04,GTFOBins unprivileged connect back shell,3,281,https://gtfobins.org/gtfobins/bash/,12.119125754947783
+paired,gtfo-04,GTFOBins unprivileged connect back shell,4,13,https://gtfobins.org/scope/,17.01355244896451
+paired,gtfo-04,GTFOBins unprivileged connect back shell,5,331,https://gtfobins.org/gtfobins/bundle/,12.051935579056286
+verified,gtfo-01,GTFOBins outbound shell examples,1,345,https://gtfobins.org/gtfobins/busybox/,6.868586447810559
+verified,gtfo-01,GTFOBins outbound shell examples,2,490,https://gtfobins.org/gtfobins/code/,6.607298332504808
+verified,gtfo-01,GTFOBins outbound shell examples,3,281,https://gtfobins.org/gtfobins/bash/,5.905748351686574
+verified,gtfo-01,GTFOBins outbound shell examples,4,20,https://gtfobins.org/contributing/,9.74554585845894
+verified,gtfo-01,GTFOBins outbound shell examples,5,13,https://gtfobins.org/scope/,8.424143971230931
+verified,gtfo-02,GTFOBins reverse shell through sudo,1,345,https://gtfobins.org/gtfobins/busybox/,12.196524947572522
+verified,gtfo-02,GTFOBins reverse shell through sudo,2,490,https://gtfobins.org/gtfobins/code/,11.872563539192058
+verified,gtfo-02,GTFOBins reverse shell through sudo,3,281,https://gtfobins.org/gtfobins/bash/,9.848055717020243
+verified,gtfo-02,GTFOBins reverse shell through sudo,4,519,https://gtfobins.org/gtfobins/cpan/,12.545839325456395
+verified,gtfo-02,GTFOBins reverse shell through sudo,5,511,https://gtfobins.org/gtfobins/cowthink/,12.508507961046828
+verified,gtfo-03,GTFOBins SUID reverse shell examples,1,281,https://gtfobins.org/gtfobins/bash/,15.51672007627062
+verified,gtfo-03,GTFOBins SUID reverse shell examples,2,13,https://gtfobins.org/scope/,18.102626198424435
+verified,gtfo-03,GTFOBins SUID reverse shell examples,3,311,https://gtfobins.org/gtfobins/bee/,16.649769772946733
+verified,gtfo-03,GTFOBins SUID reverse shell examples,4,20,https://gtfobins.org/contributing/,15.991461663104305
+verified,gtfo-03,GTFOBins SUID reverse shell examples,5,62,https://gtfobins.org/gtfobins/agetty/,13.52346764431159
+verified,gtfo-04,GTFOBins unprivileged connect back shell,1,345,https://gtfobins.org/gtfobins/busybox/,14.655322151373667
+verified,gtfo-04,GTFOBins unprivileged connect back shell,2,490,https://gtfobins.org/gtfobins/code/,14.18245232501016
+verified,gtfo-04,GTFOBins unprivileged connect back shell,3,281,https://gtfobins.org/gtfobins/bash/,12.119125754947783
+verified,gtfo-04,GTFOBins unprivileged connect back shell,4,13,https://gtfobins.org/scope/,17.01355244896451
+verified,gtfo-04,GTFOBins unprivileged connect back shell,5,331,https://gtfobins.org/gtfobins/bundle/,12.051935579056286

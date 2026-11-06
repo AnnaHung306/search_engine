@@ -1,0 +1,19 @@
+{
+  "review_origin": "llm",
+  "reviewer": "Codex assistant, second-pass evidence review",
+  "independence": "Same workflow after initial scoring. Not independent or human validation.",
+  "scope": "Reviewed the sole medium-confidence judgment, append evidence in all three added pages, SUID contrast, and overwrite controls. Review applied equally to both systems.",
+  "policy_sha256": "d6c7ab4a10879befddb5a6da74a77cd97573e083f793f0d2d46f80d14740a24c",
+  "initial_judgments_sha256": "238f90d874aa4e837def3874407a7fa6cc2a55f1e9e7260baba3ae7bffbeb9a0",
+  "decisions": [
+    {
+      "pair_id": "2f6834bb6f5ea9467605",
+      "previous_relevant": 1,
+      "relevant": 0,
+      "confidence": "high",
+      "reason": "原文證明可指定輸出檔，但未交代輸出檔已存在時是替換還是追加，未滿足明確覆寫的題意。",
+      "evidence": "check_log -F /path/to/input-file -O /path/to/output-file",
+      "review_origin": "llm"
+    }
+  ]
+}

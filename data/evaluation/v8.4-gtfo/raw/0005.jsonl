@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1aa45-5fa7-7070-b882-27fbd8b9ef4b"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\n  \"decisions\": [\n    {\n      \"decision_id\": \"9ff80bad55f69f3ac974-1\",\n      \"relevant\": 0,\n      \"confidence\": \"high\",\n      \"reason\": \"片段示範按名稱查找並攔截單一匯出函式，未說明如何列舉指定已載入模組的匯出項目。\",\n      \"evidence\": \"const libc = Process . getModuleByName ( ' libc.so ' ); Interceptor . attach ( libc . getExportByName ( ' read ' )\"\n    }\n  ]\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":39994,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":143,"reasoning_output_tokens":0}}

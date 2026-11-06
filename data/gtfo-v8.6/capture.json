@@ -1,0 +1,54 @@
+{
+  "events": [
+    {
+      "status": "http_request",
+      "kind": "robots",
+      "url": "https://documentation.ubuntu.com/robots.txt",
+      "started_at": 1793860651.665733,
+      "finished_at": 1793860652.145907,
+      "code": 200
+    },
+    {
+      "status": "http_request",
+      "kind": "content",
+      "url": "https://documentation.ubuntu.com/security/security-features/network/version-banners/apache2/",
+      "started_at": 1793860654.149132,
+      "finished_at": 1793860654.840724,
+      "code": 200
+    },
+    {
+      "status": "http_request",
+      "kind": "content",
+      "url": "https://documentation.ubuntu.com/security/security-features/network/version-banners/vsftpd/",
+      "started_at": 1793860656.8453891,
+      "finished_at": 1793860657.4686332,
+      "code": 200
+    },
+    {
+      "status": "http_request",
+      "kind": "robots",
+      "url": "https://wiki.debian.org/robots.txt",
+      "started_at": 1793860657.484284,
+      "finished_at": 1793860658.063874,
+      "code": 200
+    },
+    {
+      "status": "http_request",
+      "kind": "content",
+      "url": "https://wiki.debian.org/BootstrapBootableSystem",
+      "started_at": 1793860678.066255,
+      "finished_at": 1793860678.976331,
+      "code": 200
+    }
+  ],
+  "html_sha256": {
+    "https://documentation.ubuntu.com/security/security-features/network/version-banners/apache2/": "56164eb3fc66dd532e3363797ce1e17a9515e0cf7e38327f6c7f03da5ae9083c",
+    "https://documentation.ubuntu.com/security/security-features/network/version-banners/vsftpd/": "9037dae6b8fbe15eca4f8be6a5cf2c4e18c65c38f7d427ff7e7dd50124c42c44",
+    "https://wiki.debian.org/BootstrapBootableSystem": "17ad171e39ad9e089d1e4193ffa46d88babd9bdace3aabe16d065313b38d5cf8"
+  },
+  "preformatted_append_examples": {
+    "https://documentation.ubuntu.com/security/security-features/network/version-banners/apache2/": "echo \"ServerSignature Off\" | sudo tee -a /etc/apache2/conf-available/zz-no-banner.conf",
+    "https://documentation.ubuntu.com/security/security-features/network/version-banners/vsftpd/": "echo \"ftpd_banner=FTP server\" | sudo tee -a /etc/vsftpd.conf",
+    "https://wiki.debian.org/BootstrapBootableSystem": "echo \"127.0.1.1 $(cat ${debstrapFolder}/etc/hostname)\" | sudo tee -a \"${debstrapFolder}/etc/hosts\""
+  }
+}

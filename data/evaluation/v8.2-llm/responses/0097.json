@@ -1,0 +1,62 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "e0b48b2e9652de03eac79fae241fe19d73e512f5bbf20bdde7fd56c9b8cb1880",
+  "policy_sha256": "4a41becbce596ebfef0fdbcce2b81c4daba130fb45140ba4a45a816a52a4a7f4",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "raw_events_sha256": "712a6c433046d8b1ad4b99d7649d263f3083518223046c12d950b505910394c0",
+  "started_at": 1793849176.9364412,
+  "finished_at": 1793849185.7786298,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.2-llm/schema.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "17fa90dad7f97cad2252-1",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "本段僅說明 DEX 類別載入、列舉與執行期插樁，未提供反編譯或重建可讀程式碼的能力。",
+        "evidence": "load() : load the contained classes into the VM. getClassNames() : obtain an array of available class names."
+      },
+      {
+        "decision_id": "8810c777812463af7a1a-1",
+        "relevant": 1,
+        "confidence": "high",
+        "reason": "說明透過 Java.use 取得 Android 類別並替換方法實作，可觀察或修改執行中的方法行為。",
+        "evidence": "Activity . onResume . implementation = function () { throw Exception . $new ( ' Oh noes! ' ); };"
+      }
+    ]
+  }
+}

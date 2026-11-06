@@ -1,0 +1,81 @@
+system,query_id,query,rank,doc_id,url,score
+v83,gtfo-05,GTFOBins write contents to a local file with sudo,1,394,https://gtfobins.org/gtfobins/cc/,14.272385992136428
+v83,gtfo-05,GTFOBins write contents to a local file with sudo,2,365,https://gtfobins.org/gtfobins/c99/,14.272385992136428
+v83,gtfo-05,GTFOBins write contents to a local file with sudo,3,360,https://gtfobins.org/gtfobins/c89/,14.272385992136428
+v83,gtfo-05,GTFOBins write contents to a local file with sudo,4,523,https://gtfobins.org/gtfobins/cpio/,13.70629511932642
+v83,gtfo-05,GTFOBins write contents to a local file with sudo,5,157,https://gtfobins.org/gtfobins/arj/,13.587110067069773
+v83,gtfo-06,GTFOBins SUID write data to a file,1,538,https://gtfobins.org/gtfobins/csh/,15.694112751866191
+v83,gtfo-06,GTFOBins SUID write data to a file,2,192,https://gtfobins.org/gtfobins/ash/,15.694112751866191
+v83,gtfo-06,GTFOBins SUID write data to a file,3,244,https://gtfobins.org/gtfobins/awk/,15.635673705944713
+v83,gtfo-06,GTFOBins SUID write data to a file,4,515,https://gtfobins.org/gtfobins/cp/,15.606558677617475
+v83,gtfo-06,GTFOBins SUID write data to a file,5,157,https://gtfobins.org/gtfobins/arj/,15.369682692243858
+v83,gtfo-07,GTFOBins unprivileged local file writing,1,424,https://gtfobins.org/gtfobins/check_log/,11.966341308115416
+v83,gtfo-07,GTFOBins unprivileged local file writing,2,394,https://gtfobins.org/gtfobins/cc/,11.79733760607495
+v83,gtfo-07,GTFOBins unprivileged local file writing,3,365,https://gtfobins.org/gtfobins/c99/,11.79733760607495
+v83,gtfo-07,GTFOBins unprivileged local file writing,4,360,https://gtfobins.org/gtfobins/c89/,11.79733760607495
+v83,gtfo-07,GTFOBins unprivileged local file writing,5,244,https://gtfobins.org/gtfobins/awk/,11.745416760863254
+v83,gtfo-08,GTFOBins append data to a file with sudo,1,501,https://gtfobins.org/gtfobins/comm/,12.42659428744201
+v83,gtfo-08,GTFOBins append data to a file with sudo,2,20,https://gtfobins.org/contributing/,8.667830354774706
+v83,gtfo-08,GTFOBins append data to a file with sudo,3,497,https://gtfobins.org/gtfobins/column/,7.910426029885534
+v83,gtfo-08,GTFOBins append data to a file with sudo,4,538,https://gtfobins.org/gtfobins/csh/,7.883469194838503
+v83,gtfo-08,GTFOBins append data to a file with sudo,5,192,https://gtfobins.org/gtfobins/ash/,7.883469194838503
+function,gtfo-05,GTFOBins write contents to a local file with sudo,1,394,https://gtfobins.org/gtfobins/cc/,14.272385992136428
+function,gtfo-05,GTFOBins write contents to a local file with sudo,2,365,https://gtfobins.org/gtfobins/c99/,14.272385992136428
+function,gtfo-05,GTFOBins write contents to a local file with sudo,3,360,https://gtfobins.org/gtfobins/c89/,14.272385992136428
+function,gtfo-05,GTFOBins write contents to a local file with sudo,4,523,https://gtfobins.org/gtfobins/cpio/,13.70629511932642
+function,gtfo-05,GTFOBins write contents to a local file with sudo,5,157,https://gtfobins.org/gtfobins/arj/,13.587110067069773
+function,gtfo-06,GTFOBins SUID write data to a file,1,538,https://gtfobins.org/gtfobins/csh/,15.694112751866191
+function,gtfo-06,GTFOBins SUID write data to a file,2,192,https://gtfobins.org/gtfobins/ash/,15.694112751866191
+function,gtfo-06,GTFOBins SUID write data to a file,3,244,https://gtfobins.org/gtfobins/awk/,15.635673705944713
+function,gtfo-06,GTFOBins SUID write data to a file,4,515,https://gtfobins.org/gtfobins/cp/,15.606558677617475
+function,gtfo-06,GTFOBins SUID write data to a file,5,157,https://gtfobins.org/gtfobins/arj/,15.369682692243858
+function,gtfo-07,GTFOBins unprivileged local file writing,1,424,https://gtfobins.org/gtfobins/check_log/,11.966341308115416
+function,gtfo-07,GTFOBins unprivileged local file writing,2,394,https://gtfobins.org/gtfobins/cc/,11.79733760607495
+function,gtfo-07,GTFOBins unprivileged local file writing,3,365,https://gtfobins.org/gtfobins/c99/,11.79733760607495
+function,gtfo-07,GTFOBins unprivileged local file writing,4,360,https://gtfobins.org/gtfobins/c89/,11.79733760607495
+function,gtfo-07,GTFOBins unprivileged local file writing,5,244,https://gtfobins.org/gtfobins/awk/,11.745416760863254
+function,gtfo-08,GTFOBins append data to a file with sudo,1,501,https://gtfobins.org/gtfobins/comm/,12.42659428744201
+function,gtfo-08,GTFOBins append data to a file with sudo,2,20,https://gtfobins.org/contributing/,8.667830354774706
+function,gtfo-08,GTFOBins append data to a file with sudo,3,497,https://gtfobins.org/gtfobins/column/,7.910426029885534
+function,gtfo-08,GTFOBins append data to a file with sudo,4,538,https://gtfobins.org/gtfobins/csh/,7.883469194838503
+function,gtfo-08,GTFOBins append data to a file with sudo,5,192,https://gtfobins.org/gtfobins/ash/,7.883469194838503
+paired,gtfo-05,GTFOBins write contents to a local file with sudo,1,394,https://gtfobins.org/gtfobins/cc/,14.272385992136428
+paired,gtfo-05,GTFOBins write contents to a local file with sudo,2,365,https://gtfobins.org/gtfobins/c99/,14.272385992136428
+paired,gtfo-05,GTFOBins write contents to a local file with sudo,3,360,https://gtfobins.org/gtfobins/c89/,14.272385992136428
+paired,gtfo-05,GTFOBins write contents to a local file with sudo,4,523,https://gtfobins.org/gtfobins/cpio/,13.70629511932642
+paired,gtfo-05,GTFOBins write contents to a local file with sudo,5,157,https://gtfobins.org/gtfobins/arj/,13.587110067069773
+paired,gtfo-06,GTFOBins SUID write data to a file,1,538,https://gtfobins.org/gtfobins/csh/,15.694112751866191
+paired,gtfo-06,GTFOBins SUID write data to a file,2,192,https://gtfobins.org/gtfobins/ash/,15.694112751866191
+paired,gtfo-06,GTFOBins SUID write data to a file,3,244,https://gtfobins.org/gtfobins/awk/,15.635673705944713
+paired,gtfo-06,GTFOBins SUID write data to a file,4,515,https://gtfobins.org/gtfobins/cp/,15.606558677617475
+paired,gtfo-06,GTFOBins SUID write data to a file,5,157,https://gtfobins.org/gtfobins/arj/,15.369682692243858
+paired,gtfo-07,GTFOBins unprivileged local file writing,1,424,https://gtfobins.org/gtfobins/check_log/,11.966341308115416
+paired,gtfo-07,GTFOBins unprivileged local file writing,2,394,https://gtfobins.org/gtfobins/cc/,11.79733760607495
+paired,gtfo-07,GTFOBins unprivileged local file writing,3,365,https://gtfobins.org/gtfobins/c99/,11.79733760607495
+paired,gtfo-07,GTFOBins unprivileged local file writing,4,360,https://gtfobins.org/gtfobins/c89/,11.79733760607495
+paired,gtfo-07,GTFOBins unprivileged local file writing,5,244,https://gtfobins.org/gtfobins/awk/,11.745416760863254
+paired,gtfo-08,GTFOBins append data to a file with sudo,1,501,https://gtfobins.org/gtfobins/comm/,12.42659428744201
+paired,gtfo-08,GTFOBins append data to a file with sudo,2,20,https://gtfobins.org/contributing/,8.667830354774706
+paired,gtfo-08,GTFOBins append data to a file with sudo,3,497,https://gtfobins.org/gtfobins/column/,7.910426029885534
+paired,gtfo-08,GTFOBins append data to a file with sudo,4,538,https://gtfobins.org/gtfobins/csh/,7.883469194838503
+paired,gtfo-08,GTFOBins append data to a file with sudo,5,192,https://gtfobins.org/gtfobins/ash/,7.883469194838503
+verified,gtfo-05,GTFOBins write contents to a local file with sudo,1,523,https://gtfobins.org/gtfobins/cpio/,13.70629511932642
+verified,gtfo-05,GTFOBins write contents to a local file with sudo,2,157,https://gtfobins.org/gtfobins/arj/,13.587110067069773
+verified,gtfo-05,GTFOBins write contents to a local file with sudo,3,281,https://gtfobins.org/gtfobins/bash/,11.930150208127532
+verified,gtfo-05,GTFOBins write contents to a local file with sudo,4,424,https://gtfobins.org/gtfobins/check_log/,11.584949769886363
+verified,gtfo-05,GTFOBins write contents to a local file with sudo,5,244,https://gtfobins.org/gtfobins/awk/,11.183657030484571
+verified,gtfo-06,GTFOBins SUID write data to a file,1,538,https://gtfobins.org/gtfobins/csh/,15.694112751866191
+verified,gtfo-06,GTFOBins SUID write data to a file,2,192,https://gtfobins.org/gtfobins/ash/,15.694112751866191
+verified,gtfo-06,GTFOBins SUID write data to a file,3,244,https://gtfobins.org/gtfobins/awk/,15.635673705944713
+verified,gtfo-06,GTFOBins SUID write data to a file,4,515,https://gtfobins.org/gtfobins/cp/,15.606558677617475
+verified,gtfo-06,GTFOBins SUID write data to a file,5,157,https://gtfobins.org/gtfobins/arj/,15.369682692243858
+verified,gtfo-07,GTFOBins unprivileged local file writing,1,424,https://gtfobins.org/gtfobins/check_log/,11.966341308115416
+verified,gtfo-07,GTFOBins unprivileged local file writing,2,244,https://gtfobins.org/gtfobins/awk/,11.745416760863254
+verified,gtfo-07,GTFOBins unprivileged local file writing,3,157,https://gtfobins.org/gtfobins/arj/,11.591987245691111
+verified,gtfo-07,GTFOBins unprivileged local file writing,4,538,https://gtfobins.org/gtfobins/csh/,11.522157808360808
+verified,gtfo-07,GTFOBins unprivileged local file writing,5,192,https://gtfobins.org/gtfobins/ash/,11.522157808360808
+verified,gtfo-08,GTFOBins append data to a file with sudo,1,501,https://gtfobins.org/gtfobins/comm/,12.42659428744201
+verified,gtfo-08,GTFOBins append data to a file with sudo,2,20,https://gtfobins.org/contributing/,8.667830354774706
+verified,gtfo-08,GTFOBins append data to a file with sudo,3,497,https://gtfobins.org/gtfobins/column/,7.910426029885534
+verified,gtfo-08,GTFOBins append data to a file with sudo,4,538,https://gtfobins.org/gtfobins/csh/,7.883469194838503
+verified,gtfo-08,GTFOBins append data to a file with sudo,5,192,https://gtfobins.org/gtfobins/ash/,7.883469194838503

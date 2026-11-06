@@ -1,0 +1,21 @@
+{
+  "origin": "llm",
+  "assessment": "single model, segmented full indexed text; not independent human validation",
+  "authorization": "User explicitly requested the assistant/LM to decide relevance and compute scores instead of waiting for group members.",
+  "rules_fixed_before_labels": true,
+  "ranking_parameters_changed": false,
+  "course_contamination": "course was previously used for development; two ambiguous rules clarified after earlier diagnostic inspection",
+  "aggregation": "document relevant if any fully assessed segment has positive evidence; all segments required; no missing label defaults",
+  "selection": "highest development mean P@5; ties fewer enabled settings then frozen system order; holdout never used for selection",
+  "global_rule": "Substantive content or explicitly documented requested capability, not a mention/ad/nav. Follow the stated platform and workflow.",
+  "course_02": "A user-operable tool explicitly documenting SQLi detection or exploitation is relevant, including an explicitly SQLi-capable SIP fuzzer; API-only library or post-exploitation files alone are insufficient.",
+  "course_08": "APK unpacking/decompilation/reconstruction leading to readable code; runtime hooks alone do not satisfy decompile.",
+  "chunk_body_limit": 60000,
+  "overlap_chars": 800,
+  "confidence": "subjective categories, not calibrated probabilities",
+  "references": [
+    "TP p.3 section 6",
+    "Unit 3 p.9,29-38",
+    "https://arxiv.org/abs/2309.10621"
+  ]
+}

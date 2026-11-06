@@ -1,0 +1,56 @@
+{
+  "review_origin": "llm",
+  "evaluator": "Codex CLI default model; exact identifier not exposed by JSON events",
+  "input_sha256": "4ae1098c0b6e07b831fb9bdcd2d37b959dd7b8683b068a914993b747a8d0022d",
+  "policy_sha256": "ef1afe2ee46ed7f370b0a7722b72626a5eef6748e2ed77facf77eb705ee7314e",
+  "prompt_sha256": "bf172124e5f96beae1df797f55272c24a64c35fae116ab87ec6da3dda0eda565",
+  "schema_sha256": "c3529c3a315af2a5be1c5bf46f4242811582a43c226d92111f17fd4ca92911e5",
+  "bound_schema_sha256": "b3107317cb29e144b798a35188620fd7ab96c22f35dd28c33d3268b11e50b7de",
+  "raw_events_sha256": "842b3339535fd9e471429f97964d394bae8b611a0980821fced82b722b9c63da",
+  "started_at": 1793858035.536574,
+  "finished_at": 1793858044.202749,
+  "command": [
+    "codex",
+    "exec",
+    "--ephemeral",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--cd",
+    "/tmp",
+    "--json",
+    "--color",
+    "never",
+    "--output-schema",
+    "/Users/gavin/Documents/ChatGPT/資料檢索/work/search-engine-course-upgrade/data/evaluation/v8.4-gtfo/response_schemas/0005.json",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "browser_use",
+    "--disable",
+    "computer_use",
+    "--disable",
+    "memories",
+    "--disable",
+    "chronicle",
+    "-"
+  ],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "9ff80bad55f69f3ac974-1",
+        "relevant": 0,
+        "confidence": "high",
+        "reason": "片段示範按名稱查找並攔截單一匯出函式，未說明如何列舉指定已載入模組的匯出項目。",
+        "evidence": "const libc = Process . getModuleByName ( ' libc.so ' ); Interceptor . attach ( libc . getExportByName ( ' read ' )"
+      }
+    ]
+  }
+}

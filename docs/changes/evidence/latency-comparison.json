@@ -1,0 +1,33 @@
+{
+  "v7.1": {
+    "index_load_ms": 96.29954199772328,
+    "queries": {
+      "sql injection tool": {
+        "median_ms": 0.39795797783881426,
+        "p95_ms": 0.5426249699667096,
+        "results": 10
+      },
+      "\"port scan\" -metasploit": {
+        "median_ms": 49.56462502013892,
+        "p95_ms": 72.09233299363405,
+        "results": 10
+      }
+    }
+  },
+  "v8": {
+    "index_load_ms": 315.62587490770966,
+    "queries": {
+      "sql injection tool": {
+        "median_ms": 2.623354026582092,
+        "p95_ms": 3.14120901748538,
+        "results": 10
+      },
+      "\"port scan\" -metasploit": {
+        "median_ms": 4.040020983666182,
+        "p95_ms": 4.489542101509869,
+        "results": 10
+      }
+    }
+  },
+  "method": "Sequential processes, same machine and dependency versions; preloaded index, one warm-up per query, 30 whole search calls with top-10 snippets; no Flask/network/explanation."
+}

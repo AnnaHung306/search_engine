@@ -1,0 +1,11 @@
+{
+  "origin": "llm",
+  "rules_fixed_before_labels": true,
+  "comparison": "Fixed v8.3 versus function, pair and effect-aware tiers. Separate known failures from new reverse/write/binding/control cases. No tuning or selection on these scores.",
+  "global_rule": "A function must actually satisfy the need in the requested context. Do not infer an operation from a heading or unrelated context.",
+  "references": [
+    "TP p.3 §6",
+    "U3 p.9,29–38",
+    "https://gtfobins.org/contributing/"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "origin": "llm",
+  "rules_fixed_before_labels": true,
+  "comparison": "Compare v8.5 against write effects and explicit source exclusions on the same 986 documents. Separate two known cases from twelve predeclared queries.",
+  "global_rule": "Verify the specified source, effect and context on the same actual example. For the default semantics of a documented writing command use the GNU Bash and coreutils manuals. A documented option on the same example can qualify.",
+  "references": [
+    "TP p.3 §6",
+    "U3 p.9,29–38",
+    "https://www.gnu.org/s/coreutils/manual/html_node/tee-invocation.html"
+  ]
+}

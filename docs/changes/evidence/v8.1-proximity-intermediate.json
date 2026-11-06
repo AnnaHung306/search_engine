@@ -1,0 +1,60 @@
+{
+  "stage": "compact offsets, before deferring character decoding until returned explanations",
+  "query": "sql injection tool",
+  "results": {
+    "False": {
+      "samples_ms": [
+        156.36454208288342,
+        4.152665962465107,
+        3.8440830539911985,
+        4.010334028862417,
+        3.6041249986737967,
+        3.809290938079357
+      ],
+      "median_ms": 3.9272085414268076
+    },
+    "True": {
+      "samples_ms": [
+        3.840958932414651,
+        3.8241249276325107,
+        3.7503750063478947,
+        3.6247080424800515,
+        3.8744580233469605,
+        3.6428329767659307
+      ],
+      "median_ms": 3.7872499669902027
+    }
+  },
+  "profile": "         98935 function calls in 0.013 seconds\n\n   Ordered by: cumulative time\n   List reduced from 70 to 12 due to restriction <12>\n\n   ncalls  tottime  percall  cumtime  percall filename:lineno(function)\n        1    0.000    0.000    0.013    0.013 /Users/gavin/Documents/ChatGPT/\u8cc7\u6599\u6aa2\u7d22/work/search-engine-course-upgrade/code/search.py:113(search)\n      590    0.006    0.000    0.011    0.000 /Users/gavin/Documents/ChatGPT/\u8cc7\u6599\u6aa2\u7d22/work/search-engine-course-upgrade/code/positions.py:98(proximity)\n    82236    0.004    0.000    0.004    0.000 {method 'get' of 'dict' objects}\n        1    0.000    0.000    0.001    0.001 /Users/gavin/Documents/ChatGPT/\u8cc7\u6599\u6aa2\u7d22/work/search-engine-course-upgrade/code/ranking.py:71(score)\n      591    0.000    0.000    0.001    0.000 {built-in method builtins.sum}\n     2360    0.000    0.000    0.001    0.000 /Users/gavin/Documents/ChatGPT/\u8cc7\u6599\u6aa2\u7d22/work/search-engine-course-upgrade/code/ranking.py:79(<genexpr>)\n       61    0.000    0.000    0.001    0.000 /Users/gavin/Documents/ChatGPT/\u8cc7\u6599\u6aa2\u7d22/work/search-engine-course-upgrade/code/positions.py:79(_minimum_window)\n     1770    0.000    0.000    0.001    0.000 /Users/gavin/Documents/ChatGPT/\u8cc7\u6599\u6aa2\u7d22/work/search-engine-course-upgrade/code/ranking.py:28(_contribution)\n     1075    0.000    0.000    0.000    0.000 {built-in method builtins.sorted}\n      736    0.000    0.000    0.000    0.000 /Users/gavin/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/heapq.py:316(merge)\n     5060    0.000    0.000    0.000    0.000 {built-in method builtins.len}\n       10    0.000    0.000    0.000    0.000 /Users/gavin/Documents/ChatGPT/\u8cc7\u6599\u6aa2\u7d22/work/search-engine-course-upgrade/code/snippets.py:39(snippet)\n\n\n",
+  "cold_layout_and_offset_samples": {
+    "False": {
+      "samples_ms": [
+        151.4785410836339,
+        82.90066698100418,
+        82.1977499872446,
+        83.75316695310175,
+        83.80745898466557,
+        82.59108301717788
+      ],
+      "median_ms": 83.32691696705297
+    },
+    "True": {
+      "samples_ms": [
+        85.03125002607703,
+        81.90691703930497,
+        82.42308301851153,
+        79.94816696736962,
+        80.15904203057289,
+        79.95041599497199
+      ],
+      "median_ms": 81.03297953493893
+    }
+  },
+  "source_sha256": {
+    "search.py": "0fc1e16287efb01bfcc231476e3e5a2be8aebaba25932520b2805d7874defaed",
+    "positions.py": "00bb6d9489ed1b1432a8bf963ffcd2a27df22043c034bb16ebb00a5dae3e4135",
+    "offsets.py": "bcdeef856e439e09c39eddbe9057b45aa48b83bb9f866271c7152489fb1c3ffd",
+    "snippets.py": "e27ed4fe09c2b418da17671b72714af882765730d6c4a1d5c2b5ce73b65f2518",
+    "ranking.py": "0c65d836efc306a5a1a9dd56028c119994e1385e83c456ee4dbde0a7d40431a6"
+  }
+}

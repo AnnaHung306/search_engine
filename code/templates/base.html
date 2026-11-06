@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>{% block title %}資安文件搜尋{% endblock %} | IR Lab</title>
+  <link rel="icon" href="{{ url_for('static', filename='icon.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='icon.svg') }}" width="37" height="37" alt="">
+        <span><b>IR Lab</b><small>資安文件搜尋</small></span>
+      </a>
+      <nav aria-label="主要導覽">
+        <a href="{{ url_for('home') }}"{% if request.endpoint == 'home' and mode != 'effects' %} aria-current="page"{% endif %}>搜尋</a>
+        <a href="{{ url_for('home', mode='effects') }}"{% if request.endpoint == 'home' and mode == 'effects' %} aria-current="page"{% endif %}>v8.6 實驗</a>
+        <a href="{{ url_for('evaluation') }}"{% if request.endpoint == 'evaluation' %} aria-current="page"{% endif %}>評估</a>
+      </nav>
+    </div>
+  </header>
+  <main class="shell" id="main">{% block content %}{% endblock %}</main>
+  <footer class="shell site-footer"><span>IR Lab</span><span>NUK · Web Search Engine Project</span></footer>
+</body>
+</html>
