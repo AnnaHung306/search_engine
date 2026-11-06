@@ -12,7 +12,7 @@ TP p.2 §4、p.4 §7：Flask 結果／安全呈現／本機展示；U3 p.37–38
 - 每筆展開 Why this result：計分表、norm、base／final score、實際 multiplier 與 coverage 排序說明。
 - 正常導覽可看索引全文、評估與人工材料；新成績在人工完成前顯示 pending，不使用 mock。
 - snippets.py：使用 query aliases 選取約 80 詞的完整窗口；HTML 在高亮前轉義。
-- README、report/REPORT_V8.md、report/DEMO_SCRIPT_V8.md、DEVLOG 的 v8 段：更新安裝／來源、日期、已證實改動與尚缺人工工作。舊 Word／報告及素材原檔保留為歷史。
+- README、report/REPORT_V8.md、[v8 展示腳本](https://github.com/AnnaHung306/search_engine/blob/950576f5b3fe5dfb87cc004ba86b42d6e343ef4d/report/DEMO_SCRIPT_V8.md)、DEVLOG 的 v8 段：更新安裝／來源、日期、已證實改動與尚缺人工工作。
 
 ## 驗證與限制
 

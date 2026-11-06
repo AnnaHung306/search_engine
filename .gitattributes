@@ -1,2 +1,6 @@
 # Preserve frozen CSV bytes/hashes across checkouts. CSV uses CRLF records.
 *.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Keep presentation exports byte-identical and out of text diffs.
+report/presentations/*.pdf binary
+report/presentations/*.pptx binary
