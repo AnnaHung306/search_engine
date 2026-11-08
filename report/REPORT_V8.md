@@ -43,6 +43,22 @@ flowchart TD
 
 字元 offsets 已逐一對回 1,344,488 個 literal occurrences。title／description／body 各自有 norms；description 只從來源真實 metadata 取得，原 980 頁缺此欄，沒有推測補值，該欄的品質效果需未來另凍結的新資料集驗證。
 
+## Gemini Embedding 2 語意檢索補充實驗
+
+本實驗使用與基線相同的固定 980 頁語料（索引 SHA-256：`4eebfa9c8b22d773db53274c0e9f06b0ddb1a3db5d57be281eb4d9ed325e0bd4`），比較純 TF-IDF cosine、純 BM25 與 Gemini Embedding 2。82 個題組案例包含 78 個不同查詢；同一查詢若出現在不同題組，依各題組規則分別評分。此實驗是離線比較，現有網頁預設搜尋流程沒有接入 Gemini。
+
+文件正文切成 2,109 段，每段最多 6,000 UTF-8 bytes，約重疊 500 bytes；文件段落輸入包含標題與正文，查詢輸入包含檢索任務提示。使用 768 維向量，經正規化後計算 cosine，每頁取最高的段落分數。方法參考 [Gemini embeddings 文件](https://ai.google.dev/gemini-api/docs/embeddings)。
+
+| 方法 | 前五名中的相關結果 | 平均 P@5 |
+|---|---:|---:|
+| TF-IDF | 136 / 410 | 0.332 |
+| BM25 | 206 / 410 | 0.502 |
+| Gemini Embedding 2 | 260 / 410 | 0.634 |
+
+Gemini 比 TF-IDF 高 30.2 個百分點，比 BM25 高 13.2 個百分點；逐題相對 BM25 為 37 勝、32 平、13 負。例如 `mitmproxy modify http response` 的 BM25 P@5 為 1.00、Gemini 為 0.60，顯示語意方法並非每題都較佳。若將重複查詢先平均，使 78 個不同查詢等權，三者依序為 0.336、0.526、0.636。
+
+相關性依既有題組規則與凍結正文進行模型盲評；原有及補充判分尚未經獨立人工評審。不同快照、題組或判分定義的分數不可直接比較，也不能將這些觀察視為對未見查詢的保證。完整方法、逐題結果及證據見 [Gemini 比較報告](../experiments/gemini-embedding-2/比較報告.md) 和 [重算說明](../experiments/gemini-embedding-2/README.md)。
+
 ## 開發過程與心得素材
 
 詳見 DEVLOG.md 的歷史紀錄與新增 v8 章。可討論：先分清 seed 與 query；爬蟲中斷後可續跑；高 P@5 可能來自太寬鬆的尺；功能疊加會互相抵消；回到課堂公式後發現重複詞頻落差；用位置索引換取片語速度並承認記憶體代價。

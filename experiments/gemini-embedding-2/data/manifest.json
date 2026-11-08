@@ -1,0 +1,56 @@
+{
+  "index_sha256": "4eebfa9c8b22d773db53274c0e9f06b0ddb1a3db5d57be281eb4d9ed325e0bd4",
+  "collection_sha256": "f455264f04f5512863299f84b73e76f33004449ffc2f87c36512a4ff38020094",
+  "sources": {
+    "v8.2-llm": {
+      "queries": "cebe388fddd0ae9228e8eaf9fa13cf73656fbbfd3ea4d91adb231a4872e0d072",
+      "judgments": "62c782b383f3a8e86ad7f8b45f3a0c14f2f4efcbbb5dc6e3357f615d788e4fc9"
+    },
+    "v8.3-intent": {
+      "queries": "e7d86b2090f2d50736d105784823b76e916912f23f65ed536d35e477c2af42fc",
+      "judgments": "b7eaea194134b0410c29248927252738c1c128070adc698f9e936fe8a96806fc"
+    },
+    "v8.4-gtfo": {
+      "queries": "68eac4eec76a28c2090b8fab07ac315fb4fc95900f7e9c7423a595fc84aa35b5",
+      "judgments": "eccb446485bc0c91b54d221b628d7d1ff223915bf0614e3bdff1b707a67f2ab4"
+    }
+  },
+  "documents": 980,
+  "model": "models/gemini-embedding-2",
+  "dimensions": 768,
+  "document_windows": 2109,
+  "max_body_window_bytes": 6000,
+  "overlap_bytes": 500,
+  "unique_queries": 78,
+  "judgment_scope": "locked independently per original suite",
+  "document_score": "maximum exact cosine over all body windows",
+  "prompt_reference": "https://ai.google.dev/gemini-api/docs/embeddings",
+  "total_input_utf8_bytes": 9397328,
+  "cases": 82,
+  "ranked_results": 1230,
+  "unique_top_five_judgments": 909,
+  "supplemental_judgments": 310,
+  "unique_query_p_at_5": {
+    "tfidf": 0.3358974358974359,
+    "gemini": 0.6358974358974359,
+    "bm25": 0.5256410256410257
+  },
+  "course_source_commit": "81e527b51b650e227401b87fda323a737f1e283e",
+  "baseline_settings": {
+    "tfidf": {
+      "model": "tfidf"
+    },
+    "bm25": {
+      "model": "bm25"
+    }
+  },
+  "sha256": {
+    "data/embedding-map.json.gz": "383040dc886bb74dec0bd60232e52dfc2e5b4d17bf4e6dcbd2e521ab664b99ba",
+    "data/vectors.sqlite": "084d8499935af602096916b542b9f8544bb8988510c02e0ebcc2939b5b91eb0d",
+    "tables/judgments.csv": "2777785a5810cf02e9823c672e09572bc8851437016f8d8194755111fbab9acd",
+    "tables/per-case.csv": "4533afdb4f1ebc1f14e4bfbdee6d6c5d11bd07ce048ed4f1b3edd631227dc33a",
+    "tables/summary.csv": "89b590a5fd11582acbae0b35749fcfc1a0d887651279c822a9d97b89514c0a7d",
+    "tables/supplemental-judgments.csv": "17ad943bb728a4c0da8d94377fe624919ba3079bdb98df9feb4160d358aad124",
+    "tables/top-five.csv": "a5045b2a19505b5141b35306f5c19c7aa49185748aba2693e294a28f6684efc5"
+  }
+}

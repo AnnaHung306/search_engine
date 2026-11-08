@@ -4,6 +4,8 @@
 
 ## 報告、簡報與心路歷程
 
+- 語意檢索補充：[Gemini Embedding 2 比較報告](experiments/gemini-embedding-2/比較報告.md)與[離線重算說明](experiments/gemini-embedding-2/README.md)。此為固定 980 頁快照的離線實驗；模型盲評結果尚待獨立人工驗證。
+
 - **報告**　[課程專題報告](report/REPORT_V8.md) 說明整體系統與評估方法。[v8.6 實驗報告](report/GTFO_WRITE_EFFECTS_V8_6.md) 整理本輪方法、實測結果與限制。
 - **本次改動**　區分覆寫、附加與刪檔，依查詢套用來源排除，並在同一份 986 頁語料上切換 v8.5 與 v8.6。[排序改動](docs/changes/013-write-effects.md) · [搜尋介面](docs/changes/015-demo-polish.md) · [五分鐘操作卡](report/DEMO_SCRIPT_V8_6.md)
 - **心路歷程**　[DEVLOG.md](DEVLOG.md) 按版本整理從選題到 v8.6 的實驗與取捨，並連到完整原文。
